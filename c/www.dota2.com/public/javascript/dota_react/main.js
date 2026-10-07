@@ -3068,6 +3068,7 @@
         PageNumber: "FafYQImrtPrIK52eA_0fU",
         Hidden: "_106H5NcjWibbSFxZU-fE6R",
         SelectedPage: "_16vx6rigjj5vlzogn6MEFU",
+        PageEllipsis: "_1rBzBqQlZ7u-UtxTz0BeYV",
       };
     },
     chunkid: (module) => {
@@ -22156,40 +22157,56 @@
         _ = __webpack_require__._(_);
       function _(_, _) {
         return (
-          (_.BIsVisibleEvent() && _ && _.type == _.Fwr) ||
-          (!_ &&
-            (_.type == _._ ||
-              _.type == _.zeJ ||
-              _.type == _.uYK ||
-              _.type == _.WNR ||
-              _.type == _.izQ ||
-              _.type == _.C$4))
+          _.BIsVisibleEvent() &&
+          ((_ && _.type == _.Fwr) ||
+            (!_ &&
+              (_.type == _._ ||
+                _.type == _.zeJ ||
+                _.type == _.uYK ||
+                _.type == _.WNR ||
+                _.type == _.izQ ||
+                _.type == _.C$4)))
         );
       }
       const _ = (0, _._)((_) => {
           const _ = (0, _._)(),
             [_, _] = (0, _.useState)(void 0),
+            [_, _] = (0, _.useState)(!1),
+            [_, _] = (0, _.useState)(!1),
+            [_, _] = (0, _.useState)(0),
             [_, _] = (0, _.useState)(0),
             _ = !!_.updates;
-          if (((0, _.useEffect)(() => _(0), [_]), !_))
-            return (
-              _.LoadPartnerEventsPageable(
-                _._.InitFromClanID(0),
-                570,
-                0,
-                100,
-                _,
-              ).then((_) => _(_)),
-              (0, _.jsx)(_._, {
-                bOverlapping: !0,
-              })
-            );
+          (0, _.useEffect)(() => _(0), [_]);
+          const _ = Math.max(0, _ - Math.floor(2.5)) + 5 - 1,
+            _ = _ ? __webpack_require__.filter((_) => _(_, _)).length : 0,
+            _ = !_ || (!_ && _ <= 15 * (_ + 1));
+          if (
+            ((0, _.useEffect)(() => {
+              _ &&
+                !_ &&
+                (_(!0),
+                _.LoadPartnerEventsPageable(
+                  _._.InitFromClanID(0),
+                  570,
+                  _,
+                  100,
+                  _,
+                ).then((_) => {
+                  0 == _.length && _(!0),
+                    _((_) => [...(_ ?? []), ..._]),
+                    _((_) => _ + 100),
+                    _(!1);
+                }));
+            }, [_, _, _]),
+            !_)
+          )
+            return (0, _.jsx)(_._, {
+              bOverlapping: !0,
+            });
           const _ = (0, _.sfN)(_._.LANGUAGE);
-          let _,
-            _ = 0;
+          let _;
           for (const _ of _)
             if (_(!1, _)) {
-              _ = _.GID;
               const _ = new Date(1e3 * _.GetStartTimeAndDateUnixSeconds());
               _ = (0, _.jsxs)(
                 "div",
@@ -22283,7 +22300,22 @@
                     ),
                   );
             }
-          const _ = Math.ceil((_ - 1) / 15);
+          const _ = Math.ceil(_ / 15),
+            _ = _ ? Math.min(_, _ - 1) : _,
+            _ = Math.max(0, _ - 5 + 1),
+            _ = (_) =>
+              (0, _.jsx)(
+                "div",
+                {
+                  className: (0, _._)(
+                    _().PageNumber,
+                    _ == _ && _().SelectedPage,
+                  ),
+                  onClick: () => _(_),
+                  children: _ + 1,
+                },
+                `page_${_}`,
+              );
           _.push(
             (0, _.jsx)(
               "div",
@@ -22298,23 +22330,32 @@
               },
               "page_previous",
             ),
-          );
-          for (let _ = 0; _ < _; _ += 1)
-            _.push(
-              (0, _.jsx)(
-                "div",
-                {
-                  className: (0, _._)(
-                    _().PageNumber,
-                    _ == _ && _().SelectedPage,
-                  ),
-                  onClick: () => _(_),
-                  children: _ + 1,
-                },
-                `page_${_}`,
-              ),
-            );
+          ),
+            _ > 0 && _.push(_(0)),
+            _ > 1 &&
+              _.push(
+                (0, _.jsx)(
+                  "div",
+                  {
+                    className: _().PageEllipsis,
+                    children: "…",
+                  },
+                  "ellipsis_previous",
+                ),
+              );
+          for (let _ = _; _ <= _; _ += 1) _.push(_(_));
           return (
+            (!_ || _ < _ - 1) &&
+              _.push(
+                (0, _.jsx)(
+                  "div",
+                  {
+                    className: _().PageEllipsis,
+                    children: "…",
+                  },
+                  "ellipsis_next",
+                ),
+              ),
             _.push(
               (0, _.jsx)(
                 "div",
@@ -22322,7 +22363,7 @@
                   className: (0, _._)(
                     _().PageNumber,
                     _().PageChange,
-                    _ == _ - 1 && _().Hidden,
+                    _ && _ >= _ - 1 && _().Hidden,
                   ),
                   onClick: () => _(_ + 1),
                   children: ">",

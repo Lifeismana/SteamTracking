@@ -15,13 +15,13 @@
         FocusRingOnHiddenItem: "focusring_FocusRingOnHiddenItem_2rIZm",
       };
     },
-    27: (e, t, r) => {
+    859: (e, t, r) => {
       "use strict";
       r.d(t, { InitializeGamepadNavigation: () => ln });
       var i,
         n = r(669),
         s = r.n(n),
-        a = r(753),
+        a = r(275),
         o = r(696);
       function l(e) {
         return "object" == typeof e && null !== e && "value" in e;
@@ -95,10 +95,10 @@
         );
       }
       var b = r(629),
-        f = r(339),
-        p = r(340),
-        B = r(87),
-        w = r(950);
+        p = r(881),
+        f = r(298),
+        B = r(509),
+        w = r(92);
       class y {
         m_NavigationController;
         m_postMessage;
@@ -180,8 +180,8 @@
           }
         }
         SendGameInputState(e) {
-          let t = p.h.Basic;
-          window.bSupportsGamepadUI && (t = p.h.Full),
+          let t = f.h.Basic;
+          window.bSupportsGamepadUI && (t = f.h.Full),
             this.m_postMessage.PostMessage({
               type: "GameInputState",
               data: { source: e, support: t },
@@ -203,9 +203,9 @@
       function S(e) {
         return null != e && void 0 !== e.focus;
       }
-      (0, b.Cg)([f.o], y.prototype, "OnFocusChanged", null),
-        (0, b.Cg)([f.o], y.prototype, "OnMessage", null),
-        (0, b.Cg)([f.o], y.prototype, "PostPageUnloading", null);
+      (0, b.Cg)([p.o], y.prototype, "OnFocusChanged", null),
+        (0, b.Cg)([p.o], y.prototype, "OnMessage", null),
+        (0, b.Cg)([p.o], y.prototype, "PostPageUnloading", null);
       function v(e, t, r) {
         if ("childList" === e.type) {
           for (let r = 0; r < e.addedNodes.length; r++) {
@@ -390,12 +390,12 @@
           return r?.button ?? a.pR.INVALID;
         }
       }
-      (0, b.Cg)([f.o], I.prototype, "OnKeyDown", null),
-        (0, b.Cg)([f.o], I.prototype, "OnKeyUp", null),
-        (0, b.Cg)([f.o], I.prototype, "Reset", null);
+      (0, b.Cg)([p.o], I.prototype, "OnKeyDown", null),
+        (0, b.Cg)([p.o], I.prototype, "OnKeyUp", null),
+        (0, b.Cg)([p.o], I.prototype, "Reset", null);
       var F,
-        A = r(602),
-        N = r(258);
+        A = r(595),
+        N = r(976);
       class E {
         SyncStore(e) {
           return this.Subscribe(e).Unsubscribe;
@@ -404,8 +404,8 @@
           return this.Value;
         }
       }
-      (0, b.Cg)([f.o], E.prototype, "SyncStore", null),
-        (0, b.Cg)([f.o], E.prototype, "GetValue", null);
+      (0, b.Cg)([p.o], E.prototype, "SyncStore", null),
+        (0, b.Cg)([p.o], E.prototype, "GetValue", null);
       class O extends E {}
       class D extends O {
         m_callbacks;
@@ -504,7 +504,7 @@
           this.Reset(), e?.();
         }
       }
-      (0, b.Cg)([f.o], W.prototype, "ScheduledInternal", null);
+      (0, b.Cg)([p.o], W.prototype, "ScheduledInternal", null);
       class G {
         m_vecCallbacks = [];
         Push(e) {
@@ -521,7 +521,7 @@
           return this.Unregister;
         }
       }
-      (0, b.Cg)([f.o], G.prototype, "Unregister", null),
+      (0, b.Cg)([p.o], G.prototype, "Unregister", null),
         (function (e) {
           (e[(e.Debug = 0)] = "Debug"),
             (e[(e.Info = 1)] = "Info"),
@@ -571,11 +571,11 @@
           );
         }
       }
-      (0, b.Cg)([f.o], U.prototype, "Debug", null),
-        (0, b.Cg)([f.o], U.prototype, "Info", null),
-        (0, b.Cg)([f.o], U.prototype, "Warning", null),
-        (0, b.Cg)([f.o], U.prototype, "Error", null),
-        (0, b.Cg)([f.o], U.prototype, "Assert", null);
+      (0, b.Cg)([p.o], U.prototype, "Debug", null),
+        (0, b.Cg)([p.o], U.prototype, "Info", null),
+        (0, b.Cg)([p.o], U.prototype, "Warning", null),
+        (0, b.Cg)([p.o], U.prototype, "Error", null),
+        (0, b.Cg)([p.o], U.prototype, "Assert", null);
       class x {
         static k_EnabledLogNames_StorageKey = "EnabledWebLogs";
         static k_IncludeBacktraceInLog_StorageKey = "IncludeBacktraceInLog";
@@ -1327,8 +1327,8 @@
           }
         }
       }
-      const fe = new U("ScrollSnap").Debug;
-      let pe = !1;
+      const pe = new U("ScrollSnap").Debug;
+      let fe = !1;
       let Be;
       function we(e, t, r, n, s) {
         const a = e.Element;
@@ -1353,7 +1353,7 @@
           let { node: n, eScrollType: l } = o.pop(),
             c = 0 == o.length;
           if (
-            (void 0 === l && (l = pe ? Ue.NoTransform : Ue.Standard),
+            (void 0 === l && (l = fe ? Ue.NoTransform : Ue.Standard),
             n?.m_Properties?.fnScrollIntoViewHandler)
           ) {
             if (!1 !== n.m_Properties.fnScrollIntoViewHandler(e, t, n))
@@ -1371,7 +1371,7 @@
             (l || t.bottom < -n || t.top > r + n) &&
               ((o = !0),
               l ||
-                fe(
+                pe(
                   `Disabling smooth scrolling, ${t.bottom} < ${-n}, ${t.top} > ${r} + ${n} `,
                 ));
             let c = o ? "auto" : "smooth";
@@ -1379,16 +1379,16 @@
               e.Tree.Controller.BIsRestoringHistory() && (c = "auto"),
               d
                 ? Fe(a, u, c)
-                : (fe(
+                : (pe(
                     `Scrolling Into View ('${c}' via browser scrollIntoView):`,
                     u,
                   ),
                   u.scrollIntoView({ behavior: c, block: "nearest" }));
           } else
-            fe("No previous element for scrolling, will jump"),
+            pe("No previous element for scrolling, will jump"),
               d
                 ? Fe(a, u, "auto")
-                : (fe(
+                : (pe(
                     "Scrolling Into View ('auto' via browser scrollIntoView):",
                     u,
                   ),
@@ -1535,10 +1535,10 @@
         return e > -1 && e < 1;
       }
       function Fe(e, t, r, i, n) {
-        fe(
+        pe(
           "----------------------------------------------------------------------------------",
         ),
-          fe("Scrolling Into View (NoTransform):", t);
+          pe("Scrolling Into View (NoTransform):", t);
         let s = [],
           a = t,
           o = Se(t),
@@ -1551,7 +1551,7 @@
             c = Oe(e),
             u = { element: e, left: 0, top: 0 };
           if (
-            (fe(
+            (pe(
               "Checking scroll div",
               e,
               `scroll y:${c.scrollTop} of ${c.MaxScrollTop()}, x:${c.scrollLeft} of ${c.MaxScrollLeft()}, adjusted =>`,
@@ -1566,7 +1566,7 @@
               n &&
                 ((u.top = Math.min(l, Math.abs(u.top)) * (u.top < 0 ? -1 : 1)),
                 (l -= Math.abs(u.top))),
-              fe(`- checked y: ${u.top}`)),
+              pe(`- checked y: ${u.top}`)),
             (i && "x" != i) ||
               !q(e, "x") ||
               ((u.left = Me(o, r, t, "x")),
@@ -1579,7 +1579,7 @@
                 ((u.left =
                   Math.min(l, Math.abs(u.left)) * (u.left < 0 ? -1 : 1)),
                 (l -= Math.abs(u.left))),
-              fe(`- checked x: ${u.left}`)),
+              pe(`- checked x: ${u.left}`)),
             s.push(u),
             n && !l)
           )
@@ -1605,8 +1605,8 @@
             (i = ge(i, 0, t.MaxScrollTop())),
             (Ie(t.scrollLeft - n) && Ie(t.scrollTop - i)) ||
               (t.scrollTo({ left: n, top: i, behavior: r }),
-              c || (fe("Scrolling:"), (c = !0)),
-              fe(
+              c || (pe("Scrolling:"), (c = !0)),
+              pe(
                 `- ${e.top},${e.left} => ${i}, ${n}, behavior: ${r}`,
                 e.element,
               ));
@@ -1731,7 +1731,7 @@
           return this.scrollWidth - this.clientWidth;
         }
       }
-      (0, b.Cg)([f.o], Ne.prototype, "ResetScrollState", null);
+      (0, b.Cg)([p.o], Ne.prototype, "ResetScrollState", null);
       const Ee = new WeakMap();
       function Oe(e) {
         let t = Ee.get(e);
@@ -2685,9 +2685,9 @@
             this.m_Tree.BIsActive() && we(this, t, e, r, i);
         }
       }
-      (0, b.Cg)([f.o], Le.prototype, "OnDOMFocus", null),
-        (0, b.Cg)([f.o], Le.prototype, "OnDOMBlur", null),
-        (0, b.Cg)([f.o], Le.prototype, "OnNavigationEvent", null);
+      (0, b.Cg)([p.o], Le.prototype, "OnDOMFocus", null),
+        (0, b.Cg)([p.o], Le.prototype, "OnDOMBlur", null),
+        (0, b.Cg)([p.o], Le.prototype, "OnNavigationEvent", null);
       const ke = new U("FocusNavigation").Debug,
         je = new U("GamepadEvents").Debug;
       class He extends Le {
@@ -2759,9 +2759,9 @@
           return this.m_wrappedTree || null;
         }
       }
-      (0, b.Cg)([f.o], He.prototype, "OnWrappedTreeActivated", null),
-        (0, b.Cg)([f.o], He.prototype, "OnWrappedTreeUnhandledButton", null),
-        (0, b.Cg)([f.o], He.prototype, "CanTakeFocus", null);
+      (0, b.Cg)([p.o], He.prototype, "OnWrappedTreeActivated", null),
+        (0, b.Cg)([p.o], He.prototype, "OnWrappedTreeUnhandledButton", null),
+        (0, b.Cg)([p.o], He.prototype, "CanTakeFocus", null);
       const Ve = new U("FocusHistory").Debug;
       function Ke(e) {
         const t = (t) => {
@@ -3379,6 +3379,15 @@
               this.m_valueIsActive.Set(e),
               i &&
                 this.m_LastActiveFocusNavTree?.OnContextActiveStateChanged(e);
+            const n = this.m_LastActiveFocusNavTree;
+            if (e && void 0 === r && n?.Window == (t ?? this.m_rootWindow)) {
+              const e = n?.GetLastFocusedNode()?.Element,
+                t = e?.ownerDocument.activeElement;
+              !e ||
+                !n?.BIsActiveFocus() ||
+                (t && t != e.ownerDocument.body) ||
+                e.focus({ preventScroll: !0 });
+            }
           });
         }
         OnActivate(e) {
@@ -3660,7 +3669,7 @@
                   ? ht(st.Message.getRepeatedWrapperField, s, n)
                   : bt(s, n)
                 : ht(st.Message.getField, n)),
-            (t.prototype[`set_${r}`] = ft(
+            (t.prototype[`set_${r}`] = pt(
               s
                 ? a
                   ? st.Message.setRepeatedWrapperField
@@ -3668,7 +3677,7 @@
                 : st.Message.setField,
               n,
             )),
-            a && (t.prototype[`add_${r}`] = pt(n, s));
+            a && (t.prototype[`add_${r}`] = ft(n, s));
         }
       }
       function ht(e, ...t) {
@@ -3681,12 +3690,12 @@
           return st.Message.getWrapperField(this, e, t, r ? 1 : 0);
         };
       }
-      function ft(e, t) {
+      function pt(e, t) {
         return function (r) {
           return e(this, t, r);
         };
       }
-      function pt(e, t) {
+      function ft(e, t) {
         return t
           ? function (r, i) {
               return st.Message.addToRepeatedWrapperField(this, e, r, t, i);
@@ -4312,6 +4321,11 @@
                     bw: lt.writeString,
                   },
                   trace_flags: { n: 52, br: ot.readUint32, bw: lt.writeUint32 },
+                  browserapi_site: {
+                    n: 53,
+                    br: ot.readString,
+                    bw: lt.writeString,
+                  },
                 },
               }),
             Rt.sm_m
@@ -6590,7 +6604,11 @@
             return e.SendNotification(
               "ClientMetrics.ReportClientError#1",
               Tr(Gt, t),
-              { ePrivilege: 2, eWebAPIKeyRequirement: 1 },
+              {
+                ePrivilege: 2,
+                eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: ["all"],
+              },
             );
           }),
           (e.ClientBootstrapReport = function (e, t) {
@@ -6881,7 +6899,7 @@
                           message: [e.message, ...a],
                         };
                       })(e, t)
-                    : e.stack && e.stack.match(fr)
+                    : e.stack && e.stack.match(pr)
                       ? (async function (e, t) {
                           const {
                               bIncludeMessageInIdentifier: r,
@@ -7045,8 +7063,8 @@
       }
       const hr = /^\s*at .*(\S+:\d+|\(native\))/m,
         br = /(^|@)\S+:\d+/,
-        fr = /.*\/bundle-[a-zA-Z0-9]+:\d+:\d+/;
-      let pr,
+        pr = /.*\/bundle-[a-zA-Z0-9]+:\d+:\d+/;
+      let fr,
         Br = !1;
       function wr(e) {
         return (function (e) {
@@ -7064,7 +7082,7 @@
           })(e),
         );
       }
-      const yr = () => (pr || (pr = new gr()), pr);
+      const yr = () => (fr || (fr = new gr()), fr);
       async function Sr(e) {
         try {
           return (await Bt(e)).slice(0, 16);
@@ -9725,71 +9743,11 @@
           return "CSteamInputService_ForgetDonglePairingBond_Response";
         }
       }
-      class fi extends st.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            fi.prototype.serial_number || _t(fi.M()),
-            st.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            fi.sm_m ||
-              (fi.sm_m = {
-                proto: fi,
-                fields: {
-                  serial_number: {
-                    n: 1,
-                    br: ot.readString,
-                    bw: lt.writeString,
-                  },
-                },
-              }),
-            fi.sm_m
-          );
-        }
-        static MBF() {
-          return fi.sm_mbf || (fi.sm_mbf = ct(fi.M())), fi.sm_mbf;
-        }
-        toObject(e = !1) {
-          return fi.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return dt(fi.M(), e, t);
-        }
-        static fromObject(e) {
-          return ut(fi.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (at().BinaryReader)(e),
-            r = new fi();
-          return fi.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return mt(fi.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (at().BinaryWriter)();
-          return fi.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          gt(fi.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (at().BinaryWriter)();
-          return fi.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamInputService_GetControllerName_Request";
-        }
-      }
       class pi extends st.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            pi.prototype.controller_name || _t(pi.M()),
+            pi.prototype.serial_number || _t(pi.M()),
             st.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
@@ -9800,7 +9758,7 @@
               (pi.sm_m = {
                 proto: pi,
                 fields: {
-                  controller_name: {
+                  serial_number: {
                     n: 1,
                     br: ot.readString,
                     bw: lt.writeString,
@@ -9840,6 +9798,66 @@
         serializeBase64String() {
           var e = new (at().BinaryWriter)();
           return pi.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CSteamInputService_GetControllerName_Request";
+        }
+      }
+      class fi extends st.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            fi.prototype.controller_name || _t(fi.M()),
+            st.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            fi.sm_m ||
+              (fi.sm_m = {
+                proto: fi,
+                fields: {
+                  controller_name: {
+                    n: 1,
+                    br: ot.readString,
+                    bw: lt.writeString,
+                  },
+                },
+              }),
+            fi.sm_m
+          );
+        }
+        static MBF() {
+          return fi.sm_mbf || (fi.sm_mbf = ct(fi.M())), fi.sm_mbf;
+        }
+        toObject(e = !1) {
+          return fi.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return dt(fi.M(), e, t);
+        }
+        static fromObject(e) {
+          return ut(fi.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (at().BinaryReader)(e),
+            r = new fi();
+          return fi.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return mt(fi.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (at().BinaryWriter)();
+          return fi.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          gt(fi.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (at().BinaryWriter)();
+          return fi.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CSteamInputService_GetControllerName_Response";
@@ -11732,8 +11750,8 @@
           }),
           (e.GetControllerNameHandler = {
             name: "SteamInputManager.GetControllerName#1",
-            request: fi,
-            response: pi,
+            request: pi,
+            response: fi,
           }),
           (e.GetControllerName = function (e, t) {
             return null == (t = t || Fr().GetDefaultTransport())
@@ -11745,8 +11763,8 @@
                 })
               : t.SendMsg(
                   "SteamInputManager.GetControllerName#1",
-                  Tr(fi, e),
-                  pi,
+                  Tr(pi, e),
+                  fi,
                   { ePrivilege: 1, eClientExecutionSite: 2 },
                 );
           }),
@@ -11760,8 +11778,8 @@
                 })
               : t.SendMsg(
                   "SteamInputManager.GetControllerName#1",
-                  Tr(fi, e),
-                  pi,
+                  Tr(pi, e),
+                  fi,
                   { ePrivilege: 1, eClientExecutionSite: 2 },
                 );
           }),
@@ -12063,6 +12081,8 @@
         m_bShowDebugFocusRing = z(!1);
         m_glyphInfo = z({ nControllerType: 4, nControllerStyle: 100 });
         m_bRestoringHistory = !1;
+        m_nSystemKeyAppIDHint;
+        m_fnSystemKeyContextResolver;
         m_fnGamepadEventUpdateBatcher = (e) => e();
         constructor() {
           window.FocusNavController = this;
@@ -12186,18 +12206,26 @@
         }
         DispatchVirtualButtonClick(e, t, r) {
           let i;
-          t && (i = this.GetActiveContext() ?? this.FindAnActiveContext()),
-            this.OnButtonDown(
-              e,
-              r ?? a.Vz.GAMEPAD,
-              -1,
-              void 0,
-              void 0,
-              void 0,
-              t,
-              i,
-              !0,
-            ),
+          if (t) i = this.GetActiveContext() ?? this.FindAnActiveContext();
+          else if (r && !(0, a.UE)(r)) {
+            const e = this.GetActiveContext() ?? this.FindAnActiveContext(),
+              r = e?.m_LastActiveNavTree;
+            r &&
+              !r.GetLastFocusedNode() &&
+              r.Root.Element &&
+              ((t = r.Root.Element), (i = e));
+          }
+          this.OnButtonDown(
+            e,
+            r ?? a.Vz.GAMEPAD,
+            -1,
+            void 0,
+            void 0,
+            void 0,
+            t,
+            i,
+            !0,
+          ),
             this.OnButtonUp(
               e,
               r ?? a.Vz.GAMEPAD,
@@ -12228,6 +12256,20 @@
         }
         GetEventTarget(e, t, r = !1) {
           let n = this.GetActiveContext();
+          if (this.m_nSystemKeyAppIDHint && !n?.FindNavTreeInFocusedWindow()) {
+            const e = this.m_fnSystemKeyContextResolver?.(
+              this.m_nSystemKeyAppIDHint,
+            );
+            e &&
+              e != n &&
+              this.BCanActivateContext(e) &&
+              (Di(
+                `GetEventTarget: using ${e.LogName()} for system key AppID ${this.m_nSystemKeyAppIDHint} instead of ${n?.LogName() ?? "no context"}`,
+              ),
+              n?.ActiveWindow && n.OnDeactivate(n.ActiveWindow),
+              e.OnActivate(e.m_LastActiveFocusNavTree?.Window ?? e.RootWindow),
+              (n = e));
+          }
           !n && r && (n = this.FindAnActiveContext());
           let s = n?.ActiveWindow?.document.activeElement;
           if (n?.m_LastActiveNavTree) {
@@ -12429,6 +12471,12 @@
         BIsInActiveContext(e) {
           return Boolean(e && e.WindowContext == this.m_ActiveContext);
         }
+        SetSystemKeyAppIDHint(e) {
+          this.m_nSystemKeyAppIDHint = e;
+        }
+        SetSystemKeyContextResolver(e) {
+          this.m_fnSystemKeyContextResolver = e;
+        }
         RegisterForUnhandledButtonDownEvents(e) {
           return this.m_UnhandledButtonEventsCallbacks.Register(e);
         }
@@ -12505,9 +12553,9 @@
             );
         }
       }
-      (0, b.Cg)([f.o], Gi.prototype, "OnButtonDown", null),
-        (0, b.Cg)([f.o], Gi.prototype, "OnButtonUp", null),
-        (0, b.Cg)([f.o], Gi.prototype, "OnNavigationTypeChange", null);
+      (0, b.Cg)([p.o], Gi.prototype, "OnButtonDown", null),
+        (0, b.Cg)([p.o], Gi.prototype, "OnButtonUp", null),
+        (0, b.Cg)([p.o], Gi.prototype, "OnNavigationTypeChange", null);
       const xi = "VirtualKeyboardMessage";
       function Li(e) {
         return e && e.type === xi;
@@ -12570,13 +12618,13 @@
               this.m_ownerWindow.parent.postMessage(t, "*"));
         }
       }
-      (0, b.Cg)([f.o], ki.prototype, "ShowVirtualKeyboard", null),
-        (0, b.Cg)([f.o], ki.prototype, "ShowModalKeyboard", null),
-        (0, b.Cg)([f.o], ki.prototype, "HideVirtualKeyboard", null),
-        (0, b.Cg)([f.o], ki.prototype, "OnBrowserViewMessage", null),
-        (0, b.Cg)([f.o], ki.prototype, "OnMessage", null);
+      (0, b.Cg)([p.o], ki.prototype, "ShowVirtualKeyboard", null),
+        (0, b.Cg)([p.o], ki.prototype, "ShowModalKeyboard", null),
+        (0, b.Cg)([p.o], ki.prototype, "HideVirtualKeyboard", null),
+        (0, b.Cg)([p.o], ki.prototype, "OnBrowserViewMessage", null),
+        (0, b.Cg)([p.o], ki.prototype, "OnMessage", null);
       (0, b.Cg)(
-        [f.o],
+        [p.o],
         class {
           m_showKeyboard;
           m_showModalKeyboard;
@@ -12802,7 +12850,7 @@
               }),
               un.set(document.body, i.Root),
               gn(document.body, i.Root),
-              pn(void 0, !0),
+              fn(void 0, !0),
               e.RegisterGamepadNavigationTree(i, window),
               r.OnMount(window),
               window.document.hasFocus() && r.OnActivate(window);
@@ -12815,7 +12863,7 @@
               subtree: !0,
             }),
               (function (e) {
-                pe = e;
+                fe = e;
               })(!0),
               (function () {
                 Object.assign(window, Mn),
@@ -12834,8 +12882,8 @@
             (t) => e.push(t),
             (e) => r.push(e),
           ),
-            e.length && pn(s()(e)),
-            r.length && fn(s()(r));
+            e.length && fn(s()(e)),
+            r.length && pn(s()(r));
         }
       }
       const un = new WeakMap(),
@@ -12860,7 +12908,7 @@
       function bn(e) {
         return "jquery" in e ? un.has(e[0]) : un.has(e);
       }
-      function fn(e) {
+      function pn(e) {
         e.find("*")
           .addBack()
           .each(function () {
@@ -12870,7 +12918,7 @@
               s()(this).attr("data-nav-modal") && vn(this);
           });
       }
-      function pn(e, t = !1) {
+      function fn(e, t = !1) {
         performance.now();
         const r =
           "a,button,textarea,input:not(input[type=hidden]),label:not([for]),[data-panel],[data-react-nav-root],[data-nav-modal]";
@@ -12986,8 +13034,8 @@
             clickOnActivate: u,
             maintainX: g,
             maintainY: b,
-            enableVirtualKeyboard: f,
-            preferredChild: p,
+            enableVirtualKeyboard: p,
+            preferredChild: f,
             onOKActionDescription: B,
             onCancelActionDescription: w,
             onSecondaryActionDescription: y,
@@ -13102,7 +13150,7 @@
             ? (W.navEntryPreferPosition = Ge.MAINTAIN_X)
             : b
               ? (W.navEntryPreferPosition = Ge.MAINTAIN_Y)
-              : p && (W.navEntryPreferPosition = Ge.PREFERRED_CHILD),
+              : f && (W.navEntryPreferPosition = Ge.PREFERRED_CHILD),
           u &&
             (!1 !== W.focusable && (W.focusable = !0),
             t.on("vgp_onok", "firstChild" === u ? Ji : Xi),
@@ -13111,7 +13159,7 @@
             _n(e, () => {
               t.off("vgp_onok");
             })),
-          f &&
+          p &&
             (t.on("vgp_onok.vkbindings", () => nn.ShowVirtualKeyboard()),
             t.on("click.vkbindings", (e) => {
               "mouse" !== e.originalEvent?.pointerType &&
@@ -13162,9 +13210,9 @@
           s()(e).removeClass("navTreeModal");
       }
       const Mn = {
-        InstrumentFocusElements: pn,
+        InstrumentFocusElements: fn,
         ForceUpdateFocusElements: function (e) {
-          fn(s()(e)), pn(s()(e));
+          pn(s()(e)), fn(s()(e));
         },
         GPNavFocusChild: function (e) {
           let t = hn(e[0]);
@@ -13183,9 +13231,9 @@
               (tn(
                 "Element already in DOM tree, forcibly re-instrumenting elements so they are parented to modal",
               ),
-              fn(t)),
+              pn(t)),
             t.attr("data-nav-modal", "true"),
-            r && pn(t),
+            r && fn(t),
             () => vn(e)
           );
         },
@@ -13199,7 +13247,7 @@
         },
       };
     },
-    340: (e, t, r) => {
+    298: (e, t, r) => {
       "use strict";
       r.d(t, { T: () => i, h: () => n });
       const i = "GamepadInput";
@@ -13212,12 +13260,12 @@
           (e[(e.Full = 4)] = "Full");
       })(n || (n = {}));
     },
-    950: (e, t, r) => {
+    92: (e, t, r) => {
       "use strict";
       r.d(t, { A7: () => a, Vp: () => o, n4: () => l });
       var i = r(629),
-        n = r(339),
-        s = r(340);
+        n = r(881),
+        s = r(298);
       class a {
         PostMessage(e) {}
         RegisterForMessage(e) {}

@@ -786,6 +786,7 @@ $d`D-laM
 *ZN12CBrowserView22OnMsgFavIconURLChangedER16CHTMLProtoBufMsgI21CMsgFavIconURLChangedEEUl13scoped_refptrI12CefV8ContextEE_
 *ZN12CBrowserView9EmitEventEPKcRSt6vectorI13scoped_refptrI10CefV8ValueESaIS5_EEEUlS3_I12CefV8ContextEE_
 *ZN12LinuxHelpers19RunCommandGetOutputE10StringViewR10CUtlStringbbEUlS0_E_
+*ZN12LinuxHelpers28SendCloseSignalToProcessListERK10CUtlVectorIj10CUtlMemoryIjEEEUlP9_XDisplaymE_
 *ZN14CClientHandler15OnAddressChangeE13scoped_refptrI10CefBrowserES0_I8CefFrameERK13CefStringBaseI19CefStringTraitsUTF8EEUlS0_I18CefNavigationEntryEbiiE_
 *ZN14CClientHandler19ScheduleWindowMovedERK10CUtlStringEUlvE_
 *ZN14CClientHandler21ScheduleWindowResizedERK10CUtlStringEUlvE_
@@ -1170,6 +1171,7 @@ $d`D-laM
 /name
 /overlays/thumbnail
 /proc/%d/environ
+/proc/device-tree/board-info/unit_sn
 /proc/device-tree/compatible
 /proc/device-tree/model
 /proc/mounts
@@ -1532,6 +1534,7 @@ $d`D-laM
 14CUtlLinkedListIN23CV8ManagerRenderProcess12CallbackInfoEiE
 14CUtlLinkedListIP14CClientHandleriE
 14CUtlLinkedListIP16IBrowserComposeriE
+14CUtlLinkedListISt4pairIPmjEiE
 14CUtlLinkedListIjiE
 14CefBinaryValue
 14CefBrowserHost
@@ -2083,7 +2086,6 @@ $d`D-laM
 21CefTouchHandlerCppToC
 21CefV8StackFrameCToCpp
 21CefV8StackTraceCToCpp
-22:41:30
 22CBrowserComposerSystem
 22CFrameEventPerfTracker
 22CMsgAckPIDShuttingDown
@@ -2105,6 +2107,7 @@ $d`D-laM
 22CefRenderHandlerCppToC
 22CefStringVisitorCppToC
 22CefV8InterceptorCppToC
+23:04:44
 23CActivationCodeItemInfo
 23CMsgBrowserErrorStrings
 23CMsgBrowserFocusChanged
@@ -2274,9 +2277,9 @@ $d`D-laM
 31CefResourceRequestHandlerCppToC
 31CefRunContextMenuCallbackCToCpp
 31CefV8ArrayBufferReleaseCallback
+32767
 32CefDevToolsMessageObserverCppToC
 3333
-32767
 3333UUUU
 33CMsgDuplicateControllerSourceMode
 33CMsgVerticalScrollBarSizeResponse
@@ -2951,7 +2954,6 @@ B-283
 B-409
 B-571
 B2pr
-B3w$
 B64_write_ASN1
 BAD RECURSION DEPTH\n
 BAD-TYPE
@@ -7191,6 +7193,7 @@ N10__cxxabiv115__forced_unwindE
 N10__cxxabiv117__class_type_infoE
 N10__cxxabiv119__foreign_exceptionE
 N10__cxxabiv120__si_class_type_infoE
+N10__cxxabiv121__vmi_class_type_infoE
 N13IIBusCallback18CUnregisterHandler9CUserDataE
 N13IIBusCallback18CUnregisterHandlerE
 N17CFileWriterThread14CFileWriteItemE
@@ -7693,6 +7696,7 @@ Object Signing
 Object Signing CA
 Obtained EMS handle %u
 Obtained XMS handle %u
+Oct  6 2026
 October
 Odia
 Offensive Avatar
@@ -8886,7 +8890,6 @@ SenderAddress
 SenderName
 Sending of an email failed
 Sentiment
-Sep 23 2026
 September
 Serbian
 SerialNumber
@@ -10740,13 +10743,6 @@ _label
 _longjmp
 _new
 _setjmp
-_txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
-_txnal_cow_string_D1(void*)
-_txnal_cow_string_D1_commit(void*)
-_txnal_cow_string_c_str(void const*)
-_txnal_logic_error_get_msg(void*)
-_txnal_runtime_error_get_msg(void*)
-_txnal_sso_string_c_str(void const*)
 _xU`u
 `3QbE
 `3SbE
@@ -21245,21 +21241,7 @@ type_id
 typeinfo fn for
 typeinfo for
 typeinfo for SteamThreadTools::CThread
-typeinfo for __cxxabiv1::__class_type_info
-typeinfo for __cxxabiv1::__forced_unwind
-typeinfo for __cxxabiv1::__foreign_exception
-typeinfo for __cxxabiv1::__si_class_type_info
-typeinfo for __gnu_cxx::__concurrence_lock_error
-typeinfo for __gnu_cxx::__concurrence_unlock_error
-typeinfo for __gnu_cxx::recursive_init_error
 typeinfo name for
-typeinfo name for __cxxabiv1::__class_type_info
-typeinfo name for __cxxabiv1::__forced_unwind
-typeinfo name for __cxxabiv1::__foreign_exception
-typeinfo name for __cxxabiv1::__si_class_type_info
-typeinfo name for __gnu_cxx::__concurrence_lock_error
-typeinfo name for __gnu_cxx::__concurrence_unlock_error
-typeinfo name for __gnu_cxx::recursive_init_error
 u!!Bc
 u.addressPrefix
 u.addressRange
@@ -21662,14 +21644,6 @@ vrOverlayKey
 vr_overlay_key
 vsnprintf
 vtable for
-vtable for __cxxabiv1::__class_type_info
-vtable for __cxxabiv1::__forced_unwind
-vtable for __cxxabiv1::__foreign_exception
-vtable for __cxxabiv1::__si_class_type_info
-vtable for __cxxabiv1::__vmi_class_type_info
-vtable for __gnu_cxx::__concurrence_lock_error
-vtable for __gnu_cxx::__concurrence_unlock_error
-vtable for __gnu_cxx::recursive_init_error
 vtw\nx
 vulkan
 w+OQvr

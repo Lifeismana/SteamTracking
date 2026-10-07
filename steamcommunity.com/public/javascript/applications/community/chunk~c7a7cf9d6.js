@@ -1,818 +1,1009 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-(self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-  [3584],
-  {
-    64734: (e) => {
-      e.exports = {
-        SectionTitleHeader: "_2g5oNomwd2lv8wL2qlsLVA",
-        SectionTitleButtons: "RGHKm1_KeaBjdzuvisfYN",
-        required_title: "_3yDPZjnsoLc2FkrAH2UOEd",
-      };
-    },
-    57876: (e, t, n) => {
-      "use strict";
-      n.d(t, { Xh: () => d, cU: () => u, tf: () => m, wl: () => p });
-      var r = n(22837),
-        i = n(71150),
-        o = n(30570),
-        a = n(30894),
-        s = n(16021),
-        l = n(97471),
-        c = n(78327);
-      const d = {
-        include_assets: !0,
-        include_release: !0,
-        include_platforms: !0,
-        include_tag_count: 20,
-        include_basic_info: !0,
-        include_optin_registration_tags: !0,
-        include_trailers: !0,
-        include_reviews: !0,
-        include_screenshots: !0,
-        include_supported_languages: !0,
-      };
-      class u {
-        constructor() {
-          this.m_setAlreadyAdded = new Set();
+(() => {
+  (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
+    [93584],
+    {
+      20615: (V, U, t) => {
+        "use strict";
+        t.d(U, { _: () => G, p: () => j });
+        var m = t(68312),
+          S = t(5827),
+          M = t(35038),
+          R = t(3367);
+        function C() {
+          const I = useStoreBrowseContext(),
+            A = useActiveAnonymousServiceTransport();
+          return useQuery(l(A, I));
         }
-        Reset() {
-          this.m_setAlreadyAdded = new Set();
+        function r(I) {
+          return ["StoreBrowsePriceStops", I];
         }
-        BHasAppID(e) {
-          return this.m_setAlreadyAdded.has("a" + e);
+        function l(I, A) {
+          const { country: B } = A;
+          return {
+            queryKey: r(B),
+            queryFn: async () => b(I, B),
+            staleTime: 1440 * 60 * 1e3,
+          };
         }
-        BHasPackageID(e) {
-          return this.m_setAlreadyAdded.has("s" + e);
+        async function b(I, A) {
+          const B = M.w.Init(R.wY);
+          B.Body().set_country_code(A);
+          const g = await R.$4.GetPriceStops(I, B);
+          if (!g.BSuccess())
+            throw `Error loading price stops: ${g.GetErrorMessage()}`;
+          return g.Body().toObject().price_stops || [];
         }
-        BHasBundleID(e) {
-          return this.m_setAlreadyAdded.has("b" + e);
+        var h = t(88942),
+          a = t(18210);
+        function f(I) {
+          return I != null && I.length
+            ? [
+                { price: 0, label: (0, a.we)("#FacetedBrowse_Price_Free") },
+                ...I.map((A) => {
+                  var B, g;
+                  return {
+                    price:
+                      Number((B = A.amount_in_cents) != null ? B : 0) / 100,
+                    label: (0, a.we)(
+                      "#FacetedBrowse_Price_Under",
+                      (g = A.formatted_amount) != null ? g : "",
+                    ),
+                  };
+                }),
+                { price: void 0, label: (0, a.we)("#FacetedBrowse_Price_Any") },
+              ]
+            : [];
         }
-        BHasStoreItemKey(e) {
-          return this.m_setAlreadyAdded.has(
-            this.ConvertStoreItemKeyToUniqueKey(e),
+        function j() {
+          const I = (0, S.ce)(),
+            A = (0, m.rW)(),
+            { data: B } = (0, h.I)({ ...l(A, I), select: f });
+          return B != null ? B : [];
+        }
+        function G(I, A) {
+          return f(I.getQueryData(r(A)));
+        }
+      },
+      3852: (V, U, t) => {
+        "use strict";
+        t.d(U, { hl: () => r, kP: () => C, pj: () => R, u: () => M });
+        var m = t(90825),
+          S = t(18210);
+        function M(l, b, h) {
+          var a;
+          const f = l.name;
+          if (
+            (f == null ? void 0 : f.length) > 0 &&
+            (a = f[0]) != null &&
+            a.startsWith("#tagid_")
+          ) {
+            const j = parseInt(f[0].substring(7));
+            if (j > 0) return h && h[j];
+          }
+          return (0, S.we)((S.NT.GetWithFallback(f, b) || "").trim());
+        }
+        function R(l) {
+          return String(l.type) + l.id;
+        }
+        function C(l, b) {
+          return (
+            l.jsondata.item_source_type != null &&
+            l.jsondata.item_source_type !== m.w.k_ETaggedItems
           );
         }
-        AddStoreItemKey(e) {
-          this.m_setAlreadyAdded.add(this.ConvertStoreItemKeyToUniqueKey(e));
+        function r(l) {
+          for (const b of l.facetValues)
+            if (b.filter != null) {
+              for (const h of b.filter.clauses)
+                for (const a of h.or_tags) if (a.startsWith("[Opt]")) return !0;
+            }
+          return !1;
         }
-        ConvertStoreItemKeyToUniqueKey(e) {
-          switch (e.item_type) {
-            default:
-            case "app":
-              return "a" + e.id;
-            case "sub":
-              return "s" + e.id;
-            case "bundle":
-              return "b" + e.id;
+      },
+      24805: (V, U, t) => {
+        "use strict";
+        t.d(U, { Xh: () => f, cU: () => j, tf: () => I, wl: () => G });
+        var m = t(99412),
+          S = t(18735),
+          M = t(3367),
+          R = t(6469),
+          C = t(10142),
+          r = t(29543),
+          l = t(3166),
+          b = Object.defineProperty,
+          h = (_, n, y) =>
+            n in _
+              ? b(_, n, {
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+                  value: y,
+                })
+              : (_[n] = y),
+          a = (_, n, y) => h(_, typeof n != "symbol" ? n + "" : n, y);
+        const f = {
+          include_assets: !0,
+          include_release: !0,
+          include_platforms: !0,
+          include_tag_count: 20,
+          include_basic_info: !0,
+          include_optin_registration_tags: !0,
+          include_trailers: !0,
+          include_reviews: !0,
+          include_screenshots: !0,
+          include_supported_languages: !0,
+        };
+        class j {
+          constructor() {
+            a(this, "m_setAlreadyAdded", new Set());
+          }
+          Reset() {
+            this.m_setAlreadyAdded = new Set();
+          }
+          BHasAppID(n) {
+            return this.m_setAlreadyAdded.has("a" + n);
+          }
+          BHasPackageID(n) {
+            return this.m_setAlreadyAdded.has("s" + n);
+          }
+          BHasBundleID(n) {
+            return this.m_setAlreadyAdded.has("b" + n);
+          }
+          BHasStoreItemKey(n) {
+            return this.m_setAlreadyAdded.has(
+              this.ConvertStoreItemKeyToUniqueKey(n),
+            );
+          }
+          AddStoreItemKey(n) {
+            this.m_setAlreadyAdded.add(this.ConvertStoreItemKeyToUniqueKey(n));
+          }
+          ConvertStoreItemKeyToUniqueKey(n) {
+            switch (n.item_type) {
+              default:
+              case "app":
+                return "a" + n.id;
+              case "sub":
+                return "s" + n.id;
+              case "bundle":
+                return "b" + n.id;
+            }
           }
         }
-      }
-      const p = 4;
-      function m(e, t, n, r, i, o) {
-        var a;
-        const c = new Array(),
-          d = new Array(),
-          u = new Array(),
-          m = new Array();
-        if (!e || 0 == e.length) return c;
-        const _ = [
-          l.by.k_RejectSupportedLanguage,
-          l.by.k_RejectAlreadyDisplayed,
-          l.by.k_RejectNoTrailer,
-        ];
-        for (let o of e) {
-          let e = o.id,
-            p = l.by.k_NotRejected;
-          switch (o.item_type) {
-            case "sub":
-              const i = s.A.Get().GetPackage(e);
-              if (
-                1 !==
-                (null === (a = null == i ? void 0 : i.GetIncludedAppIDs()) ||
-                void 0 === a
-                  ? void 0
-                  : a.length)
-              ) {
-                p = I(e, t, r, !0);
+        const G = 4;
+        function I(_, n, y, P, D, E) {
+          var e;
+          const s = new Array(),
+            o = new Array(),
+            d = new Array(),
+            c = new Array();
+          if (!_ || _.length == 0) return s;
+          const O = [
+            r.by.k_RejectSupportedLanguage,
+            r.by.k_RejectAlreadyDisplayed,
+            r.by.k_RejectNoTrailer,
+          ];
+          for (let u of _) {
+            let L = u.id,
+              i = r.by.k_NotRejected;
+            switch (u.item_type) {
+              case "sub":
+                const p = C.A.Get().GetPackage(L);
+                if (
+                  ((e = p == null ? void 0 : p.GetIncludedAppIDs()) == null
+                    ? void 0
+                    : e.length) !== 1
+                ) {
+                  i = x(L, n, P, !0);
+                  break;
+                }
+                L = p.GetIncludedAppIDs()[0];
+              case "app":
+                i = F(L, n, y, P, !0);
                 break;
-              }
-              e = i.GetIncludedAppIDs()[0];
-            case "app":
-              p = f(e, t, n, r, !0);
+              case "bundle":
+                i = w(L, n, P, !0);
+                break;
+            }
+            if (
+              (i == r.by.k_NotRejected
+                ? ((u.rejected = r.by.k_NotRejected),
+                  s.push({ ...u, priority: 1 }))
+                : O.includes(i)
+                  ? ((u.rejected = r.by.k_NotRejected), o.push(u))
+                  : ((u.rejected = i),
+                    i == r.by.k_RejectIgnoredGame ? d.push(u) : c.push(u)),
+              s.length > D)
+            )
               break;
-            case "bundle":
-              p = G(e, t, r, !0);
           }
-          if (
-            (p == l.by.k_NotRejected
-              ? ((o.rejected = l.by.k_NotRejected),
-                c.push({ ...o, priority: 1 }))
-              : _.includes(p)
-                ? ((o.rejected = l.by.k_NotRejected), d.push(o))
-                : ((o.rejected = p),
-                  p == l.by.k_RejectIgnoredGame ? u.push(o) : m.push(o)),
-            c.length > i)
-          )
-            break;
+          return (
+            s.length < D &&
+              (A(s, o, E, 2),
+              s.length < E &&
+                n.enforce_minimum &&
+                (A(s, d, E, 3), A(s, c, E, G))),
+            s
+          );
         }
-        return (
-          c.length < i &&
-            (y(c, d, o, 2),
-            c.length < o &&
-              t.enforce_minimum &&
-              (y(c, u, o, 3), y(c, m, o, p))),
-          c
-        );
-      }
-      function y(e, t, n, r) {
-        for (let i = 0; e.length < n && i < t.length; ++i)
-          e.push({ ...t[i], priority: r });
-      }
-      function _(e, t) {
-        var n, r, i, o;
-        const s = a.Fm.Get();
-        if (t.only_current_platform && s.BHasPlatformPreferenceSet()) {
+        function A(_, n, y, P) {
+          for (let D = 0; _.length < y && D < n.length; ++D)
+            _.push({ ...n[D], priority: P });
+        }
+        function B(_, n) {
+          var y, P, D, E;
+          const e = R.Fm.Get();
           if (
+            n.only_current_platform &&
+            e.BHasPlatformPreferenceSet() &&
             !(
-              ((null === (n = e.GetPlatforms()) || void 0 === n
-                ? void 0
-                : n.windows) &&
-                s.BIsPreferredPlatform("win")) ||
-              ((null === (r = e.GetPlatforms()) || void 0 === r
-                ? void 0
-                : r.mac) &&
-                s.BIsPreferredPlatform("mac")) ||
-              ((null === (i = e.GetPlatforms()) || void 0 === i
-                ? void 0
-                : i.steamos_linux) &&
-                s.BIsPreferredPlatform("linux"))
+              (((y = _.GetPlatforms()) == null ? void 0 : y.windows) &&
+                e.BIsPreferredPlatform("win")) ||
+              (((P = _.GetPlatforms()) == null ? void 0 : P.mac) &&
+                e.BIsPreferredPlatform("mac")) ||
+              (((D = _.GetPlatforms()) == null ? void 0 : D.steamos_linux) &&
+                e.BIsPreferredPlatform("linux"))
             )
           )
-            return l.by.k_RejectWrongPlatform;
+            return r.by.k_RejectWrongPlatform;
+          if (!n.prepurchase && _.BIsComingSoon())
+            return r.by.k_RejectNoComingSoon;
+          const s = _.GetPlatforms();
+          return !n.virtual_reality &&
+            s &&
+            s.vr_support &&
+            s.vr_support.vrhmd_only
+            ? r.by.k_RejectNoVR
+            : (E = _.GetAllCreatorClanIDs()) != null &&
+                E.some((o) => e.BIsIgnoringCurator(o))
+              ? r.by.k_RejectCreatorClan
+              : r.by.k_NotRejected;
         }
-        if (!t.prepurchase && e.BIsComingSoon())
-          return l.by.k_RejectNoComingSoon;
-        const c = e.GetPlatforms();
-        return !t.virtual_reality &&
-          c &&
-          c.vr_support &&
-          c.vr_support.vrhmd_only
-          ? l.by.k_RejectNoVR
-          : (
-                null === (o = e.GetAllCreatorClanIDs()) || void 0 === o
-                  ? void 0
-                  : o.some((e) => s.BIsIgnoringCurator(e))
+        function g(_, n) {
+          var y;
+          if (n.localized) {
+            const P = (0, m.sfN)(l.TS.LANGUAGE);
+            if (
+              !(
+                (y = _.GetAllLanguagesWithSomeSupport()) != null &&
+                y.includes(P)
               )
-            ? l.by.k_RejectCreatorClan
-            : l.by.k_NotRejected;
-      }
-      function h(e, t) {
-        var n;
-        if (t.localized) {
-          const t = (0, r.sfN)(c.TS.LANGUAGE);
-          if (
-            !(null === (n = e.GetAllLanguagesWithSomeSupport()) || void 0 === n
-              ? void 0
-              : n.includes(t))
-          )
-            return l.by.k_RejectSupportedLanguage;
-        }
-        return l.by.k_NotRejected;
-      }
-      function f(e, t, n, r, c) {
-        const d = s.A.Get().GetApp(e);
-        if (!d) return l.by.k_RejectNotLoaded;
-        const u = _(d, t);
-        if (u != l.by.k_NotRejected) return u;
-        const p = a.Fm.Get();
-        if (p.BIsGameIgnored(e)) return l.by.k_RejectIgnoredGame;
-        if (p.BExcludeTagIDs(d.GetTagIDs())) return l.by.k_RejectIgnoreGameTags;
-        if (p.BExcludesContentDescriptor(d.GetContentDescriptorIDs()))
-          return l.by.k_RejectIgnoreContentDescriptors;
-        if (!t.early_access && d.BIsEarlyAccess())
-          return l.by.k_RejectEarlyAccess;
-        const m = d.GetAppType();
-        if (!t.software && m == o.uE.Sv) return l.by.k_RejectSoftware;
-        if (t.games_already_in_library && p.BIsGameOwned(e))
-          return l.by.k_RejectInLibrary;
-        if (t.games_not_in_library && !p.BIsGameOwned(e))
-          return l.by.k_RejectNotInLibrary;
-        if (!t.video && [o.uE.Wz, o.uE.gQ, o.uE.ID].includes(m))
-          return l.by.k_RejectVideo;
-        if (t.has_discount) {
-          const e = d.GetBestPurchaseOption();
-          if (!e || !e.discount_pct) return l.by.k_RejectNoDiscount;
-        }
-        return "adultonly" != n &&
-          t.no_ao_content &&
-          (d.HasContentDescriptorID(i.u7) || d.HasContentDescriptorID(i.T4))
-          ? l.by.k_RejectAO
-          : m == o.uE.ue &&
-              t.games_already_in_library &&
-              p.BIsGameOwned(d.GetParentAppID() || 0)
-            ? l.by.k_RejectInLibrary
-            : c
-              ? (m == o.uE.ue && r.BHasAppID(d.GetParentAppID() || 0)) ||
-                r.BHasAppID(e)
-                ? l.by.k_RejectAlreadyDisplayed
-                : t.has_trailer && !d.BHasTrailers(!1)
-                  ? l.by.k_RejectNoTrailer
-                  : h(d, t)
-              : l.by.k_NotRejected;
-      }
-      function g(e, t) {
-        const n = a.Fm.Get();
-        let r = !1;
-        for (let t of e) {
-          if (n.BIsGameIgnored(t)) return l.by.k_RejectIgnoredGame;
-          n.BIsGameOwned(t) && (r = !0);
-        }
-        return t.games_not_in_library && r
-          ? l.by.k_RejectInLibrary
-          : t.games_not_in_library && !r
-            ? l.by.k_RejectNotInLibrary
-            : l.by.k_NotRejected;
-      }
-      function I(e, t, n, r) {
-        const i = s.A.Get().GetPackage(e);
-        if (!i) return l.by.k_RejectNotLoaded;
-        const o = _(i, t);
-        if (o != l.by.k_NotRejected) return o;
-        const c = g(i.GetIncludedAppIDs(), t);
-        if (c != l.by.k_NotRejected) return c;
-        const d = a.Fm.Get();
-        return t.games_already_in_library && d.BOwnsPackage(e)
-          ? l.by.k_RejectInLibrary
-          : d.BIsPackageIgnored(e)
-            ? l.by.k_RejectIgnoredGame
-            : r
-              ? n.BHasPackageID(e)
-                ? l.by.k_RejectAlreadyDisplayed
-                : h(i, t)
-              : l.by.k_NotRejected;
-      }
-      function G(e, t, n, r) {
-        const i = s.A.Get().GetBundle(e);
-        if (!i) return l.by.k_RejectNotLoaded;
-        const o = _(i, t);
-        if (o != l.by.k_NotRejected) return o;
-        const a = g(i.GetIncludedAppIDs(), t);
-        return a != l.by.k_NotRejected
-          ? a
-          : r
-            ? n.BHasBundleID(e)
-              ? l.by.k_RejectAlreadyDisplayed
-              : h(i, t)
-            : l.by.k_NotRejected;
-      }
-    },
-    62734: (e, t, n) => {
-      "use strict";
-      n.d(t, { f: () => o });
-      var r = n(81393);
-      var i = n(78327);
-      class o {
-        BHasHomeView() {
-          return Boolean(this.m_HomeView);
-        }
-        GetHomeView() {
-          var e;
-          return null === (e = this.m_HomeView) || void 0 === e
-            ? void 0
-            : e.home;
-        }
-        static Get() {
-          var e;
-          return (
-            o.s_globalSingletonStore ||
-              ((e = "CHomeViewStore.s_globalSingletonStore"),
-              (0, r.wT)(!0, "Unexpected code running in SSR Server: " + e),
-              (o.s_globalSingletonStore = new o())),
-            o.s_globalSingletonStore
-          );
-        }
-        constructor() {
-          this.m_HomeView = void 0;
-          const e = (0, i.Tc)("home_view_setting", "application_config");
-          this.ValidateHomeViewData(e) && this.SetHomeViewSetting(e);
-          const t = (0, i.Tc)(
-            "home_view_setting_override",
-            "application_config",
-          );
-          this.ValidateHomeViewDataOverride(t) &&
-            this.SetHomeViewSettingOverride(t);
-        }
-        ValidateHomeViewData(e) {
-          const t = e;
-          return (
-            t && "object" == typeof t.home && "object" == typeof t.main_cluster
-          );
-        }
-        SetHomeViewSetting(e) {
-          this.m_HomeView = e;
-        }
-        ValidateHomeViewDataOverride(e) {
-          const t = e;
-          return (
-            t &&
-            (!t.all || "object" == typeof t.all) &&
-            (!t.maincap || "object" == typeof t.maincap)
-          );
-        }
-        SetHomeViewSettingOverride(e) {
-          this.m_HomeView
-            ? (this.m_HomeView.home = {
-                ...this.m_HomeView.home,
-                ...(null == e ? void 0 : e.all),
-                ...(null == e ? void 0 : e.maincap),
-              })
-            : (this.m_HomeView = {
-                home: {
-                  ...(null == e ? void 0 : e.all),
-                  ...(null == e ? void 0 : e.maincap),
-                },
-              });
-        }
-      }
-    },
-    73964: (e, t, n) => {
-      "use strict";
-      n.d(t, { $: () => c });
-      var r = n(41735),
-        i = n.n(r),
-        o = n(78327),
-        a = n(91254),
-        s = n(70078),
-        l = n(37085);
-      class c extends a.ZQ {
-        async DeleteOldAnnouncement(e, t) {
-          let n = new URLSearchParams();
-          n.append("sessionid", (0, o.KC)());
-          let r =
-              o.TS.COMMUNITY_BASE_URL +
-              "/gid/" +
-              e.ConvertTo64BitString() +
-              "/announcements/ajaxdeleteannouncement/" +
-              t,
-            a = await i().post(r, n);
-          if (a.data.success != l.R) throw a.data;
-          return this.RemoveGIDFromList(e, s.cB + t), a.data;
-        }
-        static Get() {
-          return (
-            c.sm_Instance || ((c.sm_Instance = new c()), c.sm_Instance.Init()),
-            c.sm_Instance
-          );
-        }
-        static GetSummaryStore() {
-          return (
-            c.sm_SummaryInstance ||
-              ((c.sm_SummaryInstance = new c(!0)), c.sm_SummaryInstance.Init()),
-            c.sm_SummaryInstance
-          );
-        }
-      }
-    },
-    8107: (e, t, n) => {
-      "use strict";
-      n.d(t, { N: () => b });
-      var r = n(34629),
-        i = n(7850),
-        o = n(41735),
-        a = n.n(o),
-        s = n(75844),
-        l = n(90626),
-        c = n(87652),
-        d = n(65606),
-        u = n(55294),
-        p = n(9154),
-        m = n(88843),
-        y = n(64641),
-        _ = n.n(y),
-        h = n(22797),
-        f = n(68797),
-        g = n(78327),
-        I = n(66418),
-        G = n(30894),
-        A = n(51272),
-        v = n(84811);
-      const b = (e) => {
-        let { bShowOnlyInitialEvent: t } = e;
-        const n = (0, g.Qn)(),
-          r = (0, c.Y)();
-        return (0, i.jsx)(v.tH, {
-          children: (0, i.jsx)(S, {
-            ...e,
-            bShowOnlyInitialEvent: t || n,
-            tracker: r,
-          }),
-        });
-      };
-      let S = class extends l.Component {
-        constructor() {
-          super(...arguments),
-            (this.state = { bLoading: !1, eventModel: this.props.eventModel }),
-            (this.m_refParent = l.createRef()),
-            (this.m_cancelSignal = a().CancelToken.source());
-        }
-        componentDidMount() {
-          this.state.eventModel ||
-            this.setState({ bLoading: !0 }, this.LoadEvent);
-          let e = this.GetBodyElement();
-          e &&
-            this.props.bPrimaryPageFeature &&
-            e.classList.add(m.BodyNoScroll);
-        }
-        componentWillUnmount() {
-          this.m_cancelSignal.cancel("EventInfiniteScrollModal unmounting");
-          let e = this.GetBodyElement();
-          e &&
-            this.props.bPrimaryPageFeature &&
-            e.classList.remove(m.BodyNoScroll);
-        }
-        GetBodyElement() {
-          return this.m_refParent.current
-            ? this.m_refParent.current.closest("body")
-            : null;
-        }
-        async LoadEvent() {
-          const {
-            appid: e,
-            clanSteamID: t,
-            announcementGID: n,
-            partnerEventStore: r,
-            additionalParams: i,
-          } = this.props;
-          r.LoadAdjacentPartnerEventsByAnnouncement(
-            n,
-            t,
-            e,
-            0,
-            3,
-            i,
-            this.m_cancelSignal,
-          )
-            .then((e) => {
-              e.length > 0
-                ? this.setState(
-                    { bLoading: !1, eventModel: e[0] },
-                    this.HandleReadEvent,
-                  )
-                : (this.props.onEventNotFound && this.props.onEventNotFound(),
-                  this.setState({ bLoading: !1 }));
-            })
-            .catch((e) => {
-              let t = (0, f.H)(e);
-              console.error(
-                "EventInfiniteScrollModal failed " + t.strErrorMsg,
-                t,
-              ),
-                this.setState({ bLoading: !1 });
-            });
-        }
-        async HandleReadEvent() {
-          const { eventModel: e } = this.state,
-            { trackingLocation: t, tracker: n } = this.props;
-          e && e.BIsPartnerEvent() && (n.RecordEventRead(e, t), n.Flush());
-        }
-        render() {
-          const { bShowOnlyInitialEvent: e } = this.props,
-            { bLoading: t, eventModel: n } = this.state;
-          if (t)
-            return (0, i.jsx)(p.EN, {
-              active: !0,
-              children: (0, i.jsx)("div", {
-                className: _().FlexCenter,
-                style: { height: "400px" },
-                children: (0, i.jsx)(h.t, {}),
-              }),
-            });
-          const {
-            closeModal: r,
-            appid: o,
-            clanSteamID: a,
-            className: s,
-            partnerEventStore: l,
-            showAppHeader: c,
-            bPrimaryPageFeature: m,
-            additionalParams: y,
-            eventClassName: f,
-          } = this.props;
-          let g;
-          I.TS.IN_CLIENT &&
-            (null == n ? void 0 : n.appid) &&
-            (G.Fm.Get().HintLoad(),
-            G.Fm.Get().BOwnsApp(n.appid) &&
-              (g = (e) =>
-                (0, A.EP)(e, "steam://nav/games/details/" + n.appid)));
-          const v = (0, i.jsx)(d.sU, {
-            children: (t) =>
-              (0, i.jsx)(u.AD, {
-                initialEvent: n,
-                appid: o,
-                clanSteamID: a,
-                partnerEventStore: l,
-                emoticonStore: t,
-                closeModal: !m && r,
-                showAppHeader: c,
-                bShowOnlyInitialEvent: e,
-                additionalParams: y,
-                eventClassName: f,
-                onAppIconClick: g,
-              }),
-          });
-          return m
-            ? v
-            : (0, i.jsx)(p.EN, {
-                active: !0,
-                children: (0, i.jsx)("div", { className: s, children: v }),
-              });
-        }
-      };
-      S = (0, r.Cg)([s.PA], S);
-    },
-    99032: (e, t, n) => {
-      "use strict";
-      n.d(t, {
-        AX: () => I,
-        H2: () => h,
-        Li: () => g,
-        S7: () => m,
-        a9: () => G,
-        jy: () => f,
-        nt: () => _,
-        sd: () => p,
-        tJ: () => y,
-      });
-      var r = n(57876),
-        i = n(97471),
-        o = n(81886),
-        a = n(22837),
-        s = n(30570),
-        l = n(30894),
-        c = n(16021),
-        d = n(62734),
-        u = n(81393);
-      function p(e) {
-        return c.A.Get().BIsStoreItemMissing(e.id, (0, i.SW)(e.type));
-      }
-      function m(e, t, n) {
-        const r = new Array();
-        return (
-          null == e || e.forEach((e) => r.push({ id: e, type: "game" })),
-          null == t || t.forEach((e) => r.push({ id: e, type: "sub" })),
-          null == n || n.forEach((e) => r.push({ id: e, type: "bundle" })),
-          r
-        );
-      }
-      function y(e) {
-        var t, n;
-        const r = c.A.Get().GetStoreItem(e.id, (0, i.SW)(e.type));
-        return (
-          (null !==
-            (n =
-              null === (t = null == r ? void 0 : r.GetBestPurchaseOption()) ||
-              void 0 === t
-                ? void 0
-                : t.discount_pct) && void 0 !== n
-            ? n
-            : 0) > 0
-        );
-      }
-      function _(e) {
-        var t;
-        if (
-          !(null === (t = d.f.Get().GetHomeView()) || void 0 === t
-            ? void 0
-            : t.localized)
-        )
-          return !0;
-        const n = c.A.Get().GetStoreItem(e.id, (0, i.SW)(e.type));
-        return (
-          !n ||
-          l.Fm.Get().BIsAnyLanguageEnabled(n.GetAllLanguagesWithSomeSupport())
-        );
-      }
-      async function h(e, t, n) {
-        if (!e || 0 == e.length) return [];
-        const r = e.filter((e) => (0, o.fp)(e.type)).map((e) => e.id),
-          i = e.filter((e) => "sub" === e.type).map((e) => e.id),
-          a = e.filter((e) => "bundle" === e.type).map((e) => e.id);
-        {
-          const e = r.filter((e) => !c.A.Get().BHasApp(e, t)),
-            n = i.filter((e) => !c.A.Get().BHasApp(e, t)),
-            o = a.filter((e) => !c.A.Get().BHasApp(e, t));
-          (e.length > 0 || n.length > 0 || o.length > 0) &&
-            (await Promise.all([
-              c.A.Get().QueueMultipleAppRequests(e, t),
-              c.A.Get().QueueMultiplePackageRequests(n, t),
-              c.A.Get().QueueMultipleBundleRequests(o, t),
-            ]));
-        }
-        const s = new Set();
-        null == a ||
-          a.forEach((e) => {
-            const t = c.A.Get().GetBundle(e);
-            null == t || t.GetIncludedAppIDs().forEach((e) => s.add(e));
-          }),
-          null == i ||
-            i.forEach((e) => {
-              const t = c.A.Get().GetPackage(e);
-              null == t || t.GetIncludedAppIDs().forEach((e) => s.add(e));
-            });
-        const l = Array.from(s).filter((e) => !c.A.Get().BHasApp(e, t));
-        if (
-          (l.length > 0 && (await c.A.Get().QueueMultipleAppRequests(l, t)),
-          r.forEach((e) => s.add(e)),
-          n)
-        ) {
-          const e = Array.from(s)
-            .map((e) => {
-              const t = c.A.Get().GetApp(e),
-                n = null == t ? void 0 : t.GetParentAppID();
-              return n ? (s.add(n), n) : null;
-            })
-            .filter((e) => null !== e)
-            .filter((e) => !c.A.Get().BHasApp(e, t));
-          e.length > 0 && (await c.A.Get().QueueMultipleAppRequests(e, t));
-        }
-        return Array.from(s).filter((e) => {
-          const t = c.A.Get().GetApp(e);
-          return t && !t.GetParentAppID();
-        });
-      }
-      const f = {
-        include_tag_count: 20,
-        include_basic_info: !0,
-        include_supported_languages: !0,
-      };
-      function g(e) {
-        var t;
-        if (!e) return !0;
-        const n = l.Fm.Get();
-        if (
-          ((0, u.wT)(n.BIsLoaded(), "Dynamic Store not loaded"),
-          e.GetStoreItemType() == s.c6.qI)
-        ) {
-          const t = e.GetParentAppID();
-          if (
-            n.BIsGameIgnored(e.GetAppID()) ||
-            (void 0 !== t && n.BIsGameIgnored(t))
-          )
-            return !0;
-        }
-        if (n.BExcludesContentDescriptor(e.GetContentDescriptorIDs()))
-          return !0;
-        if (n.BExcludeTagIDs(e.GetTagIDs())) return !0;
-        if (e.GetAllCreatorClanIDs().some((e) => n.BIsIgnoringCurator(e)))
-          return !0;
-        if (
-          null === (t = d.f.Get().GetHomeView()) || void 0 === t
-            ? void 0
-            : t.localized
-        ) {
-          const t = e.GetAllLanguagesWithSomeSupport();
-          if (
-            t.length > 0 &&
-            !e.BHasSomeLanguageSupport(a.Bhc) &&
-            !n.BIsAnyLanguageEnabled(t)
-          )
-            return !0;
-        }
-        return !1;
-      }
-      async function I(e, t, n, o) {
-        const a = [];
-        await h(e, r.Xh, t);
-        for (const r of e) {
-          const e = c.A.Get().GetStoreItem(r.id, (0, i.SW)(r.type));
-          if (!e) {
-            0;
-            continue;
+            )
+              return r.by.k_RejectSupportedLanguage;
           }
-          const s = e
-            .GetIncludedAppIDs()
-            .map((e) => c.A.Get().GetApp(e))
-            .filter((e) => Boolean(e));
-          if ((s.push(e), t)) {
-            const e = new Set(
-                s.map((e) => e.GetParentAppID()).filter((e) => Boolean(e)),
-              ),
-              t = Array.from(e)
-                .map((e) => c.A.Get().GetApp(e))
-                .filter((e) => Boolean(e));
-            t && s.push(...t);
+          return r.by.k_NotRejected;
+        }
+        function F(_, n, y, P, D) {
+          const E = C.A.Get().GetApp(_);
+          if (!E) return r.by.k_RejectNotLoaded;
+          const e = B(E, n);
+          if (e != r.by.k_NotRejected) return e;
+          const s = R.Fm.Get();
+          if (s.BIsGameIgnored(_)) return r.by.k_RejectIgnoredGame;
+          if (s.BExcludeTagIDs(E.GetTagIDs()))
+            return r.by.k_RejectIgnoreGameTags;
+          if (s.BExcludesContentDescriptor(E.GetContentDescriptorIDs()))
+            return r.by.k_RejectIgnoreContentDescriptors;
+          if (!n.early_access && E.BIsEarlyAccess())
+            return r.by.k_RejectEarlyAccess;
+          const o = E.GetAppType();
+          if (!n.software && o == M.uE.Sv) return r.by.k_RejectSoftware;
+          if (n.games_already_in_library && s.BIsGameOwned(_))
+            return r.by.k_RejectInLibrary;
+          if (n.games_not_in_library && !s.BIsGameOwned(_))
+            return r.by.k_RejectNotInLibrary;
+          if (!n.video && [M.uE.Wz, M.uE.gQ, M.uE.ID].includes(o))
+            return r.by.k_RejectVideo;
+          if (n.has_discount) {
+            const d = E.GetBestPurchaseOption();
+            if (!d || !d.discount_pct) return r.by.k_RejectNoDiscount;
           }
-          s.some(o || g)
-            ? n && (l.Fm.Get().BIsStoreItemOwned(e) || n.push(r))
-            : a.push(r);
+          return y != "adultonly" &&
+            n.no_ao_content &&
+            (E.HasContentDescriptorID(S.u7) || E.HasContentDescriptorID(S.T4))
+            ? r.by.k_RejectAO
+            : o == M.uE.ue &&
+                n.games_already_in_library &&
+                s.BIsGameOwned(E.GetParentAppID() || 0)
+              ? r.by.k_RejectInLibrary
+              : D
+                ? (o == M.uE.ue && P.BHasAppID(E.GetParentAppID() || 0)) ||
+                  P.BHasAppID(_)
+                  ? r.by.k_RejectAlreadyDisplayed
+                  : n.has_trailer && !E.BHasTrailers(!1)
+                    ? r.by.k_RejectNoTrailer
+                    : g(E, n)
+                : r.by.k_NotRejected;
         }
-        return a;
-      }
-      async function G(e, t, n, r, o, a, s) {
-        let d = await I(
-          e,
-          t,
-          s,
-          o
-            ? (e) =>
-                !e ||
-                l.Fm.Get().BExcludesContentDescriptor(
-                  e.GetContentDescriptorIDs(),
-                ) ||
-                l.Fm.Get().BExcludeTagIDs(e.GetTagIDs())
-            : g,
-        );
-        const u = [];
-        for (const e of d) {
-          const t = c.A.Get().GetStoreItem(e.id, (0, i.SW)(e.type));
-          if (!t) continue;
-          const o = null == t ? void 0 : t.GetIncludedAppIDsOrSelf();
-          let d = !1;
-          n && (d = d || o.every((e) => l.Fm.Get().BIsGameOwned(e))),
-            r && (d = d || o.every((e) => l.Fm.Get().BIsGameWishlisted(e))),
-            a && (d = d || o.every((e) => l.Fm.Get().BIsGameIgnored(e))),
-            d ? s && s.push(e) : u.push(e);
+        function K(_, n) {
+          const y = R.Fm.Get();
+          let P = !1;
+          for (let D of _) {
+            if (y.BIsGameIgnored(D)) return r.by.k_RejectIgnoredGame;
+            y.BIsGameOwned(D) && (P = !0);
+          }
+          return n.games_not_in_library && P
+            ? r.by.k_RejectInLibrary
+            : n.games_not_in_library && !P
+              ? r.by.k_RejectNotInLibrary
+              : r.by.k_NotRejected;
         }
-        return u;
-      }
-    },
-    48479: (e, t, n) => {
-      "use strict";
-      n.d(t, { AQ: () => y, pn: () => h, qx: () => _ });
-      var r = n(7850),
-        i = n(68255),
-        o = n(61859),
-        a = n(12155),
-        s = n(90626),
-        l = n(52038),
-        c = n(95695),
-        d = n(84811),
-        u = n(64734),
-        p = n(65946),
-        m = n(26408);
-      function y(e) {
-        const {
-            title: t,
-            tooltip: n,
-            getMinimized: i,
-            toggleMinimized: o,
-            className: a,
-            children: s,
-            elAdditionalButtons: y,
-          } = e,
-          _ = (0, p.q3)(() => i());
-        return (0, r.jsxs)(r.Fragment, {
-          children: [
-            (0, r.jsxs)("div", {
-              className: (0, l.A)(
-                a,
-                u.SectionTitleHeader,
-                u.required_title,
-                "SectionTitleHeader",
-              ),
-              children: [
-                (0, r.jsxs)("div", {
-                  className: (0, l.A)(
-                    c.CollapsableSectionTitle,
-                    "EventEditorTextTitle",
-                  ),
-                  children: [t, Boolean(n) && (0, r.jsx)(m.o, { tooltip: n })],
-                }),
-                (0, r.jsxs)("div", {
-                  className: u.SectionTitleButtons,
-                  children: [
-                    y,
-                    (0, r.jsx)(h, { bIsMinimized: _, fnToggleMinimize: o }),
-                  ],
-                }),
-              ],
+        function x(_, n, y, P) {
+          const D = C.A.Get().GetPackage(_);
+          if (!D) return r.by.k_RejectNotLoaded;
+          const E = B(D, n);
+          if (E != r.by.k_NotRejected) return E;
+          const e = K(D.GetIncludedAppIDs(), n);
+          if (e != r.by.k_NotRejected) return e;
+          const s = R.Fm.Get();
+          return n.games_already_in_library && s.BOwnsPackage(_)
+            ? r.by.k_RejectInLibrary
+            : s.BIsPackageIgnored(_)
+              ? r.by.k_RejectIgnoredGame
+              : P
+                ? y.BHasPackageID(_)
+                  ? r.by.k_RejectAlreadyDisplayed
+                  : g(D, n)
+                : r.by.k_NotRejected;
+        }
+        function w(_, n, y, P) {
+          const D = C.A.Get().GetBundle(_);
+          if (!D) return r.by.k_RejectNotLoaded;
+          const E = B(D, n);
+          if (E != r.by.k_NotRejected) return E;
+          const e = K(D.GetIncludedAppIDs(), n);
+          return e != r.by.k_NotRejected
+            ? e
+            : P
+              ? y.BHasBundleID(_)
+                ? r.by.k_RejectAlreadyDisplayed
+                : g(D, n)
+              : r.by.k_NotRejected;
+        }
+      },
+      24110: (V, U, t) => {
+        "use strict";
+        t.d(U, { f: () => b });
+        var m = t(71742);
+        function S(h) {
+          (0, m.wT)(!0, "Unexpected code running in SSR Server: " + h);
+        }
+        var M = t(3166),
+          R = Object.defineProperty,
+          C = (h, a, f) =>
+            a in h
+              ? R(h, a, {
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+                  value: f,
+                })
+              : (h[a] = f),
+          r = (h, a, f) => C(h, typeof a != "symbol" ? a + "" : a, f);
+        const l = class Q {
+          constructor() {
+            r(this, "m_HomeView");
+            const a = (0, M.Tc)("home_view_setting", "application_config");
+            this.ValidateHomeViewData(a) && this.SetHomeViewSetting(a);
+            const f = (0, M.Tc)(
+              "home_view_setting_override",
+              "application_config",
+            );
+            this.ValidateHomeViewDataOverride(f) &&
+              this.SetHomeViewSettingOverride(f);
+          }
+          BHasHomeView() {
+            return !!this.m_HomeView;
+          }
+          GetHomeView() {
+            var a;
+            return (a = this.m_HomeView) == null ? void 0 : a.home;
+          }
+          static Get() {
+            return (
+              Q.s_globalSingletonStore ||
+                (S("CHomeViewStore.s_globalSingletonStore"),
+                (Q.s_globalSingletonStore = new Q())),
+              Q.s_globalSingletonStore
+            );
+          }
+          ValidateHomeViewData(a) {
+            const f = a;
+            return (
+              f &&
+              typeof f.home == "object" &&
+              typeof f.main_cluster == "object"
+            );
+          }
+          SetHomeViewSetting(a) {
+            this.m_HomeView = a;
+          }
+          ValidateHomeViewDataOverride(a) {
+            const f = a;
+            return (
+              f &&
+              (!f.all || typeof f.all == "object") &&
+              (!f.maincap || typeof f.maincap == "object")
+            );
+          }
+          SetHomeViewSettingOverride(a) {
+            this.m_HomeView
+              ? (this.m_HomeView.home = {
+                  ...this.m_HomeView.home,
+                  ...(a == null ? void 0 : a.all),
+                  ...(a == null ? void 0 : a.maincap),
+                })
+              : (this.m_HomeView = {
+                  home: {
+                    ...(a == null ? void 0 : a.all),
+                    ...(a == null ? void 0 : a.maincap),
+                  },
+                });
+          }
+        };
+        r(l, "s_globalSingletonStore");
+        let b = l;
+      },
+      53025: (V, U, t) => {
+        "use strict";
+        t.d(U, { $: () => f });
+        var m = t(41735),
+          S = t.n(m),
+          M = t(3166),
+          R = t(77495),
+          C = t(90825),
+          r = t(72604),
+          l = Object.defineProperty,
+          b = (j, G, I) =>
+            G in j
+              ? l(j, G, {
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+                  value: I,
+                })
+              : (j[G] = I),
+          h = (j, G, I) => b(j, typeof G != "symbol" ? G + "" : G, I);
+        const a = class H extends R.ZQ {
+          async DeleteOldAnnouncement(G, I) {
+            let A = new URLSearchParams();
+            A.append("sessionid", (0, M.KC)());
+            let B =
+                M.TS.COMMUNITY_BASE_URL +
+                "/gid/" +
+                G.ConvertTo64BitString() +
+                "/announcements/ajaxdeleteannouncement/" +
+                I,
+              g = await S().post(B, A);
+            if (g.data.success != r.R) throw g.data;
+            return this.RemoveGIDFromList(G, C.cB + I), g.data;
+          }
+          static Get() {
+            return (
+              H.sm_Instance ||
+                ((H.sm_Instance = new H()), H.sm_Instance.Init()),
+              H.sm_Instance
+            );
+          }
+          static GetSummaryStore() {
+            return (
+              H.sm_SummaryInstance ||
+                ((H.sm_SummaryInstance = new H(!0)),
+                H.sm_SummaryInstance.Init()),
+              H.sm_SummaryInstance
+            );
+          }
+        };
+        h(a, "sm_Instance"), h(a, "sm_SummaryInstance");
+        let f = a;
+      },
+      19188: (V, U, t) => {
+        "use strict";
+        t.d(U, { N: () => D });
+        var m = t(7850),
+          S = t(41735),
+          M = t.n(S),
+          R = t(75844),
+          C = t(90626),
+          r = t(90537),
+          l = t(58483),
+          b = t(73085),
+          h = t(2801),
+          a = t(88843),
+          f = t.n(a),
+          j = t(64641),
+          G = t.n(j),
+          I = t(85599),
+          A = t(34592),
+          B = t(3166),
+          g = t(72609),
+          F = t(6469),
+          K = t(53107),
+          x = t(25792),
+          w = Object.defineProperty,
+          _ = Object.getOwnPropertyDescriptor,
+          n = (e, s, o) =>
+            s in e
+              ? w(e, s, {
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+                  value: o,
+                })
+              : (e[s] = o),
+          y = (e, s, o, d) => {
+            for (
+              var c = d > 1 ? void 0 : d ? _(s, o) : s, O = e.length - 1, u;
+              O >= 0;
+              O--
+            )
+              (u = e[O]) && (c = (d ? u(s, o, c) : u(c)) || c);
+            return d && c && w(s, o, c), c;
+          },
+          P = (e, s, o) => n(e, typeof s != "symbol" ? s + "" : s, o);
+        const D = (e) => {
+          let { bShowOnlyInitialEvent: s } = e;
+          const o = (0, B.Qn)(),
+            d = (0, r.Y)();
+          return (0, m.jsx)(x.tH, {
+            children: (0, m.jsx)(E, {
+              ...e,
+              bShowOnlyInitialEvent: s || o,
+              tracker: d,
             }),
-            !_ && (0, r.jsx)(d.tH, { children: s }),
-          ],
+          });
+        };
+        let E = class extends C.Component {
+          constructor() {
+            super(...arguments),
+              P(this, "state", {
+                bLoading: !1,
+                eventModel: this.props.eventModel,
+              }),
+              P(this, "m_refParent", C.createRef()),
+              P(this, "m_cancelSignal", M().CancelToken.source());
+          }
+          componentDidMount() {
+            this.state.eventModel ||
+              this.setState({ bLoading: !0 }, this.LoadEvent);
+            let e = this.GetBodyElement();
+            e &&
+              this.props.bPrimaryPageFeature &&
+              e.classList.add(a.BodyNoScroll);
+          }
+          componentWillUnmount() {
+            this.m_cancelSignal.cancel("EventInfiniteScrollModal unmounting");
+            let e = this.GetBodyElement();
+            e &&
+              this.props.bPrimaryPageFeature &&
+              e.classList.remove(a.BodyNoScroll);
+          }
+          GetBodyElement() {
+            return this.m_refParent.current
+              ? this.m_refParent.current.closest("body")
+              : null;
+          }
+          async LoadEvent() {
+            const {
+              appid: e,
+              clanSteamID: s,
+              announcementGID: o,
+              partnerEventStore: d,
+              additionalParams: c,
+            } = this.props;
+            d.LoadAdjacentPartnerEventsByAnnouncement(
+              o,
+              s,
+              e,
+              0,
+              3,
+              c,
+              this.m_cancelSignal,
+            )
+              .then((O) => {
+                O.length > 0
+                  ? this.setState(
+                      { bLoading: !1, eventModel: O[0] },
+                      this.HandleReadEvent,
+                    )
+                  : (this.props.onEventNotFound && this.props.onEventNotFound(),
+                    this.setState({ bLoading: !1 }));
+              })
+              .catch((O) => {
+                let u = (0, A.H)(O);
+                console.error(
+                  "EventInfiniteScrollModal failed " + u.strErrorMsg,
+                  u,
+                ),
+                  this.setState({ bLoading: !1 });
+              });
+          }
+          async HandleReadEvent() {
+            const { eventModel: e } = this.state,
+              { trackingLocation: s, tracker: o } = this.props;
+            e && e.BIsPartnerEvent() && (o.RecordEventRead(e, s), o.Flush());
+          }
+          render() {
+            const { bShowOnlyInitialEvent: e } = this.props,
+              { bLoading: s, eventModel: o } = this.state;
+            if (s)
+              return (0, m.jsx)(h.EN, {
+                active: !0,
+                children: (0, m.jsx)("div", {
+                  className: G().FlexCenter,
+                  style: { height: "400px" },
+                  children: (0, m.jsx)(I.t, {}),
+                }),
+              });
+            const {
+              closeModal: d,
+              appid: c,
+              clanSteamID: O,
+              className: u,
+              partnerEventStore: L,
+              showAppHeader: i,
+              bPrimaryPageFeature: p,
+              additionalParams: v,
+              eventClassName: T,
+            } = this.props;
+            let W;
+            g.TS.IN_CLIENT &&
+              o != null &&
+              o.appid &&
+              (F.Fm.Get().HintLoad(),
+              F.Fm.Get().BOwnsApp(o.appid) &&
+                (W = (z) =>
+                  (0, K.EP)(z, "steam://nav/games/details/" + o.appid)));
+            const N = (0, m.jsx)(l.sU, {
+              children: (z) =>
+                (0, m.jsx)(b.AD, {
+                  initialEvent: o,
+                  appid: c,
+                  clanSteamID: O,
+                  partnerEventStore: L,
+                  emoticonStore: z,
+                  closeModal: !p && d,
+                  showAppHeader: i,
+                  bShowOnlyInitialEvent: e,
+                  additionalParams: v,
+                  eventClassName: T,
+                  onAppIconClick: W,
+                }),
+            });
+            return p
+              ? N
+              : (0, m.jsx)(h.EN, {
+                  active: !0,
+                  children: (0, m.jsx)("div", { className: u, children: N }),
+                });
+          }
+        };
+        E = y([R.PA], E);
+      },
+      15901: (V, U, t) => {
+        "use strict";
+        t.d(U, {
+          AX: () => n,
+          H2: () => x,
+          Li: () => _,
+          S7: () => g,
+          WD: () => D,
+          f4: () => E,
+          gL: () => P,
+          jy: () => w,
+          nt: () => K,
+          sd: () => B,
+          tJ: () => F,
         });
-      }
-      function _(e) {
-        const [t, n] = s.useState(Boolean(e.bStartMinimized));
-        return (0, r.jsx)(y, {
-          ...e,
-          getMinimized: () => t,
-          toggleMinimized: () => n(!t),
-          children: e.children,
-        });
-      }
-      function h(e) {
-        const { bIsMinimized: t, fnToggleMinimize: n } = e,
-          s = t ? "#Section_Maximize_Tooltip" : "#Section_Minimize_Tooltip";
-        return (0, r.jsx)(i.$n, {
-          "data-tooltip-text": (0, o.we)(s),
-          onClick: n,
-          children: e.bIsMinimized
-            ? (0, r.jsx)(a.hz4, {})
-            : (0, r.jsx)(a.Xjb, {}),
-        });
-      }
+        var m = t(24805),
+          S = t(29543),
+          M = t(92025),
+          R = t(99412),
+          C = t(3367),
+          r = t(6469),
+          l = t(10142),
+          b = t(3166),
+          h = t(24110),
+          a = t(71742),
+          f = t(14947),
+          j = t(20615),
+          G = t(3852),
+          I = t(40497),
+          A = t(90825);
+        function B(e) {
+          return l.A.Get().BIsStoreItemMissing(e.id, (0, S.SW)(e.type));
+        }
+        function g(e, s, o) {
+          const d = new Array();
+          return (
+            e == null || e.forEach((c) => d.push({ id: c, type: "game" })),
+            s == null || s.forEach((c) => d.push({ id: c, type: "sub" })),
+            o == null || o.forEach((c) => d.push({ id: c, type: "bundle" })),
+            d
+          );
+        }
+        function F(e) {
+          var s, o;
+          const d = l.A.Get().GetStoreItem(e.id, (0, S.SW)(e.type));
+          return (
+            ((o =
+              (s = d == null ? void 0 : d.GetBestPurchaseOption()) == null
+                ? void 0
+                : s.discount_pct) != null
+              ? o
+              : 0) > 0
+          );
+        }
+        function K(e) {
+          var s;
+          if (!((s = h.f.Get().GetHomeView()) != null && s.localized))
+            return !0;
+          const o = l.A.Get().GetStoreItem(e.id, (0, S.SW)(e.type));
+          return o
+            ? r.Fm.Get().BIsAnyLanguageEnabled(
+                o.GetAllLanguagesWithSomeSupport(),
+              )
+            : !0;
+        }
+        async function x(e, s, o) {
+          if (!e || e.length == 0) return [];
+          const d = e.filter((i) => (0, M.fp)(i.type)).map((i) => i.id),
+            c = e.filter((i) => i.type === "sub").map((i) => i.id),
+            O = e.filter((i) => i.type === "bundle").map((i) => i.id);
+          {
+            const i = d.filter((T) => !l.A.Get().BHasApp(T, s)),
+              p = c.filter((T) => !l.A.Get().BHasApp(T, s)),
+              v = O.filter((T) => !l.A.Get().BHasApp(T, s));
+            (i.length > 0 || p.length > 0 || v.length > 0) &&
+              (await Promise.all([
+                l.A.Get().QueueMultipleAppRequests(i, s),
+                l.A.Get().QueueMultiplePackageRequests(p, s),
+                l.A.Get().QueueMultipleBundleRequests(v, s),
+              ]));
+          }
+          const u = new Set();
+          O == null ||
+            O.forEach((i) => {
+              const p = l.A.Get().GetBundle(i);
+              p == null || p.GetIncludedAppIDs().forEach((v) => u.add(v));
+            }),
+            c == null ||
+              c.forEach((i) => {
+                const p = l.A.Get().GetPackage(i);
+                p == null || p.GetIncludedAppIDs().forEach((v) => u.add(v));
+              });
+          const L = Array.from(u).filter((i) => !l.A.Get().BHasApp(i, s));
+          if (
+            (L.length > 0 && (await l.A.Get().QueueMultipleAppRequests(L, s)),
+            d.forEach((i) => u.add(i)),
+            o)
+          ) {
+            const i = Array.from(u)
+              .map((p) => {
+                const v = l.A.Get().GetApp(p),
+                  T = v == null ? void 0 : v.GetParentAppID();
+                return T ? (u.add(T), T) : null;
+              })
+              .filter((p) => p !== null)
+              .filter((p) => !l.A.Get().BHasApp(p, s));
+            i.length > 0 && (await l.A.Get().QueueMultipleAppRequests(i, s));
+          }
+          return Array.from(u).filter((i) => {
+            const p = l.A.Get().GetApp(i);
+            return p && !p.GetParentAppID();
+          });
+        }
+        const w = {
+          include_tag_count: 20,
+          include_basic_info: !0,
+          include_supported_languages: !0,
+        };
+        function _(e) {
+          var s;
+          if (!e) return !0;
+          const o = r.Fm.Get();
+          if (
+            ((0, a.wT)(o.BIsLoaded(), "Dynamic Store not loaded"),
+            e.GetStoreItemType() == C.c6.qI)
+          ) {
+            const c = e.GetParentAppID();
+            if (
+              o.BIsGameIgnored(e.GetAppID()) ||
+              (c !== void 0 && o.BIsGameIgnored(c))
+            )
+              return !0;
+          }
+          if (
+            o.BExcludesContentDescriptor(e.GetContentDescriptorIDs()) ||
+            o.BExcludeTagIDs(e.GetTagIDs()) ||
+            e.GetAllCreatorClanIDs().some((c) => o.BIsIgnoringCurator(c))
+          )
+            return !0;
+          if ((s = h.f.Get().GetHomeView()) == null ? void 0 : s.localized) {
+            const c = e.GetAllLanguagesWithSomeSupport();
+            if (
+              c.length > 0 &&
+              !e.BHasSomeLanguageSupport(R.Bhc) &&
+              !o.BIsAnyLanguageEnabled(c)
+            )
+              return !0;
+          }
+          return !1;
+        }
+        async function n(e, s, o, d) {
+          let c = 0,
+            O = 0;
+          const u = [];
+          await x(e, m.Xh, s);
+          for (const L of e) {
+            const i = l.A.Get().GetStoreItem(L.id, (0, S.SW)(L.type));
+            if (!i) {
+              c++;
+              continue;
+            }
+            const p = i
+              .GetIncludedAppIDs()
+              .map((v) => l.A.Get().GetApp(v))
+              .filter((v) => !!v);
+            if ((p.push(i), s)) {
+              const v = new Set(
+                  p.map((W) => W.GetParentAppID()).filter((W) => !!W),
+                ),
+                T = Array.from(v)
+                  .map((W) => l.A.Get().GetApp(W))
+                  .filter((W) => !!W);
+              T && p.push(...T);
+            }
+            p.some(d || _)
+              ? (O++, o && (r.Fm.Get().BIsStoreItemOwned(i) || o.push(L)))
+              : u.push(L);
+          }
+          return u;
+        }
+        async function y(e, s, o, d, c, O, u) {
+          let i = await n(
+            e,
+            s,
+            u,
+            c
+              ? (v) =>
+                  !v ||
+                  r.Fm.Get().BExcludesContentDescriptor(
+                    v.GetContentDescriptorIDs(),
+                  ) ||
+                  r.Fm.Get().BExcludeTagIDs(v.GetTagIDs())
+              : _,
+          );
+          const p = [];
+          for (const v of i) {
+            const T = l.A.Get().GetStoreItem(v.id, (0, S.SW)(v.type));
+            if (!T) continue;
+            const W = T == null ? void 0 : T.GetIncludedAppIDsOrSelf();
+            let N = !1;
+            o && (N = N || W.every((z) => r.Fm.Get().BIsGameOwned(z))),
+              d && (N = N || W.every((z) => r.Fm.Get().BIsGameWishlisted(z))),
+              O && (N = N || W.every((z) => r.Fm.Get().BIsGameIgnored(z))),
+              N ? u && u.push(v) : p.push(v);
+          }
+          return p;
+        }
+        function P() {
+          const e = r.Fm.Get();
+          if (e.BIsLoaded())
+            return {
+              bSignedIn: !!b.iA.logged_in,
+              ePrimaryLanguage: e.GetPrimaryLanguage(),
+              setSecondaryLanguages: e.GetSecondaryLanguages(),
+              setExcludedContentDescriptors: new Set(
+                e.ExcludedContentDescriptor,
+              ),
+            };
+        }
+        function D() {
+          return (0, j._)(I.L, b.TS.COUNTRY);
+        }
+        async function E(e, s, o, d) {
+          const c = e.BHasHideIgnoredItemsFacetValue(),
+            O = e.BIsUserPreferenceEnabled(A.yX.k_EHideOwnedItems),
+            u = e.BIsUserPreferenceEnabled(A.yX.k_EHideWishlistedItems),
+            L = e.BIsUserPreferenceEnabled(A.yX.k_EHideIgnoredItems),
+            i = [],
+            p = await y(s, o, O, u, c, L, i);
+          return (
+            (0, f.h5)(() => {
+              e.SetCapsulesRemovedByUserPreferenceFilters(new Set(i.map(G.pj)));
+            }),
+            d == null || d.push(...i),
+            p
+          );
+        }
+      },
+      12932: (V, U, t) => {
+        "use strict";
+        t.d(U, { AQ: () => I, pn: () => B, qx: () => A });
+        var m = t(7850),
+          S = t(19316),
+          M = t(18210),
+          R = t(36118),
+          C = t(90626),
+          r = t(36707),
+          l = t(95695),
+          b = t.n(l),
+          h = t(25792),
+          a = t(64734),
+          f = t.n(a),
+          j = t(65946),
+          G = t(11243);
+        function I(g) {
+          const {
+              title: F,
+              tooltip: K,
+              getMinimized: x,
+              toggleMinimized: w,
+              className: _,
+              children: n,
+              elAdditionalButtons: y,
+            } = g,
+            P = (0, j.q3)(() => x());
+          return (0, m.jsxs)(m.Fragment, {
+            children: [
+              (0, m.jsxs)("div", {
+                className: (0, r.A)(
+                  _,
+                  a.SectionTitleHeader,
+                  a.required_title,
+                  "SectionTitleHeader",
+                ),
+                children: [
+                  (0, m.jsxs)("div", {
+                    className: (0, r.A)(
+                      l.CollapsableSectionTitle,
+                      "EventEditorTextTitle",
+                    ),
+                    children: [F, !!K && (0, m.jsx)(G.o, { tooltip: K })],
+                  }),
+                  (0, m.jsxs)("div", {
+                    className: a.SectionTitleButtons,
+                    children: [
+                      y,
+                      (0, m.jsx)(B, { bIsMinimized: P, fnToggleMinimize: w }),
+                    ],
+                  }),
+                ],
+              }),
+              !P && (0, m.jsx)(h.tH, { children: n }),
+            ],
+          });
+        }
+        function A(g) {
+          const [F, K] = C.useState(!!g.bStartMinimized);
+          return (0, m.jsx)(I, {
+            ...g,
+            getMinimized: () => F,
+            toggleMinimized: () => K(!F),
+            children: g.children,
+          });
+        }
+        function B(g) {
+          const { bIsMinimized: F, fnToggleMinimize: K } = g,
+            x = F ? "#Section_Maximize_Tooltip" : "#Section_Minimize_Tooltip";
+          return (0, m.jsx)(S.$n, {
+            "data-tooltip-text": (0, M.we)(x),
+            onClick: K,
+            children: g.bIsMinimized
+              ? (0, m.jsx)(R.hz4, {})
+              : (0, m.jsx)(R.Xjb, {}),
+          });
+        }
+      },
+      64734: (V) => {
+        V.exports = {
+          SectionTitleHeader: "_2g5oNomwd2lv8wL2qlsLVA",
+          SectionTitleButtons: "RGHKm1_KeaBjdzuvisfYN",
+          required_title: "_3yDPZjnsoLc2FkrAH2UOEd",
+        };
+      },
     },
-  },
-]);
+  ]);
+})();

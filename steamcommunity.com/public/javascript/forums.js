@@ -593,6 +593,16 @@ function Forum_ReportPost( gidTopic, author, gidComment )
 		g_rgForumTopics[ gidTopic ].ReportPost( author, gidComment );
 }
 
+// ShowContentReportDialog comes from the content-moderation-report-dialog React target
+function Forum_ShowReportDialog( clanSteamID, gidForum, gidTopic, author, gidComment )
+{
+	// OP of a forum thread is gidComment -1
+	if ( window.ShowContentReportDialog )
+		window.ShowContentReportDialog( { type: 'forumpost', clanSteamId: clanSteamID, gidForum: gidForum, gidTopic: gidTopic, gidComment: gidComment == -1 ? null : gidComment } );
+	else
+		Forum_ReportPost( gidTopic, author, gidComment );
+}
+
 // block a user, with confirmation
 function Forum_BlockUser( author, strPersonaName )
 {

@@ -9,7 +9,7 @@ img {
 }
 
 
-a {
+a:where(:not(.noOpinionatedGlobalStyles a)) {
 	text-decoration: none;
 	color: #ffffff;
 }
@@ -19,7 +19,7 @@ a {
 	outline: 0px none;
 }
 
-a:hover {
+a:hover:where(:not(.noOpinionatedGlobalStyles a)) {
 	text-decoration: none;
     color: #66c0f4;
 }
@@ -1111,6 +1111,14 @@ body.v6 .store_nav .popup_block_new .popup_body.search_v2 {
 .discount_block {
 	position: relative;
     display: flex;
+}
+.discount_block .discount_aria_label {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip-path: inset(50%);
+	white-space: nowrap;
 }
 .discount_block .discount_prices {
     display: flex;

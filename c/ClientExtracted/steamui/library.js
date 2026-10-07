@@ -1814,6 +1814,8 @@
                 "k_EWindowBringToFrontAndForceOS"),
               (_[(_.k_EWindowBringToFrontWithoutForcingOS = 2)] =
                 "k_EWindowBringToFrontWithoutForcingOS"),
+              (_[(_.k_EWindowBringToFrontUsingExistingOSState = 3)] =
+                "k_EWindowBringToFrontUsingExistingOSState"),
               _
             ))(_ || {});
           const _ = 0,
@@ -2421,6 +2423,7 @@
               "Millennium internal",
               "millenium",
               "millennium",
+              "decky://",
               "Refused unauthorized RPC command",
             ];
           function _() {
@@ -2448,6 +2451,7 @@
             m_fnGetReportingInterval = _;
             m_fnGetReportTags = () => [];
             m_fnGetURL = () => location.href;
+            strDisplayVersion;
             m_bEnabled = !0;
             m_bInitialized = !1;
             constructor(_ = !0) {
@@ -2487,6 +2491,8 @@
                 _.fnGetReportTags &&
                   (this.m_fnGetReportTags = _.fnGetReportTags),
                 _.fnGetURL && (this.m_fnGetURL = _.fnGetURL),
+                _.strDisplayVersion &&
+                  (this.strDisplayVersion = _.strDisplayVersion),
                 this.m_bEnabled ||
                   (console.error(
                     "Error reporting was initialized after being disabled, possibly dropping errors.",
@@ -2520,6 +2526,7 @@
                     _.strComponentStack &&
                       (_.strComponentStack = _.strComponentStack),
                     (_.strUrl = this.m_fnGetURL()),
+                    (_.strDisplayVersion = this.strDisplayVersion),
                     this.SendErrorReport(_),
                     _)
                   : null;
@@ -2599,7 +2606,9 @@
                   let _;
                   return (
                     _.strComponentStack &&
-                      ((_ ??= {}), (_.componentStack = _.strComponentStack)),
+                      ((_ ??= {}),
+                      (_.componentStack = _.strComponentStack),
+                      (_.strDisplayVersion = _.strDisplayVersion)),
                     _ && _.set_context(JSON.stringify(_)),
                     _.strUrl && _.set_url(_.strUrl),
                     _
@@ -10686,6 +10695,11 @@
                       },
                       seconds_since_active: {
                         _: 6,
+                        _: _._.readUint32,
+                        _: _._.writeUint32,
+                      },
+                      frame_rate_limit: {
+                        _: 7,
                         _: _._.readUint32,
                         _: _._.writeUint32,
                       },
@@ -31458,6 +31472,7 @@
               IN_CHROMEOS: !1,
               TESLA: !1,
               LOCAL_HOSTNAME: "",
+              PACKAGE_CL: "",
               WEBAPI_BASE_URL: "",
               TOKEN_URL: "",
               BUILD_TIMESTAMP: 0,
@@ -31819,9 +31834,6 @@
         },
         chunkid: (module, module_exports, __webpack_require__) => {
           "use strict";
-          __webpack_require__._(module_exports, {
-            _: () => _,
-          });
           var _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid"),
@@ -31886,26 +31898,7 @@
                 __webpack_require__._("chunkid"),
                 __webpack_require__._("chunkid"),
               ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-            ),
-            _ = _.lazy(() =>
-              Promise.all([
-                __webpack_require__._("chunkid"),
-                __webpack_require__._("chunkid"),
-                __webpack_require__._("chunkid"),
-              ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-            ),
-            _ = "is-first-client-load";
-          function _() {
-            let _ = !0;
-            sessionStorage.getItem(_) &&
-              _._.CLIENT_SESSION > 0 &&
-              Date.now() / 1e3 > _._.CLIENT_SESSION + 30 &&
-              (_ = !1),
-              sessionStorage.setItem(_, _ ? "true" : "false");
-          }
-          function _() {
-            return sessionStorage.getItem(_) !== "false";
-          }
+            );
           function _() {
             return jsxs("div", {
               className: classnames(styles.Container, styles.PreloadThrobber),
@@ -31932,7 +31925,7 @@
             });
           }
           function _() {
-            (window._ = new _._()), _(), (_._.IN_STEAMUI = !0), _();
+            (window._ = new _._()), _(), (_._.IN_STEAMUI = !0);
             const _ = document.getElementById("root");
             _.createRoot(_).render(
               (0, _.jsx)(_, {
@@ -32190,11 +32183,11 @@
           8545: "localization/steampops_brazilian-json",
           8674: "localization/shared_french-json",
           8699: "localization/friendsui_danish-json",
-          8732: "libraries/libraries~2dcc5aaf7",
           8830: "localization/steamui_tchinese-json",
           8872: "localization/shared_greek-json",
           9053: "localization/shared_hungarian-json",
           9063: "localization/steampops_english-json",
+          9068: "libraries/libraries~e8c5e5be4",
           9129: "awardicon",
           9134: "localization/steampops_polish-json",
           9171: "localization/steamui_thai-json",
@@ -32204,7 +32197,6 @@
           9462: "localization/friendsui_dutch-json",
           9672: "discoveryqueue",
           9711: "localization/steampops_norwegian-json",
-          9858: "chunk~2dcc5aaf7",
           9869: "localization/shared_vietnamese-json",
           9887: "localization/steamui_german-json",
         }[_] || _) +
@@ -32242,10 +32234,10 @@
           1005: "ed0572adc5c83f812480",
           1012: "a0a4c8d311a74eee8739",
           1093: "7f0c4e6c6c2afda765ac",
-          1129: "54ae8933b90d577bb4a2",
+          1129: "1b5d2353f47808a9d437",
           1133: "593f5625576273fa1b02",
           1139: "73f2d4750cc821a7c174",
-          1220: "771bd7e0075b1bc2a554",
+          1220: "bc676fb3e09b5302bf5f",
           1242: "55e6f32a7f11944582fa",
           1275: "4b46e9a60bae2f002505",
           1325: "96fd0ae9a7f81ec1166d",
@@ -32304,7 +32296,7 @@
           2640: "a8148240d474d2c2bf36",
           2646: "99b75100c4446a69300c",
           2662: "53e7af2ac2dea1aa6924",
-          2664: "8561d9ebd0c06717c91b",
+          2664: "75c5e5357db1138bddc6",
           2742: "7b9754e652383ffcca85",
           2752: "f3c618b7f201aae613e1",
           2761: "f20e2ffeb00db9173d5b",
@@ -32335,7 +32327,7 @@
           3356: "5158c3164f8db43bcbea",
           3366: "1fc740cff1a5c37a7de2",
           3473: "c5a1b0e9601216bb6212",
-          3569: "65d4c335f653bfdbf882",
+          3569: "8b6742556fe4dd7c7fe8",
           3583: "cbf0ee90f24f5bd4d9e3",
           3585: "30083c924ccae3a2f0fa",
           3589: "a10944f131faa765cd75",
@@ -32344,9 +32336,9 @@
           3675: "cea0ad6c26841f88fafb",
           3695: "422d2575980846079b4d",
           3706: "92f0a3c318f58bd99bc6",
-          3714: "0f6b14e6fe892dc05014",
+          3714: "f647ecec7b49e95ab7e9",
           3744: "fb32fdb81df86c28f0ba",
-          3834: "d2ac3d34a90850aed764",
+          3834: "2304c2e2154d8c227511",
           3869: "b11b7577929977617b68",
           3876: "cd47251629b35640f099",
           3899: "9424c09af3c901407feb",
@@ -32398,7 +32390,7 @@
           5536: "3e2fdd7f3ea8b3cf3549",
           5553: "b39111a69ae194316db4",
           5569: "77671db8f6faf8b48343",
-          5575: "a5438891b5a39def0a7d",
+          5575: "38de0511b027dbca4095",
           5592: "51ba81361aea321085ea",
           5668: "9f5b9cf870b1f4f339a4",
           5704: "874ce00a54e1ffb86d5b",
@@ -32446,13 +32438,13 @@
           7376: "7a2e45e83020c0c0fb30",
           7386: "111ecac2d02741fbe78f",
           7442: "7125d7393f938077141d",
-          7462: "b9533eee874a78403fc8",
+          7462: "726982e66b03731ee56f",
           7503: "2a2d5e85bed422733362",
           7533: "3f63ac2de9d528e78ae5",
           7554: "6756389bf696a8af47e4",
           7569: "563e6d56f131a4c0592a",
           7627: "a7e59a6c103703993ff4",
-          7653: "3db5339e42b09c7a69b7",
+          7653: "407a36670a43d62001db",
           7656: "945bf4771595c97a5863",
           7696: "d072500369a8b03cb0d7",
           7770: "88b52bd896e94d33eb89",
@@ -32478,7 +32470,7 @@
           8330: "c0a626361de728a5cc7d",
           8346: "94e60215550412cc1e2d",
           8391: "3bd2af3d47ee232194b6",
-          8396: "88b2ec1d30c00d9a8795",
+          8396: "6cb50d5890a50ee6a67b",
           8405: "005b00bf889a38e104f2",
           8443: "bf2f5b2f586df7296192",
           8445: "5de060ae1a44b92e1adf",
@@ -32496,7 +32488,6 @@
           8674: "793c55419bad0f416344",
           8699: "544777c6c7d3c49779e6",
           8700: "e3d869622f0d08f3dc05",
-          8732: "f254317c32ba396e8092",
           8780: "c5521ae20dea2b3a18ee",
           8830: "932c597f273e06af7edc",
           8839: "6181da84ad0c6c74ff48",
@@ -32509,9 +32500,10 @@
           8970: "184b423f7267a4b93c16",
           9053: "0f0aeb0ba07a354ae0b6",
           9063: "61c4455e89dc3e20982a",
+          9068: "8ca2ddda6b43dc0b0f93",
           9108: "b59e341bfc33ea4bb177",
           9120: "4375e538d335c79f4431",
-          9129: "e7c1d98cc4db68b75bd1",
+          9129: "eacf34b25a064eecc0fb",
           9134: "158a755a5dea49b88f33",
           9171: "9db629040e42fde9bcaa",
           9183: "804e88b886dcd4d7c7f7",
@@ -32528,14 +32520,13 @@
           9536: "54fe371bb681b1740ab9",
           9558: "1b4edaa0c7e601117d5c",
           9637: "99eac8f1c34b77eb9bb6",
-          9672: "ca9fe99f59e32d59b592",
+          9672: "f69d787a93e7955b17d2",
           9711: "58fab6e831c95d285857",
           9737: "f02608b4d2ae113a22a9",
           9740: "79c3453c5ddb8e8784bf",
           9779: "3c977cd462d0b2b1ff74",
           9845: "885501e9a7136c60a48e",
           9853: "3c857eb96c35ff130524",
-          9858: "ac6e1a4887fa3584c67a",
           9861: "e052d59d17fbfa6621fa",
           9862: "6550d69f355bbe69f225",
           9869: "e8990e5cb4274d1ab0d9",
@@ -32546,13 +32537,13 @@
         "css/" +
         ({
           1220: "gamenotes",
+          3714: "sp",
           3834: "chunk~1a96cdf59",
           7462: "gamerecording",
           7653: "broadcastapp",
           8396: "broadcast",
           9129: "awardicon",
           9672: "discoveryqueue",
-          9858: "chunk~2dcc5aaf7",
         }[_] || _) +
         ".css"),
       (_._ = (function () {
@@ -32703,13 +32694,13 @@
             var _ = {
               1129: 1,
               1220: 1,
+              3714: 1,
               3834: 1,
               7462: 1,
               7653: 1,
               8396: 1,
               9129: 1,
               9672: 1,
-              9858: 1,
             };
             _[_]
               ? _.push(_[_])

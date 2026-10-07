@@ -1090,7 +1090,8 @@ background: -webkit-linear-gradient( 30deg, rgba(117, 176, 34, 0.7) 5%,rgba(88, 
 	gap: 6px;
 }
 
-.game_area_purchase_game .game_area_purchase_platform img {
+.game_area_purchase_game .game_area_purchase_platform img, 
+.game_area_purchase_game .master_sub_trial_header_row img {
 	max-height: 30px;
 }
 
@@ -2263,6 +2264,17 @@ a.communitylink_points_shop_item.communitylink_achivement_plusmore:hover {
     background: -ms-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* IE10+ */
     background: linear-gradient(135deg,  #67c1f5 0%,#417a9b 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67c1f5', endColorstr='#417a9b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+/* Match the grey View all on the React achievements block */
+a.communitylink_points_shop_item.communitylink_achivement_plusmore {
+	background-color: #1d1f23;
+	color: #9a9fa5;
+}
+
+a.communitylink_points_shop_item.communitylink_achivement_plusmore:hover {
+	background: #1d1f23;
+	color: #ffffff;
 }
 
 .communitylink_points_shop_images {
@@ -5631,14 +5643,51 @@ background: -webkit-linear-gradient( 315deg, #356480 5%,#1a303d 95%);
 
 .bundle_contents_preview a.bundle_contents_preview_item {
 	display: inline-block;
+	position: relative;
+	margin-right: 5px;
+	transition: transform 0.2s, box-shadow 0.2s;
 }
 
 a.bundle_contents_preview_item .ds_flag {
 	top: 20px;
 }
 
+.bundle_contents_preview a.bundle_contents_preview_item.ds_owned img {
+	filter: brightness(0.4);
+	transition: filter 0.2s;
+}
+
+.bundle_contents_preview a.bundle_contents_preview_item.ds_owned:hover img {
+	filter: brightness(0.8);
+}
+
 .bundle_contents_preview.collapsed a.bundle_contents_preview_item {
 	box-shadow: 2px 0 5px 0px #000000;
+}
+
+.bundle_contents_preview a.bundle_contents_preview_item:hover {
+	z-index: 40 !important;
+	box-shadow: 0 4px 10px #000000;
+}
+
+.bundle_contents_preview.collapsed a.bundle_contents_preview_item:not(:first-child):hover {
+	transform: translateX(5px);
+}
+
+.bundle_contents_preview.collapsed a.bundle_contents_preview_item:last-child:hover {
+	transform: translateX(-25px);
+}
+
+.bundle_contents_preview a.bundle_contents_preview_item.ds_flagged:hover .ds_flag.ds_owned_flag,
+.bundle_contents_preview a.bundle_contents_preview_item.ds_flagged:hover .ds_flag.ds_incart_flag,
+.bundle_contents_preview a.bundle_contents_preview_item.ds_flagged:hover .ds_flag.ds_wishlist_flag {
+	max-width: 0;
+}
+
+.bundle_contents_preview a.bundle_contents_preview_item.ds_flagged .ds_flag.ds_owned_flag:hover,
+.bundle_contents_preview a.bundle_contents_preview_item.ds_flagged .ds_flag.ds_incart_flag:hover,
+.bundle_contents_preview a.bundle_contents_preview_item.ds_flagged .ds_flag.ds_wishlist_flag:hover {
+	max-width: 120px;
 }
 
 .bundle_contents_preview a.bundle_contents_preview_item.floated {

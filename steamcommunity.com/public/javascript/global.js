@@ -1695,6 +1695,23 @@ var CCommentThread = Class.create( {
 			this.OnFailureDisplayError( transport );
 	},
 
+	// re-renders the current page, e.g. after the React report dialog hides a comment
+	RefreshCurrentPage: function()
+	{
+		var params = this.ParametersWithDefaults( {
+			start: this.m_cPageSize * this.m_iCurrentPage,
+			totalcount: this.m_cTotalCount
+		} );
+
+		this.m_bLoading = true;
+		new Ajax.Request( this.GetActionURL( 'render' ), {
+			method: 'post',
+			parameters: params,
+			onSuccess: this.OnResponseRenderComments.bind( this, CCommentThread.RENDER_GOTOCOMMENT, ++this.m_nRenderAjaxSequenceNumber ),
+			onComplete: this.OnAJAXComplete.bind( this )
+		} );
+	},
+
 	DisplayEditComment: function( gidComment )
 	{
 		var elForm = $('editcommentform_' + gidComment);
@@ -2421,6 +2438,36 @@ CCommentThread.HideAndReport = function( id, gidcomment, bHide )
 	if ( g_rgCommentThreads[id] )
 		g_rgCommentThreads[id].HideAndReport( gidcomment, bHide );
 };
+CCommentThread.ShowReportDialog = function( id, gidcomment )
+{
+	// ShowContentReportDialog comes from the content-moderation-report-dialog React target
+	var thread = g_rgCommentThreads[id];
+	if ( window.ShowContentReportDialog && thread )
+	{
+		window.ShowContentReportDialog( {
+			type: 'comment',
+			strThreadName: id,
+			strCommentThreadType: thread.m_strCommentThreadType,
+			steamidOwner: String( thread.m_rgCommentData['owner'] ),
+			gidFeature: String( thread.m_rgCommentData['feature'] ),
+			gidFeature2: String( thread.m_rgCommentData['feature2'] ),
+			commentThreadId: thread.m_rgCommentData['commentthreadid'] ? String( thread.m_rgCommentData['commentthreadid'] ) : null,
+			gidComment: gidcomment
+		} );
+	}
+	else
+	{
+		CCommentThread.HideAndReport( id, gidcomment, 1 );
+	}
+};
+
+// the React report dialog fires this after it hides and reports a comment
+window.addEventListener( 'ContentModerationCommentReported', function( event ) {
+	var thread = g_rgCommentThreads[ event.detail.strThreadName ];
+	if ( thread )
+		thread.RefreshCurrentPage();
+} );
+
 CCommentThread.ShowHiddenComment = function( id, gidcomment )
 {
 	var elComment = $('comment_' + gidcomment);

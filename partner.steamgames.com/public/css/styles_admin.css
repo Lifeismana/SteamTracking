@@ -377,6 +377,10 @@ div.rightcol {
 	color: #e24044;
 }
 
+.complete {
+	color: #A4D007;
+}
+
 .reference {
 	color: #cccc75;
 }
@@ -2863,6 +2867,9 @@ html, body { height:100%; }
 	background: -webkit-linear-gradient( 315deg, rgba( 114, 118, 133, 0.1) 5%,rgba( 114, 118, 133, 0.3) 95%);
 	background: linear-gradient( 135deg, rgba( 114, 118, 133, 0.1) 5%,rgba( 114, 118, 133, 0.3) 95%);
 }
+.instructions.overview {
+	border-left: 2px solid #595e69;
+}
 .instructions_table {
 	display: table;
 	width: 100%;
@@ -4831,6 +4838,7 @@ select#package_included_app_list > option[disabled] {
 }
 
 .image_preview_col > img {
+	max-height: 400px;
 	max-width: 100%;
 }
 
@@ -4859,5 +4867,5 @@ select#package_included_app_list > option[disabled] {
 }
 
 .tax_button {
-	margin-top: 5px;	
+	margin-top: 5px;
 }

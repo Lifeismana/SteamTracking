@@ -4015,6 +4015,7 @@ N10__cxxabiv115__forced_unwindE
 N10__cxxabiv117__class_type_infoE
 N10__cxxabiv119__foreign_exceptionE
 N10__cxxabiv120__si_class_type_infoE
+N10__cxxabiv121__vmi_class_type_infoE
 N14CParentalCache35CCallback_OnParentalLockChangeBeginE
 N15CFriendsWebChat33CCallbackInternal_OnUIModeChangedE
 N15CFriendsWebChat35CCallbackInternal_OnClientUICommandE
@@ -5506,13 +5507,6 @@ _panelDar
 _setjmp
 _strlwr
 _textImage
-_txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
-_txnal_cow_string_D1(void*)
-_txnal_cow_string_D1_commit(void*)
-_txnal_cow_string_c_str(void const*)
-_txnal_logic_error_get_msg(void*)
-_txnal_runtime_error_get_msg(void*)
-_txnal_sso_string_c_str(void const*)
 `tun%
 a\rxg[
 abort
@@ -8127,6 +8121,7 @@ py_generic_services
 pyrowave_custom_bitrate
 pyrowave_custom_bitrate_kbps
 pyrowave_quality_modifier
+pyrowave_yuv444
 qR5FE%
 qdZRMHD@=;86421/.-+*)(''&%$$#""!!
 quality
@@ -8627,21 +8622,7 @@ type.googleprod.com/
 typeinfo fn for
 typeinfo for
 typeinfo for SteamThreadTools::CThread
-typeinfo for __cxxabiv1::__class_type_info
-typeinfo for __cxxabiv1::__forced_unwind
-typeinfo for __cxxabiv1::__foreign_exception
-typeinfo for __cxxabiv1::__si_class_type_info
-typeinfo for __gnu_cxx::__concurrence_lock_error
-typeinfo for __gnu_cxx::__concurrence_unlock_error
-typeinfo for __gnu_cxx::recursive_init_error
 typeinfo name for
-typeinfo name for __cxxabiv1::__class_type_info
-typeinfo name for __cxxabiv1::__forced_unwind
-typeinfo name for __cxxabiv1::__foreign_exception
-typeinfo name for __cxxabiv1::__si_class_type_info
-typeinfo name for __gnu_cxx::__concurrence_lock_error
-typeinfo name for __gnu_cxx::__concurrence_unlock_error
-typeinfo name for __gnu_cxx::recursive_init_error
 ui_mode
 uint
 uint32
@@ -8768,14 +8749,6 @@ vscode://file/%s:%u
 vsnprintf
 vtable for
 vtable for CAdHocValidation_SimpleCallback
-vtable for __cxxabiv1::__class_type_info
-vtable for __cxxabiv1::__forced_unwind
-vtable for __cxxabiv1::__foreign_exception
-vtable for __cxxabiv1::__si_class_type_info
-vtable for __cxxabiv1::__vmi_class_type_info
-vtable for __gnu_cxx::__concurrence_lock_error
-vtable for __gnu_cxx::__concurrence_unlock_error
-vtable for __gnu_cxx::recursive_init_error
 vtw\nx
 vulkan
 w+OQvr

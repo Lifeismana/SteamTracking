@@ -1,124 +1,1012 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-(self.webpackChunkappmgmt_storeadmin =
-  self.webpackChunkappmgmt_storeadmin || []).push([
-  [1101],
-  {
-    42691: (e) => {
-      e.exports = {
-        DashboardPage: "_353rnPLVzyQBQhakxhkl7u",
-        DashTitleBar: "_2m-_VofgoRb-uGQMrewYq3",
-        DashTitle: "_1FK58fndqHlADYEX-58V0C",
-        ConfidentialBanner: "_2H9KzQ8SQGvqGhbWidWzf4",
-        Throbber: "_21EsxksQjCwl-Xz3TNuoPc",
-        ErrorMessage: "_190uxu3FVS6Fx-IbDsfCyd",
-        ButtonGroup: "_2peTiEFo27_zkZA0TzjnD4",
-      };
-    },
-    40441: (e) => {
-      e.exports = {
-        EventDetails: "_3LMXjfy-EuA2ZWoW660vuc",
-        Active: "_2BLece8YI3va6GD9JEUxjL",
-        RestrictedEligibility: "_2lxTisamKtJUowDlNKSrzG",
-        CollisionFreeDiscountEvent: "_15fBcZwmM-nap1QbkpRc2G",
-        EventName: "_2bJFFj7RfHL_P4P-MJlzK4",
-        EditEventLink: "_1XHd3t0XU1SfpsraST5Ovy",
-        EventDates: "_2kY09NU8R-tjOVYmIwZ98B",
-        EventDateRange: "_312igBJXB0MifodN4IBq1i",
-        EventNumDays: "OAAVWKvssJLy0QM6mVcw6",
-        EventLink: "VZ3pVxXbvFNzdGOkOrNGU",
-        EventParticipationCtn: "_2iuUu1K5b1e71DnJKkBtHH",
-        ParticipationDetails: "_2tr5XTQIvHNQiu4IZKMi7Z",
-        Title: "_3mO71T0Q_migmtLfYRFb-6",
-        Count: "_1pDZ1lHiN5RohGZxcDAyCK",
-        Selected: "_36G76FOe3fZ8csab26PcL8",
-        ParticipationToolTip: "_36hxaHrRvc7ct9bb0Aeza3",
-        AppLink: "_3RF-6YnSS_2OpJmOo0BV6_",
-        BasePrice: "_1a_LwvXaB11PNusz9GPz98",
-        RelatedDiscount: "_12zwKFzckK0AkG-lS95iTK",
-        DiscountGridDataColumn: "_1yW70vcAdwnrMIrVE8y03S",
-        GridRowLoadingThrobber: "r2FLR3ukmK3cVbBV-j8Aa",
-        CurrencyPicker: "_2Z65Kc_3FxlP0E15rMFuVC",
-        RelatedInfoPicker: "O-95g3EzyTgFwNJ8ATC-e",
-        RelatedInfoPickerCtn: "_2nnB1eMYflFLLmMAi7_jJV",
-        CurrencyDropDown: "_2gGuz_TA8axLQOqAtwurFU",
-        RelatedInfoDropDown: "_1jj2uEuCns_K_cIfGZcKl6",
-        CurrencyDropDownItem: "_3wPHxQWhohHATqjvN6B2l3",
-        RelatedInfoDropDownItem: "_1ORamDcYtEN8wS1voTsWE",
-      };
-    },
-    22886: (e) => {
-      e.exports = {
-        PricingGridCtn: "_2j-z9aXG_KoPSY-SYZ0fkF",
-        PricingGridWrapper: "_185dckQ4O6j7fFSauUkttX",
-        PricingGrid: "fKA16ZB7sn97FP66zTggw",
-        PricingGridDataColumn: "OVDCtDCCkCZr1my3nFNXX",
-        GridHeaderButtons: "_1Z7LLb7cP6pLH8XwOgDkP",
-        OptionCtn: "_1PrsCGcbjJ61fDm8stNJd2",
-        PriceLowOption: "_39j_Zq7q7VRXEb-7tZMUSx",
-        CurrencyHeader: "_1kvIFs23dRUETqkaH0d_RW",
-        CurrencyNameCtn: "_1eoBYSPbVZ6MoUNDkL_xbp",
-        CurrencyName: "_3ffEWbT5mrSdmmCBQsjpmC",
-        CurrencyMore: "MltPJcBZanYmXvQaiTTTg",
-        PricingGridTable: "_2xa-P-_4oTPXUvGstrnphV",
-        HoverToolTip: "_1OS2vdfTf7vsWj8VhNKlXu",
-      };
-    },
-    57581: (e) => {
-      e.exports = {
-        Instructions: "_2A9meAsgvbqtRE-WwcWklJ",
-        ButtonRows: "_3BpoblG0qqkekq9SESFn1s",
-        Button: "_3u7Vn4B-hH3ntVFvWBlMWP",
-        ImportButtonLabel: "_3OJwY0KsAdtSzzFuOdWl8l",
-        OptionCtn: "_3zj1IiybB-MxMlHawZLJeQ",
-        OptionDesc: "_2QfyWyy2Z0gPCqVTApBKNV",
-        ParseResultCount: "_1P_KJVQc3vmgxCssmhFas0",
-        ErrorHeader: "_289pBSstep6RsTe3aedebA",
-        ParseErrors: "_1VTD4841BG3WozX_i1yNEd",
-      };
-    },
-    64641: (e) => {
-      e.exports = {
-        v6: "_2LxgdMcpWJRjkxZKbmeEEb",
-        SubText: "vg0EOhKTLB3tLvshHMr7l",
-        AvatarImageContainer: "_33hdFBTwBs64Fcp-bPdf4E",
-        GameImageContainer: "_2OYADGuBPiyF7h50OJ0P1B",
-        AvatarImage: "_2CQYcCggCXwVzZj2GWng5-",
-        STV_HomeGridPreviewDetails: "Yncr-T63YFSJ46cq4Z2BJ",
-        ChatAvatarImage: "_1cUR_vD8IvfJgOK1r89j4o",
-        EditButton: "VsZ-bdWSNpnM9Vg6gkSyD",
-        Small: "_3M4j828iWSVEZZAkypcBi1",
-        FlexCenter: "_1R3ycnbAGUAy01o0TW7NNo",
-        ThrobberCtn: "_3m7p67FD1Ynjm3BnyyjSSS",
-        MarkdownLink: "_1WqumifyJucGDxm2oI6yRQ",
-        SummaryTextArea: "cNMZ-dcMVhaQJFes_Ivwo",
-        RemoveIcon: "_3NeLW5LAka4S9__PaMFE_J",
-      };
-    },
-    40323: function (e, t) {
-      var r, n, i;
-      /* @license
+(() => {
+  (self.webpackChunkappmgmt_storeadmin =
+    self.webpackChunkappmgmt_storeadmin || []).push([
+    [31101],
+    {
+      31716: (ne, De, s) => {
+        "use strict";
+        s.r(De), s.d(De, { PricingRoutes: () => ce, default: () => Se });
+        var r = s(7850),
+          le = s(58732),
+          fe = s(90783),
+          B = s(17083),
+          M = s(92757),
+          j = s(26485),
+          k = s(31886),
+          f = s(37424),
+          Pe = s(40396),
+          a = s(90626),
+          re = s(62092),
+          O = s(58534),
+          oe = s(88003),
+          de = s(53107),
+          ge = s(82734),
+          l = s(18210),
+          ye = s(3166),
+          Ie = s(14578),
+          _e = s.n(Ie),
+          je = s(25792),
+          Oe = s(71421),
+          Ce = s(36707),
+          ee = s(95146),
+          I = s(71764),
+          t = s(22886),
+          e = s.n(t),
+          n = s(31069),
+          o = s(96434),
+          i = s.n(o),
+          u = s(78779),
+          H = s(16666),
+          se = s(32),
+          ie = s(64238),
+          C = s.n(ie),
+          L = s(179),
+          d = s(64641),
+          q = s(42691),
+          p = s(40441),
+          y = s(20929),
+          c = s(64868),
+          G = s(2801),
+          W = s(67829);
+        function Q(g) {
+          const {
+              bCompactMode: P,
+              setCompactMode: b,
+              rgGridData: E,
+              strPackageFilter: T,
+              setPackageFilter: h,
+              bFilterToBelowMinPrice: V,
+              setFilterToBelowMinPrice: K,
+            } = g,
+            w = (0, a.useMemo)(
+              () => E.filter((ve) => (0, f.Y5)(ve.packageID)).length,
+              [E],
+            );
+          let X = a.useCallback(
+            (ve) => {
+              h(ve.data);
+            },
+            [h],
+          );
+          const ue = a.useMemo(
+              () => [
+                {
+                  label: (0, l.we)(
+                    "#PricingDashboard_ShowOnlyReleasedPackages",
+                  ),
+                  data: "released",
+                },
+                {
+                  label: (0, l.we)("#PricingDashboard_ShowAllPackages"),
+                  data: "all",
+                },
+                {
+                  label: (0, l.we)(
+                    "#PricingDashboard_ShowOnlyUnreleasedPackages",
+                  ),
+                  data: "unreleased",
+                },
+                {
+                  label: (0, l.we)("#PricingDashboard_ShowOnlyChangedPackages"),
+                  data: "changed",
+                },
+                {
+                  label: (0, l.we)("#PricingDashboard_ShowSubmittedChanges"),
+                  data: "proposed",
+                },
+              ],
+              [],
+            ),
+            [pe, xe, ke] = (0, c.uD)();
+          return (0, r.jsxs)("div", {
+            className: e().GridHeaderButtons,
+            children: [
+              (0, r.jsx)(O.ZU, {
+                rgOptions: ue,
+                selectedOption: T,
+                strDropDownClassName: e().Test,
+                onChange: X,
+                contextMenuPositionOptions: { bMatchWidth: !1 },
+              }),
+              !!(w || V) &&
+                (0, r.jsx)("div", {
+                  className: (0, Ce.A)(e().OptionCtn, e().PriceLowOption),
+                  children: (0, r.jsx)(O.Yh, {
+                    checked: V,
+                    onChange: K,
+                    label: (0, l.we)("#PricingDashboard_FilterToLowPrice", w),
+                  }),
+                }),
+              (0, r.jsx)("div", {
+                className: (0, Ce.A)(e().OptionCtn, e().CompactOption),
+                children: (0, r.jsx)(O.Yh, {
+                  checked: P,
+                  onChange: b,
+                  label: (0, l.we)(
+                    "#PricingDashboard_ShowCompactModeCheckBoxLabel",
+                  ),
+                }),
+              }),
+              (0, r.jsx)("div", {
+                className: (0, Ce.A)(e().OptionCtn),
+                children: (0, r.jsx)(y.J, {}),
+              }),
+              (0, r.jsxs)("div", {
+                className: (0, Ce.A)(e().OptionCtn),
+                children: [
+                  (0, r.jsx)(O.jn, {
+                    onClick: xe,
+                    children: (0, l.we)(
+                      "#PricingDashboard_ApplyGuidelinesDialog_Button",
+                    ),
+                  }),
+                  (0, r.jsx)(G.EN, {
+                    active: pe,
+                    children: (0, r.jsx)(W.i, { closeModal: ke }),
+                  }),
+                ],
+              }),
+            ],
+          });
+        }
+        var ae = s(81246);
+        function D(g) {
+          return g.contains_game && g.contains_dlc
+            ? "BOTH"
+            : g.contains_game
+              ? "GAME"
+              : g.contains_dlc
+                ? "DLC"
+                : null;
+        }
+        function x(g, P, b) {
+          const { rgSupportedPriceKeys: E } = (0, f.T7)();
+          return a.useMemo(() => {
+            const T = [];
+            for (const h of g) {
+              const V = /^-?[0-9]+$/.test(b.strSearchStringFromURL)
+                ? parseInt(b.strSearchStringFromURL)
+                : 0;
+              if (h.packageid !== V) {
+                if (P == "changed") {
+                  if (!(0, f.iy)(h.packageid)) continue;
+                } else if (P == "proposed") {
+                  if (!(0, f.RO)(h.packageid)) continue;
+                } else if (P == "released") {
+                  if (!h.released) continue;
+                } else if (P == "unreleased" && h.released) continue;
+                if (
+                  b?.bFilterToOnlyBelowMinimumPrice &&
+                  !(0, f.Y5)(h.packageid)
+                )
+                  continue;
+              }
+              let K = h.grouped_app_name;
+              K ||
+                (h.appids.length > 1
+                  ? (K = (0, l.we)(
+                      "#PackageGrid_MultipleBaseGamesFoundForPackage",
+                    ))
+                  : (K = (0, l.we)("#PackageGrid_NoBaseGameFoundForPackage")));
+              const w = {
+                appids: h.appids.sort(),
+                appName: K,
+                packageID: h.packageid,
+                packageName: h.package_name || "",
+                packageType: D(h),
+                released: h.released,
+              };
+              for (const X of E) w[X] = X;
+              T.push(w);
+            }
+            return T;
+          }, [b, g, E, P]);
+        }
+        function U(g) {
+          const { column: P } = g,
+            b = P.id,
+            E = (0, f.XK)(b),
+            T = (0, f.YB)(b);
+          let h = () => (0, r.jsx)(v, { priceKey: b });
+          return (0, r.jsxs)("div", {
+            className: e().CurrencyHeader,
+            children: [
+              (0, r.jsx)(Oe.he, {
+                toolTipContent: E,
+                direction: "top",
+                className: e().CurrencyAbbreviation,
+                strTooltipClassname: e().HoverToolTip,
+                children: (0, r.jsxs)("div", {
+                  className: e().CurrencyNameCtn,
+                  children: [
+                    b,
+                    (0, r.jsx)("span", {
+                      className: e().CurrencyName,
+                      children: E,
+                    }),
+                  ],
+                }),
+              }),
+              T > 0 &&
+                (0, r.jsx)(I.O, {
+                  hoverKey: b,
+                  className: e().CurrencyMore,
+                  renderHover: h,
+                }),
+            ],
+          });
+        }
+        function m(g) {
+          const { row: P } = g;
+          return (0, r.jsx)(ae.m2, {
+            packageID: P.original.packageID,
+            bShowCancel: !0,
+          });
+        }
+        function A() {
+          return a.useMemo(
+            () =>
+              (0, H.FB)().accessor("proposalState", {
+                header: (0, l.we)(
+                  "#PricingDashboard_Column_PriceProposalState",
+                ),
+                enableSorting: !1,
+                cell: m,
+                size: 200,
+                meta: {
+                  strHeaderTooltip: (0, l.we)(
+                    "#PricingDashboard_Column_PriceProposalState_ttip",
+                  ),
+                },
+              }),
+            [],
+          );
+        }
+        function Z(g) {
+          const P = (0, ee.sF)(),
+            b = (0, ee.uv)(),
+            E = (0, ee.NP)(),
+            T = (0, ee.ZN)(),
+            h = (0, ee.mE)(!1),
+            V = A(),
+            { rgSupportedPriceKeys: K } = (0, f.T7)();
+          return a.useMemo(() => {
+            const w = [P, b, E, T, h, V];
+            for (const X of K)
+              w.push({
+                accessorKey: X,
+                size: g ? 72 : 200,
+                enableSorting: !1,
+                header: U,
+                cell: n.sh,
+              });
+            return w;
+          }, [P, b, E, T, h, V, K, g]);
+        }
+        function F(g) {
+          const b = (0, f.Ci)()?.length ?? 0;
+          return (0, r.jsx)("div", {
+            className: (0, Ce.A)(e().PricingGridCtn, b > 0 && "PendingVisible"),
+            children: (0, r.jsx)(S, { ...g }),
+          });
+        }
+        const S = a.memo(function (P) {
+          const { packageData: b } = P,
+            [E, T] = a.useState(!1),
+            h = a.useRef(null),
+            [V, K] = (0, L.QD)("filter", "released"),
+            [w, X] = (0, L.QD)("filter_below_min_price", !1),
+            ue = new URLSearchParams(window.location.search),
+            pe = ue.has(k.xi) ? decodeURIComponent(ue.get(k.xi)) : "",
+            xe = Z(E),
+            ke = x(b, V, {
+              bFilterToOnlyBelowMinimumPrice: w,
+              strSearchStringFromURL: pe,
+            }),
+            ve = (0, k.pV)(),
+            Re = () => ve(h.current),
+            Fe = (0, f.Zz)(),
+            Ne = (0, u.cK)();
+          return (0, r.jsxs)(r.Fragment, {
+            children: [
+              (0, r.jsx)(Q, {
+                bCompactMode: E,
+                setCompactMode: T,
+                rgGridData: ke,
+                strPackageFilter: V,
+                setPackageFilter: K,
+                bFilterToBelowMinPrice: w,
+                setFilterToBelowMinPrice: X,
+              }),
+              (0, r.jsx)("div", {
+                className: e().PricingGridWrapper,
+                children: (0, r.jsx)("div", {
+                  className: (0, Ce.A)(e().PricingGrid, E && "CompactMode"),
+                  children: (0, r.jsxs)(je.tH, {
+                    children: [
+                      (0, r.jsx)(ee.rK, {
+                        fnBLocalChangesExist: Fe,
+                        fnWarnUser: Ne,
+                        children: (0, r.jsx)(se.k, {
+                          ref: h,
+                          className: C()(
+                            e().PricingGridTable,
+                            "noGlobalButtonStyle",
+                          ),
+                          columns: xe,
+                          data: ke,
+                          getRowKey: (Le, Be) => Be.packageID,
+                          stickyHeader: !0,
+                          nItemHeight: 43,
+                          nHeaderHeight: 63,
+                          overscan: 12,
+                          initialExpanded: !0,
+                          initialSorting: [{ id: "appName", desc: !1 }],
+                          initialColumnFilters: [
+                            { id: "packageName", value: pe },
+                          ],
+                          initialGrouping: ["appName"],
+                          initialColumnVisibility: {
+                            packageType: !1,
+                            appids: !1,
+                          },
+                          initialColumnPinning: {
+                            left: [
+                              "packageID",
+                              "appName",
+                              "packageName",
+                              "proposalState",
+                              "USD",
+                            ],
+                          },
+                          onGroupingChange: Re,
+                          onVisibleRowsChange: Re,
+                          renderGroup: ee.IR,
+                        }),
+                      }),
+                      (0, r.jsx)("br", {}),
+                    ],
+                  }),
+                }),
+              }),
+            ],
+          });
+        });
+        function v(g) {
+          const { priceKey: P } = g,
+            b = (0, f.XK)(P);
+          let E = (0, f.mP)(P);
+          return (0, r.jsx)("div", {
+            className: i().PricePopout,
+            children: (0, r.jsx)("div", {
+              className: i().DetailRow,
+              children: (0, r.jsx)("div", {
+                className: i().DetailLabel,
+                onClick: E,
+                children: (0, l.we)("#PricingDashboard_RevertAllCurrency", b),
+              }),
+            }),
+          });
+        }
+        var $ = s(19367),
+          _ = s.n($),
+          N = s(85599),
+          z = s(22880),
+          be = s(57581),
+          R = s.n(be);
+        function we(g) {
+          const { closeModal: P } = g,
+            b = (0, k.vs)(),
+            E = _()().format("YYYY-MM-DDTHH-mm-ss"),
+            T = (0, k.zt)(),
+            h = (0, k.Yr)(),
+            V = `prices_all_${b}_${E}.csv`,
+            K = `prices_${b}_${E}.csv`,
+            w = h.length == 0;
+          return (0, r.jsxs)(G.o0, {
+            bAllowFullSize: !1,
+            closeModal: P,
+            bAlertDialog: !0,
+            strTitle: (0, l.we)("#PricingDashboard_ImportExportHeader"),
+            children: [
+              (0, l.we)("#PricingDashboard_ImportExport_GeneralInstructions"),
+              (0, r.jsx)("br", {}),
+              (0, r.jsx)("a", {
+                href: ye.TS.PARTNER_BASE_URL + "doc/store/pricing/csv",
+                target: "_blank",
+                children: (0, l.we)("#PricingDashboard_ImportExport_DocLink"),
+              }),
+              (0, r.jsx)("br", {}),
+              (0, r.jsx)("br", {}),
+              (0, r.jsx)("h3", {
+                children: (0, l.we)("#PricingDashboard_SubtitleExport"),
+              }),
+              (0, r.jsx)("div", {
+                className: R().Instructions,
+                children: (0, l.we)(
+                  "#PricingDashboard_ImportExport_DownloadInstructions",
+                ),
+              }),
+              (0, r.jsxs)("div", {
+                className: R().ButtonRows,
+                children: [
+                  h.length != T.length &&
+                    (0, r.jsxs)("div", {
+                      className: R().OptionCtn,
+                      children: [
+                        (0, r.jsx)("span", {
+                          className: R().OptionDesc,
+                          children: (0, l.we)(
+                            "#PricingDashboard_ImportExport_DownloadVisible_Desc",
+                          ),
+                        }),
+                        (0, r.jsxs)(O.$n, {
+                          className: R().Button,
+                          disabled: w,
+                          onClick: () => J(h, K),
+                          children: [
+                            (0, l.we)(
+                              "#PricingDashboard_ImportExport_DownloadVisible_Button",
+                            ),
+                            (0, r.jsx)("span", {
+                              children: (0, l.we)(
+                                "#PricingDashboard_PackageCount",
+                                h.length,
+                              ),
+                            }),
+                          ],
+                        }),
+                      ],
+                    }),
+                  (0, r.jsxs)("div", {
+                    className: R().OptionCtn,
+                    children: [
+                      (0, r.jsx)("span", {
+                        className: R().OptionDesc,
+                        children: (0, l.we)(
+                          "#PricingDashboard_ImportExport_DownloadAll_Desc",
+                        ),
+                      }),
+                      (0, r.jsxs)(O.$n, {
+                        className: R().Button,
+                        disabled: w,
+                        onClick: () => J(T, V),
+                        children: [
+                          (0, l.we)(
+                            "#PricingDashboard_ImportExport_DownloadAll_Button",
+                          ),
+                          (0, r.jsx)("span", {
+                            children: (0, l.we)(
+                              "#PricingDashboard_PackageCount",
+                              T.length,
+                            ),
+                          }),
+                        ],
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+              (0, r.jsx)("br", {}),
+              (0, r.jsx)("br", {}),
+              (0, r.jsx)("h3", {
+                children: (0, l.we)("#PricingDashboard_SubtitleImport"),
+              }),
+              (0, r.jsx)("div", {
+                className: R().Instructions,
+                children: (0, l.we)(
+                  "#PricingDashboard_ImportExport_UploadInstructions",
+                ),
+              }),
+              (0, r.jsx)("div", {
+                className: R().ButtonRows,
+                children: (0, r.jsxs)("div", {
+                  className: R().OptionCtn,
+                  children: [
+                    (0, r.jsx)("span", {
+                      className: R().OptionDesc,
+                      children: (0, l.we)(
+                        "#PricingDashboard_ImportExport_Upload_Desc",
+                      ),
+                    }),
+                    (0, r.jsx)(O.$n, {
+                      className: R().Button,
+                      disabled: w,
+                      children: (0, r.jsxs)("label", {
+                        className: R().ImportButtonLabel,
+                        htmlFor: "import-price-input",
+                        children: [
+                          (0, l.we)(
+                            "#PricingDashboard_ImportExport_Upload_Button",
+                          ),
+                          (0, r.jsx)("input", {
+                            id: "import-price-input",
+                            type: "file",
+                            style: { display: "none" },
+                            onChange: (X) => he(X, P),
+                          }),
+                        ],
+                      }),
+                    }),
+                  ],
+                }),
+              }),
+            ],
+          });
+        }
+        function J(g, P) {
+          const b = [],
+            E = (0, f.U3)(),
+            T = [(0, l.we)("#PackageGrid_Column_PackageName"), "ID"];
+          for (const h of E) T.push(h);
+          b.push(T);
+          for (const h of g) {
+            const K = [(0, k.ww)(h), h.toString()];
+            for (const w of E) {
+              const X = (0, f.FR)(h, w),
+                ue = X ? (X / 100).toString() : "";
+              K.push(ue);
+            }
+            b.push(K);
+          }
+          z.g.WriteCSVToFile(b, P);
+        }
+        async function he(g, P) {
+          if (g.target.files.length >= 1) {
+            const b = (0, ge.uX)(g),
+              E = g.target.files[0],
+              T = await z.g.ParseCSVFile(E);
+            (0, oe.mK)(
+              (0, r.jsx)(me, { strFilename: E.name, parseResult: T }),
+              b,
+            ),
+              P();
+          }
+        }
+        function Y(g, P) {
+          let b = Number(g);
+          return Number.isNaN(b) ? null : Math.round(b * 100);
+        }
+        function te(g, P, b, E) {
+          const T = [],
+            h = new Set(P),
+            V = [];
+          for (const K of g.data ?? []) {
+            const w = Number(K.ID);
+            if (h.has(w)) {
+              T.push(w);
+              for (const X of b) {
+                const ue = K[X],
+                  pe = !!ue?.length && Y(ue, X);
+                if (!ue?.length || Number.isNaN(pe)) continue;
+                const xe = E(w, X, pe);
+                xe && V.push(xe);
+              }
+            }
+          }
+          return { rgPriceChanges: V, nPackagesImported: T.length };
+        }
+        function me(g) {
+          const { closeModal: P, strFilename: b, parseResult: E } = g,
+            T = (0, k.zt)(),
+            h = (0, f.U3)(),
+            V = (0, f.hm)(),
+            [K, w] = a.useState(null),
+            [X, ue] = a.useState();
+          if (
+            (a.useEffect(() => {
+              const { rgPriceChanges: ve, nPackagesImported: Re } = te(
+                E,
+                T,
+                h,
+                V,
+              );
+              w(ve), ue(Re);
+            }, [E, T, h, V]),
+            K === null)
+          )
+            return (0, r.jsx)(N.t, { position: "center" });
+          const pe = K.length > 0,
+            xe = pe
+              ? (0, l.we)("#PackageGrid_SaveChangesDialogButton")
+              : (0, l.we)("#Button_Close"),
+            ke = () => {
+              pe && (0, oe.pg)((0, r.jsx)(u.Zg, {}), window);
+            };
+          return (0, r.jsxs)(G.o0, {
+            strTitle: (0, l.we)(
+              "#PricingDashboard_ImportExport_UploadProgressTitle",
+            ),
+            strDescription: (0, l.we)(
+              "#PricingDashboard_ImportExport_UploadProgressDetails",
+              X,
+            ),
+            bAlertDialog: !pe,
+            strOKButtonText: xe,
+            onOK: ke,
+            strCancelButtonText: (0, l.we)("#Button_OK"),
+            closeModal: P,
+            children: [
+              (0, r.jsx)("div", {
+                className: R().ParseResultCount,
+                children: (0, l.we)(
+                  "#PricingDashboard_ImportExport_UploadResults",
+                  K.length,
+                ),
+              }),
+              pe &&
+                (0, l.we)(
+                  "#PricingDashboard_ImportExport_UploadNextStepInstructions",
+                ),
+              !!E.errors?.length &&
+                (0, r.jsxs)(r.Fragment, {
+                  children: [
+                    (0, r.jsx)("div", {
+                      className: R().ErrorHeader,
+                      children: (0, l.we)(
+                        "#PricingDashboard_ImportExport_UploadErrorsHeader",
+                        E.errors?.length,
+                      ),
+                    }),
+                    (0, r.jsx)("div", {
+                      className: R().ParseErrors,
+                      children: E.errors.map((ve, Re) =>
+                        (0, r.jsx)(
+                          "div",
+                          {
+                            className: R().Error,
+                            children: `${ve.row ?? "-"} ${ve.message}`,
+                          },
+                          `${ve.message}-${Re}`,
+                        ),
+                      ),
+                    }),
+                  ],
+                }),
+            ],
+          });
+        }
+        function Te(g) {
+          (0, Pe.h)((0, f.Zz)());
+          const P = (0, k.uw)(),
+            b = "https://steamcommunity.com/groups/steamworks/discussions/29/",
+            E = ye.TS.PARTNER_BASE_URL + "doc/store/pricing",
+            T = ye.TS.HELP_BASE_URL + "wizard/HelpWithPublishing?issueid=920",
+            h = (0, f.v4)(),
+            V = (0, a.useMemo)(
+              () => Array.from(new Set(h.map((w) => w.submitterID))),
+              [h],
+            ),
+            K = (0, re.DW)(V);
+          return (0, r.jsxs)("div", {
+            className: _e().DashboardPage,
+            children: [
+              (0, r.jsxs)("div", {
+                className: _e().DashTitle,
+                children: [
+                  (0, l.we)("#PricingDashboard_Title"),
+                  (0, r.jsx)("div", { className: _e().FeedbackLinkCtn }),
+                  (0, r.jsxs)("div", {
+                    className: _e().ButtonGroup,
+                    children: [
+                      (0, r.jsx)(O.$n, {
+                        onClick: (w) =>
+                          (0, oe.pg)((0, r.jsx)(we, {}), (0, ge.uX)(w)),
+                        children: (0, l.we)(
+                          "#PricingDashboard_ImportExportButton",
+                        ),
+                      }),
+                      (0, r.jsx)(O.$n, {
+                        onClick: (w) => (0, de.EP)(w, E),
+                        children: (0, l.we)(
+                          "#PricingDashboard_DocumentationButton",
+                        ),
+                      }),
+                      (0, r.jsx)(O.$n, {
+                        onClick: (w) => (0, de.EP)(w, T),
+                        children: (0, l.we)(
+                          "#PricingDashboard_ContactUsButton",
+                        ),
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+              P.length == 0 &&
+                (0, r.jsx)("div", {
+                  className: _e().ErrorMessage,
+                  children: (0, l.we)("#PricingDashboard_Error_NoPackages"),
+                }),
+              P.length > 0 &&
+                (0, r.jsxs)(r.Fragment, {
+                  children: [
+                    (0, r.jsx)(F, { packageData: P }),
+                    (0, r.jsx)(u.BL, { bReloadPageOnSave: !1 }),
+                  ],
+                }),
+            ],
+          });
+        }
+        var Ae = s(61266),
+          Ee = s(13401);
+        const ce = { PricingDashboard: () => "/dashboard/:publisherid(\\d*)" };
+        function Se(g) {
+          return (0, r.jsx)(Ae.m, {
+            children: (0, r.jsx)(Ee.jY, {
+              children: (0, r.jsx)(B.Kd, {
+                basename: (0, le.C)() + "pricing/",
+                children: (0, r.jsxs)(M.dO, {
+                  children: [
+                    (0, r.jsx)(M.qh, {
+                      exact: !0,
+                      path: le.B.DiagData(),
+                      render: (P) =>
+                        (0, r.jsx)(j.z, {
+                          ...P,
+                          strConfigID: "application_config",
+                        }),
+                    }),
+                    (0, r.jsx)(M.qh, {
+                      path: ce.PricingDashboard(),
+                      render: (P) => (0, r.jsx)(Te, {}),
+                    }),
+                    (0, r.jsx)(M.qh, { component: fe.a }),
+                  ],
+                }),
+              }),
+            }),
+          });
+        }
+      },
+      61266: (ne, De, s) => {
+        "use strict";
+        s.d(De, { T: () => Pe, m: () => f });
+        var r = s(90626),
+          le = s(13018),
+          fe = s(60298),
+          B = s(10142),
+          M = s(71742),
+          j = s(3166),
+          k = s(14616);
+        function f(O) {
+          const [oe, de] = (0, r.useState)(!1),
+            [ge] = (0, r.useState)(() => a()),
+            l = (0, r.useMemo)(
+              () => ({
+                country: j.TS.COUNTRY,
+                language: j.TS.LANGUAGE,
+                bUsePartnerAPI: !0,
+              }),
+              [],
+            );
+          return (
+            (0, r.useEffect)(() => (de(!0), re(ge)), [ge]),
+            oe
+              ? (0, r.createElement)(k.V3, {
+                  context: l,
+                  serviceTransportOverride: ge.GetServiceTransport(),
+                  children: O.children,
+                })
+              : null
+          );
+        }
+        function Pe(O) {
+          const [oe] = (0, r.useState)(() => a()),
+            de = (0, r.useMemo)(
+              () => ({
+                country: j.TS.COUNTRY,
+                language: j.TS.LANGUAGE,
+                bUsePartnerAPI: !0,
+                bIncludeUnpublished: O.bIncludeUnpublished,
+              }),
+              [O.bIncludeUnpublished],
+            );
+          return (0, r.createElement)(k.V3, {
+            context: de,
+            serviceTransportOverride: oe.GetServiceTransport(),
+            children: O.children,
+          });
+        }
+        function a() {
+          const O = (0, j.Tc)(
+            "partnerbrowse_webapi_token",
+            "application_config",
+          );
+          return (
+            (0, M.wT)(!!O, "require partnerbrowse_webapi_token"),
+            (0, fe.p)(new le.D(j.TS.WEBAPI_BASE_URL, O))
+          );
+        }
+        function re(O) {
+          return B.A.Initialize(
+            O.GetServiceTransport(),
+            j.iA.is_partner_member,
+          );
+        }
+      },
+      22880: (ne, De, s) => {
+        "use strict";
+        s.d(De, { g: () => fe });
+        var r = s(40323),
+          le = s.n(r);
+        class fe {
+          static ParseCSVFile(M, j) {
+            return new Promise((k, f) => {
+              const a = {
+                header: !0,
+                skipEmptyLines: "greedy",
+                complete: k,
+                error: (re) => f({ errors: [re] }),
+                transformHeader: j,
+              };
+              le().parse(M, a);
+            });
+          }
+          static ReadFile(M) {
+            return new Promise((j, k) => {
+              const f = new FileReader();
+              (f.onload = (Pe) => j(f.result)), f.readAsText(M);
+            });
+          }
+          static WriteFile(M, j) {
+            let k = document.createElement("a");
+            if (navigator.msSaveBlob) navigator.msSaveBlob(M, j);
+            else {
+              const f = window.URL.createObjectURL(M);
+              k.href = f;
+            }
+            k.setAttribute("download", j), k.click();
+            try {
+              document.removeChild(k);
+            } catch {}
+          }
+          static WriteCSVToFile(M, j, k, f) {
+            const Pe = f
+                ? le().unparse({ fields: f, data: M }, { header: !0 })
+                : le().unparse(M, { header: !0 }),
+              a = k == !0 ? ["\uFEFF" + Pe] : [Pe];
+            fe.WriteFile(new Blob(a, { type: "text/csv:charset=utf-8;" }), j);
+          }
+          static m_DummyValueForQuestionHack = 0;
+          static WriteXMLToFile(M, j) {
+            const k = () =>
+              this.m_DummyValueForQuestionHack ? "never returned" : "?";
+            let f =
+              "<" +
+              k() +
+              'xml version="1.0" encoding="UTF-8" ' +
+              k() +
+              `>
+`;
+            (f += new XMLSerializer().serializeToString(M)),
+              fe.WriteFile(
+                new Blob([f], { type: "application/xml:charset=utf-8;" }),
+                j,
+              );
+          }
+        }
+      },
+      42691: (ne) => {
+        ne.exports = {
+          DashboardPage: "_353rnPLVzyQBQhakxhkl7u",
+          DashTitleBar: "_2m-_VofgoRb-uGQMrewYq3",
+          DashTitle: "_1FK58fndqHlADYEX-58V0C",
+          ConfidentialBanner: "_2H9KzQ8SQGvqGhbWidWzf4",
+          Throbber: "_21EsxksQjCwl-Xz3TNuoPc",
+          ErrorMessage: "_190uxu3FVS6Fx-IbDsfCyd",
+          ButtonGroup: "_2peTiEFo27_zkZA0TzjnD4",
+        };
+      },
+      40441: (ne) => {
+        ne.exports = {
+          EventDetails: "_3LMXjfy-EuA2ZWoW660vuc",
+          Active: "_2BLece8YI3va6GD9JEUxjL",
+          RestrictedEligibility: "_2lxTisamKtJUowDlNKSrzG",
+          CollisionFreeDiscountEvent: "_15fBcZwmM-nap1QbkpRc2G",
+          EventName: "_2bJFFj7RfHL_P4P-MJlzK4",
+          EditEventLink: "_1XHd3t0XU1SfpsraST5Ovy",
+          EventDates: "_2kY09NU8R-tjOVYmIwZ98B",
+          EventDateRange: "_312igBJXB0MifodN4IBq1i",
+          EventNumDays: "OAAVWKvssJLy0QM6mVcw6",
+          EventLink: "VZ3pVxXbvFNzdGOkOrNGU",
+          EventParticipationCtn: "_2iuUu1K5b1e71DnJKkBtHH",
+          ParticipationDetails: "_2tr5XTQIvHNQiu4IZKMi7Z",
+          Title: "_3mO71T0Q_migmtLfYRFb-6",
+          Count: "_1pDZ1lHiN5RohGZxcDAyCK",
+          Selected: "_36G76FOe3fZ8csab26PcL8",
+          ParticipationToolTip: "_36hxaHrRvc7ct9bb0Aeza3",
+          AppLink: "_3RF-6YnSS_2OpJmOo0BV6_",
+          BasePrice: "_1a_LwvXaB11PNusz9GPz98",
+          RelatedDiscount: "_12zwKFzckK0AkG-lS95iTK",
+          DiscountGridDataColumn: "_1yW70vcAdwnrMIrVE8y03S",
+          GridRowLoadingThrobber: "r2FLR3ukmK3cVbBV-j8Aa",
+          CurrencyPicker: "_2Z65Kc_3FxlP0E15rMFuVC",
+          RelatedInfoPicker: "O-95g3EzyTgFwNJ8ATC-e",
+          RelatedInfoPickerCtn: "_2nnB1eMYflFLLmMAi7_jJV",
+          CurrencyDropDown: "_2gGuz_TA8axLQOqAtwurFU",
+          RelatedInfoDropDown: "_1jj2uEuCns_K_cIfGZcKl6",
+          CurrencyDropDownItem: "_3wPHxQWhohHATqjvN6B2l3",
+          RelatedInfoDropDownItem: "_1ORamDcYtEN8wS1voTsWE",
+        };
+      },
+      22886: (ne) => {
+        ne.exports = {
+          PricingGridCtn: "_2j-z9aXG_KoPSY-SYZ0fkF",
+          PricingGridWrapper: "_185dckQ4O6j7fFSauUkttX",
+          PricingGrid: "fKA16ZB7sn97FP66zTggw",
+          PricingGridDataColumn: "OVDCtDCCkCZr1my3nFNXX",
+          GridHeaderButtons: "_1Z7LLb7cP6pLH8XwOgDkP",
+          OptionCtn: "_1PrsCGcbjJ61fDm8stNJd2",
+          PriceLowOption: "_39j_Zq7q7VRXEb-7tZMUSx",
+          CurrencyHeader: "_1kvIFs23dRUETqkaH0d_RW",
+          CurrencyNameCtn: "_1eoBYSPbVZ6MoUNDkL_xbp",
+          CurrencyName: "_3ffEWbT5mrSdmmCBQsjpmC",
+          CurrencyMore: "MltPJcBZanYmXvQaiTTTg",
+          PricingGridTable: "_2xa-P-_4oTPXUvGstrnphV",
+          HoverToolTip: "_1OS2vdfTf7vsWj8VhNKlXu",
+        };
+      },
+      57581: (ne) => {
+        ne.exports = {
+          Instructions: "_2A9meAsgvbqtRE-WwcWklJ",
+          ButtonRows: "_3BpoblG0qqkekq9SESFn1s",
+          Button: "_3u7Vn4B-hH3ntVFvWBlMWP",
+          ImportButtonLabel: "_3OJwY0KsAdtSzzFuOdWl8l",
+          OptionCtn: "_3zj1IiybB-MxMlHawZLJeQ",
+          OptionDesc: "_2QfyWyy2Z0gPCqVTApBKNV",
+          ParseResultCount: "_1P_KJVQc3vmgxCssmhFas0",
+          ErrorHeader: "_289pBSstep6RsTe3aedebA",
+          ParseErrors: "_1VTD4841BG3WozX_i1yNEd",
+        };
+      },
+      64641: (ne) => {
+        ne.exports = {
+          v6: "_2LxgdMcpWJRjkxZKbmeEEb",
+          SubText: "vg0EOhKTLB3tLvshHMr7l",
+          AvatarImageContainer: "_33hdFBTwBs64Fcp-bPdf4E",
+          GameImageContainer: "_2OYADGuBPiyF7h50OJ0P1B",
+          AvatarImage: "_2CQYcCggCXwVzZj2GWng5-",
+          STV_HomeGridPreviewDetails: "Yncr-T63YFSJ46cq4Z2BJ",
+          ChatAvatarImage: "_1cUR_vD8IvfJgOK1r89j4o",
+          EditButton: "VsZ-bdWSNpnM9Vg6gkSyD",
+          Small: "_3M4j828iWSVEZZAkypcBi1",
+          FlexCenter: "_1R3ycnbAGUAy01o0TW7NNo",
+          ThrobberCtn: "_3m7p67FD1Ynjm3BnyyjSSS",
+          MarkdownLink: "_1WqumifyJucGDxm2oI6yRQ",
+          SummaryTextArea: "cNMZ-dcMVhaQJFes_Ivwo",
+          RemoveIcon: "_3NeLW5LAka4S9__PaMFE_J",
+        };
+      },
+      40323: function (ne, De) {
+        var s, r, le; /* @license
 Papa Parse
 v5.5.3
 https://github.com/mholt/PapaParse
 License: MIT
-*/ (n = []),
-        (r = function e() {
-          var t,
-            r =
-              "undefined" != typeof self
+*/
+        ((fe, B) => {
+          (r = []),
+            (s = B),
+            (le = typeof s == "function" ? s.apply(De, r) : s),
+            le !== void 0 && (ne.exports = le);
+        })(this, function fe() {
+          var B =
+              typeof self < "u"
                 ? self
-                : "undefined" != typeof window
+                : typeof window < "u"
                   ? window
-                  : void 0 !== r
-                    ? r
+                  : B !== void 0
+                    ? B
                     : {},
-            n = !r.document && !!r.postMessage,
-            i = r.IS_PAPA_WORKER || !1,
-            s = {},
-            a = 0,
-            o = {};
-          function c(e) {
+            M,
+            j = !B.document && !!B.postMessage,
+            k = B.IS_PAPA_WORKER || !1,
+            f = {},
+            Pe = 0,
+            a = {};
+          function re(t) {
             (this._handle = null),
               (this._finished = !1),
               (this._completed = !1),
@@ -132,177 +1020,177 @@ License: MIT
               (this.isFirstChunk = !0),
               (this._completeResults = { data: [], errors: [], meta: {} }),
               function (e) {
-                var t = w(e);
-                (t.chunkSize = parseInt(t.chunkSize)),
-                  e.step || e.chunk || (t.chunkSize = null),
-                  (this._handle = new p(t)),
-                  ((this._handle.streamer = this)._config = t);
-              }.call(this, e),
-              (this.parseChunk = function (e, t) {
-                var n = parseInt(this._config.skipFirstNLines) || 0;
-                if (this.isFirstChunk && 0 < n) {
-                  let t = this._config.newline;
-                  t ||
-                    ((s = this._config.quoteChar || '"'),
-                    (t = this._handle.guessLineEndings(e, s))),
-                    (e = [...e.split(t).slice(n)].join(t));
+                var n = Ce(e);
+                (n.chunkSize = parseInt(n.chunkSize)),
+                  e.step || e.chunk || (n.chunkSize = null),
+                  (this._handle = new l(n)),
+                  ((this._handle.streamer = this)._config = n);
+              }.call(this, t),
+              (this.parseChunk = function (e, n) {
+                var o = parseInt(this._config.skipFirstNLines) || 0;
+                if (this.isFirstChunk && 0 < o) {
+                  let u = this._config.newline;
+                  u ||
+                    ((i = this._config.quoteChar || '"'),
+                    (u = this._handle.guessLineEndings(e, i))),
+                    (e = [...e.split(u).slice(o)].join(u));
                 }
                 this.isFirstChunk &&
-                  x(this._config.beforeFirstChunk) &&
-                  void 0 !== (s = this._config.beforeFirstChunk(e)) &&
-                  (e = s),
+                  I(this._config.beforeFirstChunk) &&
+                  (i = this._config.beforeFirstChunk(e)) !== void 0 &&
+                  (e = i),
                   (this.isFirstChunk = !1),
-                  (this._halted = !1),
-                  (n = this._partialLine + e);
-                var s =
-                  ((this._partialLine = ""),
-                  this._handle.parse(n, this._baseIndex, !this._finished));
+                  (this._halted = !1);
+                var o = this._partialLine + e,
+                  i =
+                    ((this._partialLine = ""),
+                    this._handle.parse(o, this._baseIndex, !this._finished));
                 if (!this._handle.paused() && !this._handle.aborted()) {
                   if (
-                    ((e = s.meta.cursor),
-                    this._finished ||
-                      ((this._partialLine = n.substring(e - this._baseIndex)),
-                      (this._baseIndex = e)),
-                    s && s.data && (this._rowCount += s.data.length),
-                    (n =
+                    ((e = i.meta.cursor),
+                    (o =
+                      (this._finished ||
+                        ((this._partialLine = o.substring(e - this._baseIndex)),
+                        (this._baseIndex = e)),
+                      i && i.data && (this._rowCount += i.data.length),
                       this._finished ||
-                      (this._config.preview &&
-                        this._rowCount >= this._config.preview)),
-                    i)
+                        (this._config.preview &&
+                          this._rowCount >= this._config.preview))),
+                    k)
                   )
-                    r.postMessage({
-                      results: s,
-                      workerId: o.WORKER_ID,
-                      finished: n,
+                    B.postMessage({
+                      results: i,
+                      workerId: a.WORKER_ID,
+                      finished: o,
                     });
-                  else if (x(this._config.chunk) && !t) {
+                  else if (I(this._config.chunk) && !n) {
                     if (
-                      (this._config.chunk(s, this._handle),
+                      (this._config.chunk(i, this._handle),
                       this._handle.paused() || this._handle.aborted())
                     )
                       return void (this._halted = !0);
-                    this._completeResults = s = void 0;
+                    this._completeResults = i = void 0;
                   }
                   return (
                     this._config.step ||
                       this._config.chunk ||
                       ((this._completeResults.data =
-                        this._completeResults.data.concat(s.data)),
+                        this._completeResults.data.concat(i.data)),
                       (this._completeResults.errors =
-                        this._completeResults.errors.concat(s.errors)),
-                      (this._completeResults.meta = s.meta)),
+                        this._completeResults.errors.concat(i.errors)),
+                      (this._completeResults.meta = i.meta)),
                     this._completed ||
-                      !n ||
-                      !x(this._config.complete) ||
-                      (s && s.meta.aborted) ||
+                      !o ||
+                      !I(this._config.complete) ||
+                      (i && i.meta.aborted) ||
                       (this._config.complete(
                         this._completeResults,
                         this._input,
                       ),
                       (this._completed = !0)),
-                    n || (s && s.meta.paused) || this._nextChunk(),
-                    s
+                    o || (i && i.meta.paused) || this._nextChunk(),
+                    i
                   );
                 }
                 this._halted = !0;
               }),
               (this._sendError = function (e) {
-                x(this._config.error)
+                I(this._config.error)
                   ? this._config.error(e)
-                  : i &&
+                  : k &&
                     this._config.error &&
-                    r.postMessage({
-                      workerId: o.WORKER_ID,
+                    B.postMessage({
+                      workerId: a.WORKER_ID,
                       error: e,
                       finished: !1,
                     });
               });
           }
-          function l(e) {
-            var t;
-            (e = e || {}).chunkSize || (e.chunkSize = o.RemoteChunkSize),
-              c.call(this, e),
-              (this._nextChunk = n
+          function O(t) {
+            var e;
+            (t = t || {}).chunkSize || (t.chunkSize = a.RemoteChunkSize),
+              re.call(this, t),
+              (this._nextChunk = j
                 ? function () {
                     this._readChunk(), this._chunkLoaded();
                   }
                 : function () {
                     this._readChunk();
                   }),
-              (this.stream = function (e) {
-                (this._input = e), this._nextChunk();
+              (this.stream = function (n) {
+                (this._input = n), this._nextChunk();
               }),
               (this._readChunk = function () {
                 if (this._finished) this._chunkLoaded();
                 else {
                   if (
-                    ((t = new XMLHttpRequest()),
+                    ((e = new XMLHttpRequest()),
                     this._config.withCredentials &&
-                      (t.withCredentials = this._config.withCredentials),
-                    n ||
-                      ((t.onload = k(this._chunkLoaded, this)),
-                      (t.onerror = k(this._chunkError, this))),
-                    t.open(
+                      (e.withCredentials = this._config.withCredentials),
+                    j ||
+                      ((e.onload = ee(this._chunkLoaded, this)),
+                      (e.onerror = ee(this._chunkError, this))),
+                    e.open(
                       this._config.downloadRequestBody ? "POST" : "GET",
                       this._input,
-                      !n,
+                      !j,
                     ),
                     this._config.downloadRequestHeaders)
                   ) {
-                    var e,
-                      r = this._config.downloadRequestHeaders;
-                    for (e in r) t.setRequestHeader(e, r[e]);
+                    var n,
+                      o = this._config.downloadRequestHeaders;
+                    for (n in o) e.setRequestHeader(n, o[n]);
                   }
                   var i;
                   this._config.chunkSize &&
                     ((i = this._start + this._config.chunkSize - 1),
-                    t.setRequestHeader(
+                    e.setRequestHeader(
                       "Range",
                       "bytes=" + this._start + "-" + i,
                     ));
                   try {
-                    t.send(this._config.downloadRequestBody);
-                  } catch (e) {
-                    this._chunkError(e.message);
+                    e.send(this._config.downloadRequestBody);
+                  } catch (u) {
+                    this._chunkError(u.message);
                   }
-                  n && 0 === t.status && this._chunkError();
+                  j && e.status === 0 && this._chunkError();
                 }
               }),
               (this._chunkLoaded = function () {
-                4 === t.readyState &&
-                  (t.status < 200 || 400 <= t.status
+                e.readyState === 4 &&
+                  (e.status < 200 || 400 <= e.status
                     ? this._chunkError()
                     : ((this._start +=
-                        this._config.chunkSize || t.responseText.length),
+                        this._config.chunkSize || e.responseText.length),
                       (this._finished =
                         !this._config.chunkSize ||
                         this._start >=
-                          ((e) =>
-                            null !== (e = e.getResponseHeader("Content-Range"))
-                              ? parseInt(e.substring(e.lastIndexOf("/") + 1))
-                              : -1)(t)),
-                      this.parseChunk(t.responseText)));
+                          ((n) =>
+                            (n = n.getResponseHeader("Content-Range")) !== null
+                              ? parseInt(n.substring(n.lastIndexOf("/") + 1))
+                              : -1)(e)),
+                      this.parseChunk(e.responseText)));
               }),
-              (this._chunkError = function (e) {
-                (e = t.statusText || e), this._sendError(new Error(e));
+              (this._chunkError = function (n) {
+                (n = e.statusText || n), this._sendError(new Error(n));
               });
           }
-          function d(e) {
-            (e = e || {}).chunkSize || (e.chunkSize = o.LocalChunkSize),
-              c.call(this, e);
-            var t,
-              r,
-              n = "undefined" != typeof FileReader;
-            (this.stream = function (e) {
-              (this._input = e),
-                (r = e.slice || e.webkitSlice || e.mozSlice),
-                n
-                  ? (((t = new FileReader()).onload = k(
+          function oe(t) {
+            (t = t || {}).chunkSize || (t.chunkSize = a.LocalChunkSize),
+              re.call(this, t);
+            var e,
+              n,
+              o = typeof FileReader < "u";
+            (this.stream = function (i) {
+              (this._input = i),
+                (n = i.slice || i.webkitSlice || i.mozSlice),
+                o
+                  ? (((e = new FileReader()).onload = ee(
                       this._chunkLoaded,
                       this,
                     )),
-                    (t.onerror = k(this._chunkError, this)))
-                  : (t = new FileReaderSync()),
+                    (e.onerror = ee(this._chunkError, this)))
+                  : (e = new FileReaderSync()),
                 this._nextChunk();
             }),
               (this._nextChunk = function () {
@@ -312,662 +1200,681 @@ License: MIT
                   this._readChunk();
               }),
               (this._readChunk = function () {
-                var e = this._input,
-                  i =
+                var i = this._input,
+                  u =
                     (this._config.chunkSize &&
-                      ((i = Math.min(
+                      ((u = Math.min(
                         this._start + this._config.chunkSize,
                         this._input.size,
                       )),
-                      (e = r.call(e, this._start, i))),
-                    t.readAsText(e, this._config.encoding));
-                n || this._chunkLoaded({ target: { result: i } });
+                      (i = n.call(i, this._start, u))),
+                    e.readAsText(i, this._config.encoding));
+                o || this._chunkLoaded({ target: { result: u } });
               }),
-              (this._chunkLoaded = function (e) {
+              (this._chunkLoaded = function (i) {
                 (this._start += this._config.chunkSize),
                   (this._finished =
                     !this._config.chunkSize || this._start >= this._input.size),
-                  this.parseChunk(e.target.result);
+                  this.parseChunk(i.target.result);
               }),
               (this._chunkError = function () {
-                this._sendError(t.error);
+                this._sendError(e.error);
               });
           }
-          function u(e) {
-            var t;
-            c.call(this, (e = e || {})),
-              (this.stream = function (e) {
-                return (t = e), this._nextChunk();
+          function de(t) {
+            var e;
+            re.call(this, (t = t || {})),
+              (this.stream = function (n) {
+                return (e = n), this._nextChunk();
               }),
               (this._nextChunk = function () {
-                var e, r;
+                var n, o;
                 if (!this._finished)
                   return (
-                    (e = this._config.chunkSize),
-                    (t = e
-                      ? ((r = t.substring(0, e)), t.substring(e))
-                      : ((r = t), "")),
-                    (this._finished = !t),
-                    this.parseChunk(r)
+                    (n = this._config.chunkSize),
+                    (e = n
+                      ? ((o = e.substring(0, n)), e.substring(n))
+                      : ((o = e), "")),
+                    (this._finished = !e),
+                    this.parseChunk(o)
                   );
               });
           }
-          function h(e) {
-            c.call(this, (e = e || {}));
-            var t = [],
-              r = !0,
-              n = !1;
+          function ge(t) {
+            re.call(this, (t = t || {}));
+            var e = [],
+              n = !0,
+              o = !1;
             (this.pause = function () {
-              c.prototype.pause.apply(this, arguments), this._input.pause();
+              re.prototype.pause.apply(this, arguments), this._input.pause();
             }),
               (this.resume = function () {
-                c.prototype.resume.apply(this, arguments), this._input.resume();
+                re.prototype.resume.apply(this, arguments),
+                  this._input.resume();
               }),
-              (this.stream = function (e) {
-                (this._input = e),
+              (this.stream = function (i) {
+                (this._input = i),
                   this._input.on("data", this._streamData),
                   this._input.on("end", this._streamEnd),
                   this._input.on("error", this._streamError);
               }),
               (this._checkIsFinished = function () {
-                n && 1 === t.length && (this._finished = !0);
+                o && e.length === 1 && (this._finished = !0);
               }),
               (this._nextChunk = function () {
                 this._checkIsFinished(),
-                  t.length ? this.parseChunk(t.shift()) : (r = !0);
+                  e.length ? this.parseChunk(e.shift()) : (n = !0);
               }),
-              (this._streamData = k(function (e) {
+              (this._streamData = ee(function (i) {
                 try {
-                  t.push(
-                    "string" == typeof e
-                      ? e
-                      : e.toString(this._config.encoding),
+                  e.push(
+                    typeof i == "string"
+                      ? i
+                      : i.toString(this._config.encoding),
                   ),
-                    r &&
-                      ((r = !1),
+                    n &&
+                      ((n = !1),
                       this._checkIsFinished(),
-                      this.parseChunk(t.shift()));
-                } catch (e) {
-                  this._streamError(e);
+                      this.parseChunk(e.shift()));
+                } catch (u) {
+                  this._streamError(u);
                 }
               }, this)),
-              (this._streamError = k(function (e) {
-                this._streamCleanUp(), this._sendError(e);
+              (this._streamError = ee(function (i) {
+                this._streamCleanUp(), this._sendError(i);
               }, this)),
-              (this._streamEnd = k(function () {
-                this._streamCleanUp(), (n = !0), this._streamData("");
+              (this._streamEnd = ee(function () {
+                this._streamCleanUp(), (o = !0), this._streamData("");
               }, this)),
-              (this._streamCleanUp = k(function () {
+              (this._streamCleanUp = ee(function () {
                 this._input.removeListener("data", this._streamData),
                   this._input.removeListener("end", this._streamEnd),
                   this._input.removeListener("error", this._streamError);
               }, this));
           }
-          function p(e) {
-            var t,
-              r,
+          function l(t) {
+            var e,
               n,
+              o,
               i,
-              s = Math.pow(2, 53),
-              a = -s,
-              c = /^\s*-?(\d+\.?|\.\d+|\d+\.\d+)([eE][-+]?\d+)?\s*$/,
-              l =
+              u = Math.pow(2, 53),
+              H = -u,
+              se = /^\s*-?(\d+\.?|\.\d+|\d+\.\d+)([eE][-+]?\d+)?\s*$/,
+              ie =
                 /^((\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d:[0-5]\d\.\d+([+-][0-2]\d:[0-5]\d|Z))|(\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d:[0-5]\d([+-][0-2]\d:[0-5]\d|Z))|(\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d([+-][0-2]\d:[0-5]\d|Z)))$/,
-              d = this,
-              u = 0,
-              h = 0,
+              C = this,
+              L = 0,
+              d = 0,
+              q = !1,
               p = !1,
-              m = !1,
-              _ = [],
-              b = { data: [], errors: [], meta: {} };
-            function k(t) {
-              return "greedy" === e.skipEmptyLines
-                ? "" === t.join("").trim()
-                : 1 === t.length && 0 === t[0].length;
+              y = [],
+              c = { data: [], errors: [], meta: {} };
+            function G(D) {
+              return t.skipEmptyLines === "greedy"
+                ? D.join("").trim() === ""
+                : D.length === 1 && D[0].length === 0;
             }
-            function y() {
+            function W() {
               if (
-                (b &&
-                  n &&
-                  (C(
+                (c &&
+                  o &&
+                  (ae(
                     "Delimiter",
                     "UndetectableDelimiter",
                     "Unable to auto-detect delimiting character; defaulted to '" +
-                      o.DefaultDelimiter +
+                      a.DefaultDelimiter +
                       "'",
                   ),
-                  (n = !1)),
-                e.skipEmptyLines &&
-                  (b.data = b.data.filter(function (e) {
-                    return !k(e);
+                  (o = !1)),
+                t.skipEmptyLines &&
+                  (c.data = c.data.filter(function (A) {
+                    return !G(A);
                   })),
-                v())
+                Q())
               ) {
-                if (b)
-                  if (Array.isArray(b.data[0])) {
-                    for (var t = 0; v() && t < b.data.length; t++)
-                      b.data[t].forEach(r);
-                    b.data.splice(0, 1);
-                  } else b.data.forEach(r);
-                function r(t, r) {
-                  x(e.transformHeader) && (t = e.transformHeader(t, r)),
-                    _.push(t);
-                }
+                let A = function (Z, F) {
+                  I(t.transformHeader) && (Z = t.transformHeader(Z, F)),
+                    y.push(Z);
+                };
+                var m = A;
+                if (c)
+                  if (Array.isArray(c.data[0])) {
+                    for (var D = 0; Q() && D < c.data.length; D++)
+                      c.data[D].forEach(A);
+                    c.data.splice(0, 1);
+                  } else c.data.forEach(A);
               }
-              function i(t, r) {
-                for (var n = e.header ? {} : [], i = 0; i < t.length; i++) {
-                  var o = i,
-                    d = t[i];
-                  (d = ((t, r) =>
-                    ((t) => (
-                      e.dynamicTypingFunction &&
-                        void 0 === e.dynamicTyping[t] &&
-                        (e.dynamicTyping[t] = e.dynamicTypingFunction(t)),
-                      !0 === (e.dynamicTyping[t] || e.dynamicTyping)
-                    ))(t)
-                      ? "true" === r ||
-                        "TRUE" === r ||
-                        ("false" !== r &&
-                          "FALSE" !== r &&
-                          (((e) => {
-                            if (
-                              c.test(e) &&
-                              ((e = parseFloat(e)), a < e && e < s)
-                            )
-                              return 1;
-                          })(r)
-                            ? parseFloat(r)
-                            : l.test(r)
-                              ? new Date(r)
-                              : "" === r
-                                ? null
-                                : r))
-                      : r)(
-                    (o = e.header
-                      ? i >= _.length
-                        ? "__parsed_extra"
-                        : _[i]
-                      : o),
-                    (d = e.transform ? e.transform(d, o) : d),
-                  )),
-                    "__parsed_extra" === o
-                      ? ((n[o] = n[o] || []), n[o].push(d))
-                      : (n[o] = d);
+              function x(A, Z) {
+                for (var F = t.header ? {} : [], S = 0; S < A.length; S++) {
+                  var v = S,
+                    $ = A[S],
+                    $ = ((_, N) =>
+                      ((z) => (
+                        t.dynamicTypingFunction &&
+                          t.dynamicTyping[z] === void 0 &&
+                          (t.dynamicTyping[z] = t.dynamicTypingFunction(z)),
+                        (t.dynamicTyping[z] || t.dynamicTyping) === !0
+                      ))(_)
+                        ? N === "true" ||
+                          N === "TRUE" ||
+                          (N !== "false" &&
+                            N !== "FALSE" &&
+                            (((z) => {
+                              if (
+                                se.test(z) &&
+                                ((z = parseFloat(z)), H < z && z < u)
+                              )
+                                return 1;
+                            })(N)
+                              ? parseFloat(N)
+                              : ie.test(N)
+                                ? new Date(N)
+                                : N === ""
+                                  ? null
+                                  : N))
+                        : N)(
+                      (v = t.header
+                        ? S >= y.length
+                          ? "__parsed_extra"
+                          : y[S]
+                        : v),
+                      ($ = t.transform ? t.transform($, v) : $),
+                    );
+                  v === "__parsed_extra"
+                    ? ((F[v] = F[v] || []), F[v].push($))
+                    : (F[v] = $);
                 }
                 return (
-                  e.header &&
-                    (i > _.length
-                      ? C(
+                  t.header &&
+                    (S > y.length
+                      ? ae(
                           "FieldMismatch",
                           "TooManyFields",
                           "Too many fields: expected " +
-                            _.length +
+                            y.length +
                             " fields but parsed " +
-                            i,
-                          h + r,
+                            S,
+                          d + Z,
                         )
-                      : i < _.length &&
-                        C(
+                      : S < y.length &&
+                        ae(
                           "FieldMismatch",
                           "TooFewFields",
                           "Too few fields: expected " +
-                            _.length +
+                            y.length +
                             " fields but parsed " +
-                            i,
-                          h + r,
+                            S,
+                          d + Z,
                         )),
-                  n
+                  F
                 );
               }
-              var d;
-              b &&
-                (e.header || e.dynamicTyping || e.transform) &&
-                ((d = 1),
-                !b.data.length || Array.isArray(b.data[0])
-                  ? ((b.data = b.data.map(i)), (d = b.data.length))
-                  : (b.data = i(b.data, 0)),
-                e.header && b.meta && (b.meta.fields = _),
-                (h += d));
+              var U;
+              c &&
+                (t.header || t.dynamicTyping || t.transform) &&
+                ((U = 1),
+                !c.data.length || Array.isArray(c.data[0])
+                  ? ((c.data = c.data.map(x)), (U = c.data.length))
+                  : (c.data = x(c.data, 0)),
+                t.header && c.meta && (c.meta.fields = y),
+                (d += U));
             }
-            function v() {
-              return e.header && 0 === _.length;
+            function Q() {
+              return t.header && y.length === 0;
             }
-            function C(e, t, r, n) {
-              (e = { type: e, code: t, message: r }),
-                void 0 !== n && (e.row = n),
-                b.errors.push(e);
+            function ae(D, x, U, m) {
+              (D = { type: D, code: x, message: U }),
+                m !== void 0 && (D.row = m),
+                c.errors.push(D);
             }
-            x(e.step) &&
-              ((i = e.step),
-              (e.step = function (t) {
-                (b = t),
-                  v()
-                    ? y()
-                    : (y(),
-                      0 !== b.data.length &&
-                        ((u += t.data.length),
-                        e.preview && u > e.preview
-                          ? r.abort()
-                          : ((b.data = b.data[0]), i(b, d))));
+            I(t.step) &&
+              ((i = t.step),
+              (t.step = function (D) {
+                (c = D),
+                  Q()
+                    ? W()
+                    : (W(),
+                      c.data.length !== 0 &&
+                        ((L += D.data.length),
+                        t.preview && L > t.preview
+                          ? n.abort()
+                          : ((c.data = c.data[0]), i(c, C))));
               })),
-              (this.parse = function (i, s, a) {
-                var c = e.quoteChar || '"';
+              (this.parse = function (D, x, U) {
+                var m = t.quoteChar || '"',
+                  m =
+                    (t.newline || (t.newline = this.guessLineEndings(D, m)),
+                    (o = !1),
+                    t.delimiter
+                      ? I(t.delimiter) &&
+                        ((t.delimiter = t.delimiter(D)),
+                        (c.meta.delimiter = t.delimiter))
+                      : ((m = ((A, Z, F, S, v) => {
+                          var $, _, N, z;
+                          v = v || [
+                            ",",
+                            "	",
+                            "|",
+                            ";",
+                            a.RECORD_SEP,
+                            a.UNIT_SEP,
+                          ];
+                          for (var be = 0; be < v.length; be++) {
+                            for (
+                              var R,
+                                we = v[be],
+                                J = 0,
+                                he = 0,
+                                Y = 0,
+                                te =
+                                  ((N = void 0),
+                                  new Ie({
+                                    comments: S,
+                                    delimiter: we,
+                                    newline: Z,
+                                    preview: 10,
+                                  }).parse(A)),
+                                me = 0;
+                              me < te.data.length;
+                              me++
+                            )
+                              F && G(te.data[me])
+                                ? Y++
+                                : ((R = te.data[me].length),
+                                  (he += R),
+                                  N === void 0
+                                    ? (N = R)
+                                    : 0 < R &&
+                                      ((J += Math.abs(R - N)), (N = R)));
+                            0 < te.data.length && (he /= te.data.length - Y),
+                              (_ === void 0 || J <= _) &&
+                                (z === void 0 || z < he) &&
+                                1.99 < he &&
+                                ((_ = J), ($ = we), (z = he));
+                          }
+                          return {
+                            successful: !!(t.delimiter = $),
+                            bestDelimiter: $,
+                          };
+                        })(
+                          D,
+                          t.newline,
+                          t.skipEmptyLines,
+                          t.comments,
+                          t.delimitersToGuess,
+                        )).successful
+                          ? (t.delimiter = m.bestDelimiter)
+                          : ((o = !0), (t.delimiter = a.DefaultDelimiter)),
+                        (c.meta.delimiter = t.delimiter)),
+                    Ce(t));
                 return (
-                  e.newline || (e.newline = this.guessLineEndings(i, c)),
-                  (n = !1),
-                  e.delimiter
-                    ? x(e.delimiter) &&
-                      ((e.delimiter = e.delimiter(i)),
-                      (b.meta.delimiter = e.delimiter))
-                    : ((c = ((t, r, n, i, s) => {
-                        var a, c, l, d;
-                        s = s || [
-                          ",",
-                          "\t",
-                          "|",
-                          ";",
-                          o.RECORD_SEP,
-                          o.UNIT_SEP,
-                        ];
-                        for (var u = 0; u < s.length; u++) {
-                          for (
-                            var h,
-                              p = s[u],
-                              f = 0,
-                              m = 0,
-                              _ = 0,
-                              b =
-                                ((l = void 0),
-                                new g({
-                                  comments: i,
-                                  delimiter: p,
-                                  newline: r,
-                                  preview: 10,
-                                }).parse(t)),
-                              w = 0;
-                            w < b.data.length;
-                            w++
-                          )
-                            n && k(b.data[w])
-                              ? _++
-                              : ((m += h = b.data[w].length),
-                                void 0 === l
-                                  ? (l = h)
-                                  : 0 < h && ((f += Math.abs(h - l)), (l = h)));
-                          0 < b.data.length && (m /= b.data.length - _),
-                            (void 0 === c || f <= c) &&
-                              (void 0 === d || d < m) &&
-                              1.99 < m &&
-                              ((c = f), (a = p), (d = m));
-                        }
-                        return {
-                          successful: !!(e.delimiter = a),
-                          bestDelimiter: a,
-                        };
-                      })(
-                        i,
-                        e.newline,
-                        e.skipEmptyLines,
-                        e.comments,
-                        e.delimitersToGuess,
-                      )).successful
-                        ? (e.delimiter = c.bestDelimiter)
-                        : ((n = !0), (e.delimiter = o.DefaultDelimiter)),
-                      (b.meta.delimiter = e.delimiter)),
-                  (c = w(e)),
-                  e.preview && e.header && c.preview++,
-                  (t = i),
-                  (r = new g(c)),
-                  (b = r.parse(t, s, a)),
-                  y(),
-                  p ? { meta: { paused: !0 } } : b || { meta: { paused: !1 } }
+                  t.preview && t.header && m.preview++,
+                  (e = D),
+                  (n = new Ie(m)),
+                  (c = n.parse(e, x, U)),
+                  W(),
+                  q ? { meta: { paused: !0 } } : c || { meta: { paused: !1 } }
                 );
               }),
               (this.paused = function () {
-                return p;
+                return q;
               }),
               (this.pause = function () {
-                (p = !0),
-                  r.abort(),
-                  (t = x(e.chunk) ? "" : t.substring(r.getCharIndex()));
+                (q = !0),
+                  n.abort(),
+                  (e = I(t.chunk) ? "" : e.substring(n.getCharIndex()));
               }),
               (this.resume = function () {
-                d.streamer._halted
-                  ? ((p = !1), d.streamer.parseChunk(t, !0))
-                  : setTimeout(d.resume, 3);
+                C.streamer._halted
+                  ? ((q = !1), C.streamer.parseChunk(e, !0))
+                  : setTimeout(C.resume, 3);
               }),
               (this.aborted = function () {
-                return m;
+                return p;
               }),
               (this.abort = function () {
-                (m = !0),
-                  r.abort(),
-                  (b.meta.aborted = !0),
-                  x(e.complete) && e.complete(b),
-                  (t = "");
+                (p = !0),
+                  n.abort(),
+                  (c.meta.aborted = !0),
+                  I(t.complete) && t.complete(c),
+                  (e = "");
               }),
-              (this.guessLineEndings = function (e, t) {
-                (e = e.substring(0, 1048576)),
-                  (t = new RegExp(f(t) + "([^]*?)" + f(t), "gm"));
-                var r = (e = e.replace(t, "")).split("\r");
-                if (
-                  ((e =
-                    1 < (t = e.split("\n")).length &&
-                    t[0].length < r[0].length),
-                  1 === r.length || e)
-                )
-                  return "\n";
-                for (var n = 0, i = 0; i < r.length; i++)
-                  "\n" === r[i][0] && n++;
-                return n >= r.length / 2 ? "\r\n" : "\r";
+              (this.guessLineEndings = function (A, m) {
+                A = A.substring(0, 1048576);
+                var m = new RegExp(ye(m) + "([^]*?)" + ye(m), "gm"),
+                  U = (A = A.replace(m, "")).split("\r"),
+                  m = A.split(`
+`),
+                  A = 1 < m.length && m[0].length < U[0].length;
+                if (U.length === 1 || A)
+                  return `
+`;
+                for (var Z = 0, F = 0; F < U.length; F++)
+                  U[F][0] ===
+                    `
+` && Z++;
+                return Z >= U.length / 2
+                  ? `\r
+`
+                  : "\r";
               });
           }
-          function f(e) {
-            return e.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+          function ye(t) {
+            return t.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
           }
-          function g(e) {
-            var t = (e = e || {}).delimiter,
-              r = e.newline,
-              n = e.comments,
-              i = e.step,
-              s = e.preview,
-              a = e.fastMode,
-              c = null,
-              l = !1,
-              d = null == e.quoteChar ? '"' : e.quoteChar,
-              u = d;
+          function Ie(t) {
+            var e = (t = t || {}).delimiter,
+              n = t.newline,
+              o = t.comments,
+              i = t.step,
+              u = t.preview,
+              H = t.fastMode,
+              se = null,
+              ie = !1,
+              C = t.quoteChar == null ? '"' : t.quoteChar,
+              L = C;
             if (
-              (void 0 !== e.escapeChar && (u = e.escapeChar),
-              ("string" != typeof t || -1 < o.BAD_DELIMITERS.indexOf(t)) &&
-                (t = ","),
-              n === t)
+              (t.escapeChar !== void 0 && (L = t.escapeChar),
+              (typeof e != "string" || -1 < a.BAD_DELIMITERS.indexOf(e)) &&
+                (e = ","),
+              o === e)
             )
               throw new Error("Comment character same as delimiter");
-            !0 === n
-              ? (n = "#")
-              : ("string" != typeof n || -1 < o.BAD_DELIMITERS.indexOf(n)) &&
-                (n = !1),
-              "\n" !== r && "\r" !== r && "\r\n" !== r && (r = "\n");
-            var h = 0,
-              p = !1;
-            (this.parse = function (o, g, m) {
-              if ("string" != typeof o)
+            o === !0
+              ? (o = "#")
+              : (typeof o != "string" || -1 < a.BAD_DELIMITERS.indexOf(o)) &&
+                (o = !1),
+              n !==
+                `
+` &&
+                n !== "\r" &&
+                n !==
+                  `\r
+` &&
+                (n = `
+`);
+            var d = 0,
+              q = !1;
+            (this.parse = function (p, y, c) {
+              if (typeof p != "string")
                 throw new Error("Input must be a string");
-              var _ = o.length,
-                b = t.length,
-                w = r.length,
-                k = n.length,
-                y = x(i),
-                v = [],
-                C = [],
-                D = [],
-                E = (h = 0);
-              if (!o) return L();
-              if (a || (!1 !== a && -1 === o.indexOf(d))) {
-                for (var P = o.split(r), S = 0; S < P.length; S++) {
-                  if (((D = P[S]), (h += D.length), S !== P.length - 1))
-                    h += r.length;
-                  else if (m) return L();
-                  if (!n || D.substring(0, k) !== n) {
-                    if (y) {
-                      if (((v = []), N(D.split(t)), M(), p)) return L();
-                    } else N(D.split(t));
-                    if (s && s <= S) return (v = v.slice(0, s)), L(!0);
+              var G = p.length,
+                W = e.length,
+                Q = n.length,
+                ae = o.length,
+                D = I(i),
+                x = [],
+                U = [],
+                m = [],
+                A = (d = 0);
+              if (!p) return J();
+              if (H || (H !== !1 && p.indexOf(C) === -1)) {
+                for (var Z = p.split(n), F = 0; F < Z.length; F++) {
+                  if (((m = Z[F]), (d += m.length), F !== Z.length - 1))
+                    d += n.length;
+                  else if (c) return J();
+                  if (!o || m.substring(0, ae) !== o) {
+                    if (D) {
+                      if (((x = []), z(m.split(e)), he(), q)) return J();
+                    } else z(m.split(e));
+                    if (u && u <= F) return (x = x.slice(0, u)), J(!0);
                   }
                 }
-                return L();
+                return J();
               }
               for (
-                var R = o.indexOf(t, h),
-                  j = o.indexOf(r, h),
-                  T = new RegExp(f(u) + f(d), "g"),
-                  I = o.indexOf(d, h);
+                var S = p.indexOf(e, d),
+                  v = p.indexOf(n, d),
+                  $ = new RegExp(ye(L) + ye(C), "g"),
+                  _ = p.indexOf(C, d);
                 ;
               )
-                if (o[h] === d)
-                  for (I = h, h++; ; ) {
-                    if (-1 === (I = o.indexOf(d, I + 1)))
+                if (p[d] === C)
+                  for (_ = d, d++; ; ) {
+                    if ((_ = p.indexOf(C, _ + 1)) === -1)
                       return (
-                        m ||
-                          C.push({
+                        c ||
+                          U.push({
                             type: "Quotes",
                             code: "MissingQuotes",
                             message: "Quoted field unterminated",
-                            row: v.length,
-                            index: h,
+                            row: x.length,
+                            index: d,
                           }),
-                        A()
+                        R()
                       );
-                    if (I === _ - 1) return A(o.substring(h, I).replace(T, d));
-                    if (d === u && o[I + 1] === u) I++;
-                    else if (d === u || 0 === I || o[I - 1] !== u) {
-                      -1 !== R && R < I + 1 && (R = o.indexOf(t, I + 1));
-                      var O = F(
-                        -1 ===
-                          (j = -1 !== j && j < I + 1 ? o.indexOf(r, I + 1) : j)
-                          ? R
-                          : Math.min(R, j),
+                    if (_ === G - 1) return R(p.substring(d, _).replace($, C));
+                    if (C === L && p[_ + 1] === L) _++;
+                    else if (C === L || _ === 0 || p[_ - 1] !== L) {
+                      S !== -1 && S < _ + 1 && (S = p.indexOf(e, _ + 1));
+                      var N = be(
+                        (v =
+                          v !== -1 && v < _ + 1 ? p.indexOf(n, _ + 1) : v) ===
+                          -1
+                          ? S
+                          : Math.min(S, v),
                       );
-                      if (o.substr(I + 1 + O, b) === t) {
-                        D.push(o.substring(h, I).replace(T, d)),
-                          o[(h = I + 1 + O + b)] !== d && (I = o.indexOf(d, h)),
-                          (R = o.indexOf(t, h)),
-                          (j = o.indexOf(r, h));
+                      if (p.substr(_ + 1 + N, W) === e) {
+                        m.push(p.substring(d, _).replace($, C)),
+                          p[(d = _ + 1 + N + W)] !== C && (_ = p.indexOf(C, d)),
+                          (S = p.indexOf(e, d)),
+                          (v = p.indexOf(n, d));
                         break;
                       }
                       if (
-                        ((O = F(j)),
-                        o.substring(I + 1 + O, I + 1 + O + w) === r)
+                        ((N = be(v)),
+                        p.substring(_ + 1 + N, _ + 1 + N + Q) === n)
                       ) {
                         if (
-                          (D.push(o.substring(h, I).replace(T, d)),
-                          B(I + 1 + O + w),
-                          (R = o.indexOf(t, h)),
-                          (I = o.indexOf(d, h)),
-                          y && (M(), p))
+                          (m.push(p.substring(d, _).replace($, C)),
+                          we(_ + 1 + N + Q),
+                          (S = p.indexOf(e, d)),
+                          (_ = p.indexOf(C, d)),
+                          D && (he(), q))
                         )
-                          return L();
-                        if (s && v.length >= s) return L(!0);
+                          return J();
+                        if (u && x.length >= u) return J(!0);
                         break;
                       }
-                      C.push({
+                      U.push({
                         type: "Quotes",
                         code: "InvalidQuotes",
                         message: "Trailing quote on quoted field is malformed",
-                        row: v.length,
-                        index: h,
+                        row: x.length,
+                        index: d,
                       }),
-                        I++;
+                        _++;
                     }
                   }
-                else if (n && 0 === D.length && o.substring(h, h + k) === n) {
-                  if (-1 === j) return L();
-                  (h = j + w), (j = o.indexOf(r, h)), (R = o.indexOf(t, h));
-                } else if (-1 !== R && (R < j || -1 === j))
-                  D.push(o.substring(h, R)), (h = R + b), (R = o.indexOf(t, h));
+                else if (o && m.length === 0 && p.substring(d, d + ae) === o) {
+                  if (v === -1) return J();
+                  (d = v + Q), (v = p.indexOf(n, d)), (S = p.indexOf(e, d));
+                } else if (S !== -1 && (S < v || v === -1))
+                  m.push(p.substring(d, S)), (d = S + W), (S = p.indexOf(e, d));
                 else {
-                  if (-1 === j) break;
-                  if ((D.push(o.substring(h, j)), B(j + w), y && (M(), p)))
-                    return L();
-                  if (s && v.length >= s) return L(!0);
+                  if (v === -1) break;
+                  if ((m.push(p.substring(d, v)), we(v + Q), D && (he(), q)))
+                    return J();
+                  if (u && x.length >= u) return J(!0);
                 }
-              return A();
-              function N(e) {
-                v.push(e), (E = h);
+              return R();
+              function z(Y) {
+                x.push(Y), (A = d);
               }
-              function F(e) {
-                var t = 0;
-                return -1 !== e &&
-                  (e = o.substring(I + 1, e)) &&
-                  "" === e.trim()
-                  ? e.length
-                  : t;
+              function be(Y) {
+                var te = 0;
+                return (te =
+                  Y !== -1 && (Y = p.substring(_ + 1, Y)) && Y.trim() === ""
+                    ? Y.length
+                    : te);
               }
-              function A(e) {
+              function R(Y) {
                 return (
-                  m ||
-                    (void 0 === e && (e = o.substring(h)),
-                    D.push(e),
-                    (h = _),
-                    N(D),
-                    y && M()),
-                  L()
+                  c ||
+                    (Y === void 0 && (Y = p.substring(d)),
+                    m.push(Y),
+                    (d = G),
+                    z(m),
+                    D && he()),
+                  J()
                 );
               }
-              function B(e) {
-                (h = e), N(D), (D = []), (j = o.indexOf(r, h));
+              function we(Y) {
+                (d = Y), z(m), (m = []), (v = p.indexOf(n, d));
               }
-              function L(n) {
-                if (e.header && !g && v.length && !l) {
-                  var i = v[0],
-                    s = Object.create(null),
-                    a = new Set(i);
-                  let t = !1;
-                  for (let r = 0; r < i.length; r++) {
-                    let n = i[r];
+              function J(Y) {
+                if (t.header && !y && x.length && !ie) {
+                  var te = x[0],
+                    me = Object.create(null),
+                    Te = new Set(te);
+                  let Ae = !1;
+                  for (let Ee = 0; Ee < te.length; Ee++) {
+                    let ce = te[Ee];
                     if (
-                      s[
-                        (n = x(e.transformHeader) ? e.transformHeader(n, r) : n)
+                      me[
+                        (ce = I(t.transformHeader)
+                          ? t.transformHeader(ce, Ee)
+                          : ce)
                       ]
                     ) {
-                      let e,
-                        o = s[n];
-                      for (; (e = n + "_" + o), o++, a.has(e); );
-                      a.add(e),
-                        (i[r] = e),
-                        s[n]++,
-                        (t = !0),
-                        ((c = null === c ? {} : c)[e] = n);
-                    } else (s[n] = 1), (i[r] = n);
-                    a.add(n);
+                      let Se,
+                        g = me[ce];
+                      for (; (Se = ce + "_" + g), g++, Te.has(Se); );
+                      Te.add(Se),
+                        (te[Ee] = Se),
+                        me[ce]++,
+                        (Ae = !0),
+                        ((se = se === null ? {} : se)[Se] = ce);
+                    } else (me[ce] = 1), (te[Ee] = ce);
+                    Te.add(ce);
                   }
-                  t && console.warn("Duplicate headers found and renamed."),
-                    (l = !0);
+                  Ae && console.warn("Duplicate headers found and renamed."),
+                    (ie = !0);
                 }
                 return {
-                  data: v,
-                  errors: C,
+                  data: x,
+                  errors: U,
                   meta: {
-                    delimiter: t,
-                    linebreak: r,
-                    aborted: p,
-                    truncated: !!n,
-                    cursor: E + (g || 0),
-                    renamedHeaders: c,
+                    delimiter: e,
+                    linebreak: n,
+                    aborted: q,
+                    truncated: !!Y,
+                    cursor: A + (y || 0),
+                    renamedHeaders: se,
                   },
                 };
               }
-              function M() {
-                i(L()), (v = []), (C = []);
+              function he() {
+                i(J()), (x = []), (U = []);
               }
             }),
               (this.abort = function () {
-                p = !0;
+                q = !0;
               }),
               (this.getCharIndex = function () {
-                return h;
+                return d;
               });
           }
-          function m(e) {
-            var t = e.data,
-              r = s[t.workerId],
-              n = !1;
-            if (t.error) r.userError(t.error, t.file);
-            else if (t.results && t.results.data) {
+          function _e(t) {
+            var e = t.data,
+              n = f[e.workerId],
+              o = !1;
+            if (e.error) n.userError(e.error, e.file);
+            else if (e.results && e.results.data) {
               var i = {
                 abort: function () {
-                  (n = !0),
-                    _(t.workerId, {
+                  (o = !0),
+                    je(e.workerId, {
                       data: [],
                       errors: [],
                       meta: { aborted: !0 },
                     });
                 },
-                pause: b,
-                resume: b,
+                pause: Oe,
+                resume: Oe,
               };
-              if (x(r.userStep)) {
+              if (I(n.userStep)) {
                 for (
-                  var a = 0;
-                  a < t.results.data.length &&
-                  (r.userStep(
+                  var u = 0;
+                  u < e.results.data.length &&
+                  (n.userStep(
                     {
-                      data: t.results.data[a],
-                      errors: t.results.errors,
-                      meta: t.results.meta,
+                      data: e.results.data[u],
+                      errors: e.results.errors,
+                      meta: e.results.meta,
                     },
                     i,
                   ),
-                  !n);
-                  a++
+                  !o);
+                  u++
                 );
-                delete t.results;
+                delete e.results;
               } else
-                x(r.userChunk) &&
-                  (r.userChunk(t.results, i, t.file), delete t.results);
+                I(n.userChunk) &&
+                  (n.userChunk(e.results, i, e.file), delete e.results);
             }
-            t.finished && !n && _(t.workerId, t.results);
+            e.finished && !o && je(e.workerId, e.results);
           }
-          function _(e, t) {
-            var r = s[e];
-            x(r.userComplete) && r.userComplete(t), r.terminate(), delete s[e];
+          function je(t, e) {
+            var n = f[t];
+            I(n.userComplete) && n.userComplete(e), n.terminate(), delete f[t];
           }
-          function b() {
+          function Oe() {
             throw new Error("Not implemented.");
           }
-          function w(e) {
-            if ("object" != typeof e || null === e) return e;
-            var t,
-              r = Array.isArray(e) ? [] : {};
-            for (t in e) r[t] = w(e[t]);
-            return r;
+          function Ce(t) {
+            if (typeof t != "object" || t === null) return t;
+            var e,
+              n = Array.isArray(t) ? [] : {};
+            for (e in t) n[e] = Ce(t[e]);
+            return n;
           }
-          function k(e, t) {
+          function ee(t, e) {
             return function () {
-              e.apply(t, arguments);
+              t.apply(e, arguments);
             };
           }
-          function x(e) {
-            return "function" == typeof e;
+          function I(t) {
+            return typeof t == "function";
           }
           return (
-            (o.parse = function (t, n) {
-              var i = (n = n || {}).dynamicTyping || !1;
+            (a.parse = function (t, e) {
+              var n = (e = e || {}).dynamicTyping || !1;
               if (
-                (x(i) && ((n.dynamicTypingFunction = i), (i = {})),
-                (n.dynamicTyping = i),
-                (n.transform = !!x(n.transform) && n.transform),
-                !n.worker || !o.WORKERS_SUPPORTED)
+                (I(n) && ((e.dynamicTypingFunction = n), (n = {})),
+                (e.dynamicTyping = n),
+                (e.transform = !!I(e.transform) && e.transform),
+                !e.worker || !a.WORKERS_SUPPORTED)
               )
                 return (
-                  (i = null),
-                  o.NODE_STREAM_INPUT,
-                  "string" == typeof t
-                    ? ((t = ((e) =>
-                        65279 !== e.charCodeAt(0) ? e : e.slice(1))(t)),
-                      (i = new (n.download ? l : u)(n)))
-                    : !0 === t.readable && x(t.read) && x(t.on)
-                      ? (i = new h(n))
-                      : ((r.File && t instanceof File) ||
+                  (n = null),
+                  a.NODE_STREAM_INPUT,
+                  typeof t == "string"
+                    ? ((t = ((o) =>
+                        o.charCodeAt(0) !== 65279 ? o : o.slice(1))(t)),
+                      (n = new (e.download ? O : de)(e)))
+                    : t.readable === !0 && I(t.read) && I(t.on)
+                      ? (n = new ge(e))
+                      : ((B.File && t instanceof File) ||
                           t instanceof Object) &&
-                        (i = new d(n)),
-                  i.stream(t)
+                        (n = new oe(e)),
+                  n.stream(t)
                 );
-              ((i = (() => {
-                var t;
+              ((n = (() => {
+                var o;
                 return (
-                  !!o.WORKERS_SUPPORTED &&
-                  ((t = (() => {
-                    var t = r.URL || r.webkitURL || null,
-                      n = e.toString();
+                  !!a.WORKERS_SUPPORTED &&
+                  ((o = (() => {
+                    var i = B.URL || B.webkitURL || null,
+                      u = fe.toString();
                     return (
-                      o.BLOB_URL ||
-                      (o.BLOB_URL = t.createObjectURL(
+                      a.BLOB_URL ||
+                      (a.BLOB_URL = i.createObjectURL(
                         new Blob(
                           [
                             "var global = (function() { if (typeof self !== 'undefined') { return self; } if (typeof window !== 'undefined') { return window; } if (typeof global !== 'undefined') { return global; } return {}; })(); global.IS_PAPA_WORKER=true; ",
                             "(",
-                            n,
+                            u,
                             ")();",
                           ],
                           { type: "text/javascript" },
@@ -975,1129 +1882,272 @@ License: MIT
                       ))
                     );
                   })()),
-                  ((t = new r.Worker(t)).onmessage = m),
-                  (t.id = a++),
-                  (s[t.id] = t))
+                  ((o = new B.Worker(o)).onmessage = _e),
+                  (o.id = Pe++),
+                  (f[o.id] = o))
                 );
-              })()).userStep = n.step),
-                (i.userChunk = n.chunk),
-                (i.userComplete = n.complete),
-                (i.userError = n.error),
-                (n.step = x(n.step)),
-                (n.chunk = x(n.chunk)),
-                (n.complete = x(n.complete)),
-                (n.error = x(n.error)),
-                delete n.worker,
-                i.postMessage({ input: t, config: n, workerId: i.id });
+              })()).userStep = e.step),
+                (n.userChunk = e.chunk),
+                (n.userComplete = e.complete),
+                (n.userError = e.error),
+                (e.step = I(e.step)),
+                (e.chunk = I(e.chunk)),
+                (e.complete = I(e.complete)),
+                (e.error = I(e.error)),
+                delete e.worker,
+                n.postMessage({ input: t, config: e, workerId: n.id });
             }),
-            (o.unparse = function (e, t) {
-              var r = !1,
-                n = !0,
+            (a.unparse = function (t, e) {
+              var n = !1,
+                o = !0,
                 i = ",",
-                s = "\r\n",
-                a = '"',
-                c = a + a,
-                l = !1,
-                d = null,
-                u = !1,
-                h =
+                u = `\r
+`,
+                H = '"',
+                se = H + H,
+                ie = !1,
+                C = null,
+                L = !1,
+                d =
                   ((() => {
-                    if ("object" == typeof t) {
+                    if (typeof e == "object") {
                       if (
-                        ("string" != typeof t.delimiter ||
-                          o.BAD_DELIMITERS.filter(function (e) {
-                            return -1 !== t.delimiter.indexOf(e);
+                        (typeof e.delimiter != "string" ||
+                          a.BAD_DELIMITERS.filter(function (y) {
+                            return e.delimiter.indexOf(y) !== -1;
                           }).length ||
-                          (i = t.delimiter),
-                        ("boolean" != typeof t.quotes &&
-                          "function" != typeof t.quotes &&
-                          !Array.isArray(t.quotes)) ||
-                          (r = t.quotes),
-                        ("boolean" != typeof t.skipEmptyLines &&
-                          "string" != typeof t.skipEmptyLines) ||
-                          (l = t.skipEmptyLines),
-                        "string" == typeof t.newline && (s = t.newline),
-                        "string" == typeof t.quoteChar && (a = t.quoteChar),
-                        "boolean" == typeof t.header && (n = t.header),
-                        Array.isArray(t.columns))
+                          (i = e.delimiter),
+                        (typeof e.quotes != "boolean" &&
+                          typeof e.quotes != "function" &&
+                          !Array.isArray(e.quotes)) ||
+                          (n = e.quotes),
+                        (typeof e.skipEmptyLines != "boolean" &&
+                          typeof e.skipEmptyLines != "string") ||
+                          (ie = e.skipEmptyLines),
+                        typeof e.newline == "string" && (u = e.newline),
+                        typeof e.quoteChar == "string" && (H = e.quoteChar),
+                        typeof e.header == "boolean" && (o = e.header),
+                        Array.isArray(e.columns))
                       ) {
-                        if (0 === t.columns.length)
+                        if (e.columns.length === 0)
                           throw new Error("Option columns is empty");
-                        d = t.columns;
+                        C = e.columns;
                       }
-                      void 0 !== t.escapeChar && (c = t.escapeChar + a),
-                        t.escapeFormulae instanceof RegExp
-                          ? (u = t.escapeFormulae)
-                          : "boolean" == typeof t.escapeFormulae &&
-                            t.escapeFormulae &&
-                            (u = /^[=+\-@\t\r].*$/);
+                      e.escapeChar !== void 0 && (se = e.escapeChar + H),
+                        e.escapeFormulae instanceof RegExp
+                          ? (L = e.escapeFormulae)
+                          : typeof e.escapeFormulae == "boolean" &&
+                            e.escapeFormulae &&
+                            (L = /^[=+\-@\t\r].*$/);
                     }
                   })(),
-                  new RegExp(f(a), "g"));
+                  new RegExp(ye(H), "g"));
               if (
-                ("string" == typeof e && (e = JSON.parse(e)), Array.isArray(e))
+                (typeof t == "string" && (t = JSON.parse(t)), Array.isArray(t))
               ) {
-                if (!e.length || Array.isArray(e[0])) return p(null, e, l);
-                if ("object" == typeof e[0])
-                  return p(d || Object.keys(e[0]), e, l);
-              } else if ("object" == typeof e)
+                if (!t.length || Array.isArray(t[0])) return q(null, t, ie);
+                if (typeof t[0] == "object")
+                  return q(C || Object.keys(t[0]), t, ie);
+              } else if (typeof t == "object")
                 return (
-                  "string" == typeof e.data && (e.data = JSON.parse(e.data)),
-                  Array.isArray(e.data) &&
-                    (e.fields || (e.fields = (e.meta && e.meta.fields) || d),
-                    e.fields ||
-                      (e.fields = Array.isArray(e.data[0])
-                        ? e.fields
-                        : "object" == typeof e.data[0]
-                          ? Object.keys(e.data[0])
+                  typeof t.data == "string" && (t.data = JSON.parse(t.data)),
+                  Array.isArray(t.data) &&
+                    (t.fields || (t.fields = (t.meta && t.meta.fields) || C),
+                    t.fields ||
+                      (t.fields = Array.isArray(t.data[0])
+                        ? t.fields
+                        : typeof t.data[0] == "object"
+                          ? Object.keys(t.data[0])
                           : []),
-                    Array.isArray(e.data[0]) ||
-                      "object" == typeof e.data[0] ||
-                      (e.data = [e.data])),
-                  p(e.fields || [], e.data || [], l)
+                    Array.isArray(t.data[0]) ||
+                      typeof t.data[0] == "object" ||
+                      (t.data = [t.data])),
+                  q(t.fields || [], t.data || [], ie)
                 );
               throw new Error("Unable to serialize unrecognized input");
-              function p(e, t, r) {
-                var a = "",
-                  o =
-                    ("string" == typeof e && (e = JSON.parse(e)),
-                    "string" == typeof t && (t = JSON.parse(t)),
-                    Array.isArray(e) && 0 < e.length),
-                  c = !Array.isArray(t[0]);
-                if (o && n) {
-                  for (var l = 0; l < e.length; l++)
-                    0 < l && (a += i), (a += g(e[l], l));
-                  0 < t.length && (a += s);
+              function q(y, c, G) {
+                var W = "",
+                  Q =
+                    (typeof y == "string" && (y = JSON.parse(y)),
+                    typeof c == "string" && (c = JSON.parse(c)),
+                    Array.isArray(y) && 0 < y.length),
+                  ae = !Array.isArray(c[0]);
+                if (Q && o) {
+                  for (var D = 0; D < y.length; D++)
+                    0 < D && (W += i), (W += p(y[D], D));
+                  0 < c.length && (W += u);
                 }
-                for (var d = 0; d < t.length; d++) {
-                  var u = (o ? e : t[d]).length,
-                    h = !1,
-                    p = o ? 0 === Object.keys(t[d]).length : 0 === t[d].length;
+                for (var x = 0; x < c.length; x++) {
+                  var U = (Q ? y : c[x]).length,
+                    m = !1,
+                    A = Q ? Object.keys(c[x]).length === 0 : c[x].length === 0;
                   if (
-                    (r &&
-                      !o &&
-                      (h =
-                        "greedy" === r
-                          ? "" === t[d].join("").trim()
-                          : 1 === t[d].length && 0 === t[d][0].length),
-                    "greedy" === r && o)
+                    (G &&
+                      !Q &&
+                      (m =
+                        G === "greedy"
+                          ? c[x].join("").trim() === ""
+                          : c[x].length === 1 && c[x][0].length === 0),
+                    G === "greedy" && Q)
                   ) {
-                    for (var f = [], m = 0; m < u; m++) {
-                      var _ = c ? e[m] : m;
-                      f.push(t[d][_]);
+                    for (var Z = [], F = 0; F < U; F++) {
+                      var S = ae ? y[F] : F;
+                      Z.push(c[x][S]);
                     }
-                    h = "" === f.join("").trim();
+                    m = Z.join("").trim() === "";
                   }
-                  if (!h) {
-                    for (var b = 0; b < u; b++) {
-                      0 < b && !p && (a += i);
-                      var w = o && c ? e[b] : b;
-                      a += g(t[d][w], b);
+                  if (!m) {
+                    for (var v = 0; v < U; v++) {
+                      0 < v && !A && (W += i);
+                      var $ = Q && ae ? y[v] : v;
+                      W += p(c[x][$], v);
                     }
-                    d < t.length - 1 && (!r || (0 < u && !p)) && (a += s);
+                    x < c.length - 1 && (!G || (0 < U && !A)) && (W += u);
                   }
                 }
-                return a;
+                return W;
               }
-              function g(e, t) {
-                var n, s;
-                return null == e
+              function p(y, c) {
+                var G, W;
+                return y == null
                   ? ""
-                  : e.constructor === Date
-                    ? JSON.stringify(e).slice(1, 25)
-                    : ((s = !1),
-                      u &&
-                        "string" == typeof e &&
-                        u.test(e) &&
-                        ((e = "'" + e), (s = !0)),
-                      (n = e.toString().replace(h, c)),
-                      (s =
-                        s ||
-                        !0 === r ||
-                        ("function" == typeof r && r(e, t)) ||
-                        (Array.isArray(r) && r[t]) ||
-                        ((e, t) => {
-                          for (var r = 0; r < t.length; r++)
-                            if (-1 < e.indexOf(t[r])) return !0;
+                  : y.constructor === Date
+                    ? JSON.stringify(y).slice(1, 25)
+                    : ((W = !1),
+                      L &&
+                        typeof y == "string" &&
+                        L.test(y) &&
+                        ((y = "'" + y), (W = !0)),
+                      (G = y.toString().replace(d, se)),
+                      (W =
+                        W ||
+                        n === !0 ||
+                        (typeof n == "function" && n(y, c)) ||
+                        (Array.isArray(n) && n[c]) ||
+                        ((Q, ae) => {
+                          for (var D = 0; D < ae.length; D++)
+                            if (-1 < Q.indexOf(ae[D])) return !0;
                           return !1;
-                        })(n, o.BAD_DELIMITERS) ||
-                        -1 < n.indexOf(i) ||
-                        " " === n.charAt(0) ||
-                        " " === n.charAt(n.length - 1))
-                        ? a + n + a
-                        : n);
+                        })(G, a.BAD_DELIMITERS) ||
+                        -1 < G.indexOf(i) ||
+                        G.charAt(0) === " " ||
+                        G.charAt(G.length - 1) === " ")
+                        ? H + G + H
+                        : G);
               }
             }),
-            (o.RECORD_SEP = String.fromCharCode(30)),
-            (o.UNIT_SEP = String.fromCharCode(31)),
-            (o.BYTE_ORDER_MARK = "\ufeff"),
-            (o.BAD_DELIMITERS = ["\r", "\n", '"', o.BYTE_ORDER_MARK]),
-            (o.WORKERS_SUPPORTED = !n && !!r.Worker),
-            (o.NODE_STREAM_INPUT = 1),
-            (o.LocalChunkSize = 10485760),
-            (o.RemoteChunkSize = 5242880),
-            (o.DefaultDelimiter = ","),
-            (o.Parser = g),
-            (o.ParserHandle = p),
-            (o.NetworkStreamer = l),
-            (o.FileStreamer = d),
-            (o.StringStreamer = u),
-            (o.ReadableStreamStreamer = h),
-            r.jQuery &&
-              ((t = r.jQuery).fn.parse = function (e) {
-                var n = e.config || {},
-                  i = [];
+            (a.RECORD_SEP = ""),
+            (a.UNIT_SEP = ""),
+            (a.BYTE_ORDER_MARK = "\uFEFF"),
+            (a.BAD_DELIMITERS = [
+              "\r",
+              `
+`,
+              '"',
+              a.BYTE_ORDER_MARK,
+            ]),
+            (a.WORKERS_SUPPORTED = !j && !!B.Worker),
+            (a.NODE_STREAM_INPUT = 1),
+            (a.LocalChunkSize = 10485760),
+            (a.RemoteChunkSize = 5242880),
+            (a.DefaultDelimiter = ","),
+            (a.Parser = Ie),
+            (a.ParserHandle = l),
+            (a.NetworkStreamer = O),
+            (a.FileStreamer = oe),
+            (a.StringStreamer = de),
+            (a.ReadableStreamStreamer = ge),
+            B.jQuery &&
+              ((M = B.jQuery).fn.parse = function (t) {
+                var e = t.config || {},
+                  n = [];
                 return (
-                  this.each(function (e) {
+                  this.each(function (u) {
                     if (
-                      "INPUT" !== t(this).prop("tagName").toUpperCase() ||
-                      "file" !== t(this).attr("type").toLowerCase() ||
-                      !r.FileReader ||
+                      !(
+                        M(this).prop("tagName").toUpperCase() === "INPUT" &&
+                        M(this).attr("type").toLowerCase() === "file" &&
+                        B.FileReader
+                      ) ||
                       !this.files ||
-                      0 === this.files.length
+                      this.files.length === 0
                     )
                       return !0;
-                    for (var s = 0; s < this.files.length; s++)
-                      i.push({
-                        file: this.files[s],
+                    for (var H = 0; H < this.files.length; H++)
+                      n.push({
+                        file: this.files[H],
                         inputElem: this,
-                        instanceConfig: t.extend({}, n),
+                        instanceConfig: M.extend({}, e),
                       });
                   }),
-                  s(),
+                  o(),
                   this
                 );
-                function s() {
-                  if (0 === i.length) x(e.complete) && e.complete();
+                function o() {
+                  if (n.length === 0) I(t.complete) && t.complete();
                   else {
-                    var r,
-                      n,
-                      s,
-                      c,
-                      l = i[0];
-                    if (x(e.before)) {
-                      var d = e.before(l.file, l.inputElem);
-                      if ("object" == typeof d) {
-                        if ("abort" === d.action)
+                    var u,
+                      H,
+                      se,
+                      ie,
+                      C = n[0];
+                    if (I(t.before)) {
+                      var L = t.before(C.file, C.inputElem);
+                      if (typeof L == "object") {
+                        if (L.action === "abort")
                           return (
-                            (r = "AbortError"),
-                            (n = l.file),
-                            (s = l.inputElem),
-                            (c = d.reason),
-                            void (x(e.error) && e.error({ name: r }, n, s, c))
+                            (u = "AbortError"),
+                            (H = C.file),
+                            (se = C.inputElem),
+                            (ie = L.reason),
+                            void (I(t.error) && t.error({ name: u }, H, se, ie))
                           );
-                        if ("skip" === d.action) return void a();
-                        "object" == typeof d.config &&
-                          (l.instanceConfig = t.extend(
-                            l.instanceConfig,
-                            d.config,
+                        if (L.action === "skip") return void i();
+                        typeof L.config == "object" &&
+                          (C.instanceConfig = M.extend(
+                            C.instanceConfig,
+                            L.config,
                           ));
-                      } else if ("skip" === d) return void a();
+                      } else if (L === "skip") return void i();
                     }
-                    var u = l.instanceConfig.complete;
-                    (l.instanceConfig.complete = function (e) {
-                      x(u) && u(e, l.file, l.inputElem), a();
+                    var d = C.instanceConfig.complete;
+                    (C.instanceConfig.complete = function (q) {
+                      I(d) && d(q, C.file, C.inputElem), i();
                     }),
-                      o.parse(l.file, l.instanceConfig);
+                      a.parse(C.file, C.instanceConfig);
                   }
                 }
-                function a() {
-                  i.splice(0, 1), s();
+                function i() {
+                  n.splice(0, 1), o();
                 }
               }),
-            i &&
-              (r.onmessage = function (e) {
-                (e = e.data),
-                  void 0 === o.WORKER_ID && e && (o.WORKER_ID = e.workerId),
-                  "string" == typeof e.input
-                    ? r.postMessage({
-                        workerId: o.WORKER_ID,
-                        results: o.parse(e.input, e.config),
+            k &&
+              (B.onmessage = function (t) {
+                (t = t.data),
+                  a.WORKER_ID === void 0 && t && (a.WORKER_ID = t.workerId),
+                  typeof t.input == "string"
+                    ? B.postMessage({
+                        workerId: a.WORKER_ID,
+                        results: a.parse(t.input, t.config),
                         finished: !0,
                       })
-                    : ((r.File && e.input instanceof File) ||
-                        e.input instanceof Object) &&
-                      (e = o.parse(e.input, e.config)) &&
-                      r.postMessage({
-                        workerId: o.WORKER_ID,
-                        results: e,
+                    : ((B.File && t.input instanceof File) ||
+                        t.input instanceof Object) &&
+                      (t = a.parse(t.input, t.config)) &&
+                      B.postMessage({
+                        workerId: a.WORKER_ID,
+                        results: t,
                         finished: !0,
                       });
               }),
-            ((l.prototype = Object.create(c.prototype)).constructor = l),
-            ((d.prototype = Object.create(c.prototype)).constructor = d),
-            ((u.prototype = Object.create(u.prototype)).constructor = u),
-            ((h.prototype = Object.create(c.prototype)).constructor = h),
-            o
+            ((O.prototype = Object.create(re.prototype)).constructor = O),
+            ((oe.prototype = Object.create(re.prototype)).constructor = oe),
+            ((de.prototype = Object.create(de.prototype)).constructor = de),
+            ((ge.prototype = Object.create(re.prototype)).constructor = ge),
+            a
           );
-        }),
-        void 0 === (i = "function" == typeof r ? r.apply(t, n) : r) ||
-          (e.exports = i);
+        });
+      },
     },
-    42664: (e, t, r) => {
-      "use strict";
-      r.r(t), r.d(t, { PricingRoutes: () => de, default: () => ue });
-      var n = r(7850),
-        i = r(43527),
-        s = r(97058),
-        a = r(17083),
-        o = r(92757),
-        c = r(14932),
-        l = r(96745),
-        d = r(69423),
-        u = r(87641),
-        h = r(90626),
-        p = r(44419),
-        f = r(16676),
-        g = r(738),
-        m = r(51272),
-        _ = r(56011),
-        b = r(61859),
-        w = r(78327),
-        k = r(14578),
-        x = r.n(k),
-        y = r(84811),
-        v = r(32754),
-        C = r(52038),
-        D = r(33299),
-        E = r(74267),
-        P = r(22886),
-        S = r.n(P),
-        R = r(10754),
-        j = r(96434),
-        T = r.n(j),
-        I = r(40818),
-        O = r(16666),
-        N = r(66051),
-        F = r(64238),
-        A = r.n(F),
-        B = r(95034),
-        L = (r(64641), r(42691), r(40441), r(83800)),
-        M = r(64753),
-        U = r(9154),
-        G = r(95582);
-      function z(e) {
-        const {
-            bCompactMode: t,
-            setCompactMode: r,
-            rgGridData: i,
-            strPackageFilter: s,
-            setPackageFilter: a,
-            bFilterToBelowMinPrice: o,
-            setFilterToBelowMinPrice: c,
-          } = e,
-          l = (0, h.useMemo)(
-            () => i.filter((e) => (0, d.Y5)(e.packageID)).length,
-            [i],
-          );
-        let u = h.useCallback(
-          (e) => {
-            a(e.data);
-          },
-          [a],
-        );
-        const p = h.useMemo(
-            () => [
-              {
-                label: (0, b.we)("#PricingDashboard_ShowOnlyReleasedPackages"),
-                data: "released",
-              },
-              {
-                label: (0, b.we)("#PricingDashboard_ShowAllPackages"),
-                data: "all",
-              },
-              {
-                label: (0, b.we)(
-                  "#PricingDashboard_ShowOnlyUnreleasedPackages",
-                ),
-                data: "unreleased",
-              },
-              {
-                label: (0, b.we)("#PricingDashboard_ShowOnlyChangedPackages"),
-                data: "changed",
-              },
-              {
-                label: (0, b.we)("#PricingDashboard_ShowSubmittedChanges"),
-                data: "proposed",
-              },
-            ],
-            [],
-          ),
-          [g, m, _] = (0, M.uD)();
-        return (0, n.jsxs)("div", {
-          className: S().GridHeaderButtons,
-          children: [
-            (0, n.jsx)(f.ZU, {
-              rgOptions: p,
-              selectedOption: s,
-              strDropDownClassName: S().Test,
-              onChange: u,
-              contextMenuPositionOptions: { bMatchWidth: !1 },
-            }),
-            Boolean(l || o) &&
-              (0, n.jsx)("div", {
-                className: (0, C.A)(S().OptionCtn, S().PriceLowOption),
-                children: (0, n.jsx)(f.Yh, {
-                  checked: o,
-                  onChange: c,
-                  label: (0, b.we)("#PricingDashboard_FilterToLowPrice", l),
-                }),
-              }),
-            (0, n.jsx)("div", {
-              className: (0, C.A)(S().OptionCtn, S().CompactOption),
-              children: (0, n.jsx)(f.Yh, {
-                checked: t,
-                onChange: r,
-                label: (0, b.we)(
-                  "#PricingDashboard_ShowCompactModeCheckBoxLabel",
-                ),
-              }),
-            }),
-            (0, n.jsx)("div", {
-              className: (0, C.A)(S().OptionCtn),
-              children: (0, n.jsx)(L.J, {}),
-            }),
-            (0, n.jsxs)("div", {
-              className: (0, C.A)(S().OptionCtn),
-              children: [
-                (0, n.jsx)(f.jn, {
-                  onClick: m,
-                  children: (0, b.we)(
-                    "#PricingDashboard_ApplyGuidelinesDialog_Button",
-                  ),
-                }),
-                (0, n.jsx)(U.EN, {
-                  active: g,
-                  children: (0, n.jsx)(G.i, { closeModal: _ }),
-                }),
-              ],
-            }),
-          ],
-        });
-      }
-      var K = r(86762);
-      function H(e) {
-        return e.contains_game && e.contains_dlc
-          ? "BOTH"
-          : e.contains_game
-            ? "GAME"
-            : e.contains_dlc
-              ? "DLC"
-              : null;
-      }
-      function W(e) {
-        const { column: t } = e,
-          r = t.id,
-          i = (0, d.XK)(r),
-          s = (0, d.YB)(r);
-        return (0, n.jsxs)("div", {
-          className: S().CurrencyHeader,
-          children: [
-            (0, n.jsx)(v.he, {
-              toolTipContent: i,
-              direction: "top",
-              className: S().CurrencyAbbreviation,
-              strTooltipClassname: S().HoverToolTip,
-              children: (0, n.jsxs)("div", {
-                className: S().CurrencyNameCtn,
-                children: [
-                  r,
-                  (0, n.jsx)("span", {
-                    className: S().CurrencyName,
-                    children: i,
-                  }),
-                ],
-              }),
-            }),
-            s > 0 &&
-              (0, n.jsx)(E.O, {
-                hoverKey: r,
-                className: S().CurrencyMore,
-                renderHover: () => (0, n.jsx)(Q, { priceKey: r }),
-              }),
-          ],
-        });
-      }
-      function V(e) {
-        const { row: t } = e;
-        return (0, n.jsx)(K.m2, {
-          packageID: t.original.packageID,
-          bShowCancel: !0,
-        });
-      }
-      function q(e) {
-        const t = (0, D.sF)(),
-          r = (0, D.uv)(),
-          n = (0, D.NP)(),
-          i = (0, D.ZN)(),
-          s = (0, D.mE)(!1),
-          a = h.useMemo(
-            () =>
-              (0, O.FB)().accessor("proposalState", {
-                header: (0, b.we)(
-                  "#PricingDashboard_Column_PriceProposalState",
-                ),
-                enableSorting: !1,
-                cell: V,
-                size: 200,
-                meta: {
-                  strHeaderTooltip: (0, b.we)(
-                    "#PricingDashboard_Column_PriceProposalState_ttip",
-                  ),
-                },
-              }),
-            [],
-          ),
-          { rgSupportedPriceKeys: o } = (0, d.T7)();
-        return h.useMemo(() => {
-          const c = [t, r, n, i, s, a];
-          for (const t of o)
-            c.push({
-              accessorKey: t,
-              size: e ? 72 : 200,
-              enableSorting: !1,
-              header: W,
-              cell: R.sh,
-            });
-          return c;
-        }, [t, r, n, i, s, a, o, e]);
-      }
-      function Z(e) {
-        const t = (0, d.Ci)(),
-          r = t?.length ?? 0;
-        return (0, n.jsx)("div", {
-          className: (0, C.A)(S().PricingGridCtn, r > 0 && "PendingVisible"),
-          children: (0, n.jsx)(Y, { ...e }),
-        });
-      }
-      const Y = h.memo(function (e) {
-        const { packageData: t } = e,
-          [r, i] = h.useState(!1),
-          s = h.useRef(null),
-          [a, o] = (0, B.QD)("filter", "released");
-        const [c, u] = (0, B.QD)("filter_below_min_price", !1),
-          p = new URLSearchParams(window.location.search),
-          f = p.has(l.xi) ? decodeURIComponent(p.get(l.xi)) : "",
-          g = q(r),
-          m = (function (e, t, r) {
-            const { rgSupportedPriceKeys: n } = (0, d.T7)();
-            return h.useMemo(() => {
-              const i = [];
-              for (const s of e) {
-                const e = /^-?[0-9]+$/.test(r.strSearchStringFromURL)
-                  ? parseInt(r.strSearchStringFromURL)
-                  : 0;
-                if (s.packageid !== e) {
-                  if ("changed" == t) {
-                    if (!(0, d.iy)(s.packageid)) continue;
-                  } else if ("proposed" == t) {
-                    if (!(0, d.RO)(s.packageid)) continue;
-                  } else if ("released" == t) {
-                    if (!s.released) continue;
-                  } else if ("unreleased" == t && s.released) continue;
-                  if (
-                    r?.bFilterToOnlyBelowMinimumPrice &&
-                    !(0, d.Y5)(s.packageid)
-                  )
-                    continue;
-                }
-                let a = s.grouped_app_name;
-                a ||
-                  (a =
-                    s.appids.length > 1
-                      ? (0, b.we)(
-                          "#PackageGrid_MultipleBaseGamesFoundForPackage",
-                        )
-                      : (0, b.we)("#PackageGrid_NoBaseGameFoundForPackage"));
-                const o = {
-                  appids: s.appids.sort(),
-                  appName: a,
-                  packageID: s.packageid,
-                  packageName: s.package_name || "",
-                  packageType: H(s),
-                  released: s.released,
-                };
-                for (const e of n) o[e] = e;
-                i.push(o);
-              }
-              return i;
-            }, [r, e, n, t]);
-          })(t, a, {
-            bFilterToOnlyBelowMinimumPrice: c,
-            strSearchStringFromURL: f,
-          }),
-          _ = (0, l.pV)(),
-          w = () => _(s.current),
-          k = (0, d.Zz)(),
-          x = (0, I.cK)();
-        return (0, n.jsxs)(n.Fragment, {
-          children: [
-            (0, n.jsx)(z, {
-              bCompactMode: r,
-              setCompactMode: i,
-              rgGridData: m,
-              strPackageFilter: a,
-              setPackageFilter: o,
-              bFilterToBelowMinPrice: c,
-              setFilterToBelowMinPrice: u,
-            }),
-            (0, n.jsx)("div", {
-              className: S().PricingGridWrapper,
-              children: (0, n.jsx)("div", {
-                className: (0, C.A)(S().PricingGrid, r && "CompactMode"),
-                children: (0, n.jsxs)(y.tH, {
-                  children: [
-                    (0, n.jsx)(D.rK, {
-                      fnBLocalChangesExist: k,
-                      fnWarnUser: x,
-                      children: (0, n.jsx)(N.k, {
-                        ref: s,
-                        className: A()(
-                          S().PricingGridTable,
-                          "noGlobalButtonStyle",
-                        ),
-                        columns: g,
-                        data: m,
-                        getRowKey: (e, t) => t.packageID,
-                        stickyHeader: !0,
-                        nItemHeight: 43,
-                        nHeaderHeight: 63,
-                        overscan: 12,
-                        initialExpanded: !0,
-                        initialSorting: [{ id: "appName", desc: !1 }],
-                        initialColumnFilters: [{ id: "packageName", value: f }],
-                        initialGrouping: ["appName"],
-                        initialColumnVisibility: {
-                          packageType: !1,
-                          appids: !1,
-                        },
-                        initialColumnPinning: {
-                          left: [
-                            "packageID",
-                            "appName",
-                            "packageName",
-                            "proposalState",
-                            "USD",
-                          ],
-                        },
-                        onGroupingChange: w,
-                        onVisibleRowsChange: w,
-                        renderGroup: D.IR,
-                      }),
-                    }),
-                    (0, n.jsx)("br", {}),
-                  ],
-                }),
-              }),
-            }),
-          ],
-        });
-      });
-      function Q(e) {
-        const { priceKey: t } = e,
-          r = (0, d.XK)(t);
-        let i = (0, d.mP)(t);
-        return (0, n.jsx)("div", {
-          className: T().PricePopout,
-          children: (0, n.jsx)("div", {
-            className: T().DetailRow,
-            children: (0, n.jsx)("div", {
-              className: T().DetailLabel,
-              onClick: i,
-              children: (0, b.we)("#PricingDashboard_RevertAllCurrency", r),
-            }),
-          }),
-        });
-      }
-      var J = r(19367),
-        X = r.n(J),
-        $ = r(22797),
-        ee = r(9161),
-        te = r(57581),
-        re = r.n(te);
-      function ne(e) {
-        const { closeModal: t } = e,
-          r = (0, l.vs)(),
-          i = X()().format("YYYY-MM-DDTHH-mm-ss"),
-          s = (0, l.zt)(),
-          a = (0, l.Yr)(),
-          o = `prices_all_${r}_${i}.csv`,
-          c = `prices_${r}_${i}.csv`,
-          d = 0 == a.length;
-        return (0, n.jsxs)(U.o0, {
-          bAllowFullSize: !1,
-          closeModal: t,
-          bAlertDialog: !0,
-          strTitle: (0, b.we)("#PricingDashboard_ImportExportHeader"),
-          children: [
-            (0, b.we)("#PricingDashboard_ImportExport_GeneralInstructions"),
-            (0, n.jsx)("br", {}),
-            (0, n.jsx)("a", {
-              href: w.TS.PARTNER_BASE_URL + "doc/store/pricing/csv",
-              target: "_blank",
-              children: (0, b.we)("#PricingDashboard_ImportExport_DocLink"),
-            }),
-            (0, n.jsx)("br", {}),
-            (0, n.jsx)("br", {}),
-            (0, n.jsx)("h3", {
-              children: (0, b.we)("#PricingDashboard_SubtitleExport"),
-            }),
-            (0, n.jsx)("div", {
-              className: re().Instructions,
-              children: (0, b.we)(
-                "#PricingDashboard_ImportExport_DownloadInstructions",
-              ),
-            }),
-            (0, n.jsxs)("div", {
-              className: re().ButtonRows,
-              children: [
-                a.length != s.length &&
-                  (0, n.jsxs)("div", {
-                    className: re().OptionCtn,
-                    children: [
-                      (0, n.jsx)("span", {
-                        className: re().OptionDesc,
-                        children: (0, b.we)(
-                          "#PricingDashboard_ImportExport_DownloadVisible_Desc",
-                        ),
-                      }),
-                      (0, n.jsxs)(f.$n, {
-                        className: re().Button,
-                        disabled: d,
-                        onClick: () => ie(a, c),
-                        children: [
-                          (0, b.we)(
-                            "#PricingDashboard_ImportExport_DownloadVisible_Button",
-                          ),
-                          (0, n.jsx)("span", {
-                            children: (0, b.we)(
-                              "#PricingDashboard_PackageCount",
-                              a.length,
-                            ),
-                          }),
-                        ],
-                      }),
-                    ],
-                  }),
-                (0, n.jsxs)("div", {
-                  className: re().OptionCtn,
-                  children: [
-                    (0, n.jsx)("span", {
-                      className: re().OptionDesc,
-                      children: (0, b.we)(
-                        "#PricingDashboard_ImportExport_DownloadAll_Desc",
-                      ),
-                    }),
-                    (0, n.jsxs)(f.$n, {
-                      className: re().Button,
-                      disabled: d,
-                      onClick: () => ie(s, o),
-                      children: [
-                        (0, b.we)(
-                          "#PricingDashboard_ImportExport_DownloadAll_Button",
-                        ),
-                        (0, n.jsx)("span", {
-                          children: (0, b.we)(
-                            "#PricingDashboard_PackageCount",
-                            s.length,
-                          ),
-                        }),
-                      ],
-                    }),
-                  ],
-                }),
-              ],
-            }),
-            (0, n.jsx)("br", {}),
-            (0, n.jsx)("br", {}),
-            (0, n.jsx)("h3", {
-              children: (0, b.we)("#PricingDashboard_SubtitleImport"),
-            }),
-            (0, n.jsx)("div", {
-              className: re().Instructions,
-              children: (0, b.we)(
-                "#PricingDashboard_ImportExport_UploadInstructions",
-              ),
-            }),
-            (0, n.jsx)("div", {
-              className: re().ButtonRows,
-              children: (0, n.jsxs)("div", {
-                className: re().OptionCtn,
-                children: [
-                  (0, n.jsx)("span", {
-                    className: re().OptionDesc,
-                    children: (0, b.we)(
-                      "#PricingDashboard_ImportExport_Upload_Desc",
-                    ),
-                  }),
-                  (0, n.jsx)(f.$n, {
-                    className: re().Button,
-                    disabled: d,
-                    children: (0, n.jsxs)("label", {
-                      className: re().ImportButtonLabel,
-                      htmlFor: "import-price-input",
-                      children: [
-                        (0, b.we)(
-                          "#PricingDashboard_ImportExport_Upload_Button",
-                        ),
-                        (0, n.jsx)("input", {
-                          id: "import-price-input",
-                          type: "file",
-                          style: { display: "none" },
-                          onChange: (e) =>
-                            (async function (e, t) {
-                              if (e.target.files.length >= 1) {
-                                const r = (0, _.uX)(e),
-                                  i = e.target.files[0],
-                                  s = await ee.g.ParseCSVFile(i);
-                                (0, g.mK)(
-                                  (0, n.jsx)(ae, {
-                                    strFilename: i.name,
-                                    parseResult: s,
-                                  }),
-                                  r,
-                                ),
-                                  t();
-                              }
-                            })(e, t),
-                        }),
-                      ],
-                    }),
-                  }),
-                ],
-              }),
-            }),
-          ],
-        });
-      }
-      function ie(e, t) {
-        const r = [],
-          n = (0, d.U3)(),
-          i = [(0, b.we)("#PackageGrid_Column_PackageName"), "ID"];
-        for (const e of n) i.push(e);
-        r.push(i);
-        for (const t of e) {
-          const e = [(0, l.ww)(t), t.toString()];
-          for (const r of n) {
-            const n = (0, d.FR)(t, r),
-              i = n ? (n / 100).toString() : "";
-            e.push(i);
-          }
-          r.push(e);
-        }
-        ee.g.WriteCSVToFile(r, t);
-      }
-      function se(e, t) {
-        let r = Number(e);
-        return Number.isNaN(r) ? null : Math.round(100 * r);
-      }
-      function ae(e) {
-        const { closeModal: t, strFilename: r, parseResult: i } = e,
-          s = (0, l.zt)(),
-          a = (0, d.U3)(),
-          o = (0, d.hm)(),
-          [c, u] = h.useState(null),
-          [p, f] = h.useState();
-        if (
-          (h.useEffect(() => {
-            const { rgPriceChanges: e, nPackagesImported: t } = (function (
-              e,
-              t,
-              r,
-              n,
-            ) {
-              const i = [],
-                s = new Set(t),
-                a = [];
-              for (const t of e.data ?? []) {
-                const e = Number(t.ID);
-                if (s.has(e)) {
-                  i.push(e);
-                  for (const i of r) {
-                    const r = t[i],
-                      s = !!r?.length && se(r);
-                    if (!r?.length || Number.isNaN(s)) continue;
-                    const o = n(e, i, s);
-                    o && a.push(o);
-                  }
-                }
-              }
-              return { rgPriceChanges: a, nPackagesImported: i.length };
-            })(i, s, a, o);
-            u(e), f(t);
-          }, [i, s, a, o]),
-          null === c)
-        )
-          return (0, n.jsx)($.t, { position: "center" });
-        const m = c.length > 0,
-          _ = m
-            ? (0, b.we)("#PackageGrid_SaveChangesDialogButton")
-            : (0, b.we)("#Button_Close");
-        return (0, n.jsxs)(U.o0, {
-          strTitle: (0, b.we)(
-            "#PricingDashboard_ImportExport_UploadProgressTitle",
-          ),
-          strDescription: (0, b.we)(
-            "#PricingDashboard_ImportExport_UploadProgressDetails",
-            p,
-          ),
-          bAlertDialog: !m,
-          strOKButtonText: _,
-          onOK: () => {
-            m && (0, g.pg)((0, n.jsx)(I.Zg, {}), window);
-          },
-          strCancelButtonText: (0, b.we)("#Button_OK"),
-          closeModal: t,
-          children: [
-            (0, n.jsx)("div", {
-              className: re().ParseResultCount,
-              children: (0, b.we)(
-                "#PricingDashboard_ImportExport_UploadResults",
-                c.length,
-              ),
-            }),
-            m &&
-              (0, b.we)(
-                "#PricingDashboard_ImportExport_UploadNextStepInstructions",
-              ),
-            !!i.errors?.length &&
-              (0, n.jsxs)(n.Fragment, {
-                children: [
-                  (0, n.jsx)("div", {
-                    className: re().ErrorHeader,
-                    children: (0, b.we)(
-                      "#PricingDashboard_ImportExport_UploadErrorsHeader",
-                      i.errors?.length,
-                    ),
-                  }),
-                  (0, n.jsx)("div", {
-                    className: re().ParseErrors,
-                    children: i.errors.map((e, t) =>
-                      (0, n.jsx)(
-                        "div",
-                        {
-                          className: re().Error,
-                          children: `${e.row ?? "-"} ${e.message}`,
-                        },
-                        `${e.message}-${t}`,
-                      ),
-                    ),
-                  }),
-                ],
-              }),
-          ],
-        });
-      }
-      function oe(e) {
-        (0, u.h)((0, d.Zz)());
-        const t = (0, l.uw)(),
-          r = w.TS.PARTNER_BASE_URL + "doc/store/pricing",
-          i = w.TS.HELP_BASE_URL + "wizard/HelpWithPublishing?issueid=920",
-          s = (0, d.v4)(),
-          a = (0, h.useMemo)(
-            () => Array.from(new Set(s.map((e) => e.submitterID))),
-            [s],
-          );
-        (0, p.DW)(a);
-        return (0, n.jsxs)("div", {
-          className: x().DashboardPage,
-          children: [
-            (0, n.jsxs)("div", {
-              className: x().DashTitle,
-              children: [
-                (0, b.we)("#PricingDashboard_Title"),
-                (0, n.jsx)("div", { className: x().FeedbackLinkCtn }),
-                (0, n.jsxs)("div", {
-                  className: x().ButtonGroup,
-                  children: [
-                    (0, n.jsx)(f.$n, {
-                      onClick: (e) =>
-                        (0, g.pg)((0, n.jsx)(ne, {}), (0, _.uX)(e)),
-                      children: (0, b.we)(
-                        "#PricingDashboard_ImportExportButton",
-                      ),
-                    }),
-                    (0, n.jsx)(f.$n, {
-                      onClick: (e) => (0, m.EP)(e, r),
-                      children: (0, b.we)(
-                        "#PricingDashboard_DocumentationButton",
-                      ),
-                    }),
-                    (0, n.jsx)(f.$n, {
-                      onClick: (e) => (0, m.EP)(e, i),
-                      children: (0, b.we)("#PricingDashboard_ContactUsButton"),
-                    }),
-                  ],
-                }),
-              ],
-            }),
-            0 == t.length &&
-              (0, n.jsx)("div", {
-                className: x().ErrorMessage,
-                children: (0, b.we)("#PricingDashboard_Error_NoPackages"),
-              }),
-            t.length > 0 &&
-              (0, n.jsxs)(n.Fragment, {
-                children: [
-                  (0, n.jsx)(Z, { packageData: t }),
-                  (0, n.jsx)(I.BL, { bReloadPageOnSave: !1 }),
-                ],
-              }),
-          ],
-        });
-      }
-      var ce = r(11577),
-        le = r(87700);
-      const de = { PricingDashboard: () => "/dashboard/:publisherid(\\d*)" };
-      function ue(e) {
-        return (0, n.jsx)(ce.m, {
-          children: (0, n.jsx)(le.jY, {
-            children: (0, n.jsx)(a.Kd, {
-              basename: (0, i.C)() + "pricing/",
-              children: (0, n.jsxs)(o.dO, {
-                children: [
-                  (0, n.jsx)(o.qh, {
-                    exact: !0,
-                    path: i.B.DiagData(),
-                    render: (e) =>
-                      (0, n.jsx)(c.z, {
-                        ...e,
-                        strConfigID: "application_config",
-                      }),
-                  }),
-                  (0, n.jsx)(o.qh, {
-                    path: de.PricingDashboard(),
-                    render: (e) => (0, n.jsx)(oe, {}),
-                  }),
-                  (0, n.jsx)(o.qh, { component: s.a }),
-                ],
-              }),
-            }),
-          }),
-        });
-      }
-    },
-    11577: (e, t, r) => {
-      "use strict";
-      r.d(t, { T: () => d, m: () => l });
-      var n = r(90626),
-        i = r(96059),
-        s = r(16021),
-        a = r(81393),
-        o = r(78327),
-        c = r(63664);
-      function l(e) {
-        const [t, r] = (0, n.useState)(!1),
-          [i] = (0, n.useState)(() => u()),
-          a = (0, n.useMemo)(
-            () => ({
-              country: o.TS.COUNTRY,
-              language: o.TS.LANGUAGE,
-              bUsePartnerAPI: !0,
-            }),
-            [],
-          );
-        return (
-          (0, n.useEffect)(
-            () => (
-              r(!0),
-              (function (e) {
-                return s.A.Initialize(
-                  e.GetServiceTransport(),
-                  o.iA.is_partner_member,
-                );
-              })(i)
-            ),
-            [i],
-          ),
-          t
-            ? (0, n.createElement)(c.V3, {
-                context: a,
-                serviceTransportOverride: i.GetServiceTransport(),
-                children: e.children,
-              })
-            : null
-        );
-      }
-      function d(e) {
-        const [t] = (0, n.useState)(() => u()),
-          r = (0, n.useMemo)(
-            () => ({
-              country: o.TS.COUNTRY,
-              language: o.TS.LANGUAGE,
-              bUsePartnerAPI: !0,
-              bIncludeUnpublished: e.bIncludeUnpublished,
-            }),
-            [e.bIncludeUnpublished],
-          );
-        return (0, n.createElement)(c.V3, {
-          context: r,
-          serviceTransportOverride: t.GetServiceTransport(),
-          children: e.children,
-        });
-      }
-      function u() {
-        const e = (0, o.Tc)("partnerbrowse_webapi_token", "application_config");
-        (0, a.wT)(Boolean(e), "require partnerbrowse_webapi_token");
-        return new i.D(o.TS.WEBAPI_BASE_URL, e);
-      }
-    },
-    9161: (e, t, r) => {
-      "use strict";
-      r.d(t, { g: () => s });
-      var n = r(40323),
-        i = r.n(n);
-      class s {
-        static ParseCSVFile(e, t) {
-          return new Promise((r, n) => {
-            const s = {
-              header: !0,
-              skipEmptyLines: "greedy",
-              complete: r,
-              error: (e) => n({ errors: [e] }),
-              transformHeader: t,
-            };
-            i().parse(e, s);
-          });
-        }
-        static ReadFile(e) {
-          return new Promise((t, r) => {
-            const n = new FileReader();
-            (n.onload = (e) => t(n.result)), n.readAsText(e);
-          });
-        }
-        static WriteFile(e, t) {
-          let r = document.createElement("a");
-          if (navigator.msSaveBlob) navigator.msSaveBlob(e, t);
-          else {
-            const t = window.URL.createObjectURL(e);
-            r.href = t;
-          }
-          r.setAttribute("download", t), r.click();
-          try {
-            document.removeChild(r);
-          } catch (e) {}
-        }
-        static WriteCSVToFile(e, t, r, n) {
-          const a = n
-              ? i().unparse({ fields: n, data: e }, { header: !0 })
-              : i().unparse(e, { header: !0 }),
-            o = 1 == r ? ["\ufeff" + a] : [a];
-          s.WriteFile(new Blob(o, { type: "text/csv:charset=utf-8;" }), t);
-        }
-        static m_DummyValueForQuestionHack = 0;
-        static WriteXMLToFile(e, t) {
-          const r = () =>
-            this.m_DummyValueForQuestionHack ? "never returned" : "?";
-          let n =
-            "<" + r() + 'xml version="1.0" encoding="UTF-8" ' + r() + ">\n";
-          (n += new XMLSerializer().serializeToString(e)),
-            s.WriteFile(
-              new Blob([n], { type: "application/xml:charset=utf-8;" }),
-              t,
-            );
-        }
-      }
-    },
-  },
-]);
+  ]);
+})();

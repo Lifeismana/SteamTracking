@@ -12,6 +12,7 @@ message AdditionalSubjectData_DataEntry {
 message CContentModeration_ClaimBatch_Request {
 	optional int32 subject_type = 1 [(.description) = "enum"];
 	optional int32 moderator_level = 2 [(.description) = "enum"];
+	repeated .ReportedContentCoordinates filters = 3;
 }
 
 message CContentModeration_ClaimBatch_Response {
@@ -290,6 +291,7 @@ message CContentModeration_GetSubjectOverview_Response_Bucket {
 	optional uint32 oldest_unresolved_for_any_moderator = 11;
 	optional uint32 oldest_unresolved_for_supervisor = 12;
 	optional uint32 oldest_unresolved_for_valve = 13;
+	optional .ReportedContentCoordinates coordinates = 14;
 }
 
 message CContentModeration_OwnerDisputeModeration_Request {
@@ -545,6 +547,7 @@ message ReportedContentCoordinates {
 	optional uint64 chat_room_id = 11;
 	optional uint32 receiver_account_id = 12;
 	optional uint64 published_file_id = 13;
+	optional uint32 ugc_content_type = 14;
 }
 
 service ContentModeration {

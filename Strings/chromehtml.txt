@@ -135,7 +135,7 @@
 "MapEnd"
 "MapSize"
 "MutableRawRepeatedField"
-"N9__gnu_cxx24__concurrence_lock_errorE
+"N10__cxxabiv117__class_type_infoE
 "\n\farray_values
 "^\n\fOneofOptions
 "e" must be followed by exponent.
@@ -1692,8 +1692,6 @@ CUIProtoBufMsg::BDeserialize
 CUIProtoBufMsg::SerializeCrossProc
 CUtlBuffer
 CUtlBuffer::GetStringFast: binary buffers only
-CUtlHashMap::RemoveAt - Invalid index
-CUtlHashMap::RemoveAt - couldn't find bucket for item
 CUtlString::ReplaceInternal
 CUtlString::SetValue
 CUtlString::VAppendFormat
@@ -2117,6 +2115,7 @@ Input size too large:
 Integer out of range (
 Interpreting non ascii codepoint %d.
 Invalid FileWriterItem_t
+Invalid SetVarPolicy %d
 Invalid control characters encountered in text.
 Invalid descriptor
 Invalid escape sequence in string literal.
@@ -2164,7 +2163,6 @@ Kyrgyz
 LABEL_OPTIONAL
 LABEL_REPEATED
 LABEL_REQUIRED
-LD_LIBRARY_PATH
 LEZShnat7{
 LOCK_EX
 LOCK_SH
@@ -2238,9 +2236,9 @@ MutableMessage
 MutableRawRepeatedField
 MutableRepeatedMessage
 N10__cxxabiv115__forced_unwindE
-N10__cxxabiv117__class_type_infoE
 N10__cxxabiv119__foreign_exceptionE
 N10__cxxabiv120__si_class_type_infoE
+N10__cxxabiv121__vmi_class_type_infoE
 N15CHTMLController12CIPCTaskPostE
 N17CFileWriterThread14CFileWriteItemE
 N17CFileWriterThread16CLogFileWorkItemE
@@ -2354,6 +2352,7 @@ N6google8protobuf8internal33RandomAccessRepeatedFieldAccessorE
 N9__gnu_cxx18stdio_sync_filebufIcSt11char_traitsIcEEE
 N9__gnu_cxx18stdio_sync_filebufIwSt11char_traitsIwEEE
 N9__gnu_cxx20recursive_init_errorE
+N9__gnu_cxx24__concurrence_lock_errorE
 N9__gnu_cxx26__concurrence_unlock_errorE
 NOT_FOUND
 NO_SIDE_EFFECTS
@@ -2992,7 +2991,6 @@ Zulu
 \u%04x
 \venums.proto"^\n\tCMsgKeyUp
 \x%02x
-]zC4
 _Accum
 _Fract
 _GLOBAL_
@@ -3088,13 +3086,6 @@ __xstat64
 _edata
 _end
 _exit
-_txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
-_txnal_cow_string_D1(void*)
-_txnal_cow_string_D1_commit(void*)
-_txnal_cow_string_c_str(void const*)
-_txnal_logic_error_get_msg(void*)
-_txnal_runtime_error_get_msg(void*)
-_txnal_sso_string_c_str(void const*)
 a\rxg[
 abort
 access
@@ -3112,6 +3103,7 @@ alpha
 alphasort64
 alse
 amharic
+append=
 ar_AE
 arabic
 args
@@ -4039,8 +4031,8 @@ parse
 parsing
 path
 patterns
+pchValue || eSetVarPolicy == k_ESetVarPolicy_Delete
 pchVar
-pchVar && pchValue
 pclose
 persian
 php_class_prefix
@@ -4058,6 +4050,7 @@ post
 postData
 pread64
 preferred_contrast
+prepend=
 print
 printf
 promise_handle
@@ -4147,6 +4140,7 @@ serializing
 server_streaming
 service
 service $0 {\n
+set=
 setlocale
 setmntent
 setvbuf
@@ -4304,21 +4298,7 @@ type.googleprod.com/
 typeinfo fn for
 typeinfo for
 typeinfo for SteamThreadTools::CThread
-typeinfo for __cxxabiv1::__class_type_info
-typeinfo for __cxxabiv1::__forced_unwind
-typeinfo for __cxxabiv1::__foreign_exception
-typeinfo for __cxxabiv1::__si_class_type_info
-typeinfo for __gnu_cxx::__concurrence_lock_error
-typeinfo for __gnu_cxx::__concurrence_unlock_error
-typeinfo for __gnu_cxx::recursive_init_error
 typeinfo name for
-typeinfo name for __cxxabiv1::__class_type_info
-typeinfo name for __cxxabiv1::__forced_unwind
-typeinfo name for __cxxabiv1::__foreign_exception
-typeinfo name for __cxxabiv1::__si_class_type_info
-typeinfo name for __gnu_cxx::__concurrence_lock_error
-typeinfo name for __gnu_cxx::__concurrence_unlock_error
-typeinfo name for __gnu_cxx::recursive_init_error
 ui_mode
 uint32
 uint64
@@ -4337,6 +4317,7 @@ uninitialized __any_string
 uninterpreted_option
 unknown
 unlink
+unset=
 unsigned
 unsigned __int128
 unsigned char
@@ -4376,14 +4357,6 @@ void google::protobuf::io::CodedInputStream::UnsafeDecrementRecursionDepth()
 vr_overlay_key
 vsnprintf
 vtable for
-vtable for __cxxabiv1::__class_type_info
-vtable for __cxxabiv1::__forced_unwind
-vtable for __cxxabiv1::__foreign_exception
-vtable for __cxxabiv1::__si_class_type_info
-vtable for __cxxabiv1::__vmi_class_type_info
-vtable for __gnu_cxx::__concurrence_lock_error
-vtable for __gnu_cxx::__concurrence_unlock_error
-vtable for __gnu_cxx::recursive_init_error
 vulkan
 wchar_t
 wcrtomb

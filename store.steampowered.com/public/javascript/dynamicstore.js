@@ -1130,6 +1130,7 @@ GDynamicStore = {
 				m_nFinalPriceInCents: 0,
 				m_nFinalPriceInCentsWithBundleDiscount: 0,
 				m_rgBundleItems: [],
+				m_rgAllBundleItems: Bundle.m_rgItems, // this list includes owned items
 				m_bIsCommercial: Bundle.m_bIsCommercial,
 				m_bRestrictGifting: Bundle.m_bRestrictGifting
 			};
@@ -1282,10 +1283,17 @@ GDynamicStore = {
 		}
 
 
+		// Pull the items the user owns out of the full list by comparing it to the list of unowned items.
+		// Doing it this way to stay out of the pricing loop in GetPersonalizedBundleData.
+		// Owned items are appended to the end so they're the first dropped by the 9 item cap.
+		var mapUnownedItems = {};
+		Bundle.m_rgBundleItems.forEach( function( Item ) { mapUnownedItems[Item.m_nPackageID] = true; } );
+		var rgOwnedItems = Bundle.m_rgAllBundleItems.filter( function( Item ) { return !mapUnownedItems[Item.m_nPackageID]; } );
+		var rgBundleItems = Bundle.m_rgBundleItems.concat( rgOwnedItems );
 		var rgItemsWithCaps = [];
-		for ( var iBundleItem = 0; iBundleItem < Bundle.m_rgBundleItems.length; iBundleItem++ )
+		for ( var iBundleItem = 0; iBundleItem < rgBundleItems.length; iBundleItem++ )
 		{
-			var unPackageID = Bundle.m_rgBundleItems[iBundleItem].m_nPackageID;
+			var unPackageID = rgBundleItems[iBundleItem].m_nPackageID;
 			var PackageData = GStoreItemData.rgPackageData[ unPackageID];
 			if ( PackageData && PackageData.tiny_capsule )
 			{

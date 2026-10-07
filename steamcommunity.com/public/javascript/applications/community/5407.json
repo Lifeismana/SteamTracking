@@ -65,6 +65,5 @@
     "PriceDisplay_YourPrice": "価格：",
     "PriceGrid_NormalPrice": "通常",
     "PriceGrid_RecentPrice": "過去30日間の最安値",
-    "PriceGrid_CurrentPrice": "現在",
-    "Dummy": "dummy"
+    "PriceGrid_CurrentPrice": "現在"
 }

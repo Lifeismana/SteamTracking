@@ -310,6 +310,7 @@ var CLSTAMP = "steamdb";
           Buttons: "chatnotice_Buttons_1MuKX",
           ChatNoticeActionButton: "chatnotice_ChatNoticeActionButton_3uFJX",
           ExplanationHeader: "chatnotice_ExplanationHeader_17ZEb",
+          ExplanationSharedGroup: "chatnotice_ExplanationSharedGroup_29w2a",
           ExplanationBody: "chatnotice_ExplanationBody_1Z7xU",
           ExplanationLinkCtn: "chatnotice_ExplanationLinkCtn_1dEmZ",
           DismissButton: "chatnotice_DismissButton_2_0Bf",
@@ -1074,6 +1075,285 @@ var CLSTAMP = "steamdb";
       },
       chunkid: (module) => {
         _.exports = {
+          Button: "buttonbase_Button__0BH1",
+          "Size-1": "buttonbase_Size-1_3QKUr",
+          Icon: "buttonbase_Icon_2_fy3",
+          "Size-2": "buttonbase_Size-2_2rbqj",
+          "Size-3": "buttonbase_Size-3_2WV0D",
+          "Variant-basic": "buttonbase_Variant-basic_AjHMN",
+          "Variant-dark": "buttonbase_Variant-dark_29OIX",
+          "Variant-inverted": "buttonbase_Variant-inverted_RmQIH",
+          "Variant-outline": "buttonbase_Variant-outline_3Ivla",
+          "Variant-ghost": "buttonbase_Variant-ghost_2oeLj",
+          "Variant-vibrant": "buttonbase_Variant-vibrant_HpR1u",
+          Width: "buttonbase_Width_3sJrb",
+          MinWidth: "buttonbase_MinWidth_1SOkb",
+        };
+      },
+      chunkid: (module) => {
+        _.exports = {
+          Spinner: "loadingspinner_Spinner_2DCKU",
+          LoadingSpinnerAmin: "loadingspinner_LoadingSpinnerAmin_1SGyF",
+          "Size-1": "loadingspinner_Size-1_1Vxi9",
+          "Size-2": "loadingspinner_Size-2_4YMNf",
+          "Size-3": "loadingspinner_Size-3_389OP",
+          "Size-4": "loadingspinner_Size-4_2_bEJ",
+          "Size-5": "loadingspinner_Size-5_1XSG-",
+          "Variant-solid": "loadingspinner_Variant-solid_lQP4s",
+          "Variant-bright": "loadingspinner_Variant-bright_3Jl5l",
+          ChildContainer: "loadingspinner_ChildContainer_3drTS",
+        };
+      },
+      chunkid: (module) => {
+        _.exports = {
+          Box: "box_Box_2YzOL",
+        };
+      },
+      chunkid: (module) => {
+        _.exports = {
+          Flex: "flex_Flex_3nHL7",
+          Direction: "flex_Direction_3JCkA",
+          Justify: "flex_Justify_12amp",
+          Align: "flex_Align_1SxQu",
+          Gap: "flex_Gap_ja5o2",
+          GapX: "flex_GapX_3KiTP",
+          GapY: "flex_GapY_38cfD",
+          Wrap: "flex_Wrap_dB7ip",
+          Inline: "flex_Inline_LOeaK",
+        };
+      },
+      chunkid: (module) => {
+        _.exports = {
+          "m-0": "layout_m-0_3Nvas",
+          "m-1": "layout_m-1_37cUi",
+          "m-2": "layout_m-2_22pmr",
+          "m-3": "layout_m-3_2xmWK",
+          "m-4": "layout_m-4_3zdjz",
+          "m-5": "layout_m-5_3Rlz0",
+          "m-6": "layout_m-6_3r8Bg",
+          "m-7": "layout_m-7_N4_w_",
+          "m-8": "layout_m-8_9RIEr",
+          "m-9": "layout_m-9_3z-Gr",
+          "mx-0": "layout_mx-0_3-jQF",
+          "mx-1": "layout_mx-1_3BMIS",
+          "mx-2": "layout_mx-2_1qzk8",
+          "mx-3": "layout_mx-3_3chNW",
+          "mx-4": "layout_mx-4_3frK-",
+          "mx-5": "layout_mx-5_3d0Eu",
+          "mx-6": "layout_mx-6_UjWcr",
+          "mx-7": "layout_mx-7_15ha2",
+          "mx-8": "layout_mx-8_1RQYc",
+          "mx-9": "layout_mx-9_2HJM3",
+          "my-0": "layout_my-0_3QML-",
+          "my-1": "layout_my-1_1k6pa",
+          "my-2": "layout_my-2_xSx33",
+          "my-3": "layout_my-3_3BN9z",
+          "my-4": "layout_my-4_3uyKb",
+          "my-5": "layout_my-5_IxdkD",
+          "my-6": "layout_my-6_PmQV_",
+          "my-7": "layout_my-7_2q2Pj",
+          "my-8": "layout_my-8_atp0P",
+          "my-9": "layout_my-9_vwwFw",
+          "mt-0": "layout_mt-0_109Gk",
+          "mt-1": "layout_mt-1_gcFbF",
+          "mt-2": "layout_mt-2_1UhHo",
+          "mt-3": "layout_mt-3_21w5W",
+          "mt-4": "layout_mt-4_dC3DC",
+          "mt-5": "layout_mt-5_1tHqS",
+          "mt-6": "layout_mt-6_18dOE",
+          "mt-7": "layout_mt-7_3PdDV",
+          "mt-8": "layout_mt-8_uiWkr",
+          "mt-9": "layout_mt-9_26krD",
+          "mr-0": "layout_mr-0_2JK4i",
+          "mr-1": "layout_mr-1_Xy_RM",
+          "mr-2": "layout_mr-2_jdWkW",
+          "mr-3": "layout_mr-3_3XSAR",
+          "mr-4": "layout_mr-4_1_SfH",
+          "mr-5": "layout_mr-5_2fcrN",
+          "mr-6": "layout_mr-6_1ia3k",
+          "mr-7": "layout_mr-7_RlFjD",
+          "mr-8": "layout_mr-8_1wvVe",
+          "mr-9": "layout_mr-9_37_fm",
+          "mb-0": "layout_mb-0_2c4TK",
+          "mb-1": "layout_mb-1_2dEkp",
+          "mb-2": "layout_mb-2_2nC6j",
+          "mb-3": "layout_mb-3_2Xlwu",
+          "mb-4": "layout_mb-4_2UcIP",
+          "mb-5": "layout_mb-5_1sK8Y",
+          "mb-6": "layout_mb-6_3NZ41",
+          "mb-7": "layout_mb-7_U9w5s",
+          "mb-8": "layout_mb-8_dlBjE",
+          "mb-9": "layout_mb-9_3DrMY",
+          "ml-0": "layout_ml-0_3zSVo",
+          "ml-1": "layout_ml-1_38GBx",
+          "ml-2": "layout_ml-2_21QgA",
+          "ml-3": "layout_ml-3_3FxuH",
+          "ml-4": "layout_ml-4_36ths",
+          "ml-5": "layout_ml-5_3tCyV",
+          "ml-6": "layout_ml-6_3XYrr",
+          "ml-7": "layout_ml-7_37tKL",
+          "ml-8": "layout_ml-8_F5R9g",
+          "ml-9": "layout_ml-9_3l1WU",
+          "ms-0": "layout_ms-0_3njyH",
+          "ms-1": "layout_ms-1_28bOB",
+          "ms-2": "layout_ms-2_1FyNN",
+          "ms-3": "layout_ms-3_dOT_k",
+          "ms-4": "layout_ms-4_1KxJd",
+          "ms-5": "layout_ms-5_1iFDs",
+          "ms-6": "layout_ms-6_NcnhI",
+          "ms-7": "layout_ms-7_2shlV",
+          "ms-8": "layout_ms-8_1nRQe",
+          "ms-9": "layout_ms-9_Scfht",
+          "me-0": "layout_me-0_3P4ir",
+          "me-1": "layout_me-1_2ySaE",
+          "me-2": "layout_me-2_3Ewtw",
+          "me-3": "layout_me-3_2Hu5i",
+          "me-4": "layout_me-4_3SvsL",
+          "me-5": "layout_me-5_1LVPN",
+          "me-6": "layout_me-6_kwh-P",
+          "me-7": "layout_me-7_2Be9r",
+          "me-8": "layout_me-8_2xizO",
+          "me-9": "layout_me-9_1BSTI",
+          "p-0": "layout_p-0_VPuVp",
+          "p-1": "layout_p-1_2EfaZ",
+          "p-2": "layout_p-2_Cgo8G",
+          "p-3": "layout_p-3_2Cp-F",
+          "p-4": "layout_p-4_1NBFz",
+          "p-5": "layout_p-5_1l2NM",
+          "p-6": "layout_p-6_2ilEU",
+          "p-7": "layout_p-7_1pYnE",
+          "p-8": "layout_p-8_1Uh6o",
+          "p-9": "layout_p-9_2U-Pg",
+          "px-0": "layout_px-0_25Bvg",
+          "px-1": "layout_px-1_3dcUl",
+          "px-2": "layout_px-2_3SAnk",
+          "px-3": "layout_px-3_1PBYi",
+          "px-4": "layout_px-4_ZBrEp",
+          "px-5": "layout_px-5_3I3zm",
+          "px-6": "layout_px-6_CwtOB",
+          "px-7": "layout_px-7_3xUq6",
+          "px-8": "layout_px-8_28tN4",
+          "px-9": "layout_px-9_2hqyl",
+          "py-0": "layout_py-0_39VRd",
+          "py-1": "layout_py-1_3L7uZ",
+          "py-2": "layout_py-2_17dh9",
+          "py-3": "layout_py-3_3rxHY",
+          "py-4": "layout_py-4_1e1cm",
+          "py-5": "layout_py-5_3keWd",
+          "py-6": "layout_py-6_3PN00",
+          "py-7": "layout_py-7_3juWw",
+          "py-8": "layout_py-8_JiHYK",
+          "py-9": "layout_py-9_noBlh",
+          "pt-0": "layout_pt-0_3hle3",
+          "pt-1": "layout_pt-1_2QX6z",
+          "pt-2": "layout_pt-2_3tkNl",
+          "pt-3": "layout_pt-3_1_Rc7",
+          "pt-4": "layout_pt-4_2FUhF",
+          "pt-5": "layout_pt-5_2e8IX",
+          "pt-6": "layout_pt-6_15WvE",
+          "pt-7": "layout_pt-7_3ziqL",
+          "pt-8": "layout_pt-8_3GaJ_",
+          "pt-9": "layout_pt-9_2MtXt",
+          "pr-0": "layout_pr-0_2Ympx",
+          "pr-1": "layout_pr-1_1bNQ5",
+          "pr-2": "layout_pr-2_2uSxe",
+          "pr-3": "layout_pr-3_m4Lxy",
+          "pr-4": "layout_pr-4_3Do03",
+          "pr-5": "layout_pr-5_1C5Zb",
+          "pr-6": "layout_pr-6_11ql9",
+          "pr-7": "layout_pr-7_2fJem",
+          "pr-8": "layout_pr-8_2Dzi0",
+          "pr-9": "layout_pr-9_1nyIr",
+          "pb-0": "layout_pb-0_2smsN",
+          "pb-1": "layout_pb-1_3tCFi",
+          "pb-2": "layout_pb-2_1-lbn",
+          "pb-3": "layout_pb-3_3aguv",
+          "pb-4": "layout_pb-4_3Kq59",
+          "pb-5": "layout_pb-5_2kn-A",
+          "pb-6": "layout_pb-6_2Hg_T",
+          "pb-7": "layout_pb-7_KjcAw",
+          "pb-8": "layout_pb-8_3R4_1",
+          "pb-9": "layout_pb-9_2qBwH",
+          "pl-0": "layout_pl-0_3Sp8O",
+          "pl-1": "layout_pl-1_uslfT",
+          "pl-2": "layout_pl-2_1Sbor",
+          "pl-3": "layout_pl-3_7zDvG",
+          "pl-4": "layout_pl-4_1_K_p",
+          "pl-5": "layout_pl-5_3cpeF",
+          "pl-6": "layout_pl-6_3yAkj",
+          "pl-7": "layout_pl-7_3PV5A",
+          "pl-8": "layout_pl-8_3pycP",
+          "pl-9": "layout_pl-9_H-SWK",
+          "ps-0": "layout_ps-0_19TCe",
+          "ps-1": "layout_ps-1_gpKT6",
+          "ps-2": "layout_ps-2_2H7vg",
+          "ps-3": "layout_ps-3_3ZKIk",
+          "ps-4": "layout_ps-4_T7pWU",
+          "ps-5": "layout_ps-5_kTAoj",
+          "ps-6": "layout_ps-6_2FxHV",
+          "ps-7": "layout_ps-7_1OIzw",
+          "ps-8": "layout_ps-8_3CFOe",
+          "ps-9": "layout_ps-9_2-Km8",
+          "pe-0": "layout_pe-0_27a8x",
+          "pe-1": "layout_pe-1_3Z8vg",
+          "pe-2": "layout_pe-2_1r4ci",
+          "pe-3": "layout_pe-3_1W06W",
+          "pe-4": "layout_pe-4_1SnH8",
+          "pe-5": "layout_pe-5_3a7Hx",
+          "pe-6": "layout_pe-6_3GAeI",
+          "pe-7": "layout_pe-7_n-dZa",
+          "pe-8": "layout_pe-8_2UeKF",
+          "pe-9": "layout_pe-9_1cPkY",
+          Width: "layout_Width_3-4uP",
+          MaxWidth: "layout_MaxWidth_3IiNa",
+          MinWidth: "layout_MinWidth_3Aocq",
+          Height: "layout_Height_1u7tl",
+          MaxHeight: "layout_MaxHeight_3N3KV",
+          MinHeight: "layout_MinHeight_3ugvZ",
+          FlexBasis: "layout_FlexBasis_3swtp",
+          FlexGrow: "layout_FlexGrow_1jkRB",
+          FlexShrink: "layout_FlexShrink_1TqZR",
+          "Radius-none": "layout_Radius-none_2sNdn",
+          "Radius-sm": "layout_Radius-sm_1dhvt",
+          "Radius-md": "layout_Radius-md_3C--q",
+          "Radius-lg": "layout_Radius-lg_2RYin",
+          "Radius-full": "layout_Radius-full_1ZmWi",
+          Cursor: "layout_Cursor_1GQDA",
+          Position: "layout_Position_3C1PO",
+          Inset: "layout_Inset_3nwiM",
+          GridColumn: "layout_GridColumn_MA0AW",
+          GridColumnStart: "layout_GridColumnStart_20b31",
+          GridColumnEnd: "layout_GridColumnEnd_3M7Mh",
+          GridRow: "layout_GridRow_3kxN6",
+          GridRowStart: "layout_GridRowStart_Ln1Z3",
+          GridRowEnd: "layout_GridRowEnd_3Hjlr",
+          GridArea: "layout_GridArea_uh0Q7",
+          Background: "layout_Background_1i6Ah",
+          Overflow: "layout_Overflow_2TSlF",
+          ZIndex: "layout_ZIndex_3MdwI",
+          Display: "layout_Display_1jz8v",
+          Elevation: "layout_Elevation_51vKf",
+          Border: "layout_Border_2lajV",
+          BorderColor: "layout_BorderColor_1x6gy",
+          Outline: "layout_Outline_2UkNT",
+          AlignSelf: "layout_AlignSelf_Rrxq_",
+          JustifySelf: "layout_JustifySelf_1i4Rl",
+          TextAlign: "layout_TextAlign_1xbvB",
+          AspectRatio: "layout_AspectRatio_1OB-p",
+        };
+      },
+      chunkid: (module) => {
+        _.exports = {
+          Root: "root_Root_2KPA3",
+        };
+      },
+      chunkid: (module) => {
+        _.exports = {
+          Reset: "reset_Reset_3A_c3",
+        };
+      },
+      chunkid: (module) => {
+        _.exports = {
           Bold: "bbcodes_Bold_3cln3",
           Italic: "bbcodes_Italic_3TPGD",
           Paragraph: "bbcodes_Paragraph_3lnqG",
@@ -1161,6 +1441,33 @@ var CLSTAMP = "steamdb";
           ScrollY: "scrollpanel_ScrollY_29Wyp",
           ScrollX: "scrollpanel_ScrollX_1l1Hf",
           ScrollBoth: "scrollpanel_ScrollBoth_1mUVX",
+        };
+      },
+      chunkid: (module) => {
+        _.exports = {
+          ContentReportDialog: "contentreportdialog_ContentReportDialog_znQXq",
+          ContentReportPanes: "contentreportdialog_ContentReportPanes_1VfOH",
+          LandingDescriptionCtn:
+            "contentreportdialog_LandingDescriptionCtn_1NNGq",
+          BlockList: "contentreportdialog_BlockList_38Q05",
+          BlockListItem: "contentreportdialog_BlockListItem_1Qts5",
+          BlockListDesc: "contentreportdialog_BlockListDesc_2OATg",
+          BlockListReason: "contentreportdialog_BlockListReason_3IpL4",
+          BottomButtons: "contentreportdialog_BottomButtons_2hDV1",
+          DetailedReasonTextArea:
+            "contentreportdialog_DetailedReasonTextArea_33PqK",
+          NamePanel: "contentreportdialog_NamePanel_LJEV8",
+          OptionalNameInput: "contentreportdialog_OptionalNameInput_3Kyhz",
+        };
+      },
+      chunkid: (module) => {
+        _.exports = {
+          PreviewYouTubeVideo: "youtubeembed_PreviewYouTubeVideo_uT9FP",
+          sizeThumb: "youtubeembed_sizeThumb_34Jfg",
+          sizeFull: "youtubeembed_sizeFull_2i-wr",
+          PlaceholderImg: "youtubeembed_PlaceholderImg_wJ2r7",
+          floatLeft: "youtubeembed_floatLeft_3uqwD",
+          floatRight: "youtubeembed_floatRight_29hzT",
         };
       },
       chunkid: (module) => {
@@ -1669,16 +1976,6 @@ var CLSTAMP = "steamdb";
       },
       chunkid: (module) => {
         _.exports = {
-          PreviewYouTubeVideo: "youtubeembed_PreviewYouTubeVideo_rUASs",
-          sizeThumb: "youtubeembed_sizeThumb_3dy3K",
-          sizeFull: "youtubeembed_sizeFull_14CxW",
-          PlaceholderImg: "youtubeembed_PlaceholderImg_LILNd",
-          floatLeft: "youtubeembed_floatLeft_2OWxr",
-          floatRight: "youtubeembed_floatRight_om0Rs",
-        };
-      },
-      chunkid: (module) => {
-        _.exports = {
           narrowWidth: "500px",
           chatEntryControls: "chatentry_chatEntryControls_3Ule3",
           chatTextarea: "chatentry_chatTextarea_113iu",
@@ -1699,15 +1996,6 @@ var CLSTAMP = "steamdb";
         _.exports = {
           ContentReportDialog:
             "contentmoderationreportdialog_ContentReportDialog_1nRyg",
-          BlockList: "contentmoderationreportdialog_BlockList_26Mh3",
-          BlockListItem: "contentmoderationreportdialog_BlockListItem_2tqpD",
-          BlockListDesc: "contentmoderationreportdialog_BlockListDesc_1Wd-o",
-          BlockListReason:
-            "contentmoderationreportdialog_BlockListReason_3aAuW",
-          BottomButtons: "contentmoderationreportdialog_BottomButtons_2g3Wv",
-          ReportAs: "contentmoderationreportdialog_ReportAs_22Uov",
-          DetailedReasonTextArea:
-            "contentmoderationreportdialog_DetailedReasonTextArea_1PUlL",
           ChatReportSubmittedDialog:
             "contentmoderationreportdialog_ChatReportSubmittedDialog_2cJjG",
           ChatReportSubmittedBody:
@@ -1716,8 +2004,6 @@ var CLSTAMP = "steamdb";
             "contentmoderationreportdialog_ChatReportCallToAction_31M5a",
           ButtonPlaceholder:
             "contentmoderationreportdialog_ButtonPlaceholder_2tOAu",
-          LandingDescriptionCtn:
-            "contentmoderationreportdialog_LandingDescriptionCtn_2rXtB",
           AccountSafetyCtn:
             "contentmoderationreportdialog_AccountSafetyCtn_3BVlf",
           Icon: "contentmoderationreportdialog_Icon_29JC6",
@@ -1728,9 +2014,6 @@ var CLSTAMP = "steamdb";
             "contentmoderationreportdialog_ExplanationBody_3eWes",
           ExplanationMoreInfo:
             "contentmoderationreportdialog_ExplanationMoreInfo_1IR8K",
-          NamePanel: "contentmoderationreportdialog_NamePanel_ovujK",
-          OptionalNameInput:
-            "contentmoderationreportdialog_OptionalNameInput_1PFmi",
         };
       },
       chunkid: (module) => {
@@ -2955,7 +3238,7 @@ var CLSTAMP = "steamdb";
         var _ = {
           "./af": 99805,
           "./af.js": 99805,
-          "./ar": 94449,
+          "./ar": 16830,
           "./ar-dz": 44468,
           "./ar-dz.js": 44468,
           "./ar-kw": 63480,
@@ -2970,7 +3253,7 @@ var CLSTAMP = "steamdb";
           "./ar-sa.js": 50230,
           "./ar-tn": 72808,
           "./ar-tn.js": 72808,
-          "./ar.js": 94449,
+          "./ar.js": 16830,
           "./az": 45865,
           "./az.js": 45865,
           "./be": 86627,
@@ -14151,6 +14434,8 @@ var CLSTAMP = "steamdb";
           m_bFriendIsTyping = !1;
           m_tsLastSentTypingNotification;
           m_bNeedsNonFriendWarning = !1;
+          m_ulNonFriendSharedChatGroupID = void 0;
+          m_bRequestedSharedChatGroup = !1;
           m_bPartnerSuspicious = !1;
           constructor(_, _, _) {
             super(_.FriendStore, _, _),
@@ -14232,9 +14517,32 @@ var CLSTAMP = "steamdb";
               );
             if (_) {
               let _ = _._.FriendStore.GetFriend(this.accountid_partner);
-              _ = !_ || !_.is_friend;
+              (_ = !_ || !_.is_friend), this.LoadSharedChatGroup();
             }
             return _;
+          }
+          get nonfriend_shared_chat_group_id() {
+            return this.m_ulNonFriendSharedChatGroupID;
+          }
+          LoadSharedChatGroup() {
+            if (this.m_bRequestedSharedChatGroup) return;
+            this.m_bRequestedSharedChatGroup = !0;
+            let _ = _._.Init(_._);
+            _.Body().set_steamid(
+              _._.InitFromAccountID(
+                this.m_unAccountIDFriend,
+              ).ConvertTo64BitString(),
+            ),
+              _._.GetPartnerSharedChatGroup(
+                this.m_CMInterface.GetServiceTransport(),
+                _,
+              ).then((_) => {
+                const _ = _.Body().chat_group_id();
+                _.GetEResult() == _._ &&
+                  _ &&
+                  "0" != _ &&
+                  (this.m_ulNonFriendSharedChatGroupID = _);
+              });
           }
           BIsSenderSuspicious(_) {
             return _ === this.accountid_partner && this.m_bPartnerSuspicious;
@@ -14621,6 +14929,12 @@ var CLSTAMP = "steamdb";
         }
         (0, _._)([_._], _.prototype, "m_bFriendIsTyping", void 0),
           (0, _._)([_._], _.prototype, "m_bNeedsNonFriendWarning", void 0),
+          (0, _._)(
+            [_._],
+            _.prototype,
+            "m_ulNonFriendSharedChatGroupID",
+            void 0,
+          ),
           (0, _._)([_._], _.prototype, "m_bPartnerSuspicious", void 0),
           (0, _._)([_._], _.prototype, "SetPartnerSuspicious", null),
           (0, _._)([_._], _.prototype, "DismissSuspicion", null),
@@ -37440,9 +37754,7 @@ var CLSTAMP = "steamdb";
           _: () => _,
           _: () => _,
         });
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
+        var _,
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -37451,6 +37763,343 @@ var CLSTAMP = "steamdb";
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
+        function _(_) {
+          const { ownerWindow: _ } = (0, _._)(),
+            _ = "function" == typeof _.matchMedia ? _.matchMedia : _,
+            _ = (0, _.useMemo)(() => __webpack_require__(_), [_, _]),
+            [_, _] = (0, _.useState)(!!_ && _.matches);
+          return (
+            (0, _.useEffect)(() => {
+              if (!_) return () => {};
+              function _(_) {
+                _(_.matches);
+              }
+              return (
+                _(_.matches),
+                _.addEventListener("change", _),
+                () => _.removeEventListener("change", _)
+              );
+            }, [_]),
+            _
+          );
+        }
+        function _() {
+          return null;
+        }
+        !(function (_) {
+          (_[(_.None = 0)] = "None"),
+            (_[(_.Header = 1)] = "Header"),
+            (_[(_.Fallback = 2)] = "Fallback");
+        })(_ || (_ = {}));
+        const _ = (0, _.createContext)({});
+        const _ = ["initial", "xs", "sm", "md", "lg"],
+          _ = (0, _.createContext)({
+            _: 375,
+            _: 768,
+            _: 940,
+            _: 1240,
+            _: "lg",
+          });
+        function _(_ = {}) {
+          const _ = (0, _.useContext)(_),
+            _ = _._ ?? _._,
+            _ = _._ ?? _._,
+            _ = _._ ?? _._,
+            _ = _._ ?? _._;
+          return (0, _.useMemo)(
+            () => ({
+              _: _,
+              _: _,
+              _: _,
+              _: _,
+            }),
+            [_, _, _, _],
+          );
+        }
+        function _(_) {
+          const { _: _, breakpoints: _, children: _ } = _,
+            { _: _, _: _, _: _, _: _ } = _(_),
+            _ = (0, _.useMemo)(
+              () => ({
+                _: _,
+                _: _,
+                _: _,
+                _: _,
+                _: _,
+              }),
+              [_, _, _, _, _],
+            );
+          return (0, _.jsx)(_.Provider, {
+            value: _,
+            children: _,
+          });
+        }
+        function _(_) {
+          const { children: _, breakpoints: _ } = _,
+            _ = _(_),
+            _ = (function (_) {
+              const _ = _(`(min-width: ${_._}px)`),
+                _ = _(`(min-width: ${_._}px)`),
+                _ = _(`(min-width: ${_._}px)`),
+                _ = _(`(min-width: ${_._}px)`),
+                [_, _] = (0, _.useState)(!0);
+              (0, _.useEffect)(() => _(!0), []);
+              const _ = (0, _.useContext)(_);
+              if (!_)
+                return _.viewportWidth
+                  ? _.viewportWidth.value >= _._
+                    ? "lg"
+                    : _.viewportWidth.value >= _._
+                      ? "md"
+                      : _.viewportWidth.value >= _._
+                        ? "sm"
+                        : _.viewportWidth.value >= _._
+                          ? "xs"
+                          : "initial"
+                  : "lg";
+              return _ ? "lg" : _ ? "md" : _ ? "sm" : _ ? "xs" : "initial";
+            })(_);
+          return (0, _.jsx)(_, {
+            _: _,
+            breakpoints: _,
+            children: _,
+          });
+        }
+        function _(_) {
+          const { formFactor: _, children: _ } = _,
+            _ = (0, _.useContext)(_),
+            _ = (0, _.useMemo)(
+              () => ({
+                ..._,
+                _: _ ?? _._,
+              }),
+              [_, _],
+            );
+          return _
+            ? (0, _.jsx)(_.Provider, {
+                value: _,
+                children: _,
+              })
+            : (0, _.jsx)(_.Fragment, {
+                children: _,
+              });
+        }
+        function _() {
+          return (0, _.useContext)(_)._;
+        }
+        _.reduce((_, _, _) => ((_[_] = _), _), {});
+        const _ = (0, _.createContext)({}),
+          _ = (0, _.createContext)(() => {});
+        function _(_) {
+          const [_, _] = (0, _.useState)({});
+          return (0, _.jsx)(_.Provider, {
+            value: _,
+            children: (0, _.jsx)(_.Provider, {
+              value: _,
+              children: _.children,
+            }),
+          });
+        }
+        function _() {
+          return (0, _.useContext)(_);
+        }
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_);
+        const _ = [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11",
+          "12",
+        ];
+        const _ = ["title", "subtitle", "body", "description", "note"],
+          _ = (0, _.createContext)({
+            Button: "basic",
+            Checkbox: "basic",
+            Combobox: "basic",
+            LoadingSpinner: "basic",
+            SegmentedControl: "basic",
+            Select: "basic",
+            TextArea: "basic",
+            TextInput: "basic",
+          });
+        function _(_) {
+          const { variants: _ = {}, children: _ } = _,
+            _ = (0, _.use)(_);
+          return (0, _.jsx)(_, {
+            value: {
+              ..._,
+              ..._,
+            },
+            children: _,
+          });
+        }
+        function _(_, _) {
+          const _ = (function (_) {
+            return (0, _.use)(_)[_];
+          })(_);
+          return _ && "default" !== _ ? _ : _;
+        }
+        var _ = __webpack_require__("chunkid");
+        const _ = (0, _.createContext)("auto");
+        function _(_) {
+          const { presentation: _, children: _ } = _;
+          return (0, _.jsx)(_.Provider, {
+            value: _,
+            children: _,
+          });
+        }
+        function _(_) {
+          const {
+              accentColor: _,
+              dullColor: _,
+              bodyTextColor: _,
+              successColor: _,
+              warningColor: _,
+              errorColor: _,
+              successTextColor: _,
+              warningTextColor: _,
+              errorTextColor: _,
+              children: _,
+              breakpoints: _,
+              variants: _,
+              popoverPresentation: _,
+            } = _,
+            _ = {
+              display: "contents",
+            };
+          let _, _, _;
+          "string" == typeof _ ? (_ = _) : _ && _(_, "accent", _),
+            "string" == typeof _ ? (_ = _) : _ && _(_, "dull", _),
+            "string" == typeof _ ? (_ = _) : _ && _(_, "body", _),
+            _ && _(_, "success", _),
+            _ && _(_, "warning", _),
+            _ && _(_, "error", _),
+            _ && _(_, "success", _),
+            _ && _(_, "warning", _),
+            _ && _(_, "error", _);
+          let _ = (0, _.jsx)(_, {
+            variants: _,
+            children: (0, _.jsx)("div", {
+              "data-accent-color": _,
+              "data-dull-color": _,
+              "data-body-text-color": _,
+              style: _,
+              children: (0, _.jsx)("div", {
+                style: {
+                  display: "contents",
+                  color: "var(--color-text-body-body)",
+                },
+                children: _,
+              }),
+            }),
+          });
+          return (
+            _ &&
+              (_ = (0, _.jsx)(_, {
+                presentation: _,
+                children: _,
+              })),
+            _
+              ? (0, _.jsx)(_, {
+                  breakpoints: _,
+                  children: _,
+                })
+              : _
+          );
+        }
+        function _(_, _, _) {
+          if ("string" == typeof _)
+            for (const _ of _)
+              _[`--color-${_}-${_}`] = `var(--color-${_}-${_})`;
+          else
+            for (const [_, _] of Object.entries(_)) _[`--color-${_}-${_}`] = _;
+        }
+        function _(_, _, _) {
+          if ("string" == typeof _)
+            for (const _ of _)
+              _[`--color-text-${_}-${_}`] = `var(--color-${_}-${_})`;
+          else
+            for (const [_, _] of Object.entries(_))
+              _[`--color-text-${_}-${_}`] = _;
+        }
+        const _ = _.memo(function (_) {
+          const {
+            defaultTextSize: _,
+            accentColor: _ = "blue",
+            dullColor: _ = "greyneutral",
+            successColor: _ = "green",
+            warningColor: _ = "yellow",
+            errorColor: _ = "red",
+            bodyTextColor: _ = "text-light",
+            successTextColor: _ = "text-green",
+            warningTextColor: _ = "text-yellow",
+            errorTextColor: _ = "text-red",
+            breakpoints: _,
+            variants: _,
+            popoverPresentation: _,
+            children: _,
+            zoo: _,
+          } = _;
+          let _;
+          return (
+            _ &&
+              (_ = {
+                "--default-font-size": `var(--text-size-${_})`,
+                "--default-line-height": `var(--line-height-${_})`,
+                "--default-letter-spacing": `var(--letter-spacing-${_})`,
+              }),
+            (0, _.jsx)(_, {
+              children: (0, _.jsx)(_, {
+                breakpoints: _,
+                children: (0, _.jsx)(_, {
+                  children: (0, _.jsx)("div", {
+                    className: _()(_.Root, "noOpinionatedGlobalStyles"),
+                    style: _,
+                    children: (0, _.jsxs)(_, {
+                      accentColor: _,
+                      dullColor: _,
+                      successColor: _,
+                      warningColor: _,
+                      errorColor: _,
+                      bodyTextColor: _,
+                      successTextColor: _,
+                      warningTextColor: _,
+                      errorTextColor: _,
+                      variants: _,
+                      popoverPresentation: _,
+                      children: [_, !1],
+                    }),
+                  }),
+                }),
+              }),
+            })
+          );
+        });
+        function _(_) {
+          const { children: _ } = _,
+            { formFactorOverride: _ } = _();
+          return (0, _.jsx)(_, {
+            formFactor: _,
+            children: _,
+          });
+        }
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ =
+            (__webpack_require__("chunkid"),
+            __webpack_require__("chunkid"),
+            __webpack_require__("chunkid"),
+            __webpack_require__("chunkid"));
         const _ = {};
         (_.arabic = () =>
           __webpack_require__._("chunkid").then(_._.bind(_, 59457, 19))),
@@ -37519,16 +38168,7 @@ var CLSTAMP = "steamdb";
         const _ = (0, _._)(async function (_) {
           if (_[_]) return _[_]();
         });
-        __webpack_require__("chunkid");
         var _;
-        !(function (_) {
-          (_[(_.k_EContentModerationAction_None = 0)] =
-            "k_EContentModerationAction_None"),
-            (_[(_.k_EContentModerationAction_Sustain = 1)] =
-              "k_EContentModerationAction_Sustain"),
-            (_[(_.k_EContentModerationAction_MarkSuspicious = 2)] =
-              "k_EContentModerationAction_MarkSuspicious");
-        })(_ || (_ = {}));
         function _(_) {
           return !!_ && "children" in _;
         }
@@ -37538,6 +38178,14 @@ var CLSTAMP = "steamdb";
         function _(_) {
           return !!_ && "value" in _;
         }
+        !(function (_) {
+          (_[(_.k_EContentModerationAction_None = 0)] =
+            "k_EContentModerationAction_None"),
+            (_[(_.k_EContentModerationAction_Sustain = 1)] =
+              "k_EContentModerationAction_Sustain"),
+            (_[(_.k_EContentModerationAction_MarkSuspicious = 2)] =
+              "k_EContentModerationAction_MarkSuspicious");
+        })(_ || (_ = {}));
         const _ = [
             {
               strLocToken: "#ContentReportReasonCategory_ScamsAndTheft",
@@ -38105,16 +38753,947 @@ var CLSTAMP = "steamdb";
           }
         }
         _._, _._, _._, _._, _._;
+        var _ = __webpack_require__("chunkid");
+        const _ = _.reduce((_, _, _) => ((_[_] = _), _), {});
+        function _(_, _) {
+          if ("object" != typeof _) return _;
+          for (let _ = _[_]; _ >= 0; _--) if (_[_] in _) return _[_[_]];
+          return _.initial;
+        }
+        const _ = {
+          0: !0,
+          1: !0,
+          2: !0,
+          3: !0,
+          4: !0,
+          5: !0,
+          6: !0,
+          7: !0,
+          8: !0,
+          9: !0,
+        };
+        function _(_, _) {
+          return (function (_, _, _) {
+            const _ = [],
+              _ = {},
+              _ = {},
+              { extracted: _, remaining: _ } = (function (_, _) {
+                const _ = {
+                  remaining: {
+                    ..._,
+                  },
+                  extracted: {},
+                };
+                for (const _ of _) {
+                  const _ = _.prop;
+                  _ in _.remaining &&
+                    ((_.extracted[_] = _.remaining[_]), delete _.remaining[_]);
+                }
+                return _;
+              })(_, _);
+            for (const _ of _) {
+              if (!(_.prop in _)) continue;
+              let _ = _[_.prop];
+              if (
+                void 0 !== _ &&
+                (_.responsive && (_ = _(_, _.formFactor)), void 0 !== _)
+              ) {
+                if (_.className) {
+                  if (
+                    !_.cssProperty &&
+                    !_.dataProperty &&
+                    "string" == typeof _.className &&
+                    !_
+                  )
+                    continue;
+                  const _ =
+                    "function" == typeof _.className
+                      ? _.className(_)
+                      : _.className;
+                  _.push(_);
+                }
+                if (_.cssProperty)
+                  if ("function" == typeof _.cssProperty) {
+                    const _ = _.cssProperty(_, _, _.formFactor);
+                    if (_.length && Array.isArray(_[0]))
+                      _.forEach(([_, _]) => (_[_] = _));
+                    else {
+                      const _ = _;
+                      _[_[0]] = _[1];
+                    }
+                  } else _[_.cssProperty] = _;
+                if (_.dataProperty)
+                  if ("function" == typeof _.dataProperty) {
+                    const [_, _] = _.dataProperty(_);
+                    _[`data-${_}`] = _;
+                  } else _[`data-${_.dataProperty}`] = _;
+              }
+            }
+            return (
+              "className" in _ &&
+                "string" == typeof _.className &&
+                _.push(_.className),
+              "style" in _ &&
+                _.style &&
+                "object" == typeof _.style &&
+                Object.assign(_, _.style),
+              {
+                ..._,
+                ..._,
+                className: _.join(" "),
+                style: _,
+              }
+            );
+          })(_, _, {
+            formFactor: _(),
+          });
+        }
+        function _(_) {
+          return (function (_) {
+            return !!_[_];
+          })(_)
+            ? `var(--spacing-${_})`
+            : _;
+        }
+        function _(_) {
+          if (!("%" == _[_.length - 1])) return `var(--color-${_})`;
+          const [_, _] = _.split(" ");
+          return `rgb( from ${`var(--color-${_})`} r g b / ${_} )`;
+        }
+        var _ = __webpack_require__("chunkid");
+        const _ = [
+            {
+              prop: "margin",
+              responsive: !0,
+              className: (_) => _[`m-${_}`],
+            },
+            {
+              prop: "marginX",
+              responsive: !0,
+              className: (_) => _[`mx-${_}`],
+            },
+            {
+              prop: "marginY",
+              responsive: !0,
+              className: (_) => _[`my-${_}`],
+            },
+            {
+              prop: "marginTop",
+              responsive: !0,
+              className: (_) => _[`mt-${_}`],
+            },
+            {
+              prop: "marginRight",
+              responsive: !0,
+              className: (_) => _[`mr-${_}`],
+            },
+            {
+              prop: "marginBottom",
+              responsive: !0,
+              className: (_) => _[`mb-${_}`],
+            },
+            {
+              prop: "marginLeft",
+              responsive: !0,
+              className: (_) => _[`ml-${_}`],
+            },
+            {
+              prop: "marginStart",
+              responsive: !0,
+              className: (_) => _[`ms-${_}`],
+            },
+            {
+              prop: "marginEnd",
+              responsive: !0,
+              className: (_) => _[`me-${_}`],
+            },
+          ],
+          _ = [
+            ..._,
+            {
+              prop: "padding",
+              responsive: !0,
+              className: (_) => _[`p-${_}`],
+            },
+            {
+              prop: "paddingX",
+              responsive: !0,
+              className: (_) => _[`px-${_}`],
+            },
+            {
+              prop: "paddingY",
+              responsive: !0,
+              className: (_) => _[`py-${_}`],
+            },
+            {
+              prop: "paddingTop",
+              responsive: !0,
+              className: (_) => _[`pt-${_}`],
+            },
+            {
+              prop: "paddingRight",
+              responsive: !0,
+              className: (_) => _[`pr-${_}`],
+            },
+            {
+              prop: "paddingBottom",
+              responsive: !0,
+              className: (_) => _[`pb-${_}`],
+            },
+            {
+              prop: "paddingLeft",
+              responsive: !0,
+              className: (_) => _[`pl-${_}`],
+            },
+            {
+              prop: "paddingStart",
+              responsive: !0,
+              className: (_) => _[`ps-${_}`],
+            },
+            {
+              prop: "paddingEnd",
+              responsive: !0,
+              className: (_) => _[`pe-${_}`],
+            },
+            {
+              prop: "width",
+              responsive: !0,
+              className: _.Width,
+              cssProperty: "--width",
+            },
+            {
+              prop: "minWidth",
+              responsive: !0,
+              className: _.MinWidth,
+              cssProperty: "--min-width",
+            },
+            {
+              prop: "maxWidth",
+              responsive: !0,
+              className: _.MaxWidth,
+              cssProperty: "--max-width",
+            },
+            {
+              prop: "height",
+              responsive: !0,
+              className: _.Height,
+              cssProperty: "--height",
+            },
+            {
+              prop: "minHeight",
+              responsive: !0,
+              className: _.MinHeight,
+              cssProperty: "--min-height",
+            },
+            {
+              prop: "maxHeight",
+              responsive: !0,
+              className: _.MaxHeight,
+              cssProperty: "--max-height",
+            },
+            {
+              prop: "flexBasis",
+              responsive: !0,
+              className: _.FlexBasis,
+              cssProperty: "--flex-basis",
+            },
+            {
+              prop: "flexGrow",
+              responsive: !0,
+              className: _.FlexGrow,
+              cssProperty: "--flex-grow",
+            },
+            {
+              prop: "flexShrink",
+              responsive: !0,
+              className: _.FlexShrink,
+              cssProperty: "--flex-shrink",
+            },
+            {
+              prop: "radius",
+              responsive: !0,
+              className: (_) => _[`Radius-${_}`],
+            },
+            {
+              prop: "cursor",
+              responsive: !0,
+              className: _.Cursor,
+              cssProperty: "--cursor",
+            },
+            {
+              prop: "position",
+              responsive: !0,
+              className: _.Position,
+              cssProperty: "--position",
+            },
+            {
+              prop: "inset",
+              responsive: !0,
+              className: _.Inset,
+              cssProperty: (_) => ["--inset", _(_)],
+            },
+            {
+              prop: "gridColumn",
+              responsive: !0,
+              className: _.GridColumn,
+              cssProperty: "--grid-column",
+            },
+            {
+              prop: "gridColumnStart",
+              responsive: !0,
+              className: _.GridColumnStart,
+              cssProperty: "--grid-column-start",
+            },
+            {
+              prop: "gridColumnEnd",
+              responsive: !0,
+              className: _.GridColumnEnd,
+              cssProperty: "--grid-column-end",
+            },
+            {
+              prop: "gridRow",
+              responsive: !0,
+              className: _.GridRow,
+              cssProperty: "--grid-row",
+            },
+            {
+              prop: "gridRowStart",
+              responsive: !0,
+              className: _.GridRowStart,
+              cssProperty: "--grid-row-start",
+            },
+            {
+              prop: "gridRowEnd",
+              responsive: !0,
+              className: _.GridRowEnd,
+              cssProperty: "--grid-row-end",
+            },
+            {
+              prop: "gridArea",
+              responsive: !0,
+              className: _.GridArea,
+              cssProperty: "--grid-area",
+            },
+            {
+              prop: "alignSelf",
+              responsive: !0,
+              className: _.AlignSelf,
+              cssProperty: "--align-self",
+            },
+            {
+              prop: "justifySelf",
+              responsive: !0,
+              className: _.JustifySelf,
+              cssProperty: "--justify-self",
+            },
+            {
+              prop: "background",
+              responsive: !0,
+              className: _.Background,
+              cssProperty: (_) => ["--background", _(_)],
+            },
+            {
+              prop: "overflow",
+              responsive: !0,
+              className: _.Overflow,
+              cssProperty: "--overflow",
+            },
+            {
+              prop: "zIndex",
+              responsive: !0,
+              className: _.ZIndex,
+              cssProperty: "--z-index",
+            },
+            {
+              prop: "display",
+              responsive: !0,
+              className: _.Display,
+              cssProperty: "--display",
+            },
+            {
+              prop: "elevation",
+              responsive: !0,
+              className: _.Elevation,
+              dataProperty: "elevation",
+            },
+            {
+              prop: "border",
+              responsive: !0,
+              className: _.Border,
+              cssProperty: "--border",
+            },
+            {
+              prop: "borderColor",
+              responsive: !0,
+              className: [_.Border, _.BorderColor].join(" "),
+              cssProperty: (_) => ["--border-color", _(_)],
+            },
+            {
+              prop: "outline",
+              responsive: !0,
+              className: _.Outline,
+              cssProperty: (_) => ["--outline-color", _(_)],
+            },
+            {
+              prop: "textAlign",
+              responsive: !0,
+              className: _.TextAlign,
+              cssProperty: "--text-align",
+            },
+            {
+              prop: "aspectRatio",
+              responsive: !0,
+              className: _.AspectRatio,
+              cssProperty: "--aspect-ratio",
+            },
+          ];
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        function _(_) {
+          const { children: _, "flow-children": _, ..._ } = _,
+            { gamepadEvents: _ } = (0, _._)(_);
+          let _;
+          _ && (_.layout = (0, _._)(_)),
+            _.onOKButton ||
+              ("onClick" in _.props && _.props.onClick && (_.onOKButton = _._)),
+            _.focusable && (_ = _.props.tabIndex || 0);
+          const { ref: _, node: _ } = (0, _._)(_);
+          (0, _._)(_, _);
+          const _ = (0, _._)(_),
+            _ = (0, _._)(_, _.props?.ref, _);
+          return (0, _.jsx)(_._.Provider, {
+            value: _,
+            children: _.cloneElement(_, {
+              ..._.props,
+              ref: _,
+              tabIndex: _,
+            }),
+          });
+        }
+        var _ = __webpack_require__("chunkid");
+        function _(_) {
+          const { _: _ = "div", focusable: _, navProps: _, ref: _, ..._ } = _,
+            _ = (0, _._)(),
+            _ = _(
+              {
+                ..._,
+                className: _()(_.Box, _.Reset, _.className),
+              },
+              _,
+            ),
+            _ = _ ?? _?.focusable ?? !!_.onClick,
+            _ = (0, _.jsx)(_, {
+              ref: _,
+              ..._,
+            });
+          return _ && (_ || _)
+            ? (0, _.jsx)(_, {
+                ...(_ || {}),
+                focusable: _,
+                children: _,
+              })
+            : _;
+        }
+        const _ = _;
+        var _ = __webpack_require__("chunkid");
+        function _(_) {
+          const { _: _ = "div", focusable: _, navProps: _, ref: _, ..._ } = _,
+            _ = (0, _._)(),
+            _ = _(
+              {
+                ..._,
+                className: _()(_.className, _.Flex),
+              },
+              _,
+            ),
+            _ = _ ?? _?.focusable ?? !!_.onClick,
+            _ = (0, _.jsx)(_, {
+              ref: _,
+              ..._,
+            }),
+            _ = _(_.direction ?? "row", _());
+          return _
+            ? (0, _.jsx)(_, {
+                ...(_ || {}),
+                focusable: _,
+                "flow-children": _,
+                children: _,
+              })
+            : _;
+        }
+        const _ = [
+          ..._,
+          {
+            prop: "direction",
+            responsive: !0,
+            className: _.Direction,
+            cssProperty: "--direction",
+          },
+          {
+            prop: "justify",
+            responsive: !0,
+            className: _.Justify,
+            cssProperty: (_) => ["--justify", _(_)],
+          },
+          {
+            prop: "align",
+            responsive: !0,
+            className: _.Align,
+            cssProperty: "--align",
+          },
+          {
+            prop: "gap",
+            responsive: !0,
+            className: _.Gap,
+            cssProperty: (_) => ["--gap", `var(--spacing-${_})`],
+          },
+          {
+            prop: "gapX",
+            responsive: !0,
+            className: _.GapX,
+            cssProperty: (_) => ["--gap-x", `var(--spacing-${_})`],
+          },
+          {
+            prop: "gapY",
+            responsive: !0,
+            className: _.GapY,
+            cssProperty: (_) => ["--gap-y", `var(--spacing-${_})`],
+          },
+          {
+            prop: "wrap",
+            responsive: !0,
+            className: _.Wrap,
+            cssProperty: "--wrap",
+          },
+          {
+            prop: "inline",
+            responsive: !0,
+            className: _.Inline,
+          },
+        ];
+        function _(_) {
+          return /^(between|around|evenly)$/.test(_) ? `space-${_}` : _;
+        }
+        function _(_) {
+          const {
+              size: _ = "3",
+              loading: _ = !0,
+              children: _,
+              color: _,
+              variant: _,
+              ..._
+            } = _,
+            _ = _("LoadingSpinner", _);
+          return _ || !_
+            ? (0, _.jsxs)(_, {
+                position: "relative",
+                ..._,
+                width: "fit-content",
+                children: [
+                  (0, _.jsx)("div", {
+                    "data-visibility": !_,
+                    className: _.ChildContainer,
+                    children: _,
+                  }),
+                  _ &&
+                    (0, _.jsx)(_, {
+                      position: "absolute",
+                      inset: "0",
+                      justify: "center",
+                      align: "center",
+                      children: (0, _.jsx)(_, {
+                        size: _,
+                        color: _,
+                        variant: _,
+                      }),
+                    }),
+                ],
+              })
+            : (0, _.jsx)(_, {
+                size: _,
+                color: _,
+                variant: _,
+                ..._,
+              });
+        }
+        function _(_) {
+          const { className: _, color: _, ..._ } = _(_, _);
+          return (0, _.jsx)("div", {
+            "data-accent-color": _,
+            className: _()(_, _.Spinner),
+            ..._,
+          });
+        }
+        const _ = [
+          ..._,
+          {
+            prop: "size",
+            responsive: !0,
+            className: (_) => _[`Size-${_}`],
+          },
+          {
+            prop: "variant",
+            className: (_) => _[`Variant-${_}`],
+          },
+        ];
+        var _ = __webpack_require__("chunkid");
+        const _ = [
+            ..._,
+            {
+              prop: "size",
+              responsive: !0,
+              className: (_) => _[`Size-${_}`],
+            },
+            {
+              prop: "variant",
+              className: (_) => _[`Variant-${_}`],
+            },
+            {
+              prop: "color",
+              dataProperty: (_) => ["accent-color", `${_}`],
+            },
+            {
+              prop: "width",
+              className: _.Width,
+              cssProperty: "--width",
+              responsive: !0,
+            },
+            {
+              prop: "minWidth",
+              className: _.MinWidth,
+              cssProperty: "--min-width",
+              responsive: !0,
+            },
+          ],
+          _ = function (_) {
+            const {
+                variant: _,
+                size: _ = "2",
+                minWidth: _ = "fit-content",
+                color: _,
+                loading: _,
+                children: _,
+                onClick: _,
+                icon: _,
+                focusable: _,
+                navProps: _,
+                ..._
+              } = _,
+              _ = (0, _._)(),
+              _ = _
+                ? (0, _.jsx)(_, {
+                    size: _,
+                    color: _,
+                    variant: "bright",
+                    children: _,
+                  })
+                : _,
+              _ = _ ? void 0 : _,
+              _ = _ ?? _?.focusable ?? !!_,
+              _ = {
+                type: "button",
+                ..._(
+                  {
+                    ..._,
+                    variant: _("Button", _),
+                    size: _,
+                    minWidth: _,
+                    color: _,
+                    className: _()(_.Button, _ && _.Icon),
+                    onClick: _,
+                  },
+                  _,
+                ),
+                children: _,
+              };
+            return _ && (_ || _)
+              ? (0, _.jsx)(_._, {
+                  ..._,
+                  ...(_ || {}),
+                  focusable: _,
+                })
+              : (0, _.jsx)("button", {
+                  ..._,
+                });
+          };
+        var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_);
+        const _ = new Set();
+        function _(_) {
+          const { reportMutation: _, onClose: _ } = _,
+            [_, _] = (0, _.useState)([]),
+            [_, _] = (0, _.useState)("reason"),
+            [_, _] = (0, _.useState)(null),
+            [_, _] = (0, _.useState)(""),
+            [_, _] = (0, _.useState)(""),
+            _ = _.length ? _[_.length - 1] : null,
+            _ = _ && _(_) ? _.value : _._;
+          let _ = [];
+          _ && _(_) ? (_ = _.children) : _ || (_ = _.rgReportReasonTree ?? _);
+          const _ = _.excludedReasons ?? _,
+            _ = _.filter((_) => !_(_, _)).map((_) =>
+              (0, _.jsx)(
+                _,
+                {
+                  node: _,
+                  onClick: () =>
+                    ((_) => {
+                      const _ =
+                        _(_) && 1 === _.children.length ? _.children[0] : _;
+                      _([..._, _]),
+                        _(_)
+                          ? (_(
+                              _.strOverrideReasonNameLocToken
+                                ? _.Localize(_.strOverrideReasonNameLocToken)
+                                : null,
+                            ),
+                            _("submit"))
+                          : _(_) &&
+                            (_.strWarningBeforeNav
+                              ? _("anchorwarning")
+                              : (window.location.href = _.url));
+                    })(_),
+                },
+                _(_) ? _.value : _.strLocToken,
+              ),
+            );
+          let _ = _.Localize("#ReportContent_Title");
+          "submitted" === _
+            ? (_ = _.Localize("#ContentReportSubmitted_Title"))
+            : "error" === _ &&
+              (_ = _.Localize("#ContentReportSubmissionError_Title"));
+          const _ = (0, _.jsxs)(_, {
+            color: "dull",
+            onClick: () => {
+              _(_.slice(0, -1)), _("reason");
+            },
+            children: ["« ", _.Localize("#ReportContent_Back")],
+          });
+          return {
+            strTitle: _,
+            elContent: (0, _.jsxs)("div", {
+              className: _().ContentReportPanes,
+              children: [
+                "reason" === _ &&
+                  (0, _.jsxs)(_.Fragment, {
+                    children: [
+                      !!_.landingDescription &&
+                        !_.length &&
+                        (0, _.jsx)("div", {
+                          className: _().LandingDescriptionCtn,
+                          children: _.landingDescription,
+                        }),
+                      (0, _.jsx)("p", {
+                        children: _.Localize("#ReportContent_PickAReason"),
+                      }),
+                      (0, _.jsx)(_._, {
+                        focusableIfEmpty: !0,
+                        className: _().BlockList,
+                        children: _,
+                      }),
+                      (0, _.jsx)(_._, {
+                        className: _().BottomButtons,
+                        children: _.length
+                          ? _
+                          : (0, _.jsx)(_, {
+                              color: "dull",
+                              onClick: _,
+                              children: _.Localize("#moderation_cancel"),
+                            }),
+                      }),
+                    ],
+                  }),
+                "submit" === _ &&
+                  (0, _.jsxs)(_.Fragment, {
+                    children: [
+                      (0, _.jsx)("p", {
+                        children: _.Localize("#ReportContent_Attestation"),
+                      }),
+                      (0, _.jsx)(_._, {
+                        children: _.Localize(
+                          "#reportforumpost_reasonforreport",
+                          _ || _(_),
+                        ),
+                      }),
+                      (0, _.jsx)(_._, {
+                        children: (0, _.jsx)(_._, {
+                          autoFocus: !0,
+                          value: _,
+                          onChange: (_) => _(_.target.value),
+                          className: _().DetailedReasonTextArea,
+                          placeholder: _.Localize(
+                            "#ReportContent_DetailsPlaceholder",
+                          ),
+                          maxLength: 1024,
+                        }),
+                      }),
+                      (0, _.jsxs)(_._, {
+                        className: _().NamePanel,
+                        children: [
+                          (0, _.jsx)(_._, {
+                            children: _.Localize(
+                              "#ReportContent_YourNamePlaceholder",
+                            ),
+                          }),
+                          (0, _.jsx)(_._, {
+                            children: (0, _.jsx)(_._, {
+                              className: _().OptionalNameInput,
+                              type: "text",
+                              value: _,
+                              onChange: (_) => _(_.target.value),
+                            }),
+                          }),
+                        ],
+                      }),
+                      (0, _.jsxs)(_._, {
+                        className: _().BottomButtons,
+                        children: [
+                          _,
+                          (0, _.jsx)(_, {
+                            onClick: () => {
+                              if (!_ || !_(_))
+                                return void (0, _._)(
+                                  !1,
+                                  "Content report submitted with invalid reason tree state",
+                                );
+                              const _ = _.trim(),
+                                _ = _.length > 0 ? `${_} - ${_}` : _;
+                              _.mutateAsync({
+                                reason: _.value,
+                                text: _,
+                              })
+                                .then(() => _("submitted"))
+                                .then(() => _.onSubmitted?.())
+                                .catch((_) =>
+                                  _(_?.eResult === _._ ? "cooldown" : "error"),
+                                );
+                            },
+                            disabled: _.isPending,
+                            children: _.Localize("#ReportContent_ReportButton"),
+                          }),
+                        ],
+                      }),
+                    ],
+                  }),
+                "anchorwarning" === _ &&
+                  (0, _.jsxs)(_.Fragment, {
+                    children: [
+                      (0, _.jsx)("p", {
+                        children: _.Localize(_.strWarningBeforeNav),
+                      }),
+                      (0, _.jsxs)(_._, {
+                        className: _().BottomButtons,
+                        children: [
+                          _,
+                          (0, _.jsx)(_, {
+                            onClick: () => {
+                              window.location.href = _.url;
+                            },
+                            children: "Proceed",
+                          }),
+                        ],
+                      }),
+                    ],
+                  }),
+                ("submitted" === _ || "error" === _ || "cooldown" === _) &&
+                  (0, _.jsxs)(_.Fragment, {
+                    children: [
+                      "submitted" === _ &&
+                        (0, _.jsx)("p", {
+                          children: _.Localize(
+                            "#ContentReportSubmitted_Description",
+                          ),
+                        }),
+                      "error" === _ &&
+                        (0, _.jsx)("p", {
+                          children: _.Localize(
+                            "#ContentReportSubmissionError_Description",
+                          ),
+                        }),
+                      "cooldown" === _ &&
+                        (0, _.jsx)("p", {
+                          children: _.Localize(
+                            "#ContentReportSubmissionOnCooldown_Description",
+                          ),
+                        }),
+                      (0, _.jsx)(_._, {
+                        className: _().BottomButtons,
+                        children: (0, _.jsx)(_, {
+                          color: "dull",
+                          onClick: _,
+                          children: _.Localize("#ReportContent_Close"),
+                        }),
+                      }),
+                    ],
+                  }),
+              ],
+            }),
+          };
+        }
+        function _(_) {
+          const { node: _, onClick: _ } = _;
+          let _, _;
+          _(_) &&
+          1 === _.children.length &&
+          !_.bForceLocToken &&
+          _(_.children[0])
+            ? (_ = _(_.children[0].value))
+            : ((_ = _(_)
+                ? _.strOverrideReasonNameLocToken
+                  ? _.Localize(_.strOverrideReasonNameLocToken)
+                  : _(_.value)
+                : _.Localize(_.strLocToken)),
+              (_ = _.strDescriptionLocToken
+                ? _.Localize(_.strDescriptionLocToken)
+                : void 0));
+          const _ = !_(_) && (_(_) || !!_.bShowRightArrow);
+          return (0, _.jsxs)(_._, {
+            focusable: !0,
+            className: _().BlockListItem,
+            onActivate: _,
+            children: [
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _().BlockListReason,
+                    children: _,
+                  }),
+                  !!_ &&
+                    (0, _.jsx)("div", {
+                      className: _().BlockListDesc,
+                      children: _,
+                    }),
+                ],
+              }),
+              _ &&
+                (0, _.jsx)("div", {
+                  children: (0, _.jsx)(_, {}),
+                }),
+            ],
+          });
+        }
+        function _() {
+          return (0, _.jsx)("svg", {
+            viewBox: "0 0 20 20",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            children: (0, _.jsx)("path", {
+              _: "M7 4L13 10L7 16",
+              stroke: "currentColor",
+              strokeWidth: "2",
+              strokeLinecap: "round",
+              strokeLinejoin: "round",
+            }),
+          });
+        }
+        var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid"),
+          _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -38135,49 +39714,43 @@ var CLSTAMP = "steamdb";
               onRemoveFriend: _,
               onBlockCommunication: _,
             } = _,
-            [_, _] = (0, _.useState)(!1);
-          let _ = {
-            subjectType: _._,
-            subjectGroupId: _?.toString(),
-            subjectId: "",
-            onSubmitted: () => {
-              _ && _(), _(!0);
-            },
-            rgReportReasonTree: _(),
-            landingDescription: (0, _.jsx)(_, {}),
-          };
-          const _ = (function (_, _, _, _) {
-            const _ = (0, _._)();
-            return (0, _._)({
-              mutationKey: ["report_friend_chat_msg", _, _, _, _],
-              mutationFn: async (_) => {
-                const _ = _._.Init(_._);
-                _.Body().set_timestamp(_),
-                  _.Body().set_ordinal(_),
-                  _.Body().set_steamid_to(
-                    _._.InitFromAccountID(_).ConvertTo64BitString(),
-                  ),
-                  _.Body().set_steamid_from(
-                    _._.InitFromAccountID(_).ConvertTo64BitString(),
-                  ),
-                  _.Body().set_report_reason(_.reason),
-                  _.Body().set_report_text(_.text),
-                  _.Body().set_language(_._.LANGUAGE);
-                const _ = await _._.ReportMessage(_, _);
-                if (_.GetEResult() !== _._)
-                  throw new Error(_.GetErrorMessage());
-              },
-            });
-          })(_, _, _, _);
+            [_, _] = _.useState(!1),
+            _ = (function (_, _, _, _) {
+              const _ = (0, _._)();
+              return (0, _._)({
+                mutationKey: ["report_friend_chat_msg", _, _, _, _],
+                mutationFn: async (_) => {
+                  const _ = _._.Init(_._);
+                  _.Body().set_timestamp(_),
+                    _.Body().set_ordinal(_),
+                    _.Body().set_steamid_to(
+                      _._.InitFromAccountID(_ ?? 0).ConvertTo64BitString(),
+                    ),
+                    _.Body().set_steamid_from(
+                      _._.InitFromAccountID(_ ?? 0).ConvertTo64BitString(),
+                    ),
+                    _.Body().set_report_reason(_.reason),
+                    _.Body().set_report_text(_.text),
+                    _.Body().set_language(_._.LANGUAGE);
+                  const _ = await _._.ReportMessage(_, _);
+                  if (_.GetEResult() !== _._)
+                    throw new Error(_.GetErrorMessage());
+                },
+              });
+            })(_, _, _, _);
           return _
             ? (0, _.jsxs)(_.Fragment, {
                 children: [
-                  (0, _.jsx)(_, {
-                    reportSubjectMutation: _,
-                    showDialog: !_,
-                    setShowDialog: (_) => !_ && _ && _(),
-                    ..._,
-                  }),
+                  !_ &&
+                    (0, _.jsx)(_, {
+                      reportMutation: _,
+                      rgReportReasonTree: _(),
+                      landingDescription: (0, _.jsx)(_, {}),
+                      onSubmitted: () => {
+                        _ && _(), _(!0);
+                      },
+                      onClose: () => _?.(),
+                    }),
                   (0, _.jsx)(_, {
                     showDialog: _,
                     closeModal: _,
@@ -38228,10 +39801,10 @@ var CLSTAMP = "steamdb";
               onBlock: _,
               onRemoveFriend: _,
             } = _,
-            [_, _] = (0, _.useState)(!!_),
-            [_, _] = (0, _.useState)(!!_),
+            [_, _] = _.useState(!!_),
+            [_, _] = _.useState(!!_),
             _ = async () => {
-              _ && (await _()), __webpack_require__();
+              _ && (await _?.()), __webpack_require__?.();
             },
             _ = _ ? _._ : _._;
           return (0, _.jsxs)(_._, {
@@ -38295,7 +39868,7 @@ var CLSTAMP = "steamdb";
                     _
                       ? (0, _.jsx)(_._, {
                           onClick: async () => {
-                            (await _()) && _(!1);
+                            (await _?.()) && _(!1);
                           },
                           disabled: !_,
                           children: _
@@ -38327,50 +39900,43 @@ var CLSTAMP = "steamdb";
               onRemoveFriend: _,
               onBlockCommunication: _,
             } = _,
-            [_, _] = (0, _.useState)(!1),
-            _ = !_;
-          let _ = {
-            subjectType: _ ? _._ : _._,
-            subjectGroupId: _ ? _ : _.toString(),
-            subjectId: "",
-            onSubmitted: () => {
-              _ && _(), _(!0);
-            },
-            rgReportReasonTree: _(),
-            landingDescription: (0, _.jsx)(_, {}),
-          };
-          const _ = (function (_, _, _, _, _, _) {
-            const _ = (0, _._)();
-            return (0, _._)({
-              mutationKey: ["report_chat_room_msg", _, _, _, _, _],
-              mutationFn: async (_) => {
-                const _ = _._.Init(_.J$N);
-                _.Body().set_subject_type(_),
-                  _.Body().set_chat_group_id(_),
-                  _.Body().set_chat_id(_),
-                  _.Body().set_timestamp(_),
-                  _.Body().set_ordinal(_),
-                  _.Body().set_report_reason(_.reason),
-                  _.Body().set_report_text(_.text),
-                  _.Body().set_language(_._.LANGUAGE),
-                  _ == _._ &&
-                    _.Body().set_steamid_from(
-                      _._.InitFromAccountID(_).ConvertTo64BitString(),
-                    );
-                const _ = await _.xPp.ReportMessage(_, _);
-                if (_.GetEResult() !== _._)
-                  throw new Error(_.GetErrorMessage());
-              },
-            });
-          })(_.subjectType, _, _, _, _, _);
+            [_, _] = _.useState(!1),
+            _ = (function (_, _, _, _, _, _) {
+              const _ = (0, _._)();
+              return (0, _._)({
+                mutationKey: ["report_chat_room_msg", _, _, _, _, _],
+                mutationFn: async (_) => {
+                  const _ = _._.Init(_.J$N);
+                  _.Body().set_subject_type(_),
+                    _.Body().set_chat_group_id(_),
+                    _.Body().set_chat_id(_),
+                    _.Body().set_timestamp(_),
+                    _.Body().set_ordinal(_),
+                    _.Body().set_report_reason(_.reason),
+                    _.Body().set_report_text(_.text),
+                    _.Body().set_language(_._.LANGUAGE),
+                    _ == _._ &&
+                      _.Body().set_steamid_from(
+                        _._.InitFromAccountID(_ ?? 0).ConvertTo64BitString(),
+                      );
+                  const _ = await _.xPp.ReportMessage(_, _);
+                  if (_.GetEResult() !== _._)
+                    throw new Error(_.GetErrorMessage());
+                },
+              });
+            })(!_ ? _._ : _._, _, _, _, _, _);
           return (0, _.jsxs)(_.Fragment, {
             children: [
-              (0, _.jsx)(_, {
-                reportSubjectMutation: _,
-                showDialog: !_,
-                setShowDialog: (_) => !_ && _ && _(),
-                ..._,
-              }),
+              !_ &&
+                (0, _.jsx)(_, {
+                  reportMutation: _,
+                  rgReportReasonTree: _(),
+                  landingDescription: (0, _.jsx)(_, {}),
+                  onSubmitted: () => {
+                    _ && _(), _(!0);
+                  },
+                  onClose: () => _?.(),
+                }),
               (0, _.jsx)(_, {
                 showDialog: _,
                 closeModal: _,
@@ -38381,305 +39947,17 @@ var CLSTAMP = "steamdb";
           });
         }
         function _(_) {
-          const [_, _] = (0, _.useState)([]),
-            [_, _] = (0, _.useState)("reason"),
-            _ = (0, _.useRef)(void 0),
-            _ = (0, _.useRef)(void 0),
-            _ = _.reportSubjectMutation,
-            [_, _] = (0, _.useState)(null),
-            _ = (_) => {
-              let _ = [..._],
-                _ = _;
-              _(_) && 1 === _.children.length && (_ = _.children[0]),
-                _.push(_),
-                __webpack_require__(_),
-                _(_)
-                  ? (_.strOverrideReasonNameLocToken
-                      ? _(_.Localize(_.strOverrideReasonNameLocToken))
-                      : _(null),
-                    _("submit"))
-                  : _(_) &&
-                    (_.strWarningBeforeNav
-                      ? _("anchorwarning")
-                      : (window.location.href = _.url));
-            };
-          if (!_.showDialog) return null;
-          const _ = _.length ? _[_.length - 1] : null,
-            _ = _(_) ? _.value : _._;
-          let _ = [];
-          _.length && _(_)
-            ? (_ = _.children)
-            : 0 === _.length && (_ = _.rgReportReasonTree ?? _);
-          const _ = _.filter((_) => !_(_, _.excludedReasons)).map((_, _) => {
-            const _ = _(_) ? _.value : _.strLocToken;
-            let _,
-              _ = "";
-            _(_)
-              ? 1 === _.children.length && !_.bForceLocToken && _(_.children[0])
-                ? (_ = _(_.children[0].value))
-                : ((_ = _.Localize(_.strLocToken)),
-                  (_ = _.strDescriptionLocToken
-                    ? _.Localize(_.strDescriptionLocToken)
-                    : void 0))
-              : _(_)
-                ? ((_ = _.Localize(_.strLocToken)),
-                  (_ = _.strDescriptionLocToken
-                    ? _.Localize(_.strDescriptionLocToken)
-                    : void 0))
-                : ((_ = _.strOverrideReasonNameLocToken
-                    ? _.Localize(_.strOverrideReasonNameLocToken)
-                    : _(_.value)),
-                  (_ = _.strDescriptionLocToken
-                    ? _.Localize(_.strDescriptionLocToken)
-                    : void 0));
-            const _ = _(_) || _.bShowRightArrow;
-            return _(_)
-              ? (0, _.jsx)(
-                  _,
-                  {
-                    text: _,
-                    description: _,
-                    onClick: () => _(_),
-                  },
-                  _,
-                )
-              : (0, _.jsx)(
-                  _,
-                  {
-                    text: _,
-                    description: _,
-                    onClick: () => _(_),
-                    bShowRightArrow: _,
-                  },
-                  _,
-                );
-          });
-          let _ = "";
-          return (
-            (_ =
-              "submitted" === _
-                ? _.Localize("#ContentReportSubmitted_Title")
-                : "error" === _
-                  ? _.Localize("#ContentReportSubmissionError_Title")
-                  : _.Localize("#ReportContent_Title")),
-            (0, _.jsx)(_.Fragment, {
-              children: (0, _.jsx)(_._, {
-                active: _.showDialog,
-                children: (0, _.jsxs)(_._, {
-                  title: _,
-                  closeModal: () => _.setShowDialog(!1),
-                  className: _().ContentReportDialog,
-                  children: [
-                    "reason" === _ &&
-                      (0, _.jsxs)(_.Fragment, {
-                        children: [
-                          !!_.landingDescription &&
-                            !_.length &&
-                            (0, _.jsx)("div", {
-                              className: _().LandingDescriptionCtn,
-                              children: _.landingDescription,
-                            }),
-                          (0, _.jsx)("p", {
-                            children: _.Localize("#ReportContent_PickAReason"),
-                          }),
-                          (0, _.jsx)(_._, {
-                            focusableIfEmpty: !0,
-                            className: _().BlockList,
-                            children: _,
-                          }),
-                          !!_.length &&
-                            (0, _.jsx)(_._, {
-                              className: _().BottomButtons,
-                              children: (0, _.jsxs)(_._, {
-                                onClick: () =>
-                                  __webpack_require__(_.slice(0, -1)),
-                                children: [
-                                  "« ",
-                                  _.Localize("#ReportContent_Back"),
-                                ],
-                              }),
-                            }),
-                          0 === _.length &&
-                            (0, _.jsx)(_._, {
-                              className: _().BottomButtons,
-                              children: (0, _.jsx)(_._, {
-                                onClick: () => _.setShowDialog(!1),
-                                children: _.Localize("#moderation_cancel"),
-                              }),
-                            }),
-                        ],
-                      }),
-                    "submit" === _ &&
-                      (0, _.jsxs)(_.Fragment, {
-                        children: [
-                          (0, _.jsx)("p", {
-                            children: _.Localize("#ReportContent_Attestation"),
-                          }),
-                          (0, _.jsx)(_._, {
-                            children: _.Localize(
-                              "#reportforumpost_reasonforreport",
-                              _ || _(_),
-                            ),
-                          }),
-                          (0, _.jsx)(_._, {
-                            children: (0, _.jsx)(_._, {
-                              autoFocus: !0,
-                              ref: _,
-                              className: (0, _._)(
-                                _().BasicTextInput,
-                                _().Textarea,
-                                _().DetailedReasonTextArea,
-                              ),
-                              placeholder: _.Localize(
-                                "#ReportContent_DetailsPlaceholder",
-                              ),
-                              maxLength: 1024,
-                            }),
-                          }),
-                          (0, _.jsxs)(_._, {
-                            className: _().NamePanel,
-                            children: [
-                              (0, _.jsx)(_._, {
-                                children: _.Localize(
-                                  "#ReportContent_YourNamePlaceholder",
-                                ),
-                              }),
-                              (0, _.jsx)(_._, {
-                                children: (0, _.jsx)(_._, {
-                                  className: _().OptionalNameInput,
-                                  type: "text",
-                                  ref: _,
-                                }),
-                              }),
-                            ],
-                          }),
-                          (0, _.jsxs)(_._, {
-                            className: _().BottomButtons,
-                            children: [
-                              (0, _.jsxs)(_._, {
-                                onClick: () => {
-                                  __webpack_require__(_.slice(0, -1)),
-                                    _("reason");
-                                },
-                                children: [
-                                  "« ",
-                                  _.Localize("#ReportContent_Back"),
-                                ],
-                              }),
-                              (0, _.jsx)(_._, {
-                                onClick: async () => {
-                                  const _ = _.length ? _[_.length - 1] : null;
-                                  if (!_ || !_(_))
-                                    return void (0, _._)(
-                                      !1,
-                                      "Content report submitted with invalid reason tree state",
-                                    );
-                                  let _ = _.current?.value ?? "";
-                                  const _ = (_.current?.value ?? "").trim();
-                                  _.length > 0 && (_ += " - " + _);
-                                  const _ = {
-                                    reason: _.value,
-                                    text: _,
-                                  };
-                                  _.mutateAsync(_)
-                                    .then(() => _("submitted"))
-                                    .then(
-                                      () => _.onSubmitted && _.onSubmitted(),
-                                    )
-                                    .catch((_) => {
-                                      _.eResult === _._
-                                        ? _("cooldown")
-                                        : _("error");
-                                    });
-                                },
-                                children: _.Localize(
-                                  "#ReportContent_ReportButton",
-                                ),
-                              }),
-                            ],
-                          }),
-                        ],
-                      }),
-                    "submitted" === _ &&
-                      (0, _.jsx)("p", {
-                        children: _.Localize(
-                          "#ContentReportSubmitted_Description",
-                        ),
-                      }),
-                    "error" === _ &&
-                      (0, _.jsx)("p", {
-                        children: _.Localize(
-                          "#ContentReportSubmissionError_Description",
-                        ),
-                      }),
-                    "cooldown" === _ &&
-                      (0, _.jsx)("p", {
-                        children: _.Localize(
-                          "#ContentReportSubmissionOnCooldown_Description",
-                        ),
-                      }),
-                    "anchorwarning" === _ &&
-                      (0, _.jsxs)(_._, {
-                        children: [
-                          (0, _.jsx)("p", {
-                            children: _.Localize(_.strWarningBeforeNav),
-                          }),
-                          (0, _.jsxs)(_._, {
-                            className: _().BottomButtons,
-                            children: [
-                              (0, _.jsxs)(_._, {
-                                onClick: () => {
-                                  __webpack_require__(_.slice(0, -1)),
-                                    _("reason");
-                                },
-                                children: [
-                                  "« ",
-                                  _.Localize("#ReportContent_Back"),
-                                ],
-                              }),
-                              (0, _.jsx)(_._, {
-                                onClick: () => {
-                                  _ && (window.location.href = _.url);
-                                },
-                                children: "Proceed",
-                              }),
-                            ],
-                          }),
-                        ],
-                      }),
-                  ],
-                }),
+          const { strTitle: _, elContent: _ } = _(_);
+          return (0, _.jsx)(_._, {
+            active: !0,
+            children: (0, _.jsx)(_._, {
+              title: _,
+              closeModal: _.onClose,
+              className: _().ContentReportDialog,
+              children: (0, _.jsx)(_, {
+                children: _,
               }),
-            })
-          );
-        }
-        function _(_) {
-          const { text: _, description: _, onClick: _ } = _;
-          return (0, _.jsxs)(_._, {
-            focusable: !0,
-            className: _().BlockListItem,
-            onActivate: _,
-            children: [
-              (0, _.jsxs)("div", {
-                children: [
-                  (0, _.jsx)("div", {
-                    className: _().BlockListReason,
-                    children: _,
-                  }),
-                  !!_ &&
-                    (0, _.jsx)("div", {
-                      className: _().BlockListDesc,
-                      children: _,
-                    }),
-                ],
-              }),
-              _.bShowRightArrow &&
-                (0, _.jsx)("div", {
-                  children: (0, _.jsx)(_.cLJ, {
-                    direction: "right",
-                  }),
-                }),
-            ],
+            }),
           });
         }
         function _(_) {
@@ -40433,7 +41711,21 @@ var CLSTAMP = "steamdb";
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
-          const { chatView: _, friend: _ } = _;
+          const { chatView: _, friend: _ } = _,
+            _ = (0, _._)(() =>
+              _.chat instanceof _._
+                ? _.chat.nonfriend_shared_chat_group_id
+                : void 0,
+            ),
+            { strSharedGroupName: _, bIsSharedGroupMember: _ } = (0, _._)(
+              () => {
+                const _ = _ ? _._.ChatStore?.GetChatRoomGroup(_) : void 0;
+                return {
+                  strSharedGroupName: _?.name,
+                  bIsSharedGroupMember: !!_?.BIsCurrentUserAMember(),
+                };
+              },
+            );
           return (0, _.jsxs)(_, {
             children: [
               (0, _.jsx)("div", {
@@ -40447,6 +41739,24 @@ var CLSTAMP = "steamdb";
                     className: _.ExplanationHeader,
                     children: (0, _._)("#DirectMessageFromNonFriend"),
                   }),
+                  !!_ &&
+                    (0, _.jsx)("div", {
+                      className: _.ExplanationSharedGroup,
+                      children: (0, _._)(
+                        "#DirectMessageFromNonFriend_SharedGroup",
+                        _
+                          ? (0, _.jsx)(_._, {
+                              onClick: () =>
+                                _._.ChatStore.JoinAndShowChatRoomGroup(
+                                  _._.GetDefaultBrowserContext(),
+                                  _,
+                                  !0,
+                                ),
+                              children: _,
+                            })
+                          : _,
+                      ),
+                    }),
                   (0, _.jsx)("div", {
                     className: _.ExplanationBody,
                     children: (0, _._)("#Account_Safety_Notice"),
@@ -50985,7 +52295,13 @@ var CLSTAMP = "steamdb";
           });
         }
         function _(_) {
-          const { closeModal: _, title: _, className: _, ..._ } = _,
+          const {
+              closeModal: _,
+              title: _,
+              className: _,
+              children: _,
+              ..._
+            } = _,
             _ = _.useId();
           return (0, _.jsx)(_._, {
             "aria-labelledby": _,
@@ -51012,10 +52328,13 @@ var CLSTAMP = "steamdb";
                   ],
                 }),
                 (0, _.jsx)(_._, {
-                  children: (0, _.jsx)(_._, {
-                    children: (0, _.jsx)(_, {
-                      ..._,
-                    }),
+                  children: (0, _.jsxs)(_._, {
+                    children: [
+                      (0, _.jsx)(_, {
+                        ..._,
+                      }),
+                      _,
+                    ],
                   }),
                 }),
               ],
@@ -69365,8 +70684,12 @@ var CLSTAMP = "steamdb";
         __webpack_require__._(_, {
           _: () => _,
           _: () => _,
+          _: () => _,
+          _: () => _,
         });
         const _ = 39049601,
+          _ = 45559995,
+          _ = 45902273,
           _ = [4145017, 35143931, _, 4, 41316928];
       },
       chunkid: (module, module_exports, __webpack_require__) => {
@@ -72452,6 +73775,11 @@ var CLSTAMP = "steamdb";
             this.m_bMuteOnAutoplayBlocked = _;
           }
           async PlayMPD(_, _, _, _) {
+            if (this.m_bClosing)
+              return void (0, _._)(
+                !1,
+                "PlayMPD called on a closed CDASHPlayer",
+              );
             (_ = Array.isArray(_) ? _ : [_]),
               this.m_stats.StartingPlayback(),
               (this.m_strCDNAuthURLParameters = _ || "");
@@ -72795,9 +74123,10 @@ var CLSTAMP = "steamdb";
             }
           }
           CloseWithError(_, ..._) {
-            this.DispatchEvent("valve-downloadfailed", _),
+            this.m_bClosing ||
+              (this.DispatchEvent("valve-downloadfailed", _),
               this.Close(),
-              (0, _._)(..._);
+              (0, _._)(..._));
           }
           BCreateLoaders() {
             _(this.m_mpd);
@@ -74931,6 +76260,7 @@ var CLSTAMP = "steamdb";
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
         __webpack_require__._(_, {
+          _: () => _,
           _: () => _,
           _: () => _,
           _: () => _,
@@ -79304,6 +80634,31 @@ var CLSTAMP = "steamdb";
         __webpack_require__._(_, {
           _: () => _,
         });
+        var _ = __webpack_require__("chunkid");
+        const _ = {
+          [_._._]: "_Guide",
+          [_._._]: "_Hardware",
+          [_._._]: "_DLC",
+          [_._._]: "_Music",
+          [_._._]: "_Series",
+          [_._._]: "_Demo",
+        };
+        function _(_, _, _) {
+          switch (_) {
+            case _._._:
+              return _ + "_Software";
+            case _._._:
+              return _ + "_Video";
+          }
+          const _ = _[_];
+          return _ && __webpack_require__(_ + _) ? _ + _ : _;
+        }
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(_, {
+          _: () => _,
+        });
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _() {
@@ -79428,6 +80783,7 @@ var CLSTAMP = "steamdb";
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
           const _ = new Map();
@@ -79488,6 +80844,19 @@ var CLSTAMP = "steamdb";
             const _ = _(_, _().languages);
             return (0, _._)(_, ..._);
           }
+          function _(_) {
+            const _ = _().languages,
+              _ = [
+                ...__webpack_require__.map((_) => _.strLanguage),
+                (0, _._)(_[0].strLanguage),
+              ];
+            for (const _ of _) {
+              if (!_) continue;
+              const _ = _.get(_);
+              if (_ && _.has(_)) return !0;
+            }
+            return !1;
+          }
           return (
             __webpack_require__
               .then(() => (_ = !0))
@@ -79518,28 +80887,7 @@ var CLSTAMP = "steamdb";
                 1 === _ || "1" === _
                   ? _(_, _, ..._)
                   : _(_ + "_Plural", _, ..._),
-              GetAppTypeLocKey(_, _) {
-                switch (_) {
-                  case _._._:
-                    return _ + "_Guide";
-                  case _._._:
-                    return _ + "_Hardware";
-                  case _._._:
-                    return _ + "_DLC";
-                  case _._._:
-                    return _ + "_Music";
-                  case _._._:
-                    return _ + "_Series";
-                  case _._._:
-                    return _ + "_Demo";
-                  case _._._:
-                    return _ + "_Software";
-                  case _._._:
-                    return _ + "_Video";
-                  default:
-                    return _;
-                }
-              },
+              GetAppTypeLocKey: (_, _) => (0, _._)(_, _, _),
               GetAppTypePluralLocKey(_, _) {
                 switch (_) {
                   case _._._:
@@ -79556,19 +80904,7 @@ var CLSTAMP = "steamdb";
               },
               Ready: () => _,
               IsReady: () => _,
-              HasKey(_) {
-                const _ = _().languages,
-                  _ = [
-                    ...__webpack_require__.map((_) => _.strLanguage),
-                    (0, _._)(_[0].strLanguage),
-                  ];
-                for (const _ of _) {
-                  if (!_) continue;
-                  const _ = _.get(_);
-                  if (_ && _.has(_)) return !0;
-                }
-                return !1;
-              },
+              HasKey: _,
             }
           );
         }
@@ -79613,6 +80949,31 @@ var CLSTAMP = "steamdb";
         __webpack_require__._(_, {
           _: () => _,
         });
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(_, {
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+        });
+        var _ = __webpack_require__("chunkid");
+        const _ = _._.box(void 0);
+        function _() {
+          return _.get();
+        }
+        function _(_) {
+          (0, _._)(() => _.set(_));
+        }
+        function _() {
+          const _ = _.get();
+          return _ || Math.floor(Date.now() / 1e3);
+        }
+        function _() {
+          const _ = _.get();
+          return _ ? new Date(1e3 * _) : new Date();
+        }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
@@ -80129,6 +81490,35 @@ var CLSTAMP = "steamdb";
         })();
         function _() {
           return _;
+        }
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(_, {
+          _: () => _,
+          _: () => _,
+          _: () => _,
+        });
+        var _ = __webpack_require__("chunkid");
+        const _ = (0, _.createContext)({
+            ownerWindow: window,
+          }),
+          _ = () => (0, _.useContext)(_);
+        function _(_) {
+          const { ownerWindow: _, children: _ } = _,
+            _ = (0, _.useMemo)(
+              () => ({
+                ownerWindow: _,
+              }),
+              [_],
+            );
+          return (0, _.createElement)(
+            _.Provider,
+            {
+              value: _,
+            },
+            _,
+          );
         }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
@@ -80754,6 +82144,251 @@ var CLSTAMP = "steamdb";
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         const _ = (0, _._)(_._);
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        var _;
+        __webpack_require__._(_, {
+          _: () => _,
+        }),
+          (function (_) {
+            (_[(_.k_EAccountFlagNormalUser = 0)] = "k_EAccountFlagNormalUser"),
+              (_[(_.k_EAccountFlagPersonaNameSet = 1)] =
+                "k_EAccountFlagPersonaNameSet"),
+              (_[(_.k_EAccountFlagUnbannable = 2)] =
+                "k_EAccountFlagUnbannable"),
+              (_[(_.k_EAccountFlagPasswordSet = 4)] =
+                "k_EAccountFlagPasswordSet"),
+              (_[(_.k_EAccountFlagSupport = 8)] = "k_EAccountFlagSupport"),
+              (_[(_.k_EAccountFlagAdmin = 16)] = "k_EAccountFlagAdmin"),
+              (_[(_.k_EAccountFlagSupervisor = 32)] =
+                "k_EAccountFlagSupervisor"),
+              (_[(_.k_EAccountFlagAppEditor = 64)] = "k_EAccountFlagAppEditor"),
+              (_[(_.k_EAccountFlagHWIDSet = 128)] = "k_EAccountFlagHWIDSet"),
+              (_[(_.k_EAccountFlagVacBeta = 512)] = "k_EAccountFlagVacBeta"),
+              (_[(_.k_EAccountFlagDebug = 1024)] = "k_EAccountFlagDebug"),
+              (_[(_.k_EAccountFlagDisabled = 2048)] = "k_EAccountFlagDisabled"),
+              (_[(_.k_EAccountFlagLimitedUser = 4096)] =
+                "k_EAccountFlagLimitedUser"),
+              (_[(_.k_EAccountFlagLimitedUserForce = 8192)] =
+                "k_EAccountFlagLimitedUserForce"),
+              (_[(_.k_EAccountFlagEmailValidated = 16384)] =
+                "k_EAccountFlagEmailValidated"),
+              (_[(_.k_EAccountFlagValveEmail = 32768)] =
+                "k_EAccountFlagValveEmail"),
+              (_[(_.k_EAccountFlagForcePasswordChange = 131072)] =
+                "k_EAccountFlagForcePasswordChange"),
+              (_[(_.k_EAccountFlagLogonExtraSecurity = 524288)] =
+                "k_EAccountFlagLogonExtraSecurity"),
+              (_[(_.k_EAccountFlagLogonExtraSecurityDisabled = 1048576)] =
+                "k_EAccountFlagLogonExtraSecurityDisabled"),
+              (_[(_.k_EAccountFlagSteam2MigrationComplete = 2097152)] =
+                "k_EAccountFlagSteam2MigrationComplete"),
+              (_[(_.k_EAccountFlagNeedLogs = 4194304)] =
+                "k_EAccountFlagNeedLogs"),
+              (_[(_.k_EAccountFlagLockdown = 8388608)] =
+                "k_EAccountFlagLockdown"),
+              (_[(_.k_EAccountFlagMasterAppEditor = 16777216)] =
+                "k_EAccountFlagMasterAppEditor"),
+              (_[(_.k_EAccountFlagBannedFromWebAPI = 33554432)] =
+                "k_EAccountFlagBannedFromWebAPI"),
+              (_[(_.k_EAccountFlagPartnerMember = 67108864)] =
+                "k_EAccountFlagPartnerMember"),
+              (_[(_.k_EAccountFlagGlobalModerator = 134217728)] =
+                "k_EAccountFlagGlobalModerator"),
+              (_[(_.k_EAccountFlagParentalSettings = 268435456)] =
+                "k_EAccountFlagParentalSettings"),
+              (_[(_.k_EAccountFlagThirdPartySupport = 536870912)] =
+                "k_EAccountFlagThirdPartySupport"),
+              (_[(_.k_EAccountFlagNeedsSSANextSteamLogon = 1073741824)] =
+                "k_EAccountFlagNeedsSSANextSteamLogon");
+          })(_ || (_ = {}));
+        _.k_EAccountFlagAdmin,
+          _.k_EAccountFlagSupervisor,
+          _.k_EAccountFlagSupport,
+          _.k_EAccountFlagAdmin,
+          _.k_EAccountFlagSupervisor;
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        class _ {
+          m_ulSteamID = _._.UZERO;
+          constructor(_ = 0, _, _, _) {
+            _ instanceof _
+              ? (this.m_ulSteamID = _.m_ulSteamID)
+              : "string" == typeof _
+                ? (this.m_ulSteamID = _._.fromString(_, !0))
+                : _ && _ && void 0 !== _
+                  ? this.SetFromComponents(_, _, _, _)
+                  : (this.m_ulSteamID = _ ? _._.fromNumber(_, !0) : _._.UZERO);
+          }
+          static InitFromAccountID(_, _) {
+            return new _(Number(_), _, _.W19, _.keb);
+          }
+          static InitFromClanID(_, _) {
+            return new _(Number(_), _, _.P3F, 0);
+          }
+          static ToAccountID(_) {
+            return _.ExtractAccountID(_._.fromString(_, !0));
+          }
+          static ExtractAccountID(_) {
+            return _.getLowBitsUnsigned();
+          }
+          GetAccountID() {
+            return _.ExtractAccountID(this.m_ulSteamID);
+          }
+          GetInstance() {
+            return 1048575 & this.m_ulSteamID.getHighBitsUnsigned();
+          }
+          GetAccountType() {
+            return (this.m_ulSteamID.getHighBitsUnsigned() >> 20) & 15;
+          }
+          GetUniverse() {
+            return (this.m_ulSteamID.getHighBitsUnsigned() >> 24) & 255;
+          }
+          ConvertTo64BitString() {
+            return this.m_ulSteamID.toString();
+          }
+          Render() {
+            switch (this.GetAccountType()) {
+              case _.sln:
+                return (
+                  "[I:" + this.GetUniverse() + ":" + this.GetAccountID() + "]"
+                );
+              case _.P3F:
+                return (
+                  "[g:" + this.GetUniverse() + ":" + this.GetAccountID() + "]"
+                );
+              case _.urx:
+                return (
+                  "[A:" +
+                  this.GetUniverse() +
+                  ":" +
+                  this.GetAccountID() +
+                  ":" +
+                  this.GetInstance() +
+                  "]"
+                );
+              case _.UtJ:
+                return (
+                  "[G:" + this.GetUniverse() + ":" + this.GetAccountID() + "]"
+                );
+              case _.bmB:
+                return (
+                  "[M:" +
+                  this.GetUniverse() +
+                  ":" +
+                  this.GetAccountID() +
+                  ":" +
+                  this.GetInstance() +
+                  "]"
+                );
+              case _.eIg:
+                return (
+                  "[P:" + this.GetUniverse() + ":" + this.GetAccountID() + "]"
+                );
+              case _.LHp:
+                return (
+                  "[C:" + this.GetUniverse() + ":" + this.GetAccountID() + "]"
+                );
+              default:
+                return (
+                  "[U:" + this.GetUniverse() + ":" + this.GetAccountID() + "]"
+                );
+            }
+          }
+          static InitFromString(_) {
+            let _ = new _();
+            try {
+              let [_, _, _, _, _] =
+                  _.match(/\[([I|g|A|G|M|P|C|U]):(\d+):(\d+):?(\d+)?\]/) || [],
+                _ = Number(_),
+                _ = Number(_),
+                _ = _ ? Number(_) : 1;
+              switch (_) {
+                case "I":
+                  _.SetFromComponents(_, _, _.sln, _);
+                  break;
+                case "g":
+                  _.SetFromComponents(_, 0, _.P3F, _);
+                  break;
+                case "A":
+                  _.SetFromComponents(_, _, _.urx, _);
+                  break;
+                case "G":
+                  _.SetFromComponents(_, _, _.UtJ, _);
+                  break;
+                case "M":
+                  _.SetFromComponents(_, _, _.bmB, _);
+                  break;
+                case "P":
+                  _.SetFromComponents(_, _, _.eIg, _);
+                  break;
+                case "C":
+                  _.SetFromComponents(_, _, _.LHp, _);
+                  break;
+                case "U":
+                  _.SetFromComponents(_, _, _.W19, _);
+              }
+            } catch (_) {}
+            return _;
+          }
+          BIsValid() {
+            let _ = this.GetAccountType();
+            if (_ <= _.sln || _ >= _.f7X) return !1;
+            let _ = this.GetUniverse();
+            if (_ <= _.c3e || _ >= _.PPm) return !1;
+            if (_ == _.W19) {
+              if (0 == this.GetAccountID() || this.GetInstance() > _.imt)
+                return !1;
+            } else if (_ == _.P3F) {
+              if (0 == this.GetAccountID() || 0 != this.GetInstance())
+                return !1;
+            } else if (_ == _.UtJ && 0 == this.GetAccountID()) return !1;
+            return !0;
+          }
+          BIsIndividualAccount() {
+            return this.GetAccountType() == _.W19;
+          }
+          BIsClanAccount() {
+            return this.GetAccountType() == _.P3F;
+          }
+          SetAccountID(_) {
+            this.m_ulSteamID = new _._(
+              _,
+              this.m_ulSteamID.getHighBitsUnsigned(),
+              !0,
+            );
+          }
+          SetInstance(_) {
+            this.SetFromComponents(
+              this.GetAccountID(),
+              _,
+              this.GetAccountType(),
+              this.GetUniverse(),
+            );
+          }
+          SetAccountType(_) {
+            this.SetFromComponents(
+              this.GetAccountID(),
+              this.GetInstance(),
+              _,
+              this.GetUniverse(),
+            );
+          }
+          SetUniverse(_) {
+            this.SetFromComponents(
+              this.GetAccountID(),
+              this.GetInstance(),
+              this.GetAccountType(),
+              _,
+            );
+          }
+          SetFromComponents(_, _, _, _) {
+            let _ = ((255 & _) << 24) + ((15 & _) << 20) + (1048575 & _),
+              _ = 4294967295 & _;
+            this.m_ulSteamID = new _._(_, _, !0);
+          }
+        }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
@@ -81426,6 +83061,13 @@ var CLSTAMP = "steamdb";
                 );
               })(_, _, _, _),
             _.include_included_items &&
+              (function (_, _, _, _) {
+                _.setQueryData(
+                  _(_, "include_included_items", _),
+                  _.included_appids ?? [],
+                );
+              })(_, _, _, _),
+            _.include_included_items &&
               _.included_item_data_request &&
               (_.included_items?.included_apps?.forEach((_) =>
                 _(_, _, _.included_item_data_request, _),
@@ -81756,7 +83398,9 @@ var CLSTAMP = "steamdb";
             ? "partner-unpublished"
             : _.bUsePartnerAPI
               ? "partner"
-              : void 0;
+              : _.bFixedCountry
+                ? `country-${_.country}`
+                : void 0;
         }
         function _(_, _) {
           _.Body().set_context(
@@ -82418,7 +84062,7 @@ var CLSTAMP = "steamdb";
 	"store-partner-events": 2103,
 	"steamtv-partner-events": 2104,
 	"community-partner-events": 2105,
-	"partnerweb-partner-events": 2106,
+	"partner-partner-events": 2106,
 	"store-calendar-partner-events": 2107,
 	"events": 2108,
 	"subscriptions": 2109,
@@ -83273,6 +84917,12 @@ var CLSTAMP = "steamdb";
         const _ = _.createContext({
           eAdultOnlyMediaBehavior: "masked",
         });
+        const _ = {
+          name: "forceallages",
+          preferenceControls: {
+            isTechnicallyNecessary: !0,
+          },
+        };
         function _() {
           const { eAdultOnlyMediaBehavior: _ } = _.useContext(_),
             _ = (function () {
@@ -83285,7 +84935,7 @@ var CLSTAMP = "steamdb";
               return _ && _ > Date.now() / 1e3;
             })();
           return _.useMemo(() => {
-            const _ = (0, _._)("forceallages");
+            const _ = (0, _._)(_);
             return (
               !(!_ || "0" === _) ||
               !(!_._.IN_MOBILE_WEBVIEW || !navigator.userAgent.match(/Android/))
@@ -83302,7 +84952,15 @@ var CLSTAMP = "steamdb";
         function _() {
           return "allowed" != _();
         }
-        const _ = "bDisableAOWarning";
+        const _ = {
+          name: "bDisableAOWarning",
+          options: {
+            path: "/",
+          },
+          preferenceControls: {
+            isTechnicallyNecessary: !0,
+          },
+        };
         _._.PerDay;
         function _() {
           const _ = (0, _._)(_),
@@ -87788,6 +89446,18 @@ var CLSTAMP = "steamdb";
                 : null;
           }
         }
+        function _(_) {
+          if (!_) return _;
+          const _ = _.trim(),
+            _ = _.replace(/^[\u0000-\u0020]+/, "")
+              .replace(/[\t\n\r]/g, "")
+              .toLowerCase();
+          return __webpack_require__.startsWith("javascript:") ||
+            __webpack_require__.startsWith("data:") ||
+            __webpack_require__.startsWith("vbscript:")
+            ? ""
+            : _;
+        }
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid"),
@@ -87814,97 +89484,109 @@ var CLSTAMP = "steamdb";
             return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
           }
         }
-        (0, _._)([_._], _.prototype, "BUserHasVolumePreference", null),
-          (0, _._)([_._], _.prototype, "SetVolumePreference", null);
         const _ = (0, _.forwardRef)(function (_, _) {
-            const {
-                video: _,
-                bAutoPlay: _,
-                bControls: _,
-                bLoop: _,
-                bMuted: _,
-                className: _,
-                mediaScale: _,
-                flAspectRatio: _,
-                onClick: _,
-                altText: _,
-              } = _,
-              _ = (0, _.useMemo)(
-                () =>
-                  Boolean(
-                    _.rgVideoTracks?.some(
-                      (_) => "subtitles" == _.sKind || "captions" == _.sKind,
-                    ),
-                  ),
-                [_.rgVideoTracks],
-              ),
-              [_, _] = _.useState(!1),
-              _ = _();
-            if (!_.rgVideoSources || !_.rgVideoSources.length) return null;
-            const _ = (function (_) {
-              return !(
-                (!(0, _._)(_.sPoster) && !(0, _._)(_.sPoster)) ||
-                (_.rgVideoSources &&
-                  _.rgVideoSources.some((_) => !(0, _._)(_.sURL))) ||
-                (_.rgVideoTracks &&
-                  _.rgVideoTracks.some((_) => !(0, _._)(_.sURL)))
-              );
-            })(_);
-            let _;
-            (!_ || (_ && _._.EUNIVERSE == _.wLO)) && (_ = "anonymous");
-            const _ = _ || (_ && _.Get().BVolumePreferenceMuted()),
-              _ = _.sPoster ? _(_.sPoster, _) : "";
-            return (0, _.jsxs)("video", {
-              width: "100%",
-              height: "auto",
-              autoPlay: _,
-              muted: _,
-              playsInline: !0,
-              controls: _,
-              poster: _,
-              loop: _,
-              crossOrigin: _,
-              onVolumeChange: (_) => {
-                const _ = _.target,
-                  _ = _.muted ? 0 : _.volume;
-                _ && _.Get().SetVolumePreference(_);
-              },
-              onPlay: (_) => {
-                const _ = _.target,
-                  _ = 0 == _.currentTime,
-                  _ = _.Get().BUserHasVolumePreference();
-                if ((_(!0), _))
-                  if (_ || _)
-                    _ &&
-                      ((_.volume = _.Get().GetVolumePreference()),
-                      (_.muted = _.Get().BVolumePreferenceMuted()));
-                  else {
-                    const _ = _.muted ? 0 : _.volume;
-                    _.Get().SetVolumePreference(_);
-                  }
-              },
-              ref: _,
+          const {
+              video: _,
+              bAutoPlay: _,
+              bControls: _,
+              bLoop: _,
+              bMuted: _,
               className: _,
+              mediaScale: _,
+              flAspectRatio: _,
               onClick: _,
-              "aria-label": _,
-              style: {
-                width: _ && _ >= 1 && _ < 100 ? `${_}%` : void 0,
-                aspectRatio: _ || void 0,
-              },
-              children: [
-                (0, _.jsx)(_, {
-                  rgVideoSources: _.rgVideoSources,
-                }),
-                (0, _.jsx)(_, {
-                  rgVideoTracks: _.rgVideoTracks,
-                }),
-              ],
-            });
-          }),
-          _ = _.createContext(void 0);
-        function _() {
-          return _.useContext(_) || (0, _._)();
-        }
+              altText: _,
+            } = _,
+            _ = (0, _.useMemo)(
+              () =>
+                Boolean(
+                  _.rgVideoTracks?.some(
+                    (_) => "subtitles" == _.sKind || "captions" == _.sKind,
+                  ),
+                ),
+              [_.rgVideoTracks],
+            ),
+            [_, _] = _.useState(!1),
+            _ = (function () {
+              const _ = window.location.href,
+                _ = [
+                  _._.STORE_BASE_URL,
+                  _._.COMMUNITY_BASE_URL,
+                  _._.PARTNER_BASE_URL,
+                  _._.HELP_BASE_URL,
+                  _._.STATS_BASE_URL,
+                  _._.STORE_CHECKOUT_BASE_URL,
+                ].find((_) => _ && _.startsWith(_));
+              if (_) return _;
+              try {
+                return new URL(_).origin + "/";
+              } catch {
+                return "unknown";
+              }
+            })();
+          if (!_.rgVideoSources || !_.rgVideoSources.length) return null;
+          const _ = (function (_) {
+            return !(
+              (!(0, _._)(_.sPoster) && !(0, _._)(_.sPoster)) ||
+              (_.rgVideoSources &&
+                _.rgVideoSources.some((_) => !(0, _._)(_.sURL))) ||
+              (_.rgVideoTracks &&
+                _.rgVideoTracks.some((_) => !(0, _._)(_.sURL)))
+            );
+          })(_);
+          let _;
+          (!_ || (_ && _._.EUNIVERSE == _.wLO)) && (_ = "anonymous");
+          const _ = _ || (_ && _.Get().BVolumePreferenceMuted()),
+            _ = _.sPoster ? _(_.sPoster, _) : "";
+          return (0, _.jsxs)("video", {
+            width: "100%",
+            height: "auto",
+            autoPlay: _,
+            muted: _,
+            playsInline: !0,
+            controls: _,
+            poster: _,
+            loop: _,
+            crossOrigin: _,
+            onVolumeChange: (_) => {
+              const _ = _.target,
+                _ = _.muted ? 0 : _.volume;
+              _ && _.Get().SetVolumePreference(_);
+            },
+            onPlay: (_) => {
+              const _ = _.target,
+                _ = 0 == _.currentTime,
+                _ = _.Get().BUserHasVolumePreference();
+              if ((_(!0), _))
+                if (_ || _)
+                  _ &&
+                    ((_.volume = _.Get().GetVolumePreference()),
+                    (_.muted = _.Get().BVolumePreferenceMuted()));
+                else {
+                  const _ = _.muted ? 0 : _.volume;
+                  _.Get().SetVolumePreference(_);
+                }
+            },
+            ref: _,
+            className: _,
+            onClick: _,
+            "aria-label": _,
+            style: {
+              width: _ && _ >= 1 && _ < 100 ? `${_}%` : void 0,
+              aspectRatio: _ || void 0,
+            },
+            children: [
+              (0, _.jsx)(_, {
+                rgVideoSources: _.rgVideoSources,
+                strCacheBreakOrigin: _,
+              }),
+              (0, _.jsx)(_, {
+                rgVideoTracks: _.rgVideoTracks,
+                strCacheBreakOrigin: _,
+              }),
+            ],
+          });
+        });
         function _(_, _) {
           if (_) {
             if ((0, _._)(_)) return _;
@@ -87920,8 +89602,7 @@ var CLSTAMP = "steamdb";
           }
         }
         function _(_) {
-          const { rgVideoSources: _ } = _,
-            _ = _();
+          const { rgVideoSources: _, strCacheBreakOrigin: _ } = _;
           return _.filter((_) => Boolean(_.sURL)).map((_) =>
             (0, _.jsx)(
               "source",
@@ -87934,7 +89615,7 @@ var CLSTAMP = "steamdb";
           );
         }
         function _(_) {
-          const { rgVideoTracks: _ } = _;
+          const { rgVideoTracks: _, strCacheBreakOrigin: _ } = _;
           return _
             ? _.map((_, _) =>
                 (0, _.jsx)(
@@ -87942,6 +89623,7 @@ var CLSTAMP = "steamdb";
                   {
                     track: _,
                     rgVideoTracks: _,
+                    strCacheBreakOrigin: _,
                   },
                   _,
                 ),
@@ -87949,8 +89631,7 @@ var CLSTAMP = "steamdb";
             : null;
         }
         function _(_) {
-          const { track: _, rgVideoTracks: _ } = _,
-            _ = _();
+          const { track: _, rgVideoTracks: _, strCacheBreakOrigin: _ } = _;
           let _ = _.eLanguage;
           if (_._.EREALM == _._.k_ESteamRealmChina)
             if (_._.IsELanguageValidInRealm(_, _._.k_ESteamRealmChina))
@@ -88042,6 +89723,45 @@ var CLSTAMP = "steamdb";
             bLoop: _ ? _ : _,
           });
         }
+        var _ = __webpack_require__("chunkid");
+        const _ = {
+          Box: _.DynamicLinkBox,
+          Preview: _.DynamicLink_Preview,
+          Type: _.DynamicLink_Type,
+        };
+        function _(_) {
+          return (0, _.jsx)("img", {
+            className: _.DynamicLink_Preview,
+            src: _.strURL || void 0,
+            alt: _.strAlt ?? "",
+          });
+        }
+        function _(_) {
+          return (0, _.jsx)("div", {
+            className: _.DynamicLink_Content,
+            children: _.children,
+          });
+        }
+        function _(_) {
+          return (0, _.jsx)("div", {
+            className: _.DynamicLink_Name,
+            children: _.children,
+          });
+        }
+        function _(_) {
+          return (0, _.jsx)("div", {
+            className: _.DynamicLink_YoutubeViews,
+            children: _.children,
+          });
+        }
+        function _(_) {
+          return (0, _.jsx)("div", {
+            className: _.Dynamiclink_Content,
+            children: _.children,
+          });
+        }
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
         function _(_) {
           return _.replace(/&lt;/g, "<")
             .replace(/&gt;/g, ">")
@@ -88088,46 +89808,16 @@ var CLSTAMP = "steamdb";
             })(_, _),
           );
         }
-        var _ = __webpack_require__("chunkid"),
+        var _,
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid");
-        const _ = {
-          Box: _.DynamicLinkBox,
-          Preview: _.DynamicLink_Preview,
-          Type: _.DynamicLink_Type,
-        };
+          _ = __webpack_require__._(_);
         function _(_) {
-          return (0, _.jsx)("img", {
-            className: _.DynamicLink_Preview,
-            src: _.strURL || void 0,
-            alt: _.strAlt ?? "",
-          });
-        }
-        function _(_) {
-          return (0, _.jsx)("div", {
-            className: _.DynamicLink_Content,
-            children: _.children,
-          });
-        }
-        function _(_) {
-          return (0, _.jsx)("div", {
-            className: _.DynamicLink_Name,
-            children: _.children,
-          });
-        }
-        function _(_) {
-          return (0, _.jsx)("div", {
-            className: _.DynamicLink_YoutubeViews,
-            children: _.children,
-          });
-        }
-        function _(_) {
-          return (0, _.jsx)("div", {
-            className: _.Dynamiclink_Content,
-            children: _.children,
-          });
+          return _ == _.full
+            ? _().sizeFull
+            : (0, _._)(
+                _().sizeThumb,
+                _ == _.left ? _().floatLeft : _().floatRight,
+              );
         }
         function _(_) {
           const {
@@ -88135,18 +89825,24 @@ var CLSTAMP = "steamdb";
               bShowVideoImmediately: _,
               bAutoPlay: _,
               nStartSeconds: _,
-              classNameSize: _,
-              classNameAlign: _,
+              align: _ = _.full,
             } = _,
             [_, _] = (0, _.useState)(!_),
             { data: _, isSuccess: _ } = _(_, _);
           if (_) {
             const _ = _?.title ?? (0, _._)("#Loading"),
               _ = _?.views ?? "0",
-              _ = _?.description ?? "";
+              _ = _?.description ?? "",
+              _ = () => _(!1),
+              _ = (_) => {
+                ("Enter" != _.key && " " != _.key) || (_.preventDefault(), _());
+              };
             return (0, _.jsxs)("div", {
               className: _.Box,
-              onClick: () => _(!1),
+              role: "button",
+              tabIndex: 0,
+              onClick: _,
+              onKeyDown: _,
               children: [
                 (0, _.jsx)(_, {
                   strURL: "https://img.youtube.com/vi/" + _ + "/0.jpg",
@@ -88179,11 +89875,12 @@ var CLSTAMP = "steamdb";
           return (0, _.jsx)(_._, {
             video: _,
             children: (0, _.jsxs)("div", {
-              className: (0, _._)(_().PreviewYouTubeVideo, _, _),
+              className: (0, _._)(_().PreviewYouTubeVideo, _(_)),
               _: _,
               children: [
                 (0, _.jsx)("img", {
                   className: _().PlaceholderImg,
+                  alt: "",
                   src:
                     _._.COMMUNITY_CDN_URL +
                     "public/shared/images/responsive/youtube_16x9_placeholder.gif",
@@ -88203,24 +89900,6 @@ var CLSTAMP = "steamdb";
         }
         function _() {
           return _._.EREALM === _._.k_ESteamRealmChina;
-        }
-        var _;
-        function _(_) {
-          return {
-            sizeStr: _ == _.full ? _.sizeFull : _.sizeThumb,
-            alignStr:
-              _ == _.full ? "" : _ == _.left ? _.floatLeft : _.floatRight,
-          };
-        }
-        function _(_) {
-          if (!_) return _;
-          const _ = _.trim(),
-            _ = _.toLowerCase();
-          return __webpack_require__.startsWith("javascript:") ||
-            __webpack_require__.startsWith("data:") ||
-            __webpack_require__.startsWith("vbscript:")
-            ? ""
-            : _;
         }
         !(function (_) {
           (_.left = "leftthumb"),
@@ -88893,13 +90572,11 @@ var CLSTAMP = "steamdb";
                 if (_() || "CN" == _._.COUNTRY.toLocaleUpperCase()) return _(_);
                 const _ = _(_.args, "youtubeid"),
                   _ = _(_.args, "size"),
-                  _ = _(_.args, "seconds"),
-                  { sizeStr: _, alignStr: _ } = _(_);
+                  _ = _(_.args, "seconds");
                 return (0, _.jsx)(_, {
                   videoID: _,
                   nStartSeconds: _ ? Number.parseInt(_) : void 0,
-                  classNameAlign: _,
-                  classNameSize: _,
+                  align: _,
                   bShowVideoImmediately: !0,
                 });
               },
@@ -88917,11 +90594,9 @@ var CLSTAMP = "steamdb";
                   if (2 == _.length) {
                     let _ = _[0],
                       _ = _[1].toLocaleLowerCase();
-                    const { sizeStr: _, alignStr: _ } = _(_);
                     return (0, _.jsx)(_, {
                       videoID: _,
-                      classNameAlign: _,
-                      classNameSize: _,
+                      align: _,
                       bShowVideoImmediately: !0,
                     });
                   }
@@ -90899,47 +92574,27 @@ var CLSTAMP = "steamdb";
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
         __webpack_require__._(_, {
+          _: () => _._,
+          _: () => _._,
           _: () => _,
           _: () => _,
           _: () => _,
           _: () => _,
           _: () => _,
           _: () => _,
-          _: () => _,
-          _: () => _,
-          _: () => _,
+          _: () => _._,
           _: () => _,
         });
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        const _ = (0, _.createContext)({
-            ownerWindow: window,
-          }),
-          _ = () => (0, _.useContext)(_);
-        function _(_) {
-          const { ownerWindow: _, children: _ } = _,
-            _ = (0, _.useMemo)(
-              () => ({
-                ownerWindow: _,
-              }),
-              [_],
-            );
-          return (0, _.createElement)(
-            _.Provider,
-            {
-              value: _,
-            },
-            _,
-          );
-        }
         var _,
           _,
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -91043,7 +92698,7 @@ var CLSTAMP = "steamdb";
           }
         }
         function _() {
-          const { ownerWindow: _ } = _(),
+          const { ownerWindow: _ } = (0, _._)(),
             _ = _.GetPopupForWindow(_);
           return _?.browser_info || _._;
         }
@@ -91790,244 +93445,9 @@ var CLSTAMP = "steamdb";
           _: () => _,
           _: () => _,
         });
-        var _,
-          _ = __webpack_require__("chunkid");
-        !(function (_) {
-          (_[(_.k_EAccountFlagNormalUser = 0)] = "k_EAccountFlagNormalUser"),
-            (_[(_.k_EAccountFlagPersonaNameSet = 1)] =
-              "k_EAccountFlagPersonaNameSet"),
-            (_[(_.k_EAccountFlagUnbannable = 2)] = "k_EAccountFlagUnbannable"),
-            (_[(_.k_EAccountFlagPasswordSet = 4)] =
-              "k_EAccountFlagPasswordSet"),
-            (_[(_.k_EAccountFlagSupport = 8)] = "k_EAccountFlagSupport"),
-            (_[(_.k_EAccountFlagAdmin = 16)] = "k_EAccountFlagAdmin"),
-            (_[(_.k_EAccountFlagSupervisor = 32)] = "k_EAccountFlagSupervisor"),
-            (_[(_.k_EAccountFlagAppEditor = 64)] = "k_EAccountFlagAppEditor"),
-            (_[(_.k_EAccountFlagHWIDSet = 128)] = "k_EAccountFlagHWIDSet"),
-            (_[(_.k_EAccountFlagVacBeta = 512)] = "k_EAccountFlagVacBeta"),
-            (_[(_.k_EAccountFlagDebug = 1024)] = "k_EAccountFlagDebug"),
-            (_[(_.k_EAccountFlagDisabled = 2048)] = "k_EAccountFlagDisabled"),
-            (_[(_.k_EAccountFlagLimitedUser = 4096)] =
-              "k_EAccountFlagLimitedUser"),
-            (_[(_.k_EAccountFlagLimitedUserForce = 8192)] =
-              "k_EAccountFlagLimitedUserForce"),
-            (_[(_.k_EAccountFlagEmailValidated = 16384)] =
-              "k_EAccountFlagEmailValidated"),
-            (_[(_.k_EAccountFlagValveEmail = 32768)] =
-              "k_EAccountFlagValveEmail"),
-            (_[(_.k_EAccountFlagForcePasswordChange = 131072)] =
-              "k_EAccountFlagForcePasswordChange"),
-            (_[(_.k_EAccountFlagLogonExtraSecurity = 524288)] =
-              "k_EAccountFlagLogonExtraSecurity"),
-            (_[(_.k_EAccountFlagLogonExtraSecurityDisabled = 1048576)] =
-              "k_EAccountFlagLogonExtraSecurityDisabled"),
-            (_[(_.k_EAccountFlagSteam2MigrationComplete = 2097152)] =
-              "k_EAccountFlagSteam2MigrationComplete"),
-            (_[(_.k_EAccountFlagNeedLogs = 4194304)] =
-              "k_EAccountFlagNeedLogs"),
-            (_[(_.k_EAccountFlagLockdown = 8388608)] =
-              "k_EAccountFlagLockdown"),
-            (_[(_.k_EAccountFlagMasterAppEditor = 16777216)] =
-              "k_EAccountFlagMasterAppEditor"),
-            (_[(_.k_EAccountFlagBannedFromWebAPI = 33554432)] =
-              "k_EAccountFlagBannedFromWebAPI"),
-            (_[(_.k_EAccountFlagPartnerMember = 67108864)] =
-              "k_EAccountFlagPartnerMember"),
-            (_[(_.k_EAccountFlagGlobalModerator = 134217728)] =
-              "k_EAccountFlagGlobalModerator"),
-            (_[(_.k_EAccountFlagParentalSettings = 268435456)] =
-              "k_EAccountFlagParentalSettings"),
-            (_[(_.k_EAccountFlagThirdPartySupport = 536870912)] =
-              "k_EAccountFlagThirdPartySupport"),
-            (_[(_.k_EAccountFlagNeedsSSANextSteamLogon = 1073741824)] =
-              "k_EAccountFlagNeedsSSANextSteamLogon");
-        })(_ || (_ = {}));
-        _.k_EAccountFlagAdmin,
-          _.k_EAccountFlagSupervisor,
-          _.k_EAccountFlagSupport,
-          _.k_EAccountFlagAdmin,
-          _.k_EAccountFlagSupervisor;
-        var _ = __webpack_require__("chunkid");
-        class _ {
-          m_ulSteamID = _._.UZERO;
-          constructor(_ = 0, _, _, _) {
-            _ instanceof _
-              ? (this.m_ulSteamID = _.m_ulSteamID)
-              : "string" == typeof _
-                ? (this.m_ulSteamID = _._.fromString(_, !0))
-                : _ && _ && void 0 !== _
-                  ? this.SetFromComponents(_, _, _, _)
-                  : (this.m_ulSteamID = _ ? _._.fromNumber(_, !0) : _._.UZERO);
-          }
-          static InitFromAccountID(_, _) {
-            return new _(Number(_), _, _.W19, _.keb);
-          }
-          static InitFromClanID(_, _) {
-            return new _(Number(_), _, _.P3F, 0);
-          }
-          static ToAccountID(_) {
-            return _.ExtractAccountID(_._.fromString(_, !0));
-          }
-          static ExtractAccountID(_) {
-            return _.getLowBitsUnsigned();
-          }
-          GetAccountID() {
-            return _.ExtractAccountID(this.m_ulSteamID);
-          }
-          GetInstance() {
-            return 1048575 & this.m_ulSteamID.getHighBitsUnsigned();
-          }
-          GetAccountType() {
-            return (this.m_ulSteamID.getHighBitsUnsigned() >> 20) & 15;
-          }
-          GetUniverse() {
-            return (this.m_ulSteamID.getHighBitsUnsigned() >> 24) & 255;
-          }
-          ConvertTo64BitString() {
-            return this.m_ulSteamID.toString();
-          }
-          Render() {
-            switch (this.GetAccountType()) {
-              case _.sln:
-                return (
-                  "[I:" + this.GetUniverse() + ":" + this.GetAccountID() + "]"
-                );
-              case _.P3F:
-                return (
-                  "[g:" + this.GetUniverse() + ":" + this.GetAccountID() + "]"
-                );
-              case _.urx:
-                return (
-                  "[A:" +
-                  this.GetUniverse() +
-                  ":" +
-                  this.GetAccountID() +
-                  ":" +
-                  this.GetInstance() +
-                  "]"
-                );
-              case _.UtJ:
-                return (
-                  "[G:" + this.GetUniverse() + ":" + this.GetAccountID() + "]"
-                );
-              case _.bmB:
-                return (
-                  "[M:" +
-                  this.GetUniverse() +
-                  ":" +
-                  this.GetAccountID() +
-                  ":" +
-                  this.GetInstance() +
-                  "]"
-                );
-              case _.eIg:
-                return (
-                  "[P:" + this.GetUniverse() + ":" + this.GetAccountID() + "]"
-                );
-              case _.LHp:
-                return (
-                  "[C:" + this.GetUniverse() + ":" + this.GetAccountID() + "]"
-                );
-              default:
-                return (
-                  "[U:" + this.GetUniverse() + ":" + this.GetAccountID() + "]"
-                );
-            }
-          }
-          static InitFromString(_) {
-            let _ = new _();
-            try {
-              let [_, _, _, _, _] =
-                  _.match(/\[([I|g|A|G|M|P|C|U]):(\d+):(\d+):?(\d+)?\]/) || [],
-                _ = Number(_),
-                _ = Number(_),
-                _ = _ ? Number(_) : 1;
-              switch (_) {
-                case "I":
-                  _.SetFromComponents(_, _, _.sln, _);
-                  break;
-                case "g":
-                  _.SetFromComponents(_, 0, _.P3F, _);
-                  break;
-                case "A":
-                  _.SetFromComponents(_, _, _.urx, _);
-                  break;
-                case "G":
-                  _.SetFromComponents(_, _, _.UtJ, _);
-                  break;
-                case "M":
-                  _.SetFromComponents(_, _, _.bmB, _);
-                  break;
-                case "P":
-                  _.SetFromComponents(_, _, _.eIg, _);
-                  break;
-                case "C":
-                  _.SetFromComponents(_, _, _.LHp, _);
-                  break;
-                case "U":
-                  _.SetFromComponents(_, _, _.W19, _);
-              }
-            } catch (_) {}
-            return _;
-          }
-          BIsValid() {
-            let _ = this.GetAccountType();
-            if (_ <= _.sln || _ >= _.f7X) return !1;
-            let _ = this.GetUniverse();
-            if (_ <= _.c3e || _ >= _.PPm) return !1;
-            if (_ == _.W19) {
-              if (0 == this.GetAccountID() || this.GetInstance() > _.imt)
-                return !1;
-            } else if (_ == _.P3F) {
-              if (0 == this.GetAccountID() || 0 != this.GetInstance())
-                return !1;
-            } else if (_ == _.UtJ && 0 == this.GetAccountID()) return !1;
-            return !0;
-          }
-          BIsIndividualAccount() {
-            return this.GetAccountType() == _.W19;
-          }
-          BIsClanAccount() {
-            return this.GetAccountType() == _.P3F;
-          }
-          SetAccountID(_) {
-            this.m_ulSteamID = new _._(
-              _,
-              this.m_ulSteamID.getHighBitsUnsigned(),
-              !0,
-            );
-          }
-          SetInstance(_) {
-            this.SetFromComponents(
-              this.GetAccountID(),
-              _,
-              this.GetAccountType(),
-              this.GetUniverse(),
-            );
-          }
-          SetAccountType(_) {
-            this.SetFromComponents(
-              this.GetAccountID(),
-              this.GetInstance(),
-              _,
-              this.GetUniverse(),
-            );
-          }
-          SetUniverse(_) {
-            this.SetFromComponents(
-              this.GetAccountID(),
-              this.GetInstance(),
-              this.GetAccountType(),
-              _,
-            );
-          }
-          SetFromComponents(_, _, _, _) {
-            let _ = ((255 & _) << 24) + ((15 & _) << 20) + (1048575 & _),
-              _ = 4294967295 & _;
-            this.m_ulSteamID = new _._(_, _, !0);
-          }
-        }
         var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -92121,7 +93541,7 @@ var CLSTAMP = "steamdb";
         function _(_) {
           let _ = (0, _._)();
           _.useEffect(() => {
-            let _ = new _(_);
+            let _ = new _._(_);
             _._.SetCurrentLoggedInAccountID(_.GetAccountID());
           }, [_]);
           const _ = _.useRef(void 0),
@@ -92173,31 +93593,6 @@ var CLSTAMP = "steamdb";
         __webpack_require__._(_, {
           _: () => _,
           _: () => _,
-          _: () => _,
-          _: () => _,
-        });
-        var _ = __webpack_require__("chunkid");
-        const _ = _._.box(void 0);
-        function _() {
-          return _.get();
-        }
-        function _(_) {
-          (0, _._)(() => _.set(_));
-        }
-        function _() {
-          const _ = _.get();
-          return _ || Math.floor(Date.now() / 1e3);
-        }
-        function _() {
-          const _ = _.get();
-          return _ ? new Date(1e3 * _) : new Date();
-        }
-      },
-      chunkid: (module, module_exports, __webpack_require__) => {
-        "use strict";
-        __webpack_require__._(_, {
-          _: () => _,
-          _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -92234,6 +93629,227 @@ var CLSTAMP = "steamdb";
           let _ = "" + _;
           const _ = _._.GetELanguageFallback(_);
           return _ != _ && (_ += "_" + _), _;
+        }
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(_, {
+          _: () => _,
+        });
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        function _(_) {
+          return (
+            (_ = _.rgBrowserAPISites),
+            (_ = "friendsui"),
+            !!_ && (_.includes("all") || _.includes(_))
+          );
+          var _, _;
+        }
+        class _ {
+          m_ServiceTransport;
+          m_AnonymousServiceTransport;
+          m_fallbackInterface;
+          m_refreshLoginCookiePromise;
+          constructor(_) {
+            (this.m_fallbackInterface = _),
+              (this.m_ServiceTransport = {
+                SendMsg: this.SendMsgAndAwaitResponse.bind(this, {
+                  bSendAuth: !0,
+                }),
+                SendNotification: this.SendNotification.bind(this, {
+                  bSendAuth: !0,
+                }),
+                MakeReady: this.MakeReady.bind(this),
+              }),
+              (this.m_AnonymousServiceTransport = {
+                SendMsg: this.SendMsgAndAwaitResponse.bind(this, {
+                  bSendAuth: !1,
+                }),
+                SendNotification: this.SendNotification.bind(this, {
+                  bSendAuth: !1,
+                }),
+                MakeReady: this.MakeReady.bind(this),
+              });
+          }
+          async SendMsgAndAwaitResponse(_, _, _, _, _) {
+            if (!_(_)) {
+              if (this.m_fallbackInterface)
+                return _.bSendAuth
+                  ? this.m_fallbackInterface
+                      ?.GetServiceTransport()
+                      .SendMsg(_, _, _, _)
+                  : this.m_fallbackInterface
+                      ?.GetAnonymousServiceTransport()
+                      .SendMsg(_, _, _, _);
+              console.error("No browserapi version of", _, "and no fallback");
+            }
+            const _ = await this.SendMsgOnce(_, _, _, _, _);
+            return 401 === _.status &&
+              _.bSendAuth &&
+              (await this.BEnsureLoginCookieRefreshed())
+              ? (await this.SendMsgOnce(_, _, _, _, _)).msgResult
+              : _.msgResult;
+          }
+          BEnsureLoginCookieRefreshed() {
+            return (
+              (this.m_refreshLoginCookiePromise ??= (async function () {
+                try {
+                  const _ = await fetch(
+                    `${_._.LOGIN_BASE_URL}jwt/ajaxrefresh`,
+                    {
+                      method: "POST",
+                      credentials: "include",
+                      body: new URLSearchParams({
+                        redir: window.location.href,
+                      }),
+                    },
+                  );
+                  if (!_._) return !1;
+                  const _ = await _.json();
+                  if (!_.success || !_.login_url) return !1;
+                  const _ = new URLSearchParams();
+                  for (const [_, _] of Object.entries(_))
+                    "string" == typeof _ && __webpack_require__.append(_, _);
+                  return (
+                    await fetch(_.login_url, {
+                      method: "POST",
+                      credentials: "include",
+                      body: _,
+                    })
+                  )._;
+                } catch {
+                  return !1;
+                }
+              })().finally(() => {
+                this.m_refreshLoginCookiePromise = void 0;
+              })),
+              this.m_refreshLoginCookiePromise
+            );
+          }
+          async SendMsgOnce(_, _, _, _, _) {
+            let _,
+              _ = 0;
+            try {
+              const _ = await this.Send(_, _, _, _);
+              if (((_ = _.status), 200 == _)) {
+                (_ = _._.Init(_, _.kHd)),
+                  _.headers &&
+                    (_.headers.get("x-eresult") &&
+                      _.Hdr().set_eresult(parseInt(_.headers.get("x-eresult"))),
+                    _.headers.get("x-error_message") &&
+                      _.Hdr().set_error_message(
+                        _.headers.get("x-error_message"),
+                      ));
+                const _ = new _._(await _.arrayBuffer());
+                _.ReadBodyFromBuffer(_, _);
+              }
+              0;
+            } catch (_) {}
+            if (!_) {
+              const _ = 401 === _ ? "Unauthorized" : void 0;
+              _ = this.CreateFailedMsgProtobuf(_, _.VrD, _);
+            }
+            return {
+              msgResult: _,
+              status: _,
+            };
+          }
+          SendNotification(_, _, _, _) {
+            if (!_(_)) {
+              if (this.m_fallbackInterface)
+                return _.bSendAuth
+                  ? this.m_fallbackInterface
+                      ?.GetServiceTransport()
+                      .SendNotification(_, _, _)
+                  : this.m_fallbackInterface
+                      ?.GetAnonymousServiceTransport()
+                      .SendNotification(_, _, _);
+              console.error("No browserapi version of", _, "and no fallback");
+            }
+            return this.Send(_, _, _, _), !0;
+          }
+          Send(_, _, _, _) {
+            const _ = this.CreateBrowserAPIURL(_),
+              _ = __webpack_require__.SerializeBody(),
+              _ = _.eWebAPIKeyRequirement,
+              _ = _.ePrivilege == _._._ && _ == _._._,
+              _ = {
+                credentials: "omit",
+                headers: {
+                  Accept: "application/octet-stream",
+                },
+              },
+              _ = new URLSearchParams();
+            _.bSendAuth ||
+              _ == _._._ ||
+              console.error(
+                `Attempting to invoke service ${_} without auth, but auth is required.`,
+              ),
+              _.bSendAuth && !_ && (_.credentials = "same-origin");
+            if (_.bConstMethod)
+              return (
+                _.append("input_protobuf_encoded", _._(_)),
+                fetch(`${_}?${_.toString()}`, _)
+              );
+            {
+              const _ = new Uint8Array(_.buffer, _.byteOffset, _.byteLength);
+              return fetch(_, {
+                ..._,
+                method: "POST",
+                headers: {
+                  ..._.headers,
+                  "Content-Type": "application/octet-stream",
+                },
+                body: _,
+              });
+            }
+          }
+          CreateBrowserAPIURL(_) {
+            const _ = _.match(/([^.]+)\.(.+)#(\d+)/);
+            if (!_ || 4 != _.length) throw `Invalid service name: ${_}`;
+            return `/um/${_[1]}/${_[2]}/`;
+          }
+          CreateFailedMsgProtobuf(_, _, _) {
+            const _ = _._.Init(_);
+            return (
+              _.Hdr().set_eresult(_._),
+              _.Hdr().set_transport_error(_),
+              _ && _.Hdr().set_error_message(_),
+              _
+            );
+          }
+          MakeReady() {
+            return Promise.resolve({
+              result: _._,
+              message: "ready",
+            });
+          }
+          GetServiceTransport() {
+            return this.m_ServiceTransport;
+          }
+          GetAnonymousServiceTransport() {
+            return this.m_AnonymousServiceTransport;
+          }
+          WaitUntilLoggedOn() {
+            return Promise.resolve();
+          }
+          GetServerRTime32() {
+            return Number(new Date());
+          }
+          RTime32ToDate(_) {
+            return new Date(1e3 * _);
+          }
+        }
+        var _ = __webpack_require__("chunkid");
+        function _(_) {
+          return (0, _._)() === _._.PARTNER_BASE_URL ? new _(_) : _;
         }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
@@ -94130,22 +95746,10 @@ var CLSTAMP = "steamdb";
               ref: _,
               ..._
             } = _,
-            _ = _.useRef(null),
             [_, _] = _.useState(0),
-            [_, _] = _.useState(0);
-          _.useImperativeHandle(
-            _,
-            () => ({
-              imgRef: _,
-              nSourceIndex: _,
-              nSourceLength: _.length,
-            }),
-            [_, _, _],
-          );
-          const _ = _.useMemo(() => JSON.stringify(_), [_]);
-          _.useEffect(() => {
-            _(0), _((_) => _ + 1);
-          }, [_]);
+            _ = _.useMemo(() => JSON.stringify(_), [_]),
+            [_, _] = _.useState(_);
+          _ != _ && (_(_), _(0));
           const _ = _.useMemo(() => {
               let _ = "";
               return (
@@ -94168,17 +95772,33 @@ var CLSTAMP = "steamdb";
                 _ >= _.length && _ && _(_), _ < _.length && _(_);
               },
               [_, _, _, _],
-            );
-          return (0, _.jsx)(
-            "img",
-            {
-              ref: _,
-              ..._,
-              src: _,
-              onError: _,
-              alt: _,
-            },
-            _,
+            ),
+            _ = _.useRef(null);
+          return (
+            _.useImperativeHandle(
+              _,
+              () => ({
+                imgRef: _,
+                nSourceIndex: _,
+                nSourceLength: _.length,
+              }),
+              [_, _, _],
+            ),
+            _.useEffect(() => {
+              const _ = _.current;
+              _?.complete && 0 == _.naturalWidth && (_.src = _.src);
+            }, []),
+            (0, _.jsx)(
+              "img",
+              {
+                ref: _,
+                ..._,
+                src: _,
+                onError: _,
+                alt: _,
+              },
+              _,
+            )
           );
         }
         const _ =
@@ -94596,6 +96216,7 @@ var CLSTAMP = "steamdb";
           _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -95522,8 +97143,36 @@ var CLSTAMP = "steamdb";
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        function _(_) {
+          return ["video", "vod", _];
+        }
+        function _(_) {
+          return {
+            queryKey: _(_),
+            queryFn: ({ signal: _ }) =>
+              (async function (_, _) {
+                const _ = _._.STORE_BASE_URL + "video/details/" + _ + "/0",
+                  _ = await fetch(_, {
+                    credentials: "include",
+                    signal: _,
+                  });
+                if (!_._) throw new Error(_ + " answered " + _.status);
+                const _ = await _.json();
+                if (_?.success != _._ && "ready" != _?.success)
+                  throw new Error(
+                    "video/details on " + _ + " answered " + _?.success,
+                  );
+                return {
+                  appid: _,
+                  video_url: _.video_url,
+                  bookmark: _.bookmark,
+                };
+              })(_, _),
+            retry: !1,
+          };
+        }
+        var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         class _ {
@@ -95650,37 +97299,6 @@ var CLSTAMP = "steamdb";
               ? _.Get().GetBookmarkPlayTimeInSeconds(this.m_appid)
               : 0;
           }
-        }
-        function _(_) {
-          return ["video", "vod", _];
-        }
-        function _(_) {
-          return {
-            queryKey: _(_),
-            queryFn: ({ signal: _ }) =>
-              (async function (_, _) {
-                const _ = _._.STORE_BASE_URL + "video/details/" + _ + "/0",
-                  _ = await fetch(_, {
-                    credentials: "include",
-                    signal: _,
-                  });
-                if (!_._) throw new Error(_ + " answered " + _.status);
-                const _ = await _.json();
-                if (_?.success != _._ && "ready" != _?.success)
-                  throw new Error(
-                    "video/details on " + _ + " answered " + _?.success,
-                  );
-                _.bookmark
-                  ? _.Get().SetBookmarkForApp(_, _.bookmark)
-                  : _.Get().InitializeBookmarkForApp(_);
-                return {
-                  appid: _,
-                  video_url: _.video_url,
-                  bookmark: _.bookmark,
-                };
-              })(_, _),
-            retry: !1,
-          };
         }
         var _ = __webpack_require__("chunkid");
         const _ = 7;
@@ -96257,7 +97875,10 @@ var CLSTAMP = "steamdb";
               );
             });
             _
-              ? (_.SetState(_.Ready),
+              ? (_.bookmark
+                  ? _.Get().SetBookmarkForApp(_.m_nAppIDVOD, _.bookmark)
+                  : _.Get().InitializeBookmarkForApp(_.m_nAppIDVOD),
+                _.SetState(_.Ready),
                 (_.m_manifestURL = _.video_url),
                 this.LoadVOD(_))
               : _.SetState(_.Error, (0, _._)("#BroadcastWatch_RequestFailed"));
@@ -97183,10 +98804,16 @@ var CLSTAMP = "steamdb";
             let _ = _.use_https ? "https://" : "http://";
             _ += _.url_host + _.url_path;
             const _ = {};
-            for (const _ of _.request_headers)
-              "Content-Length" != _.name &&
-                "Host" != _.name &&
-                (_[_.name] = _.value);
+            for (const _ of _.request_headers) {
+              if (
+                "content-length" == _.name.toLowerCase() ||
+                "host" == _.name.toLowerCase()
+              )
+                continue;
+              let _ = _.name;
+              "content-type" === _.toLowerCase() && (_ = "Content-Type"),
+                (_[_] = _.value);
+            }
             let _ = {
               onUploadProgress: (_) => {
                 const _ = !!this.m_fileUploadProps.exportFn,
@@ -97784,8 +99411,17 @@ var CLSTAMP = "steamdb";
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        function _(_, _, _) {
+          return _ == _._
+            ? `charts/topnewreleases/${_}`
+            : _ == _._
+              ? `charts/bestofyear/${_}`
+              : _
+                ? `sale/${_}`
+                : `curator/${_}/sale/${_}`;
+        }
+        var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
@@ -97811,7 +99447,6 @@ var CLSTAMP = "steamdb";
           null,
         );
         const _ = 99999;
-        __webpack_require__("chunkid");
         var _;
         !(function (_) {
           (_.Random = "r"), (_.Personalized = "p");
@@ -97988,7 +99623,11 @@ var CLSTAMP = "steamdb";
             _.I5b,
             _.LOv,
             _.WNR,
-          ];
+          ],
+          _ = [_._.k_ESteamRealmGlobal],
+          _ = [_._.k_ESteamRealmChina],
+          _ = [_._.k_ESteamRealmGlobal, _._.k_ESteamRealmChina],
+          _ = [];
         class _ {
           constructor() {
             (0, _._)(this);
@@ -98706,15 +100345,16 @@ var CLSTAMP = "steamdb";
                           : _._.STORE_BASE_URL + _.type
                 : _._.STORE_BASE_URL + "sale/" + this.jsondata.sale_vanity_id;
             }
-            return this.jsondata.sale_vanity_id_valve_approved_for_sale_subpath
-              ? _._.STORE_BASE_URL + "sale/" + this.jsondata.sale_vanity_id
-              : _
-                ? _ + "sale/" + this.jsondata.sale_vanity_id
-                : _._.STORE_BASE_URL +
-                  "curator/" +
-                  this.clanSteamID.GetAccountID() +
-                  "/sale/" +
-                  this.jsondata.sale_vanity_id;
+            const _ = this.clanSteamID.GetAccountID(),
+              _ =
+                !!this.jsondata.sale_vanity_id_valve_approved_for_sale_subpath,
+              _ = this.GetSaleVanity();
+            return _ &&
+              (function (_, _) {
+                return _(_, "", _).startsWith("curator/");
+              })(_, _)
+              ? _ + "sale/" + _
+              : _._.STORE_BASE_URL + _(_, _, _);
           }
           BHasEmailEnabled() {
             return (
@@ -99050,15 +100690,14 @@ var CLSTAMP = "steamdb";
               : void 0;
           }
           GetIncludedRealmList() {
-            const _ = new Array();
+            const _ = this.BInRealmGlobal(),
+              _ = this.BInRealmChina();
             return (
-              this.BInRealmGlobal() && _.push(_._.k_ESteamRealmGlobal),
-              this.BInRealmChina() && _.push(_._.k_ESteamRealmChina),
               (0, _._)(
-                _.length > 0,
+                _ || _,
                 `Event ${this.GID} is currently configured so that no realms are valid for display. Either enable Steam China or Global to address this issue`,
               ),
-              _
+              _ && _ ? _ : _ ? _ : _ ? _ : _
             );
           }
           BIsValidForRealm(_) {
@@ -99184,7 +100823,7 @@ var CLSTAMP = "steamdb";
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
+          _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
           _ = __webpack_require__("chunkid");
         function _(_) {
           return (
@@ -100042,7 +101681,7 @@ var CLSTAMP = "steamdb";
                   (_ += _ ? "gid/" + _.ConvertTo64BitString() : "ogg/" + _),
                   (_ += "/"))
                 : (_ =
-                    "partnerweb" === _
+                    "partner" === _
                       ? _._.PARTNER_BASE_URL + "sales/"
                       : _._.STORE_BASE_URL + "events/"),
                 (_ += "ajaxgetpartnereventforedit"),
@@ -101579,6 +103218,7 @@ var CLSTAMP = "steamdb";
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         __webpack_require__("chunkid");
         function _(_, _) {
@@ -102201,8 +103841,8 @@ var CLSTAMP = "steamdb";
                 (console.warn(
                   "Service transport not initialized for StoreItemCache",
                 ),
-                (this.m_serviceTransport = new _._(
-                  _._.WEBAPI_BASE_URL,
+                (this.m_serviceTransport = (0, _._)(
+                  new _._(_._.WEBAPI_BASE_URL),
                 ).GetAnonymousServiceTransport())),
               this.m_serviceTransport
             );
@@ -118198,7 +119838,6 @@ var CLSTAMP = "steamdb";
           a_4: () => _,
           b8_: () => _,
           _: () => _,
-          cLJ: () => _,
           fqd: () => _,
           jGG: () => _,
           jvG: () => _,
@@ -118220,33 +119859,6 @@ var CLSTAMP = "steamdb";
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
-        function _(_) {
-          const { direction: _ } = _;
-          let _;
-          _ =
-            "up" === _
-              ? "rotate( 180deg )"
-              : "left" === _
-                ? "rotate( 90deg )"
-                : "right" === _
-                  ? "rotate( 270deg )"
-                  : void 0;
-          return (0, _.jsx)("svg", {
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            ..._,
-            style: {
-              transform: _,
-            },
-            children: (0, _.jsx)("path", {
-              fill: "currentColor",
-              fillRule: "evenodd",
-              clipRule: "evenodd",
-              _: "M17.5316 18.0962L9.43544 10L5.8999 13.5355L17.5316 25.1673L29.1633 13.5355L25.6278 10L17.5316 18.0962Z",
-            }),
-          });
-        }
         function _(_) {
           return (0, _.jsx)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
@@ -125610,11 +127222,12 @@ var CLSTAMP = "steamdb";
           _: () => _,
         });
         var _ = __webpack_require__("chunkid");
-        let _ = 0;
         function _() {
-          const _ = _.useRef(void 0);
+          const _ = _.useId(),
+            _ = _.useRef(void 0);
           return (
-            void 0 === _.current && (_.current = "svgid_" + _++),
+            void 0 === _.current &&
+              (_.current = "svgid_ssr_" + _.replace(/[^A-Za-z0-9_-]/g, "")),
             [_.current, `url(#${_.current})`]
           );
         }
@@ -130603,10 +132216,8 @@ var CLSTAMP = "steamdb";
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
         __webpack_require__._(_, {
-          _: () => _,
           _: () => _._,
           _: () => _._,
-          _: () => _,
           _: () => _._,
           _: () => _,
           _: () => _,
@@ -130619,7 +132230,6 @@ var CLSTAMP = "steamdb";
           _: () => _,
           _: () => _,
           _: () => _._,
-          _: () => _,
           _: () => _,
           _: () => _,
           _: () => _,
@@ -130688,15 +132298,6 @@ var CLSTAMP = "steamdb";
         }
         function _() {
           return "macos" == _._.PLATFORM;
-        }
-        function _() {
-          return "linux" == _._.PLATFORM;
-        }
-        function _() {
-          return _._.IN_CHROMEOS;
-        }
-        function _() {
-          return _._.IS_STEAMOS;
         }
         function _(_, _) {
           return 0 != _.length && _.startsWith(_);
@@ -132316,200 +133917,200 @@ var CLSTAMP = "steamdb";
       {
         43: "b98e0f420add57691fc2",
         133: "82545716ea1a8b82e4d9",
-        191: "cdf810736493a328a3b8",
-        195: "091ec794d3d9282375f8",
-        200: "d8a771456859bf667ae1",
-        277: "2181db2b759e22e0721d",
-        295: "bec4c3a3b223c5b535ee",
+        191: "67919f9f590b036cce4c",
+        195: "306450f819523e5ac212",
+        200: "0655ee5407a940eee720",
+        277: "3ae977a63a6804c9a2f5",
+        295: "410a4726c1d22681c08d",
         316: "b4a4125ab8550ef83a0b",
-        382: "8b8c2aedeba30eba833a",
+        382: "7003a20c59bb974c58fe",
         474: "6a9d0b4e2892dded462e",
         496: "9a94d6c6cfcb3bc3368a",
-        559: "d64775d3383d222f83f1",
-        580: "6bbe6dcec62ec3089ef0",
-        603: "e628aea1c51b0ef1202f",
+        559: "890bab2eddd94135560a",
+        580: "49454acae38c3546dca6",
         684: "7b7abc722226e7196944",
-        716: "594148f5c00309b02094",
-        762: "6381bf741535ad65d4e3",
-        815: "f2038e38b471e6580b09",
-        876: "51ef786d3dfe812c14a9",
-        898: "11a6d4f27e7a73097e49",
+        716: "aa6b8d57d3c04818ba6a",
+        762: "1a71c2380738fb49d933",
+        815: "92513be8b6a53a1f7bc1",
+        876: "50b1ed1adf95a2f3d8e2",
+        898: "2855b5f3ed333babf5d4",
         902: "6e7ad65798517965fe93",
         947: "77123a0d43c051462d19",
-        975: "6dfcfc1ebe4c1f302299",
-        1087: "f1cb9c2b9a5d83155486",
-        1136: "75ccf7159e306719261c",
+        975: "287153a4cece3d986cb8",
+        1087: "3d50042a2d1ee984156a",
+        1136: "c5551e4af5cf38a6c5d9",
         1144: "ef887abc6f21acc413b9",
         1158: "7b7df8e115a77b6d2514",
         1224: "8cf7b28930c7b7c56321",
-        1316: "6416da759aef7a411fca",
+        1316: "c983eebd789b86c40abf",
         1330: "d8ab1ac01d7f47e93aca",
-        1391: "057d95231b1576648144",
+        1391: "6756199f8351b5ebc66c",
         1417: "8b4fa6683be707656fec",
-        1499: "016609b438b84fcc275a",
+        1499: "09bea9a8d3fa9b6a327c",
         1571: "301c37a370bcf304422d",
         1639: "b7f1a373087508302f2a",
-        1663: "6e32f2ce814ed8f67afe",
-        1849: "a4cd0ef32f6189fd346a",
-        1864: "bd1079f8716622de751c",
-        1954: "3244d659575f99d32147",
+        1663: "78cdc6a251b413411a6e",
+        1849: "22fdb1a8f9bd6885c6ab",
+        1864: "ed5d5dcdf7ac7663f357",
+        1954: "548940c4f934b846e382",
         1990: "8ea787b5e0b930f4bc47",
-        2101: "49e06d82b53a46650e72",
+        2101: "b3b4181268c1e203745b",
         2116: "8ff48373ca6311ee0ab9",
-        2177: "fa9bb7e7f884d2da8508",
-        2269: "7590c08423165d5e79ea",
-        2281: "0d10325b253757817425",
+        2177: "1dc131460cc54cae6242",
+        2269: "5a19508ea203f2abd48f",
+        2281: "2fd2fc4f49114a216ee8",
         2292: "2648171bbf7a4e541935",
-        2506: "5752d487f6994879acea",
-        2520: "de672d8149a685750e41",
-        2532: "b60b5fd23783f79f5e7e",
-        2539: "909cd8fc9ff8b31e1339",
-        2687: "3801480afa293aa24692",
-        2889: "85bdbfb79e786e669f3e",
-        2916: "60a7b33063885759bbb3",
-        2945: "b1bb49c86e94db92dee9",
-        2993: "e6827764a5e82e106259",
-        3e3: "1b03996604202ef27322",
-        3016: "ca85786390010cceefc4",
+        2506: "335d038532c5410fc13e",
+        2520: "df1e02ebeb2398df7791",
+        2532: "edc9af68dd8ed98e4677",
+        2539: "0b9360d136e98baa9812",
+        2687: "aab98660035717e7619c",
+        2889: "144700763cda731154a2",
+        2916: "95f66531f9cdc88faed1",
+        2945: "2c589d89be73c95b1cfb",
+        2993: "7531c479e06a950e1ed0",
+        3e3: "23de2c2177882a6d4d8b",
+        3016: "f89712012c8d6eb6aa18",
         3199: "7b3d3178075de7dfd783",
-        3202: "a19243ade4d7b5d4b8a1",
-        3232: "506a59c269184fbbf9b5",
+        3202: "e765b9f27941fbe9ae8e",
+        3232: "a2b395c8b1312464290f",
         3307: "44f8930bc3553cbdf25a",
-        3382: "4c7f0b918a10ea9b8147",
-        3415: "f27b27ba4a24ffe3357b",
-        3473: "6471b967b2cfad8ddf3c",
-        3485: "08349ebcf15f4d7c2342",
-        3577: "f29cbfad3abfecc3942d",
+        3382: "65d75525c47e0d8fec4f",
+        3415: "0066838ec4cb331afcbf",
+        3473: "4c5e270bc596ccbb2b29",
+        3485: "447095c8c3a3825edcaa",
+        3577: "6d30a5038108f71aed39",
         3723: "a69634b2de1f3fa5dba5",
-        3744: "fea1673992963572f88f",
-        3778: "7beb91c8eb6a2ff689db",
-        3789: "7576118cdc2ea612c555",
-        3800: "ba62105d90f032741297",
+        3744: "2967c09a7a39c09bd736",
+        3778: "4100fb14f28f9e577902",
+        3789: "d8631a0a3fc251d38dfb",
+        3800: "18a93d9c8a67cd5b37e1",
         3810: "e5049fe30dd9a6434d81",
         3875: "f4eb6016a7ef30ff0ad4",
-        3898: "2b7d8f9e0d59c4b9a013",
-        3899: "5559185045f072250cb7",
-        3907: "b6f328b4173397675976",
-        4006: "157254b9360535f4cd06",
-        4154: "ab85015c1182c53c2a07",
+        3898: "05fac6f81bd396367666",
+        3899: "db4af4663060b9425db9",
+        3907: "25507afd500da3c3f2f8",
+        4006: "d9b2a286c0c529896f9a",
+        4154: "91573ee32f988aef5441",
         4227: "4a6e5448c3300d2e1eb5",
-        4230: "74309c0c8176151229d1",
-        4259: "aca072edd6d6dd1eccda",
-        4289: "1bc29bf5eaf58b524686",
+        4230: "4a752d1f42a167c60b6b",
+        4259: "2a07c478b1bfe8d4c9d6",
+        4289: "017883d4c3c91b8980ad",
         4295: "e2c54df00cd7fc6e55c9",
-        4302: "127bac547ebe35debb6e",
+        4302: "8039108d581b4e85ba60",
         4352: "de92a58e851fd1f40a2a",
-        4419: "98ebdffd27b8dc7c8c6c",
-        4421: "88a1c5dbc90696d29d90",
-        4434: "7042d1e1cb05e782371a",
-        4473: "70a3b6d4353b30ee8b92",
-        4475: "a63bc7e44927130c0113",
-        4488: "ecc72b7e73d0d3a37046",
-        4625: "eaf635cc4b6712cf93b5",
-        4750: "47a0a894ecee25ba51a6",
-        4768: "9901a55c15965a580b88",
-        4769: "cf2eeb2fae1c6a53b9ee",
-        4776: "642916fbd7a977b50de9",
+        4419: "c4f2b0b18cb8cd04b262",
+        4421: "39f279288b368c353b6d",
+        4434: "f630585a768f94279b22",
+        4473: "588c045f1377b93d5352",
+        4475: "aa395d541ccdca3c2f1e",
+        4488: "eac4cc139cd6ac731e60",
+        4625: "08fe68a65ded6fd301fc",
+        4747: "bf75fef4aa14ac113730",
+        4750: "24e4ca1f254467d588cf",
+        4768: "301688331b39285493fe",
+        4776: "f38dfa6ffa46b34d7cf8",
         4777: "8d8d0e50796c359cd3da",
         4779: "909f21776039059914ce",
-        4787: "ef50a874abefeb603b11",
-        4792: "c056893ba11cb0d30951",
+        4787: "a239a31ed2a0881c02a4",
+        4792: "211e5410eb00e87b57c6",
         4844: "9b0a060abc338b33c9ea",
-        4925: "e519812b003e3f0cba5c",
-        4933: "314165591585433c69f4",
-        4976: "91b016438fffddc0bed4",
-        4978: "46f2faa6caa6f2fa8c9c",
-        5040: "bf3ddd7cfe1a44ffafee",
-        5094: "ecb3cff280792491989a",
+        4925: "79b80df32d5610ed7c0c",
+        4933: "183fcffa09c6edfcc8d8",
+        4976: "b477bf711a45be1168e9",
+        4978: "e12551352d72b620632d",
+        5040: "504695afe4a67b66e55d",
+        5094: "2e74ef0788021b2161f2",
         5136: "95e9b3cf4f0005ee1eb7",
-        5181: "209ff7217fcd3b9ca319",
-        5191: "f8cc93f2bb1a394f8a40",
-        5233: "467bd0ef734fa09c948b",
-        5269: "79a97249435b1a0d921f",
-        5341: "d01dc36adbf1ed0dc168",
-        5358: "708949b6188390bbac6b",
-        5436: "c9c4231566ba196ee32b",
-        5480: "aa8842d2e7d72dad67c5",
+        5181: "4a8cb03dafc87481fbec",
+        5191: "3ac5a82179c46922513a",
+        5233: "2f92edd12c256db2b4eb",
+        5269: "ef888f0bfcabe0ae35ef",
+        5341: "c85978bd33a350fe40f8",
+        5358: "ac58e1135c00eb00feae",
+        5436: "93808aa73bdec7559bb6",
+        5480: "e203c5b184def975c722",
         5522: "43ef07153506837b9ad7",
         5536: "67277551d20afcb0ab7a",
         5617: "6d58f25bd9f169dac32a",
-        5725: "01639e3f789639997273",
-        5777: "9525f58d94a99ff3de42",
-        5893: "2014bf321bdf254742fc",
-        6059: "69785693553b04c4d427",
-        6127: "4882c58af191aaf74128",
-        6170: "cabcfc47be49ddd8c1a7",
-        6196: "64e06475bbd9867fa476",
+        5725: "bda806579d2ffc60eeb0",
+        5777: "d7938fee5102af682ab0",
+        5893: "27e545163d4f598c6033",
+        6059: "2b6e131f7948199622cb",
+        6127: "4508c5786d4961728036",
+        6170: "9603ed96e11b8d7d322c",
+        6196: "cbaf8f4d48c68c89b12a",
         6305: "7e16a909007613dc67d6",
-        6385: "e5f8cfa9b62ae2ae5efe",
-        6447: "8c8ef4700b52c35cfe36",
-        6512: "2b17639fc5883a07dfae",
-        6518: "a9d5318be576311fe3cf",
-        6609: "fc94f8d39971c6671379",
+        6385: "72b324aa319263bbf2aa",
+        6447: "2be3a810651e71a4db7a",
+        6512: "3e6bf5541e45de2c2916",
+        6518: "db32ab28eeb38d05c46f",
+        6609: "a70215f475d630cda433",
         6637: "bee05b6c76a9dd2fe06d",
-        6696: "b53d5d3dc27e1c6f91f3",
-        6736: "70fa0ebe4088639dc07d",
-        6810: "1ef82b614a4f6f5d48da",
-        6865: "9a67ff86da7136487018",
-        6884: "28f634113578204ad834",
-        6888: "c50f7606409776b647a0",
+        6696: "3785910eb1388ceae620",
+        6736: "508229bfaab2c3ad0600",
+        6810: "64b12be1ca26fe5fb35c",
+        6865: "bc2c935bfe4799ada36c",
+        6884: "9fddf227b3c380af1153",
+        6888: "4bee95312b92fc339846",
         6905: "d9316fc5a220e6b4c416",
-        6920: "573b0de8730c757e1e3b",
-        6950: "b29690962c93ca72ebf6",
-        6971: "e7f4af03b6ba3a7fa534",
-        7246: "c2e13c1646bd9f5f31bc",
+        6920: "a5cd73fbf94e24285cf3",
+        6950: "ed713522cf333a87eff5",
+        6971: "6aab8298a9f6c2e7e640",
+        7246: "192095cb3169052a5a9d",
         7247: "7021b7a5aaf6d7ee9806",
-        7263: "8b2b2a2b55225de80917",
-        7279: "86dcc35931144e512c63",
-        7306: "5b3b8b9c7d88951f6a1e",
-        7365: "132743329d76e9f80a1e",
+        7263: "87c245653d96b85f0c8f",
+        7279: "534210be3bcd6c47e081",
+        7306: "a38b670bf97477501437",
+        7365: "ca0ce27c8cc42a065d63",
         7418: "7680875bb68efceaf698",
-        7462: "2d7898bd23536ca4af2b",
-        7464: "287ef26253b02913e776",
+        7462: "05fda28984f8684c144f",
+        7464: "be57a9834386fda7883b",
         7468: "53e0875c52dff3de164a",
-        7487: "8efea89904c72e8440e5",
+        7487: "b3bc1a3055196336a2c5",
         7503: "362e655b8858b8f9df76",
-        7637: "aaf49c28fc90f264dc3a",
-        7653: "4f25fe7e823261076669",
+        7637: "e4dda80baa037326435b",
+        7653: "1f726a50199737dea246",
         7673: "065a311d75b3213d4f15",
-        7788: "fce80530e12aa56e0e7d",
-        7861: "5edde2f8fc8a9ec95168",
+        7788: "3fb4bb641730af7e3ab5",
+        7861: "03f3ef9871b74f85b7c9",
         7904: "116aefb93e005baea38e",
-        7996: "1b62b80d2bcbcba8e4b5",
-        8016: "65f2c46f9a822c488340",
-        8106: "00ffa5e0daf7cc29c8f9",
+        7996: "5d4279bfe64f9b0161b6",
+        8016: "438c9f51ca4c6dd13e5c",
+        8106: "895d8ad1ceef931f7ae3",
         8191: "7c71b0175a3b35434ec8",
-        8194: "7b692387d3a77ce31c7b",
+        8194: "19389dd5e3a338fa8335",
         8246: "d8dd4a47668b5bf225ab",
-        8311: "359ab0d1193c7e537323",
+        8311: "2d531546f2f67907eb3f",
         8366: "fbd35ad496eb7892a424",
-        8476: "7c9530f96cd9029ed605",
-        8484: "68e7c7220c697e64f4b8",
+        8476: "142bdea68b8c07d60cc1",
+        8484: "17292649dd9094087dee",
         8566: "cd93e0bf03daf5972185",
-        8703: "d7a925805f44df1e2ec1",
-        8759: "73a7657685d5198e1a73",
-        8766: "0447dd79b31a8fe64ce1",
-        8822: "fcdccb22e57db11ffa10",
+        8703: "ca0425acd66d516cab0c",
+        8759: "f3a857d0e075f6a5df25",
+        8766: "ff4a8662d1695c71999f",
+        8822: "6b779548055153d9b276",
         8833: "0db29dc3b45b31acb4a4",
-        8855: "33768e946845e5b1e50e",
-        8871: "d0ef58839eede33567c2",
-        8906: "fbac03840b0674a6848b",
-        8930: "57e4bc43677b146e1747",
-        8948: "16c209d2cb6b1bd4dbde",
-        8970: "387d122ea41a96b81947",
+        8855: "a2cbb88e160cc37a100f",
+        8871: "3663e7f3855acb690937",
+        8906: "0103d9458ddd1751c926",
+        8930: "9d2497ec82f207b1719d",
+        8948: "dad255b059462da0aa01",
+        8970: "7256ba26688dc5eb5a3b",
+        9033: "929fcd54cb65cee794e6",
         9273: "702b2119e94a4b56417e",
         9401: "0c0cd9c24baf6ebde222",
-        9457: "61a8c0f40073a7ec8863",
-        9574: "68032fc3b50cc1f55432",
-        9668: "06e3d924597e1f7207c6",
-        9746: "3679c8e2ce76e34b2ccf",
-        9779: "7012ad760ce038fb95d4",
-        9808: "51bb932b4ac14b5211d4",
-        9863: "6fddaa4e87ac42e9f088",
-        9902: "94e79e0584ed95da468d",
-        9925: "83a3da3bb56d49439826",
+        9457: "617bedd72b906cda460b",
+        9574: "0fcb07da3d3536b4ee16",
+        9668: "602f85c19159060b5268",
+        9746: "b5af6dc570b5c0da3440",
+        9779: "f49c99fcdfa48e2d9f47",
+        9808: "c4bf22d40fb8ca9ba7f6",
+        9863: "30abe4e210c01e2471fc",
+        9902: "f5979e5868d758248da5",
+        9925: "6067371ce6eb8ca69fd6",
         9930: "b668cf57ae9b3055dfd0",
-        9947: "4401f1554b863bd34d8d",
+        9947: "7d4f6339d100f9d1ded0",
       }[_]),
     (_.miniCssF = (_) =>
       "css/webui/" +
@@ -132520,7 +134121,7 @@ var CLSTAMP = "steamdb";
       ".css?contenthash=" +
       {
         7462: "720b410a25437da34ec5",
-        7653: "25897f00176eae45f6aa",
+        7653: "b9b6c33e05e963662100",
       }[_]),
     (_._ = (function () {
       if ("object" == typeof globalThis) return globalThis;
@@ -132754,6 +134355,6 @@ var CLSTAMP = "steamdb";
       __webpack_require__.forEach(_.bind(null, 0)),
         (_.push = _.bind(null, _.push.bind(_)));
     })();
-  var _ = _._(void 0, [3987, 9489, 1068], () => _(34319));
+  var _ = _._(void 0, [3987, 9489, 1068], () => _(89817));
   _ = _._(_);
 })();

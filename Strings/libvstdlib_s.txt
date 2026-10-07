@@ -1572,13 +1572,6 @@ _exit
 _setjmp
 _strlwr
 _strupr
-_txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
-_txnal_cow_string_D1(void*)
-_txnal_cow_string_D1_commit(void*)
-_txnal_cow_string_c_str(void const*)
-_txnal_logic_error_get_msg(void*)
-_txnal_runtime_error_get_msg(void*)
-_txnal_sso_string_c_str(void const*)
 `tun%
 a\rxg[
 abort
@@ -2132,24 +2125,8 @@ typeinfo fn for
 typeinfo for
 typeinfo for CUniformRandomStream
 typeinfo for SteamThreadTools::CThread
-typeinfo for __cxxabiv1::__class_type_info
-typeinfo for __cxxabiv1::__forced_unwind
-typeinfo for __cxxabiv1::__foreign_exception
-typeinfo for __cxxabiv1::__si_class_type_info
-typeinfo for __cxxabiv1::__vmi_class_type_info
-typeinfo for __gnu_cxx::__concurrence_lock_error
-typeinfo for __gnu_cxx::__concurrence_unlock_error
-typeinfo for __gnu_cxx::recursive_init_error
 typeinfo name for
 typeinfo name for CUniformRandomStream
-typeinfo name for __cxxabiv1::__class_type_info
-typeinfo name for __cxxabiv1::__forced_unwind
-typeinfo name for __cxxabiv1::__foreign_exception
-typeinfo name for __cxxabiv1::__si_class_type_info
-typeinfo name for __cxxabiv1::__vmi_class_type_info
-typeinfo name for __gnu_cxx::__concurrence_lock_error
-typeinfo name for __gnu_cxx::__concurrence_unlock_error
-typeinfo name for __gnu_cxx::recursive_init_error
 unReadAheadChunkSize < INT32_MAX/2
 unReadAheadChunkSize should be zero when using bUnbuffered = true
 uname
@@ -2183,14 +2160,6 @@ vstdlib_wcstoui64
 vswprintf
 vtable for
 vtable for CUniformRandomStream
-vtable for __cxxabiv1::__class_type_info
-vtable for __cxxabiv1::__forced_unwind
-vtable for __cxxabiv1::__foreign_exception
-vtable for __cxxabiv1::__si_class_type_info
-vtable for __cxxabiv1::__vmi_class_type_info
-vtable for __gnu_cxx::__concurrence_lock_error
-vtable for __gnu_cxx::__concurrence_unlock_error
-vtable for __gnu_cxx::recursive_init_error
 w+OQvr
 wXR\r
 wchar_t

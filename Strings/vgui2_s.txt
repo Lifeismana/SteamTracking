@@ -535,6 +535,7 @@ $\nY8O
 /max_brightness
 /name
 /proc/%d/environ
+/proc/device-tree/board-info/unit_sn
 /proc/device-tree/compatible
 /proc/device-tree/model
 /proc/mounts
@@ -2163,6 +2164,7 @@ N10__cxxabiv115__forced_unwindE
 N10__cxxabiv117__class_type_infoE
 N10__cxxabiv119__foreign_exceptionE
 N10__cxxabiv120__si_class_type_infoE
+N10__cxxabiv121__vmi_class_type_infoE
 N17CFileWriterThread14CFileWriteItemE
 N17CFileWriterThread16CLogFileWorkItemE
 N17CFileWriterThread19CFileWriterWorkItemE
@@ -3417,13 +3419,6 @@ _longjmp
 _popupList
 _setjmp
 _strlwr
-_txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
-_txnal_cow_string_D1(void*)
-_txnal_cow_string_D1_commit(void*)
-_txnal_cow_string_c_str(void const*)
-_txnal_logic_error_get_msg(void*)
-_txnal_runtime_error_get_msg(void*)
-_txnal_sso_string_c_str(void const*)
 `tun%
 `~KEY_BACKQUOTE
 aAKEY_A
@@ -5375,6 +5370,7 @@ span
 spanish
 sprintf
 sqrt
+sqrtf
 src!=NULL
 stackLevel >= 0 && stackLevel < m_errorIndex
 start
@@ -5544,21 +5540,7 @@ type.googleprod.com/
 typeinfo fn for
 typeinfo for
 typeinfo for SteamThreadTools::CThread
-typeinfo for __cxxabiv1::__class_type_info
-typeinfo for __cxxabiv1::__forced_unwind
-typeinfo for __cxxabiv1::__foreign_exception
-typeinfo for __cxxabiv1::__si_class_type_info
-typeinfo for __gnu_cxx::__concurrence_lock_error
-typeinfo for __gnu_cxx::__concurrence_unlock_error
-typeinfo for __gnu_cxx::recursive_init_error
 typeinfo name for
-typeinfo name for __cxxabiv1::__class_type_info
-typeinfo name for __cxxabiv1::__forced_unwind
-typeinfo name for __cxxabiv1::__foreign_exception
-typeinfo name for __cxxabiv1::__si_class_type_info
-typeinfo name for __gnu_cxx::__concurrence_lock_error
-typeinfo name for __gnu_cxx::__concurrence_unlock_error
-typeinfo name for __gnu_cxx::recursive_init_error
 uUKEY_U
 uifontfile_format.proto
 uifontfile_format.proto"C\n\rCUIFontFilePB
@@ -5670,14 +5652,6 @@ vpaes_set_decrypt_key
 vpaes_set_encrypt_key
 vsnprintf
 vtable for
-vtable for __cxxabiv1::__class_type_info
-vtable for __cxxabiv1::__forced_unwind
-vtable for __cxxabiv1::__foreign_exception
-vtable for __cxxabiv1::__si_class_type_info
-vtable for __cxxabiv1::__vmi_class_type_info
-vtable for __gnu_cxx::__concurrence_lock_error
-vtable for __gnu_cxx::__concurrence_unlock_error
-vtable for __gnu_cxx::recursive_init_error
 vtw\nx
 w+OQvr
 w3Xc

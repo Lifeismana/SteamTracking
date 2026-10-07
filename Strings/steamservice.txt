@@ -79,6 +79,13 @@
  (repeat period: %lldms)
  - %s [locked by %s - %s / %s (%lums)]
  - file:%s, line:%u ,time:%04u%02u%02u%02u%02u%02u\n
+ --enable-duplicate-detection
+ --force
+ --label '%s'
+ --mock-up-to-date
+ --mock-update-available
+ --mock-update-error
+ /bin/sh -c
  /runfunc %u %u %u %u
  = { <proto text format> }". To set fields within it, use syntax like "
  Avg Time/Frame (ms)\n
@@ -112,6 +119,8 @@
  bytes.
  cannot be required.
  characters
+ check
+ check 2>&1
  conflicts with an existing enum type.
  conflicts with an existing field.
  conflicts with an existing nested message type.
@@ -159,6 +168,7 @@
 !"Emptying callback queue because client didn't process them in a timely manner"
 !"Interface type not found"
 !"Not implemented"
+!"Unable to get home directory"
 !"enum ELanguage order mismatched from Language_t s_LanguageNames, fix it!"
 !( m_nFlags & FCVAR_NEVER_AS_STRING )
 !( m_pHTTPResponseHandler && m_pHTTPStreamingResponseHandler )
@@ -350,6 +360,7 @@ $0option $1;\n
 $0rpc $1($4.$2) returns ($5.$3)
 $Cw!R
 $F09Y
+$HOME/
 $ORIGIN
 $O\tdwR\rox\\r*
 $XI(6
@@ -454,6 +465,7 @@ $ffn
 %04u%02u%02uT%02u%02u%02uZ
 %04u-%02u-%02u
 %04u-%02u-%02u %02u:%02u:%02u
+%04x:%04x
 %08lx
 %08u %s:%02u > %s::%s(
 %0MM
@@ -581,6 +593,8 @@ $ffn
 %lx-%lx %*c%*c%*c%*c %*x %*x:%*x %*u %16383[^\n]
 %s %2d %02d:%02d:%02d %d%s
 %s %2d %02d:%02d:%02d%.*s %d%s
+%s %s %s %s
+%s %s >%s %s
 %s %s HTTP/1.0\r\n
 %s %s%lu (%s0x%lx)\n
 %s %s(%llu) / %s
@@ -588,7 +602,11 @@ $ffn
 %s (emsg=%d)
 %s - locked by 0x%p
 %s --add-section %s=%s %s
+%s --device %s
 %s --remove-section=%s %s
+%s --slot %d
+%s --supports-duplicate-detection
+%s -P -F upnR -i TCP@%s
 %s < %.*s < ...%s
 %s HTTP Client
 %s JobFunc < %s
@@ -618,6 +636,7 @@ $ffn
 %s.old.%i
 %s.old.1
 %s/%c%c/%s_%s
+%s/.local/share/applications
 %s/.steam/%s
 %s/.steam/steam
 %s/Steam/registry.vdf
@@ -633,8 +652,18 @@ $ffn
 %s: '%s', '%s'
 %s: (%d bit)\n
 %s: __pos (which is %zu) > this->size() (which is %zu)
+%s: command exited unexpectedly: %s\n
+%s: command exited unexpectedly\n
+%s: command failed: %d\n
+%s: failed to run command: %s\n
+%s: lseek %s: %s\n
+%s: lseek start failed: %s\n
+%s: mkstemp %s: errno %s\n
 %s: no such process %d - %d\n
 %s: none\n
+%s: read failed: %s\n
+%s: set hostname to %s\n
+%s: set timezone to %s\n
 %s:%d: OpenSSL internal error: %s\n
 %s://%s/%s%s
 %s:443
@@ -1022,6 +1051,7 @@ $ffn
 (eUniverse > k_EUniverseInvalid) && (eUniverse < k_EUniverseMax)
 (fS{ggRcjh
 (h`H1pqA
+(home_dir != NULL) && (home_dir[0] != '\0')
 (int) m_treePostParamNameHashes.Count() == (int) m_vecPostParams.Count()
 (iub & (m_nSizeWithStack-1)) == 0
 (main)
@@ -1139,6 +1169,7 @@ $ffn
 *Z20BSetRegistryValueStr11ERegKeyRoot10StringViewS0_S0_EUlS_E_
 *Z21BSetRegistryValueUint11ERegKeyRoot10StringViewS0_jEUlS_E_
 *Z23BSetRegistryValueUint6411ERegKeyRoot10StringViewS0_yEUlS_E_
+*ZN12LinuxHelpers19RunCommandGetOutputE10StringViewR10CUtlStringbbEUlS0_E_
 *ZN4CNet26CallbackDeleteOnCompletionEvE39CUnbufferedSendCallbackDeleteOnComplete
 *ZNK6ConVar26GetCommaSeparatedSetOfIntsEvEUlRK10CUtlStringE_
 *ZNK6ConVar29GetCommaSeparatedSetOfStringsEvEUlRK10CUtlStringE_
@@ -1312,6 +1343,8 @@ $ffn
 -----BEGIN %s-----\n
 -----BEGIN CERTIFICATE-----
 -----END %s-----\n
+--disable
+--enable
 -0123456789
 -;-C-I-M-a-e-q-
 -DBF
@@ -1357,7 +1390,9 @@ $ffn
 -stack=
 -steamconsole
 -steamdeck
+-steamdeckdisplay
 -steamframe
+-steammachinedisplay
 -steamos
 -steamos3
 -tesla
@@ -1395,6 +1430,7 @@ $ffn
 .EBanContentCheckResult
 .EProtoClanEventType
 .HCK\v
+.LTRS
 .PLACEHOLDER_VALUE
 .\n)k_EMsgAMGetClanPermissionSettingsResponse
 .\n)k_EMsgAMPlayerGetClanBasicDetailsResponse
@@ -1446,6 +1482,8 @@ $ffn
 /'/)/A/E/K/M/Q/W/o/u/}/
 /)IMT
 /+ep+eqU
+/.config/user-dirs.dirs
+/Desktop
 /OTN
 /Steam3PosixRegistryManager
 /\n*k_EMsgAMGameServerPlayerCompatibilityCheck
@@ -1468,6 +1506,9 @@ $ffn
 /\n*k_EMsgGCHRecurringSubscriptionStatusChange
 /\n*k_EMsgServiceMethodCallFromClientNonAuthed
 /\n*k_eMsgRemoteClientPeerContentServerChanged
+/autostart/steam.desktop
+/autostart/steambeta.desktop
+/bin/lsof
 /bin/sh
 /data/src/SteamServiceClient/serviceengine.cpp
 /data/src/SteamServiceClient/servicemodulemanagerasync.cpp
@@ -1503,7 +1544,9 @@ $ffn
 /data/src/common/keypair.cpp
 /data/src/common/keyvaluesignature.cpp
 /data/src/common/language.cpp
+/data/src/common/linuxhelpers.cpp
 /data/src/common/logger.cpp
+/data/src/common/messageobjects.cpp
 /data/src/common/metrics/metrics.cpp
 /data/src/common/msg.cpp
 /data/src/common/msgbase.h
@@ -1521,6 +1564,7 @@ $ffn
 /data/src/common/opensslwrapper.cpp
 /data/src/common/pipes.cpp
 /data/src/common/platform_sockets_posix.cpp
+/data/src/common/platformhelpers.cpp
 /data/src/common/processpipe_posix.cpp
 /data/src/common/registry.cpp
 /data/src/common/scheduledfunction.cpp
@@ -1596,15 +1640,32 @@ $ffn
 /dev/srandom
 /dev/tty
 /dev/urandom
+/etc/SUSE-release
+/etc/arch-release
+/etc/centos-release
+/etc/debian_release
+/etc/fedora-release
+/etc/gentoo-release
+/etc/lsb-release
+/etc/mandrake-release
 /etc/mtab
 /etc/os-release
 /etc/pki/tls/cert.pem
+/etc/redhat-release
+/etc/slackware-release
 /etc/ssl/ca-bundle.pem
 /etc/ssl/certs/ca-certificates.crt
 /etc/steamos-oobe-image
+/etc/yellowdog-release
 /fxLf
+/in_illuminance_input
+/in_illuminance_integration_time
+/in_illuminance_raw
 /index.html
-/proc/%d/status
+/name
+/proc/device-tree/board-info/unit_sn
+/proc/device-tree/compatible
+/proc/device-tree/model
 /proc/meminfo
 /proc/mounts
 /proc/net/route
@@ -1612,21 +1673,51 @@ $ffn
 /proc/self/fd
 /proc/self/fd/%d
 /proc/self/maps
+/proc/self/status
+/proc/version
 /run/host/etc/os-release
+/sbin/lsof
 /steamrtarm64
 /steamsysinfo
+/sys/bus/iio/devices
+/sys/class/drm/card0/card0-eDP-1/edid
+/sys/class/hwmon
+/sys/devices/soc0/serial_number
 /sys/kernel/debug/tracing/trace_marker
 /sys/kernel/tracing/trace_marker
+/temp1_input
 /tmp
 /tmp/.steam-sem-names
+/tmp/cmd-stderr.XXXXXX
+/tmp/cmd-stdout.XXXXXX
+/user-dirs.dirs
 /usr/bin/
 /usr/bin/crosdisk %s
+/usr/bin/lsof
+/usr/bin/steamos-polkit-helpers/jupiter-check-support
+/usr/bin/steamos-polkit-helpers/jupiter-dock-updater
+/usr/bin/steamos-polkit-helpers/jupiter-fan-control %s
+/usr/bin/steamos-polkit-helpers/jupiter-get-als-gain
+/usr/bin/steamos-polkit-helpers/steamos-factory-reset-config
+/usr/bin/steamos-polkit-helpers/steamos-format-device
+/usr/bin/steamos-polkit-helpers/steamos-format-sdcard
+/usr/bin/steamos-polkit-helpers/steamos-priv-write "%s" "%s"
+/usr/bin/steamos-polkit-helpers/steamos-reboot-other
+/usr/bin/steamos-polkit-helpers/steamos-set-hostname
+/usr/bin/steamos-polkit-helpers/steamos-set-timezone
+/usr/bin/steamos-polkit-helpers/steamos-trim-devices
+/usr/bin/steamos-polkit-helpers/steamos-update
+/usr/lib/jupiter-dock-updater/jupiter-dock-updater-mock.sh
 /usr/local/ssl
 /usr/local/ssl/cert.pem
 /usr/local/ssl/certs
 /usr/local/ssl/ct_log_list.cnf
 /usr/local/ssl/private
+/usr/sbin/lsof
+/usr/share/applications/steam.desktop
+/usr/share/applications/steambeta.desktop
 /var/lib/dbus/machine-id
+/var/run/reboot-required
 /wo4:
 /wpad.dat
 0 != ( g_vecIPv4ThisBox.Count() + g_vecIPv6ThisBox.Count() )
@@ -1998,6 +2089,7 @@ $ffn
 127.0.0.1
 127.0.0.1:57343
 127.0.0.1:57344
+12CAddressInfo
 12CAutoReleaseI14CMetricsStringE
 12CAutoReleaseI15CMetricsPayloadE
 12CAutoReleaseI16CCookieContainerE
@@ -2007,6 +2099,7 @@ $ffn
 12CAutoReleaseI8CMetricsE
 12CHTTPRequest
 12CIPRangeList
+12CLicenseInfo
 12CLogInstance
 12CMessageList
 12CProtoBufMsgIvE
@@ -2021,14 +2114,19 @@ $ffn
 13IStreamParser
 13MetricValue_t
 14 (default)
+14CCBAccountInfo
 14CClanEventData
+14CClanEventInfo
 14CCryptoKeyBase
 14CFrameFunctionI11CHTTPClientE
 14CFrameFunctionI19CQueuedLambdaRunnerE
 14CFrameFunctionI21CScheduledFunctionMgrE
 14CFrameFunctionI7CJobMgrE
+14CGuestPassInfo
 14CHTTPClientMgr
 14CJobFutureBase
+14CMachineIDInfo
+14CMessageObject
 14CMetricsString
 14CMsgAuthTicket
 14CNetConnection
@@ -2071,6 +2169,7 @@ $ffn
 1536
 15000
 155.133.240.0/23
+15CChatMemberInfo
 15CEC25519KeyBase
 15CJobPromiseBase
 15CMetricsFactory
@@ -2093,6 +2192,7 @@ $ffn
 16IKeyValuesSystem
 16ITCPHostCallback
 16JobStatsBucket_t
+17CClientWalletInfo
 17CCrossProcessPipe
 17CDebugStatsSystem
 17CDummyCnxCallback
@@ -2101,6 +2201,7 @@ $ffn
 17CHTTPRequestCache
 17CHTTPRequestParam
 17CMsgKubeRPCPacket
+17CPurchaseGiftInfo
 17CStreamReaderBase
 17CUtlPriorityQueueIN21CScheduledFunctionMgr15ScheduledItem_tEPFbRKS1_S3_E32CDefUtlPriorityQueueSetIndexFuncIS1_EE
 17CUtlPriorityQueueIN7CJobMgr12JobTimeout_tEPFbRKS1_S3_ENS0_15TimeoutSetIndexEE
@@ -2134,7 +2235,9 @@ $ffn
 18IUDPSocketCallback
 18IWorkThreadFactory
 192.69.96.0/22
+19CActivationCodeInfo
 19CClientInstallUtils
+19CClientMicroTxnInfo
 19CCuratorPreferences
 19CHTTPClientResponse
 19CMsgIPAddressBucket
@@ -2189,6 +2292,7 @@ $ffn
 20CClientSecureDesktop
 20CNetFilterEncryption
 20COpenSSLTicketKeyMgr
+20CPurchaseReceiptInfo
 20CRefCountServiceBaseILb0E6CRefSTE
 20CRefCountServiceBaseILb1E6CRefMTE
 20CRefCountServiceBaseILb1E6CRefSTE
@@ -2201,12 +2305,14 @@ $ffn
 20IHTTPRedirectHandler
 20ISSLThreadedSendSink
 20IUniformRandomStream
+21CClanAnnouncementInfo
 21CEC25519PublicKeyBase
 21CHTTPClientConnection
 21CHTTPClientWorkThread
 21CMetricsReporterChain
 21CMsgKubeRPCPacket_Hdr
 21COpenSSLCachedSession
+21CPurchaseLineItemInfo
 21CScheduledFunctionMgr
 21CUtlCStringConversion
 21CWorkItemFunctionCall
@@ -2214,7 +2320,6 @@ $ffn
 21IClientProcessMonitor
 21IWorkThreadPoolSignal
 21UserSystemInformation
-22:41:18
 22CBaseScheduledFunction
 22CClanMatchEventByRange
 22CClientStructNetPacket
@@ -2223,6 +2328,8 @@ $ffn
 22CFutureSharedStateBase
 22IPCServerMapAndMutex_t
 22ISSLConnectionCallback
+23:04:33
+23CActivationCodeItemInfo
 23CClanEventUserNewsTuple
 23CDummyWebSocketCallback
 23GamePerformanceSettings
@@ -2240,6 +2347,7 @@ $ffn
 25CWorkItemNetFilterEncrypt
 25CWorkItemRunSSLConnection
 25INetSSLConnectionCallback
+26CActivationCodePackageInfo
 26CHTTPCacheInitializeThread
 26CSSLFramedRecvMsgCollector
 26CWorkItemHTTPClientRequest
@@ -2249,6 +2357,7 @@ $ffn
 28IStreamParserMessageCallback
 29CNetConnectionDestroyWorkItem
 2<QF
+2>/dev/null
 2GJH
 2Ht\l
 2T26
@@ -2397,11 +2506,11 @@ $ffn
 6#6165676;6M6O6S6Y6a6k6m6
 6*Fc7
 6-nn
-604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 6144
-64CK\vH
 65536
 60000000
+604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
+64CK\vH
 666666666666666666666666666666666666666666666666\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\`
 6CStatTIN16SteamThreadTools12CThreadMutexEE
 6CStatTIN16SteamThreadTools16CThreadNullMutexEE
@@ -2455,6 +2564,10 @@ $ffn
 8000
 8192
 82\n:XPH
+83L3
+83N6
+83Q2
+83Q3
 88n|
 88pH
 8A6j
@@ -2486,6 +2599,7 @@ $ffn
 99Ov
 99rKJJ
 9<n\nM
+9CCardInfo
 9CMsgMulti
 9CUtlQueueI13CallbackMsg_tE
 9CUtlQueueI8WSABUF_SE
@@ -2577,6 +2691,7 @@ $ffn
 =trF6,#
 > or is NULL
 >#>)>/>3>A>W>c>e>w>
+>/dev/null
 >0PFJ
 >= or is NULL
 >I{TrEX
@@ -2911,6 +3026,7 @@ Acceptable OCSP Responses
 Accepted
 AcceptedForGameRankedByAcceptanceDate
 Access Denied
+AccessToken
 Account Disabled
 Account Locked Down
 Account Logon Denied
@@ -2928,6 +3044,9 @@ Account is restricted from purchasing adult content
 Account locked
 Account logon denied, need two-factor code
 Account not verified
+AccountIDCreator
+AccountIDLastUpdated
+AccountNum
 Accounts not friends
 AchievementUnlocked
 Active
@@ -2951,6 +3070,8 @@ AddedGameToWishlist
 Adding connection back to pool, but not found in in use list or waiting list
 Address is invalid or contains invalid characters
 Address too small!
+Address1
+Address2
 Admin
 Administrator OK
 Adult Content
@@ -2981,6 +3102,10 @@ Amex (BoaCompra)
 Amharic
 An I/O error occurred when reading/seeking
 Android
+Android 6.x
+Android 7.x
+Android 8.x
+Android 9.x
 AndroidExternalData
 AndroidInternalData
 AndroidSteamPackageRoot
@@ -2994,6 +3119,8 @@ Any Extended Key Usage
 Any Purpose
 Any language
 App Running
+AppID
+AppIDToRedirect
 AppendedSHA
 Application running
 Approved Friends
@@ -3206,6 +3333,8 @@ BResolveHostString - unexpected DNS lookup flag '%d'\n
 BRouteWorkItemCompleted called for a job that could not be found!\n
 BSaveBufferToFileWithTemporary() failed to find unused file temp name
 BSaveBufferToFileWithTemporary() without k_EFileIOFlushImmediately will result in data loss
+BSetSteamAutoStart: failed to copy %s to %s\n
+BSetSteamAutoStart: failed to create directories for %s\n
 BSetValueBin
 BSetValueStr
 BSetValueUint
@@ -3220,6 +3349,8 @@ BUF_MEM_grow
 BUF_MEM_grow_clean
 BUF_MEM_new
 BUseIOCP()
+BWriteValueToFileAsUser
+BWriteValuetoFileAsRoot
 BYield()
 BYieldingWaitOneFrame
 BYieldingWaitTime
@@ -3252,6 +3383,7 @@ Bangla
 Bank Asya
 Bank Transfer (Degica)
 Banned
+BasePrice
 Basic %s
 Basic OCSP Response
 Basis Type: %s\n
@@ -3263,6 +3395,8 @@ Beta
 Bh;+j
 Billing agreement cancelled
 Billing name is invalid because it looks like it contains credit card data
+BillingCurrency
+BillingTotal
 Biometric Info
 BitCash
 Bitcoin
@@ -3276,6 +3410,7 @@ Blocked by U.S. government regulations
 Blocks
 Bnl1l
 BoaCompra Gold
+Body
 Boleto Bancario
 Boleto Flash
 Book Voucher
@@ -4238,6 +4373,7 @@ CWorkThreadPool - Check SetEvent
 CWorkThreadPool - SetEvent()
 CWorkThreadPool - Signal Thread Event
 CWorkThreadPool can't support item auto resubmission when ensuring output ordering
+CWorkThreadPool: a deferred work item cannot ask to be resubmitted
 CWorkThreadPool::BTryDeleteExitedWorkerThreads
 CWorkThreadPool::SetEnsureOutputOrdering must be set before any work item is added
 CWorkThreadPool::StartWorkThread: Thread creation failed.\n
@@ -4328,6 +4464,14 @@ Captive portal simulation: blocking '%s'\n
 CaptivePortal
 CaptivePortal_InPlace
 CaptivePortal_Redirected
+CardBinID
+CardExpMonth
+CardExpYear
+CardHolderFirstName
+CardHolderLastName
+CardID
+CardLast4Digits
+CardNumber
 Carnet
 Cart is not valid for purchase
 Carte Bleue
@@ -4362,7 +4506,10 @@ Cheating
 Cherokee
 CipherString
 Ciphersuites
+City
 Clan
+ClanID
+Class
 ClearField
 Clearing HTTP cache, deleting all files under %s\n
 Click&Buy
@@ -4391,8 +4538,10 @@ Collections
 Comma separated list of metrics catalogs to disable.  This is the last check.
 Comma separated list of metrics operations that are disabled.  This setting has highest priority
 Comma separated list of metrics operations.  Overrides disabled catalogs
+Command line is already escaped: %s
 Command line options:\n
 CommandLine
+CommentCount
 Comments by user
 Committing
 Community
@@ -4475,6 +4624,7 @@ Could not read existing registry file.
 Couldn't parse default value "
 CountLocks(): %d, locks[0]: (0x%p), pLock: 0x%p, this: 0x%p\n
 CountLocks(): %d, this: 0x%p, pLock = 0x%p\n
+CountryCode
 Coupon has expired
 Create process failed
 CreateBoundSocket: ::bind couldn't find an open port between %u and %u\n
@@ -4491,6 +4641,7 @@ Credit Card (Nodwin)
 Credit card number is invalid (does not pass LUHN checksum)
 Credit card number provided does not match the credit card type
 Credit would exceed max allowed wallet balance
+CreditCardType
 Critical
 CrlID
 Croatian
@@ -4499,8 +4650,10 @@ Ctrl/Provision WAP Termination
 Ctrl/provision WAP Access
 Culture Voucher
 CuratorRecommendedGame
+Currency
 Currency Conversion
 Currency of purchase does not match currency of wallet
+CurrencyCode
 Curves
 Custom CSS
 Cw!K
@@ -4554,6 +4707,7 @@ DES-EDE3-ECB
 DES-EDE3-OFB
 DES-OFB
 DES3
+DESKTOP
 DESX
 DESX-CBC
 DH PARAMETERS
@@ -4631,8 +4785,10 @@ DIq*\tW
 DLOPEN Error:%s\n
 DNS:
 DO NOT PARSE: fields may be stripped and missing.\n
+DOCUMENTS
 DONT_BREAK_ON_ASSERT
 DOWNGRD
+DOWNLOAD
 DRCHV
 DSA PARAMETERS
 DSA PRIVATE KEY
@@ -4731,7 +4887,9 @@ Desktop
 Destination
 Destination buffer is too small
 Destination buffer is wrong
+Details
 DetectNow failed
+Detected leaked fd
 Device Corrupt
 Device Error
 Device Not Found
@@ -5059,8 +5217,9 @@ EPublishedFileQueryType
 EPurchaseResultDetail
 EPurchaseStatus
 ERROR
+ERROR: %s: failed to set hostname\n
+ERROR: %s: failed to set timezone\n
 ERROR: selector [%d] invalid\n
-ERR_getErrorString
 ERegKeyRoot
 ERemoteStorageFileRoot
 ERemoteStoragePlatform
@@ -5234,9 +5393,24 @@ Error reporting not implemented.
 Error while parsing option value for "
 Error while parsing text KeyValues for resource %s
 Error writing file
+Error: %s: empty address field
+Error: %s: failed to make file writeable %s\n
+Error: %s: failed to write to %s: %s\n
+Error: %s: invalid address
+Error: %s: popen failed
+Error: %s: steamos-priv-write failed %s: %s\n
+ErrorAppID
+ErrorHeadline
+ErrorLinkText
+ErrorLinkURL
+ErrorString
 Estonian
 EtL?
 Event Text
+EventName
+EventNotes
+EventTime
+EventType
 Exception validating current work item
 Excluded
 Existing cancelled license
@@ -5289,6 +5463,7 @@ External
 External Account is not linked to a Steam account
 External Account linked to another Steam account
 External sequences are not valid
+ExternalValidation
 F6tr
 FAILED_PRECONDITION
 FALSE
@@ -5310,52 +5485,6 @@ FORM
 FORMAT
 FR19CNullMetricsFactoryvE
 FRAME_SIZE_ERROR
-FSE_NCountWriteBound
-FSE_buildCTable_rle
-FSE_buildCTable_wksp
-FSE_buildDTable_wksp
-FSE_compressBound
-FSE_compress_usingCTable
-FSE_decompress_wksp_bmi2
-FSE_getErrorName
-FSE_isError
-FSE_normalizeCount
-FSE_optimalTableLog
-FSE_optimalTableLog_internal
-FSE_readNCount
-FSE_readNCount_bmi2
-FSE_versionNumber
-FSE_writeNCount
-FSEv05_buildDTable
-FSEv05_buildDTable_raw
-FSEv05_buildDTable_rle
-FSEv05_createDTable
-FSEv05_decompress
-FSEv05_decompress_usingDTable
-FSEv05_freeDTable
-FSEv05_getErrorName
-FSEv05_isError
-FSEv05_readNCount
-FSEv06_buildDTable
-FSEv06_buildDTable_raw
-FSEv06_buildDTable_rle
-FSEv06_createDTable
-FSEv06_decompress
-FSEv06_decompress_usingDTable
-FSEv06_freeDTable
-FSEv06_getErrorName
-FSEv06_isError
-FSEv06_readNCount
-FSEv07_buildDTable
-FSEv07_buildDTable_raw
-FSEv07_buildDTable_rle
-FSEv07_createDTable
-FSEv07_decompress
-FSEv07_decompress_usingDTable
-FSEv07_freeDTable
-FSEv07_getErrorName
-FSEv07_isError
-FSEv07_readNCount
 FV|FgUV
 F\nAk_EMsgClientRequestWebAPIAuthenticateUserNonceResponse_Deprecated
 F\n\foptimize_for
@@ -5389,6 +5518,7 @@ Failed to get update result code
 Failed to init COM
 Failed to load optional module %s\n
 Failed to parse input
+Failed to parse lsof source port
 Failed to parse provided range request header
 Failed to remove log event from threadsafe queue!
 Failed to set thread local value
@@ -5462,7 +5592,9 @@ Finnish
 First
 First argument to Swap() (of type "
 First argument to SwapFields() (of type "
+FirstName
 FiveHours
+Flags
 Flooding was detected in this HTTP/2 session, and it must be closed
 Flow control error
 Forbidden
@@ -5570,7 +5702,10 @@ Game Managed Item
 Game Release
 Game Server
 Game Voucher
+GameCode
+GameCodeFromKey
 GameInstall
+GameItemID
 GameManagedItems
 GameOverlayUI
 GamePerformanceSettings
@@ -5602,6 +5737,7 @@ GetFileSystemStableId requires a valid path
 GetFileSystemStableId requires a valid path: %s\n
 GetFloat
 GetFloatFromString() did not get correct peCS parameter
+GetIPCConnectionDetails
 GetInstallScriptExitCode
 GetInt32
 GetInt64
@@ -5633,6 +5769,11 @@ GetUInt32
 GetUInt64
 GetUint64FromString() did not get correct peCS parameter
 Gift
+GiftMessage
+GiftTemplate
+GifteeAccountID
+GifteeEmail
+GifteeName
 Giropay
 Global Collect unknown error
 Global Moderator
@@ -5673,12 +5814,6 @@ HEADERS: stream closed
 HEADERS: stream_id == 0
 HEB?<9630-*'
 HIGH
-HIST_count
-HIST_countFast
-HIST_countFast_wksp
-HIST_count_simple
-HIST_count_wksp
-HIST_isError
 HKCR
 HKCU
 HKDF
@@ -5729,82 +5864,6 @@ HTTPS Tunnel established, proceeding to send actual HTTP request through OpenSSL
 HTTPS_PROXY
 HTTP_1_1_REQUIRED
 HTTP_PROXY
-HUF_buildCTable_wksp
-HUF_cardinality
-HUF_compress1X_repeat
-HUF_compress1X_usingCTable
-HUF_compress4X_repeat
-HUF_compress4X_usingCTable
-HUF_compressBound
-HUF_decompress1X1_DCtx_wksp
-HUF_decompress1X2_DCtx_wksp
-HUF_decompress1X_DCtx_wksp
-HUF_decompress1X_usingDTable
-HUF_decompress4X_hufOnly_wksp
-HUF_decompress4X_usingDTable
-HUF_estimateCompressedSize
-HUF_getErrorName
-HUF_getNbBitsFromCTable
-HUF_isError
-HUF_minTableLog
-HUF_optimalTableLog
-HUF_readCTable
-HUF_readCTableHeader
-HUF_readDTableX1_wksp
-HUF_readDTableX2_wksp
-HUF_readStats
-HUF_readStats_wksp
-HUF_selectDecoder
-HUF_validateCTable
-HUF_writeCTable_wksp
-HUFv05_decompress
-HUFv05_decompress1X2
-HUFv05_decompress1X2_usingDTable
-HUFv05_decompress1X4
-HUFv05_decompress1X4_usingDTable
-HUFv05_decompress4X2
-HUFv05_decompress4X2_usingDTable
-HUFv05_decompress4X4
-HUFv05_decompress4X4_usingDTable
-HUFv05_getErrorName
-HUFv05_isError
-HUFv05_readDTableX2
-HUFv05_readDTableX4
-HUFv06_decompress
-HUFv06_decompress1X2
-HUFv06_decompress1X2_usingDTable
-HUFv06_decompress1X4
-HUFv06_decompress1X4_usingDTable
-HUFv06_decompress4X2
-HUFv06_decompress4X2_usingDTable
-HUFv06_decompress4X4
-HUFv06_decompress4X4_usingDTable
-HUFv06_readDTableX2
-HUFv06_readDTableX4
-HUFv07_decompress
-HUFv07_decompress1X2
-HUFv07_decompress1X2_DCtx
-HUFv07_decompress1X2_usingDTable
-HUFv07_decompress1X4
-HUFv07_decompress1X4_DCtx
-HUFv07_decompress1X4_usingDTable
-HUFv07_decompress1X_DCtx
-HUFv07_decompress1X_usingDTable
-HUFv07_decompress4X2
-HUFv07_decompress4X2_DCtx
-HUFv07_decompress4X2_usingDTable
-HUFv07_decompress4X4
-HUFv07_decompress4X4_DCtx
-HUFv07_decompress4X4_usingDTable
-HUFv07_decompress4X_DCtx
-HUFv07_decompress4X_hufOnly
-HUFv07_decompress4X_usingDTable
-HUFv07_getErrorName
-HUFv07_isError
-HUFv07_readDTableX2
-HUFv07_readDTableX4
-HUFv07_readStats
-HUFv07_selectDecoder
 HWID Set
 HWyn
 H\fJxE\v
@@ -5818,11 +5877,13 @@ Hardware Promo
 Hardware not capable of IPT
 Has not logged in on PS3 with required app
 HasField
+HasWallet
 Hash Algorithm:
 Hausa
 Header compression/decompression error
 Header of Literals' block doesn't respect format specification
 Header-only net packet whose pre-parsed header and body went elsewhere - nothing left to parse
+Headline
 Headphones
 Headset
 Hebrew
@@ -5986,6 +6047,8 @@ Inhibit Policy Mapping
 Init
 Init Failed
 Initial packet in multi-packet UDP message is too large and would exceed initially allocated buffer
+InitialPeriod
+InitialTimeUnit
 Initialized SSL context with certificate %s\n
 Input size too large:
 Insane net sends -  %u jobs sent over %d threshold and spew was rate limited since last output\n
@@ -5993,6 +6056,7 @@ Insane net sends - %s job has made %u net sends so far:
 Install failed
 Install failed for one or more updates
 Install path removed
+InstanceName
 Insufficient Funds
 Insufficient Privilege
 Insufficient Storage
@@ -6078,6 +6142,7 @@ Invalid status code in response received by HTTP client from %s (%s): %s\n
 Invalid stream state
 Invalid strings::Substitute() format string: "
 Invalid symbol name:
+Invalid system directory %d
 Invalid tax address
 Invalid thread id during thread Start()
 Invalid time value
@@ -6094,6 +6159,7 @@ InviteOnly
 Invited
 Irish
 Is Bank
+IsGift
 IsInList(after)
 IsInList(before)
 IsPowerOfTwo( nNewCapacity )
@@ -6107,6 +6173,9 @@ Issuer certificate lookup error
 Italian
 Itau Online
 Item or entry has been deleted
+ItemAppId
+ItemCount
+ItemDescription
 Items
 Items_Mtx
 Items_ReadyToUse
@@ -6176,6 +6245,7 @@ Key in map fields cannot be float/double, bytes or message types.
 Key not initialized, cannot generate signature
 Key not initialized, cannot verify signature
 Key type %d doesn't know how to load from buffer
+KeyRangeID
 KeyValues
 KeyValues Error: %s in file %s [offset: %d]\n
 KeyValues don't support #include anymore, file "%s"
@@ -6239,6 +6309,8 @@ LANCache
 LANPeer
 LB hCon  Socket  Flags  Local address    Remote address   Mode    State         Last recv (ms)  Sends pending\n
 LBN6
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}"
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" /usr/bin/steamos-polkit-helpers/jupiter-biosupdate
 LEGACY_GOST_PKCS12
 LEZShnat7{
 LINUX
@@ -6255,16 +6327,19 @@ Laser
 Last
 Last Message Repeated %d times.\n%s
 Last-Modified
+LastName
 Latam_Spanish
 Latvian
 Leaked KeyValues (%u):\n
 Leaked mem: %s %s\n
 Legacy Free Sub
+LegacyKey
 LegionGoS
 Length Required
 Library
 License Imported From Steam2
 License expired
+LicenseType
 Licensed Site
 Lider
 Limit exceeded
@@ -6273,9 +6348,31 @@ Limited User (forced)
 Limited use, delayed activation
 Limited user account
 LimitedLocal
+LineItemCount
 LinePay
 Linkaja
 Linux
+Linux 2.2
+Linux 2.4
+Linux 2.6
+Linux 3.10
+Linux 3.16
+Linux 3.18
+Linux 3.2
+Linux 3.5
+Linux 3.6
+Linux 3.x
+Linux 4.1
+Linux 4.14
+Linux 4.19
+Linux 4.4
+Linux 4.9
+Linux 4.x
+Linux 5.10
+Linux 5.4
+Linux 5.x
+Linux 6.x
+Linux 7.x
 LinuxHome
 LinuxXdgConfigHome
 LinuxXdgDataHome
@@ -6335,12 +6432,41 @@ MIME MHS
 MIME-Version: 1.0%s
 MMfU33
 MOL Points
+MUSIC
 M\rLAI)haL<|p\t\t
+Mac OS
 MacAppSupport
 MacCaches
 MacDocuments
 MacHome
 MacOS
+MacOS 10.10
+MacOS 10.11
+MacOS 10.12
+MacOS 10.13
+MacOS 10.14
+MacOS 10.15
+MacOS 10.4
+MacOS 10.5
+MacOS 10.5.8
+MacOS 10.6
+MacOS 10.6.3
+MacOS 10.6.4 with Apple's Snow Leopard Graphics Update
+MacOS 10.6.7
+MacOS 10.7
+MacOS 10.8
+MacOS 10.9
+MacOS 11
+MacOS 11 (as 10.16)
+MacOS 11.1
+MacOS 12
+MacOS 12 (as 10.17)
+MacOS 13
+MacOS 13 (as 10.18)
+MacOS 14
+MacOS 14 (as 10.19)
+MacOS 15
+MacOS 15 (as 10.20)
 Macedonian
 Maestro
 Mail
@@ -6389,6 +6515,7 @@ Mask Algorithm:
 Master App Editor
 Master Subscription
 MasterCard
+MasterPackageID
 Mastercard (BoaCompra)
 MatchCaseInsensitivePathIfAvailable: in slow path
 Matched '%s' -> '%s'\n
@@ -6396,6 +6523,7 @@ Max block allocation size for PB arena
 Max worker threads in the dedicated pool used for threaded protobuf body parses (see @nThreadedProtobufParseMinBytes).  Changes take effect live.
 MaxProtocol
 MaxResults
+MaxUseCount
 Maximum family size exceeded
 MaybeAllocateAligned cannot fail here.
 MbP?H
@@ -6423,6 +6551,7 @@ Message of type "
 Message type "
 Message type %d wasn't declared, but we registered job %s to handle it?\n
 MessageLite at 0x
+MessageObject
 MessageOptions
 MessageSet is not supported in proto3.
 MessageSets cannot have fields, only extensions.
@@ -6459,7 +6588,9 @@ MinghuaQuw
 Minidumps written:\n
 Minimum
 Minute
+MinuteLimit
 Minutes
+MinutesUsed
 Mirror
 MirroredNotStriped
 Misdirected Request
@@ -6982,6 +7113,7 @@ Object
 Object Signer
 Object Signing
 Object Signing CA
+Oct  6 2026
 October
 Odia
 Offensive Avatar
@@ -7048,6 +7180,7 @@ Option2
 Option3
 Options
 Order:
+OrderID
 Origin
 Other
 Other abortable transaction in progress
@@ -7066,6 +7199,7 @@ OverlayInput
 OverlayRendering
 Overwriting on-disk registry with newly created registry.
 Owner
+OwnerID
 P-192
 P-224
 P-256
@@ -7123,6 +7257,7 @@ PEM_write_bio
 PEM_write_bio_PrivateKey_traditional
 PERMISSION_DENIED
 PFR19CNullMetricsFactoryvE
+PICTURES
 PING: stream_id != 0
 PINIT
 PKCS #7 SIGNED DATA
@@ -7217,14 +7352,6 @@ PKCS8Encrypted
 PKCS8_PRIV_KEY_INFO
 PKCS8_encrypt
 PKCS8_set0_pbe
-PKDd
-PKDe
-PKDf
-PKDh
-PKDi
-PKDn
-PKDs
-PKDu
 PKEY_USAGE_PERIOD
 PKINIT Client Auth
 PKIX
@@ -7295,7 +7422,10 @@ PUSH_PROMISE: stream closed
 PUSH_PROMISE: stream in idle
 PUSH_PROMISE: stream_id == 0
 PUT
+Package id 0
 Package requires an invitation for a reservation to purchase
+PackageCount
+PackageID
 Packet has illegal total message size of %d
 Pago Facil
 PagoEfectivo
@@ -7337,7 +7467,9 @@ Payment method allows multiple pending transactions, but there is an overlap of 
 Payment method is disabled
 Payment method is not allowed for this purchase
 Payment requires additional authentication step
+PaymentID
 PaymentInfo
+PaymentMethod
 Payshop
 Pb1m
 Peak %.2f ms frame\n
@@ -7356,6 +7488,7 @@ Performing requested proxy system config re-discovery on a HTTP client work thre
 Permanent
 Permanent Identifier
 Permanent Redirect
+Permissions
 Permitted
 Persian
 Persistence Failed
@@ -7386,8 +7519,11 @@ Portuguese
 PosixFileOpen: RESOLVE_BENEATH unsupported, falling back to plain open()\n
 PosixFileOpen: failed to compute relative path for: %s - %s\n
 PosixFileOpen: failed to get path fd for: %s - %s\n
+PostCode
 PostRecv
+PostTime
 PostedAnnouncement
+PosterID
 Pragma
 Pre-parse the bodies of service methods that execute on the client.  Off by default: the only\nservers those pass through - CM and UDS - relay them by header and never look at the body, so\nparsing it here is work nobody on this side consumes.  Watch 'protobuf_parse_stats'.
 Pre-parsed body type disagrees with the handler for %s%s%s: parsed as %s, handler wants %s
@@ -7448,6 +7584,8 @@ Punjabi (Shahmukhi)
 Purchase
 Purchase not yet settled
 Purchase pending
+PurchaseCountryCode
+PurchaseStatus
 Q$By5
 Q/xtJ2
 Q9gZ
@@ -7472,6 +7610,7 @@ R##Fe
 R1h58
 R5=D
 R;vM;
+RADV_FORCE_VRS_CONFIG_FILE
 RAND_DRBG_generate
 RAND_DRBG_instantiate
 RAND_DRBG_new
@@ -7638,6 +7777,7 @@ Received large message over websocket, payload size %llu
 ReceivedNewGame
 ReceivesGroupComment
 Recent Runtimes(
+RecipientAddress
 RecommendedGame
 Reconfiguring
 RecordPadding
@@ -7662,6 +7802,7 @@ RecvMsgDirect
 RecvPlaintext
 Red Pagos
 RedCompra
+Refundable
 Refunded
 Refunded to wallet
 Refusing HTTP/2 request to %s, path contains control characters\n
@@ -7695,6 +7836,8 @@ Removing now closed connection (%p) for %s\n
 RenderFrameMark
 Renew failed
 Renew next period
+RenewalPeriod
+RenewalTimeUnit
 Repeated fields can't have default values.
 Request
 Request %s fulfilled from cache unconditionally (no validation needed)\n
@@ -7729,6 +7872,7 @@ Require Explicit Policy
 RequirePostHandshake
 Required fields are not allowed in proto3.
 Requires 64bit operating system
+RequiresCachedPmtMethod
 Reserved bits set
 Reserved numbers must be positive integers.
 Reserved range $0 to $1 overlaps with already-defined range $2 to $3.
@@ -7742,6 +7886,7 @@ ResponseHeaders
 Restored data doesn't match checksum
 Restricted country
 Restricted device
+ResultDetail
 ResumeProcess
 Retail
 Retired
@@ -7758,6 +7903,9 @@ Routing Domain Identifiers
 Rs$c~B
 RuPay
 RunCallbacks
+RunCommand
+RunCommand: %s\n
+RunCommandGetOutput
 RunInstallScript
 RunInterface returned true but didn't produce a result?
 RunOnce
@@ -7867,6 +8015,7 @@ SM4-CFB8
 SM4-CTR
 SM4-ECB
 SM4-OFB
+SM8650
 SMIME
 SMIME-CAPS
 SMIME_read_ASN1
@@ -8033,6 +8182,8 @@ SSLv3/TLS write session ticket
 STEAMVIDEOTOKEN
 STEAM_
 STEAM_DESKTOP_APP_AFFINITY_LIST
+STEAM_ENABLE_DYNAMIC_BACKLIGHT
+STEAM_USE_DYNAMIC_VRS
 STORE lib
 STORE routines
 STREAM_CLOSED
@@ -8056,13 +8207,17 @@ S\vQN
 S_gO
 SafeMode
 SafetyPay
+SalesTerritoryCode
+SalesTerritoryCodeFromKey
 Same as previous value
+Sandbox
 Santander Rio
 Saturday
 SaveBufferToFile: couldn't open file "%s" in path "%s".\n
 SbEwd
 Sberbank
 ScheduledEvent
+ScheduledSendOnDate
 Scots
 Screenshot
 ScreenshotPublished
@@ -8093,19 +8248,24 @@ Send Proxied Owner
 Send Proxied Router
 Send Router
 SendSAS
+SenderAddress
+SenderName
 Sending msg of type '%s' with timeout=0.  Receiver won't have any time to service it!
 Sending of an email failed
 Sending up to %u queued request(s) for %s\n
 Sent message: %s - %u bytes\n
-Sep 23 2026
+Sentiment
 September
 Serbian
+SerialNumber
 Server
 Server Busy
 Server Shutdown
 Server push is disabled by peer
+ServerAddress
 ServerInfoFile
 ServerMain
+ServerPassword
 ServerPreference
 Service Read Only
 Service Unavailable
@@ -8121,6 +8281,7 @@ SetDouble
 SetEnum
 SetEnumValue
 SetFloat
+SetHostname
 SetInt32
 SetInt64
 SetJobWaitDetailsConst
@@ -8140,6 +8301,7 @@ SetRepeatedUInt32
 SetRepeatedUInt64
 SetSteamID
 SetString
+SetTimezone
 SetUInt32
 SetUInt64
 SetUniverse
@@ -8149,12 +8311,14 @@ Setup Error
 Shader
 Shared Only
 Shared library locked
+Shipping
 Shipping address failed validation
 ShopeePay
 Shopping Cart Not Found
 Should not reach here.
 Shouldn't be re-submitting a request we have body data for
 SigEd448
+Signature
 Signature check failed
 SignatureAlgorithms
 Signing KDC Response
@@ -8291,6 +8455,7 @@ StandardPC
 Started IPC logging for %s.\n
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
+State
 StaticFileWriterThread()
 Steam
 Steam - DirWatcher
@@ -8303,6 +8468,7 @@ Steam2 Migration Complete
 Steam2010 CD-Key
 Steam3 Client Engine
 Steam3Master
+SteamBootstrapper_GetEUniverse
 SteamBox
 SteamCache
 SteamCallbacks
@@ -8310,10 +8476,12 @@ SteamChina_SChinese
 SteamClientService
 SteamCloudDocuments
 SteamDeck
+SteamID
 SteamMachine
 SteamOSGeneric
 SteamPID
 SteamRealPath
+SteamRealm
 SteamService: file missing %s\n
 SteamService: invalid signature %s\n
 SteamService: parsing failed %s\n
@@ -8677,12 +8845,15 @@ Target buffer for V_URLEncode should be 3x source length, plus one for terminati
 Target buffer too short to terminate\n
 Target buffer too short\n
 Tatar
+Tctl
+Tdie
 Telugu
 Temporary Redirect
 Tenpay
 TerminateProcess
 Terminating
 Terminating m_ThreadClient, likely to crash down the line... but avoiding hang on exit\n
+TerritoryCode
 Tesla
 Test
 Test CD-Key
@@ -8730,6 +8901,13 @@ Tigrinya
 Time Stamp signing
 Time Stamping
 Time is out of sync
+TimeAcked
+TimeCreated
+TimeExpiration
+TimeLastUpdated
+TimeNextProcess
+TimeRedeemed
+TimeSent
 Timed Trial
 TimedOut
 Timeout
@@ -8749,12 +8927,14 @@ Too many inflight SETTINGS
 Too many logon attempts
 Too many pending
 Toss
+Total
 Total bytes allocated (os heap reported): %s\n
 Total bytes allocated counted: %s\n
 Total number of strings %u, longest string size %u, avg size %u\n
 Total of %u buckets with %u hash collisions\n
+TotalDiscount
 Touch'n Go
-TracerPid:
+TracerPid:\t
 Track a histogram of protobuf message body sizes as they are parsed.  See the protobuf_parse_stats console command.
 Tracked allocs currently in use. %d Total %d\n
 Trade
@@ -8764,7 +8944,10 @@ Trade Scam Old
 Trading
 Traditional_Chinese
 Trailer Field: 0x
+TransID
 Transaction expired
+TransactionID
+TransactionTime
 Transcode Behind
 Transfer-Encoding
 TransmitFile
@@ -8865,6 +9048,8 @@ UnbufferedSend
 Unexpected end of string.
 Unexpected error
 Unexpected failure while serializing option submessage
+Unexpected number of glibc version components
+Unexpected number of glibc version components: %d
 Unexpected result from V_SplitString()
 Unexpected sleep reason %d in CJobMgr::BResumeSleepingJobs. Job %s Yield Info %s.  Code is bad.\n
 Unhandled pending I/O type %d
@@ -8935,6 +9120,7 @@ Update Running
 Update Started
 Update required
 Update search failed
+UpdateTime
 Updated Disabled by app
 Upgrade
 Upgrade Required
@@ -8971,6 +9157,7 @@ VALVE_CRYPTO_dbg_free
 VALVE_CRYPTO_dbg_malloc
 VALVE_CRYPTO_dbg_realloc
 VGUI
+VIDEOS
 VIDEOTEXSTRING
 VISIBLE
 VISIBLESTRING
@@ -9050,6 +9237,8 @@ W%0Qv4AV
 WARNING
 WARNING: Disabling vprof spike dumping and stopping profile for thread %d - %s because of exceeded rate limit, try a higher threshold.\n
 WARNING: unable to link %s and %s because one or more is a ConCommand.\n
+WARNING: using plain factory reset\n
+WARNING: using plain reboot other\n
 WIN32
 WIN64
 WIN7
@@ -9089,8 +9278,12 @@ Waiting on workitem
 Waiting on workitem %s
 Wallet
 Wallet (Nodwin)
+WalletAmt
+WalletCur
 Warning
 Warning parsing text-format
+Warning: %s: lsof is required to run steam and it may not be available - please install
+Warning: %s: unexpected number of address fields
 Warning: failed to set thread priority: foreign thread unsupported\n
 Warning: failed to set thread priority: set failed for %d: %s\n
 Warning: failed to set thread priority: set failed for priority %d\n
@@ -9100,6 +9293,7 @@ Wcr"
 We we first discover the protobuf class used for a particular EMsg, log it
 WeChat
 Web API key registration ban
+Web Client
 Web Guide
 Web Link Deprecated
 Web socket client mode not supported
@@ -9129,6 +9323,26 @@ WinMyDocuments
 WinProgramData
 WinSavedGames
 Windows
+Windows 10
+Windows 11
+Windows 2000
+Windows 2003
+Windows 2008
+Windows 2012
+Windows 2012 R2
+Windows 2016
+Windows 2019
+Windows 2022
+Windows 3.11
+Windows 7
+Windows 8
+Windows 8.1
+Windows 95
+Windows 98
+Windows ME
+Windows NT
+Windows Vista
+Windows XP
 WindowsHome
 Wolof
 Work Item (%s) for Work Pool %s completed but job no longer existed to notify
@@ -9289,6 +9503,8 @@ X9_62_FIELDID
 X9_62_PENTANOMIAL
 X9cm
 XBB0a
+XDG_
+XDG_CONFIG_HOME
 XG[r
 XH1l
 XMd~w
@@ -9322,34 +9538,6 @@ YsRX
 Z-google.golang.org/protobuf/types/descriptorpb
 Z0000
 Z:hluv
-ZBUFFv05_createDCtx
-ZBUFFv05_decompressContinue
-ZBUFFv05_decompressInit
-ZBUFFv05_decompressInitDictionary
-ZBUFFv05_freeDCtx
-ZBUFFv05_getErrorName
-ZBUFFv05_isError
-ZBUFFv05_recommendedDInSize
-ZBUFFv05_recommendedDOutSize
-ZBUFFv06_createDCtx
-ZBUFFv06_decompressContinue
-ZBUFFv06_decompressInit
-ZBUFFv06_decompressInitDictionary
-ZBUFFv06_freeDCtx
-ZBUFFv06_getErrorName
-ZBUFFv06_isError
-ZBUFFv06_recommendedDInSize
-ZBUFFv06_recommendedDOutSize
-ZBUFFv07_createDCtx
-ZBUFFv07_createDCtx_advanced
-ZBUFFv07_decompressContinue
-ZBUFFv07_decompressInit
-ZBUFFv07_decompressInitDictionary
-ZBUFFv07_freeDCtx
-ZBUFFv07_getErrorName
-ZBUFFv07_isError
-ZBUFFv07_recommendedDInSize
-ZBUFFv07_recommendedDOutSize
 ZF]:Ba?
 ZINT32
 ZINT64
@@ -9654,6 +9842,7 @@ Zulu
 ^QyY
 _55j
 _Accum
+_DIR
 _ExitOnFatalAssert\n
 _Fract
 _GLOBAL_
@@ -9766,17 +9955,12 @@ _edata
 _end
 _exit
 _g@Cg
+_input
 _jbF~T
+_label
 _longjmp
 _rDd
 _setjmp
-_txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
-_txnal_cow_string_D1(void*)
-_txnal_cow_string_D1_commit(void*)
-_txnal_cow_string_c_str(void const*)
-_txnal_logic_error_get_msg(void*)
-_txnal_runtime_error_get_msg(void*)
-_txnal_sso_string_c_str(void const*)
 _xU`u
 `3QbE
 `3SbE
@@ -9846,6 +10030,7 @@ access-control-allow-origin
 accessor_ == other.accessor_
 account
 account flags changed
+acpitz
 acpt_state
 active
 ad dvcs
@@ -9865,6 +10050,7 @@ addr_validate_path_internal
 address1
 address2
 addressFamily
+addressinfo
 addrinfo addr is not af inet
 addrinfo_wrap
 admin_request_spoofing_steamid
@@ -9969,6 +10155,11 @@ amazon
 ambiguous content type
 ambiguous host or service
 amharic
+amount
+amt.GetCurrencyCode() == GetCurrency()
+amtInitial.GetCurrencyCode() == GetCurrency()
+amtRecurring.GetCurrencyCode() == GetCurrency()
+amtrecurring
 android
 android32
 android6
@@ -10043,6 +10234,7 @@ aria_ccm_init_key
 aria_gcm_ctrl
 aria_gcm_init_key
 aria_init_key
+arm64
 armenian
 array
 asctime_r
@@ -10130,6 +10322,7 @@ assertion failed: temp-(sh.arena_size >> slist) == sh_find_my_buddy(temp, slist)
 assertion failed: temp->next == NULL || WITHIN_ARENA(temp->next)
 associatedDomain
 associatedName
+asusec
 async file read
 async file write
 async_ctx_new
@@ -10540,6 +10733,7 @@ cant check dh key
 cant pack structure
 capwapAC
 capwapWTP
+cardinfo
 caseIgnoreIA5StringSyntax
 cast5-cbc
 cast5-cfb
@@ -10895,6 +11089,7 @@ content-typ
 content-type
 contentEncryptionAlgorithm
 contentType
+content_adaptive_brightness
 content_descriptorid
 content_descriptorids
 content_descriptors_to_exclude
@@ -10961,6 +11156,7 @@ copy
 copy error
 copy_email
 copy_issuer
+coretemp
 coroutines.Base() == NULL
 costParameter
 could not bind to the requested symbol name
@@ -11663,6 +11859,7 @@ domainRelatedObject
 done
 double
 download
+dpkg-query -s steamos-updatelevel | grep Version | cut -d' ' -f2
 dprintf
 drbg already initialized
 drbg not initialised
@@ -11736,6 +11933,8 @@ eCallResult != k_ECallResultNone
 eConnectionMode == k_EConnectionModeClient
 eContent
 eContentType
+eCurrencyCode
+eCurrencyCodeDelayed
 eFrameType < k_EFrameTypeMax
 eGroup < VPROF_BUDGETGROUP_MAX
 eGroup >= static_cast< ESpewGroup >( 0 ) && eGroup < k_ESpew_ArraySize
@@ -11826,6 +12025,8 @@ ecdsa_with_SHA3-224
 ecdsa_with_SHA3-256
 ecdsa_with_SHA3-384
 ecdsa_with_SHA3-512
+echo "%s" | sudo -n tee "%s"
+echo %s | tee %s
 echo_console
 eckey_param2type
 eckey_param_decode
@@ -11909,6 +12110,7 @@ encryptedKey
 encryption
 encryption ctrl failure
 encryption not supported for this key type
+enddate
 endmntent
 engine routines
 english
@@ -12107,6 +12309,7 @@ ffdhe6144
 ffdhe8192
 fflush
 fflush()
+fgetc
 fgets
 fi_FI
 field
@@ -12149,6 +12352,7 @@ finished
 finnish
 fips mode not supported
 fips_mode
+firmware_node/path
 first num too large
 first octet invalid
 fixed32
@@ -12187,8 +12391,10 @@ fread
 free
 freeaddrinfo
 freeifaddrs
+fremont
 french
 freopen
+frequency
 freshestCRL
 friendlyCountry
 friendlyCountryName
@@ -12249,10 +12455,12 @@ g_vecIPv6ThisBox
 g_vecTempTextBuffer
 gai_strerror
 galician
+galileo
 game
 game_resolution_height
 game_resolution_width
 gameid
+gameitemid
 gamepad+mouse.vdf
 gamepad_flickstick.vdf
 gamepad_fps.vdf
@@ -12312,6 +12520,7 @@ getsockopt
 gettext
 gettimeofday
 getting socktype
+getuid
 getwc
 gf2m not supported
 ggen
@@ -12574,6 +12783,7 @@ https_proxy
 httpserver
 hu_HU
 hungarian
+hwmon*
 h~0Q.
 i + 1 < blk->n
 i < blk->n - 1
@@ -12609,6 +12819,35 @@ iGenerateRandomNumberRetry < 300
 iIP < g_vecIPv4ThisBox.Count()
 iIP < g_vecIPv6ThisBox.Count()
 iNode == iIndex
+iOS 1
+iOS 10
+iOS 10.1
+iOS 10.2
+iOS 10.3
+iOS 11
+iOS 11.1
+iOS 11.2
+iOS 11.3
+iOS 11.4
+iOS 12
+iOS 12.1
+iOS 2
+iOS 3
+iOS 4
+iOS 5
+iOS 6
+iOS 6.1
+iOS 7
+iOS 7.1
+iOS 8
+iOS 8.1
+iOS 8.2
+iOS 8.3
+iOS 8.4
+iOS 9
+iOS 9.1
+iOS 9.2
+iOS 9_.3
 iOption != m_listCommandLineOption.InvalidIndex()
 iPhoneOS
 iSetNonBlockResult == 0
@@ -12952,6 +13191,7 @@ iframe->state == NGHTTP2_IB_IGN_ALL
 ig,o
 igbo
 ihD5
+iio:device*
 ilRdV
 illegal Suite B digest
 illegal bitstring format
@@ -12986,6 +13226,7 @@ in != out
 in == last
 in error state
 in use
+in_illuminance_raw
 inappropriate fallback
 incoming
 incompatible objects
@@ -13186,7 +13427,9 @@ is_visible_in_steam_china
 is_websocket_connect
 isalnum
 isalpha
+isbundle
 iscntrl
+isinbundle
 isspace
 issuer
 issuer capabilities
@@ -13201,6 +13444,7 @@ issuerSignTool
 issuerUID
 issuer_and_serial
 issuingDistributionPoint
+istypegame
 iswalnum
 iswalpha
 iswspace
@@ -13243,6 +13487,7 @@ json_name = "
 jsondata
 jstype
 jstype is only allowed on int64, uint64, sint64, fixed64 or sfixed64 fields.
+jupiter
 jurisdictionC
 jurisdictionCountryName
 jurisdictionL
@@ -13251,6 +13496,7 @@ jurisdictionST
 jurisdictionStateOrProvinceName
 jwK\v\n
 j|Ym
+k10temp
 k2U\v
 k53i
 kDHE
@@ -14522,6 +14768,7 @@ lchown
 ld-linux-aarch64.so.1
 leading_comments
 leading_detached_comments
+led_brightness
 left the group
 legacy_renegotiation
 legacy_server_connect
@@ -14536,6 +14783,7 @@ length too short
 lengthToEncodePriv > 0 && lengthToEncodePriv < 1024*1024
 lengthToEncodePub > 0 && lengthToEncodePub < 1024*1024
 length_ >= n
+lenovo
 level3
 level_add_node
 lib(%lu)
@@ -14551,6 +14799,7 @@ like
 line
 linebuffer_ctrl
 linebuffer_new
+lineitems
 link
 linux
 linux22
@@ -14620,8 +14869,13 @@ lookup_certs_sk
 loopback
 lower
 lpHP
+lsb_release -d -s
 lseek
 lseek64
+lsof
+lsof reported an empty address field
+lsof reported an unexpected address: %s
+ltrf216a
 lumen
 luxembourgish
 lvs&4
@@ -14870,6 +15124,7 @@ m_pInitializationThread
 m_pInternalPipe
 m_pInternalPipe->BRead failed
 m_pJobFuncsData->m_listActiveJobs.Count()
+m_pKeyValues
 m_pListQueuedSSLRecvsPostHandshake
 m_pListWaitingRequestsForAddress
 m_pLocalIPCServer != NULL
@@ -15231,6 +15486,7 @@ missing value
 mixed handshake and non handshake data
 mkdir
 mkfifo
+mkstemp
 mktime
 mllt!
 mlock
@@ -15295,6 +15551,8 @@ n)M5
 n6j/
 n:2C[
 n<!TH+9
+nAmount
+nAmountDelayed
 nBarrierNumber < m_vecBarriers.Count()
 nBarrierNumber >= 0
 nBufferCount > %d not supported in %s
@@ -15398,9 +15656,6 @@ nghttp2_buf_avail(buf) >= NGHTTP2_PRIORITY_SPECLEN
 nghttp2_buf_avail(buf) >= datamax
 nghttp2_buf_avail(buf) >= padlen - 1
 nghttp2_buf_len(buf) == NGHTTP2_FRAME_HDLEN + frame->hd.length
-nghttp2_check_authority
-nghttp2_check_header_name
-nghttp2_check_header_value
 nghttp2_frame.c
 nghttp2_frame_add_pad
 nghttp2_frame_pack_altsvc
@@ -15414,37 +15669,13 @@ nghttp2_frame_pack_rst_stream
 nghttp2_frame_pack_settings
 nghttp2_frame_pack_window_update
 nghttp2_hd.c
-nghttp2_hd_deflate_bound
-nghttp2_hd_deflate_change_table_size
-nghttp2_hd_deflate_del
-nghttp2_hd_deflate_get_dynamic_table_size
-nghttp2_hd_deflate_get_max_dynamic_table_size
-nghttp2_hd_deflate_get_num_table_entries
-nghttp2_hd_deflate_get_table_entry
-nghttp2_hd_deflate_hd
-nghttp2_hd_deflate_hd_vec
-nghttp2_hd_deflate_new
-nghttp2_hd_deflate_new2
-nghttp2_hd_inflate_change_table_size
-nghttp2_hd_inflate_del
-nghttp2_hd_inflate_end_headers
-nghttp2_hd_inflate_get_dynamic_table_size
-nghttp2_hd_inflate_get_max_dynamic_table_size
-nghttp2_hd_inflate_get_num_table_entries
-nghttp2_hd_inflate_get_table_entry
-nghttp2_hd_inflate_hd
-nghttp2_hd_inflate_hd2
 nghttp2_hd_inflate_hd_nv
-nghttp2_hd_inflate_new
-nghttp2_hd_inflate_new2
 nghttp2_hd_table_get
 nghttp2_hd_table_get2
 nghttp2_helper.c
 nghttp2_http.c
-nghttp2_http2_strerror
 nghttp2_http_on_header
 nghttp2_increase_local_window_size
-nghttp2_is_fatal
 nghttp2_is_fatal(rv)
 nghttp2_ksl.c
 nghttp2_ksl_it_get
@@ -15454,83 +15685,20 @@ nghttp2_ksl_update_key
 nghttp2_map.c
 nghttp2_map_each
 nghttp2_map_each_free
-nghttp2_nv_compare_name
 nghttp2_nv_equal
 nghttp2_outbound_item.c
 nghttp2_outbound_item_free
-nghttp2_pack_settings_payload
 nghttp2_pq.c
 nghttp2_pq_remove
-nghttp2_priority_spec_check_default
-nghttp2_priority_spec_default_init
-nghttp2_priority_spec_init
 nghttp2_rcbuf.c
 nghttp2_rcbuf_decref
-nghttp2_rcbuf_get_buf
-nghttp2_rcbuf_incref
-nghttp2_rcbuf_is_static
-nghttp2_select_next_protocol
 nghttp2_session.c
 nghttp2_session_add_rst_stream
 nghttp2_session_add_settings
 nghttp2_session_adjust_closed_stream
 nghttp2_session_adjust_idle_stream
-nghttp2_session_callbacks_del
-nghttp2_session_callbacks_new
-nghttp2_session_callbacks_set_before_frame_send_callback
-nghttp2_session_callbacks_set_data_source_read_length_callback
-nghttp2_session_callbacks_set_error_callback
-nghttp2_session_callbacks_set_error_callback2
-nghttp2_session_callbacks_set_on_begin_frame_callback
-nghttp2_session_callbacks_set_on_begin_headers_callback
-nghttp2_session_callbacks_set_on_data_chunk_recv_callback
-nghttp2_session_callbacks_set_on_extension_chunk_recv_callback
-nghttp2_session_callbacks_set_on_frame_not_send_callback
-nghttp2_session_callbacks_set_on_frame_recv_callback
-nghttp2_session_callbacks_set_on_frame_send_callback
-nghttp2_session_callbacks_set_on_header_callback
-nghttp2_session_callbacks_set_on_header_callback2
-nghttp2_session_callbacks_set_on_invalid_frame_recv_callback
-nghttp2_session_callbacks_set_on_invalid_header_callback
-nghttp2_session_callbacks_set_on_invalid_header_callback2
-nghttp2_session_callbacks_set_on_stream_close_callback
-nghttp2_session_callbacks_set_pack_extension_callback
-nghttp2_session_callbacks_set_recv_callback
-nghttp2_session_callbacks_set_select_padding_callback
-nghttp2_session_callbacks_set_send_callback
-nghttp2_session_callbacks_set_send_data_callback
-nghttp2_session_callbacks_set_unpack_extension_callback
-nghttp2_session_change_stream_priority
-nghttp2_session_check_request_allowed
-nghttp2_session_check_server_session
-nghttp2_session_client_new
-nghttp2_session_client_new2
-nghttp2_session_client_new3
-nghttp2_session_consume
-nghttp2_session_consume_connection
-nghttp2_session_consume_stream
-nghttp2_session_create_idle_stream
-nghttp2_session_del
-nghttp2_session_find_stream
-nghttp2_session_get_effective_local_window_size
-nghttp2_session_get_effective_recv_data_length
-nghttp2_session_get_hd_deflate_dynamic_table_size
-nghttp2_session_get_hd_inflate_dynamic_table_size
-nghttp2_session_get_last_proc_stream_id
 nghttp2_session_get_local_settings
-nghttp2_session_get_local_window_size
-nghttp2_session_get_next_stream_id
-nghttp2_session_get_outbound_queue_size
 nghttp2_session_get_remote_settings
-nghttp2_session_get_remote_window_size
-nghttp2_session_get_root_stream
-nghttp2_session_get_stream_effective_local_window_size
-nghttp2_session_get_stream_effective_recv_data_length
-nghttp2_session_get_stream_local_close
-nghttp2_session_get_stream_local_window_size
-nghttp2_session_get_stream_remote_close
-nghttp2_session_get_stream_remote_window_size
-nghttp2_session_get_stream_user_data
 nghttp2_session_mem_recv
 nghttp2_session_mem_send
 nghttp2_session_mem_send_internal
@@ -15542,55 +15710,19 @@ nghttp2_session_pack_data
 nghttp2_session_predicate_data_send
 nghttp2_session_recv
 nghttp2_session_reprioritize_stream
-nghttp2_session_resume_data
-nghttp2_session_send
-nghttp2_session_server_new
-nghttp2_session_server_new2
-nghttp2_session_server_new3
-nghttp2_session_set_local_window_size
-nghttp2_session_set_next_stream_id
 nghttp2_session_set_stream_user_data
-nghttp2_session_set_user_data
-nghttp2_session_terminate_session
-nghttp2_session_terminate_session2
 nghttp2_session_upgrade
 nghttp2_session_upgrade2
-nghttp2_session_want_read
-nghttp2_session_want_write
 nghttp2_stream.c
 nghttp2_stream_attach_item
 nghttp2_stream_defer_item
 nghttp2_stream_dep_remove
 nghttp2_stream_dep_remove_subtree
-nghttp2_stream_get_first_child
-nghttp2_stream_get_next_sibling
-nghttp2_stream_get_parent
-nghttp2_stream_get_previous_sibling
-nghttp2_stream_get_state
-nghttp2_stream_get_stream_id
-nghttp2_stream_get_sum_dependency_weight
-nghttp2_stream_get_weight
 nghttp2_stream_in_dep_tree(stream)
 nghttp2_stream_reschedule
 nghttp2_stream_resume_deferred_item
-nghttp2_strerror
 nghttp2_submit.c
-nghttp2_submit_altsvc
-nghttp2_submit_data
-nghttp2_submit_extension
-nghttp2_submit_goaway
-nghttp2_submit_headers
 nghttp2_submit_origin
-nghttp2_submit_ping
-nghttp2_submit_priority
-nghttp2_submit_push_promise
-nghttp2_submit_request
-nghttp2_submit_response
-nghttp2_submit_rst_stream
-nghttp2_submit_settings
-nghttp2_submit_shutdown_notice
-nghttp2_submit_trailer
-nghttp2_submit_window_update
 nistp224_pre_comp_new
 nistp256_pre_comp_new
 nistp521_pre_comp_new
@@ -15862,6 +15994,8 @@ operation not supported on this type
 operaton not initialized
 operator
 operator""
+operator()
+opt3001
 option json_name is not allowed on extension fields.
 optional
 optionalSignature
@@ -16076,7 +16210,9 @@ pStr1 != NULL
 pStr2 != NULL
 pT6w.
 pTCPConnection->m_cOutstandingSends > 0
+pTemperature is a required paramater
 pThread
+pThread && pThread->m_pCurrentWorkItem == pWorkItem && !pThread->m_bCurrentItemDeferred
 pToken
 pTracker->Find( pKey ) != NULL
 pU>\AL
@@ -16098,6 +16234,7 @@ p\tK2
 pack_first_byte
 package
 package $0;\n\n
+packages
 packed
 packet length too long
 padding check failed
@@ -16187,6 +16324,7 @@ pem name bad prefix
 pem name too short
 pending
 perfectworld
+period
 permissions changed
 permitted
 permitted subtree violation
@@ -16388,6 +16526,8 @@ privateExponent:
 privateKey
 privateKeyUsagePeriod
 privilegeWithdrawn
+privileged write polkit:%s -> %s\n
+privileged write: %s -> %s\n
 problems getting password
 process_include
 process_pci_value
@@ -16536,11 +16676,13 @@ qCJ.
 qR5FE%
 qUN1
 qcStatements
+qcom
 qeei
 qsort
 qualifiers
 qualityLabelledData
 quantil
+quantity
 quechua
 queue
 queue_head_position_now
@@ -16729,7 +16871,6 @@ revocationDate
 revocationReason
 revocationTime
 revoked
-rewind
 rfc822Mailbox
 ringbuf->len > 0
 ripemd
@@ -17196,6 +17337,7 @@ short line
 shortcut
 should retry
 show_broadcast
+shred --remove %s
 shutdown
 shutdown while in init
 sig invalid mime type
@@ -17477,6 +17619,7 @@ stable_get
 stackLevel >= 0 && stackLevel < m_errorIndex
 stackpath
 start
+startdate
 startup
 stat
 stateOrProvinceName
@@ -17528,16 +17671,20 @@ steam://openurl/
 steam://openurl_external/
 steamIDChat.GetEAccountType() == k_EAccountTypeChat
 steamIDClan.GetEAccountType() == k_EAccountTypeClan
+steamRealm
 steamchina
 steamclient
 steamclient.so
 steamcmd
+steamdeck-hwmon
+steamdeck_hwmon
 steamdeck_stable
 steamglobal
 steamhdl
 steamid
 steammessages_base.proto
 steamos
+steamos-update: using duplicate detection: %d\n
 steampipe
 steampipepeering
 steamservice.so
@@ -17623,6 +17770,9 @@ subtitles
 subtreeMaximumQuality
 subtreeMinimumQuality
 subtype mismatch
+sudo -n chmod a+w "%s"
+sudo -n steamos-factory-reset-config
+sudo -n steamos-reboot --reboot-other
 superseded
 suppPubInfo
 support changed ownership
@@ -17680,6 +17830,8 @@ telexNumber
 teliasonera
 telugu
 telus
+temp*
+temp1_input
 template parameter object for
 tencent
 tenfoot.so
@@ -18022,195 +18174,7 @@ type:
 type_id
 typeinfo fn for
 typeinfo for
-typeinfo for __cxxabiv1::__class_type_info
-typeinfo for __cxxabiv1::__forced_unwind
-typeinfo for __cxxabiv1::__foreign_exception
-typeinfo for __cxxabiv1::__function_type_info
-typeinfo for __cxxabiv1::__fundamental_type_info
-typeinfo for __cxxabiv1::__pbase_type_info
-typeinfo for __cxxabiv1::__pointer_to_member_type_info
-typeinfo for __cxxabiv1::__pointer_type_info
-typeinfo for __cxxabiv1::__si_class_type_info
-typeinfo for __cxxabiv1::__vmi_class_type_info
-typeinfo for __gnu_cxx::__concurrence_lock_error
-typeinfo for __gnu_cxx::__concurrence_unlock_error
-typeinfo for __gnu_cxx::recursive_init_error
-typeinfo for __int128
-typeinfo for __int128 const*
-typeinfo for __int128*
-typeinfo for bool
-typeinfo for bool const*
-typeinfo for bool*
-typeinfo for char
-typeinfo for char const*
-typeinfo for char*
-typeinfo for char16_t
-typeinfo for char16_t const*
-typeinfo for char16_t*
-typeinfo for char32_t
-typeinfo for char32_t const*
-typeinfo for char32_t*
-typeinfo for char8_t
-typeinfo for char8_t const*
-typeinfo for char8_t*
-typeinfo for decimal128
-typeinfo for decimal128 const*
-typeinfo for decimal128*
-typeinfo for decimal32
-typeinfo for decimal32 const*
-typeinfo for decimal32*
-typeinfo for decimal64
-typeinfo for decimal64 const*
-typeinfo for decimal64*
-typeinfo for double
-typeinfo for double const*
-typeinfo for double*
-typeinfo for float
-typeinfo for float const*
-typeinfo for float*
-typeinfo for half
-typeinfo for half const*
-typeinfo for half*
-typeinfo for int
-typeinfo for int const*
-typeinfo for int*
-typeinfo for long
-typeinfo for long const*
-typeinfo for long double
-typeinfo for long double const*
-typeinfo for long double*
-typeinfo for long long
-typeinfo for long long const*
-typeinfo for long long*
-typeinfo for long*
-typeinfo for short
-typeinfo for short const*
-typeinfo for short*
-typeinfo for signed char
-typeinfo for signed char const*
-typeinfo for signed char*
-typeinfo for std::nullptr_t
-typeinfo for std::nullptr_t const*
-typeinfo for std::nullptr_t*
-typeinfo for unsigned __int128
-typeinfo for unsigned __int128 const*
-typeinfo for unsigned __int128*
-typeinfo for unsigned char
-typeinfo for unsigned char const*
-typeinfo for unsigned char*
-typeinfo for unsigned int
-typeinfo for unsigned int const*
-typeinfo for unsigned int*
-typeinfo for unsigned long
-typeinfo for unsigned long const*
-typeinfo for unsigned long long
-typeinfo for unsigned long long const*
-typeinfo for unsigned long long*
-typeinfo for unsigned long*
-typeinfo for unsigned short
-typeinfo for unsigned short const*
-typeinfo for unsigned short*
-typeinfo for void
-typeinfo for void const*
-typeinfo for void*
-typeinfo for wchar_t
-typeinfo for wchar_t const*
-typeinfo for wchar_t*
 typeinfo name for
-typeinfo name for __cxxabiv1::__class_type_info
-typeinfo name for __cxxabiv1::__forced_unwind
-typeinfo name for __cxxabiv1::__foreign_exception
-typeinfo name for __cxxabiv1::__function_type_info
-typeinfo name for __cxxabiv1::__fundamental_type_info
-typeinfo name for __cxxabiv1::__pbase_type_info
-typeinfo name for __cxxabiv1::__pointer_to_member_type_info
-typeinfo name for __cxxabiv1::__pointer_type_info
-typeinfo name for __cxxabiv1::__si_class_type_info
-typeinfo name for __cxxabiv1::__vmi_class_type_info
-typeinfo name for __gnu_cxx::__concurrence_lock_error
-typeinfo name for __gnu_cxx::__concurrence_unlock_error
-typeinfo name for __gnu_cxx::recursive_init_error
-typeinfo name for __int128
-typeinfo name for __int128 const*
-typeinfo name for __int128*
-typeinfo name for bool
-typeinfo name for bool const*
-typeinfo name for bool*
-typeinfo name for char
-typeinfo name for char const*
-typeinfo name for char*
-typeinfo name for char16_t
-typeinfo name for char16_t const*
-typeinfo name for char16_t*
-typeinfo name for char32_t
-typeinfo name for char32_t const*
-typeinfo name for char32_t*
-typeinfo name for char8_t
-typeinfo name for char8_t const*
-typeinfo name for char8_t*
-typeinfo name for decimal128
-typeinfo name for decimal128 const*
-typeinfo name for decimal128*
-typeinfo name for decimal32
-typeinfo name for decimal32 const*
-typeinfo name for decimal32*
-typeinfo name for decimal64
-typeinfo name for decimal64 const*
-typeinfo name for decimal64*
-typeinfo name for double
-typeinfo name for double const*
-typeinfo name for double*
-typeinfo name for float
-typeinfo name for float const*
-typeinfo name for float*
-typeinfo name for half
-typeinfo name for half const*
-typeinfo name for half*
-typeinfo name for int
-typeinfo name for int const*
-typeinfo name for int*
-typeinfo name for long
-typeinfo name for long const*
-typeinfo name for long double
-typeinfo name for long double const*
-typeinfo name for long double*
-typeinfo name for long long
-typeinfo name for long long const*
-typeinfo name for long long*
-typeinfo name for long*
-typeinfo name for short
-typeinfo name for short const*
-typeinfo name for short*
-typeinfo name for signed char
-typeinfo name for signed char const*
-typeinfo name for signed char*
-typeinfo name for std::nullptr_t
-typeinfo name for std::nullptr_t const*
-typeinfo name for std::nullptr_t*
-typeinfo name for unsigned __int128
-typeinfo name for unsigned __int128 const*
-typeinfo name for unsigned __int128*
-typeinfo name for unsigned char
-typeinfo name for unsigned char const*
-typeinfo name for unsigned char*
-typeinfo name for unsigned int
-typeinfo name for unsigned int const*
-typeinfo name for unsigned int*
-typeinfo name for unsigned long
-typeinfo name for unsigned long const*
-typeinfo name for unsigned long long
-typeinfo name for unsigned long long const*
-typeinfo name for unsigned long long*
-typeinfo name for unsigned long*
-typeinfo name for unsigned short
-typeinfo name for unsigned short const*
-typeinfo name for unsigned short*
-typeinfo name for void
-typeinfo name for void const*
-typeinfo name for void*
-typeinfo name for wchar_t
-typeinfo name for wchar_t const*
-typeinfo name for wchar_t*
 u!!Bc
 u.addressPrefix
 u.addressRange
@@ -18593,19 +18557,6 @@ vstdlib_wcstoi64
 vstdlib_wcstoui64
 vswprintf
 vtable for
-vtable for __cxxabiv1::__class_type_info
-vtable for __cxxabiv1::__forced_unwind
-vtable for __cxxabiv1::__foreign_exception
-vtable for __cxxabiv1::__function_type_info
-vtable for __cxxabiv1::__fundamental_type_info
-vtable for __cxxabiv1::__pbase_type_info
-vtable for __cxxabiv1::__pointer_to_member_type_info
-vtable for __cxxabiv1::__pointer_type_info
-vtable for __cxxabiv1::__si_class_type_info
-vtable for __cxxabiv1::__vmi_class_type_info
-vtable for __gnu_cxx::__concurrence_lock_error
-vtable for __gnu_cxx::__concurrence_unlock_error
-vtable for __gnu_cxx::recursive_init_error
 w"ZXb
 w+OQvr
 w8i_q
@@ -18675,6 +18626,7 @@ welsh
 wfDJ@
 wg_token
 wge6
+which lsof >/dev/null 2>&1
 while
 whirlpool
 whitelist
@@ -18771,6 +18723,7 @@ x931
 x=9v
 xUN'
 x`tm6
+xdg-user-dir %s
 xdigit
 xhosa
 xlocale
@@ -18796,6 +18749,7 @@ z4BP
 z4Hg
 zC\nsZ
 zC`G;
+zenpower
 zh-cn
 zh-tw
 zh-xc

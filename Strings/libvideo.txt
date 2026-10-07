@@ -1610,7 +1610,6 @@ $ffn
 /etc/steamos-oobe-image
 /fxLf
 /index.html
-/proc/%d/status
 /proc/meminfo
 /proc/mounts
 /proc/net/route
@@ -1618,6 +1617,7 @@ $ffn
 /proc/self/fd
 /proc/self/fd/%d
 /proc/self/maps
+/proc/self/status
 /run/host/etc/os-release
 /steamrtarm64
 /steamsysinfo
@@ -2071,8 +2071,6 @@ $ffn
 14IVideoYUVFrame
 14VideoSegment_t
 1536
-2000
-2048
 15000
 155.133.240.0/23
 15CAudioResampler
@@ -2193,6 +2191,8 @@ $ffn
 2,THh
 2/.google.protobuf.MethodOptions.IdempotencyLevel:
 20.GamePerformanceSettings.EGamePerformanceSetting
+2000
+2048
 208.64.200.0/22
 208.78.164.0/22
 20CAlignedYUV420Buffer
@@ -2220,7 +2220,6 @@ $ffn
 21CUtlCStringConversion
 21UserSystemInformation
 21VideoRepresentation_t
-22:41:18
 22CBaseScheduledFunction
 22CClanMatchEventByRange
 22CClientStructNetPacket
@@ -2230,6 +2229,7 @@ $ffn
 22CFutureSharedStateBase
 22ISSLConnectionCallback
 22VideoSegmentTemplate_t
+23:04:33
 23CAudioConvertFloatToS16
 23CClanEventUserNewsTuple
 23CDummyWebSocketCallback
@@ -2372,9 +2372,9 @@ $ffn
 6*Fc7
 6-nn
 6144
+65536
 60000000
 64CK\vH
-65536
 666666666666666666666666666666666666666666666666\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\`
 6CStatTIN16SteamThreadTools12CThreadMutexEE
 6CStatTIN16SteamThreadTools16CThreadNullMutexEE
@@ -4407,6 +4407,7 @@ CWorkThreadPool - Check SetEvent
 CWorkThreadPool - SetEvent()
 CWorkThreadPool - Signal Thread Event
 CWorkThreadPool can't support item auto resubmission when ensuring output ordering
+CWorkThreadPool: a deferred work item cannot ask to be resubmitted
 CWorkThreadPool::BTryDeleteExitedWorkerThreads
 CWorkThreadPool::SetEnsureOutputOrdering must be set before any work item is added
 CWorkThreadPool::StartWorkThread: Thread creation failed.\n
@@ -5268,7 +5269,6 @@ EPurchaseResultDetail
 EPurchaseStatus
 ERROR
 ERROR: selector [%d] invalid\n
-ERR_getErrorString
 ERegKeyRoot
 ERemoteStorageFileRoot
 ERemoteStoragePlatform
@@ -5526,52 +5526,6 @@ FORM
 FORMAT
 FR19CNullMetricsFactoryvE
 FRAME_SIZE_ERROR
-FSE_NCountWriteBound
-FSE_buildCTable_rle
-FSE_buildCTable_wksp
-FSE_buildDTable_wksp
-FSE_compressBound
-FSE_compress_usingCTable
-FSE_decompress_wksp_bmi2
-FSE_getErrorName
-FSE_isError
-FSE_normalizeCount
-FSE_optimalTableLog
-FSE_optimalTableLog_internal
-FSE_readNCount
-FSE_readNCount_bmi2
-FSE_versionNumber
-FSE_writeNCount
-FSEv05_buildDTable
-FSEv05_buildDTable_raw
-FSEv05_buildDTable_rle
-FSEv05_createDTable
-FSEv05_decompress
-FSEv05_decompress_usingDTable
-FSEv05_freeDTable
-FSEv05_getErrorName
-FSEv05_isError
-FSEv05_readNCount
-FSEv06_buildDTable
-FSEv06_buildDTable_raw
-FSEv06_buildDTable_rle
-FSEv06_createDTable
-FSEv06_decompress
-FSEv06_decompress_usingDTable
-FSEv06_freeDTable
-FSEv06_getErrorName
-FSEv06_isError
-FSEv06_readNCount
-FSEv07_buildDTable
-FSEv07_buildDTable_raw
-FSEv07_buildDTable_rle
-FSEv07_createDTable
-FSEv07_decompress
-FSEv07_decompress_usingDTable
-FSEv07_freeDTable
-FSEv07_getErrorName
-FSEv07_isError
-FSEv07_readNCount
 FV|FgUV
 F\nAk_EMsgClientRequestWebAPIAuthenticateUserNonceResponse_Deprecated
 F\n\foptimize_for
@@ -5942,12 +5896,6 @@ HEADERS: stream closed
 HEADERS: stream_id == 0
 HEB?<9630-*'
 HIGH
-HIST_count
-HIST_countFast
-HIST_countFast_wksp
-HIST_count_simple
-HIST_count_wksp
-HIST_isError
 HKDF
 HKEY_CLASSES_ROOT
 HKEY_CLASSES_ROOT (force 32Bit)
@@ -5992,82 +5940,6 @@ HTTPS Tunnel established, proceeding to send actual HTTP request through OpenSSL
 HTTPS_PROXY
 HTTP_1_1_REQUIRED
 HTTP_PROXY
-HUF_buildCTable_wksp
-HUF_cardinality
-HUF_compress1X_repeat
-HUF_compress1X_usingCTable
-HUF_compress4X_repeat
-HUF_compress4X_usingCTable
-HUF_compressBound
-HUF_decompress1X1_DCtx_wksp
-HUF_decompress1X2_DCtx_wksp
-HUF_decompress1X_DCtx_wksp
-HUF_decompress1X_usingDTable
-HUF_decompress4X_hufOnly_wksp
-HUF_decompress4X_usingDTable
-HUF_estimateCompressedSize
-HUF_getErrorName
-HUF_getNbBitsFromCTable
-HUF_isError
-HUF_minTableLog
-HUF_optimalTableLog
-HUF_readCTable
-HUF_readCTableHeader
-HUF_readDTableX1_wksp
-HUF_readDTableX2_wksp
-HUF_readStats
-HUF_readStats_wksp
-HUF_selectDecoder
-HUF_validateCTable
-HUF_writeCTable_wksp
-HUFv05_decompress
-HUFv05_decompress1X2
-HUFv05_decompress1X2_usingDTable
-HUFv05_decompress1X4
-HUFv05_decompress1X4_usingDTable
-HUFv05_decompress4X2
-HUFv05_decompress4X2_usingDTable
-HUFv05_decompress4X4
-HUFv05_decompress4X4_usingDTable
-HUFv05_getErrorName
-HUFv05_isError
-HUFv05_readDTableX2
-HUFv05_readDTableX4
-HUFv06_decompress
-HUFv06_decompress1X2
-HUFv06_decompress1X2_usingDTable
-HUFv06_decompress1X4
-HUFv06_decompress1X4_usingDTable
-HUFv06_decompress4X2
-HUFv06_decompress4X2_usingDTable
-HUFv06_decompress4X4
-HUFv06_decompress4X4_usingDTable
-HUFv06_readDTableX2
-HUFv06_readDTableX4
-HUFv07_decompress
-HUFv07_decompress1X2
-HUFv07_decompress1X2_DCtx
-HUFv07_decompress1X2_usingDTable
-HUFv07_decompress1X4
-HUFv07_decompress1X4_DCtx
-HUFv07_decompress1X4_usingDTable
-HUFv07_decompress1X_DCtx
-HUFv07_decompress1X_usingDTable
-HUFv07_decompress4X2
-HUFv07_decompress4X2_DCtx
-HUFv07_decompress4X2_usingDTable
-HUFv07_decompress4X4
-HUFv07_decompress4X4_DCtx
-HUFv07_decompress4X4_usingDTable
-HUFv07_decompress4X_DCtx
-HUFv07_decompress4X_hufOnly
-HUFv07_decompress4X_usingDTable
-HUFv07_getErrorName
-HUFv07_isError
-HUFv07_readDTableX2
-HUFv07_readDTableX4
-HUFv07_readStats
-HUFv07_selectDecoder
 HWID Set
 HWyn
 H\fJxE\v
@@ -7518,6 +7390,7 @@ Object
 Object Signer
 Object Signing
 Object Signing CA
+Oct  6 2026
 October
 Odia
 Offensive Avatar
@@ -7762,14 +7635,6 @@ PKCS8Encrypted
 PKCS8_PRIV_KEY_INFO
 PKCS8_encrypt
 PKCS8_set0_pbe
-PKDd
-PKDe
-PKDf
-PKDh
-PKDi
-PKDn
-PKDs
-PKDu
 PKEY_USAGE_PERIOD
 PKINIT Client Auth
 PKIX
@@ -8899,7 +8764,6 @@ Sending msg of type '%s' with timeout=0.  Receiver won't have any time to servic
 Sending of an email failed
 Sending up to %u queued request(s) for %s\n
 Sent message: %s - %u bytes\n
-Sep 23 2026
 September
 Serbian
 Server
@@ -9581,7 +9445,7 @@ Total bytes allocated counted: %s\n
 Total number of strings %u, longest string size %u, avg size %u\n
 Total of %u buckets with %u hash collisions\n
 Touch'n Go
-TracerPid:
+TracerPid:\t
 Track a histogram of protobuf message body sizes as they are parsed.  See the protobuf_parse_stats console command.
 Tracked allocs currently in use. %d Total %d\n
 Trade
@@ -10240,34 +10104,6 @@ YsRX
 Z-google.golang.org/protobuf/types/descriptorpb
 Z0000
 Z:hluv
-ZBUFFv05_createDCtx
-ZBUFFv05_decompressContinue
-ZBUFFv05_decompressInit
-ZBUFFv05_decompressInitDictionary
-ZBUFFv05_freeDCtx
-ZBUFFv05_getErrorName
-ZBUFFv05_isError
-ZBUFFv05_recommendedDInSize
-ZBUFFv05_recommendedDOutSize
-ZBUFFv06_createDCtx
-ZBUFFv06_decompressContinue
-ZBUFFv06_decompressInit
-ZBUFFv06_decompressInitDictionary
-ZBUFFv06_freeDCtx
-ZBUFFv06_getErrorName
-ZBUFFv06_isError
-ZBUFFv06_recommendedDInSize
-ZBUFFv06_recommendedDOutSize
-ZBUFFv07_createDCtx
-ZBUFFv07_createDCtx_advanced
-ZBUFFv07_decompressContinue
-ZBUFFv07_decompressInit
-ZBUFFv07_decompressInitDictionary
-ZBUFFv07_freeDCtx
-ZBUFFv07_getErrorName
-ZBUFFv07_isError
-ZBUFFv07_recommendedDInSize
-ZBUFFv07_recommendedDOutSize
 ZF]:Ba?
 ZINT32
 ZINT64
@@ -10767,13 +10603,6 @@ _jbF~T
 _longjmp
 _rDd
 _setjmp
-_txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
-_txnal_cow_string_D1(void*)
-_txnal_cow_string_D1_commit(void*)
-_txnal_cow_string_c_str(void const*)
-_txnal_logic_error_get_msg(void*)
-_txnal_runtime_error_get_msg(void*)
-_txnal_sso_string_c_str(void const*)
 _xU`u
 `3QbE
 `3SbE
@@ -16599,9 +16428,6 @@ nghttp2_buf_avail(buf) >= NGHTTP2_PRIORITY_SPECLEN
 nghttp2_buf_avail(buf) >= datamax
 nghttp2_buf_avail(buf) >= padlen - 1
 nghttp2_buf_len(buf) == NGHTTP2_FRAME_HDLEN + frame->hd.length
-nghttp2_check_authority
-nghttp2_check_header_name
-nghttp2_check_header_value
 nghttp2_frame.c
 nghttp2_frame_add_pad
 nghttp2_frame_pack_altsvc
@@ -16615,37 +16441,13 @@ nghttp2_frame_pack_rst_stream
 nghttp2_frame_pack_settings
 nghttp2_frame_pack_window_update
 nghttp2_hd.c
-nghttp2_hd_deflate_bound
-nghttp2_hd_deflate_change_table_size
-nghttp2_hd_deflate_del
-nghttp2_hd_deflate_get_dynamic_table_size
-nghttp2_hd_deflate_get_max_dynamic_table_size
-nghttp2_hd_deflate_get_num_table_entries
-nghttp2_hd_deflate_get_table_entry
-nghttp2_hd_deflate_hd
-nghttp2_hd_deflate_hd_vec
-nghttp2_hd_deflate_new
-nghttp2_hd_deflate_new2
-nghttp2_hd_inflate_change_table_size
-nghttp2_hd_inflate_del
-nghttp2_hd_inflate_end_headers
-nghttp2_hd_inflate_get_dynamic_table_size
-nghttp2_hd_inflate_get_max_dynamic_table_size
-nghttp2_hd_inflate_get_num_table_entries
-nghttp2_hd_inflate_get_table_entry
-nghttp2_hd_inflate_hd
-nghttp2_hd_inflate_hd2
 nghttp2_hd_inflate_hd_nv
-nghttp2_hd_inflate_new
-nghttp2_hd_inflate_new2
 nghttp2_hd_table_get
 nghttp2_hd_table_get2
 nghttp2_helper.c
 nghttp2_http.c
-nghttp2_http2_strerror
 nghttp2_http_on_header
 nghttp2_increase_local_window_size
-nghttp2_is_fatal
 nghttp2_is_fatal(rv)
 nghttp2_ksl.c
 nghttp2_ksl_it_get
@@ -16655,83 +16457,20 @@ nghttp2_ksl_update_key
 nghttp2_map.c
 nghttp2_map_each
 nghttp2_map_each_free
-nghttp2_nv_compare_name
 nghttp2_nv_equal
 nghttp2_outbound_item.c
 nghttp2_outbound_item_free
-nghttp2_pack_settings_payload
 nghttp2_pq.c
 nghttp2_pq_remove
-nghttp2_priority_spec_check_default
-nghttp2_priority_spec_default_init
-nghttp2_priority_spec_init
 nghttp2_rcbuf.c
 nghttp2_rcbuf_decref
-nghttp2_rcbuf_get_buf
-nghttp2_rcbuf_incref
-nghttp2_rcbuf_is_static
-nghttp2_select_next_protocol
 nghttp2_session.c
 nghttp2_session_add_rst_stream
 nghttp2_session_add_settings
 nghttp2_session_adjust_closed_stream
 nghttp2_session_adjust_idle_stream
-nghttp2_session_callbacks_del
-nghttp2_session_callbacks_new
-nghttp2_session_callbacks_set_before_frame_send_callback
-nghttp2_session_callbacks_set_data_source_read_length_callback
-nghttp2_session_callbacks_set_error_callback
-nghttp2_session_callbacks_set_error_callback2
-nghttp2_session_callbacks_set_on_begin_frame_callback
-nghttp2_session_callbacks_set_on_begin_headers_callback
-nghttp2_session_callbacks_set_on_data_chunk_recv_callback
-nghttp2_session_callbacks_set_on_extension_chunk_recv_callback
-nghttp2_session_callbacks_set_on_frame_not_send_callback
-nghttp2_session_callbacks_set_on_frame_recv_callback
-nghttp2_session_callbacks_set_on_frame_send_callback
-nghttp2_session_callbacks_set_on_header_callback
-nghttp2_session_callbacks_set_on_header_callback2
-nghttp2_session_callbacks_set_on_invalid_frame_recv_callback
-nghttp2_session_callbacks_set_on_invalid_header_callback
-nghttp2_session_callbacks_set_on_invalid_header_callback2
-nghttp2_session_callbacks_set_on_stream_close_callback
-nghttp2_session_callbacks_set_pack_extension_callback
-nghttp2_session_callbacks_set_recv_callback
-nghttp2_session_callbacks_set_select_padding_callback
-nghttp2_session_callbacks_set_send_callback
-nghttp2_session_callbacks_set_send_data_callback
-nghttp2_session_callbacks_set_unpack_extension_callback
-nghttp2_session_change_stream_priority
-nghttp2_session_check_request_allowed
-nghttp2_session_check_server_session
-nghttp2_session_client_new
-nghttp2_session_client_new2
-nghttp2_session_client_new3
-nghttp2_session_consume
-nghttp2_session_consume_connection
-nghttp2_session_consume_stream
-nghttp2_session_create_idle_stream
-nghttp2_session_del
-nghttp2_session_find_stream
-nghttp2_session_get_effective_local_window_size
-nghttp2_session_get_effective_recv_data_length
-nghttp2_session_get_hd_deflate_dynamic_table_size
-nghttp2_session_get_hd_inflate_dynamic_table_size
-nghttp2_session_get_last_proc_stream_id
 nghttp2_session_get_local_settings
-nghttp2_session_get_local_window_size
-nghttp2_session_get_next_stream_id
-nghttp2_session_get_outbound_queue_size
 nghttp2_session_get_remote_settings
-nghttp2_session_get_remote_window_size
-nghttp2_session_get_root_stream
-nghttp2_session_get_stream_effective_local_window_size
-nghttp2_session_get_stream_effective_recv_data_length
-nghttp2_session_get_stream_local_close
-nghttp2_session_get_stream_local_window_size
-nghttp2_session_get_stream_remote_close
-nghttp2_session_get_stream_remote_window_size
-nghttp2_session_get_stream_user_data
 nghttp2_session_mem_recv
 nghttp2_session_mem_send
 nghttp2_session_mem_send_internal
@@ -16743,55 +16482,19 @@ nghttp2_session_pack_data
 nghttp2_session_predicate_data_send
 nghttp2_session_recv
 nghttp2_session_reprioritize_stream
-nghttp2_session_resume_data
-nghttp2_session_send
-nghttp2_session_server_new
-nghttp2_session_server_new2
-nghttp2_session_server_new3
-nghttp2_session_set_local_window_size
-nghttp2_session_set_next_stream_id
 nghttp2_session_set_stream_user_data
-nghttp2_session_set_user_data
-nghttp2_session_terminate_session
-nghttp2_session_terminate_session2
 nghttp2_session_upgrade
 nghttp2_session_upgrade2
-nghttp2_session_want_read
-nghttp2_session_want_write
 nghttp2_stream.c
 nghttp2_stream_attach_item
 nghttp2_stream_defer_item
 nghttp2_stream_dep_remove
 nghttp2_stream_dep_remove_subtree
-nghttp2_stream_get_first_child
-nghttp2_stream_get_next_sibling
-nghttp2_stream_get_parent
-nghttp2_stream_get_previous_sibling
-nghttp2_stream_get_state
-nghttp2_stream_get_stream_id
-nghttp2_stream_get_sum_dependency_weight
-nghttp2_stream_get_weight
 nghttp2_stream_in_dep_tree(stream)
 nghttp2_stream_reschedule
 nghttp2_stream_resume_deferred_item
-nghttp2_strerror
 nghttp2_submit.c
-nghttp2_submit_altsvc
-nghttp2_submit_data
-nghttp2_submit_extension
-nghttp2_submit_goaway
-nghttp2_submit_headers
 nghttp2_submit_origin
-nghttp2_submit_ping
-nghttp2_submit_priority
-nghttp2_submit_push_promise
-nghttp2_submit_request
-nghttp2_submit_response
-nghttp2_submit_rst_stream
-nghttp2_submit_settings
-nghttp2_submit_shutdown_notice
-nghttp2_submit_trailer
-nghttp2_submit_window_update
 nistp224_pre_comp_new
 nistp256_pre_comp_new
 nistp521_pre_comp_new
@@ -17293,6 +16996,7 @@ pStream
 pT6w.
 pTCPConnection->m_cOutstandingSends > 0
 pThread
+pThread && pThread->m_pCurrentWorkItem == pWorkItem && !pThread->m_bCurrentItemDeferred
 pToken
 pTrack->m_vecSegmentMaxPTS.Count() == ( pTrack->m_nCurrentSegment - iSegment )
 pTracker->Find( pKey ) != NULL
@@ -17952,7 +17656,6 @@ revocationDate
 revocationReason
 revocationTime
 revoked
-rewind
 rfc822Mailbox
 ringbuf->len > 0
 ripemd
@@ -19500,76 +19203,6 @@ type:
 type_id
 typeinfo fn for
 typeinfo for
-typeinfo for __cxxabiv1::__class_type_info
-typeinfo for __cxxabiv1::__forced_unwind
-typeinfo for __cxxabiv1::__foreign_exception
-typeinfo for __cxxabiv1::__function_type_info
-typeinfo for __cxxabiv1::__fundamental_type_info
-typeinfo for __cxxabiv1::__pbase_type_info
-typeinfo for __cxxabiv1::__pointer_to_member_type_info
-typeinfo for __cxxabiv1::__pointer_type_info
-typeinfo for __cxxabiv1::__si_class_type_info
-typeinfo for __cxxabiv1::__vmi_class_type_info
-typeinfo for __gnu_cxx::__concurrence_lock_error
-typeinfo for __gnu_cxx::__concurrence_unlock_error
-typeinfo for __gnu_cxx::recursive_init_error
-typeinfo for __int128
-typeinfo for __int128 const*
-typeinfo for __int128*
-typeinfo for bool
-typeinfo for bool const*
-typeinfo for bool*
-typeinfo for char
-typeinfo for char const*
-typeinfo for char*
-typeinfo for char16_t
-typeinfo for char16_t const*
-typeinfo for char16_t*
-typeinfo for char32_t
-typeinfo for char32_t const*
-typeinfo for char32_t*
-typeinfo for char8_t
-typeinfo for char8_t const*
-typeinfo for char8_t*
-typeinfo for decimal128
-typeinfo for decimal128 const*
-typeinfo for decimal128*
-typeinfo for decimal32
-typeinfo for decimal32 const*
-typeinfo for decimal32*
-typeinfo for decimal64
-typeinfo for decimal64 const*
-typeinfo for decimal64*
-typeinfo for double
-typeinfo for double const*
-typeinfo for double*
-typeinfo for float
-typeinfo for float const*
-typeinfo for float*
-typeinfo for half
-typeinfo for half const*
-typeinfo for half*
-typeinfo for int
-typeinfo for int const*
-typeinfo for int*
-typeinfo for long
-typeinfo for long const*
-typeinfo for long double
-typeinfo for long double const*
-typeinfo for long double*
-typeinfo for long long
-typeinfo for long long const*
-typeinfo for long long*
-typeinfo for long*
-typeinfo for short
-typeinfo for short const*
-typeinfo for short*
-typeinfo for signed char
-typeinfo for signed char const*
-typeinfo for signed char*
-typeinfo for std::nullptr_t
-typeinfo for std::nullptr_t const*
-typeinfo for std::nullptr_t*
 typeinfo for tinyxml2::XMLAttribute
 typeinfo for tinyxml2::XMLComment
 typeinfo for tinyxml2::XMLDeclaration
@@ -19580,101 +19213,7 @@ typeinfo for tinyxml2::XMLPrinter
 typeinfo for tinyxml2::XMLText
 typeinfo for tinyxml2::XMLUnknown
 typeinfo for tinyxml2::XMLVisitor
-typeinfo for unsigned __int128
-typeinfo for unsigned __int128 const*
-typeinfo for unsigned __int128*
-typeinfo for unsigned char
-typeinfo for unsigned char const*
-typeinfo for unsigned char*
-typeinfo for unsigned int
-typeinfo for unsigned int const*
-typeinfo for unsigned int*
-typeinfo for unsigned long
-typeinfo for unsigned long const*
-typeinfo for unsigned long long
-typeinfo for unsigned long long const*
-typeinfo for unsigned long long*
-typeinfo for unsigned long*
-typeinfo for unsigned short
-typeinfo for unsigned short const*
-typeinfo for unsigned short*
-typeinfo for void
-typeinfo for void const*
-typeinfo for void*
-typeinfo for wchar_t
-typeinfo for wchar_t const*
-typeinfo for wchar_t*
 typeinfo name for
-typeinfo name for __cxxabiv1::__class_type_info
-typeinfo name for __cxxabiv1::__forced_unwind
-typeinfo name for __cxxabiv1::__foreign_exception
-typeinfo name for __cxxabiv1::__function_type_info
-typeinfo name for __cxxabiv1::__fundamental_type_info
-typeinfo name for __cxxabiv1::__pbase_type_info
-typeinfo name for __cxxabiv1::__pointer_to_member_type_info
-typeinfo name for __cxxabiv1::__pointer_type_info
-typeinfo name for __cxxabiv1::__si_class_type_info
-typeinfo name for __cxxabiv1::__vmi_class_type_info
-typeinfo name for __gnu_cxx::__concurrence_lock_error
-typeinfo name for __gnu_cxx::__concurrence_unlock_error
-typeinfo name for __gnu_cxx::recursive_init_error
-typeinfo name for __int128
-typeinfo name for __int128 const*
-typeinfo name for __int128*
-typeinfo name for bool
-typeinfo name for bool const*
-typeinfo name for bool*
-typeinfo name for char
-typeinfo name for char const*
-typeinfo name for char*
-typeinfo name for char16_t
-typeinfo name for char16_t const*
-typeinfo name for char16_t*
-typeinfo name for char32_t
-typeinfo name for char32_t const*
-typeinfo name for char32_t*
-typeinfo name for char8_t
-typeinfo name for char8_t const*
-typeinfo name for char8_t*
-typeinfo name for decimal128
-typeinfo name for decimal128 const*
-typeinfo name for decimal128*
-typeinfo name for decimal32
-typeinfo name for decimal32 const*
-typeinfo name for decimal32*
-typeinfo name for decimal64
-typeinfo name for decimal64 const*
-typeinfo name for decimal64*
-typeinfo name for double
-typeinfo name for double const*
-typeinfo name for double*
-typeinfo name for float
-typeinfo name for float const*
-typeinfo name for float*
-typeinfo name for half
-typeinfo name for half const*
-typeinfo name for half*
-typeinfo name for int
-typeinfo name for int const*
-typeinfo name for int*
-typeinfo name for long
-typeinfo name for long const*
-typeinfo name for long double
-typeinfo name for long double const*
-typeinfo name for long double*
-typeinfo name for long long
-typeinfo name for long long const*
-typeinfo name for long long*
-typeinfo name for long*
-typeinfo name for short
-typeinfo name for short const*
-typeinfo name for short*
-typeinfo name for signed char
-typeinfo name for signed char const*
-typeinfo name for signed char*
-typeinfo name for std::nullptr_t
-typeinfo name for std::nullptr_t const*
-typeinfo name for std::nullptr_t*
 typeinfo name for tinyxml2::XMLAttribute
 typeinfo name for tinyxml2::XMLComment
 typeinfo name for tinyxml2::XMLDeclaration
@@ -19685,30 +19224,6 @@ typeinfo name for tinyxml2::XMLPrinter
 typeinfo name for tinyxml2::XMLText
 typeinfo name for tinyxml2::XMLUnknown
 typeinfo name for tinyxml2::XMLVisitor
-typeinfo name for unsigned __int128
-typeinfo name for unsigned __int128 const*
-typeinfo name for unsigned __int128*
-typeinfo name for unsigned char
-typeinfo name for unsigned char const*
-typeinfo name for unsigned char*
-typeinfo name for unsigned int
-typeinfo name for unsigned int const*
-typeinfo name for unsigned int*
-typeinfo name for unsigned long
-typeinfo name for unsigned long const*
-typeinfo name for unsigned long long
-typeinfo name for unsigned long long const*
-typeinfo name for unsigned long long*
-typeinfo name for unsigned long*
-typeinfo name for unsigned short
-typeinfo name for unsigned short const*
-typeinfo name for unsigned short*
-typeinfo name for void
-typeinfo name for void const*
-typeinfo name for void*
-typeinfo name for wchar_t
-typeinfo name for wchar_t const*
-typeinfo name for wchar_t*
 u!!Bc
 u.addressPrefix
 u.addressRange
@@ -20156,19 +19671,6 @@ vstdlib_wcstoi64
 vstdlib_wcstoui64
 vswprintf
 vtable for
-vtable for __cxxabiv1::__class_type_info
-vtable for __cxxabiv1::__forced_unwind
-vtable for __cxxabiv1::__foreign_exception
-vtable for __cxxabiv1::__function_type_info
-vtable for __cxxabiv1::__fundamental_type_info
-vtable for __cxxabiv1::__pbase_type_info
-vtable for __cxxabiv1::__pointer_to_member_type_info
-vtable for __cxxabiv1::__pointer_type_info
-vtable for __cxxabiv1::__si_class_type_info
-vtable for __cxxabiv1::__vmi_class_type_info
-vtable for __gnu_cxx::__concurrence_lock_error
-vtable for __gnu_cxx::__concurrence_unlock_error
-vtable for __gnu_cxx::recursive_init_error
 vtable for tinyxml2::XMLAttribute
 vtable for tinyxml2::XMLComment
 vtable for tinyxml2::XMLDeclaration

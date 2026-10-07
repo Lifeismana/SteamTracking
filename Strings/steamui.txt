@@ -2304,7 +2304,6 @@ ${LANGUAGE}
 %s: display was not open yet, good\n
 %s: drive: 0x%x
 %s: enabled = %d
-%s: encoding from %s
 %s: extended CEC enable control: %d
 %s: extended CEC suspend TV: %d
 %s: extended CEC suspend device: %d
@@ -2422,7 +2421,7 @@ ${LANGUAGE}
 %u/config/%s/%s.vdf
 %u:sdl://%d
 %u\SteamControllerRumble
-%u\SteamControllerRumbleIntensity
+%u\SteamControllerRumbleIntensityV2
 %u\UseSteamControllerConfig
 %x:%x.%x "%x" "%x" "%x"
 &&Lj66lZ??~A
@@ -7408,8 +7407,8 @@ ${LANGUAGE}
 /data/src/steamUI/hardwareupdatecontroller.cpp:412
 /data/src/steamUI/installfoldercontroller.cpp
 /data/src/steamUI/ledcontroller.cpp
-/data/src/steamUI/ledcontroller.cpp:1922
-/data/src/steamUI/ledcontroller.cpp:590
+/data/src/steamUI/ledcontroller.cpp:1933
+/data/src/steamUI/ledcontroller.cpp:601
 /data/src/steamUI/libraryassetcache.cpp
 /data/src/steamUI/loginusers.cpp
 /data/src/steamUI/modmanager.cpp
@@ -7451,7 +7450,7 @@ ${LANGUAGE}
 /data/src/steamUI/systemdevkitcontroller.cpp:75
 /data/src/steamUI/systemreportcontroller.cpp:150
 /data/src/steamUI/systemstoragecontroller.cpp
-/data/src/steamUI/systemstoragecontroller.cpp:1444
+/data/src/steamUI/systemstoragecontroller.cpp:1447
 /data/src/steamUI/threadedpromiseresolver.cpp
 /data/src/steamUI/userlogincontroller.cpp
 /data/src/steamUI/valvecontrollermanager.cpp
@@ -7579,6 +7578,7 @@ ${LANGUAGE}
 /proc/%d/environ
 /proc/%u/cmdline
 /proc/%u/stat
+/proc/device-tree/board-info/unit_sn
 /proc/device-tree/compatible
 /proc/device-tree/model
 /proc/mounts
@@ -7863,6 +7863,7 @@ ${LANGUAGE}
 0fl:
 0pp@5tqE?|sO541
 0x%llx
+0x%lx
 0x%x
 0xa90f5536
 0|t?L
@@ -7980,7 +7981,6 @@ ${LANGUAGE}
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringP10CUtlVectorIN16CCookieContainer11CCookieInfoES_IS5_EEi22CDefCaselessStringLessE6Node_tEiNSA_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringP10IIPCServeri8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
-10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringS2_i8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringji8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringli8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI14CBaseUtlSymbolItEPK9KeyValuesi8CDefLessE6Node_tEiNS8_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
@@ -8062,6 +8062,8 @@ ${LANGUAGE}
 10CUtlMemoryIN11CUtlHashMapI10CUtlStringN19CSettingsController27ForeignSettingHandlerInfo_tE10CDefEqualsIS1_E11HashFunctorIS1_E10StringViewE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapI10CUtlStringN21CHTMLWindowController20JSRegisteredMethod_tE10CDefEqualsIS1_E11HashFunctorIS1_E10StringViewE12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapI10CUtlStringN21CHTMLWindowController20JSRegisteredMethod_tE10CDefEqualsIS1_E11HashFunctorIS1_E10StringViewE6Node_tEE
+10CUtlMemoryIN11CUtlHashMapI10CUtlStringN24CChildEnvironmentBuilder10EnvEntry_tE27CDefCaselessUtlStringEquals28HashFunctorUtlStringCaseless10StringViewE12HashBucket_tEE
+10CUtlMemoryIN11CUtlHashMapI10CUtlStringN24CChildEnvironmentBuilder10EnvEntry_tE27CDefCaselessUtlStringEquals28HashFunctorUtlStringCaseless10StringViewE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapI10CUtlStringN24CGameRecordingController21ActiveRecordingData_tE10CDefEqualsIS1_E11HashFunctorIS1_E10StringViewE12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapI10CUtlStringN24CGameRecordingController21ActiveRecordingData_tE10CDefEqualsIS1_E11HashFunctorIS1_E10StringViewE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapI10CUtlStringN27CSteamUIMessagingController17ChannelCallback_tE10CDefEqualsIS1_E11HashFunctorIS1_E10StringViewE12HashBucket_tEE
@@ -8198,12 +8200,12 @@ ${LANGUAGE}
 10CUtlMemoryIN11CUtlHashMapImP23GameStreamWindowState_t10CDefEqualsImE11HashFunctorImEmE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapIti10CDefEqualsItE11HashFunctorItEtE12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapIti10CDefEqualsItE11HashFunctorItEtE6Node_tEE
+10CUtlMemoryIN11CUtlHashMapIyN18CSharedCaptureSync13SharedFence_tE10CDefEqualsIyE11HashFunctorIyEyE12HashBucket_tEE
+10CUtlMemoryIN11CUtlHashMapIyN18CSharedCaptureSync13SharedFence_tE10CDefEqualsIyE11HashFunctorIyEyE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapIyN19CSharedSurfaceCacheIN3amf17AMFInterfacePtr_TINS2_10AMFSurfaceEEEE7Entry_tE10CDefEqualsIyE11HashFunctorIyEyE12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapIyN19CSharedSurfaceCacheIN3amf17AMFInterfacePtr_TINS2_10AMFSurfaceEEEE7Entry_tE10CDefEqualsIyE11HashFunctorIyEyE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapIyN19CSharedSurfaceCacheIPvE7Entry_tE10CDefEqualsIyE11HashFunctorIyEyE12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapIyN19CSharedSurfaceCacheIPvE7Entry_tE10CDefEqualsIyE11HashFunctorIyEyE6Node_tEE
-10CUtlMemoryIN11CUtlHashMapIyP11ID3D12Fence10CDefEqualsIyE11HashFunctorIyEyE12HashBucket_tEE
-10CUtlMemoryIN11CUtlHashMapIyP11ID3D12Fence10CDefEqualsIyE11HashFunctorIyEyE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapIyP4CJob10CDefEqualsIyEN7CJobMgr15JobHasFunctor_tEyE12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapIyP4CJob10CDefEqualsIyEN7CJobMgr15JobHasFunctor_tEyE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapIyPN15CWorkThreadPool12OrderGroup_tE10CDefEqualsIyE11HashFunctorIyEyE12HashBucket_tEE
@@ -8351,7 +8353,6 @@ ${LANGUAGE}
 10CUtlRBTreeIN7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
 10CUtlRBTreeIN7CUtlMapI10CUtlStringP10CUtlVectorIN16CCookieContainer11CCookieInfoE10CUtlMemoryIS4_EEi22CDefCaselessStringLessE6Node_tEiNSA_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
 10CUtlRBTreeIN7CUtlMapI10CUtlStringP10IIPCServeri8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
-10CUtlRBTreeIN7CUtlMapI10CUtlStringS1_i8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
 10CUtlRBTreeIN7CUtlMapI10CUtlStringji8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
 10CUtlRBTreeIN7CUtlMapI10CUtlStringli8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
 10CUtlRBTreeIN7CUtlMapI14CBaseUtlSymbolItEPK9KeyValuesi8CDefLessE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
@@ -8454,6 +8455,7 @@ ${LANGUAGE}
 10CUtlVectorIN11CUtlHashMapI10CUtlStringN11CHTMLWindow22JSMethodRegistration_tE10CDefEqualsIS1_E11HashFunctorIS1_E10StringViewE12HashBucket_tE10CUtlMemoryISA_EE
 10CUtlVectorIN11CUtlHashMapI10CUtlStringN19CSettingsController27ForeignSettingHandlerInfo_tE10CDefEqualsIS1_E11HashFunctorIS1_E10StringViewE12HashBucket_tE10CUtlMemoryISA_EE
 10CUtlVectorIN11CUtlHashMapI10CUtlStringN21CHTMLWindowController20JSRegisteredMethod_tE10CDefEqualsIS1_E11HashFunctorIS1_E10StringViewE12HashBucket_tE10CUtlMemoryISA_EE
+10CUtlVectorIN11CUtlHashMapI10CUtlStringN24CChildEnvironmentBuilder10EnvEntry_tE27CDefCaselessUtlStringEquals28HashFunctorUtlStringCaseless10StringViewE12HashBucket_tE10CUtlMemoryIS8_EE
 10CUtlVectorIN11CUtlHashMapI10CUtlStringN24CGameRecordingController21ActiveRecordingData_tE10CDefEqualsIS1_E11HashFunctorIS1_E10StringViewE12HashBucket_tE10CUtlMemoryISA_EE
 10CUtlVectorIN11CUtlHashMapI10CUtlStringN27CSteamUIMessagingController17ChannelCallback_tE10CDefEqualsIS1_E11HashFunctorIS1_E10StringViewE12HashBucket_tE10CUtlMemoryISA_EE
 10CUtlVectorIN11CUtlHashMapI10CUtlStringP22CGameRecordingClipFile10CDefEqualsIS1_E11HashFunctorIS1_E10StringViewE12HashBucket_tE10CUtlMemoryISA_EE
@@ -8523,9 +8525,9 @@ ${LANGUAGE}
 10CUtlVectorIN11CUtlHashMapImS_IPN25CVRPropertyChangeListener13ListenerSet_tE10CUtlMemoryIS3_EE10CDefEqualsImE11HashFunctorImEmE12HashBucket_tES4_ISC_EE
 10CUtlVectorIN11CUtlHashMapImS_IPN29CVRDeviceConnectivityListener13ListenerSet_tE10CUtlMemoryIS3_EE10CDefEqualsImE11HashFunctorImEmE12HashBucket_tES4_ISC_EE
 10CUtlVectorIN11CUtlHashMapIti10CDefEqualsItE11HashFunctorItEtE12HashBucket_tE10CUtlMemoryIS6_EE
+10CUtlVectorIN11CUtlHashMapIyN18CSharedCaptureSync13SharedFence_tE10CDefEqualsIyE11HashFunctorIyEyE12HashBucket_tE10CUtlMemoryIS8_EE
 10CUtlVectorIN11CUtlHashMapIyN19CSharedSurfaceCacheIN3amf17AMFInterfacePtr_TINS2_10AMFSurfaceEEEE7Entry_tE10CDefEqualsIyE11HashFunctorIyEyE12HashBucket_tE10CUtlMemoryISD_EE
 10CUtlVectorIN11CUtlHashMapIyN19CSharedSurfaceCacheIPvE7Entry_tE10CDefEqualsIyE11HashFunctorIyEyE12HashBucket_tE10CUtlMemoryISA_EE
-10CUtlVectorIN11CUtlHashMapIyP11ID3D12Fence10CDefEqualsIyE11HashFunctorIyEyE12HashBucket_tE10CUtlMemoryIS8_EE
 10CUtlVectorIN11CUtlHashMapIyP4CJob10CDefEqualsIyEN7CJobMgr15JobHasFunctor_tEyE12HashBucket_tE10CUtlMemoryIS8_EE
 10CUtlVectorIN11CUtlHashMapIyPN15CWorkThreadPool12OrderGroup_tE10CDefEqualsIyE11HashFunctorIyEyE12HashBucket_tE10CUtlMemoryIS9_EE
 10CUtlVectorIN11CUtlHashMapIyi10CDefEqualsIyE11HashFunctorIyEyE12HashBucket_tE10CUtlMemoryIS6_EE
@@ -8692,6 +8694,7 @@ ${LANGUAGE}
 11CUtlHashMapI10CUtlStringN11CHTMLWindow22JSMethodRegistration_tE10CDefEqualsIS0_E11HashFunctorIS0_E10StringViewE
 11CUtlHashMapI10CUtlStringN19CSettingsController27ForeignSettingHandlerInfo_tE10CDefEqualsIS0_E11HashFunctorIS0_E10StringViewE
 11CUtlHashMapI10CUtlStringN21CHTMLWindowController20JSRegisteredMethod_tE10CDefEqualsIS0_E11HashFunctorIS0_E10StringViewE
+11CUtlHashMapI10CUtlStringN24CChildEnvironmentBuilder10EnvEntry_tE27CDefCaselessUtlStringEquals28HashFunctorUtlStringCaseless10StringViewE
 11CUtlHashMapI10CUtlStringN24CGameRecordingController21ActiveRecordingData_tE10CDefEqualsIS0_E11HashFunctorIS0_E10StringViewE
 11CUtlHashMapI10CUtlStringN27CSteamUIMessagingController17ChannelCallback_tE10CDefEqualsIS0_E11HashFunctorIS0_E10StringViewE
 11CUtlHashMapI10CUtlStringP22CGameRecordingClipFile10CDefEqualsIS0_E11HashFunctorIS0_E10StringViewE
@@ -8760,9 +8763,9 @@ ${LANGUAGE}
 11CUtlHashMapIm10CUtlVectorIPN29CVRDeviceConnectivityListener13ListenerSet_tE10CUtlMemoryIS3_EE10CDefEqualsImE11HashFunctorImEmE
 11CUtlHashMapImP23GameStreamWindowState_t10CDefEqualsImE11HashFunctorImEmE
 11CUtlHashMapIti10CDefEqualsItE11HashFunctorItEtE
+11CUtlHashMapIyN18CSharedCaptureSync13SharedFence_tE10CDefEqualsIyE11HashFunctorIyEyE
 11CUtlHashMapIyN19CSharedSurfaceCacheIN3amf17AMFInterfacePtr_TINS1_10AMFSurfaceEEEE7Entry_tE10CDefEqualsIyE11HashFunctorIyEyE
 11CUtlHashMapIyN19CSharedSurfaceCacheIPvE7Entry_tE10CDefEqualsIyE11HashFunctorIyEyE
-11CUtlHashMapIyP11ID3D12Fence10CDefEqualsIyE11HashFunctorIyEyE
 11CUtlHashMapIyP4CJob10CDefEqualsIyEN7CJobMgr15JobHasFunctor_tEyE
 11CUtlHashMapIyPN15CWorkThreadPool12OrderGroup_tE10CDefEqualsIyE11HashFunctorIyEyE
 11CUtlHashMapIyi10CDefEqualsIyE11HashFunctorIyEyE
@@ -8796,7 +8799,6 @@ ${LANGUAGE}
 11VideoClient
 12 Mbps
 120min
-123456789
 127.0.0.1
 127.0.0.1:57343
 127.0.0.1:57344
@@ -9143,7 +9145,6 @@ ${LANGUAGE}
 14TwoFactor_Stub
 14VideoClip_Stub
 1536
-15000
 155.133.240.0/23
 1558-AFCM-4577
 15AccountHardware
@@ -9356,7 +9357,6 @@ ${LANGUAGE}
 16StoreItem_Assets
 16UserAccount_Stub
 16VideoClient_Stub
-1724792014
 17Achievements_Stub
 17CCaptureFailedMsg
 17CClientWalletInfo
@@ -9429,7 +9429,6 @@ ${LANGUAGE}
 17SleepManager_Stub
 17SteamInputManager
 17StoreItem_Reviews
-18446744073709551615
 18446744073709551615"p\n!CCloud_EnumerateUserFiles_Request
 18BasicRequestInfo_t
 18CAlignedBufferBase
@@ -9811,6 +9810,10 @@ ${LANGUAGE}
 200M
 2019
 2048
+15000
+123456789
+1724792014
+18446744073709551615
 208.64.200.0/22
 208.78.164.0/22
 20AccountHardware_Stub
@@ -10498,6 +10501,7 @@ ${LANGUAGE}
 23SteamNotificationClient
 23StoreItem_IncludedItems
 24 Mbps
+24CChildEnvironmentBuilder
 24CCloud_ShareFile_Request
 24CControllerDeviceSupport
 24CCryptoKeyBase_RawBuffer
@@ -10776,7 +10780,6 @@ ${LANGUAGE}
 27CSteamUIDownloadsController
 27CSteamUIMessagingController
 27CStreamingServerGameActions
-27CWorkItemGetAvailableDrives
 27CWorkItemLoadFileIntoBuffer
 27ContentServerDirectory_Stub
 27ISystemStorageDeviceManager
@@ -10929,6 +10932,7 @@ ${LANGUAGE}
 29CStreamingServerHandshakeInfo
 29CVRDeviceConnectivityListener
 29CVRDeviceSeenRecentlyListener
+29CWorkItemFindDriveNameForPath
 29ISteamMatchmakingPingResponse
 29PublishedFileDetails_Reaction
 29PublishedFileDetails_VoteData
@@ -11135,6 +11139,7 @@ ${LANGUAGE}
 30CUser_SaveHardwareInfo_Request
 30CVirtualControllerGlobalConfig
 30CWebUITransportServerStatusJob
+30CWorkItemGetAvailableDriveList
 30CWorkItemGetFileSystemStableId
 30CWorkItemNetFilterOnDisconnect
 30HTTPRequestRouteRegistration_t
@@ -11971,6 +11976,7 @@ ${LANGUAGE}
 39CTransportValidation_AppendToString_Job
 39CTwoFactor_RemoveAuthenticator_Response
 39CUserAccount_RegisterCompatTool_Request
+39CWorkItemGetFileSystemPosixDeviceNumber
 39SiteServerUI_ContentCacheConfig_Request
 39SiteServerUI_ContentCacheStatus_Request
 39StoreItem_PurchaseOption_RecurrenceInfo
@@ -13383,7 +13389,6 @@ ${LANGUAGE}
 7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE
 7CUtlMapI10CUtlStringP10CUtlVectorIN16CCookieContainer11CCookieInfoE10CUtlMemoryIS3_EEi22CDefCaselessStringLessE
 7CUtlMapI10CUtlStringP10IIPCServeri8CDefLessE
-7CUtlMapI10CUtlStringS0_i8CDefLessE
 7CUtlMapI10CUtlStringji8CDefLessE
 7CUtlMapI10CUtlStringli8CDefLessE
 7CUtlMapI14CBaseUtlSymbolItEPK9KeyValuesi8CDefLessE
@@ -14366,6 +14371,7 @@ AMF_VIDEO_ENCODER_HEVC_MIN_QP_P
 AMF_VIDEO_ENCODER_HEVC_NUM_GOPS_PER_IDR
 AMF_VIDEO_ENCODER_HEVC_OUTPUT_COLOR_PRIMARIES
 AMF_VIDEO_ENCODER_HEVC_OUTPUT_COLOR_PROFILE
+AMF_VIDEO_ENCODER_HEVC_OUTPUT_FULL_RANGE_COLOR
 AMF_VIDEO_ENCODER_HEVC_OUTPUT_TRANSFER_CHARACTERISTIC
 AMF_VIDEO_ENCODER_HEVC_PEAK_BITRATE
 AMF_VIDEO_ENCODER_HEVC_PROFILE
@@ -15142,6 +15148,7 @@ Apps.SetAppCurrentLanguage
 Apps.SetAppLaunchOptions
 Apps.SetAppResolutionOverride
 Apps.SetCachedAppDetails
+Apps.SetControllerRumbleIntensity
 Apps.SetControllerRumblePreference
 Apps.SetCustomArtworkForApp
 Apps.SetCustomLogoPositionForApp
@@ -16424,6 +16431,7 @@ CDesktopCapturePipeWire: Failed to start the screen cast session.\n
 CDesktopCapturePipeWire: Failed to start the screen cast session: %s\n
 CDesktopCapturePipeWire: Failed to synchronize DMA buffer: %s\n
 CDesktopCapturePipeWire: Finished obtaining persistent permissions, exiting PipeWire until streaming or recording.
+CDesktopCapturePipeWire: Got a renegotiate format request without a valid stream? If this is before we were started properly, this may be okay.
 CDesktopCapturePipeWire: Opening DRM render node %s\n
 CDesktopCapturePipeWire: PipeWire core error: %s\n
 CDesktopCapturePipeWire: PipeWire stream format changed (size: %dx%d, format %d, stride %d, size %d, dmabuf: %d)\n
@@ -16432,7 +16440,6 @@ CDesktopCapturePipeWire: PipeWire stream state error: %s\n
 CDesktopCapturePipeWire: Start request was rejected. Deleting our session token to allow a clean run next time; try rebooting and see if the permissions dialog shows up.\n
 CDesktopCapturePipeWire: Start signal received.\n
 CDesktopCapturePipeWire: Stopping capture session
-CDesktopCapturePipeWire: Tried to renegotiate format after stream was closed??
 CDesktopCapturePipeWire: Unknown buffer type: %d\n
 CDesktopCapturePipeWire: Unknown pixel format %d\n
 CDesktopCapturePipeWire: Video frame size does not match provided data!\n
@@ -18735,8 +18742,12 @@ CWebUITransport::ThreadedShutdown
 CWebUITransportServerStatusJob
 CWorkItem::DispatchCompletedWorkItem: got a work item with no job ID
 CWorkItem::SetOrderingKey must be called before AddWorkItem
-CWorkItemGetAvailableDrives
-CWorkItemGetAvailableDrives::ThreadProcess
+CWorkItemFindDriveNameForPath
+CWorkItemFindDriveNameForPath::ThreadProcess
+CWorkItemGetAvailableDriveList
+CWorkItemGetAvailableDriveList::ThreadProcess
+CWorkItemGetFileSystemPosixDeviceNumber
+CWorkItemGetFileSystemPosixDeviceNumber::ThreadProcess
 CWorkItemGetFileSystemStableId
 CWorkItemGetFileSystemStableId::ThreadProcess
 CWorkItemGetFreeDiskSpace
@@ -18778,6 +18789,7 @@ CWorkThreadPool - Check SetEvent
 CWorkThreadPool - SetEvent()
 CWorkThreadPool - Signal Thread Event
 CWorkThreadPool can't support item auto resubmission when ensuring output ordering
+CWorkThreadPool: a deferred work item cannot ask to be resubmitted
 CWorkThreadPool::BTryDeleteExitedWorkerThreads
 CWorkThreadPool::SetEnsureOutputOrdering must be set before any work item is added
 CWorkThreadPool::StartWorkThread: Thread creation failed.\n
@@ -18841,7 +18853,7 @@ Callback specified nonempty set of processes, but does not desire process record
 Callback was paused by the application
 Caller deadline reached
 Caller should provide us with *buffer_ when buffer is non-empty
-Calling LaunchApp faild
+Calling LaunchApp failed
 Calling LaunchShortcut failed
 Calling Tell on an async file writer is unsafe, will race with thread and may corrupt file pointer.
 Calls
@@ -19474,6 +19486,7 @@ Couldn't add video channel
 Couldn't create Opus encoder, audio disabled
 Couldn't create WebRTC session
 Couldn't create audio resampler
+Couldn't create cursor surface: %s\n
 Couldn't create libav encoder, audio disabled
 Couldn't create offer\n
 Couldn't create socket: %s\n
@@ -19630,10 +19643,6 @@ Cyrillic
 Czech
 D#D)D;D?DEDKDQDSDYDeDoD
 D)7Z
-D3D11
-D3D11 shared texture
-D3D12
-D3D12 shared texture
 D4tp
 D4y\t
 D96K
@@ -20580,7 +20589,6 @@ ERROR: %s: session management interface unavailable
 ERROR: An existing client is not running.
 ERROR: factory reset request with no mode selected
 ERROR: selector [%d] invalid\n
-ERR_getErrorString
 ERegKeyRoot
 ERemoteClientBroadcastMsg
 ERemoteClientPairWifiAPResult
@@ -21277,52 +21285,6 @@ FP19_GDBusObjectManager8GBusType29GDBusObjectManagerClientFlagsPKcS4_P13_GCancel
 FR19CNullMetricsFactoryvE
 FRAME_SIZE_ERROR
 FRnz
-FSE_NCountWriteBound
-FSE_buildCTable_rle
-FSE_buildCTable_wksp
-FSE_buildDTable_wksp
-FSE_compressBound
-FSE_compress_usingCTable
-FSE_decompress_wksp_bmi2
-FSE_getErrorName
-FSE_isError
-FSE_normalizeCount
-FSE_optimalTableLog
-FSE_optimalTableLog_internal
-FSE_readNCount
-FSE_readNCount_bmi2
-FSE_versionNumber
-FSE_writeNCount
-FSEv05_buildDTable
-FSEv05_buildDTable_raw
-FSEv05_buildDTable_rle
-FSEv05_createDTable
-FSEv05_decompress
-FSEv05_decompress_usingDTable
-FSEv05_freeDTable
-FSEv05_getErrorName
-FSEv05_isError
-FSEv05_readNCount
-FSEv06_buildDTable
-FSEv06_buildDTable_raw
-FSEv06_buildDTable_rle
-FSEv06_createDTable
-FSEv06_decompress
-FSEv06_decompress_usingDTable
-FSEv06_freeDTable
-FSEv06_getErrorName
-FSEv06_isError
-FSEv06_readNCount
-FSEv07_buildDTable
-FSEv07_buildDTable_raw
-FSEv07_buildDTable_rle
-FSEv07_createDTable
-FSEv07_decompress
-FSEv07_decompress_usingDTable
-FSEv07_freeDTable
-FSEv07_getErrorName
-FSEv07_isError
-FSEv07_readNCount
 FSsN6google8protobuf11StringPieceEE
 FTbp
 FV|FgUV
@@ -23238,12 +23200,6 @@ HEB?<9630-*'
 HEVC
 HFont
 HIGH
-HIST_count
-HIST_countFast
-HIST_countFast_wksp
-HIST_count_simple
-HIST_count_wksp
-HIST_isError
 HKCR
 HKCU
 HKDF
@@ -23321,82 +23277,6 @@ HTTPS_PROXY
 HTTPServer sequence ack out-of-order, trying to ack %llu, currently acked %llu\n
 HTTP_1_1_REQUIRED
 HTTP_PROXY
-HUF_buildCTable_wksp
-HUF_cardinality
-HUF_compress1X_repeat
-HUF_compress1X_usingCTable
-HUF_compress4X_repeat
-HUF_compress4X_usingCTable
-HUF_compressBound
-HUF_decompress1X1_DCtx_wksp
-HUF_decompress1X2_DCtx_wksp
-HUF_decompress1X_DCtx_wksp
-HUF_decompress1X_usingDTable
-HUF_decompress4X_hufOnly_wksp
-HUF_decompress4X_usingDTable
-HUF_estimateCompressedSize
-HUF_getErrorName
-HUF_getNbBitsFromCTable
-HUF_isError
-HUF_minTableLog
-HUF_optimalTableLog
-HUF_readCTable
-HUF_readCTableHeader
-HUF_readDTableX1_wksp
-HUF_readDTableX2_wksp
-HUF_readStats
-HUF_readStats_wksp
-HUF_selectDecoder
-HUF_validateCTable
-HUF_writeCTable_wksp
-HUFv05_decompress
-HUFv05_decompress1X2
-HUFv05_decompress1X2_usingDTable
-HUFv05_decompress1X4
-HUFv05_decompress1X4_usingDTable
-HUFv05_decompress4X2
-HUFv05_decompress4X2_usingDTable
-HUFv05_decompress4X4
-HUFv05_decompress4X4_usingDTable
-HUFv05_getErrorName
-HUFv05_isError
-HUFv05_readDTableX2
-HUFv05_readDTableX4
-HUFv06_decompress
-HUFv06_decompress1X2
-HUFv06_decompress1X2_usingDTable
-HUFv06_decompress1X4
-HUFv06_decompress1X4_usingDTable
-HUFv06_decompress4X2
-HUFv06_decompress4X2_usingDTable
-HUFv06_decompress4X4
-HUFv06_decompress4X4_usingDTable
-HUFv06_readDTableX2
-HUFv06_readDTableX4
-HUFv07_decompress
-HUFv07_decompress1X2
-HUFv07_decompress1X2_DCtx
-HUFv07_decompress1X2_usingDTable
-HUFv07_decompress1X4
-HUFv07_decompress1X4_DCtx
-HUFv07_decompress1X4_usingDTable
-HUFv07_decompress1X_DCtx
-HUFv07_decompress1X_usingDTable
-HUFv07_decompress4X2
-HUFv07_decompress4X2_DCtx
-HUFv07_decompress4X2_usingDTable
-HUFv07_decompress4X4
-HUFv07_decompress4X4_DCtx
-HUFv07_decompress4X4_usingDTable
-HUFv07_decompress4X_DCtx
-HUFv07_decompress4X_hufOnly
-HUFv07_decompress4X_usingDTable
-HUFv07_getErrorName
-HUFv07_isError
-HUFv07_readDTableX2
-HUFv07_readDTableX4
-HUFv07_readStats
-HUFv07_selectDecoder
 HWID Set
 HWyn
 H\fJxE\v
@@ -23704,8 +23584,6 @@ INVALID_SOCKET != m_hSocket
 INVALID_SOCKET == m_hSocket
 IOCP Thread
 IOCP Thread %u
-IOSurface
-IOSurface shared texture
 IOTYPE_ACCEPT == pCompletionData->type
 IOTYPE_RECV should never be posted back to main thread
 IOTYPE_SEND/UNBUFERREDSEND
@@ -24171,6 +24049,7 @@ Invalid Platform
 Invalid Protocol
 Invalid RSA modulus: %d bytes wide
 Invalid SOS parameters for sequential JPEG
+Invalid SetVarPolicy %d
 Invalid State
 Invalid Steam ID
 Invalid SteamID
@@ -24796,7 +24675,6 @@ LC_NUMERIC
 LC_PAPER
 LC_TELEPHONE
 LC_TIME
-LD_LIBRARY_PATH
 LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}"
 LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" %s
 LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" /usr/bin/steamos-polkit-helpers/jupiter-biosupdate
@@ -26367,8 +26245,14 @@ N.lb
 N10SteamVProf24IVProfileCallbackHandlerE
 N10__cxxabiv115__forced_unwindE
 N10__cxxabiv117__class_type_infoE
+N10__cxxabiv117__pbase_type_infoE
 N10__cxxabiv119__foreign_exceptionE
+N10__cxxabiv119__pointer_type_infoE
+N10__cxxabiv120__function_type_infoE
 N10__cxxabiv120__si_class_type_infoE
+N10__cxxabiv121__vmi_class_type_infoE
+N10__cxxabiv123__fundamental_type_infoE
+N10__cxxabiv129__pointer_to_member_type_infoE
 N11CHTMLWindow22JSMethodRegistration_tE
 N11CHTTPClient12HostLookup_tE
 N11CHTTPClient18SSLContextLookup_tE
@@ -27421,7 +27305,7 @@ NV21ToYUV24Row_NEON
 NVENC
 NVENC - Couldn't create encoding session: %d
 NVENC - Couldn't get encode preset config: %d
-NVENC - Failed to apply initial configuration: %d
+NVENC - Failed to apply initial configuration: %d (%s)
 NVENC - Failed to create input buffer: %d
 NVENC - Failed to create output buffer: %d
 NVENC - Failed to get encoded frame: %d (NVIDIA graphics driver reset?)
@@ -27438,7 +27322,7 @@ NVENC - Sending EOS failed: %d
 NVENC - Submitting frame for encoding failed: %d
 NVENC - Unable to get current CUDA context
 NVENC - Unable to set current CUDA context
-NVENC - [codec=%s][device=%d][input=%s][bufferFormat=0x%x][%dx%d][colorspace=%d][gop=%d][frameIntervalP=%d]
+NVENC - [codec=%s][device=%d][nt=%d][bufferFormat=0x%x][%dx%d][colorspace=%d][gop=%d][frameIntervalP=%d]
 NVENC - codec %s isn't supported
 NVENC - couldn't check device %d capability: %d
 NVENC - couldn't create context: %d
@@ -27449,6 +27333,7 @@ NVENC - failed to allocate buffers on bitrate/resolution change
 NVENC - failed to allocate buffers on format change [type=%d]
 NVENC - no D3D12 input format for producer format %d
 NVENC - nvenc not supported
+NVENC - recreating due to buffer format change
 NVENC - recreating due to quality or resolution change
 NVIDIA
 N[i4A
@@ -27502,6 +27387,7 @@ Netscape SSL Server Name
 Netscape SSL server
 Netscape Server Gated Crypto
 Network Authentication Required
+Network path
 Network problem detected: skipping wait
 Network send exceeded
 NetworkTest
@@ -27934,6 +27820,7 @@ Object Signing CA
 Objects
 Obtained EMS handle %u
 Obtained XMS handle %u
+Oct  6 2026 23:04:59
 Octal/hex numbers are not valid JSON values.
 October
 Odia
@@ -29283,6 +29170,7 @@ Rate
 Rate Limit Exceeded
 RateClanAnnouncement
 RateCommentThread
+Raw send failed: %d, packet %d, %d bytes, %d queued\n
 Raw stream mode only supported for TCP connections
 Rbg.E
 ReArmMuraCalibration
@@ -29693,7 +29581,6 @@ Resume
 ResumeAppSession
 ResumeProcess
 Retail
-RetailInstall
 Retention interval for background recording game %s is %u seconds
 Retired
 Retro Controller
@@ -30208,6 +30095,7 @@ STEAM_SCREEN_SCALE
 STEAM_TOUCH_CLICK_MODE
 STEAM_TROPHY
 STEAM_USE_DYNAMIC_VRS
+STEAM_USE_WPASUPPLICANT
 STOP USING,%s
 STORAGE DEVICE
 STORE lib
@@ -30563,7 +30451,6 @@ Sent ping with MTU %d, increment = %d\n
 SentenceMode
 SentenceModeMenu
 Sentiment
-Sep 23 2026 22:41:43
 September
 Serbian
 Serial
@@ -30973,6 +30860,7 @@ SkipDiscoveryQueueItem
 SkipOfflineModeWarning
 Skipped at least 1 frame while encoding video\n
 Skipping adding audio track to segment writer
+Skipping frame with old epoch (was %u, now %u)\n
 Skipping in-progress or failed download for %u, asset type %s
 Skipping js method registration, already exists: %s
 Skipping usage report for controller: %s\n
@@ -31280,7 +31168,6 @@ Steam - DirWatcher
 Steam App %u
 Steam Beta Update
 Steam Big Picture
-Steam Controller Setting Saved Binding Selection Failed - No Identity
 Steam Controller Setting Saved Binding Selection for AppID: %s, URL: %s, Controller: %s.\n
 Steam ID does not pass strict parsing: '%s'
 Steam In-Home Streaming
@@ -32773,6 +32660,7 @@ UI.GetDesiredSteamUIWindows
 UI.GetOSEndOfLifeInfo
 UI.GetUIMode
 UI.NotifyAppInitialized
+UI.NotifyMainWindowShown
 UI.RegisterDesiredSteamUIWindowsChanged
 UI.RegisterForClientConVar
 UI.RegisterForErrorCondition
@@ -33059,6 +32947,7 @@ UnreliableFEC
 UnreliableMessage
 UnreliableMessageFragment
 UnreliableNack
+UnreliableRaw
 UnsafeLegacyRenegotiation
 Unspecified
 Unspecified Error
@@ -33564,8 +33453,6 @@ Vote
 VoteData
 Vql4
 Vu?N\t?8Ws?vGr?
-Vulkan
-Vulkan shared texture
 W%0Qv4AV
 W)N0
 WARNING
@@ -34158,7 +34045,9 @@ YbZ6[
 YeKlt
 YearOrMore
 Yielding (ready to run)
+YieldingFindDriveNameForPath
 YieldingGetAvailableDrives
+YieldingGetFileSystemPosixDeviceNumber
 YieldingGetFileSystemStableId
 YieldingPrintInstalledFiles
 YieldingResolveHostNameOrIPWithPort
@@ -34255,34 +34144,6 @@ Z6google.golang.org/protobuf/types/known/sourcecontextpb
 Z9L/
 Z:hluv
 Z?SHX?
-ZBUFFv05_createDCtx
-ZBUFFv05_decompressContinue
-ZBUFFv05_decompressInit
-ZBUFFv05_decompressInitDictionary
-ZBUFFv05_freeDCtx
-ZBUFFv05_getErrorName
-ZBUFFv05_isError
-ZBUFFv05_recommendedDInSize
-ZBUFFv05_recommendedDOutSize
-ZBUFFv06_createDCtx
-ZBUFFv06_decompressContinue
-ZBUFFv06_decompressInit
-ZBUFFv06_decompressInitDictionary
-ZBUFFv06_freeDCtx
-ZBUFFv06_getErrorName
-ZBUFFv06_isError
-ZBUFFv06_recommendedDInSize
-ZBUFFv06_recommendedDOutSize
-ZBUFFv07_createDCtx
-ZBUFFv07_createDCtx_advanced
-ZBUFFv07_decompressContinue
-ZBUFFv07_decompressInit
-ZBUFFv07_decompressInitDictionary
-ZBUFFv07_freeDCtx
-ZBUFFv07_getErrorName
-ZBUFFv07_isError
-ZBUFFv07_recommendedDInSize
-ZBUFFv07_recommendedDOutSize
 ZF]:Ba?
 ZINT32
 ZINT64
@@ -36074,6 +35935,7 @@ Zulu
 \n\vadmin_query
 \n\vallow_alias
 \n\vallow_voice
+\n\vapp_running
 \n\vappidorname
 \n\vauth_key_id
 \n\vavatar_hash
@@ -36700,13 +36562,6 @@ _rightCaption
 _setjmp
 _strlwr
 _textImage
-_txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
-_txnal_cow_string_D1(void*)
-_txnal_cow_string_D1_commit(void*)
-_txnal_cow_string_c_str(void const*)
-_txnal_logic_error_get_msg(void*)
-_txnal_runtime_error_get_msg(void*)
-_txnal_sso_string_c_str(void const*)
 _type == kArray
 _type == kObject
 _xU`u
@@ -37158,6 +37013,7 @@ appcontrollericons%d/
 appdetails/
 appearance
 append
+append=
 append_exp
 append_strings
 appid
@@ -37607,6 +37463,7 @@ bLeftStickTouch
 bLeftStickTouchDisablesLeftTrackPad
 bLeftTrackpad
 bLeftTrigger
+bLoaded
 bLoggedOn
 bManualReset
 bMicMuted
@@ -39721,7 +39578,6 @@ decimal64
 decipherOnly
 deckDerivedProperties
 deck_convention_
-declined
 decltype (
 decltype(auto)
 decltype(nullptr)
@@ -40363,6 +40219,7 @@ eConnectivityTestResult
 eConnectorType
 eContent
 eContentType
+eControllerRumbleIntensity
 eControllerRumblePreference
 eControllerType_OBSOLETE
 eCurrencyCode
@@ -40395,6 +40252,7 @@ eRemotePlayP2PScope
 eRepeatStatus
 eResult
 eRet != k_ESteamRealmUnknown
+eRumbleIntensity
 eRumblePreference
 eSOUax
 eSelectionType
@@ -41262,6 +41120,7 @@ frame_maximize
 frame_menu
 frame_minimize
 frame_mintosystray
+frame_rate_limit
 frame_rate_string
 frame_start_delta
 frame_title
@@ -44695,7 +44554,6 @@ gzip,identity,*;q=0
 h2Wl
 h8,4$
 hConnection == m_hConnection
-hControllerBinding != 0
 hHandle
 hHpX
 hIST
@@ -45167,6 +45025,7 @@ iInstallFolder
 iLastRequestedClipSegment <= iLastAvailableSegment
 iNewReadIndex != 3
 iNode == iIndex
+iPacket == nDataPackets
 iPhoneOS
 iSE'1\v
 iSection < 32
@@ -49046,7 +48905,6 @@ m_ThreadPool
 m_TotalElements != InvalidIndex()
 m_Tree
 m_UndoTextStream
-m_UnsetEnvironmentVariables
 m_VecArgs
 m_VecArgs[i].m_sName
 m_VecPFrameFunction[iFrameType]
@@ -49202,6 +49060,7 @@ m_eRequestMethod == k_EHTTPMethodGET
 m_eResultLogOn == k_EResultInvalidState
 m_eSessionState == k_ESessionStateIdle
 m_eSignalState != k_EFutureState_Ready
+m_envChild
 m_errorIndex>=0
 m_fds[0] >= 0
 m_fds[1] != k_SOCKET_WRAPPER
@@ -49300,7 +49159,6 @@ m_mapDevices
 m_mapDialogs
 m_mapDownloadItems
 m_mapEntriesInProgress
-m_mapEnvironmentVariables
 m_mapFileTimes
 m_mapFileWatchData
 m_mapFileWatchData.Key( i )
@@ -49353,6 +49211,7 @@ m_mapServiceMethodRequestJobNameDeprecated
 m_mapServiceMethodRequestJobNameDeprecated.Key(i)
 m_mapServiceMethodRequestJobNameToMsgInfo
 m_mapServiceMethodResponseJobNameToMsgInfo
+m_mapSets
 m_mapStatsBucket
 m_mapStatsBucket[iBucket]
 m_mapSyncingApps
@@ -49803,6 +49662,7 @@ m_strDetectedVRHMDName
 m_strDirectory
 m_strDisplayName
 m_strDomain
+m_strDriveName
 m_strErrorDetail
 m_strExePath
 m_strExecutable
@@ -50005,6 +49865,8 @@ m_vecDiagnosticInfoChangeHandlers
 m_vecDisplayBrightnessChangeHandlers
 m_vecDownloadItems
 m_vecDownloadOverview
+m_vecDriveList
+m_vecDrives
 m_vecDualSenseUpdateCallbacks
 m_vecEditingControllerConfig
 m_vecFolderChanges
@@ -50079,6 +49941,7 @@ m_vecProcesses
 m_vecPromiseAwaitingConnect
 m_vecPromiseResolutions
 m_vecProxyOverrideExcludedHosts
+m_vecPyrowaveParityOrder.Count() == nTotalParity
 m_vecQueued
 m_vecQueuedMessages
 m_vecQueuedNotifications
@@ -50760,6 +50623,7 @@ nNumChars >= 0
 nPacketsToSend >= 0
 nPlaytimeForever
 nPlaytimeLastTwoWeeks
+nPosixDeviceNumber
 nPreSplit > 0 && nPreSplit + nPostSplit == nCount
 nPut + nPutDelta <= outBuf.TellMaxPut()
 nRHapticStrength
@@ -50906,9 +50770,6 @@ nghttp2_buf_avail(buf) >= NGHTTP2_PRIORITY_SPECLEN
 nghttp2_buf_avail(buf) >= datamax
 nghttp2_buf_avail(buf) >= padlen - 1
 nghttp2_buf_len(buf) == NGHTTP2_FRAME_HDLEN + frame->hd.length
-nghttp2_check_authority
-nghttp2_check_header_name
-nghttp2_check_header_value
 nghttp2_frame.c
 nghttp2_frame_add_pad
 nghttp2_frame_pack_altsvc
@@ -50922,37 +50783,13 @@ nghttp2_frame_pack_rst_stream
 nghttp2_frame_pack_settings
 nghttp2_frame_pack_window_update
 nghttp2_hd.c
-nghttp2_hd_deflate_bound
-nghttp2_hd_deflate_change_table_size
-nghttp2_hd_deflate_del
-nghttp2_hd_deflate_get_dynamic_table_size
-nghttp2_hd_deflate_get_max_dynamic_table_size
-nghttp2_hd_deflate_get_num_table_entries
-nghttp2_hd_deflate_get_table_entry
-nghttp2_hd_deflate_hd
-nghttp2_hd_deflate_hd_vec
-nghttp2_hd_deflate_new
-nghttp2_hd_deflate_new2
-nghttp2_hd_inflate_change_table_size
-nghttp2_hd_inflate_del
-nghttp2_hd_inflate_end_headers
-nghttp2_hd_inflate_get_dynamic_table_size
-nghttp2_hd_inflate_get_max_dynamic_table_size
-nghttp2_hd_inflate_get_num_table_entries
-nghttp2_hd_inflate_get_table_entry
-nghttp2_hd_inflate_hd
-nghttp2_hd_inflate_hd2
 nghttp2_hd_inflate_hd_nv
-nghttp2_hd_inflate_new
-nghttp2_hd_inflate_new2
 nghttp2_hd_table_get
 nghttp2_hd_table_get2
 nghttp2_helper.c
 nghttp2_http.c
-nghttp2_http2_strerror
 nghttp2_http_on_header
 nghttp2_increase_local_window_size
-nghttp2_is_fatal
 nghttp2_is_fatal(rv)
 nghttp2_ksl.c
 nghttp2_ksl_it_get
@@ -50962,83 +50799,20 @@ nghttp2_ksl_update_key
 nghttp2_map.c
 nghttp2_map_each
 nghttp2_map_each_free
-nghttp2_nv_compare_name
 nghttp2_nv_equal
 nghttp2_outbound_item.c
 nghttp2_outbound_item_free
-nghttp2_pack_settings_payload
 nghttp2_pq.c
 nghttp2_pq_remove
-nghttp2_priority_spec_check_default
-nghttp2_priority_spec_default_init
-nghttp2_priority_spec_init
 nghttp2_rcbuf.c
 nghttp2_rcbuf_decref
-nghttp2_rcbuf_get_buf
-nghttp2_rcbuf_incref
-nghttp2_rcbuf_is_static
-nghttp2_select_next_protocol
 nghttp2_session.c
 nghttp2_session_add_rst_stream
 nghttp2_session_add_settings
 nghttp2_session_adjust_closed_stream
 nghttp2_session_adjust_idle_stream
-nghttp2_session_callbacks_del
-nghttp2_session_callbacks_new
-nghttp2_session_callbacks_set_before_frame_send_callback
-nghttp2_session_callbacks_set_data_source_read_length_callback
-nghttp2_session_callbacks_set_error_callback
-nghttp2_session_callbacks_set_error_callback2
-nghttp2_session_callbacks_set_on_begin_frame_callback
-nghttp2_session_callbacks_set_on_begin_headers_callback
-nghttp2_session_callbacks_set_on_data_chunk_recv_callback
-nghttp2_session_callbacks_set_on_extension_chunk_recv_callback
-nghttp2_session_callbacks_set_on_frame_not_send_callback
-nghttp2_session_callbacks_set_on_frame_recv_callback
-nghttp2_session_callbacks_set_on_frame_send_callback
-nghttp2_session_callbacks_set_on_header_callback
-nghttp2_session_callbacks_set_on_header_callback2
-nghttp2_session_callbacks_set_on_invalid_frame_recv_callback
-nghttp2_session_callbacks_set_on_invalid_header_callback
-nghttp2_session_callbacks_set_on_invalid_header_callback2
-nghttp2_session_callbacks_set_on_stream_close_callback
-nghttp2_session_callbacks_set_pack_extension_callback
-nghttp2_session_callbacks_set_recv_callback
-nghttp2_session_callbacks_set_select_padding_callback
-nghttp2_session_callbacks_set_send_callback
-nghttp2_session_callbacks_set_send_data_callback
-nghttp2_session_callbacks_set_unpack_extension_callback
-nghttp2_session_change_stream_priority
-nghttp2_session_check_request_allowed
-nghttp2_session_check_server_session
-nghttp2_session_client_new
-nghttp2_session_client_new2
-nghttp2_session_client_new3
-nghttp2_session_consume
-nghttp2_session_consume_connection
-nghttp2_session_consume_stream
-nghttp2_session_create_idle_stream
-nghttp2_session_del
-nghttp2_session_find_stream
-nghttp2_session_get_effective_local_window_size
-nghttp2_session_get_effective_recv_data_length
-nghttp2_session_get_hd_deflate_dynamic_table_size
-nghttp2_session_get_hd_inflate_dynamic_table_size
-nghttp2_session_get_last_proc_stream_id
 nghttp2_session_get_local_settings
-nghttp2_session_get_local_window_size
-nghttp2_session_get_next_stream_id
-nghttp2_session_get_outbound_queue_size
 nghttp2_session_get_remote_settings
-nghttp2_session_get_remote_window_size
-nghttp2_session_get_root_stream
-nghttp2_session_get_stream_effective_local_window_size
-nghttp2_session_get_stream_effective_recv_data_length
-nghttp2_session_get_stream_local_close
-nghttp2_session_get_stream_local_window_size
-nghttp2_session_get_stream_remote_close
-nghttp2_session_get_stream_remote_window_size
-nghttp2_session_get_stream_user_data
 nghttp2_session_mem_recv
 nghttp2_session_mem_send
 nghttp2_session_mem_send_internal
@@ -51050,55 +50824,19 @@ nghttp2_session_pack_data
 nghttp2_session_predicate_data_send
 nghttp2_session_recv
 nghttp2_session_reprioritize_stream
-nghttp2_session_resume_data
-nghttp2_session_send
-nghttp2_session_server_new
-nghttp2_session_server_new2
-nghttp2_session_server_new3
-nghttp2_session_set_local_window_size
-nghttp2_session_set_next_stream_id
 nghttp2_session_set_stream_user_data
-nghttp2_session_set_user_data
-nghttp2_session_terminate_session
-nghttp2_session_terminate_session2
 nghttp2_session_upgrade
 nghttp2_session_upgrade2
-nghttp2_session_want_read
-nghttp2_session_want_write
 nghttp2_stream.c
 nghttp2_stream_attach_item
 nghttp2_stream_defer_item
 nghttp2_stream_dep_remove
 nghttp2_stream_dep_remove_subtree
-nghttp2_stream_get_first_child
-nghttp2_stream_get_next_sibling
-nghttp2_stream_get_parent
-nghttp2_stream_get_previous_sibling
-nghttp2_stream_get_state
-nghttp2_stream_get_stream_id
-nghttp2_stream_get_sum_dependency_weight
-nghttp2_stream_get_weight
 nghttp2_stream_in_dep_tree(stream)
 nghttp2_stream_reschedule
 nghttp2_stream_resume_deferred_item
-nghttp2_strerror
 nghttp2_submit.c
-nghttp2_submit_altsvc
-nghttp2_submit_data
-nghttp2_submit_extension
-nghttp2_submit_goaway
-nghttp2_submit_headers
 nghttp2_submit_origin
-nghttp2_submit_ping
-nghttp2_submit_priority
-nghttp2_submit_push_promise
-nghttp2_submit_request
-nghttp2_submit_response
-nghttp2_submit_rst_stream
-nghttp2_submit_settings
-nghttp2_submit_shutdown_notice
-nghttp2_submit_trailer
-nghttp2_submit_window_update
 nick
 nickname
 nistp224_pre_comp_new
@@ -51897,7 +51635,6 @@ pSSLContext
 pSSLContext->BHasCertificate()
 pSSLContext->GetConnectionType() == k_ESSLConnectionType_Server
 pSalt
-pScaled->pitch == pScaled->w * 4
 pScanHandlePendingList != pCompletionData
 pScheme
 pSink
@@ -51917,6 +51654,7 @@ pT6w.
 pTCPConnection->m_cOutstandingSends > 0
 pTemperature is a required paramater
 pThread
+pThread && pThread->m_pCurrentWorkItem == pWorkItem && !pThread->m_bCurrentItemDeferred
 pToken
 pToolWindow
 pU>\AL
@@ -52130,86 +51868,13 @@ pchQueryString[0] == '?'
 pchSSLCertificate && pchSSLPrivateKey
 pchSteam2ID
 pchTLSServerName == NULL
+pchValue || eSetVarPolicy == k_ESetVarPolicy_Delete
 pchVar
-pchVar && pchValue
 pch[cub - 1] != '\0' && pch[cub] == '\0'
 pclose
 pcmag.com
-pcre_callout
-pcre_compile
-pcre_compile2
-pcre_config
-pcre_exec
-pcre_free
-pcre_fullinfo
-pcre_malloc
 pcre_retval == 0
-pcre_stack_free
-pcre_stack_guard
-pcre_stack_malloc
 pcrecpp.cc
-pcrecpp::Arg::Arg(void*)
-pcrecpp::Arg::Parse(char const*, int) const
-pcrecpp::Arg::parse_char(char const*, int, void*)
-pcrecpp::Arg::parse_double(char const*, int, void*)
-pcrecpp::Arg::parse_float(char const*, int, void*)
-pcrecpp::Arg::parse_int(char const*, int, void*)
-pcrecpp::Arg::parse_int_cradix(char const*, int, void*)
-pcrecpp::Arg::parse_int_hex(char const*, int, void*)
-pcrecpp::Arg::parse_int_octal(char const*, int, void*)
-pcrecpp::Arg::parse_int_radix(char const*, int, void*, int)
-pcrecpp::Arg::parse_long(char const*, int, void*)
-pcrecpp::Arg::parse_long_cradix(char const*, int, void*)
-pcrecpp::Arg::parse_long_hex(char const*, int, void*)
-pcrecpp::Arg::parse_long_octal(char const*, int, void*)
-pcrecpp::Arg::parse_long_radix(char const*, int, void*, int)
-pcrecpp::Arg::parse_longlong(char const*, int, void*)
-pcrecpp::Arg::parse_longlong_cradix(char const*, int, void*)
-pcrecpp::Arg::parse_longlong_hex(char const*, int, void*)
-pcrecpp::Arg::parse_longlong_octal(char const*, int, void*)
-pcrecpp::Arg::parse_longlong_radix(char const*, int, void*, int)
-pcrecpp::Arg::parse_null(char const*, int, void*)
-pcrecpp::Arg::parse_short(char const*, int, void*)
-pcrecpp::Arg::parse_short_cradix(char const*, int, void*)
-pcrecpp::Arg::parse_short_hex(char const*, int, void*)
-pcrecpp::Arg::parse_short_octal(char const*, int, void*)
-pcrecpp::Arg::parse_short_radix(char const*, int, void*, int)
-pcrecpp::Arg::parse_string(char const*, int, void*)
-pcrecpp::Arg::parse_stringpiece(char const*, int, void*)
-pcrecpp::Arg::parse_uchar(char const*, int, void*)
-pcrecpp::Arg::parse_uint(char const*, int, void*)
-pcrecpp::Arg::parse_uint_cradix(char const*, int, void*)
-pcrecpp::Arg::parse_uint_hex(char const*, int, void*)
-pcrecpp::Arg::parse_uint_octal(char const*, int, void*)
-pcrecpp::Arg::parse_uint_radix(char const*, int, void*, int)
-pcrecpp::Arg::parse_ulong(char const*, int, void*)
-pcrecpp::Arg::parse_ulong_cradix(char const*, int, void*)
-pcrecpp::Arg::parse_ulong_hex(char const*, int, void*)
-pcrecpp::Arg::parse_ulong_octal(char const*, int, void*)
-pcrecpp::Arg::parse_ulong_radix(char const*, int, void*, int)
-pcrecpp::Arg::parse_ulonglong(char const*, int, void*)
-pcrecpp::Arg::parse_ulonglong_cradix(char const*, int, void*)
-pcrecpp::Arg::parse_ulonglong_hex(char const*, int, void*)
-pcrecpp::Arg::parse_ulonglong_octal(char const*, int, void*)
-pcrecpp::Arg::parse_ulonglong_radix(char const*, int, void*, int)
-pcrecpp::Arg::parse_ushort(char const*, int, void*)
-pcrecpp::Arg::parse_ushort_cradix(char const*, int, void*)
-pcrecpp::Arg::parse_ushort_hex(char const*, int, void*)
-pcrecpp::Arg::parse_ushort_octal(char const*, int, void*)
-pcrecpp::Arg::parse_ushort_radix(char const*, int, void*, int)
-pcrecpp::RE::Cleanup()
-pcrecpp::RE::Compile(pcrecpp::RE::Anchor)
-pcrecpp::RE::Consume(pcrecpp::StringPiece*, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&) const
-pcrecpp::RE::DoMatch(pcrecpp::StringPiece const&, pcrecpp::RE::Anchor, int*, pcrecpp::Arg const* const*, int) const
-pcrecpp::RE::DoMatchImpl(pcrecpp::StringPiece const&, pcrecpp::RE::Anchor, int*, pcrecpp::Arg const* const*, int, int*, int) const
-pcrecpp::RE::FindAndConsume(pcrecpp::StringPiece*, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&) const
-pcrecpp::RE::FullMatch(pcrecpp::StringPiece const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&) const
-pcrecpp::RE::NumberOfCapturingGroups() const
-pcrecpp::RE::PartialMatch(pcrecpp::StringPiece const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&) const
-pcrecpp::RE::QuoteMeta(pcrecpp::StringPiece const&)
-pcrecpp::RE::TryMatch(pcrecpp::StringPiece const&, int, pcrecpp::RE::Anchor, bool, int*, int) const
-pcrecpp::RE::no_arg
-pcrecpp::RE::~RE()
 pcubDecodedData
 pcubEncryptedData
 pcubPlaintextData
@@ -52908,6 +52573,7 @@ pos.IsValid()
 position
 position_is_waitlist
 positive_int_value
+posix_device_number
 posix_fadvise
 possible_clip
 possible_takeover
@@ -52953,6 +52619,7 @@ preloaded
 preloading
 preloadonly
 prepend
+prepend=
 prerelease
 prerelease-
 presence
@@ -53287,6 +52954,7 @@ py_generic_services
 pyrowave_custom_bitrate
 pyrowave_custom_bitrate_kbps
 pyrowave_quality_modifier
+pyrowave_yuv444
 python3 "%s/devkit-utils/steamos-set-steam-client" --client %s
 pzKD)
 q not prime
@@ -53717,6 +53385,7 @@ restore_token
 restrict_auto_updates
 restrict_auto_updates_end
 restrict_auto_updates_start
+restricted_countries
 restrictions_approved
 result
 result too large
@@ -53934,6 +53603,7 @@ ru_RU
 rule
 rules
 rumble_enabled
+rumble_intensity
 rumble_setting
 run-game
 run/
@@ -53945,7 +53615,6 @@ rungame/
 rungameid
 rungameid/
 running
-runparam
 runtime
 russian
 rv > 0 && rv <= nSendLen
@@ -54360,6 +54029,7 @@ set-msgExt
 set-policy
 set-policy-root
 set-rootKeyThumb
+set=
 setAttr-Cert
 setAttr-GenCryptgrm
 setAttr-IssCap
@@ -54603,7 +54273,6 @@ shortname
 should retry
 should_hide_hint
 should_suppress_discount_pct
-show-main-window
 showDownArrow
 show_above_purchase
 show_advanced_update_channels
@@ -55630,6 +55299,7 @@ strURL != "%store%"
 strUrl
 strUserCountry
 strUserLabel
+strWifiAPChannelListJSON
 strWifiAPStateJSON
 str_copy
 strcasecmp
@@ -55854,7 +55524,6 @@ sysreqs
 system
 system lib
 system library
-system memory
 system.HeadsetView
 system\EnableGameOverlay
 system\EnableUISounds
@@ -56774,13 +56443,6 @@ typeinfo for
 typeinfo for EWatchdogStallResult (*)(unsigned int)
 typeinfo for EWatchdogStallResult (unsigned int)
 typeinfo for SteamThreadTools::CThread
-typeinfo for __cxxabiv1::__class_type_info
-typeinfo for __cxxabiv1::__forced_unwind
-typeinfo for __cxxabiv1::__foreign_exception
-typeinfo for __cxxabiv1::__si_class_type_info
-typeinfo for __gnu_cxx::__concurrence_lock_error
-typeinfo for __gnu_cxx::__concurrence_unlock_error
-typeinfo for __gnu_cxx::recursive_init_error
 typeinfo for bool (*)(char const*)
 typeinfo for bool (char const*)
 typeinfo for tinyxml2::XMLAttribute
@@ -56800,13 +56462,6 @@ typeinfo for void (char const*, ERecordingSegmenterLogLevel)
 typeinfo name for
 typeinfo name for EWatchdogStallResult (*)(unsigned int)
 typeinfo name for EWatchdogStallResult (unsigned int)
-typeinfo name for __cxxabiv1::__class_type_info
-typeinfo name for __cxxabiv1::__forced_unwind
-typeinfo name for __cxxabiv1::__foreign_exception
-typeinfo name for __cxxabiv1::__si_class_type_info
-typeinfo name for __gnu_cxx::__concurrence_lock_error
-typeinfo name for __gnu_cxx::__concurrence_unlock_error
-typeinfo name for __gnu_cxx::recursive_init_error
 typeinfo name for bool (*)(char const*)
 typeinfo name for bool (char const*)
 typeinfo name for tinyxml2::XMLAttribute
@@ -57080,7 +56735,6 @@ unknown header flags set
 unknown hostname
 unknown id
 unknown info type
-unknown input
 unknown interlace type
 unknown key exchange type
 unknown key type
@@ -57140,6 +56794,7 @@ unregister_status_update
 unregistered scheme
 unsafe legacy renegotiation disabled
 unset
+unset=
 unset_look
 unsigned
 unsigned __int128
@@ -57206,7 +56861,6 @@ unsupported status type
 unsupported type
 unsupported version
 unsupported zlib version
-unusable shared texture
 unused
 unverified
 unwrap error
@@ -57680,16 +57334,6 @@ vsnprintf
 vstdlib_s
 vtable for
 vtable for CAdHocValidation_SimpleCallback
-vtable for __cxxabiv1::__class_type_info
-vtable for __cxxabiv1::__forced_unwind
-vtable for __cxxabiv1::__foreign_exception
-vtable for __cxxabiv1::__function_type_info
-vtable for __cxxabiv1::__pointer_type_info
-vtable for __cxxabiv1::__si_class_type_info
-vtable for __cxxabiv1::__vmi_class_type_info
-vtable for __gnu_cxx::__concurrence_lock_error
-vtable for __gnu_cxx::__concurrence_unlock_error
-vtable for __gnu_cxx::recursive_init_error
 vtable for tinyxml2::XMLAttribute
 vtable for tinyxml2::XMLComment
 vtable for tinyxml2::XMLDeclaration

@@ -163,5 +163,10 @@
     "PersonalCalendar_EmptyDay": "ليس لدينا أي إصدارات جديدة نوصي بها لك في هذا اليوم <1>تحقق من بقية التقويم لديك!</1>",
     "NewBadge": "الجديد",
     "Time_Today": "اليوم",
+    "DiscountsAndEvents_Title": "الخصومات والفعاليات",
+    "DiscountsAndEvents_SeeMore": "عرض المزيد",
+    "DiscountsAndEvents_Banner_WeekendDeal": "صفقة نهاية الأسبوع",
+    "DiscountsAndEvents_Banner_MidweekDeal": "صفقة منتصف الأسبوع",
+    "DiscountsAndEvents_Banner_DailyDeal": "صفقة اليوم",
     "store_ui_dummy": "dont translate"
 }

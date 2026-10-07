@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "11025763";
+var CLSTAMP = "11095006";
 (() => {
   var e,
     t,
@@ -102,12 +102,12 @@ var CLSTAMP = "11025763";
         }
         (r.keys = () => Object.keys(i)), (r.id = 48516), (e.exports = r);
       },
-      689: (e, t, n) => {
+      26275: (e, t, n) => {
         "use strict";
-        n(39040);
+        n(66024);
         var i = n(63696),
           r = n(7470),
-          s = n(52366);
+          s = n(66950);
         const a = {
             EUNIVERSE: 0,
             LANGUAGE: "english",
@@ -750,7 +750,7 @@ var CLSTAMP = "11025763";
               : console.assert(!!e, t, ...n)
             : e || console.warn(t, ...n);
         }
-        var V = n(63158);
+        var V = n(53170);
         function W(e, t, n, i) {
           var r,
             s = arguments.length,
@@ -1002,8 +1002,16 @@ var CLSTAMP = "11025763";
         let te;
         te ??= new Set();
         let ne = null;
-        var ie = n(73249);
-        function re() {
+        var ie = n(75428);
+        const re = {
+          [ie.uE.XP]: "_Guide",
+          [ie.uE.Hk]: "_Hardware",
+          [ie.uE._i]: "_DLC",
+          [ie.uE.Ov]: "_Music",
+          [ie.uE.gQ]: "_Series",
+          [ie.uE.ue]: "_Demo",
+        };
+        function se() {
           if (((e = q.LANGUAGE), !Q.has(e)))
             throw `unknown language ${q.LANGUAGE}`;
           return {
@@ -1017,44 +1025,44 @@ var CLSTAMP = "11025763";
           };
           var e;
         }
-        const se = {};
-        (se.arabic = () => n.e(8476).then(n.t.bind(n, 8476, 19))),
-          (se.brazilian = () => n.e(9574).then(n.t.bind(n, 99574, 19))),
-          (se.bulgarian = () => n.e(6170).then(n.t.bind(n, 43789, 19))),
-          (se.czech = () => n.e(815).then(n.t.bind(n, 815, 19))),
-          (se.danish = () => n.e(4289).then(n.t.bind(n, 4289, 19))),
-          (se.dutch = () => n.e(4978).then(n.t.bind(n, 54978, 19))),
-          (se.english = () => n.e(3800).then(n.t.bind(n, 33800, 19))),
-          (se.finnish = () => n.e(3907).then(n.t.bind(n, 3907, 19))),
-          (se.french = () => n.e(5040).then(n.t.bind(n, 45040, 19))),
-          (se.german = () => n.e(4750).then(n.t.bind(n, 94750, 19))),
-          (se.greek = () => n.e(9668).then(n.t.bind(n, 69668, 19))),
-          (se.hungarian = () => n.e(5233).then(n.t.bind(n, 45233, 19))),
-          (se.indonesian = () => n.e(200).then(n.t.bind(n, 90200, 19))),
-          (se.italian = () => n.e(1864).then(n.t.bind(n, 31864, 19))),
-          (se.japanese = () => n.e(7263).then(n.t.bind(n, 7263, 19))),
-          (se.koreana = () => n.e(295).then(n.t.bind(n, 30295, 19))),
-          (se.latam = () => n.e(559).then(n.t.bind(n, 50559, 19))),
-          (se.malay = () => n.e(1136).then(n.t.bind(n, 61136, 19))),
-          (se.norwegian = () => n.e(6512).then(n.t.bind(n, 86512, 19))),
-          (se.polish = () => n.e(2889).then(n.t.bind(n, 52889, 19))),
-          (se.portuguese = () => n.e(2269).then(n.t.bind(n, 72269, 19))),
-          (se.romanian = () => n.e(4419).then(n.t.bind(n, 34419, 19))),
-          (se.russian = () => n.e(5777).then(n.t.bind(n, 75777, 19))),
-          (se.sc_schinese = () => n.e(3723).then(n.t.bind(n, 23723, 19))),
-          (se.schinese = () => n.e(5436).then(n.t.bind(n, 85436, 19))),
-          (se.spanish = () => n.e(6736).then(n.t.bind(n, 76736, 19))),
-          (se.swedish = () => n.e(4625).then(n.t.bind(n, 94625, 19))),
-          (se.tchinese = () => n.e(5191).then(n.t.bind(n, 15191, 19))),
-          (se.thai = () => n.e(4230).then(n.t.bind(n, 4230, 19))),
-          (se.turkish = () => n.e(4792).then(n.t.bind(n, 34792, 19))),
-          (se.ukrainian = () => n.e(7246).then(n.t.bind(n, 27246, 19))),
-          (se.vietnamese = () => n.e(9863).then(n.t.bind(n, 59863, 19)));
-        const ae = (function (e) {
+        const ae = {};
+        (ae.arabic = () => n.e(8476).then(n.t.bind(n, 8476, 19))),
+          (ae.brazilian = () => n.e(9574).then(n.t.bind(n, 99574, 19))),
+          (ae.bulgarian = () => n.e(6170).then(n.t.bind(n, 43789, 19))),
+          (ae.czech = () => n.e(815).then(n.t.bind(n, 815, 19))),
+          (ae.danish = () => n.e(4289).then(n.t.bind(n, 4289, 19))),
+          (ae.dutch = () => n.e(4978).then(n.t.bind(n, 54978, 19))),
+          (ae.english = () => n.e(3800).then(n.t.bind(n, 33800, 19))),
+          (ae.finnish = () => n.e(3907).then(n.t.bind(n, 3907, 19))),
+          (ae.french = () => n.e(5040).then(n.t.bind(n, 45040, 19))),
+          (ae.german = () => n.e(4750).then(n.t.bind(n, 94750, 19))),
+          (ae.greek = () => n.e(9668).then(n.t.bind(n, 69668, 19))),
+          (ae.hungarian = () => n.e(5233).then(n.t.bind(n, 45233, 19))),
+          (ae.indonesian = () => n.e(200).then(n.t.bind(n, 90200, 19))),
+          (ae.italian = () => n.e(1864).then(n.t.bind(n, 31864, 19))),
+          (ae.japanese = () => n.e(7263).then(n.t.bind(n, 7263, 19))),
+          (ae.koreana = () => n.e(295).then(n.t.bind(n, 30295, 19))),
+          (ae.latam = () => n.e(559).then(n.t.bind(n, 50559, 19))),
+          (ae.malay = () => n.e(1136).then(n.t.bind(n, 61136, 19))),
+          (ae.norwegian = () => n.e(6512).then(n.t.bind(n, 86512, 19))),
+          (ae.polish = () => n.e(2889).then(n.t.bind(n, 52889, 19))),
+          (ae.portuguese = () => n.e(2269).then(n.t.bind(n, 72269, 19))),
+          (ae.romanian = () => n.e(4419).then(n.t.bind(n, 34419, 19))),
+          (ae.russian = () => n.e(5777).then(n.t.bind(n, 75777, 19))),
+          (ae.sc_schinese = () => n.e(3723).then(n.t.bind(n, 23723, 19))),
+          (ae.schinese = () => n.e(5436).then(n.t.bind(n, 85436, 19))),
+          (ae.spanish = () => n.e(6736).then(n.t.bind(n, 76736, 19))),
+          (ae.swedish = () => n.e(4625).then(n.t.bind(n, 94625, 19))),
+          (ae.tchinese = () => n.e(5191).then(n.t.bind(n, 15191, 19))),
+          (ae.thai = () => n.e(4230).then(n.t.bind(n, 4230, 19))),
+          (ae.turkish = () => n.e(4792).then(n.t.bind(n, 34792, 19))),
+          (ae.ukrainian = () => n.e(7246).then(n.t.bind(n, 27246, 19))),
+          (ae.vietnamese = () => n.e(9863).then(n.t.bind(n, 59863, 19)));
+        const oe = (function (e) {
           const t = new Map(),
             n = (async function () {
               await Y();
-              const n = re(),
+              const n = se(),
                 i = new Set([]);
               for (const e of n.languages) {
                 i.add(e.strLanguage);
@@ -1105,7 +1113,17 @@ var CLSTAMP = "11025763";
             return o(e, c);
           }
           function c(e, ...t) {
-            return ee(o(e, re().languages), ...t);
+            return ee(o(e, se().languages), ...t);
+          }
+          function l(e) {
+            const n = se().languages,
+              i = [...n.map((e) => e.strLanguage), Z(n[0].strLanguage)];
+            for (const n of i) {
+              if (!n) continue;
+              const i = t.get(n);
+              if (i && i.has(e)) return !0;
+            }
+            return !1;
           }
           return (
             n
@@ -1139,28 +1157,17 @@ var CLSTAMP = "11025763";
                 1 === t || "1" === t
                   ? c(e, t, ...n)
                   : c(e + "_Plural", t, ...n),
-              GetAppTypeLocKey(e, t) {
-                switch (t) {
-                  case ie.uE.XP:
-                    return e + "_Guide";
-                  case ie.uE.Hk:
-                    return e + "_Hardware";
-                  case ie.uE._i:
-                    return e + "_DLC";
-                  case ie.uE.Ov:
-                    return e + "_Music";
-                  case ie.uE.gQ:
-                    return e + "_Series";
-                  case ie.uE.ue:
-                    return e + "_Demo";
-                  case ie.uE.Sv:
-                    return e + "_Software";
-                  case ie.uE.Wz:
-                    return e + "_Video";
-                  default:
-                    return e;
-                }
-              },
+              GetAppTypeLocKey: (e, t) =>
+                (function (e, t, n) {
+                  switch (t) {
+                    case ie.uE.Sv:
+                      return e + "_Software";
+                    case ie.uE.Wz:
+                      return e + "_Video";
+                  }
+                  const i = re[t];
+                  return i && n(e + i) ? e + i : e;
+                })(e, t, l),
               GetAppTypePluralLocKey(e, t) {
                 switch (t) {
                   case ie.uE.Sv:
@@ -1174,31 +1181,22 @@ var CLSTAMP = "11025763";
               LocalizeInSpecificLang: (e, t, ...n) => ee(o(t, [e]), ...n),
               Ready: () => n,
               IsReady: () => r,
-              HasKey(e) {
-                const n = re().languages,
-                  i = [...n.map((e) => e.strLanguage), Z(n[0].strLanguage)];
-                for (const n of i) {
-                  if (!n) continue;
-                  const i = t.get(n);
-                  if (i && i.has(e)) return !0;
-                }
-                return !1;
-              },
+              HasKey: l,
             }
           );
         })(async function (e) {
-          if (se[e]) return se[e]();
+          if (ae[e]) return ae[e]();
         });
-        var oe;
+        var ce;
         !(function (e) {
           (e[(e.None = 0)] = "None"),
             (e[(e.Ago = 1)] = "Ago"),
             (e[(e.Remaining = 2)] = "Remaining");
-        })(oe || (oe = {}));
+        })(ce || (ce = {}));
         new Map();
         new Map();
         new Map(), new Map(), new Map(), new Map(), new Map(), new Map();
-        class ce {
+        class le {
           m_mapTokens = new Map();
           m_mapFallbackTokens = new Map();
           m_cbkTokensChanged = new $();
@@ -1270,7 +1268,7 @@ var CLSTAMP = "11025763";
               }),
               e)
             ) {
-              ce.GetLanguageListForRealms(e).forEach((e) => {
+              le.GetLanguageListForRealms(e).forEach((e) => {
                 -1 == t.indexOf(e) && t.push(e);
               });
             }
@@ -1289,18 +1287,18 @@ var CLSTAMP = "11025763";
             if (!this.BLooksLikeToken(e)) return;
             let n = this.m_mapTokens.get(e.substring(1));
             return void 0 === n
-              ? ae.HasKey(e)
-                ? ae.Localize(e)
+              ? oe.HasKey(e)
+                ? oe.Localize(e)
                 : void (0 === this.m_mapTokens.size
                     ? x(
                         !1,
-                        `Attempting to localize token '${e}' with no tokens in our map for language '${a.LANGUAGE}'. SharedLoc ready: ${ae.IsReady()}. site has inited: ${this.m_bReady}`,
+                        `Attempting to localize token '${e}' with no tokens in our map for language '${a.LANGUAGE}'. SharedLoc ready: ${oe.IsReady()}. site has inited: ${this.m_bReady}`,
                       )
                     : !t &&
                       this.m_bReportIndividualMissingTokens &&
                       (0, V.aj)().ReportError(
                         new Error(
-                          `Unable to find localization token '${e}' for language '${a.LANGUAGE}', ${this.m_mapTokens.size} tokens in map. SharedLoc ready: ${ae.IsReady()}. site has inited: ${this.m_bReady}`,
+                          `Unable to find localization token '${e}' for language '${a.LANGUAGE}', ${this.m_mapTokens.size} tokens in map. SharedLoc ready: ${oe.IsReady()}. site has inited: ${this.m_bReady}`,
                         ),
                         { bIncludeMessageInIdentifier: !0 },
                       ))
@@ -1316,7 +1314,7 @@ var CLSTAMP = "11025763";
             const t = F(a.LANGUAGE),
               n = e.find((e) => e.language == t);
             if (n) return n.localized_string;
-            const i = ce.GetELanguageFallback(t),
+            const i = le.GetELanguageFallback(t),
               r = e.find((e) => e.language == i);
             return r?.localized_string ?? "";
           }
@@ -1324,12 +1322,12 @@ var CLSTAMP = "11025763";
             return Boolean(t.find((t) => t.language == e));
           }
         }
-        function le(e, ...t) {
-          let n = _e.LocalizeString(e);
-          return void 0 === n ? e : ue(n, ...t);
-        }
         function de(e, ...t) {
-          let n = _e.LocalizeString(e);
+          let n = he.LocalizeString(e);
+          return void 0 === n ? e : _e(n, ...t);
+        }
+        function ue(e, ...t) {
+          let n = he.LocalizeString(e);
           if (void 0 === n) return e;
           let r,
             s = [],
@@ -1342,7 +1340,7 @@ var CLSTAMP = "11025763";
           }
           return s.push(n.substr(o)), i.createElement(i.Fragment, null, ...s);
         }
-        function ue(e, ...t) {
+        function _e(e, ...t) {
           return 0 == t.length
             ? e
             : (e = e.replace(/%(?:(\d+)\$)?s/g, function (e, n) {
@@ -1353,12 +1351,12 @@ var CLSTAMP = "11025763";
                 return e;
               }));
         }
-        const _e = new ce();
-        window.LocalizationManager = _e;
-        var he = n(62540),
-          me = n(89193),
-          pe = n(41230);
-        class ge {
+        const he = new le();
+        window.LocalizationManager = he;
+        var me = n(62540),
+          pe = n(89193),
+          ge = n(41230);
+        class fe {
           m_strInviteCode;
           m_bReady = !1;
           m_bValid = !1;
@@ -1369,7 +1367,7 @@ var CLSTAMP = "11025763";
           m_bIsBanned;
           m_rtKickExpires;
           constructor(e) {
-            (0, me.Gn)(this), (this.m_strInviteCode = e);
+            (0, pe.Gn)(this), (this.m_strInviteCode = e);
           }
           BIsReady() {
             return this.m_bReady;
@@ -1422,28 +1420,28 @@ var CLSTAMP = "11025763";
               (this.m_bReady = !0);
           }
         }
-        W([me.sH], ge.prototype, "m_bReady", void 0),
-          W([me.XI], ge.prototype, "InitInvalid", null),
-          W([me.XI], ge.prototype, "InitDirectInvite", null);
-        var fe = n(37976);
-        class ke {
+        W([pe.sH], fe.prototype, "m_bReady", void 0),
+          W([pe.XI], fe.prototype, "InitInvalid", null),
+          W([pe.XI], fe.prototype, "InitDirectInvite", null);
+        var ke = n(37976);
+        class Ee {
           m_ulSteamID;
           constructor(e = 0, t, n, i) {
-            e instanceof ke
+            e instanceof Ee
               ? (this.m_ulSteamID = e.m_ulSteamID)
               : "string" == typeof e
-                ? (this.m_ulSteamID = fe.A.fromString(e, !0))
+                ? (this.m_ulSteamID = ke.A.fromString(e, !0))
                 : t && n && void 0 !== i
                   ? this.SetFromComponents(e ?? 0, i, n, t)
                   : (this.m_ulSteamID = e
-                      ? fe.A.fromNumber(e, !0)
-                      : fe.A.UZERO);
+                      ? ke.A.fromNumber(e, !0)
+                      : ke.A.UZERO);
           }
           static InitFromAccountID(e) {
-            return new ke(Number(e), a.EUNIVERSE, 1, 1);
+            return new Ee(Number(e), a.EUNIVERSE, 1, 1);
           }
           static InitFromClanID(e) {
-            return new ke(Number(e), a.EUNIVERSE, 7, 0);
+            return new Ee(Number(e), a.EUNIVERSE, 7, 0);
           }
           GetAccountID() {
             return this.m_ulSteamID.getLowBitsUnsigned();
@@ -1509,7 +1507,7 @@ var CLSTAMP = "11025763";
             }
           }
           static InitFromString(e) {
-            let t = new ke();
+            let t = new Ee();
             try {
               let [n, i, r, s, a] =
                   e.match(/\[([I|g|A|G|M|P|C|U]):(\d+):(\d+):?(\d+)?\]/) || [],
@@ -1557,7 +1555,7 @@ var CLSTAMP = "11025763";
             return 7 == this.GetAccountType();
           }
           SetAccountID(e) {
-            this.m_ulSteamID = new fe.A(
+            this.m_ulSteamID = new ke.A(
               e,
               this.m_ulSteamID.getHighBitsUnsigned(),
               !0,
@@ -1590,20 +1588,20 @@ var CLSTAMP = "11025763";
           SetFromComponents(e, t, n, i) {
             let r = ((255 & i) << 24) + ((15 & n) << 20) + (1048575 & t),
               s = 4294967295 & e;
-            this.m_ulSteamID = new fe.A(s, r, !0);
+            this.m_ulSteamID = new ke.A(s, r, !0);
           }
         }
-        var Ee = n(6660);
-        class be extends ge {
+        var be = n(6660);
+        class Ie extends fe {
           constructor(e) {
-            super(e), (0, me.Gn)(this);
+            super(e), (0, pe.Gn)(this);
           }
           BIsExpired() {
-            return Ie.sm_rtTimeCur >= this.m_rtTimeExpires;
+            return Se.sm_rtTimeCur >= this.m_rtTimeExpires;
           }
           InitFromPHPInviteLinkInfo(e) {
             this.m_ulChatID = e.chat_id;
-            let t = new ke(e.steamid_sender);
+            let t = new Ee(e.steamid_sender);
             t.BIsIndividualAccount() &&
               (this.m_unAccountIDInviter = t.GetAccountID()),
               (this.m_rtTimeExpires = e.time_expires),
@@ -1615,15 +1613,15 @@ var CLSTAMP = "11025763";
               (this.m_bReady = !0);
           }
         }
-        W([me.XI], be.prototype, "InitFromPHPInviteLinkInfo", null);
-        class Ie {
+        W([pe.XI], Ie.prototype, "InitFromPHPInviteLinkInfo", null);
+        class Se {
           m_bConnectingToClient = !1;
           m_invite;
           m_htmlPreRendered;
           static sm_rtTimeCur;
           constructor(e) {
-            (0, me.Gn)(this),
-              (this.m_invite = new be(e.strInviteCode)),
+            (0, pe.Gn)(this),
+              (this.m_invite = new Ie(e.strInviteCode)),
               e.Invite
                 ? this.m_invite.InitFromPHPInviteLinkInfo(e.Invite)
                 : this.m_invite.InitInvalid(),
@@ -1679,21 +1677,21 @@ var CLSTAMP = "11025763";
             window.location.href = `steam://friends/ShowChatRoomGroupInvite/${this.m_invite.GetInviteCode()}`;
           }
         }
-        W([me.sH], Ie.prototype, "m_bConnectingToClient", void 0);
-        let Se = class extends i.Component {
+        W([pe.sH], Se.prototype, "m_bConnectingToClient", void 0);
+        let Ae = class extends i.Component {
           render() {
-            return (0, he.jsx)("div", {
+            return (0, me.jsx)("div", {
               className: "InviteLandingRoot",
               children: this.props.controller.BIsInviteValid()
-                ? (0, he.jsx)(Ae, { controller: this.props.controller })
-                : (0, he.jsx)(Fe, { controller: this.props.controller }),
+                ? (0, me.jsx)(Fe, { controller: this.props.controller })
+                : (0, me.jsx)(ye, { controller: this.props.controller }),
             });
           }
         };
-        Se = W([pe.PA], Se);
-        let Ae = class extends i.Component {
+        Ae = W([ge.PA], Ae);
+        let Fe = class extends i.Component {
           constructor(e) {
-            super(e), (0, me.Gn)(this);
+            super(e), (0, pe.Gn)(this);
           }
           m_bTriedToLaunchSteam = !1;
           LaunchWebChat() {
@@ -1706,7 +1704,7 @@ var CLSTAMP = "11025763";
               }, 1e3);
           }
           IsMobileDevice() {
-            switch (new Ee.UAParser(navigator.userAgent).getResult().os.name) {
+            switch (new be.UAParser(navigator.userAgent).getResult().os.name) {
               case "iOS":
               case "Android":
               case "BlackBerry":
@@ -1720,75 +1718,75 @@ var CLSTAMP = "11025763";
               n = "inviteButton inviteButtonJoinChat";
             return (
               e.BIsVoiceChatInvite() && (n += " inviteButtonJoinVoice"),
-              (0, he.jsxs)(ye, {
+              (0, me.jsxs)(Pe, {
                 render: this.props.controller.GetPreRenderedHTML(),
                 children: [
-                  (0, he.jsxs)("div", {
+                  (0, me.jsxs)("div", {
                     className: "inviteLabel inviteLabelButtons",
                     children: [
                       !t &&
-                        (0, he.jsx)("button", {
+                        (0, me.jsx)("button", {
                           className: n,
                           type: "button",
                           onClick: this.LaunchSteamClient,
-                          children: le("#InviteLanding_OpenInSteam"),
+                          children: de("#InviteLanding_OpenInSteam"),
                         }),
-                      (0, he.jsx)("button", {
+                      (0, me.jsx)("button", {
                         className: n,
                         type: "button",
                         onClick: this.LaunchWebChat,
-                        children: le("#InviteLanding_OpenInWebChat"),
+                        children: de("#InviteLanding_OpenInWebChat"),
                       }),
                     ],
                   }),
                   this.m_bTriedToLaunchSteam &&
-                    (0, he.jsx)("div", {
+                    (0, me.jsx)("div", {
                       className: "inviteLabel inviteLabelLaunchPrompt",
-                      children: le("#InviteLanding_OpenInSteam_Help"),
+                      children: de("#InviteLanding_OpenInSteam_Help"),
                     }),
                 ],
               })
             );
           }
         };
-        W([me.sH], Ae.prototype, "m_bTriedToLaunchSteam", void 0),
-          W([z], Ae.prototype, "LaunchWebChat", null),
-          W([z], Ae.prototype, "LaunchSteamClient", null),
-          (Ae = W([pe.PA], Ae));
-        class Fe extends i.Component {
+        W([pe.sH], Fe.prototype, "m_bTriedToLaunchSteam", void 0),
+          W([z], Fe.prototype, "LaunchWebChat", null),
+          W([z], Fe.prototype, "LaunchSteamClient", null),
+          (Fe = W([ge.PA], Fe));
+        class ye extends i.Component {
           render() {
-            return (0, he.jsx)("div", {
+            return (0, me.jsx)("div", {
               className: "ChatMessageInvite",
-              children: (0, he.jsx)("div", {
+              children: (0, me.jsx)("div", {
                 className: "postedExpiredInvite",
-                children: le("#InviteLanding_ExpiredOrInvalid"),
+                children: de("#InviteLanding_ExpiredOrInvalid"),
               }),
             });
           }
         }
-        function ye(e) {
-          return (0, he.jsxs)("div", {
+        function Pe(e) {
+          return (0, me.jsxs)("div", {
             className: "ChatMessageInvite",
             children: [
-              (0, he.jsx)("div", {
+              (0, me.jsx)("div", {
                 className: "leftInviteContainer",
                 dangerouslySetInnerHTML: { __html: e.render.strAvatarHTML },
               }),
-              (0, he.jsxs)("div", {
+              (0, me.jsxs)("div", {
                 className: "rightInviteContainer",
                 children: [
-                  (0, he.jsx)("div", {
+                  (0, me.jsx)("div", {
                     className: "inviteLabel",
-                    children: de(
+                    children: ue(
                       "#bbcode_invite_description",
-                      (0, he.jsx)("span", {
+                      (0, me.jsx)("span", {
                         dangerouslySetInnerHTML: {
                           __html: e.render.strInviterNameLinkHTML,
                         },
                       }),
                     ),
                   }),
-                  (0, he.jsx)("div", {
+                  (0, me.jsx)("div", {
                     className: "groupName",
                     children: e.render.strChatRoomGroupName,
                   }),
@@ -1798,27 +1796,27 @@ var CLSTAMP = "11025763";
             ],
           });
         }
-        function Pe(e) {
+        function ve(e) {
           let t;
           try {
             t = JSON.parse(e.getAttribute("data-inviteinfo"));
           } catch (e) {}
-          Ie.sm_rtTimeCur = t.rtTimeCur;
-          let n = new Ie(t);
-          r.createRoot(e).render(i.createElement(Se, { controller: n }));
+          Se.sm_rtTimeCur = t.rtTimeCur;
+          let n = new Se(t);
+          r.createRoot(e).render(i.createElement(Ae, { controller: n }));
         }
         (window.AssertMsg = x),
           document.addEventListener("DOMContentLoaded", async function () {
             p(),
               await (async function (e) {
-                const t = ce.GetLanguageFallback(e),
+                const t = le.GetLanguageFallback(e),
                   i = e === t,
                   [r, s] = await Promise.all([
                     n(9437)(`./friendsui_${e}.json`),
                     i ? {} : n(48516)(`./friendsui_${t}.json`),
-                    ae.Ready(),
+                    oe.Ready(),
                   ]);
-                _e.AddTokens(r, s);
+                he.AddTokens(r, s);
               })(a.LANGUAGE),
               (function () {
                 let e = document.querySelectorAll(".ChatReactRoot");
@@ -1826,18 +1824,18 @@ var CLSTAMP = "11025763";
                   let n = e[t],
                     i = n.getAttribute("data-component");
                   "ChatInvite" === i
-                    ? Pe(n)
+                    ? ve(n)
                     : x(!1, `unknown component: "${i}"`);
                 }
               })();
           });
       },
-      83773: (e, t, n) => {
+      27637: (e, t, n) => {
         "use strict";
         n.d(t, { R: () => i });
         const i = 1;
       },
-      63158: (e, t, n) => {
+      53170: (e, t, n) => {
         "use strict";
         async function i(e, t = "SHA-256") {
           let n;
@@ -1854,8 +1852,8 @@ var CLSTAMP = "11025763";
           })(await window.crypto.subtle.digest(t, n));
         }
         n.d(t, { aj: () => F });
-        var r = n(82753),
-          s = n(31265),
+        var r = n(2201),
+          s = n(20860),
           a = n(63696);
         const o =
           window.addEventListener ||
@@ -2256,15 +2254,15 @@ var CLSTAMP = "11025763";
           return 1e4;
         }
       },
-      82753: (e, t, n) => {
+      2201: (e, t, n) => {
         "use strict";
         n.d(t, { I8: () => u, w: () => d });
-        var i = n(63158),
-          r = n(83773),
+        var i = n(53170),
+          r = n(27637),
           s = n(58663),
-          a = n(63773),
-          o = n(10147),
-          c = n(2958);
+          a = n(8069),
+          o = n(12089),
+          c = n(57926);
         class l {
           static InitHeaderFromPacket(e) {
             return new l(void 0, e);
@@ -2440,7 +2438,7 @@ var CLSTAMP = "11025763";
           );
         }
       },
-      16300: (e, t, n) => {
+      57860: (e, t, n) => {
         "use strict";
         n.d(t, {
           BT: () => c,
@@ -2608,7 +2606,7 @@ var CLSTAMP = "11025763";
               };
         }
       },
-      2958: (e, t, n) => {
+      57926: (e, t, n) => {
         "use strict";
         n.d(t, { pV: () => i });
         class i {
@@ -2684,7 +2682,7 @@ var CLSTAMP = "11025763";
           }
         }
       },
-      39040: (e, t, n) => {
+      66024: (e, t, n) => {
         "use strict";
         "VALVE_PUBLIC_PATH" in window
           ? (n.p = window.VALVE_PUBLIC_PATH)
@@ -2794,69 +2792,69 @@ var CLSTAMP = "11025763";
       ".js?contenthash=" +
       {
         43: "b98e0f420add57691fc2",
-        200: "d8a771456859bf667ae1",
-        295: "bec4c3a3b223c5b535ee",
-        559: "d64775d3383d222f83f1",
-        762: "6381bf741535ad65d4e3",
-        815: "f2038e38b471e6580b09",
-        1136: "75ccf7159e306719261c",
-        1499: "016609b438b84fcc275a",
-        1864: "bd1079f8716622de751c",
-        2269: "7590c08423165d5e79ea",
-        2532: "b60b5fd23783f79f5e7e",
-        2889: "85bdbfb79e786e669f3e",
-        2945: "b1bb49c86e94db92dee9",
-        3e3: "1b03996604202ef27322",
-        3016: "ca85786390010cceefc4",
-        3232: "506a59c269184fbbf9b5",
-        3415: "f27b27ba4a24ffe3357b",
-        3485: "08349ebcf15f4d7c2342",
+        200: "0655ee5407a940eee720",
+        295: "410a4726c1d22681c08d",
+        559: "890bab2eddd94135560a",
+        762: "1a71c2380738fb49d933",
+        815: "92513be8b6a53a1f7bc1",
+        1136: "c5551e4af5cf38a6c5d9",
+        1499: "09bea9a8d3fa9b6a327c",
+        1864: "ed5d5dcdf7ac7663f357",
+        2269: "5a19508ea203f2abd48f",
+        2532: "edc9af68dd8ed98e4677",
+        2889: "144700763cda731154a2",
+        2945: "2c589d89be73c95b1cfb",
+        3e3: "23de2c2177882a6d4d8b",
+        3016: "f89712012c8d6eb6aa18",
+        3232: "a2b395c8b1312464290f",
+        3415: "0066838ec4cb331afcbf",
+        3485: "447095c8c3a3825edcaa",
         3723: "a69634b2de1f3fa5dba5",
-        3789: "7576118cdc2ea612c555",
-        3800: "ba62105d90f032741297",
-        3907: "b6f328b4173397675976",
-        4154: "ab85015c1182c53c2a07",
-        4230: "74309c0c8176151229d1",
-        4289: "1bc29bf5eaf58b524686",
-        4302: "127bac547ebe35debb6e",
-        4419: "98ebdffd27b8dc7c8c6c",
-        4434: "7042d1e1cb05e782371a",
-        4488: "ecc72b7e73d0d3a37046",
-        4625: "eaf635cc4b6712cf93b5",
-        4750: "47a0a894ecee25ba51a6",
-        4776: "642916fbd7a977b50de9",
-        4787: "ef50a874abefeb603b11",
-        4792: "c056893ba11cb0d30951",
-        4978: "46f2faa6caa6f2fa8c9c",
-        5040: "bf3ddd7cfe1a44ffafee",
-        5191: "f8cc93f2bb1a394f8a40",
-        5233: "467bd0ef734fa09c948b",
-        5341: "d01dc36adbf1ed0dc168",
-        5436: "c9c4231566ba196ee32b",
-        5480: "aa8842d2e7d72dad67c5",
-        5777: "9525f58d94a99ff3de42",
-        6127: "4882c58af191aaf74128",
-        6170: "cabcfc47be49ddd8c1a7",
-        6385: "e5f8cfa9b62ae2ae5efe",
-        6512: "2b17639fc5883a07dfae",
-        6518: "a9d5318be576311fe3cf",
-        6609: "fc94f8d39971c6671379",
-        6736: "70fa0ebe4088639dc07d",
-        6888: "c50f7606409776b647a0",
-        6971: "e7f4af03b6ba3a7fa534",
-        7246: "c2e13c1646bd9f5f31bc",
-        7263: "8b2b2a2b55225de80917",
-        7487: "8efea89904c72e8440e5",
-        7861: "5edde2f8fc8a9ec95168",
-        8194: "7b692387d3a77ce31c7b",
-        8476: "7c9530f96cd9029ed605",
-        8759: "73a7657685d5198e1a73",
-        8766: "0447dd79b31a8fe64ce1",
-        9574: "68032fc3b50cc1f55432",
-        9668: "06e3d924597e1f7207c6",
-        9746: "3679c8e2ce76e34b2ccf",
-        9808: "51bb932b4ac14b5211d4",
-        9863: "6fddaa4e87ac42e9f088",
+        3789: "d8631a0a3fc251d38dfb",
+        3800: "18a93d9c8a67cd5b37e1",
+        3907: "25507afd500da3c3f2f8",
+        4154: "91573ee32f988aef5441",
+        4230: "4a752d1f42a167c60b6b",
+        4289: "017883d4c3c91b8980ad",
+        4302: "8039108d581b4e85ba60",
+        4419: "c4f2b0b18cb8cd04b262",
+        4434: "f630585a768f94279b22",
+        4488: "eac4cc139cd6ac731e60",
+        4625: "08fe68a65ded6fd301fc",
+        4750: "24e4ca1f254467d588cf",
+        4776: "f38dfa6ffa46b34d7cf8",
+        4787: "a239a31ed2a0881c02a4",
+        4792: "211e5410eb00e87b57c6",
+        4978: "e12551352d72b620632d",
+        5040: "504695afe4a67b66e55d",
+        5191: "3ac5a82179c46922513a",
+        5233: "2f92edd12c256db2b4eb",
+        5341: "c85978bd33a350fe40f8",
+        5436: "93808aa73bdec7559bb6",
+        5480: "e203c5b184def975c722",
+        5777: "d7938fee5102af682ab0",
+        6127: "4508c5786d4961728036",
+        6170: "9603ed96e11b8d7d322c",
+        6385: "72b324aa319263bbf2aa",
+        6512: "3e6bf5541e45de2c2916",
+        6518: "db32ab28eeb38d05c46f",
+        6609: "a70215f475d630cda433",
+        6736: "508229bfaab2c3ad0600",
+        6888: "4bee95312b92fc339846",
+        6971: "6aab8298a9f6c2e7e640",
+        7246: "192095cb3169052a5a9d",
+        7263: "87c245653d96b85f0c8f",
+        7487: "b3bc1a3055196336a2c5",
+        7861: "03f3ef9871b74f85b7c9",
+        8194: "19389dd5e3a338fa8335",
+        8476: "142bdea68b8c07d60cc1",
+        8759: "f3a857d0e075f6a5df25",
+        8766: "ff4a8662d1695c71999f",
+        9574: "0fcb07da3d3536b4ee16",
+        9668: "602f85c19159060b5268",
+        9746: "b5af6dc570b5c0da3440",
+        9808: "c4bf22d40fb8ca9ba7f6",
+        9863: "30abe4e210c01e2471fc",
       }[e]),
     (o.miniCssF = (e) => {}),
     (o.g = (function () {
@@ -2993,6 +2991,6 @@ var CLSTAMP = "11025763";
           self.webpackChunk_steam_friendsui || []);
       n.forEach(t.bind(null, 0)), (n.push = t.bind(null, n.push.bind(n)));
     })();
-  var c = o.O(void 0, [3987, 9489, 1068], () => o(689));
+  var c = o.O(void 0, [3987, 9489, 1068], () => o(26275));
   c = o.O(c);
 })();

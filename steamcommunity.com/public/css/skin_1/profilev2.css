@@ -2296,26 +2296,52 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:nth-c
 }
 
 .game_info_achievements_only_ctn {
-	line-height: 32px;
 	position: relative;
+}
+
+.game_info_achievements {
+	display: flex;
+	align-items: center;
+	gap: 12px;
 }
 
 .game_info_achievements_badge .game_info_achievements {
 	width: 286px;
 	float: right;
+	flex-wrap: wrap;
+	row-gap: 8px;
 }
-.game_info_achievements_badge .game_info_achievement_summary {
+
+.game_info_achievements_badge .achievement_icons {
+	flex-basis: 100%;
+}
+
+.game_info_achievements_summary_area {
+	flex: 1 1 0;
+	min-width: 0;
+	white-space: nowrap;
+}
+
+.game_info_achievement_summary {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	gap: 8px;
+	margin-bottom: 6px;
+
+		padding: 0 2px;
+}
+
+.game_info_achievement_summary a.whiteLink {
+	min-width: 0;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.game_info_achievements_summary_area .achievement_progress_bar_ctn {
 	display: block;
-	text-align: right;
-	margin-bottom: 8px;
-}
-.game_info_achievements_badge .game_info_achievement_summary a.whiteLink {
-	float: left;
-}
-.game_info_achievements_badge .achievement_progress_bar_ctn {
 	width: auto;
-	display: block;
-	margin-bottom: 8px;
 }
 
 .achievement_progress_bar_ctn {
@@ -2338,7 +2364,9 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:nth-c
 	background: linear-gradient(180deg, rgba(255, 255, 255, .3) 0%, var(--color-showcase-header) 80%);;
 }
 
+
 .achievement_icons {
+	flex: none;
 	white-space: nowrap;
 	overflow: hidden;
 }
@@ -2346,11 +2374,6 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:nth-c
 	vertical-align: top;
 	display: inline-block;
 	margin-left: 4px;
-}
-.game_info_achievements_only_ctn .game_info_achievements_summary_area {
-	float: left;
-	width: 361px;
-	white-space: nowrap;
 }
 
 .game_info_achievement:first-child {
@@ -2450,49 +2473,17 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:nth-c
 		margin-top: 8px;
 		width: auto;
 		position: relative;
-	}
-
-	html.responsive .game_info_achievements_only_ctn {
-		line-height: normal;
-	}
-
-	html.responsive .game_info_achievement_summary a.whiteLink {
-		white-space: nowrap;
-	}
-
-	html.responsive .game_info_achievements_summary_area {
-		float: left;
-		margin-right: 1%;
-		max-width: 54%;
-		width: auto;
-		white-space: normal;
-	}
-	html.responsive .game_info_achievements_summary_area .game_info_achievement_summary {
-		display: block;
-		text-align: center;
-
-	}
-
-	html.responsive .game_info_achievements_only_ctn .game_info_achievements_summary_area .achievement_progress_bar_ctn {
-		width: auto;
-		display: block;
-	}
-
-	html.responsive .game_info_achievements_only_ctn .achievement_icons {
-		overflow: hidden;
+		flex-wrap: wrap;
+		row-gap: 8px;
 	}
 
 	html.responsive .achievement_icons {
-		overflow: hidden;
+		flex-basis: 100%;
 	}
 }
 
 @media screen and (max-width: 480px )
 {
-	html.responsive .achievement_icons {
-		padding-top: 6px;
-	}
-
 	html.responsive .game_info_achievements_only_ctn .game_info_achievements {
 		margin-top: 0;
 	}

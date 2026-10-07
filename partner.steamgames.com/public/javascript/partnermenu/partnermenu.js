@@ -36,7 +36,7 @@
     __toESM = (t, n, r) => (
       (r = t == null ? {} : __create(__getProtoOf(t))),
       __copyProps(
-        n || !t || !t.__esModule
+        n || !t || !t.__esModule || !__hasOwnProp.call(t, `default`)
           ? __defProp(r, `default`, { value: t, enumerable: !0 })
           : r,
         t,
@@ -64,7 +64,7 @@
   }
   function FindAndRemoveWhere(t, n) {
     let r = t.findIndex(n);
-    return r >= 0 ? (t.splice(r, 1), !0) : !1;
+    return r >= 0 && (t.splice(r, 1), !0);
   }
   var init_arrayutils = __esmMin(() => {});
   function GetComplexObjectConstructor(t) {
@@ -719,7 +719,7 @@
         }),
         (goog.typeOf = function (t) {
           var n = typeof t;
-          if (n == `object`)
+          if (n == `object`) {
             if (t) {
               if (t instanceof Array) return `array`;
               if (t instanceof Object) return n;
@@ -741,7 +741,7 @@
               )
                 return `function`;
             } else return `null`;
-          else if (n == `function` && t.call === void 0) return `object`;
+          } else if (n == `function` && t.call === void 0) return `object`;
           return n;
         }),
         (goog.isArray = function (t) {
@@ -811,10 +811,11 @@
         }),
         (goog.bind = function (t, n, r) {
           return (
-            Function.prototype.bind &&
-            Function.prototype.bind.toString().indexOf(`native code`) != -1
-              ? (goog.bind = goog.bindNative_)
-              : (goog.bind = goog.bindJs_),
+            (goog.bind =
+              Function.prototype.bind &&
+              Function.prototype.bind.toString().indexOf(`native code`) != -1
+                ? goog.bindNative_
+                : goog.bindJs_),
             goog.bind.apply(null, arguments)
           );
         }),
@@ -2640,7 +2641,7 @@
         (goog.array.removeLast = function (t, n) {
           return (
             (n = goog.array.lastIndexOf(t, n)),
-            0 <= n ? (goog.array.removeAt(t, n), !0) : !1
+            0 <= n && (goog.array.removeAt(t, n), !0)
           );
         }),
         (goog.array.removeAt = function (t, n) {
@@ -2652,7 +2653,7 @@
         (goog.array.removeIf = function (t, n, r) {
           return (
             (n = goog.array.findIndex(t, n, r)),
-            0 <= n ? (goog.array.removeAt(t, n), !0) : !1
+            0 <= n && (goog.array.removeAt(t, n), !0)
           );
         }),
         (goog.array.removeAllIf = function (t, n, r) {
@@ -2811,7 +2812,7 @@
         (goog.array.binaryInsert = function (t, n, r) {
           return (
             (r = goog.array.binarySearch(t, n, r)),
-            0 > r ? (goog.array.insertAt(t, n, -(r + 1)), !0) : !1
+            0 > r && (goog.array.insertAt(t, n, -(r + 1)), !0)
           );
         }),
         (goog.array.binaryRemove = function (t, n, r) {
@@ -3094,8 +3095,7 @@
             } catch {
               return `<object could not be stringified>`;
             }
-          else
-            return t === void 0 ? `undefined` : t === null ? `null` : typeof t;
+          return t === void 0 ? `undefined` : t === null ? `null` : typeof t;
         }),
         (goog.dom.asserts.getWindow_ = function (t) {
           try {
@@ -4918,8 +4918,8 @@
           if (n && n[1]) return n[1];
           n = ``;
           var r = /MSIE +([\d\.]+)/.exec(t);
-          if (r && r[1])
-            if (((t = /Trident\/(\d.\d)/.exec(t)), r[1] == `7.0`))
+          if (r && r[1]) {
+            if (((t = /Trident\/(\d.\d)/.exec(t)), r[1] == `7.0`)) {
               if (t && t[1])
                 switch (t[1]) {
                   case `4.0`:
@@ -4935,7 +4935,8 @@
                     n = `11.0`;
                 }
               else n = `7.0`;
-            else n = r[1];
+            } else n = r[1];
+          }
           return n;
         }),
         (goog.html.SafeHtml = function () {
@@ -5187,7 +5188,7 @@
         }),
         (goog.html.SafeHtml.getAttrNameAndValue_ = function (t, n, r) {
           if (r instanceof goog.string.Const) r = goog.string.Const.unwrap(r);
-          else if (n.toLowerCase() == `style`)
+          else if (n.toLowerCase() == `style`) {
             if (goog.html.SafeHtml.SUPPORT_STYLE_ATTRIBUTE)
               r = goog.html.SafeHtml.getStyleValue_(r);
             else
@@ -5196,7 +5197,7 @@
                   ? `Attribute "style" not supported.`
                   : ``,
               );
-          else {
+          } else {
             if (/^on/i.test(n))
               throw Error(
                 goog.html.SafeHtml.ENABLE_ERROR_MESSAGES
@@ -5207,7 +5208,7 @@
                       `" given.`
                   : ``,
               );
-            if (n.toLowerCase() in goog.html.SafeHtml.URL_ATTRIBUTES_)
+            if (n.toLowerCase() in goog.html.SafeHtml.URL_ATTRIBUTES_) {
               if (r instanceof goog.html.TrustedResourceUrl)
                 r = goog.html.TrustedResourceUrl.unwrap(r);
               else if (r instanceof goog.html.SafeUrl)
@@ -5226,6 +5227,7 @@
                         `" given.`
                     : ``,
                 );
+            }
           }
           return (
             r.implementsGoogStringTypedString && (r = r.getTypedStringValue()),
@@ -8439,7 +8441,7 @@
             else if (2048 > i)
               this.buffer_.push((i >> 6) | 192),
                 this.buffer_.push((i & 63) | 128);
-            else if (65536 > i)
+            else if (65536 > i) {
               if (55296 <= i && 56319 >= i && r + 1 < t.length) {
                 var o = t.charCodeAt(r + 1);
                 56320 <= o &&
@@ -8454,6 +8456,7 @@
                 this.buffer_.push((i >> 12) | 224),
                   this.buffer_.push(((i >> 6) & 63) | 128),
                   this.buffer_.push((i & 63) | 128);
+            }
           }
           return this.buffer_.length - n;
         }),
@@ -8585,7 +8588,7 @@
           return new jspb.arith.Int64(this.lo, this.hi);
         }),
         (jspb.arith.Int64.prototype.toString = function () {
-          var t = (this.hi & 2147483648) != 0,
+          var t = !!(this.hi & 2147483648),
             n = new jspb.arith.UInt64(this.lo, this.hi);
           return (
             t && (n = new jspb.arith.UInt64(0, 0).sub(n)),
@@ -10191,8 +10194,8 @@
                 `Message extension present that was generated without binary serialization support`,
               );
             var u = i.call(t, l);
-            if (u != null)
-              if (l.isMessageType())
+            if (u != null) {
+              if (l.isMessageType()) {
                 if (s.binaryMessageSerializeFn)
                   s.binaryWriterFn.call(
                     n,
@@ -10204,7 +10207,8 @@
                   throw Error(
                     `Message extension present holding submessage without binary support enabled, and message is being serialized to binary format`,
                   );
-              else s.binaryWriterFn.call(n, l.fieldIndex, u);
+              } else s.binaryWriterFn.call(n, l.fieldIndex, u);
+            }
           }
         }),
         goog.exportProperty(
@@ -10936,7 +10940,7 @@
       s = {};
     for (let t in o) {
       let { n: i, c: l, r: u, d: p, q: m } = o[t];
-      if (l)
+      if (l) {
         if (u)
           s[t] = import_google_protobuf$10.Message.toObjectList(
             import_google_protobuf$10.Message.getRepeatedWrapperField(r, l, i),
@@ -10952,7 +10956,7 @@
           );
           o && (s[t] = l.toObject(n, o));
         }
-      else {
+      } else {
         let n = import_google_protobuf$10.Message.getFieldWithDefault(
           r,
           i,
@@ -10998,7 +11002,7 @@
     let { fields: i } = t;
     for (let t in i) {
       let { n: o, c: s, r: l, d: u, q: p, bw: m } = i[t];
-      if (s)
+      if (s) {
         if (l) {
           let t = import_google_protobuf$10.Message.getRepeatedWrapperField(
             n,
@@ -11016,7 +11020,7 @@
           );
           t && r.writeMessage(o, t, s.serializeBinaryToWriter);
         }
-      else if (m) {
+      } else if (m) {
         let t = import_google_protobuf$10.Message.getField(n, o);
         t !== void 0 && m.call(r, o, t);
       } else
@@ -11444,6 +11448,11 @@
                     n: 52,
                     br: ReaderProto.readUint32,
                     bw: WriterProto.writeUint32,
+                  },
+                  browserapi_site: {
+                    n: 53,
+                    br: ReaderProto.readString,
+                    bw: WriterProto.writeString,
                   },
                 },
               }),
@@ -11919,7 +11928,7 @@
                 ((this.m_header = new CMsgProtoBufHeader(null)),
                 (this.m_bValid = !0),
                 n)
-              )
+              ) {
                 if (
                   ((this.m_netPacket = n),
                   this.m_netPacket.SeekGetHead(),
@@ -11944,7 +11953,7 @@
                       (this.m_bValid = !1);
                   }
                 } else this.m_bValid = !1;
-              else
+              } else
                 t && (this.m_eMsg = t),
                   s && r
                     ? (this.m_body = r.fromObject(s))
@@ -15190,7 +15199,11 @@
                 CClientMetrics_ReportClientError_Notification,
                 n,
               ),
-              { ePrivilege: 2, eWebAPIKeyRequirement: 1 },
+              {
+                ePrivilege: 2,
+                eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: [`all`],
+              },
             );
           }
           t.ReportClientError = s;
@@ -15947,7 +15960,7 @@
     }
   }
   function GetDefaultReportingInterval() {
-    return 1e3 * 10;
+    return 1e4;
   }
   var import_react$5,
     addEventListener,
@@ -16019,7 +16032,7 @@
           }),
           (g_unCollectionTimer = window.setTimeout(() => {
             (g_rgPreInitQueue = []), (g_onReportableError = () => {});
-          }, 30 * 1e3));
+          }, 3e4));
       }
       (g_defaultErrorReportOptions = {
         cCallsitesToIgnore: 0,
@@ -16070,7 +16083,7 @@
               window.setTimeout(() => {
                 this.m_bInitialized ||
                   ((this.m_bEnabled = !1), (this.m_rgErrorQueue = []));
-              }, 30 * 1e3);
+              }, 3e4);
           }
           Init(t, n, r, i = {}) {
             (this.m_bInitialized = !0),
@@ -16715,10 +16728,7 @@
             }, this.gcTime));
       }
       updateGcTime(t) {
-        this.gcTime = Math.max(
-          this.gcTime || 0,
-          t ?? (isServer ? 1 / 0 : 300 * 1e3),
-        );
+        this.gcTime = Math.max(this.gcTime || 0, t ?? (isServer ? 1 / 0 : 3e5));
       }
       clearGcTimeout() {
         this.#e &&= (clearTimeout(this.#e), void 0);
@@ -17438,8 +17448,8 @@
             }
             return u;
           };
-        n.options.persister
-          ? (n.fetchFn = () =>
+        n.fetchFn = n.options.persister
+          ? () =>
               n.options.persister?.(
                 m,
                 {
@@ -17448,8 +17458,8 @@
                   signal: n.signal,
                 },
                 r,
-              ))
-          : (n.fetchFn = m);
+              )
+          : m;
       },
     };
   }
@@ -17873,12 +17883,10 @@
       #v(t) {
         this.#x(),
           (this.#p = t),
-          !(
-            isServer ||
-            resolveEnabled(this.options.enabled, this.#t) === !1 ||
-            !isValidTimeout(this.#p) ||
-            this.#p === 0
-          ) &&
+          !isServer &&
+            resolveEnabled(this.options.enabled, this.#t) !== !1 &&
+            isValidTimeout(this.#p) &&
+            this.#p !== 0 &&
             (this.#f = setInterval(() => {
               (this.options.refetchIntervalInBackground ||
                 focusManager.isFocused()) &&
@@ -17913,7 +17921,7 @@
             n._optimisticResults === `isRestoring` && (m.fetchStatus = `idle`);
         }
         let { error: _, errorUpdatedAt: v, status: y } = m;
-        if (n.select && m.data !== void 0)
+        if (n.select && m.data !== void 0) {
           if (o && m.data === s?.data && n.select === this.#c) g = this.#l;
           else
             try {
@@ -17925,7 +17933,7 @@
             } catch (t) {
               this.#s = t;
             }
-        else g = m.data;
+        } else g = m.data;
         if (n.placeholderData !== void 0 && g === void 0 && y === `pending`) {
           let t;
           if (o?.isPlaceholderData && n.placeholderData === l?.placeholderData)
@@ -18001,7 +18009,6 @@
               break;
             case `rejected`:
               (E.status !== `error` || E.error !== o.reason) && i();
-              break;
           }
         }
         return E;
@@ -18063,7 +18070,7 @@
     return (
       resolveEnabled(n.enabled, t) !== !1 &&
       t.state.data === void 0 &&
-      !(t.state.status === `error` && n.retryOnMount === !1)
+      (t.state.status !== `error` || n.retryOnMount !== !1)
     );
   }
   function shouldFetchOnMount(t, n) {
@@ -18147,7 +18154,7 @@
             let i = n.map((t) => t.observer),
               o = i.map((t) => t.getCurrentResult()),
               s = i.some((n, r) => n !== t[r]);
-            (t.length === i.length && !s) ||
+            (t.length !== i.length || s) &&
               ((this.#i = i),
               (this.#t = o),
               this.hasListeners() &&
@@ -18521,12 +18528,13 @@
         }
       }
       function D(t) {
-        if (((x = !1), E(t), !y))
+        if (((x = !1), E(t), !y)) {
           if (r(p) !== null) (y = !0), O || ((O = !0), ie());
           else {
             var n = r(m);
             n !== null && se(D, n.startTime - t);
           }
+        }
       }
       var O = !1,
         k = -1,
@@ -18830,7 +18838,7 @@
           }
         }),
         (t.preinitModule = function (t, n) {
-          if (typeof t == `string`)
+          if (typeof t == `string`) {
             if (typeof n == `object` && n) {
               if (n.as == null || n.as === `script`) {
                 var r = p(n.as, n.crossOrigin);
@@ -18842,6 +18850,7 @@
                 });
               }
             } else n ?? o.d.M(t);
+          }
         }),
         (t.preload = function (t, n) {
           if (
@@ -18870,7 +18879,7 @@
           }
         }),
         (t.preloadModule = function (t, n) {
-          if (typeof t == `string`)
+          if (typeof t == `string`) {
             if (n) {
               var r = p(n.as, n.crossOrigin);
               o.d.m(t, {
@@ -18881,6 +18890,7 @@
                   typeof n.integrity == `string` ? n.integrity : void 0,
               });
             } else o.d.m(t);
+          }
         }),
         (t.requestFormReset = function (t) {
           o.d.r(t);
@@ -18899,10 +18909,8 @@
     require_react_dom = __commonJSMin((t, n) => {
       function r() {
         if (
-          !(
-            typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ > `u` ||
-            typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE != `function`
-          )
+          typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ < `u` &&
+          typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE == `function`
         )
           try {
             __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE(r);
@@ -19526,7 +19534,7 @@
               : ((Tt[t] = !0), !1);
       }
       function Ot(t, n, r) {
-        if (Dt(n))
+        if (Dt(n)) {
           if (r === null) t.removeAttribute(n);
           else {
             switch (typeof r) {
@@ -19544,6 +19552,7 @@
             }
             t.setAttribute(n, `` + r);
           }
+        }
       }
       function kt(t, n, r) {
         if (r === null) t.removeAttribute(n);
@@ -19822,7 +19831,7 @@ Error generating stack: ` +
         return (
           t && (i = zt(t) ? (t.checked ? `true` : `false`) : t.value),
           (t = i),
-          t === r ? !1 : (n.setValue(t), !0)
+          t !== r && (n.setValue(t), !0)
         );
       }
       function Ut(t) {
@@ -20196,12 +20205,11 @@ Error generating stack: ` +
           case `onMouseEnter`:
             (i = !i.disabled) ||
               ((t = t.type),
-              (i = !(
-                t === `button` ||
-                t === `input` ||
-                t === `select` ||
-                t === `textarea`
-              ))),
+              (i =
+                t !== `button` &&
+                t !== `input` &&
+                t !== `select` &&
+                t !== `textarea`)),
               (t = !i);
             break a;
           default:
@@ -20211,11 +20219,10 @@ Error generating stack: ` +
         if (r && typeof r != `function`) throw Error(o(231, n, typeof r));
         return r;
       }
-      var hn = !(
-          typeof window > `u` ||
-          window.document === void 0 ||
-          window.document.createElement === void 0
-        ),
+      var hn =
+          typeof window < `u` &&
+          window.document !== void 0 &&
+          window.document.createElement !== void 0,
         gn = !1;
       if (hn)
         try {
@@ -21240,8 +21247,7 @@ Error generating stack: ` +
             ((r = n === 5) &&
               ((r = t.type),
               (r =
-                !(r !== `form` && r !== `button`) ||
-                Pd(t.type, t.memoizedProps))),
+                r === `form` || r === `button` || Pd(t.type, t.memoizedProps))),
             (r = !r)),
           r && P && Vi(t),
           Ui(t),
@@ -21253,7 +21259,7 @@ Error generating stack: ` +
             throw Error(o(317));
           a: {
             for (t = t.nextSibling, n = 0; t; ) {
-              if (t.nodeType === 8)
+              if (t.nodeType === 8) {
                 if (((r = t.data), r === `/$`)) {
                   if (n === 0) {
                     P = Yd(t.nextSibling);
@@ -21261,6 +21267,7 @@ Error generating stack: ` +
                   }
                   n--;
                 } else (r !== `$` && r !== `$!` && r !== `$?`) || n++;
+              }
               t = t.nextSibling;
             }
             P = null;
@@ -23158,8 +23165,8 @@ Error generating stack: ` +
                       }
                       r(t, i);
                       break;
-                    } else n(t, i);
-                    i = i.sibling;
+                    }
+                    n(t, i), (i = i.sibling);
                   }
                   l.type === x
                     ? ((p = xi(l.props.children, t.mode, p, l.key)),
@@ -23174,7 +23181,7 @@ Error generating stack: ` +
               case y:
                 a: {
                   for (m = l.key; i !== null; ) {
-                    if (i.key === m)
+                    if (i.key === m) {
                       if (
                         i.tag === 4 &&
                         i.stateNode.containerInfo === l.containerInfo &&
@@ -23185,12 +23192,11 @@ Error generating stack: ` +
                           (p.return = t),
                           (t = p);
                         break a;
-                      } else {
-                        r(t, i);
-                        break;
                       }
-                    else n(t, i);
-                    i = i.sibling;
+                      r(t, i);
+                      break;
+                    }
+                    n(t, i), (i = i.sibling);
                   }
                   (p = Ci(l, t.mode, p)), (p.return = t), (t = p);
                 }
@@ -23610,10 +23616,11 @@ Error generating stack: ` +
       function lc(t, n, r, i, o) {
         if (t !== null) {
           var s = t.memoizedProps;
-          if (Ar(s, i) && t.ref === n.ref)
+          if (Ar(s, i) && t.ref === n.ref) {
             if (((ac = !1), (n.pendingProps = i = s), Oc(t, o)))
               t.flags & 131072 && (ac = !0);
             else return (n.lanes = t.lanes), Dc(t, n, o);
+          }
         }
         return pc(t, n, r, i, o);
       }
@@ -23840,7 +23847,7 @@ Error generating stack: ` +
         return (
           (s = i),
           fc(t, n),
-          (i = (n.flags & 128) != 0),
+          (i = !!(n.flags & 128)),
           s || i
             ? ((s = n.stateNode),
               (r =
@@ -23876,16 +23883,14 @@ Error generating stack: ` +
       function bc(t, n, r) {
         var i = n.pendingProps,
           s = !1,
-          l = (n.flags & 128) != 0,
+          l = !!(n.flags & 128),
           u;
         if (
           ((u = l) ||
             (u =
-              t !== null && t.memoizedState === null
-                ? !1
-                : (V.current & 2) != 0),
+              t !== null && t.memoizedState === null ? !1 : !!(V.current & 2)),
           u && ((s = !0), (n.flags &= -129)),
-          (u = (n.flags & 32) != 0),
+          (u = !!(n.flags & 32)),
           (n.flags &= -33),
           t === null)
         ) {
@@ -24174,10 +24179,11 @@ Error generating stack: ` +
           (t !== null && (n.dependencies = t.dependencies),
           (zl |= n.lanes),
           (r & n.childLanes) === 0)
-        )
+        ) {
           if (t !== null) {
             if ((na(t, n, r, !1), (r & n.childLanes) === 0)) return null;
           } else return null;
+        }
         if (t !== null && n.child !== t.child) throw Error(o(153));
         if (n.child !== null) {
           for (
@@ -24192,9 +24198,9 @@ Error generating stack: ` +
         return n.child;
       }
       function Oc(t, n) {
-        return (t.lanes & n) === 0
-          ? ((t = t.dependencies), !!(t !== null && ra(t)))
-          : !0;
+        return (
+          (t.lanes & n) !== 0 || ((t = t.dependencies), !!(t !== null && ra(t)))
+        );
       }
       function kc(t, n, r) {
         switch (n.tag) {
@@ -24224,7 +24230,7 @@ Error generating stack: ` +
             Rs(n);
             break;
           case 19:
-            var o = (t.flags & 128) != 0;
+            var o = !!(t.flags & 128);
             if (
               ((i = (r & n.childLanes) !== 0),
               (i ||= (na(t, n, r, !1), (r & n.childLanes) !== 0)),
@@ -24251,13 +24257,13 @@ Error generating stack: ` +
         return Dc(t, n, r);
       }
       function Ac(t, n, r) {
-        if (t !== null)
+        if (t !== null) {
           if (t.memoizedProps !== n.pendingProps) ac = !0;
           else {
             if (!Oc(t, r) && !(n.flags & 128)) return (ac = !1), kc(t, n, r);
             ac = !!(t.flags & 131072);
           }
-        else (ac = !1), F && n.flags & 1048576 && Pi(n, Di, n.index);
+        } else (ac = !1), F && n.flags & 1048576 && Pi(n, Di, n.index);
         switch (((n.lanes = 0), n.tag)) {
           case 16:
             a: {
@@ -24273,7 +24279,8 @@ Error generating stack: ` +
                   if (((s = i.$$typeof), s === D)) {
                     (n.tag = 11), (n = sc(null, n, i, t, r));
                     break a;
-                  } else if (s === ee) {
+                  }
+                  if (s === ee) {
                     (n.tag = 14), (n = cc(null, n, i, t, r));
                     break a;
                   }
@@ -24301,7 +24308,7 @@ Error generating stack: ` +
                 Wa(),
                 (i = u.element),
                 l.isDehydrated)
-              )
+              ) {
                 if (
                   ((l = { element: i, isDehydrated: !1, cache: u.cache }),
                   (n.updateQueue.baseState = l),
@@ -24310,30 +24317,30 @@ Error generating stack: ` +
                 ) {
                   n = gc(t, n, i, r);
                   break a;
-                } else if (i !== s) {
+                }
+                if (i !== s) {
                   (s = ii(Error(o(424)), n)), qi(s), (n = gc(t, n, i, r));
                   break a;
-                } else {
-                  switch (((t = n.stateNode.containerInfo), t.nodeType)) {
-                    case 9:
-                      t = t.body;
-                      break;
-                    default:
-                      t = t.nodeName === `HTML` ? t.ownerDocument.body : t;
-                  }
-                  for (
-                    P = Yd(t.firstChild),
-                      Li = n,
-                      F = !0,
-                      Ri = null,
-                      zi = !0,
-                      r = Fs(n, null, i, r),
-                      n.child = r;
-                    r;
-                  )
-                    (r.flags = (r.flags & -3) | 4096), (r = r.sibling);
                 }
-              else {
+                switch (((t = n.stateNode.containerInfo), t.nodeType)) {
+                  case 9:
+                    t = t.body;
+                    break;
+                  default:
+                    t = t.nodeName === `HTML` ? t.ownerDocument.body : t;
+                }
+                for (
+                  P = Yd(t.firstChild),
+                    Li = n,
+                    F = !0,
+                    Ri = null,
+                    zi = !0,
+                    r = Fs(n, null, i, r),
+                    n.child = r;
+                  r;
+                )
+                  (r.flags = (r.flags & -3) | 4096), (r = r.sibling);
+              } else {
                 if ((Gi(), i === s)) {
                   n = Dc(t, n, r);
                   break a;
@@ -24823,7 +24830,7 @@ Error generating stack: ` +
             return Qi(n.type), H(n), null;
           case 19:
             if ((M(V), (s = n.memoizedState), s === null)) return H(n), null;
-            if (((i = (n.flags & 128) != 0), (l = s.rendering), l === null))
+            if (((i = !!(n.flags & 128)), (l = s.rendering), l === null)) {
               if (i) Pc(s, !1);
               else {
                 if (X !== 0 || (t !== null && t.flags & 128))
@@ -24849,8 +24856,8 @@ Error generating stack: ` +
                   Ee() > Jl &&
                   ((n.flags |= 128), (i = !0), Pc(s, !1), (n.lanes = 4194304));
               }
-            else {
-              if (!i)
+            } else {
+              if (!i) {
                 if (((t = Hs(l)), t !== null)) {
                   if (
                     ((n.flags |= 128),
@@ -24872,6 +24879,7 @@ Error generating stack: ` +
                     (i = !0),
                     Pc(s, !1),
                     (n.lanes = 4194304));
+              }
               s.isBackwards
                 ? ((l.sibling = n.child), (n.child = l))
                 : ((t = s.last),
@@ -25113,7 +25121,7 @@ Error generating stack: ` +
       function Uc(t, n) {
         var r = t.ref,
           i = t.refCleanup;
-        if (r !== null)
+        if (r !== null) {
           if (typeof i == `function`)
             try {
               i();
@@ -25131,6 +25139,7 @@ Error generating stack: ` +
               Z(t, n, r);
             }
           else r.current = null;
+        }
       }
       function Wc(t) {
         var n = t.type,
@@ -25376,7 +25385,7 @@ Error generating stack: ` +
             hl(t, r), i & 4 && Rc(5, r);
             break;
           case 1:
-            if ((hl(t, r), i & 4))
+            if ((hl(t, r), i & 4)) {
               if (((t = r.stateNode), n === null))
                 try {
                   t.componentDidMount();
@@ -25396,6 +25405,7 @@ Error generating stack: ` +
                   Z(r, r.return, t);
                 }
               }
+            }
             i & 64 && Bc(r), i & 512 && Hc(r, r.return);
             break;
           case 3:
@@ -25439,9 +25449,7 @@ Error generating stack: ` +
               (n = (n !== null && n.memoizedState !== null) || U), (o = Zc);
               var s = U;
               (Zc = i),
-                (U = n) && !s
-                  ? _l(t, r, (r.subtreeFlags & 8772) != 0)
-                  : hl(t, r),
+                (U = n) && !s ? _l(t, r, !!(r.subtreeFlags & 8772)) : hl(t, r),
                 (Zc = o),
                 (U = s);
             }
@@ -25508,7 +25516,7 @@ Error generating stack: ` +
               (W = i),
               (il = o),
               W !== null)
-            )
+            ) {
               if (il)
                 try {
                   (W.nodeType === 9
@@ -25526,6 +25534,7 @@ Error generating stack: ` +
                 } catch (t) {
                   Z(r, n, t);
                 }
+            }
             break;
           case 18:
             W !== null &&
@@ -25685,8 +25694,8 @@ Error generating stack: ` +
               i & 4)
             ) {
               var l = r === null ? null : r.memoizedState;
-              if (((i = t.memoizedState), r === null))
-                if (i === null)
+              if (((i = t.memoizedState), r === null)) {
+                if (i === null) {
                   if (t.stateNode === null) {
                     a: {
                       (i = t.type),
@@ -25774,8 +25783,8 @@ Error generating stack: ` +
                     }
                     t.stateNode = i;
                   } else kf(s, t.type, t.stateNode);
-                else t.stateNode = Cf(s, i, t.memoizedProps);
-              else
+                } else t.stateNode = Cf(s, i, t.memoizedProps);
+              } else
                 l === i
                   ? i === null &&
                     t.stateNode !== null &&
@@ -26044,7 +26053,7 @@ Error generating stack: ` +
         }
       }
       function _l(t, n, r) {
-        for (r &&= (n.subtreeFlags & 8772) != 0, n = n.child; n !== null; ) {
+        for (r &&= !!(n.subtreeFlags & 8772), n = n.child; n !== null; ) {
           var i = n.alternate,
             o = t,
             s = n,
@@ -26179,7 +26188,7 @@ Error generating stack: ` +
                 ? s._visibility & 2
                   ? bl(t, n, r, i)
                   : ((s._visibility |= 2),
-                    Sl(t, n, r, i, (n.subtreeFlags & 10256) != 0))
+                    Sl(t, n, r, i, !!(n.subtreeFlags & 10256)))
                 : s._visibility & 2
                   ? bl(t, n, r, i)
                   : Cl(t, n),
@@ -26193,7 +26202,7 @@ Error generating stack: ` +
         }
       }
       function Sl(t, n, r, i, o) {
-        for (o &&= (n.subtreeFlags & 10256) != 0, n = n.child; n !== null; ) {
+        for (o &&= !!(n.subtreeFlags & 10256), n = n.child; n !== null; ) {
           var s = t,
             l = n,
             u = r,
@@ -26452,96 +26461,78 @@ Error generating stack: ` +
       }
       function lu(t, n, r) {
         if (G & 6) throw Error(o(327));
-        var i =
-            (!r && (n & 124) == 0 && (n & t.expiredLanes) === 0) || Ke(t, n),
+        var i = (!r && !(n & 124) && (n & t.expiredLanes) === 0) || Ke(t, n),
           s = i ? Su(t, n) : bu(t, n, !0),
           l = i;
         do {
           if (s === 0) {
             Il && !i && fu(t, n, 0, !1);
             break;
-          } else {
-            if (((r = t.current.alternate), l && !du(r))) {
-              (s = bu(t, n, !1)), (l = !1);
-              continue;
-            }
-            if (s === 2) {
-              if (((l = n), t.errorRecoveryDisabledLanes & l)) var u = 0;
-              else
-                (u = t.pendingLanes & -536870913),
-                  (u = u === 0 ? (u & 536870912 ? 536870912 : 0) : u);
-              if (u !== 0) {
-                n = u;
-                a: {
-                  var p = t;
-                  s = Wl;
-                  var m = p.current.memoizedState.isDehydrated;
-                  if (
-                    (m && (hu(p, u).flags |= 256), (u = bu(p, u, !1)), u !== 2)
-                  ) {
-                    if (Ll && !m) {
-                      (p.errorRecoveryDisabledLanes |= l), (Bl |= l), (s = 4);
-                      break a;
-                    }
-                    (l = Gl),
-                      (Gl = s),
-                      l !== null &&
-                        (Gl === null ? (Gl = l) : Gl.push.apply(Gl, l));
+          }
+          if (((r = t.current.alternate), l && !du(r))) {
+            (s = bu(t, n, !1)), (l = !1);
+            continue;
+          }
+          if (s === 2) {
+            if (((l = n), t.errorRecoveryDisabledLanes & l)) var u = 0;
+            else
+              (u = t.pendingLanes & -536870913),
+                (u = u === 0 ? (u & 536870912 ? 536870912 : 0) : u);
+            if (u !== 0) {
+              n = u;
+              a: {
+                var p = t;
+                s = Wl;
+                var m = p.current.memoizedState.isDehydrated;
+                if (
+                  (m && (hu(p, u).flags |= 256), (u = bu(p, u, !1)), u !== 2)
+                ) {
+                  if (Ll && !m) {
+                    (p.errorRecoveryDisabledLanes |= l), (Bl |= l), (s = 4);
+                    break a;
                   }
-                  s = u;
+                  (l = Gl),
+                    (Gl = s),
+                    l !== null &&
+                      (Gl === null ? (Gl = l) : Gl.push.apply(Gl, l));
                 }
-                if (((l = !1), s !== 2)) continue;
+                s = u;
               }
+              if (((l = !1), s !== 2)) continue;
             }
-            if (s === 1) {
-              hu(t, 0), fu(t, n, 0, !0);
-              break;
-            }
-            a: {
-              switch (((i = t), (l = s), l)) {
-                case 0:
-                case 1:
-                  throw Error(o(345));
-                case 4:
-                  if ((n & 4194048) !== n) break;
-                case 6:
-                  fu(i, n, Hl, !Fl);
-                  break a;
-                case 2:
-                  Gl = null;
-                  break;
-                case 3:
-                case 5:
-                  break;
-                default:
-                  throw Error(o(329));
-              }
-              if ((n & 62914560) === n && ((s = ql + 300 - Ee()), 10 < s)) {
-                if ((fu(i, n, Hl, !Fl), Ge(i, 0, !0) !== 0)) break a;
-                i.timeoutHandle = Ld(
-                  uu.bind(
-                    null,
-                    i,
-                    r,
-                    Gl,
-                    Yl,
-                    Kl,
-                    n,
-                    Hl,
-                    Bl,
-                    Ul,
-                    Fl,
-                    l,
-                    2,
-                    -0,
-                    0,
-                  ),
-                  s,
-                );
+          }
+          if (s === 1) {
+            hu(t, 0), fu(t, n, 0, !0);
+            break;
+          }
+          a: {
+            switch (((i = t), (l = s), l)) {
+              case 0:
+              case 1:
+                throw Error(o(345));
+              case 4:
+                if ((n & 4194048) !== n) break;
+              case 6:
+                fu(i, n, Hl, !Fl);
                 break a;
-              }
-              uu(i, r, Gl, Yl, Kl, n, Hl, Bl, Ul, Fl, l, 0, -0, 0);
+              case 2:
+                Gl = null;
+                break;
+              case 3:
+              case 5:
+                break;
+              default:
+                throw Error(o(329));
             }
+            if ((n & 62914560) === n && ((s = ql + 300 - Ee()), 10 < s)) {
+              if ((fu(i, n, Hl, !Fl), Ge(i, 0, !0) !== 0)) break a;
+              i.timeoutHandle = Ld(
+                uu.bind(null, i, r, Gl, Yl, Kl, n, Hl, Bl, Ul, Fl, l, 2, -0, 0),
+                s,
+              );
+              break a;
+            }
+            uu(i, r, Gl, Yl, Kl, n, Hl, Bl, Ul, Fl, l, 0, -0, 0);
           }
           break;
         } while (1);
@@ -26929,7 +26920,7 @@ Error generating stack: ` +
                   return Fu(!0), null;
                 }))
               : ((t.callbackNode = null), (t.callbackPriority = 0)),
-            (i = (n.flags & 13878) != 0),
+            (i = !!(n.flags & 13878)),
             n.subtreeFlags & 13878 || i)
           ) {
             (i = A.T), (A.T = null), (s = j.p), (j.p = 2), (u = G), (G |= 4);
@@ -26947,7 +26938,7 @@ Error generating stack: ` +
           Zl = 0;
           var t = Ql,
             n = $l,
-            r = (n.flags & 13878) != 0;
+            r = !!(n.flags & 13878);
           if (n.subtreeFlags & 13878 || r) {
             (r = A.T), (A.T = null);
             var i = j.p;
@@ -27032,7 +27023,7 @@ Error generating stack: ` +
           Zl = 0;
           var t = Ql,
             n = $l,
-            r = (n.flags & 8772) != 0;
+            r = !!(n.flags & 8772);
           if (n.subtreeFlags & 8772 || r) {
             (r = A.T), (A.T = null);
             var i = j.p;
@@ -27146,7 +27137,8 @@ Error generating stack: ` +
             if (n.tag === 3) {
               Iu(n, t, r);
               break;
-            } else if (n.tag === 1) {
+            }
+            if (n.tag === 1) {
               var i = n.stateNode;
               if (
                 typeof n.type.getDerivedStateFromError == `function` ||
@@ -27234,7 +27226,7 @@ Error generating stack: ` +
           qu = !0;
           do
             for (var r = !1, i = Uu; i !== null; ) {
-              if (!n)
+              if (!n) {
                 if (t !== 0) {
                   var o = i.pendingLanes;
                   if (o === 0) var s = 0;
@@ -27254,6 +27246,7 @@ Error generating stack: ` +
                       i.cancelPendingCommit !== null || i.timeoutHandle !== -1,
                     )),
                     !(s & 3) || Ke(i, s) || ((r = !0), td(i, s));
+              }
               i = i.next;
             }
           while (r);
@@ -27501,7 +27494,7 @@ Error generating stack: ` +
             .concat(ld),
         );
       function dd(t, n) {
-        n = (n & 4) != 0;
+        n = !!(n & 4);
         for (var r = 0; r < t.length; r++) {
           var i = t[r],
             o = i.event;
@@ -27705,7 +27698,7 @@ Error generating stack: ` +
                 case `beforetoggle`:
                   m = Xn;
               }
-              var g = (n & 4) != 0,
+              var g = !!(n & 4),
                 _ = !g && (t === `scroll` || t === `scrollend`),
                 v = g ? (p === null ? null : p + `Capture`) : p;
               g = [];
@@ -27806,13 +27799,13 @@ Error generating stack: ` +
                 m === `select` || (m === `input` && p.type === `file`))
               )
                 var C = gr;
-              else if (ur(p))
+              else if (ur(p)) {
                 if (_r) C = Dr;
                 else {
                   C = Tr;
                   var w = wr;
                 }
-              else
+              } else
                 (m = p.nodeName),
                   !m ||
                   m.toLowerCase() !== `input` ||
@@ -28012,8 +28005,9 @@ Error generating stack: ` +
                 `javascript:throw new Error('A React form was unexpectedly submitted. If you called form.submit() manually, consider using form.requestSubmit() instead. If you\\'re trying to use event.stopPropagation() in a submit event handler, consider also calling event.preventDefault().')`,
               );
               break;
-            } else
-              typeof l == `function` &&
+            }
+            if (
+              (typeof l == `function` &&
                 (r === `formAction`
                   ? (n !== `input` && $(t, n, `name`, s.name, s, null),
                     $(t, n, `formEncType`, s.formEncType, s, null),
@@ -28021,8 +28015,9 @@ Error generating stack: ` +
                     $(t, n, `formTarget`, s.formTarget, s, null))
                   : ($(t, n, `encType`, s.encType, s, null),
                     $(t, n, `method`, s.method, s, null),
-                    $(t, n, `target`, s.target, s, null)));
-            if (i == null || typeof i == `symbol` || typeof i == `boolean`) {
+                    $(t, n, `target`, s.target, s, null))),
+              i == null || typeof i == `symbol` || typeof i == `boolean`)
+            ) {
               t.removeAttribute(r);
               break;
             }
@@ -28713,9 +28708,7 @@ Error generating stack: ` +
       function Id() {
         var t = window.event;
         return t && t.type === `popstate`
-          ? t === Fd
-            ? !1
-            : ((Fd = t), !0)
+          ? t !== Fd && ((Fd = t), !0)
           : ((Fd = null), !1);
       }
       var Ld = typeof setTimeout == `function` ? setTimeout : void 0,
@@ -28743,7 +28736,7 @@ Error generating stack: ` +
           o = 0;
         do {
           var s = r.nextSibling;
-          if ((t.removeChild(r), s && s.nodeType === 8))
+          if ((t.removeChild(r), s && s.nodeType === 8)) {
             if (((r = s.data), r === `/$`)) {
               if (0 < i && 8 > i) {
                 r = i;
@@ -28771,7 +28764,7 @@ Error generating stack: ` +
               r === `$` || r === `$?` || r === `$!`
                 ? o++
                 : (i = r.charCodeAt(0) - 48);
-          else i = 0;
+          } else i = 0;
           r = s;
         } while (r);
         bp(n);
@@ -28800,12 +28793,12 @@ Error generating stack: ` +
           var o = r;
           if (t.nodeName.toLowerCase() !== n.toLowerCase()) {
             if (!i && (t.nodeName !== `INPUT` || t.type !== `hidden`)) break;
-          } else if (!i)
+          } else if (!i) {
             if (n === `input` && t.type === `hidden`) {
               var s = o.name == null ? null : `` + o.name;
               if (o.type === `hidden` && t.getAttribute(`name`) === s) return t;
             } else return t;
-          else if (!t[pt])
+          } else if (!t[pt])
             switch (n) {
               case `meta`:
                 if (!t.hasAttribute(`itemprop`)) break;
@@ -30080,10 +30073,8 @@ Error generating stack: ` +
     require_client = __commonJSMin((t, n) => {
       function r() {
         if (
-          !(
-            typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ > `u` ||
-            typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE != `function`
-          )
+          typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ < `u` &&
+          typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE == `function`
         )
           try {
             __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE(r);
@@ -37176,7 +37167,10 @@ Error generating stack: ` +
     StoreItem_ExtraDetails_PressReview,
     StoreItem_ExtraDetails_EarlyAccess,
     StoreItem_ExtraDetails_LinksAndInfo,
+    StoreItem_ExtraDetails_Metacritic,
+    StoreItem_ExtraDetails_CastAndCrew,
     StoreItem_OptInRegistrationTags,
+    StoreItem_PurchaseNote,
     StoreBrowseItemDataRequest,
     StoreBrowseContext,
     StoreItemID,
@@ -37301,6 +37295,11 @@ Error generating stack: ` +
                     pbr: ReaderProto.readPackedEnum,
                     bw: WriterProto.writeRepeatedEnum,
                   },
+                  content_survey_notes: {
+                    n: 13,
+                    br: ReaderProto.readString,
+                    bw: WriterProto.writeString,
+                  },
                   image_url: {
                     n: 20,
                     br: ReaderProto.readString,
@@ -37363,7 +37362,7 @@ Error generating stack: ` +
                 n,
                 0,
                 -1,
-                [11, 12, 20, 21, 25, 41, 52, 71, 74, 77],
+                [11, 12, 20, 21, 25, 41, 52, 71, 74, 77, 78],
                 null,
               );
           }
@@ -37551,6 +37550,12 @@ Error generating stack: ` +
                   optin_registration_tags: {
                     n: 77,
                     c: StoreItem_OptInRegistrationTags,
+                    r: !0,
+                    q: !0,
+                  },
+                  purchase_notes: {
+                    n: 78,
+                    c: StoreItem_PurchaseNote,
                     r: !0,
                     q: !0,
                   },
@@ -37937,7 +37942,7 @@ Error generating stack: ` +
                 n,
                 0,
                 -1,
-                [1, 2, 3],
+                [1, 2, 3, 4],
                 null,
               );
           }
@@ -37951,6 +37956,7 @@ Error generating stack: ` +
                   included_apps: { n: 1, c: StoreItem, r: !0, q: !0 },
                   included_packages: { n: 2, c: StoreItem, r: !0, q: !0 },
                   included_bundles: { n: 3, c: StoreItem, r: !0, q: !0 },
+                  included_creators: { n: 4, c: StoreItem, r: !0, q: !0 },
                 },
               }),
               t.sm_m
@@ -38609,6 +38615,11 @@ Error generating stack: ` +
                     br: ReaderProto.readUint32,
                     bw: WriterProto.writeUint32,
                   },
+                  creator_home_background: {
+                    n: 22,
+                    br: ReaderProto.readString,
+                    bw: WriterProto.writeString,
+                  },
                 },
               }),
               t.sm_m
@@ -38922,6 +38933,11 @@ Error generating stack: ` +
                   },
                   vrhmd_only: {
                     n: 2,
+                    br: ReaderProto.readBool,
+                    bw: WriterProto.writeBool,
+                  },
+                  show_optional_vr_mode_notice: {
+                    n: 3,
                     br: ReaderProto.readBool,
                     bw: WriterProto.writeBool,
                   },
@@ -40360,10 +40376,10 @@ Error generating stack: ` +
                     br: ReaderProto.readBool,
                     bw: WriterProto.writeBool,
                   },
-                  specs_bbcode: {
-                    n: 25,
-                    br: ReaderProto.readString,
-                    bw: WriterProto.writeString,
+                  metacritic: { n: 26, c: StoreItem_ExtraDetails_Metacritic },
+                  cast_and_crew: {
+                    n: 27,
+                    c: StoreItem_ExtraDetails_CastAndCrew,
                   },
                 },
               }),
@@ -41040,6 +41056,186 @@ Error generating stack: ` +
             return `StoreItem_ExtraDetails_LinksAndInfo`;
           }
         }),
+        (StoreItem_ExtraDetails_Metacritic = class t extends (
+          import_google_protobuf$1.Message
+        ) {
+          static ImplementsStaticInterface() {}
+          constructor(n = null) {
+            super(),
+              t.prototype.score || AddAccessors(t.M()),
+              import_google_protobuf$1.Message.initialize(
+                this,
+                n,
+                0,
+                -1,
+                void 0,
+                null,
+              );
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              (t.sm_m ||= {
+                proto: t,
+                fields: {
+                  score: {
+                    n: 1,
+                    br: ReaderProto.readUint32,
+                    bw: WriterProto.writeUint32,
+                  },
+                  url: {
+                    n: 2,
+                    br: ReaderProto.readString,
+                    bw: WriterProto.writeString,
+                  },
+                  always_show: {
+                    n: 3,
+                    br: ReaderProto.readBool,
+                    bw: WriterProto.writeBool,
+                  },
+                },
+              }),
+              t.sm_m
+            );
+          }
+          static MBF() {
+            return (t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf;
+          }
+          toObject(n = !1) {
+            return t.toObject(n, this);
+          }
+          static toObject(n, r) {
+            return ToObject(t.M(), n, r);
+          }
+          static fromObject(n) {
+            return FromObject(t.M(), n);
+          }
+          static deserializeBinary(n) {
+            let r = new import_google_protobuf$1.BinaryReader(n),
+              i = new t();
+            return t.deserializeBinaryFromReader(i, r);
+          }
+          static deserializeBinaryFromReader(n, r) {
+            return DeserializeBinary(t.MBF(), n, r);
+          }
+          serializeBinary() {
+            var n = new import_google_protobuf$1.BinaryWriter();
+            return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
+          }
+          static serializeBinaryToWriter(n, r) {
+            SerializeBinary(t.M(), n, r);
+          }
+          serializeBase64String() {
+            var n = new import_google_protobuf$1.BinaryWriter();
+            return (
+              t.serializeBinaryToWriter(this, n), n.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return `StoreItem_ExtraDetails_Metacritic`;
+          }
+        }),
+        (StoreItem_ExtraDetails_CastAndCrew = class t extends (
+          import_google_protobuf$1.Message
+        ) {
+          static ImplementsStaticInterface() {}
+          constructor(n = null) {
+            super(),
+              t.prototype.directors || AddAccessors(t.M()),
+              import_google_protobuf$1.Message.initialize(
+                this,
+                n,
+                0,
+                -1,
+                [1, 2, 3, 4, 5],
+                null,
+              );
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              (t.sm_m ||= {
+                proto: t,
+                fields: {
+                  directors: {
+                    n: 1,
+                    r: !0,
+                    q: !0,
+                    br: ReaderProto.readString,
+                    bw: WriterProto.writeRepeatedString,
+                  },
+                  producers: {
+                    n: 2,
+                    r: !0,
+                    q: !0,
+                    br: ReaderProto.readString,
+                    bw: WriterProto.writeRepeatedString,
+                  },
+                  writers: {
+                    n: 3,
+                    r: !0,
+                    q: !0,
+                    br: ReaderProto.readString,
+                    bw: WriterProto.writeRepeatedString,
+                  },
+                  music: {
+                    n: 4,
+                    r: !0,
+                    q: !0,
+                    br: ReaderProto.readString,
+                    bw: WriterProto.writeRepeatedString,
+                  },
+                  actors: {
+                    n: 5,
+                    r: !0,
+                    q: !0,
+                    br: ReaderProto.readString,
+                    bw: WriterProto.writeRepeatedString,
+                  },
+                },
+              }),
+              t.sm_m
+            );
+          }
+          static MBF() {
+            return (t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf;
+          }
+          toObject(n = !1) {
+            return t.toObject(n, this);
+          }
+          static toObject(n, r) {
+            return ToObject(t.M(), n, r);
+          }
+          static fromObject(n) {
+            return FromObject(t.M(), n);
+          }
+          static deserializeBinary(n) {
+            let r = new import_google_protobuf$1.BinaryReader(n),
+              i = new t();
+            return t.deserializeBinaryFromReader(i, r);
+          }
+          static deserializeBinaryFromReader(n, r) {
+            return DeserializeBinary(t.MBF(), n, r);
+          }
+          serializeBinary() {
+            var n = new import_google_protobuf$1.BinaryWriter();
+            return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
+          }
+          static serializeBinaryToWriter(n, r) {
+            SerializeBinary(t.M(), n, r);
+          }
+          serializeBase64String() {
+            var n = new import_google_protobuf$1.BinaryWriter();
+            return (
+              t.serializeBinaryToWriter(this, n), n.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return `StoreItem_ExtraDetails_CastAndCrew`;
+          }
+        }),
         (StoreItem_OptInRegistrationTags = class t extends (
           import_google_protobuf$1.Message
         ) {
@@ -41115,6 +41311,86 @@ Error generating stack: ` +
           }
           getClassName() {
             return `StoreItem_OptInRegistrationTags`;
+          }
+        }),
+        (StoreItem_PurchaseNote = class t extends (
+          import_google_protobuf$1.Message
+        ) {
+          static ImplementsStaticInterface() {}
+          constructor(n = null) {
+            super(),
+              t.prototype.type || AddAccessors(t.M()),
+              import_google_protobuf$1.Message.initialize(
+                this,
+                n,
+                0,
+                -1,
+                void 0,
+                null,
+              );
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              (t.sm_m ||= {
+                proto: t,
+                fields: {
+                  type: {
+                    n: 1,
+                    br: ReaderProto.readEnum,
+                    bw: WriterProto.writeEnum,
+                  },
+                  highlighted: {
+                    n: 2,
+                    br: ReaderProto.readBool,
+                    bw: WriterProto.writeBool,
+                  },
+                  text_bbcode: {
+                    n: 3,
+                    br: ReaderProto.readString,
+                    bw: WriterProto.writeString,
+                  },
+                },
+              }),
+              t.sm_m
+            );
+          }
+          static MBF() {
+            return (t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf;
+          }
+          toObject(n = !1) {
+            return t.toObject(n, this);
+          }
+          static toObject(n, r) {
+            return ToObject(t.M(), n, r);
+          }
+          static fromObject(n) {
+            return FromObject(t.M(), n);
+          }
+          static deserializeBinary(n) {
+            let r = new import_google_protobuf$1.BinaryReader(n),
+              i = new t();
+            return t.deserializeBinaryFromReader(i, r);
+          }
+          static deserializeBinaryFromReader(n, r) {
+            return DeserializeBinary(t.MBF(), n, r);
+          }
+          serializeBinary() {
+            var n = new import_google_protobuf$1.BinaryWriter();
+            return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
+          }
+          static serializeBinaryToWriter(n, r) {
+            SerializeBinary(t.M(), n, r);
+          }
+          serializeBase64String() {
+            var n = new import_google_protobuf$1.BinaryWriter();
+            return (
+              t.serializeBinaryToWriter(this, n), n.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return `StoreItem_PurchaseNote`;
           }
         }),
         (StoreBrowseItemDataRequest = class t extends (
@@ -43393,7 +43669,12 @@ Error generating stack: ` +
                 r,
               ),
               CStoreBrowse_GetItems_Response,
-              { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 1 },
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+                eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: [`partner`],
+              },
             );
           }
           t.GetItems = n;
@@ -43458,7 +43739,12 @@ Error generating stack: ` +
                 r,
               ),
               CStoreBrowse_GetDLCForAppsSolr_Response,
-              { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 },
+              {
+                bConstMethod: !0,
+                ePrivilege: 0,
+                eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: [`partner`],
+              },
             );
           }
           t.GetDLCForAppsSolr = l;
@@ -44399,6 +44685,28 @@ Error generating stack: ` +
     init_locready = __esmMin(() => {
       locLoadPromises ??= new Set();
     });
+  function GetAppTypeLocKeyVariant(t, n, r) {
+    switch (n) {
+      case 6:
+        return t + `_Software`;
+      case 7:
+        return t + `_Video`;
+    }
+    let i = k_mapOptionalAppTypeSuffixes[n];
+    return i && r(t + i) ? t + i : t;
+  }
+  var k_mapOptionalAppTypeSuffixes,
+    init_apptypelockey = __esmMin(() => {
+      init_steammessages_storebrowse_pb(),
+        (k_mapOptionalAppTypeSuffixes = {
+          5: `_Guide`,
+          10: `_Hardware`,
+          4: `_DLC`,
+          11: `_Music`,
+          8: `_Series`,
+          1: `_Demo`,
+        });
+    });
   function CreateProjectLocalization(t) {
     let n = new Map();
     async function r() {
@@ -44465,6 +44773,19 @@ Error generating stack: ` +
       let r = CurrentLocalizationSettings().languages;
       return ReplaceArgumentsInString(l(t, r), ...n);
     }
+    function p(t) {
+      let r = CurrentLocalizationSettings().languages,
+        i = [
+          ...r.map((t) => t.strLanguage),
+          GetFallbackForLanguage(r[0].strLanguage),
+        ];
+      for (let r of i) {
+        if (!r) continue;
+        let i = n.get(r);
+        if (i && i.has(t)) return !0;
+      }
+      return !1;
+    }
     return {
       Localize(t, ...n) {
         return u(t, ...n);
@@ -44490,26 +44811,7 @@ Error generating stack: ` +
         return u(n === 1 || n === `1` ? t : t + `_Plural`, n, ...r);
       },
       GetAppTypeLocKey(t, n) {
-        switch (n) {
-          case 5:
-            return t + `_Guide`;
-          case 10:
-            return t + `_Hardware`;
-          case 4:
-            return t + `_DLC`;
-          case 11:
-            return t + `_Music`;
-          case 8:
-            return t + `_Series`;
-          case 1:
-            return t + `_Demo`;
-          case 6:
-            return t + `_Software`;
-          case 7:
-            return t + `_Video`;
-          default:
-            return t;
-        }
+        return GetAppTypeLocKeyVariant(t, n, p);
       },
       GetAppTypePluralLocKey(t, n) {
         switch (n) {
@@ -44530,19 +44832,7 @@ Error generating stack: ` +
       IsReady() {
         return o;
       },
-      HasKey(t) {
-        let r = CurrentLocalizationSettings().languages,
-          i = [
-            ...r.map((t) => t.strLanguage),
-            GetFallbackForLanguage(r[0].strLanguage),
-          ];
-        for (let r of i) {
-          if (!r) continue;
-          let i = n.get(r);
-          if (i && i.has(t)) return !0;
-        }
-        return !1;
-      },
+      HasKey: p,
     };
   }
   function CurrentLocalizationSettings() {
@@ -44567,6 +44857,7 @@ Error generating stack: ` +
         init_replacelocarguments(),
         init_locready(),
         init_steammessages_storebrowse_pb(),
+        init_apptypelockey(),
         init_src$2();
     }),
     require_classnames = __commonJSMin((t, n) => {
@@ -44678,8 +44969,8 @@ Error generating stack: ` +
     let n = t.popoverTargetElement;
     if (!(n instanceof HTMLElement)) return;
     let r = getPopoverVisibilityState(n);
-    (t.popoverTargetAction === `show` && r === `showing`) ||
-      (t.popoverTargetAction === `hide` && r === `hidden`) ||
+    (t.popoverTargetAction !== `show` || r !== `showing`) &&
+      (t.popoverTargetAction !== `hide` || r !== `hidden`) &&
       (r === `showing`
         ? hidePopover(n, !0, !0)
         : checkPopoverValidity(n, !1) &&
@@ -46329,7 +46620,7 @@ Error generating stack: ` +
       "store-partner-events": 2103,
       "steamtv-partner-events": 2104,
       "community-partner-events": 2105,
-      "partnerweb-partner-events": 2106,
+      "partner-partner-events": 2106,
       "store-calendar-partner-events": 2107,
       events,
       subscriptions,
@@ -46623,7 +46914,7 @@ Error generating stack: ` +
     }, t);
   }
   function MergeRefs(...t) {
-    if (!(!t || t.length === 0))
+    if (t && t.length !== 0)
       return t.length === 1
         ? t[0]
         : (n) =>
@@ -47152,7 +47443,6 @@ Error generating stack: ` +
           break;
         case 3:
           console.clogerror ? console.clogerror(3, ...p) : console.error(...p);
-          break;
       }
   }
   (window.DebugLogEnable = (...t) =>
@@ -47729,7 +48019,6 @@ Error generating stack: ` +
             t = function (t) {
               return 0.5 - Math.cos(t * Math.PI) / 2;
             };
-            break;
         }
         (this.m_bActive = !0),
           (this.m_fnBoundAnimationFunc = this.OnInterval.bind(this, t)),
@@ -48765,7 +49054,6 @@ Error generating stack: ` +
             break;
           case EGamepadButton.DIR_LEFT:
             s && (l = s(t.detail, this));
-            break;
         }
         return l;
       }
@@ -49340,7 +49628,7 @@ Error generating stack: ` +
     let l = useVirtualKeyboardReference(s.current),
       u = import_react$3.useCallback(
         (t) => {
-          if (!(!document.hasFocus() && document.activeElement == o.current)) {
+          if (document.hasFocus() || document.activeElement != o.current) {
             if (t.currentTarget != o.current) {
               console.warn(
                 `keyboard got blur event, but it's not the active element`,
@@ -49348,7 +49636,8 @@ Error generating stack: ` +
               return;
             }
             t.detail.focusedNode?.Element != o.current &&
-              ((!l.BIsActive() && !l.bInVR) || l.DelayHideVirtualKeyboard());
+              (l.BIsActive() || l.bInVR) &&
+              l.DelayHideVirtualKeyboard();
           }
         },
         [l],
@@ -49671,8 +49960,7 @@ Error generating stack: ` +
         };
       }, [o, s, i]),
       import_react$3.useLayoutEffect(() => {
-        if (!(!s || !n))
-          return setRef(n, s.CreateHandle()), () => setRef(n, null);
+        if (s && n) return setRef(n, s.CreateHandle()), () => setRef(n, null);
       }, [s, n]),
       { ref: i, node: s }
     );
@@ -49970,8 +50258,8 @@ Error generating stack: ` +
     PanelDetails = FocusableElement(`details`, { bFocusableByDefault: !1 });
   init_src$1(), init_config_client(), init_rendercontext();
   var TopFrameNavigationContext = import_react$3.createContext(!1);
-  function useOnClick(t, n, r) {
-    return (0, import_react$3.useMemo)(() => r, [t, n, r]);
+  function useOnClick(t, n, r, i) {
+    return (0, import_react$3.useMemo)(() => i, [t, n, r, i]);
   }
   function CreateSteamClientURL(t) {
     let n = `steam://`;
@@ -50005,7 +50293,7 @@ Error generating stack: ` +
           t = r.pathname + r.search + r.hash;
         }
         return r === !1 ||
-          g?.routes.some((n) => t.match(new RegExp(n.regex, `i`)))
+          g?.routes.some((n) => t.split(/[?#]/, 1)[0].match(n.regex))
           ? { bIsExternal: !1, targetRoute: t }
           : { bIsExternal: !0, targetRoute: t };
       }, [r, i, m, g?.routes, v]);
@@ -50014,7 +50302,7 @@ Error generating stack: ` +
           (Config.IN_CLIENT
             ? (x = CreateSteamClientURL(`openurl/${m}`))
             : ((p.target ??= `_blank`), (p.rel ??= `noreferrer noopener`)));
-      let S = useOnClick(x, y, o);
+      let S = useOnClick(x, y, r === !1, o);
       return (0, import_jsx_runtime$1.jsx)(l && _ ? FocusableAnchor : `a`, {
         ref: u,
         href: m,
@@ -50139,7 +50427,7 @@ Error generating stack: ` +
       Header_Global_News: () => Header_Global_News$30,
       Header_Global_News_Steam: () => Header_Global_News_Steam$30,
       Header_Global_News_SteamDeck: () => Header_Global_News_SteamDeck$30,
-      Header_Global_News_SteamFrame: () => Header_Global_News_SteamFrame$30,
+      Header_Global_News_SteamFrame: () => Header_Global_News_SteamFrame$29,
       Header_Global_News_SteamVR: () => Header_Global_News_SteamVR$30,
       Header_Global_News_Steamworks: () => Header_Global_News_Steamworks$30,
       Header_Global_Resources: () => Header_Global_Resources$30,
@@ -50204,9 +50492,9 @@ Error generating stack: ` +
         Header_Nav_Sites_Historical_Usage$30,
       Header_Nav_SteamDeck_Compat: () => Header_Nav_SteamDeck_Compat$30,
       Header_Nav_StoreAdmin: () => Header_Nav_StoreAdmin$30,
-      Header_Nav_StoreAdmin_Frontpage: () => Header_Nav_StoreAdmin_Frontpage$30,
+      Header_Nav_StoreAdmin_Frontpage: () => Header_Nav_StoreAdmin_Frontpage$29,
       Header_Nav_StoreAdmin_Spotlights: () =>
-        Header_Nav_StoreAdmin_Spotlights$30,
+        Header_Nav_StoreAdmin_Spotlights$29,
       Header_Nav_Support: () => Header_Nav_Support$30,
       Header_Nav_Tools: () => Header_Nav_Tools$30,
       Header_Nav_Tools_BanCDKeys: () => Header_Nav_Tools_BanCDKeys$30,
@@ -50280,7 +50568,7 @@ Error generating stack: ` +
     Header_Global_News_Steam$30,
     Header_Global_News_SteamVR$30,
     Header_Global_News_SteamDeck$30,
-    Header_Global_News_SteamFrame$30,
+    Header_Global_News_SteamFrame$29,
     Steamworks_Logo_Label$30,
     global_menu_language$61,
     global_menu_change_language$61,
@@ -50341,8 +50629,8 @@ Error generating stack: ` +
     Header_Nav_DirectPurchasing_OpenInvoices$30,
     Header_Nav_DirectPurchasing_CreateInvoices$30,
     Header_Nav_StoreAdmin$30,
-    Header_Nav_StoreAdmin_Spotlights$30,
-    Header_Nav_StoreAdmin_Frontpage$30,
+    Header_Nav_StoreAdmin_Spotlights$29,
+    Header_Nav_StoreAdmin_Frontpage$29,
     Header_Nav_OEM$30,
     Header_Nav_OEM_Ticket_Batches$30,
     Header_Nav_Sites$30,
@@ -50404,7 +50692,7 @@ Error generating stack: ` +
         (Header_Global_News_Steam$30 = `مدونة Steam`),
         (Header_Global_News_SteamVR$30 = `مدونة Steam VR`),
         (Header_Global_News_SteamDeck$30 = `مدونة Steam Deck`),
-        (Header_Global_News_SteamFrame$30 = `مدونة Steam Frame`),
+        (Header_Global_News_SteamFrame$29 = `مدونة Steam Frame`),
         (Steamworks_Logo_Label$30 = `Steamworks`),
         (global_menu_language$61 = `اللغة`),
         (global_menu_change_language$61 = `تغيير اللغة`),
@@ -50421,9 +50709,9 @@ Error generating stack: ` +
         (Header_Nav_AppsPackages_SaleApproval$30 = `إدارة الخصومات`),
         (Header_Nav_AppsPackages_SaleApprovalNew$30 = `نظام اعتماد التخفيضات الجديد!`),
         (Header_Nav_AppsPackages_Events$30 = `التسجيل في فعاليات التخفيضات والمهرجانات`),
-        (Header_Nav_AppsPackages_NextFestRecaps$30 = `مهرجان Steam للألعاب المقبلة`),
+        (Header_Nav_AppsPackages_NextFestRecaps$30 = `Steam Next Fest`),
         (Header_Nav_AppsPackages_CreatorHome$30 = `إعداد صفحة المطور الرئيسية`),
-        (Header_Nav_AppsPackages_CreatorHome_Vanity$30 = `إعداد الرابط المخصص لصفحة المطور الرئيسية`),
+        (Header_Nav_AppsPackages_CreatorHome_Vanity$30 = `إعداد الرابط المخصص لصفحة المبدع الرئيسية`),
         (Header_Nav_PublisherMarketingStats$30 = `أدوات وبيانات التسويق`),
         (Header_Nav_DailyDeal_Management$30 = `إدارة العروض اليومية`),
         (Header_Nav_SteamDeck_Compat$30 = `توافق Steam Deck`),
@@ -50465,8 +50753,8 @@ Error generating stack: ` +
         (Header_Nav_DirectPurchasing_OpenInvoices$30 = `مطابقة الفواتير المقدمة`),
         (Header_Nav_DirectPurchasing_CreateInvoices$30 = `إنشاء/إدارة الفواتير`),
         (Header_Nav_StoreAdmin$30 = `مسؤول المتجر`),
-        (Header_Nav_StoreAdmin_Spotlights$30 = `المحتوى الأبرز`),
-        (Header_Nav_StoreAdmin_Frontpage$30 = `الصفحة الرئيسية`),
+        (Header_Nav_StoreAdmin_Spotlights$29 = `المحتوى الأبرز`),
+        (Header_Nav_StoreAdmin_Frontpage$29 = `الصفحة الرئيسية`),
         (Header_Nav_OEM$30 = `أدوات OEM`),
         (Header_Nav_OEM_Ticket_Batches$30 = `دفعات تذاكر OEM`),
         (Header_Nav_Sites$30 = `برنامج PC Café`),
@@ -50537,7 +50825,7 @@ Error generating stack: ` +
           Header_Global_News_Steam: Header_Global_News_Steam$30,
           Header_Global_News_SteamVR: Header_Global_News_SteamVR$30,
           Header_Global_News_SteamDeck: Header_Global_News_SteamDeck$30,
-          Header_Global_News_SteamFrame: Header_Global_News_SteamFrame$30,
+          Header_Global_News_SteamFrame: Header_Global_News_SteamFrame$29,
           Steamworks_Logo_Label: Steamworks_Logo_Label$30,
           global_menu_language: global_menu_language$61,
           global_menu_change_language: global_menu_change_language$61,
@@ -50617,8 +50905,8 @@ Error generating stack: ` +
           Header_Nav_DirectPurchasing_CreateInvoices:
             Header_Nav_DirectPurchasing_CreateInvoices$30,
           Header_Nav_StoreAdmin: Header_Nav_StoreAdmin$30,
-          Header_Nav_StoreAdmin_Spotlights: Header_Nav_StoreAdmin_Spotlights$30,
-          Header_Nav_StoreAdmin_Frontpage: Header_Nav_StoreAdmin_Frontpage$30,
+          Header_Nav_StoreAdmin_Spotlights: Header_Nav_StoreAdmin_Spotlights$29,
+          Header_Nav_StoreAdmin_Frontpage: Header_Nav_StoreAdmin_Frontpage$29,
           Header_Nav_OEM: Header_Nav_OEM$30,
           Header_Nav_OEM_Ticket_Batches: Header_Nav_OEM_Ticket_Batches$30,
           Header_Nav_Sites: Header_Nav_Sites$30,
@@ -50705,7 +50993,7 @@ Error generating stack: ` +
       Header_Global_News: () => Header_Global_News$29,
       Header_Global_News_Steam: () => Header_Global_News_Steam$29,
       Header_Global_News_SteamDeck: () => Header_Global_News_SteamDeck$29,
-      Header_Global_News_SteamFrame: () => Header_Global_News_SteamFrame$29,
+      Header_Global_News_SteamFrame: () => Header_Global_News_SteamFrame$28,
       Header_Global_News_SteamVR: () => Header_Global_News_SteamVR$29,
       Header_Global_News_Steamworks: () => Header_Global_News_Steamworks$29,
       Header_Global_Resources: () => Header_Global_Resources$29,
@@ -50770,9 +51058,9 @@ Error generating stack: ` +
         Header_Nav_Sites_Historical_Usage$29,
       Header_Nav_SteamDeck_Compat: () => Header_Nav_SteamDeck_Compat$29,
       Header_Nav_StoreAdmin: () => Header_Nav_StoreAdmin$29,
-      Header_Nav_StoreAdmin_Frontpage: () => Header_Nav_StoreAdmin_Frontpage$29,
+      Header_Nav_StoreAdmin_Frontpage: () => Header_Nav_StoreAdmin_Frontpage$28,
       Header_Nav_StoreAdmin_Spotlights: () =>
-        Header_Nav_StoreAdmin_Spotlights$29,
+        Header_Nav_StoreAdmin_Spotlights$28,
       Header_Nav_Support: () => Header_Nav_Support$29,
       Header_Nav_Tools: () => Header_Nav_Tools$29,
       Header_Nav_Tools_BanCDKeys: () => Header_Nav_Tools_BanCDKeys$29,
@@ -50846,7 +51134,7 @@ Error generating stack: ` +
     Header_Global_News_Steam$29,
     Header_Global_News_SteamVR$29,
     Header_Global_News_SteamDeck$29,
-    Header_Global_News_SteamFrame$29,
+    Header_Global_News_SteamFrame$28,
     Steamworks_Logo_Label$29,
     global_menu_language$60,
     global_menu_change_language$60,
@@ -50907,8 +51195,8 @@ Error generating stack: ` +
     Header_Nav_DirectPurchasing_OpenInvoices$29,
     Header_Nav_DirectPurchasing_CreateInvoices$29,
     Header_Nav_StoreAdmin$29,
-    Header_Nav_StoreAdmin_Spotlights$29,
-    Header_Nav_StoreAdmin_Frontpage$29,
+    Header_Nav_StoreAdmin_Spotlights$28,
+    Header_Nav_StoreAdmin_Frontpage$28,
     Header_Nav_OEM$29,
     Header_Nav_OEM_Ticket_Batches$29,
     Header_Nav_Sites$29,
@@ -50970,7 +51258,7 @@ Error generating stack: ` +
         (Header_Global_News_Steam$29 = `Blog do Steam`),
         (Header_Global_News_SteamVR$29 = `Blog do SteamVR`),
         (Header_Global_News_SteamDeck$29 = `Blog do Steam Deck`),
-        (Header_Global_News_SteamFrame$29 = `Blog do Steam Frame`),
+        (Header_Global_News_SteamFrame$28 = `Blog do Steam Frame`),
         (Steamworks_Logo_Label$29 = `Steamworks`),
         (global_menu_language$60 = `idioma`),
         (global_menu_change_language$60 = `Alterar idioma`),
@@ -51031,8 +51319,8 @@ Error generating stack: ` +
         (Header_Nav_DirectPurchasing_OpenInvoices$29 = `Reconciliar faturas enviadas`),
         (Header_Nav_DirectPurchasing_CreateInvoices$29 = `Criar/gerenciar faturas`),
         (Header_Nav_StoreAdmin$29 = `Administração da loja`),
-        (Header_Nav_StoreAdmin_Spotlights$29 = `Destaques`),
-        (Header_Nav_StoreAdmin_Frontpage$29 = `Página inicial`),
+        (Header_Nav_StoreAdmin_Spotlights$28 = `Destaques`),
+        (Header_Nav_StoreAdmin_Frontpage$28 = `Página inicial`),
         (Header_Nav_OEM$29 = `Ferramentas para OEMs`),
         (Header_Nav_OEM_Ticket_Batches$29 = `Pacotes de tickets para OEMs`),
         (Header_Nav_Sites$29 = `Programa para Cyber Cafés`),
@@ -51103,7 +51391,7 @@ Error generating stack: ` +
           Header_Global_News_Steam: Header_Global_News_Steam$29,
           Header_Global_News_SteamVR: Header_Global_News_SteamVR$29,
           Header_Global_News_SteamDeck: Header_Global_News_SteamDeck$29,
-          Header_Global_News_SteamFrame: Header_Global_News_SteamFrame$29,
+          Header_Global_News_SteamFrame: Header_Global_News_SteamFrame$28,
           Steamworks_Logo_Label: Steamworks_Logo_Label$29,
           global_menu_language: global_menu_language$60,
           global_menu_change_language: global_menu_change_language$60,
@@ -51183,8 +51471,8 @@ Error generating stack: ` +
           Header_Nav_DirectPurchasing_CreateInvoices:
             Header_Nav_DirectPurchasing_CreateInvoices$29,
           Header_Nav_StoreAdmin: Header_Nav_StoreAdmin$29,
-          Header_Nav_StoreAdmin_Spotlights: Header_Nav_StoreAdmin_Spotlights$29,
-          Header_Nav_StoreAdmin_Frontpage: Header_Nav_StoreAdmin_Frontpage$29,
+          Header_Nav_StoreAdmin_Spotlights: Header_Nav_StoreAdmin_Spotlights$28,
+          Header_Nav_StoreAdmin_Frontpage: Header_Nav_StoreAdmin_Frontpage$28,
           Header_Nav_OEM: Header_Nav_OEM$29,
           Header_Nav_OEM_Ticket_Batches: Header_Nav_OEM_Ticket_Batches$29,
           Header_Nav_Sites: Header_Nav_Sites$29,
@@ -51271,7 +51559,7 @@ Error generating stack: ` +
       Header_Global_News: () => Header_Global_News$28,
       Header_Global_News_Steam: () => Header_Global_News_Steam$28,
       Header_Global_News_SteamDeck: () => Header_Global_News_SteamDeck$28,
-      Header_Global_News_SteamFrame: () => Header_Global_News_SteamFrame$28,
+      Header_Global_News_SteamFrame: () => Header_Global_News_SteamFrame$27,
       Header_Global_News_SteamVR: () => Header_Global_News_SteamVR$28,
       Header_Global_News_Steamworks: () => Header_Global_News_Steamworks$28,
       Header_Global_Resources: () => Header_Global_Resources$28,
@@ -51336,9 +51624,9 @@ Error generating stack: ` +
         Header_Nav_Sites_Historical_Usage$28,
       Header_Nav_SteamDeck_Compat: () => Header_Nav_SteamDeck_Compat$28,
       Header_Nav_StoreAdmin: () => Header_Nav_StoreAdmin$28,
-      Header_Nav_StoreAdmin_Frontpage: () => Header_Nav_StoreAdmin_Frontpage$28,
+      Header_Nav_StoreAdmin_Frontpage: () => Header_Nav_StoreAdmin_Frontpage$27,
       Header_Nav_StoreAdmin_Spotlights: () =>
-        Header_Nav_StoreAdmin_Spotlights$28,
+        Header_Nav_StoreAdmin_Spotlights$27,
       Header_Nav_Support: () => Header_Nav_Support$28,
       Header_Nav_Tools: () => Header_Nav_Tools$28,
       Header_Nav_Tools_BanCDKeys: () => Header_Nav_Tools_BanCDKeys$28,
@@ -51412,7 +51700,7 @@ Error generating stack: ` +
     Header_Global_News_Steam$28,
     Header_Global_News_SteamVR$28,
     Header_Global_News_SteamDeck$28,
-    Header_Global_News_SteamFrame$28,
+    Header_Global_News_SteamFrame$27,
     Steamworks_Logo_Label$28,
     global_menu_language$59,
     global_menu_change_language$59,
@@ -51473,8 +51761,8 @@ Error generating stack: ` +
     Header_Nav_DirectPurchasing_OpenInvoices$28,
     Header_Nav_DirectPurchasing_CreateInvoices$28,
     Header_Nav_StoreAdmin$28,
-    Header_Nav_StoreAdmin_Spotlights$28,
-    Header_Nav_StoreAdmin_Frontpage$28,
+    Header_Nav_StoreAdmin_Spotlights$27,
+    Header_Nav_StoreAdmin_Frontpage$27,
     Header_Nav_OEM$28,
     Header_Nav_OEM_Ticket_Batches$28,
     Header_Nav_Sites$28,
@@ -51536,7 +51824,7 @@ Error generating stack: ` +
         (Header_Global_News_Steam$28 = `Steam блог`),
         (Header_Global_News_SteamVR$28 = `Steam VR блог`),
         (Header_Global_News_SteamDeck$28 = `Steam Deck блог`),
-        (Header_Global_News_SteamFrame$28 = `Steam Frame блог`),
+        (Header_Global_News_SteamFrame$27 = `Steam Frame блог`),
         (Steamworks_Logo_Label$28 = `Steamworks`),
         (global_menu_language$59 = `език`),
         (global_menu_change_language$59 = `Смяна на езика`),
@@ -51597,8 +51885,8 @@ Error generating stack: ` +
         (Header_Nav_DirectPurchasing_OpenInvoices$28 = `Съгласуване на подадените фактури`),
         (Header_Nav_DirectPurchasing_CreateInvoices$28 = `Създаване/Управляване на фактури`),
         (Header_Nav_StoreAdmin$28 = `Админ. за магазина`),
-        (Header_Nav_StoreAdmin_Spotlights$28 = `На фокус`),
-        (Header_Nav_StoreAdmin_Frontpage$28 = `Начална страница`),
+        (Header_Nav_StoreAdmin_Spotlights$27 = `На фокус`),
+        (Header_Nav_StoreAdmin_Frontpage$27 = `Начална страница`),
         (Header_Nav_OEM$28 = `Инструменти за OEM`),
         (Header_Nav_OEM_Ticket_Batches$28 = `Количество билети за OEM`),
         (Header_Nav_Sites$28 = `Програмата за компютърни зали`),
@@ -51670,7 +51958,7 @@ Error generating stack: ` +
           Header_Global_News_Steam: Header_Global_News_Steam$28,
           Header_Global_News_SteamVR: Header_Global_News_SteamVR$28,
           Header_Global_News_SteamDeck: Header_Global_News_SteamDeck$28,
-          Header_Global_News_SteamFrame: Header_Global_News_SteamFrame$28,
+          Header_Global_News_SteamFrame: Header_Global_News_SteamFrame$27,
           Steamworks_Logo_Label: Steamworks_Logo_Label$28,
           global_menu_language: global_menu_language$59,
           global_menu_change_language: global_menu_change_language$59,
@@ -51750,8 +52038,8 @@ Error generating stack: ` +
           Header_Nav_DirectPurchasing_CreateInvoices:
             Header_Nav_DirectPurchasing_CreateInvoices$28,
           Header_Nav_StoreAdmin: Header_Nav_StoreAdmin$28,
-          Header_Nav_StoreAdmin_Spotlights: Header_Nav_StoreAdmin_Spotlights$28,
-          Header_Nav_StoreAdmin_Frontpage: Header_Nav_StoreAdmin_Frontpage$28,
+          Header_Nav_StoreAdmin_Spotlights: Header_Nav_StoreAdmin_Spotlights$27,
+          Header_Nav_StoreAdmin_Frontpage: Header_Nav_StoreAdmin_Frontpage$27,
           Header_Nav_OEM: Header_Nav_OEM$28,
           Header_Nav_OEM_Ticket_Batches: Header_Nav_OEM_Ticket_Batches$28,
           Header_Nav_Sites: Header_Nav_Sites$28,
@@ -51838,7 +52126,7 @@ Error generating stack: ` +
       Header_Global_News: () => Header_Global_News$27,
       Header_Global_News_Steam: () => Header_Global_News_Steam$27,
       Header_Global_News_SteamDeck: () => Header_Global_News_SteamDeck$27,
-      Header_Global_News_SteamFrame: () => Header_Global_News_SteamFrame$27,
+      Header_Global_News_SteamFrame: () => Header_Global_News_SteamFrame$26,
       Header_Global_News_SteamVR: () => Header_Global_News_SteamVR$27,
       Header_Global_News_Steamworks: () => Header_Global_News_Steamworks$27,
       Header_Global_Resources: () => Header_Global_Resources$27,
@@ -51903,9 +52191,9 @@ Error generating stack: ` +
         Header_Nav_Sites_Historical_Usage$27,
       Header_Nav_SteamDeck_Compat: () => Header_Nav_SteamDeck_Compat$27,
       Header_Nav_StoreAdmin: () => Header_Nav_StoreAdmin$27,
-      Header_Nav_StoreAdmin_Frontpage: () => Header_Nav_StoreAdmin_Frontpage$27,
+      Header_Nav_StoreAdmin_Frontpage: () => Header_Nav_StoreAdmin_Frontpage$26,
       Header_Nav_StoreAdmin_Spotlights: () =>
-        Header_Nav_StoreAdmin_Spotlights$27,
+        Header_Nav_StoreAdmin_Spotlights$26,
       Header_Nav_Support: () => Header_Nav_Support$27,
       Header_Nav_Tools: () => Header_Nav_Tools$27,
       Header_Nav_Tools_BanCDKeys: () => Header_Nav_Tools_BanCDKeys$27,
@@ -51979,7 +52267,7 @@ Error generating stack: ` +
     Header_Global_News_Steam$27,
     Header_Global_News_SteamVR$27,
     Header_Global_News_SteamDeck$27,
-    Header_Global_News_SteamFrame$27,
+    Header_Global_News_SteamFrame$26,
     Steamworks_Logo_Label$27,
     global_menu_language$58,
     global_menu_change_language$58,
@@ -52040,8 +52328,8 @@ Error generating stack: ` +
     Header_Nav_DirectPurchasing_OpenInvoices$27,
     Header_Nav_DirectPurchasing_CreateInvoices$27,
     Header_Nav_StoreAdmin$27,
-    Header_Nav_StoreAdmin_Spotlights$27,
-    Header_Nav_StoreAdmin_Frontpage$27,
+    Header_Nav_StoreAdmin_Spotlights$26,
+    Header_Nav_StoreAdmin_Frontpage$26,
     Header_Nav_OEM$27,
     Header_Nav_OEM_Ticket_Batches$27,
     Header_Nav_Sites$27,
@@ -52103,7 +52391,7 @@ Error generating stack: ` +
         (Header_Global_News_Steam$27 = `Blog služby Steam`),
         (Header_Global_News_SteamVR$27 = `Blog režimu SteamVR`),
         (Header_Global_News_SteamDeck$27 = `Blog zařízení Steam Deck`),
-        (Header_Global_News_SteamFrame$27 = `Blog headsetu Steam Frame`),
+        (Header_Global_News_SteamFrame$26 = `Blog headsetu Steam Frame`),
         (Steamworks_Logo_Label$27 = `Steamworks`),
         (global_menu_language$58 = `jazyk`),
         (global_menu_change_language$58 = `Změnit jazyk`),
@@ -52164,8 +52452,8 @@ Error generating stack: ` +
         (Header_Nav_DirectPurchasing_OpenInvoices$27 = `Zaplacení odeslaných faktur`),
         (Header_Nav_DirectPurchasing_CreateInvoices$27 = `Správa faktur`),
         (Header_Nav_StoreAdmin$27 = `Správa obchodu`),
-        (Header_Nav_StoreAdmin_Spotlights$27 = `Prominentní propagace`),
-        (Header_Nav_StoreAdmin_Frontpage$27 = `Hlavní stránka`),
+        (Header_Nav_StoreAdmin_Spotlights$26 = `Prominentní propagace`),
+        (Header_Nav_StoreAdmin_Frontpage$26 = `Hlavní stránka`),
         (Header_Nav_OEM$27 = `Nástroje OEM`),
         (Header_Nav_OEM_Ticket_Batches$27 = `Sady OEM licencí`),
         (Header_Nav_Sites$27 = `Program Steam PC Café`),
@@ -52235,7 +52523,7 @@ Error generating stack: ` +
           Header_Global_News_Steam: Header_Global_News_Steam$27,
           Header_Global_News_SteamVR: Header_Global_News_SteamVR$27,
           Header_Global_News_SteamDeck: Header_Global_News_SteamDeck$27,
-          Header_Global_News_SteamFrame: Header_Global_News_SteamFrame$27,
+          Header_Global_News_SteamFrame: Header_Global_News_SteamFrame$26,
           Steamworks_Logo_Label: Steamworks_Logo_Label$27,
           global_menu_language: global_menu_language$58,
           global_menu_change_language: global_menu_change_language$58,
@@ -52315,8 +52603,8 @@ Error generating stack: ` +
           Header_Nav_DirectPurchasing_CreateInvoices:
             Header_Nav_DirectPurchasing_CreateInvoices$27,
           Header_Nav_StoreAdmin: Header_Nav_StoreAdmin$27,
-          Header_Nav_StoreAdmin_Spotlights: Header_Nav_StoreAdmin_Spotlights$27,
-          Header_Nav_StoreAdmin_Frontpage: Header_Nav_StoreAdmin_Frontpage$27,
+          Header_Nav_StoreAdmin_Spotlights: Header_Nav_StoreAdmin_Spotlights$26,
+          Header_Nav_StoreAdmin_Frontpage: Header_Nav_StoreAdmin_Frontpage$26,
           Header_Nav_OEM: Header_Nav_OEM$27,
           Header_Nav_OEM_Ticket_Batches: Header_Nav_OEM_Ticket_Batches$27,
           Header_Nav_Sites: Header_Nav_Sites$27,
@@ -52403,7 +52691,7 @@ Error generating stack: ` +
       Header_Global_News: () => Header_Global_News$26,
       Header_Global_News_Steam: () => Header_Global_News_Steam$26,
       Header_Global_News_SteamDeck: () => Header_Global_News_SteamDeck$26,
-      Header_Global_News_SteamFrame: () => Header_Global_News_SteamFrame$26,
+      Header_Global_News_SteamFrame: () => Header_Global_News_SteamFrame$25,
       Header_Global_News_SteamVR: () => Header_Global_News_SteamVR$26,
       Header_Global_News_Steamworks: () => Header_Global_News_Steamworks$26,
       Header_Global_Resources: () => Header_Global_Resources$26,
@@ -52468,9 +52756,9 @@ Error generating stack: ` +
         Header_Nav_Sites_Historical_Usage$26,
       Header_Nav_SteamDeck_Compat: () => Header_Nav_SteamDeck_Compat$26,
       Header_Nav_StoreAdmin: () => Header_Nav_StoreAdmin$26,
-      Header_Nav_StoreAdmin_Frontpage: () => Header_Nav_StoreAdmin_Frontpage$26,
+      Header_Nav_StoreAdmin_Frontpage: () => Header_Nav_StoreAdmin_Frontpage$25,
       Header_Nav_StoreAdmin_Spotlights: () =>
-        Header_Nav_StoreAdmin_Spotlights$26,
+        Header_Nav_StoreAdmin_Spotlights$25,
       Header_Nav_Support: () => Header_Nav_Support$26,
       Header_Nav_Tools: () => Header_Nav_Tools$26,
       Header_Nav_Tools_BanCDKeys: () => Header_Nav_Tools_BanCDKeys$26,
@@ -52544,7 +52832,7 @@ Error generating stack: ` +
     Header_Global_News_Steam$26,
     Header_Global_News_SteamVR$26,
     Header_Global_News_SteamDeck$26,
-    Header_Global_News_SteamFrame$26,
+    Header_Global_News_SteamFrame$25,
     Steamworks_Logo_Label$26,
     global_menu_language$57,
     global_menu_change_language$57,
@@ -52605,8 +52893,8 @@ Error generating stack: ` +
     Header_Nav_DirectPurchasing_OpenInvoices$26,
     Header_Nav_DirectPurchasing_CreateInvoices$26,
     Header_Nav_StoreAdmin$26,
-    Header_Nav_StoreAdmin_Spotlights$26,
-    Header_Nav_StoreAdmin_Frontpage$26,
+    Header_Nav_StoreAdmin_Spotlights$25,
+    Header_Nav_StoreAdmin_Frontpage$25,
     Header_Nav_OEM$26,
     Header_Nav_OEM_Ticket_Batches$26,
     Header_Nav_Sites$26,
@@ -52668,7 +52956,7 @@ Error generating stack: ` +
         (Header_Global_News_Steam$26 = `Steam-blog`),
         (Header_Global_News_SteamVR$26 = `SteamVR-blog`),
         (Header_Global_News_SteamDeck$26 = `Steam Deck-blog`),
-        (Header_Global_News_SteamFrame$26 = `Steam Frame-blog`),
+        (Header_Global_News_SteamFrame$25 = `Steam Frame-blog`),
         (Steamworks_Logo_Label$26 = `Steamworks`),
         (global_menu_language$57 = `sprog`),
         (global_menu_change_language$57 = `Skift sprog`),
@@ -52729,8 +53017,8 @@ Error generating stack: ` +
         (Header_Nav_DirectPurchasing_OpenInvoices$26 = `Afstem indsendte fakturaer`),
         (Header_Nav_DirectPurchasing_CreateInvoices$26 = `Opret/håndter fakturaer`),
         (Header_Nav_StoreAdmin$26 = `Butiksadministrator`),
-        (Header_Nav_StoreAdmin_Spotlights$26 = `Fremhævninger`),
-        (Header_Nav_StoreAdmin_Frontpage$26 = `Forside`),
+        (Header_Nav_StoreAdmin_Spotlights$25 = `Fremhævninger`),
+        (Header_Nav_StoreAdmin_Frontpage$25 = `Forside`),
         (Header_Nav_OEM$26 = `OEM-værktøjer`),
         (Header_Nav_OEM_Ticket_Batches$26 = `OEM-billetbatches`),
         (Header_Nav_Sites$26 = `Program til PC-caféer`),
@@ -52800,7 +53088,7 @@ Error generating stack: ` +
           Header_Global_News_Steam: Header_Global_News_Steam$26,
           Header_Global_News_SteamVR: Header_Global_News_SteamVR$26,
           Header_Global_News_SteamDeck: Header_Global_News_SteamDeck$26,
-          Header_Global_News_SteamFrame: Header_Global_News_SteamFrame$26,
+          Header_Global_News_SteamFrame: Header_Global_News_SteamFrame$25,
           Steamworks_Logo_Label: Steamworks_Logo_Label$26,
           global_menu_language: global_menu_language$57,
           global_menu_change_language: global_menu_change_language$57,
@@ -52880,8 +53168,8 @@ Error generating stack: ` +
           Header_Nav_DirectPurchasing_CreateInvoices:
             Header_Nav_DirectPurchasing_CreateInvoices$26,
           Header_Nav_StoreAdmin: Header_Nav_StoreAdmin$26,
-          Header_Nav_StoreAdmin_Spotlights: Header_Nav_StoreAdmin_Spotlights$26,
-          Header_Nav_StoreAdmin_Frontpage: Header_Nav_StoreAdmin_Frontpage$26,
+          Header_Nav_StoreAdmin_Spotlights: Header_Nav_StoreAdmin_Spotlights$25,
+          Header_Nav_StoreAdmin_Frontpage: Header_Nav_StoreAdmin_Frontpage$25,
           Header_Nav_OEM: Header_Nav_OEM$26,
           Header_Nav_OEM_Ticket_Batches: Header_Nav_OEM_Ticket_Batches$26,
           Header_Nav_Sites: Header_Nav_Sites$26,
@@ -52968,7 +53256,7 @@ Error generating stack: ` +
       Header_Global_News: () => Header_Global_News$25,
       Header_Global_News_Steam: () => Header_Global_News_Steam$25,
       Header_Global_News_SteamDeck: () => Header_Global_News_SteamDeck$25,
-      Header_Global_News_SteamFrame: () => Header_Global_News_SteamFrame$25,
+      Header_Global_News_SteamFrame: () => Header_Global_News_SteamFrame$24,
       Header_Global_News_SteamVR: () => Header_Global_News_SteamVR$25,
       Header_Global_News_Steamworks: () => Header_Global_News_Steamworks$25,
       Header_Global_Resources: () => Header_Global_Resources$25,
@@ -53033,9 +53321,9 @@ Error generating stack: ` +
         Header_Nav_Sites_Historical_Usage$25,
       Header_Nav_SteamDeck_Compat: () => Header_Nav_SteamDeck_Compat$25,
       Header_Nav_StoreAdmin: () => Header_Nav_StoreAdmin$25,
-      Header_Nav_StoreAdmin_Frontpage: () => Header_Nav_StoreAdmin_Frontpage$25,
+      Header_Nav_StoreAdmin_Frontpage: () => Header_Nav_StoreAdmin_Frontpage$24,
       Header_Nav_StoreAdmin_Spotlights: () =>
-        Header_Nav_StoreAdmin_Spotlights$25,
+        Header_Nav_StoreAdmin_Spotlights$24,
       Header_Nav_Support: () => Header_Nav_Support$25,
       Header_Nav_Tools: () => Header_Nav_Tools$25,
       Header_Nav_Tools_BanCDKeys: () => Header_Nav_Tools_BanCDKeys$25,
@@ -53109,7 +53397,7 @@ Error generating stack: ` +
     Header_Global_News_Steam$25,
     Header_Global_News_SteamVR$25,
     Header_Global_News_SteamDeck$25,
-    Header_Global_News_SteamFrame$25,
+    Header_Global_News_SteamFrame$24,
     Steamworks_Logo_Label$25,
     global_menu_language$56,
     global_menu_change_language$56,
@@ -53170,8 +53458,8 @@ Error generating stack: ` +
     Header_Nav_DirectPurchasing_OpenInvoices$25,
     Header_Nav_DirectPurchasing_CreateInvoices$25,
     Header_Nav_StoreAdmin$25,
-    Header_Nav_StoreAdmin_Spotlights$25,
-    Header_Nav_StoreAdmin_Frontpage$25,
+    Header_Nav_StoreAdmin_Spotlights$24,
+    Header_Nav_StoreAdmin_Frontpage$24,
     Header_Nav_OEM$25,
     Header_Nav_OEM_Ticket_Batches$25,
     Header_Nav_Sites$25,
@@ -53233,7 +53521,7 @@ Error generating stack: ` +
         (Header_Global_News_Steam$25 = `Steam-blog`),
         (Header_Global_News_SteamVR$25 = `Steam VR-blog`),
         (Header_Global_News_SteamDeck$25 = `Steam Deck-blog`),
-        (Header_Global_News_SteamFrame$25 = `Steam Frame-blog`),
+        (Header_Global_News_SteamFrame$24 = `Steam Frame-blog`),
         (Steamworks_Logo_Label$25 = `Steamworks`),
         (global_menu_language$56 = `taal`),
         (global_menu_change_language$56 = `Taal wijzigen`),
@@ -53294,8 +53582,8 @@ Error generating stack: ` +
         (Header_Nav_DirectPurchasing_OpenInvoices$25 = `Ingediende facturen controleren`),
         (Header_Nav_DirectPurchasing_CreateInvoices$25 = `Facturen maken/beheren`),
         (Header_Nav_StoreAdmin$25 = `Winkelbeheer`),
-        (Header_Nav_StoreAdmin_Spotlights$25 = `Spotlights`),
-        (Header_Nav_StoreAdmin_Frontpage$25 = `Startpagina`),
+        (Header_Nav_StoreAdmin_Spotlights$24 = `Spotlights`),
+        (Header_Nav_StoreAdmin_Frontpage$24 = `Startpagina`),
         (Header_Nav_OEM$25 = `OEM-tools`),
         (Header_Nav_OEM_Ticket_Batches$25 = `OEM-ticketbundels`),
         (Header_Nav_Sites$25 = `Internetcaféprogramma`),
@@ -53365,7 +53653,7 @@ Error generating stack: ` +
           Header_Global_News_Steam: Header_Global_News_Steam$25,
           Header_Global_News_SteamVR: Header_Global_News_SteamVR$25,
           Header_Global_News_SteamDeck: Header_Global_News_SteamDeck$25,
-          Header_Global_News_SteamFrame: Header_Global_News_SteamFrame$25,
+          Header_Global_News_SteamFrame: Header_Global_News_SteamFrame$24,
           Steamworks_Logo_Label: Steamworks_Logo_Label$25,
           global_menu_language: global_menu_language$56,
           global_menu_change_language: global_menu_change_language$56,
@@ -53445,8 +53733,8 @@ Error generating stack: ` +
           Header_Nav_DirectPurchasing_CreateInvoices:
             Header_Nav_DirectPurchasing_CreateInvoices$25,
           Header_Nav_StoreAdmin: Header_Nav_StoreAdmin$25,
-          Header_Nav_StoreAdmin_Spotlights: Header_Nav_StoreAdmin_Spotlights$25,
-          Header_Nav_StoreAdmin_Frontpage: Header_Nav_StoreAdmin_Frontpage$25,
+          Header_Nav_StoreAdmin_Spotlights: Header_Nav_StoreAdmin_Spotlights$24,
+          Header_Nav_StoreAdmin_Frontpage: Header_Nav_StoreAdmin_Frontpage$24,
           Header_Nav_OEM: Header_Nav_OEM$25,
           Header_Nav_OEM_Ticket_Batches: Header_Nav_OEM_Ticket_Batches$25,
           Header_Nav_Sites: Header_Nav_Sites$25,
@@ -53533,7 +53821,7 @@ Error generating stack: ` +
       Header_Global_News: () => Header_Global_News$24,
       Header_Global_News_Steam: () => Header_Global_News_Steam$24,
       Header_Global_News_SteamDeck: () => Header_Global_News_SteamDeck$24,
-      Header_Global_News_SteamFrame: () => Header_Global_News_SteamFrame$24,
+      Header_Global_News_SteamFrame: () => Header_Global_News_SteamFrame$23,
       Header_Global_News_SteamVR: () => Header_Global_News_SteamVR$24,
       Header_Global_News_Steamworks: () => Header_Global_News_Steamworks$24,
       Header_Global_Resources: () => Header_Global_Resources$24,
@@ -53598,9 +53886,9 @@ Error generating stack: ` +
         Header_Nav_Sites_Historical_Usage$24,
       Header_Nav_SteamDeck_Compat: () => Header_Nav_SteamDeck_Compat$24,
       Header_Nav_StoreAdmin: () => Header_Nav_StoreAdmin$24,
-      Header_Nav_StoreAdmin_Frontpage: () => Header_Nav_StoreAdmin_Frontpage$24,
+      Header_Nav_StoreAdmin_Frontpage: () => Header_Nav_StoreAdmin_Frontpage$23,
       Header_Nav_StoreAdmin_Spotlights: () =>
-        Header_Nav_StoreAdmin_Spotlights$24,
+        Header_Nav_StoreAdmin_Spotlights$23,
       Header_Nav_Support: () => Header_Nav_Support$24,
       Header_Nav_Tools: () => Header_Nav_Tools$24,
       Header_Nav_Tools_BanCDKeys: () => Header_Nav_Tools_BanCDKeys$24,
@@ -53674,7 +53962,7 @@ Error generating stack: ` +
     Header_Global_News_Steam$24,
     Header_Global_News_SteamVR$24,
     Header_Global_News_SteamDeck$24,
-    Header_Global_News_SteamFrame$24,
+    Header_Global_News_SteamFrame$23,
     Steamworks_Logo_Label$24,
     global_menu_language$55,
     global_menu_change_language$55,
@@ -53735,8 +54023,8 @@ Error generating stack: ` +
     Header_Nav_DirectPurchasing_OpenInvoices$24,
     Header_Nav_DirectPurchasing_CreateInvoices$24,
     Header_Nav_StoreAdmin$24,
-    Header_Nav_StoreAdmin_Spotlights$24,
-    Header_Nav_StoreAdmin_Frontpage$24,
+    Header_Nav_StoreAdmin_Spotlights$23,
+    Header_Nav_StoreAdmin_Frontpage$23,
     Header_Nav_OEM$24,
     Header_Nav_OEM_Ticket_Batches$24,
     Header_Nav_Sites$24,
@@ -53798,7 +54086,7 @@ Error generating stack: ` +
         (Header_Global_News_Steam$24 = `Steam Blog`),
         (Header_Global_News_SteamVR$24 = `Steam VR Blog`),
         (Header_Global_News_SteamDeck$24 = `Steam Deck Blog`),
-        (Header_Global_News_SteamFrame$24 = `Steam Frame Blog`),
+        (Header_Global_News_SteamFrame$23 = `Steam Frame Blog`),
         (Steamworks_Logo_Label$24 = `Steamworks`),
         (global_menu_language$55 = `language`),
         (global_menu_change_language$55 = `Change language`),
@@ -53859,8 +54147,8 @@ Error generating stack: ` +
         (Header_Nav_DirectPurchasing_OpenInvoices$24 = `Reconcile Submitted Invoices`),
         (Header_Nav_DirectPurchasing_CreateInvoices$24 = `Create/Manage Invoices`),
         (Header_Nav_StoreAdmin$24 = `Store Admin`),
-        (Header_Nav_StoreAdmin_Spotlights$24 = `Spotlights`),
-        (Header_Nav_StoreAdmin_Frontpage$24 = `Front Page`),
+        (Header_Nav_StoreAdmin_Spotlights$23 = `Spotlights`),
+        (Header_Nav_StoreAdmin_Frontpage$23 = `Front Page`),
         (Header_Nav_OEM$24 = `OEM Tools`),
         (Header_Nav_OEM_Ticket_Batches$24 = `OEM Ticket Batches`),
         (Header_Nav_Sites$24 = `PC Café Program`),
@@ -53930,7 +54218,7 @@ Error generating stack: ` +
           Header_Global_News_Steam: Header_Global_News_Steam$24,
           Header_Global_News_SteamVR: Header_Global_News_SteamVR$24,
           Header_Global_News_SteamDeck: Header_Global_News_SteamDeck$24,
-          Header_Global_News_SteamFrame: Header_Global_News_SteamFrame$24,
+          Header_Global_News_SteamFrame: Header_Global_News_SteamFrame$23,
           Steamworks_Logo_Label: Steamworks_Logo_Label$24,
           global_menu_language: global_menu_language$55,
           global_menu_change_language: global_menu_change_language$55,
@@ -54010,8 +54298,8 @@ Error generating stack: ` +
           Header_Nav_DirectPurchasing_CreateInvoices:
             Header_Nav_DirectPurchasing_CreateInvoices$24,
           Header_Nav_StoreAdmin: Header_Nav_StoreAdmin$24,
-          Header_Nav_StoreAdmin_Spotlights: Header_Nav_StoreAdmin_Spotlights$24,
-          Header_Nav_StoreAdmin_Frontpage: Header_Nav_StoreAdmin_Frontpage$24,
+          Header_Nav_StoreAdmin_Spotlights: Header_Nav_StoreAdmin_Spotlights$23,
+          Header_Nav_StoreAdmin_Frontpage: Header_Nav_StoreAdmin_Frontpage$23,
           Header_Nav_OEM: Header_Nav_OEM$24,
           Header_Nav_OEM_Ticket_Batches: Header_Nav_OEM_Ticket_Batches$24,
           Header_Nav_Sites: Header_Nav_Sites$24,
@@ -54098,7 +54386,7 @@ Error generating stack: ` +
       Header_Global_News: () => Header_Global_News$23,
       Header_Global_News_Steam: () => Header_Global_News_Steam$23,
       Header_Global_News_SteamDeck: () => Header_Global_News_SteamDeck$23,
-      Header_Global_News_SteamFrame: () => Header_Global_News_SteamFrame$23,
+      Header_Global_News_SteamFrame: () => Header_Global_News_SteamFrame$22,
       Header_Global_News_SteamVR: () => Header_Global_News_SteamVR$23,
       Header_Global_News_Steamworks: () => Header_Global_News_Steamworks$23,
       Header_Global_Resources: () => Header_Global_Resources$23,
@@ -54163,9 +54451,9 @@ Error generating stack: ` +
         Header_Nav_Sites_Historical_Usage$23,
       Header_Nav_SteamDeck_Compat: () => Header_Nav_SteamDeck_Compat$23,
       Header_Nav_StoreAdmin: () => Header_Nav_StoreAdmin$23,
-      Header_Nav_StoreAdmin_Frontpage: () => Header_Nav_StoreAdmin_Frontpage$23,
+      Header_Nav_StoreAdmin_Frontpage: () => Header_Nav_StoreAdmin_Frontpage$22,
       Header_Nav_StoreAdmin_Spotlights: () =>
-        Header_Nav_StoreAdmin_Spotlights$23,
+        Header_Nav_StoreAdmin_Spotlights$22,
       Header_Nav_Support: () => Header_Nav_Support$23,
       Header_Nav_Tools: () => Header_Nav_Tools$23,
       Header_Nav_Tools_BanCDKeys: () => Header_Nav_Tools_BanCDKeys$23,
@@ -54239,7 +54527,7 @@ Error generating stack: ` +
     Header_Global_News_Steam$23,
     Header_Global_News_SteamVR$23,
     Header_Global_News_SteamDeck$23,
-    Header_Global_News_SteamFrame$23,
+    Header_Global_News_SteamFrame$22,
     Steamworks_Logo_Label$23,
     global_menu_language$54,
     global_menu_change_language$54,
@@ -54300,8 +54588,8 @@ Error generating stack: ` +
     Header_Nav_DirectPurchasing_OpenInvoices$23,
     Header_Nav_DirectPurchasing_CreateInvoices$23,
     Header_Nav_StoreAdmin$23,
-    Header_Nav_StoreAdmin_Spotlights$23,
-    Header_Nav_StoreAdmin_Frontpage$23,
+    Header_Nav_StoreAdmin_Spotlights$22,
+    Header_Nav_StoreAdmin_Frontpage$22,
     Header_Nav_OEM$23,
     Header_Nav_OEM_Ticket_Batches$23,
     Header_Nav_Sites$23,
@@ -54363,7 +54651,7 @@ Error generating stack: ` +
         (Header_Global_News_Steam$23 = `Steam-blogi`),
         (Header_Global_News_SteamVR$23 = `Steam VR -blogi`),
         (Header_Global_News_SteamDeck$23 = `Steam Deck -blogi`),
-        (Header_Global_News_SteamFrame$23 = `Steam Frame -blogi`),
+        (Header_Global_News_SteamFrame$22 = `Steam Frame -blogi`),
         (Steamworks_Logo_Label$23 = `Steamworks`),
         (global_menu_language$54 = `kieli`),
         (global_menu_change_language$54 = `Vaihda kieli`),
@@ -54424,8 +54712,8 @@ Error generating stack: ` +
         (Header_Nav_DirectPurchasing_OpenInvoices$23 = `Täsmää lähetetyt laskut`),
         (Header_Nav_DirectPurchasing_CreateInvoices$23 = `Luo tai hallitse laskuja`),
         (Header_Nav_StoreAdmin$23 = `Kaupan ylläpitäjä`),
-        (Header_Nav_StoreAdmin_Spotlights$23 = `Esittelyssä`),
-        (Header_Nav_StoreAdmin_Frontpage$23 = `Etusivu`),
+        (Header_Nav_StoreAdmin_Spotlights$22 = `Esittelyssä`),
+        (Header_Nav_StoreAdmin_Frontpage$22 = `Etusivu`),
         (Header_Nav_OEM$23 = `OEM-työkalut`),
         (Header_Nav_OEM_Ticket_Batches$23 = `OEM-lippuerät`),
         (Header_Nav_Sites$23 = `PC Café -ohjelma`),
@@ -54497,7 +54785,7 @@ Error generating stack: ` +
           Header_Global_News_Steam: Header_Global_News_Steam$23,
           Header_Global_News_SteamVR: Header_Global_News_SteamVR$23,
           Header_Global_News_SteamDeck: Header_Global_News_SteamDeck$23,
-          Header_Global_News_SteamFrame: Header_Global_News_SteamFrame$23,
+          Header_Global_News_SteamFrame: Header_Global_News_SteamFrame$22,
           Steamworks_Logo_Label: Steamworks_Logo_Label$23,
           global_menu_language: global_menu_language$54,
           global_menu_change_language: global_menu_change_language$54,
@@ -54577,8 +54865,8 @@ Error generating stack: ` +
           Header_Nav_DirectPurchasing_CreateInvoices:
             Header_Nav_DirectPurchasing_CreateInvoices$23,
           Header_Nav_StoreAdmin: Header_Nav_StoreAdmin$23,
-          Header_Nav_StoreAdmin_Spotlights: Header_Nav_StoreAdmin_Spotlights$23,
-          Header_Nav_StoreAdmin_Frontpage: Header_Nav_StoreAdmin_Frontpage$23,
+          Header_Nav_StoreAdmin_Spotlights: Header_Nav_StoreAdmin_Spotlights$22,
+          Header_Nav_StoreAdmin_Frontpage: Header_Nav_StoreAdmin_Frontpage$22,
           Header_Nav_OEM: Header_Nav_OEM$23,
           Header_Nav_OEM_Ticket_Batches: Header_Nav_OEM_Ticket_Batches$23,
           Header_Nav_Sites: Header_Nav_Sites$23,
@@ -54665,7 +54953,7 @@ Error generating stack: ` +
       Header_Global_News: () => Header_Global_News$22,
       Header_Global_News_Steam: () => Header_Global_News_Steam$22,
       Header_Global_News_SteamDeck: () => Header_Global_News_SteamDeck$22,
-      Header_Global_News_SteamFrame: () => Header_Global_News_SteamFrame$22,
+      Header_Global_News_SteamFrame: () => Header_Global_News_SteamFrame$21,
       Header_Global_News_SteamVR: () => Header_Global_News_SteamVR$22,
       Header_Global_News_Steamworks: () => Header_Global_News_Steamworks$22,
       Header_Global_Resources: () => Header_Global_Resources$22,
@@ -54730,9 +55018,9 @@ Error generating stack: ` +
         Header_Nav_Sites_Historical_Usage$22,
       Header_Nav_SteamDeck_Compat: () => Header_Nav_SteamDeck_Compat$22,
       Header_Nav_StoreAdmin: () => Header_Nav_StoreAdmin$22,
-      Header_Nav_StoreAdmin_Frontpage: () => Header_Nav_StoreAdmin_Frontpage$22,
+      Header_Nav_StoreAdmin_Frontpage: () => Header_Nav_StoreAdmin_Frontpage$21,
       Header_Nav_StoreAdmin_Spotlights: () =>
-        Header_Nav_StoreAdmin_Spotlights$22,
+        Header_Nav_StoreAdmin_Spotlights$21,
       Header_Nav_Support: () => Header_Nav_Support$22,
       Header_Nav_Tools: () => Header_Nav_Tools$22,
       Header_Nav_Tools_BanCDKeys: () => Header_Nav_Tools_BanCDKeys$22,
@@ -54805,7 +55093,7 @@ Error generating stack: ` +
     Header_Global_News_Steam$22,
     Header_Global_News_SteamVR$22,
     Header_Global_News_SteamDeck$22,
-    Header_Global_News_SteamFrame$22,
+    Header_Global_News_SteamFrame$21,
     Steamworks_Logo_Label$22,
     global_menu_language$53,
     global_menu_change_language$53,
@@ -54866,8 +55154,8 @@ Error generating stack: ` +
     Header_Nav_DirectPurchasing_OpenInvoices$22,
     Header_Nav_DirectPurchasing_CreateInvoices$22,
     Header_Nav_StoreAdmin$22,
-    Header_Nav_StoreAdmin_Spotlights$22,
-    Header_Nav_StoreAdmin_Frontpage$22,
+    Header_Nav_StoreAdmin_Spotlights$21,
+    Header_Nav_StoreAdmin_Frontpage$21,
     Header_Nav_OEM$22,
     Header_Nav_OEM_Ticket_Batches$22,
     Header_Nav_Sites$22,
@@ -54929,7 +55217,7 @@ Error generating stack: ` +
         (Header_Global_News_Steam$22 = `Blog Steam`),
         (Header_Global_News_SteamVR$22 = `Blog SteamVR`),
         (Header_Global_News_SteamDeck$22 = `Blog Steam Deck`),
-        (Header_Global_News_SteamFrame$22 = `Blog Steam Frame`),
+        (Header_Global_News_SteamFrame$21 = `Blog Steam Frame`),
         (Steamworks_Logo_Label$22 = `Steamworks`),
         (global_menu_language$53 = `langue`),
         (global_menu_change_language$53 = `Changer la langue`),
@@ -54989,8 +55277,8 @@ Error generating stack: ` +
         (Header_Nav_DirectPurchasing_OpenInvoices$22 = `Rapprocher les factures envoyées`),
         (Header_Nav_DirectPurchasing_CreateInvoices$22 = `Créer et gérer les factures`),
         (Header_Nav_StoreAdmin$22 = `Administration de la page du magasin`),
-        (Header_Nav_StoreAdmin_Spotlights$22 = `Coups de projecteur`),
-        (Header_Nav_StoreAdmin_Frontpage$22 = `Page principale`),
+        (Header_Nav_StoreAdmin_Spotlights$21 = `Coups de projecteur`),
+        (Header_Nav_StoreAdmin_Frontpage$21 = `Page principale`),
         (Header_Nav_OEM$22 = `Outils OEM`),
         (Header_Nav_OEM_Ticket_Batches$22 = `Lots de tickets OEM`),
         (Header_Nav_Sites$22 = `Programme PC Café`),
@@ -55059,7 +55347,7 @@ Error generating stack: ` +
           Header_Global_News_Steam: Header_Global_News_Steam$22,
           Header_Global_News_SteamVR: Header_Global_News_SteamVR$22,
           Header_Global_News_SteamDeck: Header_Global_News_SteamDeck$22,
-          Header_Global_News_SteamFrame: Header_Global_News_SteamFrame$22,
+          Header_Global_News_SteamFrame: Header_Global_News_SteamFrame$21,
           Steamworks_Logo_Label: Steamworks_Logo_Label$22,
           global_menu_language: global_menu_language$53,
           global_menu_change_language: global_menu_change_language$53,
@@ -55138,8 +55426,8 @@ Error generating stack: ` +
           Header_Nav_DirectPurchasing_CreateInvoices:
             Header_Nav_DirectPurchasing_CreateInvoices$22,
           Header_Nav_StoreAdmin: Header_Nav_StoreAdmin$22,
-          Header_Nav_StoreAdmin_Spotlights: Header_Nav_StoreAdmin_Spotlights$22,
-          Header_Nav_StoreAdmin_Frontpage: Header_Nav_StoreAdmin_Frontpage$22,
+          Header_Nav_StoreAdmin_Spotlights: Header_Nav_StoreAdmin_Spotlights$21,
+          Header_Nav_StoreAdmin_Frontpage: Header_Nav_StoreAdmin_Frontpage$21,
           Header_Nav_OEM: Header_Nav_OEM$22,
           Header_Nav_OEM_Ticket_Batches: Header_Nav_OEM_Ticket_Batches$22,
           Header_Nav_Sites: Header_Nav_Sites$22,
@@ -55226,7 +55514,7 @@ Error generating stack: ` +
       Header_Global_News: () => Header_Global_News$21,
       Header_Global_News_Steam: () => Header_Global_News_Steam$21,
       Header_Global_News_SteamDeck: () => Header_Global_News_SteamDeck$21,
-      Header_Global_News_SteamFrame: () => Header_Global_News_SteamFrame$21,
+      Header_Global_News_SteamFrame: () => Header_Global_News_SteamFrame$20,
       Header_Global_News_SteamVR: () => Header_Global_News_SteamVR$21,
       Header_Global_News_Steamworks: () => Header_Global_News_Steamworks$21,
       Header_Global_Resources: () => Header_Global_Resources$21,
@@ -55291,9 +55579,9 @@ Error generating stack: ` +
         Header_Nav_Sites_Historical_Usage$21,
       Header_Nav_SteamDeck_Compat: () => Header_Nav_SteamDeck_Compat$21,
       Header_Nav_StoreAdmin: () => Header_Nav_StoreAdmin$21,
-      Header_Nav_StoreAdmin_Frontpage: () => Header_Nav_StoreAdmin_Frontpage$21,
+      Header_Nav_StoreAdmin_Frontpage: () => Header_Nav_StoreAdmin_Frontpage$20,
       Header_Nav_StoreAdmin_Spotlights: () =>
-        Header_Nav_StoreAdmin_Spotlights$21,
+        Header_Nav_StoreAdmin_Spotlights$20,
       Header_Nav_Support: () => Header_Nav_Support$21,
       Header_Nav_Tools: () => Header_Nav_Tools$21,
       Header_Nav_Tools_BanCDKeys: () => Header_Nav_Tools_BanCDKeys$21,
@@ -55367,7 +55655,7 @@ Error generating stack: ` +
     Header_Global_News_Steam$21,
     Header_Global_News_SteamVR$21,
     Header_Global_News_SteamDeck$21,
-    Header_Global_News_SteamFrame$21,
+    Header_Global_News_SteamFrame$20,
     Steamworks_Logo_Label$21,
     global_menu_language$52,
     global_menu_change_language$52,
@@ -55428,8 +55716,8 @@ Error generating stack: ` +
     Header_Nav_DirectPurchasing_OpenInvoices$21,
     Header_Nav_DirectPurchasing_CreateInvoices$21,
     Header_Nav_StoreAdmin$21,
-    Header_Nav_StoreAdmin_Spotlights$21,
-    Header_Nav_StoreAdmin_Frontpage$21,
+    Header_Nav_StoreAdmin_Spotlights$20,
+    Header_Nav_StoreAdmin_Frontpage$20,
     Header_Nav_OEM$21,
     Header_Nav_OEM_Ticket_Batches$21,
     Header_Nav_Sites$21,
@@ -55491,7 +55779,7 @@ Error generating stack: ` +
         (Header_Global_News_Steam$21 = `Steam-Blog`),
         (Header_Global_News_SteamVR$21 = `SteamVR-Blog`),
         (Header_Global_News_SteamDeck$21 = `Steam-Deck-Blog`),
-        (Header_Global_News_SteamFrame$21 = `Steam Frame-Blog`),
+        (Header_Global_News_SteamFrame$20 = `Steam Frame-Blog`),
         (Steamworks_Logo_Label$21 = `Steamworks`),
         (global_menu_language$52 = `Sprache`),
         (global_menu_change_language$52 = `Sprache ändern`),
@@ -55552,8 +55840,8 @@ Error generating stack: ` +
         (Header_Nav_DirectPurchasing_OpenInvoices$21 = `Eingereichte Rechnungen abgleichen`),
         (Header_Nav_DirectPurchasing_CreateInvoices$21 = `Rechnungen erstellen/verwalten`),
         (Header_Nav_StoreAdmin$21 = `Shopverwaltung`),
-        (Header_Nav_StoreAdmin_Spotlights$21 = `Spotlights`),
-        (Header_Nav_StoreAdmin_Frontpage$21 = `Hauptseite`),
+        (Header_Nav_StoreAdmin_Spotlights$20 = `Spotlights`),
+        (Header_Nav_StoreAdmin_Frontpage$20 = `Hauptseite`),
         (Header_Nav_OEM$21 = `OEM-Werkzeuge`),
         (Header_Nav_OEM_Ticket_Batches$21 = `OEM-Tickets`),
         (Header_Nav_Sites$21 = `Steam-Café-Programm`),
@@ -55624,7 +55912,7 @@ Error generating stack: ` +
           Header_Global_News_Steam: Header_Global_News_Steam$21,
           Header_Global_News_SteamVR: Header_Global_News_SteamVR$21,
           Header_Global_News_SteamDeck: Header_Global_News_SteamDeck$21,
-          Header_Global_News_SteamFrame: Header_Global_News_SteamFrame$21,
+          Header_Global_News_SteamFrame: Header_Global_News_SteamFrame$20,
           Steamworks_Logo_Label: Steamworks_Logo_Label$21,
           global_menu_language: global_menu_language$52,
           global_menu_change_language: global_menu_change_language$52,
@@ -55704,8 +55992,8 @@ Error generating stack: ` +
           Header_Nav_DirectPurchasing_CreateInvoices:
             Header_Nav_DirectPurchasing_CreateInvoices$21,
           Header_Nav_StoreAdmin: Header_Nav_StoreAdmin$21,
-          Header_Nav_StoreAdmin_Spotlights: Header_Nav_StoreAdmin_Spotlights$21,
-          Header_Nav_StoreAdmin_Frontpage: Header_Nav_StoreAdmin_Frontpage$21,
+          Header_Nav_StoreAdmin_Spotlights: Header_Nav_StoreAdmin_Spotlights$20,
+          Header_Nav_StoreAdmin_Frontpage: Header_Nav_StoreAdmin_Frontpage$20,
           Header_Nav_OEM: Header_Nav_OEM$21,
           Header_Nav_OEM_Ticket_Batches: Header_Nav_OEM_Ticket_Batches$21,
           Header_Nav_Sites: Header_Nav_Sites$21,
@@ -55792,7 +56080,7 @@ Error generating stack: ` +
       Header_Global_News: () => Header_Global_News$20,
       Header_Global_News_Steam: () => Header_Global_News_Steam$20,
       Header_Global_News_SteamDeck: () => Header_Global_News_SteamDeck$20,
-      Header_Global_News_SteamFrame: () => Header_Global_News_SteamFrame$20,
+      Header_Global_News_SteamFrame: () => Header_Global_News_SteamFrame$19,
       Header_Global_News_SteamVR: () => Header_Global_News_SteamVR$20,
       Header_Global_News_Steamworks: () => Header_Global_News_Steamworks$20,
       Header_Global_Resources: () => Header_Global_Resources$20,
@@ -55857,9 +56145,9 @@ Error generating stack: ` +
         Header_Nav_Sites_Historical_Usage$20,
       Header_Nav_SteamDeck_Compat: () => Header_Nav_SteamDeck_Compat$20,
       Header_Nav_StoreAdmin: () => Header_Nav_StoreAdmin$20,
-      Header_Nav_StoreAdmin_Frontpage: () => Header_Nav_StoreAdmin_Frontpage$20,
+      Header_Nav_StoreAdmin_Frontpage: () => Header_Nav_StoreAdmin_Frontpage$19,
       Header_Nav_StoreAdmin_Spotlights: () =>
-        Header_Nav_StoreAdmin_Spotlights$20,
+        Header_Nav_StoreAdmin_Spotlights$19,
       Header_Nav_Support: () => Header_Nav_Support$20,
       Header_Nav_Tools: () => Header_Nav_Tools$20,
       Header_Nav_Tools_BanCDKeys: () => Header_Nav_Tools_BanCDKeys$20,
@@ -55933,7 +56221,7 @@ Error generating stack: ` +
     Header_Global_News_Steam$20,
     Header_Global_News_SteamVR$20,
     Header_Global_News_SteamDeck$20,
-    Header_Global_News_SteamFrame$20,
+    Header_Global_News_SteamFrame$19,
     Steamworks_Logo_Label$20,
     global_menu_language$51,
     global_menu_change_language$51,
@@ -55994,8 +56282,8 @@ Error generating stack: ` +
     Header_Nav_DirectPurchasing_OpenInvoices$20,
     Header_Nav_DirectPurchasing_CreateInvoices$20,
     Header_Nav_StoreAdmin$20,
-    Header_Nav_StoreAdmin_Spotlights$20,
-    Header_Nav_StoreAdmin_Frontpage$20,
+    Header_Nav_StoreAdmin_Spotlights$19,
+    Header_Nav_StoreAdmin_Frontpage$19,
     Header_Nav_OEM$20,
     Header_Nav_OEM_Ticket_Batches$20,
     Header_Nav_Sites$20,
@@ -56057,7 +56345,7 @@ Error generating stack: ` +
         (Header_Global_News_Steam$20 = `Ιστολόγιο Steam`),
         (Header_Global_News_SteamVR$20 = `Ιστολόγιο Steam VR`),
         (Header_Global_News_SteamDeck$20 = `Ιστολόγιο Steam Deck`),
-        (Header_Global_News_SteamFrame$20 = `Ιστολόγιο Steam Frame`),
+        (Header_Global_News_SteamFrame$19 = `Ιστολόγιο Steam Frame`),
         (Steamworks_Logo_Label$20 = `Steamworks`),
         (global_menu_language$51 = `Γλώσσα`),
         (global_menu_change_language$51 = `Αλλαγή γλώσσας`),
@@ -56118,8 +56406,8 @@ Error generating stack: ` +
         (Header_Nav_DirectPurchasing_OpenInvoices$20 = `Έλεγχος συμφωνίας υποβληθέντων τιμολογίων`),
         (Header_Nav_DirectPurchasing_CreateInvoices$20 = `Δημιουργία/διαχείριση τιμολογίων`),
         (Header_Nav_StoreAdmin$20 = `Εργαλείο διαχείρισης Καταστήματος`),
-        (Header_Nav_StoreAdmin_Spotlights$20 = `Επίκεντρα`),
-        (Header_Nav_StoreAdmin_Frontpage$20 = `Αρχική σελίδα`),
+        (Header_Nav_StoreAdmin_Spotlights$19 = `Επίκεντρα`),
+        (Header_Nav_StoreAdmin_Frontpage$19 = `Αρχική σελίδα`),
         (Header_Nav_OEM$20 = `Εργαλεία OEM`),
         (Header_Nav_OEM_Ticket_Batches$20 = `Δέσμες εισιτηρίων OEM`),
         (Header_Nav_Sites$20 = `Πρόγραμμα Internet Café`),
@@ -56190,7 +56478,7 @@ Error generating stack: ` +
           Header_Global_News_Steam: Header_Global_News_Steam$20,
           Header_Global_News_SteamVR: Header_Global_News_SteamVR$20,
           Header_Global_News_SteamDeck: Header_Global_News_SteamDeck$20,
-          Header_Global_News_SteamFrame: Header_Global_News_SteamFrame$20,
+          Header_Global_News_SteamFrame: Header_Global_News_SteamFrame$19,
           Steamworks_Logo_Label: Steamworks_Logo_Label$20,
           global_menu_language: global_menu_language$51,
           global_menu_change_language: global_menu_change_language$51,
@@ -56270,8 +56558,8 @@ Error generating stack: ` +
           Header_Nav_DirectPurchasing_CreateInvoices:
             Header_Nav_DirectPurchasing_CreateInvoices$20,
           Header_Nav_StoreAdmin: Header_Nav_StoreAdmin$20,
-          Header_Nav_StoreAdmin_Spotlights: Header_Nav_StoreAdmin_Spotlights$20,
-          Header_Nav_StoreAdmin_Frontpage: Header_Nav_StoreAdmin_Frontpage$20,
+          Header_Nav_StoreAdmin_Spotlights: Header_Nav_StoreAdmin_Spotlights$19,
+          Header_Nav_StoreAdmin_Frontpage: Header_Nav_StoreAdmin_Frontpage$19,
           Header_Nav_OEM: Header_Nav_OEM$20,
           Header_Nav_OEM_Ticket_Batches: Header_Nav_OEM_Ticket_Batches$20,
           Header_Nav_Sites: Header_Nav_Sites$20,
@@ -56358,7 +56646,7 @@ Error generating stack: ` +
       Header_Global_News: () => Header_Global_News$19,
       Header_Global_News_Steam: () => Header_Global_News_Steam$19,
       Header_Global_News_SteamDeck: () => Header_Global_News_SteamDeck$19,
-      Header_Global_News_SteamFrame: () => Header_Global_News_SteamFrame$19,
+      Header_Global_News_SteamFrame: () => Header_Global_News_SteamFrame$18,
       Header_Global_News_SteamVR: () => Header_Global_News_SteamVR$19,
       Header_Global_News_Steamworks: () => Header_Global_News_Steamworks$19,
       Header_Global_Resources: () => Header_Global_Resources$19,
@@ -56423,9 +56711,9 @@ Error generating stack: ` +
         Header_Nav_Sites_Historical_Usage$19,
       Header_Nav_SteamDeck_Compat: () => Header_Nav_SteamDeck_Compat$19,
       Header_Nav_StoreAdmin: () => Header_Nav_StoreAdmin$19,
-      Header_Nav_StoreAdmin_Frontpage: () => Header_Nav_StoreAdmin_Frontpage$19,
+      Header_Nav_StoreAdmin_Frontpage: () => Header_Nav_StoreAdmin_Frontpage$18,
       Header_Nav_StoreAdmin_Spotlights: () =>
-        Header_Nav_StoreAdmin_Spotlights$19,
+        Header_Nav_StoreAdmin_Spotlights$18,
       Header_Nav_Support: () => Header_Nav_Support$19,
       Header_Nav_Tools: () => Header_Nav_Tools$19,
       Header_Nav_Tools_BanCDKeys: () => Header_Nav_Tools_BanCDKeys$19,
@@ -56499,7 +56787,7 @@ Error generating stack: ` +
     Header_Global_News_Steam$19,
     Header_Global_News_SteamVR$19,
     Header_Global_News_SteamDeck$19,
-    Header_Global_News_SteamFrame$19,
+    Header_Global_News_SteamFrame$18,
     Steamworks_Logo_Label$19,
     global_menu_language$50,
     global_menu_change_language$50,
@@ -56560,8 +56848,8 @@ Error generating stack: ` +
     Header_Nav_DirectPurchasing_OpenInvoices$19,
     Header_Nav_DirectPurchasing_CreateInvoices$19,
     Header_Nav_StoreAdmin$19,
-    Header_Nav_StoreAdmin_Spotlights$19,
-    Header_Nav_StoreAdmin_Frontpage$19,
+    Header_Nav_StoreAdmin_Spotlights$18,
+    Header_Nav_StoreAdmin_Frontpage$18,
     Header_Nav_OEM$19,
     Header_Nav_OEM_Ticket_Batches$19,
     Header_Nav_Sites$19,
@@ -56623,7 +56911,7 @@ Error generating stack: ` +
         (Header_Global_News_Steam$19 = `Steam blog`),
         (Header_Global_News_SteamVR$19 = `SteamVR blog`),
         (Header_Global_News_SteamDeck$19 = `Steam Deck blog`),
-        (Header_Global_News_SteamFrame$19 = `Steam Frame blog`),
+        (Header_Global_News_SteamFrame$18 = `Steam Frame blog`),
         (Steamworks_Logo_Label$19 = `Steamworks`),
         (global_menu_language$50 = `nyelv`),
         (global_menu_change_language$50 = `Nyelvváltás`),
@@ -56684,8 +56972,8 @@ Error generating stack: ` +
         (Header_Nav_DirectPurchasing_OpenInvoices$19 = `Beküldött számlák rendezése`),
         (Header_Nav_DirectPurchasing_CreateInvoices$19 = `Számlák létrehozása, kezelése`),
         (Header_Nav_StoreAdmin$19 = `Áruház-adminisztráció`),
-        (Header_Nav_StoreAdmin_Spotlights$19 = `Reflektorfény`),
-        (Header_Nav_StoreAdmin_Frontpage$19 = `Főoldal`),
+        (Header_Nav_StoreAdmin_Spotlights$18 = `Reflektorfény`),
+        (Header_Nav_StoreAdmin_Frontpage$18 = `Főoldal`),
         (Header_Nav_OEM$19 = `OEM eszközök`),
         (Header_Nav_OEM_Ticket_Batches$19 = `OEM jegykötegek`),
         (Header_Nav_Sites$19 = `PC Café program`),
@@ -56755,7 +57043,7 @@ Error generating stack: ` +
           Header_Global_News_Steam: Header_Global_News_Steam$19,
           Header_Global_News_SteamVR: Header_Global_News_SteamVR$19,
           Header_Global_News_SteamDeck: Header_Global_News_SteamDeck$19,
-          Header_Global_News_SteamFrame: Header_Global_News_SteamFrame$19,
+          Header_Global_News_SteamFrame: Header_Global_News_SteamFrame$18,
           Steamworks_Logo_Label: Steamworks_Logo_Label$19,
           global_menu_language: global_menu_language$50,
           global_menu_change_language: global_menu_change_language$50,
@@ -56835,8 +57123,8 @@ Error generating stack: ` +
           Header_Nav_DirectPurchasing_CreateInvoices:
             Header_Nav_DirectPurchasing_CreateInvoices$19,
           Header_Nav_StoreAdmin: Header_Nav_StoreAdmin$19,
-          Header_Nav_StoreAdmin_Spotlights: Header_Nav_StoreAdmin_Spotlights$19,
-          Header_Nav_StoreAdmin_Frontpage: Header_Nav_StoreAdmin_Frontpage$19,
+          Header_Nav_StoreAdmin_Spotlights: Header_Nav_StoreAdmin_Spotlights$18,
+          Header_Nav_StoreAdmin_Frontpage: Header_Nav_StoreAdmin_Frontpage$18,
           Header_Nav_OEM: Header_Nav_OEM$19,
           Header_Nav_OEM_Ticket_Batches: Header_Nav_OEM_Ticket_Batches$19,
           Header_Nav_Sites: Header_Nav_Sites$19,
@@ -56923,7 +57211,7 @@ Error generating stack: ` +
       Header_Global_News: () => Header_Global_News$18,
       Header_Global_News_Steam: () => Header_Global_News_Steam$18,
       Header_Global_News_SteamDeck: () => Header_Global_News_SteamDeck$18,
-      Header_Global_News_SteamFrame: () => Header_Global_News_SteamFrame$18,
+      Header_Global_News_SteamFrame: () => Header_Global_News_SteamFrame$17,
       Header_Global_News_SteamVR: () => Header_Global_News_SteamVR$18,
       Header_Global_News_Steamworks: () => Header_Global_News_Steamworks$18,
       Header_Global_Resources: () => Header_Global_Resources$18,
@@ -56988,9 +57276,9 @@ Error generating stack: ` +
         Header_Nav_Sites_Historical_Usage$18,
       Header_Nav_SteamDeck_Compat: () => Header_Nav_SteamDeck_Compat$18,
       Header_Nav_StoreAdmin: () => Header_Nav_StoreAdmin$18,
-      Header_Nav_StoreAdmin_Frontpage: () => Header_Nav_StoreAdmin_Frontpage$18,
+      Header_Nav_StoreAdmin_Frontpage: () => Header_Nav_StoreAdmin_Frontpage$17,
       Header_Nav_StoreAdmin_Spotlights: () =>
-        Header_Nav_StoreAdmin_Spotlights$18,
+        Header_Nav_StoreAdmin_Spotlights$17,
       Header_Nav_Support: () => Header_Nav_Support$18,
       Header_Nav_Tools: () => Header_Nav_Tools$18,
       Header_Nav_Tools_BanCDKeys: () => Header_Nav_Tools_BanCDKeys$18,
@@ -57064,7 +57352,7 @@ Error generating stack: ` +
     Header_Global_News_Steam$18,
     Header_Global_News_SteamVR$18,
     Header_Global_News_SteamDeck$18,
-    Header_Global_News_SteamFrame$18,
+    Header_Global_News_SteamFrame$17,
     Steamworks_Logo_Label$18,
     global_menu_language$49,
     global_menu_change_language$49,
@@ -57125,8 +57413,8 @@ Error generating stack: ` +
     Header_Nav_DirectPurchasing_OpenInvoices$18,
     Header_Nav_DirectPurchasing_CreateInvoices$18,
     Header_Nav_StoreAdmin$18,
-    Header_Nav_StoreAdmin_Spotlights$18,
-    Header_Nav_StoreAdmin_Frontpage$18,
+    Header_Nav_StoreAdmin_Spotlights$17,
+    Header_Nav_StoreAdmin_Frontpage$17,
     Header_Nav_OEM$18,
     Header_Nav_OEM_Ticket_Batches$18,
     Header_Nav_Sites$18,
@@ -57188,7 +57476,7 @@ Error generating stack: ` +
         (Header_Global_News_Steam$18 = `Blog Steam`),
         (Header_Global_News_SteamVR$18 = `Blog SteamVR`),
         (Header_Global_News_SteamDeck$18 = `Blog Steam Deck`),
-        (Header_Global_News_SteamFrame$18 = `Blog Steam Frame`),
+        (Header_Global_News_SteamFrame$17 = `Blog Steam Frame`),
         (Steamworks_Logo_Label$18 = `Steamworks`),
         (global_menu_language$49 = `bahasa`),
         (global_menu_change_language$49 = `Ubah bahasa`),
@@ -57249,8 +57537,8 @@ Error generating stack: ` +
         (Header_Nav_DirectPurchasing_OpenInvoices$18 = `Gabungkan Faktur yang Dikirim`),
         (Header_Nav_DirectPurchasing_CreateInvoices$18 = `Buat/Kelola Faktur`),
         (Header_Nav_StoreAdmin$18 = `Admin Toko`),
-        (Header_Nav_StoreAdmin_Spotlights$18 = `Sorotan`),
-        (Header_Nav_StoreAdmin_Frontpage$18 = `Halaman Depan`),
+        (Header_Nav_StoreAdmin_Spotlights$17 = `Sorotan`),
+        (Header_Nav_StoreAdmin_Frontpage$17 = `Halaman Depan`),
         (Header_Nav_OEM$18 = `Alat OEM`),
         (Header_Nav_OEM_Ticket_Batches$18 = `Batch Tiket OEM`),
         (Header_Nav_Sites$18 = `Program Cyber Cafe`),
@@ -57320,7 +57608,7 @@ Error generating stack: ` +
           Header_Global_News_Steam: Header_Global_News_Steam$18,
           Header_Global_News_SteamVR: Header_Global_News_SteamVR$18,
           Header_Global_News_SteamDeck: Header_Global_News_SteamDeck$18,
-          Header_Global_News_SteamFrame: Header_Global_News_SteamFrame$18,
+          Header_Global_News_SteamFrame: Header_Global_News_SteamFrame$17,
           Steamworks_Logo_Label: Steamworks_Logo_Label$18,
           global_menu_language: global_menu_language$49,
           global_menu_change_language: global_menu_change_language$49,
@@ -57400,8 +57688,8 @@ Error generating stack: ` +
           Header_Nav_DirectPurchasing_CreateInvoices:
             Header_Nav_DirectPurchasing_CreateInvoices$18,
           Header_Nav_StoreAdmin: Header_Nav_StoreAdmin$18,
-          Header_Nav_StoreAdmin_Spotlights: Header_Nav_StoreAdmin_Spotlights$18,
-          Header_Nav_StoreAdmin_Frontpage: Header_Nav_StoreAdmin_Frontpage$18,
+          Header_Nav_StoreAdmin_Spotlights: Header_Nav_StoreAdmin_Spotlights$17,
+          Header_Nav_StoreAdmin_Frontpage: Header_Nav_StoreAdmin_Frontpage$17,
           Header_Nav_OEM: Header_Nav_OEM$18,
           Header_Nav_OEM_Ticket_Batches: Header_Nav_OEM_Ticket_Batches$18,
           Header_Nav_Sites: Header_Nav_Sites$18,
@@ -57488,7 +57776,7 @@ Error generating stack: ` +
       Header_Global_News: () => Header_Global_News$17,
       Header_Global_News_Steam: () => Header_Global_News_Steam$17,
       Header_Global_News_SteamDeck: () => Header_Global_News_SteamDeck$17,
-      Header_Global_News_SteamFrame: () => Header_Global_News_SteamFrame$17,
+      Header_Global_News_SteamFrame: () => Header_Global_News_SteamFrame$16,
       Header_Global_News_SteamVR: () => Header_Global_News_SteamVR$17,
       Header_Global_News_Steamworks: () => Header_Global_News_Steamworks$17,
       Header_Global_Resources: () => Header_Global_Resources$17,
@@ -57553,9 +57841,9 @@ Error generating stack: ` +
         Header_Nav_Sites_Historical_Usage$17,
       Header_Nav_SteamDeck_Compat: () => Header_Nav_SteamDeck_Compat$17,
       Header_Nav_StoreAdmin: () => Header_Nav_StoreAdmin$17,
-      Header_Nav_StoreAdmin_Frontpage: () => Header_Nav_StoreAdmin_Frontpage$17,
+      Header_Nav_StoreAdmin_Frontpage: () => Header_Nav_StoreAdmin_Frontpage$16,
       Header_Nav_StoreAdmin_Spotlights: () =>
-        Header_Nav_StoreAdmin_Spotlights$17,
+        Header_Nav_StoreAdmin_Spotlights$16,
       Header_Nav_Support: () => Header_Nav_Support$17,
       Header_Nav_Tools: () => Header_Nav_Tools$17,
       Header_Nav_Tools_BanCDKeys: () => Header_Nav_Tools_BanCDKeys$17,
@@ -57629,7 +57917,7 @@ Error generating stack: ` +
     Header_Global_News_Steam$17,
     Header_Global_News_SteamVR$17,
     Header_Global_News_SteamDeck$17,
-    Header_Global_News_SteamFrame$17,
+    Header_Global_News_SteamFrame$16,
     Steamworks_Logo_Label$17,
     global_menu_language$48,
     global_menu_change_language$48,
@@ -57690,8 +57978,8 @@ Error generating stack: ` +
     Header_Nav_DirectPurchasing_OpenInvoices$17,
     Header_Nav_DirectPurchasing_CreateInvoices$17,
     Header_Nav_StoreAdmin$17,
-    Header_Nav_StoreAdmin_Spotlights$17,
-    Header_Nav_StoreAdmin_Frontpage$17,
+    Header_Nav_StoreAdmin_Spotlights$16,
+    Header_Nav_StoreAdmin_Frontpage$16,
     Header_Nav_OEM$17,
     Header_Nav_OEM_Ticket_Batches$17,
     Header_Nav_Sites$17,
@@ -57753,7 +58041,7 @@ Error generating stack: ` +
         (Header_Global_News_Steam$17 = `Blog di Steam`),
         (Header_Global_News_SteamVR$17 = `Blog di Steam VR`),
         (Header_Global_News_SteamDeck$17 = `Blog di Steam Deck`),
-        (Header_Global_News_SteamFrame$17 = `Blog su Steam Frame`),
+        (Header_Global_News_SteamFrame$16 = `Blog su Steam Frame`),
         (Steamworks_Logo_Label$17 = `Steamworks`),
         (global_menu_language$48 = `Lingua`),
         (global_menu_change_language$48 = `Cambia la lingua`),
@@ -57814,8 +58102,8 @@ Error generating stack: ` +
         (Header_Nav_DirectPurchasing_OpenInvoices$17 = `Riconcilia le fatture inviate`),
         (Header_Nav_DirectPurchasing_CreateInvoices$17 = `Crea/gestisci fatture`),
         (Header_Nav_StoreAdmin$17 = `Amministrazione del Negozio`),
-        (Header_Nav_StoreAdmin_Spotlights$17 = `In evidenza`),
-        (Header_Nav_StoreAdmin_Frontpage$17 = `Pagina principale`),
+        (Header_Nav_StoreAdmin_Spotlights$16 = `In evidenza`),
+        (Header_Nav_StoreAdmin_Frontpage$16 = `Pagina principale`),
         (Header_Nav_OEM$17 = `Strumenti OEM`),
         (Header_Nav_OEM_Ticket_Batches$17 = `Serie di biglietti OEM`),
         (Header_Nav_Sites$17 = `Programma PC Cafe`),
@@ -57885,7 +58173,7 @@ Error generating stack: ` +
           Header_Global_News_Steam: Header_Global_News_Steam$17,
           Header_Global_News_SteamVR: Header_Global_News_SteamVR$17,
           Header_Global_News_SteamDeck: Header_Global_News_SteamDeck$17,
-          Header_Global_News_SteamFrame: Header_Global_News_SteamFrame$17,
+          Header_Global_News_SteamFrame: Header_Global_News_SteamFrame$16,
           Steamworks_Logo_Label: Steamworks_Logo_Label$17,
           global_menu_language: global_menu_language$48,
           global_menu_change_language: global_menu_change_language$48,
@@ -57965,8 +58253,8 @@ Error generating stack: ` +
           Header_Nav_DirectPurchasing_CreateInvoices:
             Header_Nav_DirectPurchasing_CreateInvoices$17,
           Header_Nav_StoreAdmin: Header_Nav_StoreAdmin$17,
-          Header_Nav_StoreAdmin_Spotlights: Header_Nav_StoreAdmin_Spotlights$17,
-          Header_Nav_StoreAdmin_Frontpage: Header_Nav_StoreAdmin_Frontpage$17,
+          Header_Nav_StoreAdmin_Spotlights: Header_Nav_StoreAdmin_Spotlights$16,
+          Header_Nav_StoreAdmin_Frontpage: Header_Nav_StoreAdmin_Frontpage$16,
           Header_Nav_OEM: Header_Nav_OEM$17,
           Header_Nav_OEM_Ticket_Batches: Header_Nav_OEM_Ticket_Batches$17,
           Header_Nav_Sites: Header_Nav_Sites$17,
@@ -58053,7 +58341,7 @@ Error generating stack: ` +
       Header_Global_News: () => Header_Global_News$16,
       Header_Global_News_Steam: () => Header_Global_News_Steam$16,
       Header_Global_News_SteamDeck: () => Header_Global_News_SteamDeck$16,
-      Header_Global_News_SteamFrame: () => Header_Global_News_SteamFrame$16,
+      Header_Global_News_SteamFrame: () => Header_Global_News_SteamFrame$15,
       Header_Global_News_SteamVR: () => Header_Global_News_SteamVR$16,
       Header_Global_News_Steamworks: () => Header_Global_News_Steamworks$16,
       Header_Global_Resources: () => Header_Global_Resources$16,
@@ -58118,9 +58406,9 @@ Error generating stack: ` +
         Header_Nav_Sites_Historical_Usage$16,
       Header_Nav_SteamDeck_Compat: () => Header_Nav_SteamDeck_Compat$16,
       Header_Nav_StoreAdmin: () => Header_Nav_StoreAdmin$16,
-      Header_Nav_StoreAdmin_Frontpage: () => Header_Nav_StoreAdmin_Frontpage$16,
+      Header_Nav_StoreAdmin_Frontpage: () => Header_Nav_StoreAdmin_Frontpage$15,
       Header_Nav_StoreAdmin_Spotlights: () =>
-        Header_Nav_StoreAdmin_Spotlights$16,
+        Header_Nav_StoreAdmin_Spotlights$15,
       Header_Nav_Support: () => Header_Nav_Support$16,
       Header_Nav_Tools: () => Header_Nav_Tools$16,
       Header_Nav_Tools_BanCDKeys: () => Header_Nav_Tools_BanCDKeys$16,
@@ -58194,7 +58482,7 @@ Error generating stack: ` +
     Header_Global_News_Steam$16,
     Header_Global_News_SteamVR$16,
     Header_Global_News_SteamDeck$16,
-    Header_Global_News_SteamFrame$16,
+    Header_Global_News_SteamFrame$15,
     Steamworks_Logo_Label$16,
     global_menu_language$47,
     global_menu_change_language$47,
@@ -58255,8 +58543,8 @@ Error generating stack: ` +
     Header_Nav_DirectPurchasing_OpenInvoices$16,
     Header_Nav_DirectPurchasing_CreateInvoices$16,
     Header_Nav_StoreAdmin$16,
-    Header_Nav_StoreAdmin_Spotlights$16,
-    Header_Nav_StoreAdmin_Frontpage$16,
+    Header_Nav_StoreAdmin_Spotlights$15,
+    Header_Nav_StoreAdmin_Frontpage$15,
     Header_Nav_OEM$16,
     Header_Nav_OEM_Ticket_Batches$16,
     Header_Nav_Sites$16,
@@ -58318,7 +58606,7 @@ Error generating stack: ` +
         (Header_Global_News_Steam$16 = `Steamブログ`),
         (Header_Global_News_SteamVR$16 = `Steam VRブログ`),
         (Header_Global_News_SteamDeck$16 = `Steam Deckブログ`),
-        (Header_Global_News_SteamFrame$16 = `Steam Frameブログ`),
+        (Header_Global_News_SteamFrame$15 = `Steam Frameブログ`),
         (Steamworks_Logo_Label$16 = `Steamworks`),
         (global_menu_language$47 = `言語`),
         (global_menu_change_language$47 = `言語を変更`),
@@ -58379,8 +58667,8 @@ Error generating stack: ` +
         (Header_Nav_DirectPurchasing_OpenInvoices$16 = `送信済みの請求書の調整`),
         (Header_Nav_DirectPurchasing_CreateInvoices$16 = `請求書の作成／管理`),
         (Header_Nav_StoreAdmin$16 = `ストア管理`),
-        (Header_Nav_StoreAdmin_Spotlights$16 = `スポットライト`),
-        (Header_Nav_StoreAdmin_Frontpage$16 = `フロントページ`),
+        (Header_Nav_StoreAdmin_Spotlights$15 = `スポットライト`),
+        (Header_Nav_StoreAdmin_Frontpage$15 = `フロントページ`),
         (Header_Nav_OEM$16 = `OEMツール`),
         (Header_Nav_OEM_Ticket_Batches$16 = `OEMチケットバッチ`),
         (Header_Nav_Sites$16 = `PCカフェプログラム`),
@@ -58450,7 +58738,7 @@ Error generating stack: ` +
           Header_Global_News_Steam: Header_Global_News_Steam$16,
           Header_Global_News_SteamVR: Header_Global_News_SteamVR$16,
           Header_Global_News_SteamDeck: Header_Global_News_SteamDeck$16,
-          Header_Global_News_SteamFrame: Header_Global_News_SteamFrame$16,
+          Header_Global_News_SteamFrame: Header_Global_News_SteamFrame$15,
           Steamworks_Logo_Label: Steamworks_Logo_Label$16,
           global_menu_language: global_menu_language$47,
           global_menu_change_language: global_menu_change_language$47,
@@ -58530,8 +58818,8 @@ Error generating stack: ` +
           Header_Nav_DirectPurchasing_CreateInvoices:
             Header_Nav_DirectPurchasing_CreateInvoices$16,
           Header_Nav_StoreAdmin: Header_Nav_StoreAdmin$16,
-          Header_Nav_StoreAdmin_Spotlights: Header_Nav_StoreAdmin_Spotlights$16,
-          Header_Nav_StoreAdmin_Frontpage: Header_Nav_StoreAdmin_Frontpage$16,
+          Header_Nav_StoreAdmin_Spotlights: Header_Nav_StoreAdmin_Spotlights$15,
+          Header_Nav_StoreAdmin_Frontpage: Header_Nav_StoreAdmin_Frontpage$15,
           Header_Nav_OEM: Header_Nav_OEM$16,
           Header_Nav_OEM_Ticket_Batches: Header_Nav_OEM_Ticket_Batches$16,
           Header_Nav_Sites: Header_Nav_Sites$16,
@@ -58617,7 +58905,7 @@ Error generating stack: ` +
       Header_Global_News: () => Header_Global_News$15,
       Header_Global_News_Steam: () => Header_Global_News_Steam$15,
       Header_Global_News_SteamDeck: () => Header_Global_News_SteamDeck$15,
-      Header_Global_News_SteamFrame: () => Header_Global_News_SteamFrame$15,
+      Header_Global_News_SteamFrame: () => Header_Global_News_SteamFrame$14,
       Header_Global_News_SteamVR: () => Header_Global_News_SteamVR$15,
       Header_Global_News_Steamworks: () => Header_Global_News_Steamworks$15,
       Header_Global_Resources: () => Header_Global_Resources$15,
@@ -58682,9 +58970,9 @@ Error generating stack: ` +
         Header_Nav_Sites_Historical_Usage$15,
       Header_Nav_SteamDeck_Compat: () => Header_Nav_SteamDeck_Compat$15,
       Header_Nav_StoreAdmin: () => Header_Nav_StoreAdmin$15,
-      Header_Nav_StoreAdmin_Frontpage: () => Header_Nav_StoreAdmin_Frontpage$15,
+      Header_Nav_StoreAdmin_Frontpage: () => Header_Nav_StoreAdmin_Frontpage$14,
       Header_Nav_StoreAdmin_Spotlights: () =>
-        Header_Nav_StoreAdmin_Spotlights$15,
+        Header_Nav_StoreAdmin_Spotlights$14,
       Header_Nav_Support: () => Header_Nav_Support$15,
       Header_Nav_Tools: () => Header_Nav_Tools$15,
       Header_Nav_Tools_BanCDKeys: () => Header_Nav_Tools_BanCDKeys$15,
@@ -58758,7 +59046,7 @@ Error generating stack: ` +
     Header_Global_News_Steam$15,
     Header_Global_News_SteamVR$15,
     Header_Global_News_SteamDeck$15,
-    Header_Global_News_SteamFrame$15,
+    Header_Global_News_SteamFrame$14,
     Steamworks_Logo_Label$15,
     global_menu_language$46,
     global_menu_change_language$46,
@@ -58819,8 +59107,8 @@ Error generating stack: ` +
     Header_Nav_DirectPurchasing_OpenInvoices$15,
     Header_Nav_DirectPurchasing_CreateInvoices$15,
     Header_Nav_StoreAdmin$15,
-    Header_Nav_StoreAdmin_Spotlights$15,
-    Header_Nav_StoreAdmin_Frontpage$15,
+    Header_Nav_StoreAdmin_Spotlights$14,
+    Header_Nav_StoreAdmin_Frontpage$14,
     Header_Nav_OEM$15,
     Header_Nav_OEM_Ticket_Batches$15,
     Header_Nav_Sites$15,
@@ -58881,7 +59169,7 @@ Error generating stack: ` +
         (Header_Global_News_Steam$15 = `Steam 블로그`),
         (Header_Global_News_SteamVR$15 = `Steam VR 블로그`),
         (Header_Global_News_SteamDeck$15 = `Steam Deck 블로그`),
-        (Header_Global_News_SteamFrame$15 = `Steam Frame 블로그`),
+        (Header_Global_News_SteamFrame$14 = `Steam Frame 블로그`),
         (Steamworks_Logo_Label$15 = `Steamworks`),
         (global_menu_language$46 = `언어`),
         (global_menu_change_language$46 = `언어 변경`),
@@ -58942,8 +59230,8 @@ Error generating stack: ` +
         (Header_Nav_DirectPurchasing_OpenInvoices$15 = `제출한 청구서 조정`),
         (Header_Nav_DirectPurchasing_CreateInvoices$15 = `청구서 작성 및 관리`),
         (Header_Nav_StoreAdmin$15 = `상점 관리`),
-        (Header_Nav_StoreAdmin_Spotlights$15 = `집중 조명`),
-        (Header_Nav_StoreAdmin_Frontpage$15 = `메인 페이지`),
+        (Header_Nav_StoreAdmin_Spotlights$14 = `집중 조명`),
+        (Header_Nav_StoreAdmin_Frontpage$14 = `메인 페이지`),
         (Header_Nav_OEM$15 = `OEM 도구`),
         (Header_Nav_OEM_Ticket_Batches$15 = `OEM 티켓 묶음`),
         (Header_Nav_Sites$15 = `PC방 프로그램`),
@@ -59014,7 +59302,7 @@ Error generating stack: ` +
           Header_Global_News_Steam: Header_Global_News_Steam$15,
           Header_Global_News_SteamVR: Header_Global_News_SteamVR$15,
           Header_Global_News_SteamDeck: Header_Global_News_SteamDeck$15,
-          Header_Global_News_SteamFrame: Header_Global_News_SteamFrame$15,
+          Header_Global_News_SteamFrame: Header_Global_News_SteamFrame$14,
           Steamworks_Logo_Label: Steamworks_Logo_Label$15,
           global_menu_language: global_menu_language$46,
           global_menu_change_language: global_menu_change_language$46,
@@ -59094,8 +59382,8 @@ Error generating stack: ` +
           Header_Nav_DirectPurchasing_CreateInvoices:
             Header_Nav_DirectPurchasing_CreateInvoices$15,
           Header_Nav_StoreAdmin: Header_Nav_StoreAdmin$15,
-          Header_Nav_StoreAdmin_Spotlights: Header_Nav_StoreAdmin_Spotlights$15,
-          Header_Nav_StoreAdmin_Frontpage: Header_Nav_StoreAdmin_Frontpage$15,
+          Header_Nav_StoreAdmin_Spotlights: Header_Nav_StoreAdmin_Spotlights$14,
+          Header_Nav_StoreAdmin_Frontpage: Header_Nav_StoreAdmin_Frontpage$14,
           Header_Nav_OEM: Header_Nav_OEM$15,
           Header_Nav_OEM_Ticket_Batches: Header_Nav_OEM_Ticket_Batches$15,
           Header_Nav_Sites: Header_Nav_Sites$15,
@@ -59182,7 +59470,7 @@ Error generating stack: ` +
       Header_Global_News: () => Header_Global_News$14,
       Header_Global_News_Steam: () => Header_Global_News_Steam$14,
       Header_Global_News_SteamDeck: () => Header_Global_News_SteamDeck$14,
-      Header_Global_News_SteamFrame: () => Header_Global_News_SteamFrame$14,
+      Header_Global_News_SteamFrame: () => Header_Global_News_SteamFrame$13,
       Header_Global_News_SteamVR: () => Header_Global_News_SteamVR$14,
       Header_Global_News_Steamworks: () => Header_Global_News_Steamworks$14,
       Header_Global_Resources: () => Header_Global_Resources$14,
@@ -59247,9 +59535,9 @@ Error generating stack: ` +
         Header_Nav_Sites_Historical_Usage$14,
       Header_Nav_SteamDeck_Compat: () => Header_Nav_SteamDeck_Compat$14,
       Header_Nav_StoreAdmin: () => Header_Nav_StoreAdmin$14,
-      Header_Nav_StoreAdmin_Frontpage: () => Header_Nav_StoreAdmin_Frontpage$14,
+      Header_Nav_StoreAdmin_Frontpage: () => Header_Nav_StoreAdmin_Frontpage$13,
       Header_Nav_StoreAdmin_Spotlights: () =>
-        Header_Nav_StoreAdmin_Spotlights$14,
+        Header_Nav_StoreAdmin_Spotlights$13,
       Header_Nav_Support: () => Header_Nav_Support$14,
       Header_Nav_Tools: () => Header_Nav_Tools$14,
       Header_Nav_Tools_BanCDKeys: () => Header_Nav_Tools_BanCDKeys$14,
@@ -59323,7 +59611,7 @@ Error generating stack: ` +
     Header_Global_News_Steam$14,
     Header_Global_News_SteamVR$14,
     Header_Global_News_SteamDeck$14,
-    Header_Global_News_SteamFrame$14,
+    Header_Global_News_SteamFrame$13,
     Steamworks_Logo_Label$14,
     global_menu_language$45,
     global_menu_change_language$45,
@@ -59384,8 +59672,8 @@ Error generating stack: ` +
     Header_Nav_DirectPurchasing_OpenInvoices$14,
     Header_Nav_DirectPurchasing_CreateInvoices$14,
     Header_Nav_StoreAdmin$14,
-    Header_Nav_StoreAdmin_Spotlights$14,
-    Header_Nav_StoreAdmin_Frontpage$14,
+    Header_Nav_StoreAdmin_Spotlights$13,
+    Header_Nav_StoreAdmin_Frontpage$13,
     Header_Nav_OEM$14,
     Header_Nav_OEM_Ticket_Batches$14,
     Header_Nav_Sites$14,
@@ -59447,7 +59735,7 @@ Error generating stack: ` +
         (Header_Global_News_Steam$14 = `Blog de Steam`),
         (Header_Global_News_SteamVR$14 = `Blog de Steam VR`),
         (Header_Global_News_SteamDeck$14 = `Blog de Steam Deck`),
-        (Header_Global_News_SteamFrame$14 = `Blog de Steam\xA0Frame`),
+        (Header_Global_News_SteamFrame$13 = `Blog de Steam\xA0Frame`),
         (Steamworks_Logo_Label$14 = `Steamworks`),
         (global_menu_language$45 = `idioma`),
         (global_menu_change_language$45 = `Cambiar idioma`),
@@ -59508,8 +59796,8 @@ Error generating stack: ` +
         (Header_Nav_DirectPurchasing_OpenInvoices$14 = `Conciliar facturas emitidas`),
         (Header_Nav_DirectPurchasing_CreateInvoices$14 = `Crear/Administrar facturas`),
         (Header_Nav_StoreAdmin$14 = `Administrador de la tienda`),
-        (Header_Nav_StoreAdmin_Spotlights$14 = `Destacados`),
-        (Header_Nav_StoreAdmin_Frontpage$14 = `Página principal`),
+        (Header_Nav_StoreAdmin_Spotlights$13 = `Destacados`),
+        (Header_Nav_StoreAdmin_Frontpage$13 = `Página principal`),
         (Header_Nav_OEM$14 = `Herramientas de OEM`),
         (Header_Nav_OEM_Ticket_Batches$14 = `Remesas de tickets OEM`),
         (Header_Nav_Sites$14 = `Programa para cibercafés`),
@@ -59579,7 +59867,7 @@ Error generating stack: ` +
           Header_Global_News_Steam: Header_Global_News_Steam$14,
           Header_Global_News_SteamVR: Header_Global_News_SteamVR$14,
           Header_Global_News_SteamDeck: Header_Global_News_SteamDeck$14,
-          Header_Global_News_SteamFrame: Header_Global_News_SteamFrame$14,
+          Header_Global_News_SteamFrame: Header_Global_News_SteamFrame$13,
           Steamworks_Logo_Label: Steamworks_Logo_Label$14,
           global_menu_language: global_menu_language$45,
           global_menu_change_language: global_menu_change_language$45,
@@ -59659,8 +59947,8 @@ Error generating stack: ` +
           Header_Nav_DirectPurchasing_CreateInvoices:
             Header_Nav_DirectPurchasing_CreateInvoices$14,
           Header_Nav_StoreAdmin: Header_Nav_StoreAdmin$14,
-          Header_Nav_StoreAdmin_Spotlights: Header_Nav_StoreAdmin_Spotlights$14,
-          Header_Nav_StoreAdmin_Frontpage: Header_Nav_StoreAdmin_Frontpage$14,
+          Header_Nav_StoreAdmin_Spotlights: Header_Nav_StoreAdmin_Spotlights$13,
+          Header_Nav_StoreAdmin_Frontpage: Header_Nav_StoreAdmin_Frontpage$13,
           Header_Nav_OEM: Header_Nav_OEM$14,
           Header_Nav_OEM_Ticket_Batches: Header_Nav_OEM_Ticket_Batches$14,
           Header_Nav_Sites: Header_Nav_Sites$14,
@@ -59747,7 +60035,6 @@ Error generating stack: ` +
       Header_Global_News: () => Header_Global_News$13,
       Header_Global_News_Steam: () => Header_Global_News_Steam$13,
       Header_Global_News_SteamDeck: () => Header_Global_News_SteamDeck$13,
-      Header_Global_News_SteamFrame: () => Header_Global_News_SteamFrame$13,
       Header_Global_News_SteamVR: () => Header_Global_News_SteamVR$13,
       Header_Global_News_Steamworks: () => Header_Global_News_Steamworks$13,
       Header_Global_Resources: () => Header_Global_Resources$13,
@@ -59812,9 +60099,6 @@ Error generating stack: ` +
         Header_Nav_Sites_Historical_Usage$13,
       Header_Nav_SteamDeck_Compat: () => Header_Nav_SteamDeck_Compat$13,
       Header_Nav_StoreAdmin: () => Header_Nav_StoreAdmin$13,
-      Header_Nav_StoreAdmin_Frontpage: () => Header_Nav_StoreAdmin_Frontpage$13,
-      Header_Nav_StoreAdmin_Spotlights: () =>
-        Header_Nav_StoreAdmin_Spotlights$13,
       Header_Nav_Support: () => Header_Nav_Support$13,
       Header_Nav_Tools: () => Header_Nav_Tools$13,
       Header_Nav_Tools_BanCDKeys: () => Header_Nav_Tools_BanCDKeys$13,
@@ -59888,7 +60172,6 @@ Error generating stack: ` +
     Header_Global_News_Steam$13,
     Header_Global_News_SteamVR$13,
     Header_Global_News_SteamDeck$13,
-    Header_Global_News_SteamFrame$13,
     Steamworks_Logo_Label$13,
     global_menu_language$44,
     global_menu_change_language$44,
@@ -59949,8 +60232,6 @@ Error generating stack: ` +
     Header_Nav_DirectPurchasing_OpenInvoices$13,
     Header_Nav_DirectPurchasing_CreateInvoices$13,
     Header_Nav_StoreAdmin$13,
-    Header_Nav_StoreAdmin_Spotlights$13,
-    Header_Nav_StoreAdmin_Frontpage$13,
     Header_Nav_OEM$13,
     Header_Nav_OEM_Ticket_Batches$13,
     Header_Nav_Sites$13,
@@ -60012,7 +60293,6 @@ Error generating stack: ` +
         (Header_Global_News_Steam$13 = `Blog Steam`),
         (Header_Global_News_SteamVR$13 = `Blog Steam VR`),
         (Header_Global_News_SteamDeck$13 = `Blog Steam Deck`),
-        (Header_Global_News_SteamFrame$13 = `Steam Frame Blog`),
         (Steamworks_Logo_Label$13 = `Steamworks`),
         (global_menu_language$44 = `bahasa`),
         (global_menu_change_language$44 = `Ubah bahasa`),
@@ -60073,8 +60353,6 @@ Error generating stack: ` +
         (Header_Nav_DirectPurchasing_OpenInvoices$13 = `Selaraskan Invois Dihantar`),
         (Header_Nav_DirectPurchasing_CreateInvoices$13 = `Cipta/Urus Invois`),
         (Header_Nav_StoreAdmin$13 = `Pentadbir Gedung`),
-        (Header_Nav_StoreAdmin_Spotlights$13 = `Spotlights`),
-        (Header_Nav_StoreAdmin_Frontpage$13 = `Front Page`),
         (Header_Nav_OEM$13 = `Alat OEM`),
         (Header_Nav_OEM_Ticket_Batches$13 = `Kumpulan Tiket OEM`),
         (Header_Nav_Sites$13 = `Program PC Café`),
@@ -60144,7 +60422,6 @@ Error generating stack: ` +
           Header_Global_News_Steam: Header_Global_News_Steam$13,
           Header_Global_News_SteamVR: Header_Global_News_SteamVR$13,
           Header_Global_News_SteamDeck: Header_Global_News_SteamDeck$13,
-          Header_Global_News_SteamFrame: Header_Global_News_SteamFrame$13,
           Steamworks_Logo_Label: Steamworks_Logo_Label$13,
           global_menu_language: global_menu_language$44,
           global_menu_change_language: global_menu_change_language$44,
@@ -60224,8 +60501,6 @@ Error generating stack: ` +
           Header_Nav_DirectPurchasing_CreateInvoices:
             Header_Nav_DirectPurchasing_CreateInvoices$13,
           Header_Nav_StoreAdmin: Header_Nav_StoreAdmin$13,
-          Header_Nav_StoreAdmin_Spotlights: Header_Nav_StoreAdmin_Spotlights$13,
-          Header_Nav_StoreAdmin_Frontpage: Header_Nav_StoreAdmin_Frontpage$13,
           Header_Nav_OEM: Header_Nav_OEM$13,
           Header_Nav_OEM_Ticket_Batches: Header_Nav_OEM_Ticket_Batches$13,
           Header_Nav_Sites: Header_Nav_Sites$13,
@@ -68185,15 +68460,13 @@ Error generating stack: ` +
     });
   }
   var header_menu_hamburger_default = `data:image/png;base64,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`,
-    logo_steamworks_default =
-      `` +
-      new URL(
-        `B9IALK1_.svg`,
-        (document.currentScript &&
-          document.currentScript.tagName.toUpperCase() === `SCRIPT` &&
-          document.currentScript.src) ||
-          document.baseURI,
-      ).href,
+    logo_steamworks_default = new URL(
+      `B9IALK1_.svg`,
+      (document.currentScript &&
+        document.currentScript.tagName.toUpperCase() === `SCRIPT` &&
+        document.currentScript.src) ||
+        document.baseURI,
+    ).href,
     avatar_default_default = `data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gOTAK/9sAQwADAgIDAgIDAwMDBAMDBAUIBQUEBAUKBwcGCAwKDAwLCgsLDQ4SEA0OEQ4LCxAWEBETFBUVFQwPFxgWFBgSFBUU/9sAQwEDBAQFBAUJBQUJFA0LDRQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQU/8AAEQgAIAAgAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A/P4mW5nmllmeSR3LMzMSSc1a07R73V72KzsILi9u5TiOC2RpJHPoFGSarQ/ef6n+de4fAn9oaL4D+DfGX9i6Uf8AhO9XSKDT9eZY3WxiDZcBGByTkn0JCZBxQB41qeiX+iXslnqNtdWF3H9+3uo2jkX6q2CKpgy208MsUzxyI4ZWViCDmvsr9rrUdT1j9nb4T6h8RBbH4qXUs0zMsSxXJ04hivnKoAU5MPGBg7uM7q+NpvvJ9R/OgAh+8/1P867T4POI/iz4Mc6U+u7NZtG/suPbuu8TKfKG4hct93njnmuKIltp5opYXjkRyrKykEHNWbDVbvSr63vbKaezvLeRZYbi3ZkkidTlWVhyCCMgjpQB6l+1F411nx58dPFWpa5a3mnXaXP2ZNOvXVpLKNBhYflJUY5PB5JJ6k15LN95PqP51a1PWr7WtQnvtRuLm/vrhzJNc3TtJLIx6lmbJJ9zVQCW5nhiiheSR3CqqqSSc0Af/9k=`,
     avatar_default_full_default = `data:image/jpeg;base64,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`,
     avatar_default_medium_default = `data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gODAK/9sAQwAGBAUGBQQGBgUGBwcGCAoQCgoJCQoUDg8MEBcUGBgXFBYWGh0lHxobIxwWFiAsICMmJykqKRkfLTAtKDAlKCko/9sAQwEHBwcKCAoTCgoTKBoWGigoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgo/8AAEQgAQABAAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A8Inmk8+T94/3j/EfWmedJ/z0f/vo0T/6+T/eP86ZQA/zpP8Ano//AH0aPOk/56P/AN9GmVo6Loeq65M0Wj6ddXrr94QRF9v1I6fjQBR86T/no/8A30aPOk/56P8A99GtHW/Dus6GV/tjS7yyD8K00RVW+h6GsugB/nSf89H/AO+jT4JpPPj/AHj/AHh/EfWoafB/r4/94fzoAJ/9fJ/vH+dMp8/+vk/3j/OmUAXdE099W1mw06Jgsl3PHApPYswUH9a+qPF3iHSPhF4S0+003TxK0hMcEAbZvIA3SO2OvIz6k18nW88ttcRz28jxTRMHSRGKsrA5BBHQg1b1TWdT1fy/7V1G8vfLzs+0TNJtz1xknHQUAfUXw+8c6Z8UdN1HS9V0xIpUTM1s7eYkiE43KcAgg/lxg180+NtEHhzxZqmkqxdLWcojHqUPK598EV9CfBbwpF4G8J3fiLxA4trm5hEsnmceRCOQD/tHqR9B1r568a63/wAJH4r1TVghRLqYuinqE6KD74AoAxafB/r4/wDeH86ZT4P9fH/vD+dABP8A6+T/AHj/ADplPn/18n+8f50ygArt/gtpltq/xK0e2vYxJArPMUYZDFEZhn2yBXEV0/w203VNX8YWdloOoHTtQkWQx3IZl2gISeV55AI/GgD1H9pvxPdi/s/DcDGOz8pbqfHWRizBQfYbc/U+1eD12PxW0fWtE8Tpa+I9UOqXpt0cTl2bCEthctz1B/OuOoAKfB/r4/8AeH86ZT4P9fH/ALw/nQAT/wCvk/3j/OmVNPDJ58n7t/vH+E+tM8mT/nm//fJoAZV7Q9Xv9C1KLUNJuGtryMEJIoBIyCD1BHQmqnkyf883/wC+TR5Mn/PN/wDvk0AaHiHXtT8RX4vdau2u7oIIxIygHaCSBwB6msyn+TJ/zzf/AL5NHkyf883/AO+TQAynwf6+P/eH86PJk/55v/3yafBDJ58f7t/vD+E+tAH/2Q==`;
@@ -68246,7 +68519,6 @@ Error generating stack: ` +
       case `X-Large`:
       case `FillArea`:
         o += `_full`;
-        break;
     }
     return (o += i), o;
   }

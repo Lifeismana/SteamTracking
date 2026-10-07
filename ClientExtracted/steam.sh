@@ -73,7 +73,9 @@ create_legacy_entry_points () {
 
 	local legacy="$STEAMROOT/ubuntu12_32/steam-runtime"
 	rm -fr "${legacy}.old"
-	mv -f "$legacy" "${legacy}.old"
+	if [ -e "$legacy" ]; then
+		mv -f "$legacy" "${legacy}.old"
+	fi
 	mkdir -p "$legacy/amd64/usr/bin"
 	ln -fns "$steamrt/bin"/* "$legacy/amd64/usr/bin/"
 	mkdir -p "$legacy/usr/libexec/steam-runtime-tools-0"
@@ -103,6 +105,16 @@ if has_beta_optin; then
 	if [ -e "$STEAMROOT/.steam-enable-steamrt64-client" ]; then
 		if [ -x "$STEAMROOT/steamrt64/steam" ]; then
 			log "Starting SteamRT3 Steam"
+
+			# Some distros incorrectly set STEAM_RUNTIME before starting steam, which will
+			# prevent pressure-vessel from starting:
+			# Reference: https://github.com/ValveSoftware/steam-for-linux/issues/13597
+			unset STEAM_RUNTIME
+
+			# STEAM_RUNTIME_LIBRARY_PATH may be set if we are currently switching from
+			# Scout to SteamRT3
+			unset STEAM_RUNTIME_LIBRARY_PATH
+
 			create_legacy_entry_points
 			"$STEAMROOT/steamrt64/steam" "$@"
 			STATUS=$?

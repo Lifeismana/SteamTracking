@@ -56,6 +56,5 @@
     "SinglePricingPackage_Intro_2b": "Per i prezzi USD non comuni, digita un valore nel campo del prezzo USD. Quindi clicca sul pulsante che dice \"Converti prezzi...' e segui le istruzioni.",
     "PricingDashboard_Method_SuggestedPrice": "Suggerimento di conversione:",
     "PricingDashboard_Method_SuggestedPrice_ttip": "Questo prezzo è suggerito in base al metodo di conversione selezionato sopra e a un prezzo in USD di %1$s.",
-    "dummy": "test",
-    "empty_no_trailing_comma": ""
+    "dummy": "test"
 }

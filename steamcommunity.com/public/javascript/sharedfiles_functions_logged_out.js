@@ -14,11 +14,6 @@ function VoteLater(item_id)
 	showModal( 'NotLoggedInWarning', true );
 }
 
-function ReportItem()
-{
-	showModal( 'NotLoggedInWarning', true );
-}
-
 function SubscribeItem()
 {
 	showModal( 'NotLoggedInWarning', true );

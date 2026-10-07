@@ -14,12 +14,12 @@
  transaction_safe
  volatile
 ####### Log failed to open %s ##############\n
-#extension GL_ARB_texture_rectangle : enable\nuniform sampler2DRect tex0;\n\n// YUV coefficients \nconst vec3 Ucoeff = vec3(%f, %f, %f);\nconst vec3 Vcoeff = vec3(%f, %f, %f);\n\nvoid main()\n{\n    vec3 yuv, rgb;\n\n    // Get the color value \n    rgb = texture2DRect(tex0, gl_TexCoord[0].st).rgb;\n\n    // Calculate the YUV values \n    yuv.y = dot(rgb, Ucoeff) + 0.5;\n    yuv.z = dot(rgb, Vcoeff) + 0.5;\n\n    // Write the YUV values \n    gl_FragColor = vec4(yuv.y, yuv.z, 1.0, 1.0);\n}
-#extension GL_ARB_texture_rectangle : enable\nuniform sampler2DRect tex0;\n\n// YUV coefficients \nconst vec3 Ycoeff = vec3(%f, %f, %f);\n\nvoid main()\n{\n    vec3 yuv, rgb;\n\n    // Get the color value \n    rgb = texture2DRect(tex0, gl_TexCoord[0].st).rgb;\n\n    // Calculate the YUV values \n    yuv.x = dot(rgb, Ycoeff) + %f;\n\n    // Write the YUV values \n    gl_FragColor = vec4(yuv.x, 1.0, 1.0, 1.0);\n}
-#extension GL_ARB_texture_rectangle : enable\nuniform sampler2DRect tex0;\n\nvoid main()\n{\n    gl_FragColor = vec4( texture2DRect(tex0, gl_TexCoord[0].st).rgb, 1.0);\n}
-#version 150\nin vec2 textCoord;\nout vec4 FragColor;\nuniform sampler2DRect tex0;\n\n// YUV coefficients \nconst vec3 Ucoeff = vec3(%f, %f, %f);\nconst vec3 Vcoeff = vec3(%f, %f, %f);\n\nvoid main()\n{\n    vec3 yuv, rgb;\n\n    // Get the color value \n    rgb = texture(tex0, textCoord).rgb;\n\n    // Calculate the YUV values \n    yuv.y = dot(rgb, Ucoeff) + 0.5;\n    yuv.z = dot(rgb, Vcoeff) + 0.5;\n\n    // Write the YUV values \n    FragColor = vec4(yuv.y, yuv.z, 1.0, 1.0);\n}
-#version 150\nin vec2 textCoord;\nout vec4 FragColor;\nuniform sampler2DRect tex0;\n\n// YUV coefficients \nconst vec3 Ycoeff = vec3(%f, %f, %f);\n\nvoid main()\n{\n    vec3 yuv, rgb;\n\n    // Get the color value \n    rgb = texture(tex0, textCoord).rgb;\n\n    // Calculate the YUV values \n    yuv.x = dot(rgb, Ycoeff) + %f;\n\n    // Write the YUV values \n    FragColor = vec4(yuv.x, 1.0, 1.0, 1.0);\n}
-#version 150\nin vec2 textCoord;\nout vec4 FragColor;\nuniform sampler2DRect tex0;\n\nvoid main()\n{\n    FragColor = vec4( texture(tex0, textCoord).rgb, 1.0);\n}
+#extension GL_ARB_texture_rectangle : enable\n#define SAMPLE_TEX texture2DRect\nuniform sampler2DRect tex0;\n%s// YUV coefficients \nconst vec3 Ucoeff = vec3(%f, %f, %f);\nconst vec3 Vcoeff = vec3(%f, %f, %f);\n\nvoid main()\n{\n    vec3 yuv, rgb;\n\n    // Get the color value \n    rgb = SampleSource( gl_TexCoord[0].st );\n\n    // Calculate the YUV values \n    yuv.y = dot(rgb, Ucoeff) + 0.5;\n    yuv.z = dot(rgb, Vcoeff) + 0.5;\n\n    // Write the YUV values \n    gl_FragColor = vec4(yuv.y, yuv.z, 1.0, 1.0);\n}
+#extension GL_ARB_texture_rectangle : enable\n#define SAMPLE_TEX texture2DRect\nuniform sampler2DRect tex0;\n%s// YUV coefficients \nconst vec3 Ycoeff = vec3(%f, %f, %f);\n\nvoid main()\n{\n    vec3 yuv, rgb;\n\n    // Get the color value \n    rgb = SampleSource( gl_TexCoord[0].st );\n\n    // Calculate the YUV values \n    yuv.x = dot(rgb, Ycoeff) + %f;\n\n    // Write the YUV values \n    gl_FragColor = vec4(yuv.x, 1.0, 1.0, 1.0);\n}
+#extension GL_ARB_texture_rectangle : enable\n#define SAMPLE_TEX texture2DRect\nuniform sampler2DRect tex0;\n%svoid main()\n{\n    gl_FragColor = vec4( SampleSource( gl_TexCoord[0].st ), 1.0);\n}
+#version 150\n#define SAMPLE_TEX texture\nin vec2 textCoord;\nout vec4 FragColor;\nuniform sampler2DRect tex0;\n%s// YUV coefficients \nconst vec3 Ucoeff = vec3(%f, %f, %f);\nconst vec3 Vcoeff = vec3(%f, %f, %f);\n\nvoid main()\n{\n    vec3 yuv, rgb;\n\n    // Get the color value \n    rgb = SampleSource( textCoord );\n\n    // Calculate the YUV values \n    yuv.y = dot(rgb, Ucoeff) + 0.5;\n    yuv.z = dot(rgb, Vcoeff) + 0.5;\n\n    // Write the YUV values \n    FragColor = vec4(yuv.y, yuv.z, 1.0, 1.0);\n}
+#version 150\n#define SAMPLE_TEX texture\nin vec2 textCoord;\nout vec4 FragColor;\nuniform sampler2DRect tex0;\n%s// YUV coefficients \nconst vec3 Ycoeff = vec3(%f, %f, %f);\n\nvoid main()\n{\n    vec3 yuv, rgb;\n\n    // Get the color value \n    rgb = SampleSource( textCoord );\n\n    // Calculate the YUV values \n    yuv.x = dot(rgb, Ycoeff) + %f;\n\n    // Write the YUV values \n    FragColor = vec4(yuv.x, 1.0, 1.0, 1.0);\n}
+#version 150\n#define SAMPLE_TEX texture\nin vec2 textCoord;\nout vec4 FragColor;\nuniform sampler2DRect tex0;\n%svoid main()\n{\n    FragColor = vec4( SampleSource( textCoord ), 1.0);\n}
 #version 150\nin vec4 Attrib_Position;\nin vec4 Attrib_Color;\nin vec2 Attrib_TexCoord;\nout vec4 Color;\nout vec2 TexCoord;\nvoid main(void)\n{\n\tColor = Attrib_Color;\n\tTexCoord = Attrib_TexCoord;\n\tgl_Position = Attrib_Position;\n}\n
 #version 150\nin vec4 Color;\nin vec2 TexCoord;\nout vec4 FragColor;\nuniform sampler2D Texture;\nvoid main(void)\n{\n\tFragColor = Color * texture(Texture, TexCoord);\n}\n
 #version 150\nuniform bool bFlipRendering;\nuniform int srcWidth;\nuniform int srcHeight;\nout vec2 textCoord;\nconst vec2 screenAlignedQuad[4] = vec2[]\n(\n\tvec2(-1.0,  1.0),\n\tvec2( 1.0,  1.0),\n\tvec2(-1.0, -1.0),\n\tvec2( 1.0, -1.0)\n);\nconst vec2 textureCoords[4] = vec2[]\n(\n\tvec2( 0.0,  0.0),\n\tvec2( 1.0,  0.0),\n\tvec2( 0.0,  1.0),\n\tvec2( 1.0,  1.0)\n);\nvoid main()\n{\n   gl_Position = vec4( screenAlignedQuad[ gl_VertexID ], 0.0, 1.0);\n   if ( bFlipRendering )\n       gl_Position.y = -gl_Position.y;\n   textCoord = vec2( textureCoords[ gl_VertexID ].x * srcWidth, textureCoords[ gl_VertexID ].y * srcHeight );\n}
@@ -100,6 +100,7 @@ Corrupt render stream: k_EDeleteCursor\n
 Corrupt render stream: k_EDeleteTexture\n
 Corrupt render stream: k_EDrawAndUpdateSharedTexture\n
 Corrupt render stream: k_EDrawChromePaintBufferRect\n
+Corrupt render stream: k_EDrawTexturedQuad\n
 Corrupt render stream: k_EDrawTexturedRect\n
 Corrupt render stream: k_EIMECommand\n
 Corrupt render stream: k_ELoadTexture 3\n
@@ -197,7 +198,11 @@ Game OpenGL NV12
 Game OpenGL RGB
 Game Vulkan NV12
 Game Vulkan RGB
-Game Vulkan Shared
+Game Vulkan shared KMT
+Game Vulkan shared NT I0FL
+Game Vulkan shared NT I444
+Game Vulkan shared NT I4FL
+Game Vulkan shared NT IYUV
 Game process locale is '%s'\n
 GameID = %llu, AppID = %u, OverlayGameID = %llu, PID: %u, tid %u Executable: %s\n
 GameOverlayRender_PIDStream
@@ -212,6 +217,7 @@ GameOverlay_MovieStream_%u
 GameOverlay_ScreenshotStream_%d
 GameOverlay_SerializedWorkQueued_%d
 GameOverlay_VGUIPaintingCompleted_%d
+Gamepad UI: mouse moved, showing hw cursor\n
 Got EndFrame, but still have [%d] bytes remaining in render loop buffer\n
 Got hTexture of non NULL on shared texture draw but new shared tex update has no shared texture.\n
 HasXInput2
@@ -338,6 +344,7 @@ Timed out waiting for mutex in PutInternal()\n
 Track %p win 0x%lx (parent 0x%lx), cursor 0x%lx (valid %d), events 0x%x, top %d\n
 Track GLX win 0x%lx for X window 0x%lx\n
 Track win 0x%lx cursor 0x%lx\n
+UNKNOWN
 USER
 Unable to write to video stream: dst not aligned!\n
 Unable to write to video stream: dst stride (stride=%u)!\n
@@ -362,6 +369,7 @@ Video memory stream reader destroyed with frame lock!\n
 Video memory stream writer destroyed with frame lock!\n
 Video stream full!\n
 Video stream full.. couldn't get buffer!\n
+VulkanSteamOverlayDestroySwapChain
 VulkanSteamOverlayPresent
 VulkanSteamOverlayProcessCapturedFrame
 VulkanSteamOverlaySetWindowType
@@ -693,6 +701,7 @@ glTexCoord2i
 glTexEnvf
 glTexImage2D
 glTexParameterf
+glTexParameteri
 glTranslatef
 glUniform1i
 glUniform4fv
@@ -885,6 +894,7 @@ strtoul
 strtoull
 syscall
 system
+tapParams
 template parameter object for
 terminate called after throwing an instance of '
 terminate called recursively\n
@@ -904,6 +914,7 @@ typeinfo name for
 ubuntu12_32/steamclient.so
 ubuntu12_64/steamclient.so
 uniform bool bFlipRendering;\nvoid main()\n{\n\tgl_TexCoord[0] = gl_MultiTexCoord0;\n   gl_Position = gl_Vertex;\n   if ( bFlipRendering )\n       gl_Position.y = -gl_Position.y;\n}
+uniform vec4 tapParams;\n\nvec3 SampleSource( vec2 texCoord )\n{\n    vec2 start = texCoord - 0.5 * ( tapParams.zw - 1.0 ) * tapParams.xy;\n    vec3 v = vec3( 0.0 );\n    for ( int y = 0; y < 8; ++y )\n    {\n        if ( float( y ) >= tapParams.w )\n            break;\n        for ( int x = 0; x < 8; ++x )\n        {\n            if ( float( x ) >= tapParams.z )\n                break;\n            v += SAMPLE_TEX( tex0, start + vec2( float( x ), float( y ) ) * tapParams.xy ).rgb;\n        }\n    }\n    return v / ( tapParams.z * tapParams.w );\n}\n\n
 unknown
 unlink
 unsigned

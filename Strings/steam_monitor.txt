@@ -221,10 +221,10 @@ $ORIGIN
 /dev/urandom
 /etc/os-release
 /etc/steamos-oobe-image
-/proc/%d/status
 /proc/meminfo
 /proc/self/exe
 /proc/self/fd
+/proc/self/status
 /run/host/etc/os-release
 /tmp/.steam-sem-names
 /tmp/steam_monitor.log
@@ -236,8 +236,8 @@ $ORIGIN
 18CUtlCharConversion
 19CUtlNoEscConversion
 21CUtlCStringConversion
-22:41:18
-22:41:21
+23:04:33
+23:04:36
 31CAdHocValidation_SimpleCallback
 9IMemAlloc
 </script>
@@ -346,6 +346,7 @@ No samples during profile period.\n
 No tracked allocs currently in use. Total %d\n
 OUT OF MEMORY
 Object
+Oct  6 2026
 Only thread can stop self: Use a higher-level protocol
 OverlayInput
 OverlayRendering
@@ -361,7 +362,6 @@ SDL_GetError
 SDL_SetCurrentThreadPriority
 STEAM_DESKTOP_APP_AFFINITY_LIST
 Semaphore name (%s) is longer than POSIX can handle, truncating.
-Sep 23 2026
 ServerMain
 Size
 Sleeping
@@ -396,7 +396,7 @@ ThreadGetProcessExitCode
 ThreadWorkItem
 Total bytes allocated (os heap reported): %s\n
 Total bytes allocated counted: %s\n
-TracerPid:
+TracerPid:\t
 Tracked allocs currently in use. %d Total %d\n
 Tried to create a thread that has already been created!
 USER
@@ -808,7 +808,6 @@ realpath
 reference temporary #
 reinterpret_cast
 rename
-rewind
 rmdir
 s1 != NULL
 s2 != NULL
@@ -921,25 +920,7 @@ transaction clone for operator new[](unsigned long)
 true
 typeinfo fn for
 typeinfo for
-typeinfo for __cxxabiv1::__class_type_info
-typeinfo for __cxxabiv1::__forced_unwind
-typeinfo for __cxxabiv1::__foreign_exception
-typeinfo for __cxxabiv1::__fundamental_type_info
-typeinfo for __cxxabiv1::__si_class_type_info
-typeinfo for __gnu_cxx::__concurrence_lock_error
-typeinfo for __gnu_cxx::__concurrence_unlock_error
-typeinfo for __gnu_cxx::recursive_init_error
-typeinfo for int
 typeinfo name for
-typeinfo name for __cxxabiv1::__class_type_info
-typeinfo name for __cxxabiv1::__forced_unwind
-typeinfo name for __cxxabiv1::__foreign_exception
-typeinfo name for __cxxabiv1::__fundamental_type_info
-typeinfo name for __cxxabiv1::__si_class_type_info
-typeinfo name for __gnu_cxx::__concurrence_lock_error
-typeinfo name for __gnu_cxx::__concurrence_unlock_error
-typeinfo name for __gnu_cxx::recursive_init_error
-typeinfo name for int
 uname
 unknown
 unlink
@@ -968,12 +949,6 @@ vstdlib_wcstoi64
 vstdlib_wcstoui64
 vswprintf
 vtable for
-vtable for __cxxabiv1::__class_type_info
-vtable for __cxxabiv1::__fundamental_type_info
-vtable for __cxxabiv1::__si_class_type_info
-vtable for __gnu_cxx::__concurrence_lock_error
-vtable for __gnu_cxx::__concurrence_unlock_error
-vtable for __gnu_cxx::recursive_init_error
 waitid
 waitpid
 wchar_t

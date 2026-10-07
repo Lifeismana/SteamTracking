@@ -1,6 +1,12 @@
 
 var gItems = Array();
 
+// Refreshes the support-only moderation subject panel on the item's card
+function DispatchUGCModerationResolved( id )
+{
+	window.dispatchEvent( new CustomEvent( 'ugc-moderation-resolved', { detail: { publishedFileID: String( id ) } } ) );
+}
+
 function AddContentDescriptors( id, add )
 {
 	$J.post(
@@ -9,6 +15,7 @@ function AddContentDescriptors( id, add )
 	).done( function( json ) {
 		ShowWithFade( $( 'blurred_' + id ) );
 		$J( '#item_' + id ).addClass( 'blurred' );
+		DispatchUGCModerationResolved( id );
 	} );
 }
 
@@ -18,13 +25,22 @@ function ModeratorEditContentDescriptors( id )
 	{
 		ShowWithFade( $( 'blurred_' + id ) );
 		$J( '#item_' + id ).addClass( 'blurred' );
+		DispatchUGCModerationResolved( id );
 	}
 	EditContentDescriptors( id, fn );
 }
 
 function BanItem( id )
 {
-	UpdateBanState( id, true );
+	// ShowUGCBanDialog is only mounted for support accounts, whose bans need a moderation reason; everyone else keeps the one-click ban
+	if ( window.ShowUGCBanDialog )
+	{
+		ShowUGCBanDialog( [ id ], ( eReason, strNote ) => UpdateBanState( id, true, eReason, strNote ) );
+	}
+	else
+	{
+		UpdateBanState( id, true );
+	}
 }
 
 function UnBanItem( id )
@@ -32,15 +48,15 @@ function UnBanItem( id )
 	UpdateBanState( id, false );
 }
 
-function UpdateBanState( id, bBan )
+function UpdateBanState( id, bBan, eReason, strNote )
 {
 	var item = gItems[id];
 	var appid = item['consumer_appid'];
-	var title = V_EscapeHTML( item['title'] );
 	var ban = bBan ? 1 : 0;
+	var strReasonParams = eReason ? '&contentReportReason=' + eReason + '&BanReason=' + encodeURIComponent( strNote || '' ) : '';
 	var options = {
 		method: 'post',
-		postBody: 'id=' + id + '&appid=' + appid + '&sessionid=' + g_sessionID + '&IsBanned=' + bBan,
+		postBody: 'id=' + id + '&appid=' + appid + '&sessionid=' + g_sessionID + '&IsBanned=' + bBan + strReasonParams,
 		onComplete: (function(id){
 			return function(transport)
 			{
@@ -53,6 +69,8 @@ function UpdateBanState( id, bBan )
 				{
 					$J('#item_' + id).removeClass('banned');
 				}
+
+				DispatchUGCModerationResolved( id );
 			}
 		}(id))
 	};
@@ -65,8 +83,6 @@ function UpdateBanState( id, bBan )
 function VoteBanUsers( id )
 {
 	var item = gItems[id];
-	var appid = item['consumer_appid'];
-	var title = V_EscapeHTML( item['title'] );
 	var options = {
 		method: 'post',
 		postBody: 'id=' + id + '&sessionid=' + g_sessionID,
@@ -88,7 +104,6 @@ function MarkIncompatible( id )
 {
 	var item = gItems[id];
 	var appid = item['consumer_appid'];
-	var title = V_EscapeHTML( item['title'] );
 	var options = {
 		method: 'post',
 		postBody: 'id=' + id + '&appid=' + appid + '&sessionid=' + g_sessionID + '&incompatible=1',
@@ -97,6 +112,7 @@ function MarkIncompatible( id )
 			{
 				ShowWithFade( $( 'incompatible_' + id ) );
 				$J( '#item_' + id ).addClass( 'incompatible' );
+				DispatchUGCModerationResolved( id );
 			}
 		}(id))
 	};
@@ -117,6 +133,7 @@ function ResetReports( id )
 			return function(transport)
 			{
 				$J( "#ModerationControls_" + id ).html( '<span style="color: green">Reports Cleared!</span>' );
+				DispatchUGCModerationResolved( id );
 			}
 		}(id))
 	};
@@ -146,17 +163,27 @@ function UGCClearContentCheckFlag( id )
 	);
 }
 
-function UGCMarkAsSuspicious( id )
+function UGCMarkAsSuspiciousPrompt( id )
+{
+	var dialog = ShowPromptDialog( 'Mark as Suspicious?', 'Please provide a reason: ' );
+	dialog.done( function ( reason ) {
+		UGCMarkAsSuspicious( id, reason );
+	} );
+}
+
+function UGCMarkAsSuspicious( id, strReason )
 {
 	var item = gItems[id];
 	var appid = item['consumer_appid'];
+	var strReasonParam = strReason ? '&reason=' + encodeURIComponent( strReason ) : '';
 	var options = {
 		method: 'post',
-		postBody: 'id=' + id + '&appid=' + appid + '&sessionid=' + g_sessionID + '&suspicious=1',
+		postBody: 'id=' + id + '&appid=' + appid + '&sessionid=' + g_sessionID + '&suspicious=1' + strReasonParam,
 		onComplete: (function(id){
 			return function(transport)
 			{
 				$J( "#ModerationControls_" + id ).html( '<span style="color: red">Marked as Suspicious</span>' );
+				DispatchUGCModerationResolved( id );
 			}
 		}(id))
 	};
@@ -164,6 +191,36 @@ function UGCMarkAsSuspicious( id )
 		'https://steamcommunity.com/sharedfiles/markassuspicious/',
 		options
 	);
+}
+
+function UGCClaimModerationBatch( filetype )
+{
+	$J.post( 'https://steamcommunity.com/sharedfiles/ajaxclaimugcmoderationbatch/', { sessionid: g_sessionID, filetype: filetype } )
+		.done( function( data ) {
+			if ( data.success == 1 )
+				window.location = 'https://steamcommunity.com/apps/reportedcontent/?view=claimed&filetype=' + encodeURIComponent( filetype );
+			else
+				ShowAlertDialog( 'Claim Batch', 'Failed to claim a batch (' + data.success + ').' );
+		} )
+		.fail( function() {
+			ShowAlertDialog( 'Claim Batch', 'Failed to claim a batch.' );
+		} );
+}
+
+function UGCReleaseAllModerationClaims( filetype )
+{
+	ShowConfirmDialog( 'Release All', 'Release all of your claimed items?' ).done( function() {
+		$J.post( 'https://steamcommunity.com/sharedfiles/ajaxreleaseallmoderationclaims/', { sessionid: g_sessionID } )
+			.done( function( data ) {
+				if ( data.success == 1 )
+					window.location = 'https://steamcommunity.com/apps/reportedcontent/?filetype=' + encodeURIComponent( filetype );
+				else
+					ShowAlertDialog( 'Release All', 'Failed to release your claimed items (' + data.success + ').' );
+			} )
+			.fail( function() {
+				ShowAlertDialog( 'Release All', 'Failed to release your claimed items.' );
+			} );
+	} );
 }
 
 function ViewReports( id )
@@ -183,7 +240,7 @@ function UpdateSelectedItems()
 
 	$J( '.reported_item_checkbox' ).each( function( index, elem ) {
 		elem = $J( elem );
-		var publishedFileID = elem.data( 'dsPublishedfileid' );
+		var publishedFileID = elem.data( 'itemid' );
 		var parent = $J( "#item_" + publishedFileID );
 		if ( elem.prop( 'checked' ) )
 		{
@@ -247,7 +304,19 @@ function SelectedItems_ApplyContentDescriptors()
 
 function SelectedItems_Ban()
 {
-	ApplyFuncOnSelectedItems( BanItem );
+	if ( !window.ShowUGCBanDialog )
+	{
+		ApplyFuncOnSelectedItems( BanItem );
+		return;
+	}
+
+	// Show the "select a reason" dialog that will apply to all the selected items
+	var rgIDs = [];
+	ApplyFuncOnSelectedItems( ( id ) => rgIDs.push( id ) );
+	if ( !rgIDs.length )
+		return;
+
+	ShowUGCBanDialog( rgIDs, ( eReason, strNote ) => rgIDs.forEach( ( id ) => UpdateBanState( id, true, eReason, strNote ) ) );
 }
 
 function SelectedItems_UnBan()

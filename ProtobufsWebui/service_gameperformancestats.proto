@@ -13,6 +13,8 @@ message CGamePerformanceStats_GetGameFrameRateStats_Response_FrameRate {
 	optional uint64 report_count = 5;
 	optional double mean_frame_rate = 6;
 	optional double mean_frame_rate_stddev = 7;
+	repeated double frame_rate_histogram = 8;
+	optional uint64 histogram_report_count = 9;
 }
 
 service GamePerformanceStats {

@@ -484,52 +484,6 @@ function PublishedFileVoteDown( id )
 	}
 }
 
-function ReportItem()
-{
-	if ( $('ReportItemBtn') && $('ReportItemBtn').hasClassName( "toggled" ) )
-		return;
-
-	var dialog = ShowPromptWithTextAreaDialog( 'Report this item', '', null, null, 1000 );
-	var explanation = $J('<div/>', { 'class': 'report_dialog_explanation' } );
-	explanation.html( 'Please describe the way in which this item is in violation of the Steam Terms of Service. Please include any relevant information or links. Filing this report cannot be undone.' );
-
-	var dmcaLink = $J('<div/>', { 'class': 'report_dialog_explanation' } );
-	dmcaLink.html( 'If you\'d like to report Copyright Infringement and are the copyright holder, please proceed to our DMCA compliant notice of copyright infringement form <a href="https://steamcommunity.com/dmca/create/" target="_blank">here</a>.' );
-	var actualLink = dmcaLink.find( "a" )[0];
-	actualLink.href += publishedfileid;
-
-	var trademarkLink = $J('<div/>', { 'class': 'report_dialog_explanation' } );
-	trademarkLink.html( 'If you\'d like to file a Trademark complaint, please file one <a href="https://steamcommunity.com/trademark/createtrademarkcomplaint/" target="_blank">here</a>.' );
-	var actualLink2 = trademarkLink.find( "a" )[0];
-	actualLink2.href += publishedfileid;
-
-	var textArea = dialog.m_$Content.find( 'textarea' );
-	textArea.addClass( "report_dialog_text_area" );
-	textArea.parent().before( explanation );
-	textArea.parent().after( trademarkLink );
-	textArea.parent().after( dmcaLink );
-
-	dialog.done( function( data ) {
-		data = v_trim( data );
-		if ( data.length < 1 )
-		{
-			alert( 'Please enter a valid reason.')
-			return;
-		}
-		$J.post( 'https://steamcommunity.com/sharedfiles/reportitem', {
-				'id' : publishedfileid,
-				'description' : data,
-				'sessionid' : g_sessionID
-			}
-		).done( function( json ) {
-				if ( !CheckVoteResultsJSON( json ) )
-					return;
-
-				$('ReportItemBtn').className = "general_btn report toggled";
-		} );
-	} );
-}
-
 function SharedFiles_BlockAuthorModal( author, strPersonaName )
 {
 	ShowConfirmDialog( 'Block All Communication',

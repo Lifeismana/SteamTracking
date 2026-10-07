@@ -3655,6 +3655,17 @@
               this.m_valueIsActive.Set(_),
               _ &&
                 this.m_LastActiveFocusNavTree?.OnContextActiveStateChanged(_);
+            const _ = this.m_LastActiveFocusNavTree;
+            if (_ && void 0 === _ && _?.Window == (_ ?? this.m_rootWindow)) {
+              const _ = _?.GetLastFocusedNode()?.Element,
+                _ = _?.ownerDocument.activeElement;
+              !_ ||
+                !_?.BIsActiveFocus() ||
+                (_ && _ != _.ownerDocument.body) ||
+                _.focus({
+                  preventScroll: !0,
+                });
+            }
           });
         }
         OnActivate(_) {
@@ -4722,6 +4733,11 @@
                     _: 52,
                     _: _.readUint32,
                     _: _.writeUint32,
+                  },
+                  browserapi_site: {
+                    _: 53,
+                    _: _.readString,
+                    _: _.writeString,
                   },
                 },
               }),
@@ -7342,6 +7358,7 @@
               {
                 ePrivilege: 2,
                 eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: ["all"],
               },
             );
           }),
@@ -13439,6 +13456,8 @@
           nControllerStyle: 100,
         });
         m_bRestoringHistory = !1;
+        m_nSystemKeyAppIDHint;
+        m_fnSystemKeyContextResolver;
         m_fnGamepadEventUpdateBatcher = (_) => _();
         constructor() {
           window.FocusNavController = this;
@@ -13561,18 +13580,26 @@
         }
         DispatchVirtualButtonClick(_, _, _) {
           let _;
-          _ && (_ = this.GetActiveContext() ?? this.FindAnActiveContext()),
-            this.OnButtonDown(
-              _,
-              _ ?? _._.GAMEPAD,
-              -1,
-              void 0,
-              void 0,
-              void 0,
-              _,
-              _,
-              !0,
-            ),
+          if (_) _ = this.GetActiveContext() ?? this.FindAnActiveContext();
+          else if (_ && !(0, _._)(_)) {
+            const _ = this.GetActiveContext() ?? this.FindAnActiveContext(),
+              _ = _?.m_LastActiveNavTree;
+            _ &&
+              !__webpack_require__.GetLastFocusedNode() &&
+              _.Root.Element &&
+              ((_ = _.Root.Element), (_ = _));
+          }
+          this.OnButtonDown(
+            _,
+            _ ?? _._.GAMEPAD,
+            -1,
+            void 0,
+            void 0,
+            void 0,
+            _,
+            _,
+            !0,
+          ),
             this.OnButtonUp(
               _,
               _ ?? _._.GAMEPAD,
@@ -13603,6 +13630,20 @@
         }
         GetEventTarget(_, _, _ = !1) {
           let _ = this.GetActiveContext();
+          if (this.m_nSystemKeyAppIDHint && !_?.FindNavTreeInFocusedWindow()) {
+            const _ = this.m_fnSystemKeyContextResolver?.(
+              this.m_nSystemKeyAppIDHint,
+            );
+            _ &&
+              _ != _ &&
+              this.BCanActivateContext(_) &&
+              (_(
+                `GetEventTarget: using ${_.LogName()} for system key AppID ${this.m_nSystemKeyAppIDHint} instead of ${_?.LogName() ?? "no context"}`,
+              ),
+              _?.ActiveWindow && _.OnDeactivate(_.ActiveWindow),
+              _.OnActivate(_.m_LastActiveFocusNavTree?.Window ?? _.RootWindow),
+              (_ = _));
+          }
           !_ && _ && (_ = this.FindAnActiveContext());
           let _ = _?.ActiveWindow?.document.activeElement;
           if (_?.m_LastActiveNavTree) {
@@ -13809,6 +13850,12 @@
         }
         BIsInActiveContext(_) {
           return Boolean(_ && _.WindowContext == this.m_ActiveContext);
+        }
+        SetSystemKeyAppIDHint(_) {
+          this.m_nSystemKeyAppIDHint = _;
+        }
+        SetSystemKeyContextResolver(_) {
+          this.m_fnSystemKeyContextResolver = _;
         }
         RegisterForUnhandledButtonDownEvents(_) {
           return this.m_UnhandledButtonEventsCallbacks.Register(_);

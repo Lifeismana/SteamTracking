@@ -17,7 +17,7 @@
           d = r(71262),
           O = r(69871),
           N = r(20447),
-          V = "11034825",
+          V = "11094443",
           E = Object.defineProperty,
           R = Object.getOwnPropertyDescriptor,
           W = (t, e, o, s) => {
@@ -221,7 +221,7 @@
           h = r(6739),
           nt = r(83906),
           rt = r(33926),
-          St = "11034825",
+          St = "11094443",
           it = Object.defineProperty,
           ct = Object.getOwnPropertyDescriptor,
           l = (t, e, o, s) => {
@@ -714,7 +714,7 @@
           return `${h.TS.STORE_BASE_URL}login?steamtv=1`;
         }
         var ut = r(22182),
-          Bt = "11034825",
+          Bt = "11094443",
           Ct = Object.defineProperty,
           ft = Object.getOwnPropertyDescriptor,
           vt = (t, e, o, s) => {
@@ -749,7 +749,7 @@
           m = r(63696),
           f = r(44613),
           g = r(28644),
-          B = "11034825";
+          B = "11094443";
         const u = m.forwardRef(function (
           {
             steamID: A,

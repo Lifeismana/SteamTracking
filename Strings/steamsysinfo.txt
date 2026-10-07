@@ -839,13 +839,13 @@ $\nY8O
 /etc/mtab
 /etc/os-release
 /etc/steamos-oobe-image
-/proc/%d/status
 /proc/meminfo
 /proc/mounts
 /proc/self/exe
 /proc/self/fd
 /proc/self/fd/%d
 /proc/self/maps
+/proc/self/status
 /run/host/etc/os-release
 /steamrtarm64
 /steamsysinfo
@@ -1002,7 +1002,7 @@ $\nY8O
 20IUniformRandomStream
 21CLogFileAsyncCallback
 21CUtlCStringConversion
-22:41:18
+23:04:33
 24CDirWatcherPollingThread
 29CMsgChildProcessQueryResponse
 2<QF
@@ -2204,6 +2204,7 @@ OUT OF MEMORY
 OUT_OF_RANGE
 O\n\nAnnotation
 Object
+Oct  6 2026
 October
 Oneof must have at least one field.
 OneofDescriptorProto
@@ -2279,7 +2280,6 @@ Second argument to SwapFields() (of type "
 Seeking to a position not supported with async io
 Seeking to a position which is not sector aligned will break unbuffered io
 Semaphore name (%s) is longer than POSIX can handle, truncating.
-Sep 23 2026
 September
 ServerMain
 ServiceDescriptorProto
@@ -2443,7 +2443,7 @@ Total bytes allocated (os heap reported): %s\n
 Total bytes allocated counted: %s\n
 Total number of strings %u, longest string size %u, avg size %u\n
 Total of %u buckets with %u hash collisions\n
-TracerPid:
+TracerPid:\t
 Tracked allocs currently in use. %d Total %d\n
 Tried to create a thread that has already been created!
 Tried to merge messages of different types
@@ -3821,7 +3821,6 @@ required
 reserved_range
 resizeNumBits >= 0
 response"
-rewind
 rmdir
 ru&o
 s1 != NULL
@@ -4029,27 +4028,7 @@ type.googleapis.com/
 type.googleprod.com/
 typeinfo fn for
 typeinfo for
-typeinfo for __cxxabiv1::__class_type_info
-typeinfo for __cxxabiv1::__forced_unwind
-typeinfo for __cxxabiv1::__foreign_exception
-typeinfo for __cxxabiv1::__fundamental_type_info
-typeinfo for __cxxabiv1::__si_class_type_info
-typeinfo for __cxxabiv1::__vmi_class_type_info
-typeinfo for __gnu_cxx::__concurrence_lock_error
-typeinfo for __gnu_cxx::__concurrence_unlock_error
-typeinfo for __gnu_cxx::recursive_init_error
-typeinfo for int
 typeinfo name for
-typeinfo name for __cxxabiv1::__class_type_info
-typeinfo name for __cxxabiv1::__forced_unwind
-typeinfo name for __cxxabiv1::__foreign_exception
-typeinfo name for __cxxabiv1::__fundamental_type_info
-typeinfo name for __cxxabiv1::__si_class_type_info
-typeinfo name for __cxxabiv1::__vmi_class_type_info
-typeinfo name for __gnu_cxx::__concurrence_lock_error
-typeinfo name for __gnu_cxx::__concurrence_unlock_error
-typeinfo name for __gnu_cxx::recursive_init_error
-typeinfo name for int
 uint32
 uint64
 unNetworkBitsIPv4 <= 32
@@ -4734,13 +4713,6 @@ vstdlib_wcstoi64
 vstdlib_wcstoui64
 vswprintf
 vtable for
-vtable for __cxxabiv1::__class_type_info
-vtable for __cxxabiv1::__fundamental_type_info
-vtable for __cxxabiv1::__si_class_type_info
-vtable for __cxxabiv1::__vmi_class_type_info
-vtable for __gnu_cxx::__concurrence_lock_error
-vtable for __gnu_cxx::__concurrence_unlock_error
-vtable for __gnu_cxx::recursive_init_error
 w+OQvr
 wXR\r
 waitid

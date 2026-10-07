@@ -755,14 +755,7 @@ message CClientNotificationTimedTrialRemaining {
 message CClientNotificationTimerExpired {
 }
 
-message CCloud_AppExitSyncDone_Notification {
-	optional uint32 appid = 1;
-	optional uint64 client_id = 2;
-	optional bool uploads_completed = 3;
-	optional bool uploads_required = 4;
-}
-
-// Used by: Cloud, common.proto
+// Used by: common.proto
 message CCloud_PendingRemoteOperation {
 	optional int32 operation = 1 [(.description) = "enum"];
 	optional string machine_name = 2;
@@ -3646,6 +3639,7 @@ message CMsgGameActionSet {
 	repeated .CMsgGameActionSet layers = 4;
 	repeated .CMsgGameActionBindingType action_binding_types = 5;
 	repeated .CMsgControllerSources source_bindings = 6;
+	optional bool has_inactive_mouse_mode = 7;
 }
 
 message CMsgGameServerPolicyUpdate {
@@ -3947,6 +3941,7 @@ message CMsgProtoBufHeader {
 	optional fixed64 wg_msg_trace_steamid = 50;
 	optional string wg_msg_trace_status = 51;
 	optional uint32 trace_flags = 52;
+	optional string browserapi_site = 53;
 }
 
 message CMsgProtobufWrapped {
@@ -5638,6 +5633,10 @@ message CProductImpressionsFromClient_Notification_Impression {
 	optional uint32 num_impressions = 3;
 }
 
+message CProductInfo_ForceEmitPriceConversion {
+	optional int32 method = 1 [(.description) = "enum"];
+}
+
 message CQuitRequest {
 }
 
@@ -6452,6 +6451,7 @@ message CStreamingClientConfig {
 	optional bool pyrowave_custom_bitrate = 36;
 	optional int32 pyrowave_custom_bitrate_kbps = 37;
 	optional float pyrowave_quality_modifier = 38;
+	optional bool pyrowave_yuv444 = 39;
 }
 
 // Used by: common.proto
@@ -6943,6 +6943,14 @@ message CVRGamepadUI_Message_SetHMDSettings_Request {
 message CVRGamepadUI_Message_SetHMDSettings_Response {
 }
 
+message CVRGamepadUI_Message_SetPeripheralIndicatorSuppressed_Request {
+	optional int32 indicator = 1 [(.description) = "enum"];
+	optional bool suppressed = 2;
+}
+
+message CVRGamepadUI_Message_SetPeripheralIndicatorSuppressed_Response {
+}
+
 message CVRGamepadUI_Message_SetSpatializeEnabled_Request {
 	optional bool enabled = 1;
 }
@@ -7214,6 +7222,16 @@ message CVRGamepadUIShared_PathProperty_HMDSettings {
 	optional string playtime_profile_name = 55;
 }
 
+message CVRGamepadUIShared_PathProperty_PeripheralIndicators {
+	repeated .CVRGamepadUIShared_PathProperty_PeripheralIndicators_Indicator indicators = 1;
+}
+
+// Used by: common.proto
+message CVRGamepadUIShared_PathProperty_PeripheralIndicators_Indicator {
+	optional int32 type = 1 [(.description) = "enum"];
+	optional bool is_suppressed = 2;
+}
+
 message CVRGamepadUIShared_PathProperty_PowerOptions {
 	optional bool can_sleep = 1;
 	optional bool can_shutdown = 2;
@@ -7399,6 +7417,7 @@ message StoreGameRating {
 	optional int32 required_age = 10;
 	optional bool use_age_gate = 11;
 	repeated int32 descriptor_images = 12 [(.description) = "enum"];
+	optional string content_survey_notes = 13;
 	optional string image_url = 20;
 	optional string image_target = 21;
 }
@@ -7455,6 +7474,7 @@ message StoreItem {
 	optional .StoreItem_ExtraDetails extra_details = 75;
 	optional fixed64 gid = 76;
 	repeated .StoreItem_OptInRegistrationTags optin_registration_tags = 77;
+	repeated .StoreItem_PurchaseNote purchase_notes = 78;
 }
 
 // Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
@@ -7496,6 +7516,7 @@ message StoreItem_Assets {
 	optional string small_capsule_2x = 19;
 	optional string header_2x = 20;
 	optional uint32 last_modified = 21;
+	optional string creator_home_background = 22;
 }
 
 // Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
@@ -7564,7 +7585,8 @@ message StoreItem_ExtraDetails {
 	optional .StoreItem_ExtraDetails_LinksAndInfo links_and_info = 22;
 	optional bool item_store_eligible = 23;
 	optional bool points_shop_eligible = 24;
-	optional string specs_bbcode = 25;
+	optional .StoreItem_ExtraDetails_Metacritic metacritic = 26;
+	optional .StoreItem_ExtraDetails_CastAndCrew cast_and_crew = 27;
 }
 
 // Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
@@ -7581,6 +7603,15 @@ message StoreItem_ExtraDetails_Anticheat {
 	optional string boot_protection_name = 4;
 	optional string name = 5;
 	optional string name_loc = 6;
+}
+
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+message StoreItem_ExtraDetails_CastAndCrew {
+	repeated string directors = 1;
+	repeated string producers = 2;
+	repeated string writers = 3;
+	repeated string music = 4;
+	repeated string actors = 5;
 }
 
 // Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
@@ -7615,6 +7646,13 @@ message StoreItem_ExtraDetails_LinksAndInfo {
 }
 
 // Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+message StoreItem_ExtraDetails_Metacritic {
+	optional uint32 score = 1;
+	optional string url = 2;
+	optional bool always_show = 3;
+}
+
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
 message StoreItem_ExtraDetails_PageSection {
 	optional string label = 1;
 	optional string content_bbcode = 2;
@@ -7642,6 +7680,7 @@ message StoreItem_IncludedItems {
 	repeated .StoreItem included_apps = 1;
 	repeated .StoreItem included_packages = 2;
 	repeated .StoreItem included_bundles = 3;
+	repeated .StoreItem included_creators = 4;
 }
 
 // Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
@@ -7689,6 +7728,7 @@ message StoreItem_Platforms {
 message StoreItem_Platforms_VRSupport {
 	optional bool vrhmd = 1;
 	optional bool vrhmd_only = 2;
+	optional bool show_optional_vr_mode_notice = 3;
 	optional bool htc_vive = 40;
 	optional bool oculus_rift = 41;
 	optional bool windows_mr = 42;
@@ -7707,6 +7747,13 @@ message StoreItem_PressReview {
 	optional string score = 2;
 	optional string site = 3;
 	optional string url = 4;
+}
+
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+message StoreItem_PurchaseNote {
+	optional int32 type = 1 [(.description) = "enum"];
+	optional bool highlighted = 2;
+	optional string text_bbcode = 3;
 }
 
 // Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist

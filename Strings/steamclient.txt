@@ -241,6 +241,7 @@
  .CStore_GetGamesFollowed_Request
  .CUser_SaveHardwareInfo_Response
  .CWorkshop_GetEULAStatus_Request
+ /bin/sh -c
  /extractguids
  12CDynamicFuncIPFP9_XDisplayPKcEE
  3CQ`p
@@ -290,7 +291,6 @@
  Tried to set runtime antidrift value, but we are using hardware calibration, so we're not analysing the raw gyro drift. Skip. ( %f,  %f,  %f ).\n
  Updated Acceleration Tolerance : %f\n
  Updated Gyroscope Tolerance For AutoDrift Calibration: %f\n
- Valid parameters\n
  Workshop Content folder : "%s" - no update needed \n
  Workshop Content folder : "%s" - updated needed %s \n
  [clone
@@ -533,7 +533,6 @@
 != and not NULL
 !AxU
 !BIsSingleFileUpdateMode()
-!BIsValidDirectory( sTempDir )
 !BLoggedOn()
 !BRunningAsSiteLicenseProvider()
 !BUseIOCP()
@@ -1290,7 +1289,6 @@
 "l\n(CGameRecording_UploadClipToSteam_Request
 "l\n-CChatRoom_EndMiniGameForChatRoomGroup_Request
 "lbN.
-"legacy_set"\t\t"1"
 "m\n(CMsgRemoteClientPeerContentServerChanged
 "m\n8CDepotContentDetection_GetAllDetectedAppContent_Response
 "n\n"CMsgClientDeauthorizeDeviceRequest
@@ -2390,17 +2388,12 @@ $steammessages_parental_objects.proto"
 %s (%1.2fms)
 %s (%llu kB)
 %s (emsg=%d)
-%s - failed to collect system logs
 %s - failed to send manifest request
 %s - failed to send patch request
 %s - locked by 0x%p
 %s - manifest request received %d (%s) HTTP response
 %s - received %d (%s) HTTP response
 %s - received 200 OK but empty response - converting to 404
-%s - skipping directory: %s
-%s - skipping large file: %s
-%s - system log collector has no logs
-%s - system log collector is not available
 %s --add-section %s=%s %s
 %s --device %s
 %s --remove-section=%s %s
@@ -2525,7 +2518,6 @@ $steammessages_parental_objects.proto"
 %s/%llu_legacy.bin
 %s/%s.cachedmsg
 %s/%s.tmp
-%s/%s/%llX/system
 %s/%s/%s.previous.txt
 %s/%s/%s.txt
 %s/%s/%s/%u/%s.vdf
@@ -2550,6 +2542,7 @@ $steammessages_parental_objects.proto"
 %s/%s/gameserver/ugc/%s/
 %s/%s/steam-runtime-system-info-%lu.txt
 %s/%s/virtualgamepadinfo.txt
+%s/%s:%s/%s
 %s/%s_%u.acf
 %s/%sresource/filter_%s_%s.txt.gz
 %s/../%s%s/%sdriverquery
@@ -2703,7 +2696,6 @@ $steammessages_parental_objects.proto"
 %s: failed to retrieve device list from NetworkManager
 %s: failed to retrieve system version details\n
 %s: failed to run command: %s\n
-%s: failed to save output file: %s
 %s: forcing matching mode: %d
 %s: found matching mode: %d
 %s: gamescope event external: %d modes: %d
@@ -2768,9 +2760,8 @@ $steammessages_parental_objects.proto"
 %s:%d %s %.2f %s %s
 %s:%d %s %.2f %s %s %s
 %s:%d: OpenSSL internal error: %s\n
+%s:%d: invalid %s id %u for "%s" of type '%s' in '%s'
 %s:%dx%d@%d %u
-%s:%s/%s:%s/%s
-%s:%s/../steamrtarm64/%s
 %s://%s/%s%s
 %s:443
 %s='%s', which isn't a valid IPv%d address
@@ -7394,6 +7385,7 @@ $steammessages_parental_objects.proto"
 /OTN
 /P8i
 /R?jjU?
+/ScreenSaver
 /Steam.dll
 /Steam3PosixRegistryManager
 /SteamApps
@@ -7615,7 +7607,7 @@ $steammessages_parental_objects.proto"
 /data/src/clientdll/networkdevicemanager_linux.cpp:3017
 /data/src/clientdll/p2pnetworkingsession.cpp
 /data/src/clientdll/peercontentserver.cpp
-/data/src/clientdll/perfreportingmanager.cpp:388
+/data/src/clientdll/perfreportingmanager.cpp:391
 /data/src/clientdll/pipewirecontext.cpp
 /data/src/clientdll/pipewireutils.cpp
 /data/src/clientdll/remoteclientjobs.cpp
@@ -7632,9 +7624,10 @@ $steammessages_parental_objects.proto"
 /data/src/clientdll/shadercachemanager/shadercachemanager.cpp:2102
 /data/src/clientdll/shadercachemanager/shadercachemanager.cpp:2172
 /data/src/clientdll/shadercachemanager/shadercachemanager.cpp:2226
-/data/src/clientdll/shadercachemanager/shadercachemanager.cpp:3822
-/data/src/clientdll/shadercachemanager/shadercachemanager.cpp:3950
-/data/src/clientdll/shadercachemanager/shadercachemanager.cpp:4233
+/data/src/clientdll/shadercachemanager/shadercachemanager.cpp:3820
+/data/src/clientdll/shadercachemanager/shadercachemanager.cpp:3948
+/data/src/clientdll/shadercachemanager/shadercachemanager.cpp:4231
+/data/src/clientdll/shadercachemanager/shadercompilejob.cpp
 /data/src/clientdll/shadercachemanager/shadercontentupdatejob.cpp
 /data/src/clientdll/sitelicenseclient.cpp
 /data/src/clientdll/steamclient.cpp
@@ -7648,12 +7641,11 @@ $steammessages_parental_objects.proto"
 /data/src/clientdll/systemdockmanager_linux.cpp
 /data/src/clientdll/systemdockmanager_linux.cpp:337
 /data/src/clientdll/systemdockmanager_linux.cpp:562
-/data/src/clientdll/systemlogcollector.cpp
 /data/src/clientdll/systemmanager.cpp
 /data/src/clientdll/systemmanager.cpp:2554
-/data/src/clientdll/systemmanager.cpp:2886
-/data/src/clientdll/systemmanager.cpp:4430
-/data/src/clientdll/systemmanager.cpp:5025
+/data/src/clientdll/systemmanager.cpp:2887
+/data/src/clientdll/systemmanager.cpp:4431
+/data/src/clientdll/systemmanager.cpp:5026
 /data/src/clientdll/systemperfmanager.cpp
 /data/src/clientdll/systemperfmanager_linux.cpp
 /data/src/clientdll/systemperfmanager_linux.cpp:1185
@@ -7961,6 +7953,7 @@ $steammessages_parental_objects.proto"
 /data/src/steamnetworkingsockets/steamnetworkingsockets_shared.cpp
 /data/src/steamnetworkingsockets/steamnetworkingsockets_stats.cpp
 /data/src/steamnetworkingsockets/steamnetworkingsockets_thinker.cpp
+/data/src/thirdparty/dbus-bindings/include/valve/dbus/generated/gen.org.freedesktop.ScreenSaver.c
 /data/src/thirdparty/dbus-bindings/include/valve/dbus/generated/gen.org.freedesktop.login1.c
 /data/src/tier1/KeyValues.cpp
 /data/src/tier1/bitstring.cpp
@@ -8033,6 +8026,7 @@ $steammessages_parental_objects.proto"
 /nvidiav1
 /nvidiav1/GLCache
 /nvidiav1/GLCache/%s/%s
+/org/freedesktop/DBus
 /org/freedesktop/ScreenSaver
 /org/freedesktop/login1
 /pfx/drive_c/ProgramData
@@ -8047,6 +8041,7 @@ $steammessages_parental_objects.proto"
 /proc/%d/environ
 /proc/%u/cmdline
 /proc/%u/stat
+/proc/device-tree/board-info/unit_sn
 /proc/device-tree/compatible
 /proc/device-tree/model
 /proc/mounts
@@ -8249,9 +8244,6 @@ $steammessages_parental_objects.proto"
 0 bytes,
 0"W\n+CCommunity_GetUserPartnerEventNews_Response
 0)AA7A
-0000000000000000000000000000000000000000
-00000000
-0000000000000000
 0.0333
 0.050
 0.125
@@ -8302,6 +8294,9 @@ $steammessages_parental_objects.proto"
 0.CTransportValidation_CountOrderedBytes_Response
 0.CTransportValidation_RequestInvalidBool_Request
 0.CVideo_BeginGameRecordingSegmentsUpload_Request
+0000000000000000000000000000000000000000
+00000000
+0000000000000000
 00000001
 00003333
 000102030405060708091011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495969798990123456789abcdef
@@ -8634,7 +8629,6 @@ $steammessages_parental_objects.proto"
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI7CGameIDP10CUtlVectorIyS_IyEEi8CDefLessE6Node_tEiNS8_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI7CGameIDP15CUtlDualHashMapIj10CUtlString10CDefEqualsIjE11HashFunctorIjES5_IS4_ES7_IS4_EEi8CDefLessE6Node_tEiNSE_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI7CGameIDP21ClUserGameStatsSchemai8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
-10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI7GroupId23InputAnalogActionData_ti8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI7GroupIdN17CInputAccumulator28ControllerAnalogCursorData_tEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI8CSteamID6CSTimei8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI8CSteamID7CUtlPtrIN16CUserMatchmaking13ActiveLobby_tEEi8CDefLessE6Node_tEiNS8_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
@@ -8817,8 +8811,8 @@ $steammessages_parental_objects.proto"
 10CUtlMemoryIN11CUtlHashMapI10CUtlStringN14CUtlHashMapLRUIS1_7CUtlPtrI5CLockE10CDefEqualsIS1_E11HashFunctorIS1_EE15ElementBucket_tES7_S9_10StringViewE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapI10CUtlStringN14CUtlHashMapLRUIS1_N20COfflineMessageCache13CachedMessageE10CDefEqualsIS1_E11HashFunctorIS1_EE15ElementBucket_tES6_S8_10StringViewE12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapI10CUtlStringN14CUtlHashMapLRUIS1_N20COfflineMessageCache13CachedMessageE10CDefEqualsIS1_E11HashFunctorIS1_EE15ElementBucket_tES6_S8_10StringViewE6Node_tEE
-10CUtlMemoryIN11CUtlHashMapI10CUtlStringS1_27CDefCaselessUtlStringEquals28HashFunctorUtlStringCaseless10StringViewE12HashBucket_tEE
-10CUtlMemoryIN11CUtlHashMapI10CUtlStringS1_27CDefCaselessUtlStringEquals28HashFunctorUtlStringCaseless10StringViewE6Node_tEE
+10CUtlMemoryIN11CUtlHashMapI10CUtlStringN24CChildEnvironmentBuilder10EnvEntry_tE27CDefCaselessUtlStringEquals28HashFunctorUtlStringCaseless10StringViewE12HashBucket_tEE
+10CUtlMemoryIN11CUtlHashMapI10CUtlStringN24CChildEnvironmentBuilder10EnvEntry_tE27CDefCaselessUtlStringEquals28HashFunctorUtlStringCaseless10StringViewE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapI10CUtlStringb10CDefEqualsIS1_E11HashFunctorIS1_E10StringViewE12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapI10CUtlStringb10CDefEqualsIS1_E11HashFunctorIS1_E10StringViewE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapI10CUtlStringi10CDefEqualsIS1_E11HashFunctorIS1_E10StringViewE12HashBucket_tEE
@@ -9211,7 +9205,6 @@ $steammessages_parental_objects.proto"
 10CUtlRBTreeIN7CUtlMapI7CGameIDP10CUtlVectorIy10CUtlMemoryIyEEi8CDefLessE6Node_tEiNS8_8CKeyLessE25CDefRBTreeBalanceListenerIiES1_E
 10CUtlRBTreeIN7CUtlMapI7CGameIDP15CUtlDualHashMapIj10CUtlString10CDefEqualsIjE11HashFunctorIjES4_IS3_ES6_IS3_EEi8CDefLessE6Node_tEiNSD_8CKeyLessE25CDefRBTreeBalanceListenerIiES1_E
 10CUtlRBTreeIN7CUtlMapI7CGameIDP21ClUserGameStatsSchemai8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiES1_E
-10CUtlRBTreeIN7CUtlMapI7GroupId23InputAnalogActionData_ti8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiES1_E
 10CUtlRBTreeIN7CUtlMapI7GroupIdN17CInputAccumulator28ControllerAnalogCursorData_tEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiES1_E
 10CUtlRBTreeIN7CUtlMapI8CSteamID6CSTimei8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiES1_E
 10CUtlRBTreeIN7CUtlMapI8CSteamID7CUtlPtrIN16CUserMatchmaking13ActiveLobby_tEEi8CDefLessE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES1_E
@@ -9473,7 +9466,7 @@ $steammessages_parental_objects.proto"
 10CUtlVectorIN11CUtlHashMapI10CIPAndPortPN25SteamNetworkingSocketsLib11RelayServerE10CDefEqualsIS1_E11HashFunctorIS1_ES1_E12HashBucket_tE10CUtlMemoryISA_EE
 10CUtlVectorIN11CUtlHashMapI10CUtlStringN14CUtlHashMapLRUIS1_7CUtlPtrI5CLockE10CDefEqualsIS1_E11HashFunctorIS1_EE15ElementBucket_tES7_S9_10StringViewE12HashBucket_tE10CUtlMemoryISE_EE
 10CUtlVectorIN11CUtlHashMapI10CUtlStringN14CUtlHashMapLRUIS1_N20COfflineMessageCache13CachedMessageE10CDefEqualsIS1_E11HashFunctorIS1_EE15ElementBucket_tES6_S8_10StringViewE12HashBucket_tE10CUtlMemoryISD_EE
-10CUtlVectorIN11CUtlHashMapI10CUtlStringS1_27CDefCaselessUtlStringEquals28HashFunctorUtlStringCaseless10StringViewE12HashBucket_tE10CUtlMemoryIS6_EE
+10CUtlVectorIN11CUtlHashMapI10CUtlStringN24CChildEnvironmentBuilder10EnvEntry_tE27CDefCaselessUtlStringEquals28HashFunctorUtlStringCaseless10StringViewE12HashBucket_tE10CUtlMemoryIS8_EE
 10CUtlVectorIN11CUtlHashMapI10CUtlStringb10CDefEqualsIS1_E11HashFunctorIS1_E10StringViewE12HashBucket_tE10CUtlMemoryIS8_EE
 10CUtlVectorIN11CUtlHashMapI10CUtlStringi10CDefEqualsIS1_E11HashFunctorIS1_E10StringViewE12HashBucket_tE10CUtlMemoryIS8_EE
 10CUtlVectorIN11CUtlHashMapI10CUtlStringj10CDefEqualsIS1_E11HashFunctorIS1_E10StringViewE12HashBucket_tE10CUtlMemoryIS8_EE
@@ -9766,7 +9759,7 @@ $steammessages_parental_objects.proto"
 11CUtlHashMapI10CIPAndPortPN25SteamNetworkingSocketsLib11RelayServerE10CDefEqualsIS0_E11HashFunctorIS0_ES0_E
 11CUtlHashMapI10CUtlStringN14CUtlHashMapLRUIS0_7CUtlPtrI5CLockE10CDefEqualsIS0_E11HashFunctorIS0_EE15ElementBucket_tES6_S8_10StringViewE
 11CUtlHashMapI10CUtlStringN14CUtlHashMapLRUIS0_N20COfflineMessageCache13CachedMessageE10CDefEqualsIS0_E11HashFunctorIS0_EE15ElementBucket_tES5_S7_10StringViewE
-11CUtlHashMapI10CUtlStringS0_27CDefCaselessUtlStringEquals28HashFunctorUtlStringCaseless10StringViewE
+11CUtlHashMapI10CUtlStringN24CChildEnvironmentBuilder10EnvEntry_tE27CDefCaselessUtlStringEquals28HashFunctorUtlStringCaseless10StringViewE
 11CUtlHashMapI10CUtlStringb10CDefEqualsIS0_E11HashFunctorIS0_E10StringViewE
 11CUtlHashMapI10CUtlStringi10CDefEqualsIS0_E11HashFunctorIS0_E10StringViewE
 11CUtlHashMapI10CUtlStringj10CDefEqualsIS0_E11HashFunctorIS0_E10StringViewE
@@ -11900,11 +11893,11 @@ $steammessages_parental_objects.proto"
 20.StoreItem.PackageGroup.EPackageGroupDisplayType
 200 Mbps
 2000
-2019
 2048
 20000
 2000000
 200M
+2019
 208.64.200.0/22
 208.78.164.0/22
 20AccountHardware_Stub
@@ -12768,7 +12761,6 @@ $steammessages_parental_objects.proto"
 25CScheduleCallbackWorkItemI28ControllerWirelessPresence_tE
 25CScheduleCallbackWorkItemI30ControllerDongleUpdateStatus_tE
 25CScheduledFunctionUserJobI12CCMInterface9CBaseUserE
-25CScopedSystemLogCollector
 25CSetStreamingClientConfig
 25CSimpleHapticTickWorkItem
 25CSimpleParallelWorkThread
@@ -12889,6 +12881,8 @@ $steammessages_parental_objects.proto"
 26CCloudGaming_TimeRemaining
 26CCommunity_GetApps_Request
 26CCompatRemoteStorageConfig
+26CControllerAPIHideWorkItem
+26CControllerAPIShowWorkItem
 26CControllerAbstractionBase
 26CControllerEResultWorkItem
 26CEconItem_ClassIdentifiers
@@ -13129,7 +13123,6 @@ $steammessages_parental_objects.proto"
 27CSteamTV_HomePageContentRow
 27CTritonDockedToPuckWorkItem
 27CWorkItemApplySteamOSUpdate
-27CWorkItemGetAvailableDrives
 27CWorkItemLoadFileIntoBuffer
 27CWorkItemReadFromChunkStore
 27CWorkshopCleanupUGCCacheJob
@@ -13421,6 +13414,7 @@ $steammessages_parental_objects.proto"
 29CStreamingClientHandshakeInfo
 29CStreamingServerHandshakeInfo
 29CVideoClient_UnlockedH264_Job
+29CWorkItemFindDriveNameForPath
 29ClientSteamNewsClientUpdate_t
 29CompatManagerToolRegistered_t
 29ContentDeltaChunks_DeltaChunk
@@ -13710,6 +13704,7 @@ $steammessages_parental_objects.proto"
 30CUser_SaveHardwareInfo_Request
 30CVirtualControllerGlobalConfig
 30CWebUITransportServerStatusJob
+30CWorkItemGetAvailableDriveList
 30CWorkItemGetFileSystemStableId
 30CWorkItemNetFilterOnDisconnect
 30CWorkItemProcessChunkForUpload
@@ -14915,6 +14910,7 @@ $steammessages_parental_objects.proto"
 39CTransportValidation_AddNumbers_Request
 39CTwoFactor_RemoveAuthenticator_Response
 39CUserAccount_RegisterCompatTool_Request
+39CWorkItemGetFileSystemPosixDeviceNumber
 39ClientNetworking_RequestSDRPingLocation
 39SiteServerUI_ContentCacheConfig_Request
 39SiteServerUI_ContentCacheStatus_Request
@@ -16452,7 +16448,6 @@ $steammessages_parental_objects.proto"
 7CUtlMapI7CGameIDP10CUtlVectorIy10CUtlMemoryIyEEi8CDefLessE
 7CUtlMapI7CGameIDP15CUtlDualHashMapIj10CUtlString10CDefEqualsIjE11HashFunctorIjES3_IS2_ES5_IS2_EEi8CDefLessE
 7CUtlMapI7CGameIDP21ClUserGameStatsSchemai8CDefLessE
-7CUtlMapI7GroupId23InputAnalogActionData_ti8CDefLessE
 7CUtlMapI7GroupIdN17CInputAccumulator28ControllerAnalogCursorData_tEi8CDefLessE
 7CUtlMapI8CSteamID6CSTimei8CDefLessE
 7CUtlMapI8CSteamID7CUtlPtrIN16CUserMatchmaking13ActiveLobby_tEEi8CDefLessE
@@ -16922,6 +16917,7 @@ $steammessages_parental_objects.proto"
 : inherit\n
 :%02X
 :%dx%d@%d %u
+:%s/../steamrtarm64/%s
 :':+:1:K:Q:[:c:g:m:y:
 :.CAccountHardware_QueryAccountsRegisteredToSerial_Response"
 :.CChatRoom_SetAppChatRoomGroupStopForceActive_Notification
@@ -17171,6 +17167,7 @@ $steammessages_parental_objects.proto"
 ?456789:;<=
 ???\f???????\n???\r?\t?\vN6google8protobuf2io14ErrorCollectorE
 ?CDisplayColorManager: Unexpected ALS sensor index
+?CSharedMemDrop::GetByteRange()
 ?HAI\t81\t9dcG'
 ?IsValidIndex( idx )
 ?QfZ
@@ -18127,7 +18124,6 @@ AppID %u canceled moving : %s at %llu/%llu bytes, %u files moved (%s)
 AppID %u depends on AppID %u - installing.
 AppID %u does not advertise android as a supported platform, but a android specific depot is present.\n
 AppID %u does not advertise linux as a supported platform, but a linux specific depot is present.\n
-AppID %u exceeding analog action limits
 AppID %u exited.
 AppID %u failed to downloading manifest %llu (%s)
 AppID %u failed to update ownership ticket (%s)
@@ -18467,6 +18463,7 @@ BGetAppStateInfoForApps
 BGetAppsLastPlayedMap
 BGetBroadcastDimensions
 BGetChatRoomMemberDetails
+BGetConfigInfoFromVDF
 BGetContentInfoForApps
 BGetControllerConfigMessageForLocal
 BGetControllerConfigMessageForRemote
@@ -18819,7 +18816,6 @@ BWritingMiniDump
 BYield()
 BYieldingBuildManifest
 BYieldingCanReadDiskCache( strBasePath.String() ) == true
-BYieldingCollectLogs
 BYieldingCompleteSteamControllerRegistration - Error committing registration completion of controller & account pair - controller disconnected: %s\n
 BYieldingCompleteSteamControllerRegistration - Error committing registration completion of controller & account pair: %s %s %s\n
 BYieldingCompleteSteamControllerRegistration - controller changed before completing registration.\n
@@ -20457,6 +20453,7 @@ CHIDDevicePipeSteamSide: Got unexpected request ID %u, expected %u\n
 CHIDDevicePipeSteamSide: Unexpected command case
 CHIDDeviceRemote::ProcessInputReport(): Received unknown report type\n
 CHIDIOThread
+CHIDIOThread::PrepareAPIData
 CHIDMessageFromRemote
 CHIDMessageToRemote
 CHROMEOS
@@ -20627,8 +20624,6 @@ CJobSendLogs - Uploading logs for request ID %llu
 CJobSendLogs - error uploading file: %d - %s
 CJobSendLogs - skipping directory: %s
 CJobSendLogs - skipping large file: %s
-CJobSendLogs: failed to collect system logs
-CJobSendLogs: system log collector is not available
 CJobSetAsyncNotificationsEnabled
 CJobSteamRuntimeSystemInfo
 CJobSteamRuntimeSystemInfo: container s-r-t yield failed\n
@@ -21685,7 +21680,7 @@ CRemoteClientManager::SendEnableAllDownloadsToRemoteClient
 CRemoteClientManager::SendInstallRemoteApp
 CRemoteClientManager::SendQueuedBroadcastMessagesIfNecessary
 CRemoteClientManager::SendRemoveFromDownloadsToRemoteClient
-CRemoteClientManager::SendSuspendDownloadThrottleingToRemoteClient
+CRemoteClientManager::SendSuspendDownloadThrottlingToRemoteClient
 CRemoteClientManager::SendSuspendLanPeerContent
 CRemoteClientManager::SendUninstallRemoteApp
 CRemoteClientManager::SetDownloadingAppIDToRemoteClient
@@ -21819,7 +21814,6 @@ CShader_RegisterShader_Request
 CShader_RegisterShader_Response
 CShader_SendShader_Request
 CShader_SendShader_Response"Y\n!CShader_GetBucketManifest_Request
-CSharedMemDrop::GetByteRange()
 CSharedMemDrop::IsByteRangeSame()
 CSharedMemDrop::Put()
 CSharedMemStream has memory already locked for put. Don't write with memory locked.\n
@@ -21994,6 +21988,7 @@ CSystemManager::m_pWorkThreadPool
 CSystemManagerApplyUpdateJob
 CSystemManagerApplyUpdateJob: applied
 CSystemManagerApplyUpdateJob: client restart required
+CSystemManagerApplyUpdateJob: ignoring OS update request on platform without OS updates
 CSystemManagerApplyUpdateJob: starting
 CSystemManagerApplyUpdateJob: system restart required
 CSystemManagerCheckForUpdateJob
@@ -22343,10 +22338,14 @@ CWorkItemApplySteamOSUpdate
 CWorkItemApplySteamOSUpdate::ThreadProcess
 CWorkItemBufferedPacket
 CWorkItemBufferedPacket::ThreadProcess
+CWorkItemFindDriveNameForPath
+CWorkItemFindDriveNameForPath::ThreadProcess
 CWorkItemFormatSDCard
 CWorkItemFormatSDCard::ThreadProcess
-CWorkItemGetAvailableDrives
-CWorkItemGetAvailableDrives::ThreadProcess
+CWorkItemGetAvailableDriveList
+CWorkItemGetAvailableDriveList::ThreadProcess
+CWorkItemGetFileSystemPosixDeviceNumber
+CWorkItemGetFileSystemPosixDeviceNumber::ThreadProcess
 CWorkItemGetFileSystemStableId
 CWorkItemGetFileSystemStableId::ThreadProcess
 CWorkItemGetFreeDiskSpace
@@ -22406,6 +22405,7 @@ CWorkThreadPool - Check SetEvent
 CWorkThreadPool - SetEvent()
 CWorkThreadPool - Signal Thread Event
 CWorkThreadPool can't support item auto resubmission when ensuring output ordering
+CWorkThreadPool: a deferred work item cannot ask to be resubmitted
 CWorkThreadPool::BTryDeleteExitedWorkerThreads
 CWorkThreadPool::SetEnsureOutputOrdering must be set before any work item is added
 CWorkThreadPool::StartWorkThread: Thread creation failed.\n
@@ -23298,6 +23298,7 @@ ControlPoint2X
 ControlPoint2Y
 Controller
 Controller %d mapping uses xinput : false\n
+Controller %d uses xinput : true (warmed config for app %u)\n
 Controller %d uses xinput : true\n
 Controller %u is already paired to target dongle %u\n
 Controller Actions
@@ -23388,6 +23389,7 @@ Could not open file
 Could not read existing registry file.
 Could not read microtransaction info from message
 Could not read wallet info from message
+Could not unlock H264: %s\n
 Couldn't access HTTP response\n
 Couldn't bind TCP port
 Couldn't bind to broadcast port %d, RemoteClientManager disabled
@@ -24744,7 +24746,6 @@ ERROR: JSON parse failed fetching SDR network config from %s\n
 ERROR: Response did not have success=true accessing %s. message=%s\n
 ERROR: aborting devkit game launch\n
 ERROR: selector [%d] invalid\n
-ERR_getErrorString
 ERegKeyRoot
 ERemoteClientBroadcastMsg
 ERemoteClientLaunchResult
@@ -25231,7 +25232,6 @@ Error: %s: failed to add filter match: %s
 Error: %s: failed to bind object: %d - %s
 Error: %s: failed to check for update
 Error: %s: failed to check for update during apply
-Error: %s: failed to collect output for: %s
 Error: %s: failed to connect to login1: %s\n
 Error: %s: failed to connect to pw context
 Error: %s: failed to create a glib context\n
@@ -25247,7 +25247,6 @@ Error: %s: failed to get screen resources
 Error: %s: failed to initialize XInput2, some features may be missing
 Error: %s: failed to initialize XRandR, some features may be missing
 Error: %s: failed to initialize battery state manager, battery state will be unavailable
-Error: %s: failed to initialize output directory
 Error: %s: failed to initialize pipewire context
 Error: %s: failed to initialize udev
 Error: %s: failed to initialize udev connection
@@ -25478,52 +25477,6 @@ FOZ underflow, file truncated?
 FR19CNullMetricsFactoryvE
 FRAME_SIZE_ERROR
 FRESH Antidrift detected before saving: ( %f,  %f,  %f ).\n
-FSE_NCountWriteBound
-FSE_buildCTable_rle
-FSE_buildCTable_wksp
-FSE_buildDTable_wksp
-FSE_compressBound
-FSE_compress_usingCTable
-FSE_decompress_wksp_bmi2
-FSE_getErrorName
-FSE_isError
-FSE_normalizeCount
-FSE_optimalTableLog
-FSE_optimalTableLog_internal
-FSE_readNCount
-FSE_readNCount_bmi2
-FSE_versionNumber
-FSE_writeNCount
-FSEv05_buildDTable
-FSEv05_buildDTable_raw
-FSEv05_buildDTable_rle
-FSEv05_createDTable
-FSEv05_decompress
-FSEv05_decompress_usingDTable
-FSEv05_freeDTable
-FSEv05_getErrorName
-FSEv05_isError
-FSEv05_readNCount
-FSEv06_buildDTable
-FSEv06_buildDTable_raw
-FSEv06_buildDTable_rle
-FSEv06_createDTable
-FSEv06_decompress
-FSEv06_decompress_usingDTable
-FSEv06_freeDTable
-FSEv06_getErrorName
-FSEv06_isError
-FSEv06_readNCount
-FSEv07_buildDTable
-FSEv07_buildDTable_raw
-FSEv07_buildDTable_rle
-FSEv07_createDTable
-FSEv07_decompress
-FSEv07_decompress_usingDTable
-FSEv07_freeDTable
-FSEv07_getErrorName
-FSEv07_isError
-FSEv07_readNCount
 FV|FgUV
 FW Available:
 FW Current:
@@ -26859,6 +26812,7 @@ GetConnectionRealTimeStatus
 GetConnectionType( hConnection ) == eConnectionType
 GetConnectionType() != k_EConnectionTypeUDP
 GetConnectionType() == k_ESSLConnectionType_Client || GetConnectionType() == k_EDTLSConnectionType_Client
+GetConnectionUnixProcessID
 GetConnectionUserData
 GetConnectivityTestState
 GetContentDescriptors
@@ -27588,6 +27542,7 @@ GetVolume
 GetWatchBroadcastMPD
 GetWebSecret
 GetWebUITransportInfo
+GetWifiAPChannelListJSONString
 GetWifiAPStateJSONString
 GetWifiDongleProblemFlags
 GetWildcardMapping: Invalid unAppID k_nAppIdAll
@@ -27690,12 +27645,6 @@ HID: Add to Config Cache - modify active mapping in-place %u %u\n
 HID: Add to Config Cache - modify disconnected mapping in-place %u %u\n
 HIDKeyboardKeys
 HIGH
-HIST_count
-HIST_countFast
-HIST_countFast_wksp
-HIST_count_simple
-HIST_count_wksp
-HIST_isError
 HKCR
 HKCU
 HKDF
@@ -27773,82 +27722,6 @@ HTTPS_PROXY
 HTTPServer sequence ack out-of-order, trying to ack %llu, currently acked %llu\n
 HTTP_1_1_REQUIRED
 HTTP_PROXY
-HUF_buildCTable_wksp
-HUF_cardinality
-HUF_compress1X_repeat
-HUF_compress1X_usingCTable
-HUF_compress4X_repeat
-HUF_compress4X_usingCTable
-HUF_compressBound
-HUF_decompress1X1_DCtx_wksp
-HUF_decompress1X2_DCtx_wksp
-HUF_decompress1X_DCtx_wksp
-HUF_decompress1X_usingDTable
-HUF_decompress4X_hufOnly_wksp
-HUF_decompress4X_usingDTable
-HUF_estimateCompressedSize
-HUF_getErrorName
-HUF_getNbBitsFromCTable
-HUF_isError
-HUF_minTableLog
-HUF_optimalTableLog
-HUF_readCTable
-HUF_readCTableHeader
-HUF_readDTableX1_wksp
-HUF_readDTableX2_wksp
-HUF_readStats
-HUF_readStats_wksp
-HUF_selectDecoder
-HUF_validateCTable
-HUF_writeCTable_wksp
-HUFv05_decompress
-HUFv05_decompress1X2
-HUFv05_decompress1X2_usingDTable
-HUFv05_decompress1X4
-HUFv05_decompress1X4_usingDTable
-HUFv05_decompress4X2
-HUFv05_decompress4X2_usingDTable
-HUFv05_decompress4X4
-HUFv05_decompress4X4_usingDTable
-HUFv05_getErrorName
-HUFv05_isError
-HUFv05_readDTableX2
-HUFv05_readDTableX4
-HUFv06_decompress
-HUFv06_decompress1X2
-HUFv06_decompress1X2_usingDTable
-HUFv06_decompress1X4
-HUFv06_decompress1X4_usingDTable
-HUFv06_decompress4X2
-HUFv06_decompress4X2_usingDTable
-HUFv06_decompress4X4
-HUFv06_decompress4X4_usingDTable
-HUFv06_readDTableX2
-HUFv06_readDTableX4
-HUFv07_decompress
-HUFv07_decompress1X2
-HUFv07_decompress1X2_DCtx
-HUFv07_decompress1X2_usingDTable
-HUFv07_decompress1X4
-HUFv07_decompress1X4_DCtx
-HUFv07_decompress1X4_usingDTable
-HUFv07_decompress1X_DCtx
-HUFv07_decompress1X_usingDTable
-HUFv07_decompress4X2
-HUFv07_decompress4X2_DCtx
-HUFv07_decompress4X2_usingDTable
-HUFv07_decompress4X4
-HUFv07_decompress4X4_DCtx
-HUFv07_decompress4X4_usingDTable
-HUFv07_decompress4X_DCtx
-HUFv07_decompress4X_hufOnly
-HUFv07_decompress4X_usingDTable
-HUFv07_getErrorName
-HUFv07_isError
-HUFv07_readDTableX2
-HUFv07_readDTableX4
-HUFv07_readStats
-HUFv07_selectDecoder
 HWID Set
 HWyn
 H\fJxE\v
@@ -28715,6 +28588,7 @@ Invalid SOS parameters for sequential JPEG
 Invalid STEAM_DISPLAY_REFRESH_LIMITS: '%s' - Expected: '<int>,<int>'
 Invalid STEAM_DISPLAY_REFRESH_LIMITS: min greater than max: %d,%d
 Invalid SWARC depot file archive magic, skipping.
+Invalid SetVarPolicy %d
 Invalid Stat type
 Invalid State
 Invalid Steam ID
@@ -30075,6 +29949,7 @@ Messages session %s: idle timing out.  Closing connection [%s] and destroying se
 Messages session bookkeeping bug
 Metal
 Method
+Method %s is not implemented on interface %s
 Method AcceptSSA() not implemented.
 Method AckChatMessage() not implemented.
 Method AckMessage() not implemented.
@@ -31111,9 +30986,14 @@ N10CIPCServer13CThreadClientE
 N10ClFriend_t21AppRichPresenceInfo_tE
 N10__cxxabiv115__forced_unwindE
 N10__cxxabiv117__class_type_infoE
+N10__cxxabiv117__pbase_type_infoE
 N10__cxxabiv119__foreign_exceptionE
+N10__cxxabiv119__pointer_type_infoE
 N10__cxxabiv120__function_type_infoE
 N10__cxxabiv120__si_class_type_infoE
+N10__cxxabiv121__vmi_class_type_infoE
+N10__cxxabiv123__fundamental_type_infoE
+N10__cxxabiv129__pointer_to_member_type_infoE
 N11CHTTPClient12HostLookup_tE
 N11CHTTPClient18SSLContextLookup_tE
 N11CHTTPClient20AddrConnectionInfo_tE
@@ -32200,6 +32080,7 @@ No playback frame available (your application is buggy and/or got xruns)
 No previous message
 No profile for iCCP chunk
 No progress while uploading chunks (%u chunks missing)\n
+No property with name %s
 No public key
 No public keys with which to verify token signature
 No public or relay candidates from remote host
@@ -32213,7 +32094,9 @@ No signed data
 No site licenses found
 No space in chunk cache for sPLT
 No speex decoder available, abandoning voice\n
+No staging folder specified
 No subscription
+No support for SetVarPolicy %d for variable %s
 No target folder
 No target sources connected
 No user for interface %d /+/ buf %d %02x %02x %02x %02x, %s
@@ -34928,6 +34811,7 @@ SDL_IsGamepad
 SDL_JOYSTICK_ALLOW_BACKGROUND_EVENTS
 SDL_JOYSTICK_ENHANCED_REPORTS
 SDL_JOYSTICK_GAMEINPUT
+SDL_JOYSTICK_GAMEINPUT_RAW
 SDL_JOYSTICK_HIDAPI_GIP
 SDL_JOYSTICK_HIDAPI_JOYCON_HOME_LED
 SDL_JOYSTICK_HIDAPI_STEAM
@@ -35926,6 +35810,7 @@ ScreamTracker III
 Screen change detected
 ScreenSaver
 ScreenSaverProxy
+ScreenSaverSkeleton
 Screenshot
 Screenshot upload job complete - uploaded %d of %d
 ScreenshotPublished
@@ -36041,7 +35926,7 @@ SendSteamBroadcastPacket
 SendSteamServiceStatusUpdate
 SendSteamToSteamPacket
 SendStreamTransportSignal
-SendSuspendDownloadThrottleingToRemoteClient
+SendSuspendDownloadThrottlingToRemoteClient
 SendSuspendLanPeerContent
 SendThumbnailToRelay
 SendTimeSincePreviousPacket
@@ -38750,7 +38635,6 @@ ThreadedGenerateEncodedHashForDownloadedFile
 ThreadedGetBIOSUpdateAutoMessage
 ThreadedMangoAppAtomWorkaround: bHideMango: %d
 ThreadedMoveDownloadToReferenced
-ThreadedPackageSystemLogsIfAvailable
 ThreadedParsePacketToProtoBufMsg
 ThreadedPerformInitialHandshake SSL_do_handshake
 ThreadedReadFromDisk
@@ -39828,6 +39712,7 @@ Valencian
 Valid
 Valid palette required for paletted images
 Valid parameters:\n
+Valid parameters\n
 ValidateEmailAddress
 ValidateGlobals_NetMisc
 ValidateIPCSpewStatics
@@ -40647,13 +40532,13 @@ YieldingCheckForUpdateBIOS
 YieldingCheckForUpdateDummy
 YieldingCheckForUpdateOS
 YieldingCheckForUpdateSteamClient
-YieldingCollectCommandOutput
-YieldingCollectSystemLogsIfAvailable
 YieldingConnect
 YieldingEnableGraphicsProfiling
 YieldingEnablePerfOverlay
+YieldingFindDriveNameForPath
 YieldingGenerateSystemInformation
 YieldingGetAvailableDrives
+YieldingGetFileSystemPosixDeviceNumber
 YieldingGetFileSystemStableId
 YieldingPostProgress
 YieldingPrintInstalledFiles
@@ -40745,34 +40630,6 @@ Z0000
 Z48wN39
 Z:hluv
 Z?SHX?
-ZBUFFv05_createDCtx
-ZBUFFv05_decompressContinue
-ZBUFFv05_decompressInit
-ZBUFFv05_decompressInitDictionary
-ZBUFFv05_freeDCtx
-ZBUFFv05_getErrorName
-ZBUFFv05_isError
-ZBUFFv05_recommendedDInSize
-ZBUFFv05_recommendedDOutSize
-ZBUFFv06_createDCtx
-ZBUFFv06_decompressContinue
-ZBUFFv06_decompressInit
-ZBUFFv06_decompressInitDictionary
-ZBUFFv06_freeDCtx
-ZBUFFv06_getErrorName
-ZBUFFv06_isError
-ZBUFFv06_recommendedDInSize
-ZBUFFv06_recommendedDOutSize
-ZBUFFv07_createDCtx
-ZBUFFv07_createDCtx_advanced
-ZBUFFv07_decompressContinue
-ZBUFFv07_decompressInit
-ZBUFFv07_decompressInitDictionary
-ZBUFFv07_freeDCtx
-ZBUFFv07_getErrorName
-ZBUFFv07_isError
-ZBUFFv07_recommendedDInSize
-ZBUFFv07_recommendedDOutSize
 ZF]:Ba?
 ZINT32
 ZINT64
@@ -41490,6 +41347,12 @@ Zulu
 [num threads]
 [packed = true] can only be specified for repeated primitive fields.
 [reset] Dump the histogram of protobuf message body sizes parsed, and how many were parsed on a worker thread
+[screensaver dbus] could not acquire %s, another screensaver service owns it
+[screensaver dbus] failed to connect to the session bus: %s
+[screensaver dbus] failed to create skeleton for %s
+[screensaver dbus] failed to export %s: %s
+[screensaver dbus] lost %s
+[screensaver dbus] now owning %s
 [ucS
 [unknown]
 [wait queue]
@@ -43436,6 +43299,7 @@ Zulu
 \n\vadmin_query
 \n\vallow_alias
 \n\vallow_voice
+\n\vapp_running
 \n\vappidorname
 \n\vauth_key_id
 \n\vauto_update
@@ -44171,15 +44035,11 @@ _out.wav
 _pBuffer == nullptr
 _pbuf
 _rDd
+_screen_saver__skeleton_handle_get_property
+_screen_saver__skeleton_handle_method_call
+_screen_saver__skeleton_handle_set_property
 _setjmp
 _strlwr
-_txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
-_txnal_cow_string_D1(void*)
-_txnal_cow_string_D1_commit(void*)
-_txnal_cow_string_c_str(void const*)
-_txnal_logic_error_get_msg(void*)
-_txnal_runtime_error_get_msg(void*)
-_txnal_sso_string_c_str(void const*)
 _type == kArray
 _type == kObject
 _type == kString
@@ -44679,6 +44539,7 @@ app_update_status [appId]
 appcache/slscache
 appcloudsessions
 appdata
+append=
 append_exp
 append_strings
 appid
@@ -46645,6 +46506,7 @@ controller_config\autosave
 controller_config_usage
 controller_configuration.vdf
 controller_connection_type
+controller_debug_triton_wireless
 controller_edge_cutoff
 controller_enabled
 controller_front_panel_board
@@ -48956,6 +48818,7 @@ frame_controller
 frame_display_delta
 frame_id
 frame_loss_percentage
+frame_rate_limit
 frame_rate_string
 frame_start_delta
 frame_time
@@ -49098,6 +48961,11 @@ g_async_initable_new_finish
 g_async_result_get_source_object
 g_bLocalGIDInitComplete || g_GIDCurrent.UsSysID() != 0
 g_bSimulateUDPForLocalHostToLocalHostCnx
+g_bus_get_sync
+g_bus_own_name_on_connection
+g_bus_unown_name
+g_bus_unwatch_name
+g_bus_watch_name_on_connection
 g_bytes_get_data
 g_bytes_new
 g_bytes_unref
@@ -49108,6 +48976,7 @@ g_cclosure_marshal_generic
 g_datalist_clear
 g_datalist_get_data
 g_datalist_id_set_data_full
+g_dbus_connection_call_sync
 g_dbus_connection_emit_signal
 g_dbus_connection_get_type
 g_dbus_error_quark
@@ -49116,13 +48985,16 @@ g_dbus_gvariant_to_gvalue
 g_dbus_interface_get_info
 g_dbus_interface_info_lookup_property
 g_dbus_interface_info_lookup_signal
+g_dbus_interface_skeleton_export
 g_dbus_interface_skeleton_get_connection
 g_dbus_interface_skeleton_get_connections
 g_dbus_interface_skeleton_get_object_path
 g_dbus_interface_skeleton_get_type
+g_dbus_interface_skeleton_unexport
 g_dbus_message_get_unix_fd_list
 g_dbus_method_invocation_get_message
 g_dbus_method_invocation_get_method_info
+g_dbus_method_invocation_get_sender
 g_dbus_method_invocation_get_type
 g_dbus_method_invocation_return_error
 g_dbus_method_invocation_return_value
@@ -49471,6 +49343,7 @@ german
 gesture
 gestures
 get raw key failed
+get-channels
 get-proxy-type-func
 getRootParserOf
 get_Count failed
@@ -50153,6 +50026,7 @@ http://jabber.org/protocol/chatstates
 http://jabber.org/protocol/disco#info
 http://jabber.org/protocol/disco#items
 http://jabber.org/protocol/nick
+http://localhost:27100
 http://musicbrainz.org
 http://steamconnecttest.com/
 http://steamconnecttest.com/204
@@ -50657,6 +50531,7 @@ identity_remote
 identity_secret
 identity_string
 identity_verification
+idle inhibited by another app
 idle-action
 idle-action-usec
 idle-hint
@@ -50901,6 +50776,7 @@ inflateUndermine
 inflateValidate
 inflate_copyright
 info
+info != NULL
 info change after png_start_read_image or png_read_update_info
 info.m_pReplacementString == 0
 info.m_pTreeInUseConnections->Element(iIndexConnection) == pConnection
@@ -54112,6 +53988,7 @@ localized_name_token
 localized_string
 localized_tag_name
 locally delete
+locally forget
 localtime
 locatio
 location
@@ -54168,9 +54045,9 @@ low-pri yield - /data/src/clientdll/autocloud.cpp:591
 low-pri yield - /data/src/clientdll/autocloud.cpp:670
 low-pri yield - /data/src/clientdll/autocloud.cpp:845
 low-pri yield - /data/src/clientdll/autocloud.cpp:936
-low-pri yield - /data/src/clientdll/clientjob.cpp:456
-low-pri yield - /data/src/clientdll/clientjob.cpp:487
-low-pri yield - /data/src/clientdll/clientjob.cpp:796
+low-pri yield - /data/src/clientdll/clientjob.cpp:431
+low-pri yield - /data/src/clientdll/clientjob.cpp:462
+low-pri yield - /data/src/clientdll/clientjob.cpp:771
 low-pri yield - /data/src/clientdll/clientjobbuildchunkstore.cpp:1000
 low-pri yield - /data/src/clientdll/clientugc.cpp:7078
 low-pri yield - /data/src/clientdll/compatmanager.cpp:2243
@@ -54238,7 +54115,6 @@ m\n NotifyOpenOverlayToTimelineEvent
 m\n!NotifyTextFilterDictionaryChanged
 m\n\nAddNumbers
 m\n\tActionSet
-m_AccumulatedAnalogActions
 m_ActionList
 m_ActionList[i]
 m_ActiveCollection
@@ -54471,7 +54347,6 @@ m_Token
 m_TotalElements != InvalidIndex()
 m_TrackedWorkshopControllerConfigs
 m_Tree
-m_UnsetEnvironmentVariables
 m_UpdateContext
 m_UpdateContext.GetTotalBytesToStage() == 0
 m_UpdateScheduler
@@ -54647,7 +54522,6 @@ m_cbBytesToDownload >= 0
 m_cbMaxEncryptedPayload >= 0
 m_cbSize >= 0
 m_cbTotalSize >= 0
-m_compatToolEnvBlock
 m_configOverride
 m_connection.BCryptKeysValid()
 m_connection.GetSignedCertLocal().has_cert()
@@ -54729,6 +54603,7 @@ m_eUniverse != k_EUniverseInvalid
 m_eUploadResult != k_EBroadcastUploadResultNone
 m_eVideoCodec > 0
 m_eVoiceQuality != VOICECHUNK_SILENT
+m_envChild
 m_errorIndex>=0
 m_fakeIP.m_arPorts[idxPort]
 m_fakeIP.m_eResult == k_EResultBusy
@@ -54964,7 +54839,6 @@ m_mapControllerEnabled
 m_mapCoplayEvents
 m_mapCurrentItemDefPricesByApp
 m_mapCurrentPlayers
-m_mapDeletes
 m_mapDeltaChunks
 m_mapDeltaChunks.Element( i )
 m_mapDependentApps
@@ -54977,7 +54851,6 @@ m_mapDownloadTimersProxyCaches
 m_mapDownloadedUGC
 m_mapEligiblePromoItemDefIDs
 m_mapEncryptedAppTickets
-m_mapEnvironmentVariables
 m_mapEquippedItems
 m_mapEvents
 m_mapEvents[i].m_sHeadline
@@ -55274,7 +55147,6 @@ m_pAppInfoHTTPClient
 m_pAppLifetimeNotification
 m_pBannedDictionary
 m_pBannedWordsProcessor
-m_pBaseJob != nullptr
 m_pBaseUser
 m_pBaseUser->GetPUser() || m_pBaseUser->GetPGameServer()
 m_pBatteryStateManager
@@ -55395,7 +55267,6 @@ m_pLocalIPCServer != NULL
 m_pLock != m_pPartner->m_pLock
 m_pLock == &FakeUDPPortOwner().m_sharedConnectionLock
 m_pLock == pConn->m_pLock
-m_pLog != nullptr
 m_pLogInstance
 m_pLogonStateChanged
 m_pManifest
@@ -55565,7 +55436,6 @@ m_pSystemPerfManager
 m_pTCP == NULL
 m_pTarget
 m_pTarget == nullptr
-m_pThreadPool != nullptr
 m_pThreadedSendSink
 m_pTicketKeyMgr
 m_pTicketKeyMgr == NULL
@@ -55742,7 +55612,6 @@ m_sMasterEventName
 m_sMasterSharedMemoryName
 m_sNVStreamingLauncher
 m_sName
-m_sOutuptDir
 m_sPath
 m_sPersonaName
 m_sPersonaNameSentToServer
@@ -55923,6 +55792,7 @@ m_strDirectory
 m_strDisplayName
 m_strDisplayString
 m_strDomain
+m_strDriveName
 m_strErrorFile
 m_strErrorLocation
 m_strErrorMsg
@@ -56246,6 +56116,8 @@ m_vecDepotsAvailable
 m_vecDeviceInfo
 m_vecDisabledInputs
 m_vecDownloadSources
+m_vecDriveList
+m_vecDrives
 m_vecErrorMessages
 m_vecEventListeners.Count() < 2
 m_vecEventQueue
@@ -57309,9 +57181,6 @@ nghttp2_buf_avail(buf) >= NGHTTP2_PRIORITY_SPECLEN
 nghttp2_buf_avail(buf) >= datamax
 nghttp2_buf_avail(buf) >= padlen - 1
 nghttp2_buf_len(buf) == NGHTTP2_FRAME_HDLEN + frame->hd.length
-nghttp2_check_authority
-nghttp2_check_header_name
-nghttp2_check_header_value
 nghttp2_frame.c
 nghttp2_frame_add_pad
 nghttp2_frame_pack_altsvc
@@ -57325,37 +57194,13 @@ nghttp2_frame_pack_rst_stream
 nghttp2_frame_pack_settings
 nghttp2_frame_pack_window_update
 nghttp2_hd.c
-nghttp2_hd_deflate_bound
-nghttp2_hd_deflate_change_table_size
-nghttp2_hd_deflate_del
-nghttp2_hd_deflate_get_dynamic_table_size
-nghttp2_hd_deflate_get_max_dynamic_table_size
-nghttp2_hd_deflate_get_num_table_entries
-nghttp2_hd_deflate_get_table_entry
-nghttp2_hd_deflate_hd
-nghttp2_hd_deflate_hd_vec
-nghttp2_hd_deflate_new
-nghttp2_hd_deflate_new2
-nghttp2_hd_inflate_change_table_size
-nghttp2_hd_inflate_del
-nghttp2_hd_inflate_end_headers
-nghttp2_hd_inflate_get_dynamic_table_size
-nghttp2_hd_inflate_get_max_dynamic_table_size
-nghttp2_hd_inflate_get_num_table_entries
-nghttp2_hd_inflate_get_table_entry
-nghttp2_hd_inflate_hd
-nghttp2_hd_inflate_hd2
 nghttp2_hd_inflate_hd_nv
-nghttp2_hd_inflate_new
-nghttp2_hd_inflate_new2
 nghttp2_hd_table_get
 nghttp2_hd_table_get2
 nghttp2_helper.c
 nghttp2_http.c
-nghttp2_http2_strerror
 nghttp2_http_on_header
 nghttp2_increase_local_window_size
-nghttp2_is_fatal
 nghttp2_is_fatal(rv)
 nghttp2_ksl.c
 nghttp2_ksl_it_get
@@ -57365,83 +57210,20 @@ nghttp2_ksl_update_key
 nghttp2_map.c
 nghttp2_map_each
 nghttp2_map_each_free
-nghttp2_nv_compare_name
 nghttp2_nv_equal
 nghttp2_outbound_item.c
 nghttp2_outbound_item_free
-nghttp2_pack_settings_payload
 nghttp2_pq.c
 nghttp2_pq_remove
-nghttp2_priority_spec_check_default
-nghttp2_priority_spec_default_init
-nghttp2_priority_spec_init
 nghttp2_rcbuf.c
 nghttp2_rcbuf_decref
-nghttp2_rcbuf_get_buf
-nghttp2_rcbuf_incref
-nghttp2_rcbuf_is_static
-nghttp2_select_next_protocol
 nghttp2_session.c
 nghttp2_session_add_rst_stream
 nghttp2_session_add_settings
 nghttp2_session_adjust_closed_stream
 nghttp2_session_adjust_idle_stream
-nghttp2_session_callbacks_del
-nghttp2_session_callbacks_new
-nghttp2_session_callbacks_set_before_frame_send_callback
-nghttp2_session_callbacks_set_data_source_read_length_callback
-nghttp2_session_callbacks_set_error_callback
-nghttp2_session_callbacks_set_error_callback2
-nghttp2_session_callbacks_set_on_begin_frame_callback
-nghttp2_session_callbacks_set_on_begin_headers_callback
-nghttp2_session_callbacks_set_on_data_chunk_recv_callback
-nghttp2_session_callbacks_set_on_extension_chunk_recv_callback
-nghttp2_session_callbacks_set_on_frame_not_send_callback
-nghttp2_session_callbacks_set_on_frame_recv_callback
-nghttp2_session_callbacks_set_on_frame_send_callback
-nghttp2_session_callbacks_set_on_header_callback
-nghttp2_session_callbacks_set_on_header_callback2
-nghttp2_session_callbacks_set_on_invalid_frame_recv_callback
-nghttp2_session_callbacks_set_on_invalid_header_callback
-nghttp2_session_callbacks_set_on_invalid_header_callback2
-nghttp2_session_callbacks_set_on_stream_close_callback
-nghttp2_session_callbacks_set_pack_extension_callback
-nghttp2_session_callbacks_set_recv_callback
-nghttp2_session_callbacks_set_select_padding_callback
-nghttp2_session_callbacks_set_send_callback
-nghttp2_session_callbacks_set_send_data_callback
-nghttp2_session_callbacks_set_unpack_extension_callback
-nghttp2_session_change_stream_priority
-nghttp2_session_check_request_allowed
-nghttp2_session_check_server_session
-nghttp2_session_client_new
-nghttp2_session_client_new2
-nghttp2_session_client_new3
-nghttp2_session_consume
-nghttp2_session_consume_connection
-nghttp2_session_consume_stream
-nghttp2_session_create_idle_stream
-nghttp2_session_del
-nghttp2_session_find_stream
-nghttp2_session_get_effective_local_window_size
-nghttp2_session_get_effective_recv_data_length
-nghttp2_session_get_hd_deflate_dynamic_table_size
-nghttp2_session_get_hd_inflate_dynamic_table_size
-nghttp2_session_get_last_proc_stream_id
 nghttp2_session_get_local_settings
-nghttp2_session_get_local_window_size
-nghttp2_session_get_next_stream_id
-nghttp2_session_get_outbound_queue_size
 nghttp2_session_get_remote_settings
-nghttp2_session_get_remote_window_size
-nghttp2_session_get_root_stream
-nghttp2_session_get_stream_effective_local_window_size
-nghttp2_session_get_stream_effective_recv_data_length
-nghttp2_session_get_stream_local_close
-nghttp2_session_get_stream_local_window_size
-nghttp2_session_get_stream_remote_close
-nghttp2_session_get_stream_remote_window_size
-nghttp2_session_get_stream_user_data
 nghttp2_session_mem_recv
 nghttp2_session_mem_send
 nghttp2_session_mem_send_internal
@@ -57453,55 +57235,19 @@ nghttp2_session_pack_data
 nghttp2_session_predicate_data_send
 nghttp2_session_recv
 nghttp2_session_reprioritize_stream
-nghttp2_session_resume_data
-nghttp2_session_send
-nghttp2_session_server_new
-nghttp2_session_server_new2
-nghttp2_session_server_new3
-nghttp2_session_set_local_window_size
-nghttp2_session_set_next_stream_id
 nghttp2_session_set_stream_user_data
-nghttp2_session_set_user_data
-nghttp2_session_terminate_session
-nghttp2_session_terminate_session2
 nghttp2_session_upgrade
 nghttp2_session_upgrade2
-nghttp2_session_want_read
-nghttp2_session_want_write
 nghttp2_stream.c
 nghttp2_stream_attach_item
 nghttp2_stream_defer_item
 nghttp2_stream_dep_remove
 nghttp2_stream_dep_remove_subtree
-nghttp2_stream_get_first_child
-nghttp2_stream_get_next_sibling
-nghttp2_stream_get_parent
-nghttp2_stream_get_previous_sibling
-nghttp2_stream_get_state
-nghttp2_stream_get_stream_id
-nghttp2_stream_get_sum_dependency_weight
-nghttp2_stream_get_weight
 nghttp2_stream_in_dep_tree(stream)
 nghttp2_stream_reschedule
 nghttp2_stream_resume_deferred_item
-nghttp2_strerror
 nghttp2_submit.c
-nghttp2_submit_altsvc
-nghttp2_submit_data
-nghttp2_submit_extension
-nghttp2_submit_goaway
-nghttp2_submit_headers
 nghttp2_submit_origin
-nghttp2_submit_ping
-nghttp2_submit_priority
-nghttp2_submit_push_promise
-nghttp2_submit_request
-nghttp2_submit_response
-nghttp2_submit_rst_stream
-nghttp2_submit_settings
-nghttp2_submit_shutdown_notice
-nghttp2_submit_trailer
-nghttp2_submit_window_update
 nice
 nick
 nickname
@@ -58087,6 +57833,7 @@ org-freedesktop-dbus-introspectable
 org-freedesktop-dbus-peer
 org-freedesktop-dbus-properties
 org-kde-screensaver
+org.freedesktop.DBus
 org.freedesktop.DBus.Peer
 org.freedesktop.DBus.Properties.Set
 org.freedesktop.DBus.Property.EmitsChangedSignal
@@ -58105,6 +57852,7 @@ oriType
 oriValue
 orig_session != NULL
 orig_session->HasAttr(buzz::QN_TYPE)
+origin
 origin_SteamFrame_DPad_Touch
 origin_SteamFrame_LeftGrip_Click
 origin_SteamFrame_LeftGrip_Pull
@@ -58269,7 +58017,6 @@ p@0pqE5tsO?|1
 pAckEnd <= helper.m_pPayloadEnd
 pAction
 pAction->m_nActionAPIHandle > 0
-pAction->m_nBindingType != k_EGameActionBindingType_Button
 pAction->m_nBindingType == k_EGameActionBindingType_StickPadGyro || pAction->m_nBindingType == k_EGameActionBindingType_AnalogTrigger
 pAction->m_nOriginCount >= 0
 pActionSet
@@ -58505,7 +58252,6 @@ pOldCallback != pConnectionCallback
 pOldConn->m_identityRemote == identityRemote
 pOut == (uint8 *)pPlaintextData + cbEncryptedDataWithoutTag
 pOut == pExpectedOutEnd
-pOutAction->eMode == (EInputSourceMode)eMode
 pOutDigest
 pOutFakeIP->IsFakeIP()
 pOuter->m_dictActions.IsValidIndex( iSetIndex )
@@ -58645,6 +58391,7 @@ pThis->m_nReplyTimeoutsSinceLastRecv == 0
 pThisPair->m_nState != kICECandidatePairState_InProgress
 pThisPair->m_nState == kICECandidatePairState_InProgress
 pThread
+pThread && pThread->m_pCurrentWorkItem == pWorkItem && !pThread->m_bCurrentItemDeferred
 pTicket != NULL
 pTimedTrialApp->m_unSecondsUnreported > m_unSecondsReported
 pToken
@@ -58863,98 +58610,13 @@ pchRequestFileName
 pchSSLCertificate && pchSSLPrivateKey
 pchSteam2ID
 pchTLSServerName == NULL
+pchValue || eSetVarPolicy == k_ESetVarPolicy_Delete
 pchVar
-pchVar && pchValue
 pch[cub - 1] != '\0' && pch[cub] == '\0'
 pclose
 pcmag.com
-pcre32_callout
-pcre32_compile
-pcre32_compile2
-pcre32_exec
-pcre32_free
-pcre32_free_study
-pcre32_fullinfo
-pcre32_malloc
-pcre32_stack_free
-pcre32_stack_guard
-pcre32_stack_malloc
-pcre32_study
-pcre_callout
-pcre_compile
-pcre_compile2
-pcre_config
-pcre_exec
-pcre_free
-pcre_fullinfo
-pcre_malloc
 pcre_retval == 0
-pcre_stack_free
-pcre_stack_guard
-pcre_stack_malloc
 pcrecpp.cc
-pcrecpp::Arg::Arg(void*)
-pcrecpp::Arg::Parse(char const*, int) const
-pcrecpp::Arg::parse_char(char const*, int, void*)
-pcrecpp::Arg::parse_double(char const*, int, void*)
-pcrecpp::Arg::parse_float(char const*, int, void*)
-pcrecpp::Arg::parse_int(char const*, int, void*)
-pcrecpp::Arg::parse_int_cradix(char const*, int, void*)
-pcrecpp::Arg::parse_int_hex(char const*, int, void*)
-pcrecpp::Arg::parse_int_octal(char const*, int, void*)
-pcrecpp::Arg::parse_int_radix(char const*, int, void*, int)
-pcrecpp::Arg::parse_long(char const*, int, void*)
-pcrecpp::Arg::parse_long_cradix(char const*, int, void*)
-pcrecpp::Arg::parse_long_hex(char const*, int, void*)
-pcrecpp::Arg::parse_long_octal(char const*, int, void*)
-pcrecpp::Arg::parse_long_radix(char const*, int, void*, int)
-pcrecpp::Arg::parse_longlong(char const*, int, void*)
-pcrecpp::Arg::parse_longlong_cradix(char const*, int, void*)
-pcrecpp::Arg::parse_longlong_hex(char const*, int, void*)
-pcrecpp::Arg::parse_longlong_octal(char const*, int, void*)
-pcrecpp::Arg::parse_longlong_radix(char const*, int, void*, int)
-pcrecpp::Arg::parse_null(char const*, int, void*)
-pcrecpp::Arg::parse_short(char const*, int, void*)
-pcrecpp::Arg::parse_short_cradix(char const*, int, void*)
-pcrecpp::Arg::parse_short_hex(char const*, int, void*)
-pcrecpp::Arg::parse_short_octal(char const*, int, void*)
-pcrecpp::Arg::parse_short_radix(char const*, int, void*, int)
-pcrecpp::Arg::parse_string(char const*, int, void*)
-pcrecpp::Arg::parse_stringpiece(char const*, int, void*)
-pcrecpp::Arg::parse_uchar(char const*, int, void*)
-pcrecpp::Arg::parse_uint(char const*, int, void*)
-pcrecpp::Arg::parse_uint_cradix(char const*, int, void*)
-pcrecpp::Arg::parse_uint_hex(char const*, int, void*)
-pcrecpp::Arg::parse_uint_octal(char const*, int, void*)
-pcrecpp::Arg::parse_uint_radix(char const*, int, void*, int)
-pcrecpp::Arg::parse_ulong(char const*, int, void*)
-pcrecpp::Arg::parse_ulong_cradix(char const*, int, void*)
-pcrecpp::Arg::parse_ulong_hex(char const*, int, void*)
-pcrecpp::Arg::parse_ulong_octal(char const*, int, void*)
-pcrecpp::Arg::parse_ulong_radix(char const*, int, void*, int)
-pcrecpp::Arg::parse_ulonglong(char const*, int, void*)
-pcrecpp::Arg::parse_ulonglong_cradix(char const*, int, void*)
-pcrecpp::Arg::parse_ulonglong_hex(char const*, int, void*)
-pcrecpp::Arg::parse_ulonglong_octal(char const*, int, void*)
-pcrecpp::Arg::parse_ulonglong_radix(char const*, int, void*, int)
-pcrecpp::Arg::parse_ushort(char const*, int, void*)
-pcrecpp::Arg::parse_ushort_cradix(char const*, int, void*)
-pcrecpp::Arg::parse_ushort_hex(char const*, int, void*)
-pcrecpp::Arg::parse_ushort_octal(char const*, int, void*)
-pcrecpp::Arg::parse_ushort_radix(char const*, int, void*, int)
-pcrecpp::RE::Cleanup()
-pcrecpp::RE::Compile(pcrecpp::RE::Anchor)
-pcrecpp::RE::Consume(pcrecpp::StringPiece*, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&) const
-pcrecpp::RE::DoMatch(pcrecpp::StringPiece const&, pcrecpp::RE::Anchor, int*, pcrecpp::Arg const* const*, int) const
-pcrecpp::RE::DoMatchImpl(pcrecpp::StringPiece const&, pcrecpp::RE::Anchor, int*, pcrecpp::Arg const* const*, int, int*, int) const
-pcrecpp::RE::FindAndConsume(pcrecpp::StringPiece*, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&) const
-pcrecpp::RE::FullMatch(pcrecpp::StringPiece const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&) const
-pcrecpp::RE::NumberOfCapturingGroups() const
-pcrecpp::RE::PartialMatch(pcrecpp::StringPiece const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&) const
-pcrecpp::RE::QuoteMeta(pcrecpp::StringPiece const&)
-pcrecpp::RE::TryMatch(pcrecpp::StringPiece const&, int, pcrecpp::RE::Anchor, bool, int*, int) const
-pcrecpp::RE::no_arg
-pcrecpp::RE::~RE()
 pcst
 pcubDecodedData
 pcubEncryptedData
@@ -59707,6 +59369,7 @@ position_is_waitlist
 position_x
 position_y
 positive_int_value
+posix_device_number
 posix_fadvise
 possible_takeover
 post
@@ -59756,6 +59419,7 @@ prepare-for-shutdown
 prepare-for-sleep
 preparing-for-shutdown
 preparing-for-sleep
+prepend=
 prerelease
 presence
 presence-in
@@ -59896,6 +59560,7 @@ promotional_discount_type
 prompt
 prop_id != 0 && prop_id - 1 < 40
 properties
+property
 property_name
 property_schemas
 property_value_bool
@@ -60112,6 +59777,7 @@ py_generic_services
 pyrowave_custom_bitrate
 pyrowave_custom_bitrate_kbps
 pyrowave_quality_modifier
+pyrowave_yuv444
 pzKD)
 p}?fff?
 q not prime
@@ -61351,6 +61017,7 @@ set-msgExt
 set-policy
 set-policy-root
 set-rootKeyThumb
+set=
 setAttr-Cert
 setAttr-GenCryptgrm
 setAttr-IssCap
@@ -62105,6 +61772,7 @@ status != NULL
 status expired
 status not yet valid
 status too old
+status.text = %s
 status_loc_token
 status_request
 status_request_v2
@@ -62144,7 +61812,7 @@ stderr
 stdin
 stdout
 steam
-steam Sep 23 2026 22:41:42
+steam Oct  6 2026 23:05:09
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n
@@ -62682,7 +62350,6 @@ sysreqs
 system
 system lib
 system library
-system%c%s
 system-shutdown
 system_can_suspend
 system_default
@@ -63702,14 +63369,6 @@ typeinfo for
 typeinfo for EWatchdogStallResult (*)(unsigned int)
 typeinfo for EWatchdogStallResult (unsigned int)
 typeinfo for SteamThreadTools::CThread
-typeinfo for __cxxabiv1::__class_type_info
-typeinfo for __cxxabiv1::__forced_unwind
-typeinfo for __cxxabiv1::__foreign_exception
-typeinfo for __cxxabiv1::__function_type_info
-typeinfo for __cxxabiv1::__si_class_type_info
-typeinfo for __gnu_cxx::__concurrence_lock_error
-typeinfo for __gnu_cxx::__concurrence_unlock_error
-typeinfo for __gnu_cxx::recursive_init_error
 typeinfo for tinyxml2::XMLAttribute
 typeinfo for tinyxml2::XMLComment
 typeinfo for tinyxml2::XMLDeclaration
@@ -63725,14 +63384,6 @@ typeinfo for void (*)()
 typeinfo name for
 typeinfo name for EWatchdogStallResult (*)(unsigned int)
 typeinfo name for EWatchdogStallResult (unsigned int)
-typeinfo name for __cxxabiv1::__class_type_info
-typeinfo name for __cxxabiv1::__forced_unwind
-typeinfo name for __cxxabiv1::__foreign_exception
-typeinfo name for __cxxabiv1::__function_type_info
-typeinfo name for __cxxabiv1::__si_class_type_info
-typeinfo name for __gnu_cxx::__concurrence_lock_error
-typeinfo name for __gnu_cxx::__concurrence_unlock_error
-typeinfo name for __gnu_cxx::recursive_init_error
 typeinfo name for tinyxml2::XMLAttribute
 typeinfo name for tinyxml2::XMLComment
 typeinfo name for tinyxml2::XMLDeclaration
@@ -64106,6 +63757,7 @@ unreliable msgnum offset
 unreliable size lower bits
 unsafe legacy renegotiation disabled
 unset
+unset=
 unsigned
 unsigned __int128
 unsigned char
@@ -64564,16 +64216,6 @@ vsAd
 vsnprintf
 vtable for
 vtable for CAdHocValidation_SimpleCallback
-vtable for __cxxabiv1::__class_type_info
-vtable for __cxxabiv1::__forced_unwind
-vtable for __cxxabiv1::__foreign_exception
-vtable for __cxxabiv1::__function_type_info
-vtable for __cxxabiv1::__pointer_type_info
-vtable for __cxxabiv1::__si_class_type_info
-vtable for __cxxabiv1::__vmi_class_type_info
-vtable for __gnu_cxx::__concurrence_lock_error
-vtable for __gnu_cxx::__concurrence_unlock_error
-vtable for __gnu_cxx::recursive_init_error
 vtable for tinyxml2::XMLAttribute
 vtable for tinyxml2::XMLComment
 vtable for tinyxml2::XMLDeclaration

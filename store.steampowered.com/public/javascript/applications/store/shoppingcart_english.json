@@ -6,6 +6,7 @@
     "Cart_RemoveAll": "Remove all items",
     "Cart_Edit": "Edit",
     "Cart_Quantity": "Qty: %1$s",
+    "Cart_ShoppingCart": "Shopping Cart",
     "Cart_YourShoppingCart": "Your Shopping Cart",
     "Cart_YourShoppingCartLineItems": "Your Shopping Cart (%1$s item)",
     "Cart_YourShoppingCartLineItems_Plural": "Your Shopping Cart (%1$s items)",
@@ -210,6 +211,13 @@
     "Cart_UserCountrySelector": "Country",
     "Cart_Replay_SavedCart": "Saved Cart",
     "Cart_Replay_Instructions": "This is a saved shopping cart.  Last time you attempted to purchase this cart there was an error, so we saved your cart (including discounts) for %1$s hours so you can attempt your purchase again.",
+    "Cart_Replay_Fatal": "This cart is no longer available for repurchase.",
+    "Cart_Replay_Fatal_Expired": "Carts are only available for repurchase for a period of %1$s hours.",
+    "Cart_Replay_Fatal_Replayed": "This cart has already been repurchased.",
+    "Cart_Replay_Fatal_Region": "Your store region has changed since this purchase was originally attempted.  This saved cart cannot be repurchased in your current region.",
     "Cart_Gifting_CopyGiftOptionsFrom": "Copy gift options from",
-    "Cart_Gifting_SignInForFriends": "Sign in to select a friend"
+    "Cart_Gifting_SignInForFriends": "Sign in to select a friend",
+    "Cart_LicenseContextTitle": "A purchase of a digital product grants a license for the product on Steam.",
+    "Cart_LicenseContextLink": "For full terms and conditions, please see the %1$s",
+    "Cart_LicenseContextSSA": "Steam Subscriber Agreement"
 }

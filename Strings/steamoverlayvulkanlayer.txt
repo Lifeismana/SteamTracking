@@ -38,10 +38,14 @@ $ORIGIN
 0123456789
 17CPooledBufferData
 18CVulkanSharedImage
+24CVulkanSharedPlanarImage
 26CVulkanAsyncReadbackThread
 27CVulkanSharedResourceDevice
 @data
 @entryPointOutput
+@entryPointOutput.U
+@entryPointOutput.V
+@entryPointOutput.Y
 @entryPointOutput.vPositionPs
 @entryPointOutput.vTexCoord
 AKST
@@ -67,6 +71,7 @@ January
 July
 June
 March
+MbP?H
 Monday
 N10__cxxabiv115__forced_unwindE
 N10__cxxabiv117__class_type_infoE
@@ -201,9 +206,11 @@ Voffset
 VulkanSteamOverlayBeginRendering
 VulkanSteamOverlayDeleteTexture(int)
 VulkanSteamOverlayDestroySwapChain
+VulkanSteamOverlayDrawTexturedQuad
 VulkanSteamOverlayDrawTexturedRect
 VulkanSteamOverlayPresent
 VulkanSteamOverlayProcessCapturedFrame
+VulkanSteamOverlayProcessSharedPlanarFrame
 VulkanSteamOverlaySetWindowType
 VulkanSteamOverlayStartCaptureFrame
 VulkanSteamOverlayStopRendering
@@ -255,18 +262,12 @@ __wcsxfrm_l
 __wctype_l
 _edata
 _end
-_txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
-_txnal_cow_string_D1(void*)
-_txnal_cow_string_D1_commit(void*)
-_txnal_cow_string_c_str(void const*)
-_txnal_logic_error_get_msg(void*)
-_txnal_runtime_error_get_msg(void*)
-_txnal_sso_string_c_str(void const*)
 abort
 alignof
 allocator
 alnum
 alpha
+asctime_r
 auto
 auto:
 bCompositeCursor
@@ -299,6 +300,7 @@ char
 char16_t
 char32_t
 char8_t
+clock_gettime
 cntrl
 color
 colorX
@@ -309,6 +311,8 @@ compositeDesc
 const_cast
 construction vtable for
 covariant return thunk to
+ctime_r
+daylight
 decimal128
 decimal32
 decimal64
@@ -353,9 +357,7 @@ g_flPad1
 g_flPad2
 g_flSDRWhiteLevelInNits
 g_sSampler
-g_sSamplerBilinear
 g_sSamplerCursor
-g_sSamplerNearest
 g_tCursor
 g_tTexture
 generic
@@ -363,22 +365,24 @@ get_nprocs
 getc
 getenv
 gettext
+gettimeofday
 getwc
 gl_Position
 global constructors keyed to
 global destructors keyed to
+gmtime_r
 graph
 guard variable for
 half
 hidden alias for
 i.nVertexIndex
-i.vTexCoord
 iconv
 iconv_close
 iconv_open
 imaginary
 inConstants
 inLayerTex0
+input.Tex
 ioctl
 iostream
 iostream error
@@ -389,6 +393,7 @@ libc.so.6
 libdl.so.2
 libpthread.so.0
 locale::facet::_S_create_c_locale name not valid
+localtime_r
 long
 long double
 long long
@@ -422,6 +427,7 @@ print
 pthread_cond_broadcast
 pthread_cond_destroy
 pthread_cond_signal
+pthread_cond_timedwait
 pthread_cond_wait
 pthread_create
 pthread_detach
@@ -442,6 +448,8 @@ read
 realloc
 reference temporary #
 reinterpret_cast
+samCursor
+samDiffuse
 sampler0
 setlocale
 setvbuf
@@ -488,29 +496,17 @@ terminate called recursively\n
 terminate called without an active exception\n
 this
 throw
+timegm
+timezone
 transaction clone for
 transaction clone for operator delete(void*)
 transaction clone for operator new[](unsigned long)
 true
+txCursor
+txDiffuse
 typeinfo fn for
 typeinfo for
-typeinfo for __cxxabiv1::__class_type_info
-typeinfo for __cxxabiv1::__forced_unwind
-typeinfo for __cxxabiv1::__foreign_exception
-typeinfo for __cxxabiv1::__si_class_type_info
-typeinfo for __cxxabiv1::__vmi_class_type_info
-typeinfo for __gnu_cxx::__concurrence_lock_error
-typeinfo for __gnu_cxx::__concurrence_unlock_error
-typeinfo for __gnu_cxx::recursive_init_error
 typeinfo name for
-typeinfo name for __cxxabiv1::__class_type_info
-typeinfo name for __cxxabiv1::__forced_unwind
-typeinfo name for __cxxabiv1::__foreign_exception
-typeinfo name for __cxxabiv1::__si_class_type_info
-typeinfo name for __cxxabiv1::__vmi_class_type_info
-typeinfo name for __gnu_cxx::__concurrence_lock_error
-typeinfo name for __gnu_cxx::__concurrence_unlock_error
-typeinfo name for __gnu_cxx::recursive_init_error
 uFragColor
 ungetc
 ungetwc
@@ -1124,14 +1120,6 @@ vk_layerGetPhysicalDeviceProcAddr
 void
 vsnprintf
 vtable for
-vtable for __cxxabiv1::__class_type_info
-vtable for __cxxabiv1::__forced_unwind
-vtable for __cxxabiv1::__foreign_exception
-vtable for __cxxabiv1::__si_class_type_info
-vtable for __cxxabiv1::__vmi_class_type_info
-vtable for __gnu_cxx::__concurrence_lock_error
-vtable for __gnu_cxx::__concurrence_unlock_error
-vtable for __gnu_cxx::recursive_init_error
 wchar_t
 wcrtomb
 wcscmp

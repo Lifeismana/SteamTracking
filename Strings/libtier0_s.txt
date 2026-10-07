@@ -89,11 +89,11 @@ $ORIGIN
 /dev/urandom
 /etc/os-release
 /etc/steamos-oobe-image
-/proc/%d/status
 /proc/cpuinfo
 /proc/meminfo
 /proc/self/exe
 /proc/self/fd
+/proc/self/status
 /run/host/etc/os-release
 /sys/devices/system/cpu/cpu0/cpufreq/cpuinfo_max_freq
 /sys/kernel/debug/tracing/trace_marker
@@ -102,7 +102,7 @@ $ORIGIN
 0123456789ABCDEF
 12CStdMemAlloc
 16CAdHocValidation
-22:41:23
+23:04:37
 31CAdHocValidation_SimpleCallback
 9IMemAlloc
 <family %u, %u bytes>
@@ -303,12 +303,9 @@ Must Start() thread before setting priority
 N10SteamVProf13CVProfManagerE
 N10__cxxabiv115__forced_unwindE
 N10__cxxabiv117__class_type_infoE
-N10__cxxabiv117__pbase_type_infoE
 N10__cxxabiv119__foreign_exceptionE
-N10__cxxabiv119__pointer_type_infoE
 N10__cxxabiv120__si_class_type_infoE
 N10__cxxabiv123__fundamental_type_infoE
-N10__cxxabiv129__pointer_to_member_type_infoE
 N9__gnu_cxx20recursive_init_errorE
 N9__gnu_cxx24__concurrence_lock_errorE
 N9__gnu_cxx26__concurrence_unlock_errorE
@@ -319,18 +316,11 @@ No samples during profile period.\n
 No tracked allocs currently in use. Total %d\n
 OUT OF MEMORY
 Object
+Oct  6 2026
 Only thread can stop self: Use a higher-level protocol
 OverlayFrameMark
 OverlayInput
 OverlayRendering
-PKDd
-PKDe
-PKDf
-PKDh
-PKDi
-PKDn
-PKDs
-PKDu
 POSIX does not support inheriting full mutexes
 PS3 Unattributed
 Peak %.2f ms frame\n
@@ -401,7 +391,6 @@ SDL_SetCurrentThreadPriority
 STEAM_DESKTOP_APP_AFFINITY_LIST
 SecureRandomBytes
 Semaphore name (%s) is longer than POSIX can handle, truncating.
-Sep 23 2026
 ServerMain
 SetAssertDialogsShown
 SetAssertDumpStack
@@ -655,7 +644,7 @@ ThreadWaitForProcessExit
 ThreadWorkItem
 Total bytes allocated (os heap reported): %s\n
 Total bytes allocated counted: %s\n
-TracerPid:
+TracerPid:\t
 Tracked allocs currently in use. %d Total %d\n
 Tried to create a thread that has already been created!
 USER
@@ -769,13 +758,6 @@ __xstat64
 _edata
 _end
 _exit
-_txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
-_txnal_cow_string_D1(void*)
-_txnal_cow_string_D1_commit(void*)
-_txnal_cow_string_c_str(void const*)
-_txnal_logic_error_get_msg(void*)
-_txnal_runtime_error_get_msg(void*)
-_txnal_sso_string_c_str(void const*)
 aarch64
 abort
 access
@@ -998,7 +980,6 @@ realpath
 reference temporary #
 reinterpret_cast
 rename
-rewind
 rmdir
 s_dev_urandom_fd >= 0
 scandir
@@ -1098,195 +1079,11 @@ typeinfo for
 typeinfo for CAdHocValidation
 typeinfo for CAdHocValidation_SimpleCallback
 typeinfo for SteamThreadTools::CThread
-typeinfo for __cxxabiv1::__class_type_info
-typeinfo for __cxxabiv1::__forced_unwind
-typeinfo for __cxxabiv1::__foreign_exception
-typeinfo for __cxxabiv1::__fundamental_type_info
-typeinfo for __cxxabiv1::__pbase_type_info
-typeinfo for __cxxabiv1::__pointer_to_member_type_info
-typeinfo for __cxxabiv1::__pointer_type_info
-typeinfo for __cxxabiv1::__si_class_type_info
-typeinfo for __gnu_cxx::__concurrence_lock_error
-typeinfo for __gnu_cxx::__concurrence_unlock_error
-typeinfo for __gnu_cxx::recursive_init_error
-typeinfo for __int128
-typeinfo for __int128 const*
-typeinfo for __int128*
-typeinfo for bool
-typeinfo for bool const*
-typeinfo for bool*
-typeinfo for char
-typeinfo for char const*
-typeinfo for char*
-typeinfo for char16_t
-typeinfo for char16_t const*
-typeinfo for char16_t*
-typeinfo for char32_t
-typeinfo for char32_t const*
-typeinfo for char32_t*
-typeinfo for char8_t
-typeinfo for char8_t const*
-typeinfo for char8_t*
-typeinfo for decimal128
-typeinfo for decimal128 const*
-typeinfo for decimal128*
-typeinfo for decimal32
-typeinfo for decimal32 const*
-typeinfo for decimal32*
-typeinfo for decimal64
-typeinfo for decimal64 const*
-typeinfo for decimal64*
-typeinfo for double
-typeinfo for double const*
-typeinfo for double*
-typeinfo for float
-typeinfo for float const*
-typeinfo for float*
-typeinfo for half
-typeinfo for half const*
-typeinfo for half*
-typeinfo for int
-typeinfo for int const*
-typeinfo for int*
-typeinfo for long
-typeinfo for long const*
-typeinfo for long double
-typeinfo for long double const*
-typeinfo for long double*
-typeinfo for long long
-typeinfo for long long const*
-typeinfo for long long*
-typeinfo for long*
-typeinfo for short
-typeinfo for short const*
-typeinfo for short*
-typeinfo for signed char
-typeinfo for signed char const*
-typeinfo for signed char*
-typeinfo for std::nullptr_t
-typeinfo for std::nullptr_t const*
-typeinfo for std::nullptr_t*
-typeinfo for unsigned __int128
-typeinfo for unsigned __int128 const*
-typeinfo for unsigned __int128*
-typeinfo for unsigned char
-typeinfo for unsigned char const*
-typeinfo for unsigned char*
-typeinfo for unsigned int
-typeinfo for unsigned int const*
-typeinfo for unsigned int*
-typeinfo for unsigned long
-typeinfo for unsigned long const*
-typeinfo for unsigned long long
-typeinfo for unsigned long long const*
-typeinfo for unsigned long long*
-typeinfo for unsigned long*
-typeinfo for unsigned short
-typeinfo for unsigned short const*
-typeinfo for unsigned short*
-typeinfo for void
-typeinfo for void const*
-typeinfo for void*
-typeinfo for wchar_t
-typeinfo for wchar_t const*
-typeinfo for wchar_t*
 typeinfo name for
 typeinfo name for CAdHocValidation
 typeinfo name for CAdHocValidation_SimpleCallback
 typeinfo name for SteamThreadTools::CThread
 typeinfo name for SteamVProf::CVProfManager
-typeinfo name for __cxxabiv1::__class_type_info
-typeinfo name for __cxxabiv1::__forced_unwind
-typeinfo name for __cxxabiv1::__foreign_exception
-typeinfo name for __cxxabiv1::__fundamental_type_info
-typeinfo name for __cxxabiv1::__pbase_type_info
-typeinfo name for __cxxabiv1::__pointer_to_member_type_info
-typeinfo name for __cxxabiv1::__pointer_type_info
-typeinfo name for __cxxabiv1::__si_class_type_info
-typeinfo name for __gnu_cxx::__concurrence_lock_error
-typeinfo name for __gnu_cxx::__concurrence_unlock_error
-typeinfo name for __gnu_cxx::recursive_init_error
-typeinfo name for __int128
-typeinfo name for __int128 const*
-typeinfo name for __int128*
-typeinfo name for bool
-typeinfo name for bool const*
-typeinfo name for bool*
-typeinfo name for char
-typeinfo name for char const*
-typeinfo name for char*
-typeinfo name for char16_t
-typeinfo name for char16_t const*
-typeinfo name for char16_t*
-typeinfo name for char32_t
-typeinfo name for char32_t const*
-typeinfo name for char32_t*
-typeinfo name for char8_t
-typeinfo name for char8_t const*
-typeinfo name for char8_t*
-typeinfo name for decimal128
-typeinfo name for decimal128 const*
-typeinfo name for decimal128*
-typeinfo name for decimal32
-typeinfo name for decimal32 const*
-typeinfo name for decimal32*
-typeinfo name for decimal64
-typeinfo name for decimal64 const*
-typeinfo name for decimal64*
-typeinfo name for double
-typeinfo name for double const*
-typeinfo name for double*
-typeinfo name for float
-typeinfo name for float const*
-typeinfo name for float*
-typeinfo name for half
-typeinfo name for half const*
-typeinfo name for half*
-typeinfo name for int
-typeinfo name for int const*
-typeinfo name for int*
-typeinfo name for long
-typeinfo name for long const*
-typeinfo name for long double
-typeinfo name for long double const*
-typeinfo name for long double*
-typeinfo name for long long
-typeinfo name for long long const*
-typeinfo name for long long*
-typeinfo name for long*
-typeinfo name for short
-typeinfo name for short const*
-typeinfo name for short*
-typeinfo name for signed char
-typeinfo name for signed char const*
-typeinfo name for signed char*
-typeinfo name for std::nullptr_t
-typeinfo name for std::nullptr_t const*
-typeinfo name for std::nullptr_t*
-typeinfo name for unsigned __int128
-typeinfo name for unsigned __int128 const*
-typeinfo name for unsigned __int128*
-typeinfo name for unsigned char
-typeinfo name for unsigned char const*
-typeinfo name for unsigned char*
-typeinfo name for unsigned int
-typeinfo name for unsigned int const*
-typeinfo name for unsigned int*
-typeinfo name for unsigned long
-typeinfo name for unsigned long const*
-typeinfo name for unsigned long long
-typeinfo name for unsigned long long const*
-typeinfo name for unsigned long long*
-typeinfo name for unsigned long*
-typeinfo name for unsigned short
-typeinfo name for unsigned short const*
-typeinfo name for unsigned short*
-typeinfo name for void
-typeinfo name for void const*
-typeinfo name for void*
-typeinfo name for wchar_t
-typeinfo name for wchar_t const*
-typeinfo name for wchar_t*
 uname
 unknown
 unlink
@@ -1314,17 +1111,6 @@ vtable for
 vtable for CAdHocValidation
 vtable for CAdHocValidation_SimpleCallback
 vtable for SteamThreadTools::CThread
-vtable for __cxxabiv1::__class_type_info
-vtable for __cxxabiv1::__forced_unwind
-vtable for __cxxabiv1::__foreign_exception
-vtable for __cxxabiv1::__fundamental_type_info
-vtable for __cxxabiv1::__pbase_type_info
-vtable for __cxxabiv1::__pointer_to_member_type_info
-vtable for __cxxabiv1::__pointer_type_info
-vtable for __cxxabiv1::__si_class_type_info
-vtable for __gnu_cxx::__concurrence_lock_error
-vtable for __gnu_cxx::__concurrence_unlock_error
-vtable for __gnu_cxx::recursive_init_error
 vtune
 waitid
 waitpid

@@ -4348,8 +4348,8 @@ ${FILENAME}
 /nollaa
 /p5]/ZQ
 /proc/%d/environ
-/proc/%d/status
 /proc/cpuinfo
+/proc/device-tree/board-info/unit_sn
 /proc/device-tree/compatible
 /proc/device-tree/model
 /proc/meminfo
@@ -4358,6 +4358,7 @@ ${FILENAME}
 /proc/self/fd
 /proc/self/fd/%d
 /proc/self/maps
+/proc/self/status
 /proc/version
 /przesu
 /qUn
@@ -4459,10 +4460,10 @@ ${FILENAME}
 0+f|D
 0,PQ
 0-AD
-0.06
-0/bu^U
 0/gge
 0000000000000000000000000000000000000000
+0.06
+0/bu^U
 00000001
 000102030405060708091011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495969798990123456789abcdef
 00\fo
@@ -5235,8 +5236,6 @@ ${FILENAME}
 21StoreItem_Screenshots
 21UserSystemInformation
 21\oi
-22:41:18
-22:41:26
 22AES_ECB_EncryptContext
 22AES_GCM_DecryptContext
 22AES_GCM_EncryptContext
@@ -5252,6 +5251,7 @@ ${FILENAME}
 22CSetQualityOverrideMsg
 22CSetTargetFramerateMsg
 22CSetTouchConfigDataMsg
+22CStreamDecoderPyrowave
 22CStreamDecoderRawAudio
 22CStreamTransportClient
 22CStreamingClientConfig
@@ -5263,6 +5263,8 @@ ${FILENAME}
 22StoreItem_PackageGroup
 22StoreItem_RelatedItems
 232>
+23:04:33
+23:04:41
 23CActivationCodeItemInfo
 23CClanEventUserNewsTuple
 23CECKeyExchangePublicKey
@@ -5609,8 +5611,6 @@ ${FILENAME}
 32654'#
 32654'#536
 32654''3254&##c
-3267
-3267.
 32654.
 32655
 32655&
@@ -5621,10 +5621,12 @@ ${FILENAME}
 326554&##
 326554&'
 326654&&#"
+3267
 3267!
 3267!5!&
 3267!5!&&#"
 3267&'^7l
+3267.
 32675
 32675#5!
 32675&&#"
@@ -6016,10 +6018,10 @@ ${FILENAME}
 45CStoreBrowse_GetPriceStops_Response_PriceStop
 45rq
 46$a
-467.
 4632
 46632
 467&&54632
+467.
 4676654&#"
 46CControllerConfigMsg_ControllerActiveConfigMsg
 46CMsgSteamDatagramConnectionStatsClientToRouter
@@ -6245,10 +6247,6 @@ ${FILENAME}
 52{M
 52|{k
 531lo
-5467
-54632
-54663
-532654.
 532>
 536654#!5!
 53CMsgSteamDatagramClientPingSampleReply_POP_AltAddress
@@ -6259,6 +6257,11 @@ ${FILENAME}
 54&#72
 54&'7
 546'2>
+5467.
+5467
+54632
+54663
+532654.
 546632
 5467!
 5467#".
@@ -6267,7 +6270,6 @@ ${FILENAME}
 5467'
 5467'!
 5467'7
-5467.
 546753
 546;
 54CControllerConfigMsg_ControllerPersonalizationResponse
@@ -6676,14 +6678,14 @@ ${FILENAME}
 73MW
 73nL4\v
 74&'3
-754.
-7524
-7623.
 74632
 75#5!
+754.
+7524
 75pRD
 75th
 76&'3
+7623.
 7664&#"
 76653
 76654&#"
@@ -8689,7 +8691,6 @@ AltAddressPenalty() == k_nSDRAltAddressPenalty_PingOnly
 AltGr
 AltTransportCheck
 Alterar as a
-Alterar designa
 Alterar tecla
 Alternar o gr
 Am4\v]
@@ -10175,6 +10176,7 @@ CStoreBrowse_GetItems_Response
 CStorePageFilter
 CStreamDataLostMsg
 CStreamDecoderOpus
+CStreamDecoderPyrowave
 CStreamDecoderRawAudio
 CStreamDecoderVideoStandalone
 CStreamPlayerConfig
@@ -10814,6 +10816,7 @@ Couldn't create %s renderer: %s\n
 Couldn't create CURL multi handle\n
 Couldn't create Opus decoder for %d Hz, %d channels: %d\n
 Couldn't create Opus encoder: %d
+Couldn't create Pyrowave hardware decoder\n
 Couldn't create a Vulkan video context: %s\n
 Couldn't create curl handle
 Couldn't create directories in path %s\n
@@ -10833,6 +10836,7 @@ Couldn't find memory index for type %u
 Couldn't find persona_name in profile\n
 Couldn't find plane property '%s'\n
 Couldn't find string '%s'\n
+Couldn't get the VkImage for the texture
 Couldn't initialize CURL: %d\n
 Couldn't initialize SDL: %s\n
 Couldn't load %s, DRM support disabled\n
@@ -16468,6 +16472,7 @@ ObsS9M
 OcYd
 Oca_
 Ocircumflex.smcp\vOtilde.smcp
+Oct  6 2026
 October
 Ocultar teclado virtual
 Oculte os controles por toque no menu de configura
@@ -17364,34 +17369,34 @@ Processed thinkers %d times -- probably one thinker keeps requesting an immediat
 Professional Information or basis for Admission
 Project-Id-Version: 1.1.10\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2018-08-23 17:03-0700\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: English\nLanguage: en_US\nMIME-Version: 1.0\nContent-Type: text/plain; charset=ASCII\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\n
 Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-06-30 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Malay\nLanguage: ms_MY\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: ms\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-07-14 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Bulgarian\nLanguage: bg_BG\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: bg\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-07-14 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Chinese Simplified\nLanguage: zh_CN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: zh-CN\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-07-14 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Chinese Traditional\nLanguage: zh_TW\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: zh-TW\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-07-14 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Czech\nLanguage: cs_CZ\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=4; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 3;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: cs\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-07-14 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Danish\nLanguage: da_DK\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: da\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-07-14 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Dutch\nLanguage: nl_NL\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: nl\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-07-14 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Finnish\nLanguage: fi_FI\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: fi\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-07-14 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: French\nLanguage: fr_FR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n > 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: fr\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-07-14 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: German\nLanguage: de_DE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: de\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-07-14 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Greek\nLanguage: el_GR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: el\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-07-14 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Hungarian\nLanguage: hu_HU\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: hu\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-07-14 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Indonesian\nLanguage: id_ID\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: id\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-07-14 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Italian\nLanguage: it_IT\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: it\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-07-14 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Japanese\nLanguage: ja_JP\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: ja\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-07-14 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Korean\nLanguage: ko_KR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: ko\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-07-14 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Norwegian Bokmal\nLanguage: nb_NO\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: nb\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-07-14 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Polish\nLanguage: pl_PL\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: pl\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-07-14 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Portuguese, Brazilian\nLanguage: pt_BR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: pt-BR\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-07-14 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Portuguese\nLanguage: pt_PT\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: pt\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-07-14 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Russian\nLanguage: ru_RU\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=4; plural=((n%10==1 && n%100!=11) ? 0 : ((n%10 >= 2 && n%10 <=4 && (n%100 < 12 || n%100 > 14)) ? 1 : ((n%10 == 0 || (n%10 >= 5 && n%10 <=9)) || (n%100 >= 11 && n%100 <= 14)) ? 2 : 3));\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: ru\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-07-14 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Spanish, Mexico\nLanguage: es_MX\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: es-MX\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-07-14 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Spanish\nLanguage: es_ES\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: es\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-07-14 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Swedish\nLanguage: sv_SE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: sv\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-07-14 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Thai\nLanguage: th_TH\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: th\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-07-14 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Turkish\nLanguage: tr_TR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: tr\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-07-14 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Ukrainian\nLanguage: uk_UA\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=4; plural=((n%10==1 && n%100!=11) ? 0 : ((n%10 >= 2 && n%10 <=4 && (n%100 < 12 || n%100 > 14)) ? 1 : ((n%10 == 0 || (n%10 >= 5 && n%10 <=9)) || (n%100 >= 11 && n%100 <= 14)) ? 2 : 3));\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: uk\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-07-14 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Vietnamese\nLanguage: vi_VN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: vi\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-07-14 14:37\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Romanian\nLanguage: ro_RO\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100>0 && n%100<20)) ? 1 : 2);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: ro\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-08-11 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Chinese Simplified\nLanguage: zh_CN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: zh-CN\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-08-11 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Danish\nLanguage: da_DK\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: da\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-08-11 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Dutch\nLanguage: nl_NL\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: nl\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-08-11 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Finnish\nLanguage: fi_FI\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: fi\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-08-11 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: German\nLanguage: de_DE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: de\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-08-11 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Greek\nLanguage: el_GR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: el\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-08-11 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Hungarian\nLanguage: hu_HU\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: hu\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-08-11 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Indonesian\nLanguage: id_ID\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: id\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-08-11 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Italian\nLanguage: it_IT\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: it\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-08-11 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Japanese\nLanguage: ja_JP\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: ja\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-08-11 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Korean\nLanguage: ko_KR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: ko\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-08-11 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Norwegian Bokmal\nLanguage: nb_NO\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: nb\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-08-11 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Polish\nLanguage: pl_PL\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: pl\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-08-11 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Portuguese\nLanguage: pt_PT\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: pt\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-08-11 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Romanian\nLanguage: ro_RO\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100>0 && n%100<20)) ? 1 : 2);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: ro\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-08-11 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Spanish, Mexico\nLanguage: es_MX\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: es-MX\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-08-11 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Spanish\nLanguage: es_ES\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: es\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-08-11 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Thai\nLanguage: th_TH\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: th\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-08-11 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Turkish\nLanguage: tr_TR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: tr\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-08-11 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Ukrainian\nLanguage: uk_UA\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=4; plural=((n%10==1 && n%100!=11) ? 0 : ((n%10 >= 2 && n%10 <=4 && (n%100 < 12 || n%100 > 14)) ? 1 : ((n%10 == 0 || (n%10 >= 5 && n%10 <=9)) || (n%100 >= 11 && n%100 <= 14)) ? 2 : 3));\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: uk\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-08-11 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Vietnamese\nLanguage: vi_VN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: vi\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-08-18 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Bulgarian\nLanguage: bg_BG\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: bg\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-08-18 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Chinese Traditional\nLanguage: zh_TW\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: zh-TW\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-08-18 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Czech\nLanguage: cs_CZ\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=4; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 3;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: cs\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-08-18 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: French\nLanguage: fr_FR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n > 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: fr\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-08-18 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Russian\nLanguage: ru_RU\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=4; plural=((n%10==1 && n%100!=11) ? 0 : ((n%10 >= 2 && n%10 <=4 && (n%100 < 12 || n%100 > 14)) ? 1 : ((n%10 == 0 || (n%10 >= 5 && n%10 <=9)) || (n%100 >= 11 && n%100 <= 14)) ? 2 : 3));\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: ru\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-08-18 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Swedish\nLanguage: sv_SE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: sv\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-09-08 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Portuguese, Brazilian\nLanguage: pt_BR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: pt-BR\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
 Properties: %d\n
 Prossimo set/layer di azioni
 Prost
@@ -18034,6 +18039,7 @@ Range: bytes=%s\r\n
 Rank=%d
 Rato
 Ravista vaihtaaksesi kosketusohjauksen p
+Raw send failed: %d, packet %d, %d bytes, %d queued\n
 RbP@
 Rbg.E
 Rcaron
@@ -18459,7 +18465,6 @@ SDL.renderer.create.vulkan.graphics_queue_family_index
 SDL.renderer.create.vulkan.instance
 SDL.renderer.create.vulkan.physical_device
 SDL.renderer.create.vulkan.present_queue_family_index
-SDL.renderer.create.vulkan.surface
 SDL.renderer.create.window
 SDL.renderer.output_colorspace
 SDL.renderer.vulkan.swapchain_image_count
@@ -18473,6 +18478,7 @@ SDL.texture.opengles2.texture
 SDL.texture.opengles2.texture_u
 SDL.texture.opengles2.texture_uv
 SDL.texture.opengles2.texture_v
+SDL.texture.vulkan.texture
 SDL.window.create.flags
 SDL.window.create.height
 SDL.window.create.title
@@ -19314,7 +19320,6 @@ Sending NoConnection to %s: { %s }\n
 Sending authorization request with pin %s\n
 Sent ack %u not pending.  %d: %u %u %u %u %u
 Sentiment
-Sep 23 2026
 September
 Serbian
 Seret
@@ -20667,7 +20672,7 @@ TqE\n
 Tr"e
 TrB-Z
 Traag
-TracerPid:
+TracerPid:\t
 Tracked allocs currently in use. %d Total %d\n
 Trackpad
 Trackpad (midden)
@@ -21109,6 +21114,7 @@ UnreliableFEC
 UnreliableMessage
 UnreliableMessageFragment
 UnreliableNack
+UnreliableRaw
 UnsafeLegacyRenegotiation
 Unsigned certs are not allowed
 Unspecified
@@ -21305,6 +21311,7 @@ VK_EVENT_SET
 VK_EXT_swapchain_colorspace
 VK_INCOMPLETE
 VK_KHR_bind_memory2
+VK_KHR_external_memory_capabilities
 VK_KHR_get_memory_requirements2
 VK_KHR_get_physical_device_properties2
 VK_KHR_maintenance1
@@ -21582,6 +21589,7 @@ VtN0W
 Vu6%
 Vu?N\t?8Ws?vGr?
 Vui l
+Vulkan device extension enabled: %s\n
 Vulkan: no viable physical devices found
 VulkanVideoContext
 Vuo(
@@ -32132,7 +32140,7 @@ lh\n2Ta
 lhatod r
 lhhl
 liQS
-lib Sep 23 2026 22:41:25
+lib Oct  6 2026 23:04:40
 lib(%lu)
 libEGL.so.1
 libGL.so.1
@@ -34065,14 +34073,13 @@ o cq
 o da alavanca direita
 o da alavanca esquerda
 o da sua conta na rede local.
-o da tecla
 o de arranque -pipewire e concede permiss
 o de arranque -pipewire para permitires a captura de v
 o de comandos do Big Picture
 o de comandos do Big Picture.
 o de drivers adicionais no computador remoto.
 o de linha de comando "-pipewire" e conceda permiss
-o de linha de comando "-pipewire" par ativar a captura de v
+o de linha de comando "-pipewire" para ativar a captura de v
 o de lupa no menu de configura
 o de lupa pelo menu de defini
 o de m
@@ -35336,6 +35343,7 @@ py_generic_services
 pyrowave_custom_bitrate
 pyrowave_custom_bitrate_kbps
 pyrowave_quality_modifier
+pyrowave_yuv444
 pyrs
 pz0S=##=Q.p
 pz1kW
@@ -35938,7 +35946,6 @@ revocationReason
 revocationTime
 revoked
 revoked_keys
-rewind
 rfZN"6\n
 rf\ts
 rfc822Mailbox
@@ -38412,16 +38419,6 @@ type:
 type_id
 typeinfo fn for
 typeinfo for
-typeinfo for __cxxabiv1::__class_type_info
-typeinfo for __cxxabiv1::__forced_unwind
-typeinfo for __cxxabiv1::__foreign_exception
-typeinfo for __cxxabiv1::__fundamental_type_info
-typeinfo for __cxxabiv1::__si_class_type_info
-typeinfo for __cxxabiv1::__vmi_class_type_info
-typeinfo for __gnu_cxx::__concurrence_lock_error
-typeinfo for __gnu_cxx::__concurrence_unlock_error
-typeinfo for __gnu_cxx::recursive_init_error
-typeinfo for int
 typeinfo for tinyxml2::XMLAttribute
 typeinfo for tinyxml2::XMLComment
 typeinfo for tinyxml2::XMLDeclaration
@@ -38433,16 +38430,6 @@ typeinfo for tinyxml2::XMLText
 typeinfo for tinyxml2::XMLUnknown
 typeinfo for tinyxml2::XMLVisitor
 typeinfo name for
-typeinfo name for __cxxabiv1::__class_type_info
-typeinfo name for __cxxabiv1::__forced_unwind
-typeinfo name for __cxxabiv1::__foreign_exception
-typeinfo name for __cxxabiv1::__fundamental_type_info
-typeinfo name for __cxxabiv1::__si_class_type_info
-typeinfo name for __cxxabiv1::__vmi_class_type_info
-typeinfo name for __gnu_cxx::__concurrence_lock_error
-typeinfo name for __gnu_cxx::__concurrence_unlock_error
-typeinfo name for __gnu_cxx::recursive_init_error
-typeinfo name for int
 typeinfo name for tinyxml2::XMLAttribute
 typeinfo name for tinyxml2::XMLComment
 typeinfo name for tinyxml2::XMLDeclaration
@@ -39663,13 +39650,11 @@ vkCreateImage
 vkCreateImage(): %s
 vkCreateInstance
 vkCreateInstance(): %s
-vkCreateSemaphore
-vkCreateSemaphore(): %s
 vkDestroyCommandPool
+vkDestroyDebugUtilsMessengerEXT
 vkDestroyDevice
 vkDestroyImage
 vkDestroyInstance
-vkDestroySemaphore
 vkDestroySurfaceKHR
 vkDeviceWaitIdle
 vkEndCommandBuffer
@@ -39690,11 +39675,9 @@ vkGetDeviceProcAddr(device, "vkBindImageMemory") failed
 vkGetDeviceProcAddr(device, "vkCmdPipelineBarrier2") failed
 vkGetDeviceProcAddr(device, "vkCreateCommandPool") failed
 vkGetDeviceProcAddr(device, "vkCreateImage") failed
-vkGetDeviceProcAddr(device, "vkCreateSemaphore") failed
 vkGetDeviceProcAddr(device, "vkDestroyCommandPool") failed
 vkGetDeviceProcAddr(device, "vkDestroyDevice") failed
 vkGetDeviceProcAddr(device, "vkDestroyImage") failed
-vkGetDeviceProcAddr(device, "vkDestroySemaphore") failed
 vkGetDeviceProcAddr(device, "vkDeviceWaitIdle") failed
 vkGetDeviceProcAddr(device, "vkEndCommandBuffer") failed
 vkGetDeviceProcAddr(device, "vkFreeCommandBuffers") failed
@@ -39785,13 +39768,6 @@ vstdlib_wcstoui64
 vswprintf
 vt9:G?g
 vtable for
-vtable for __cxxabiv1::__class_type_info
-vtable for __cxxabiv1::__fundamental_type_info
-vtable for __cxxabiv1::__si_class_type_info
-vtable for __cxxabiv1::__vmi_class_type_info
-vtable for __gnu_cxx::__concurrence_lock_error
-vtable for __gnu_cxx::__concurrence_unlock_error
-vtable for __gnu_cxx::recursive_init_error
 vtable for tinyxml2::XMLAttribute
 vtable for tinyxml2::XMLComment
 vtable for tinyxml2::XMLDeclaration

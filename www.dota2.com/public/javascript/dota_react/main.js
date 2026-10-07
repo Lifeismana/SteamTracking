@@ -3064,6 +3064,7 @@
         PageNumber: "FafYQImrtPrIK52eA_0fU",
         Hidden: "_106H5NcjWibbSFxZU-fE6R",
         SelectedPage: "_16vx6rigjj5vlzogn6MEFU",
+        PageEllipsis: "_1rBzBqQlZ7u-UtxTz0BeYV",
       };
     },
     46566: (e) => {
@@ -21626,42 +21627,58 @@
         Bi = r.n(xi);
       function Ti(e, t) {
         return (
-          (t.BIsVisibleEvent() && e && t.type == s.Fwr) ||
-          (!e &&
-            (t.type == s.u0 ||
-              t.type == s.zeJ ||
-              t.type == s.uYK ||
-              t.type == s.WNR ||
-              t.type == s.izQ ||
-              t.type == s.C$4))
+          t.BIsVisibleEvent() &&
+          ((e && t.type == s.Fwr) ||
+            (!e &&
+              (t.type == s.u0 ||
+                t.type == s.zeJ ||
+                t.type == s.uYK ||
+                t.type == s.WNR ||
+                t.type == s.izQ ||
+                t.type == s.C$4)))
         );
       }
       const ji = (0, S.PA)((e) => {
           const t = (0, x.g)(),
             [r, a] = (0, n.useState)(void 0),
-            [o, l] = (0, n.useState)(0),
-            c = !!t.updates;
-          if (((0, n.useEffect)(() => l(0), [t]), !r))
-            return (
-              _i
-                .LoadPartnerEventsPageable(
-                  At.b.InitFromClanID(0),
-                  570,
-                  0,
-                  100,
-                  di,
-                )
-                .then((e) => a(e)),
-              (0, b.jsx)($e.A, { bOverlapping: !0 })
-            );
-          const d = (0, s.sfN)(i.r.LANGUAGE);
-          let m,
-            u = 0;
+            [o, l] = (0, n.useState)(!1),
+            [c, d] = (0, n.useState)(!1),
+            [m, u] = (0, n.useState)(0),
+            [_, p] = (0, n.useState)(0),
+            g = !!t.updates;
+          (0, n.useEffect)(() => p(0), [t]);
+          const h = Math.max(0, _ - Math.floor(2.5)) + 5 - 1,
+            f = r ? r.filter((e) => Ti(g, e)).length : 0,
+            y = !r || (!o && f <= 15 * (h + 1));
+          if (
+            ((0, n.useEffect)(() => {
+              y &&
+                !c &&
+                (d(!0),
+                _i
+                  .LoadPartnerEventsPageable(
+                    At.b.InitFromClanID(0),
+                    570,
+                    m,
+                    100,
+                    di,
+                  )
+                  .then((e) => {
+                    0 == e.length && l(!0),
+                      a((t) => [...(t ?? []), ...e]),
+                      u((e) => e + 100),
+                      d(!1);
+                  }));
+            }, [y, c, m]),
+            !r)
+          )
+            return (0, b.jsx)($e.A, { bOverlapping: !0 });
+          const S = (0, s.sfN)(i.r.LANGUAGE);
+          let B;
           for (const e of r)
             if (Ti(!1, e)) {
-              u = e.GID;
               const t = new Date(1e3 * e.GetStartTimeAndDateUnixSeconds());
-              m = (0, b.jsxs)(
+              B = (0, b.jsxs)(
                 "div",
                 {
                   className: Bi().LargeEntry,
@@ -21696,7 +21713,7 @@
                         }),
                         (0, b.jsx)("div", {
                           className: Bi().Title,
-                          children: e.GetNameWithFallback(d),
+                          children: e.GetNameWithFallback(S),
                         }),
                         (0, b.jsxs)(w.N_, {
                           to: v.J.newsentry(e.GID),
@@ -21717,62 +21734,80 @@
               );
               break;
             }
-          let _ = [],
-            p = [],
-            g = [],
-            h = 0;
-          for (const e of r) Ti(c, e) && (h += 1);
-          let f = 0,
-            y = 0;
+          let T = [],
+            j = [],
+            M = [],
+            N = 0;
+          for (const e of r) Ti(g, e) && (N += 1);
+          let R = 0,
+            E = 0;
           for (const e of r)
-            if (Ti(c, e) && ((f += 1), !(f <= 15 * o))) {
-              if (((y += 1), y > 15)) break;
-              c
-                ? p.push((0, b.jsx)(wi, { event: e }, e.GID))
-                : _.push((0, b.jsx)(hi, { event: e }, e.GID));
+            if (Ti(g, e) && ((R += 1), !(R <= 15 * _))) {
+              if (((E += 1), E > 15)) break;
+              g
+                ? j.push((0, b.jsx)(wi, { event: e }, e.GID))
+                : T.push((0, b.jsx)(hi, { event: e }, e.GID));
             }
-          const S = Math.ceil((h - 1) / 15);
-          g.push(
+          const A = Math.ceil(N / 15),
+            D = o ? Math.min(h, A - 1) : h,
+            k = Math.max(0, D - 5 + 1),
+            G = (e) =>
+              (0, b.jsx)(
+                "div",
+                {
+                  className: (0, I.A)(
+                    Bi().PageNumber,
+                    e == _ && Bi().SelectedPage,
+                  ),
+                  onClick: () => p(e),
+                  children: e + 1,
+                },
+                `page_${e}`,
+              );
+          M.push(
             (0, b.jsx)(
               "div",
               {
                 className: (0, I.A)(
                   Bi().PageNumber,
                   Bi().PageChange,
-                  0 == o && Bi().Hidden,
+                  0 == _ && Bi().Hidden,
                 ),
-                onClick: () => l(o - 1),
+                onClick: () => p(_ - 1),
                 children: "<",
               },
               "page_previous",
             ),
-          );
-          for (let e = 0; e < S; e += 1)
-            g.push(
-              (0, b.jsx)(
-                "div",
-                {
-                  className: (0, I.A)(
-                    Bi().PageNumber,
-                    e == o && Bi().SelectedPage,
-                  ),
-                  onClick: () => l(e),
-                  children: e + 1,
-                },
-                `page_${e}`,
-              ),
-            );
+          ),
+            k > 0 && M.push(G(0)),
+            k > 1 &&
+              M.push(
+                (0, b.jsx)(
+                  "div",
+                  { className: Bi().PageEllipsis, children: "…" },
+                  "ellipsis_previous",
+                ),
+              );
+          for (let e = k; e <= D; e += 1) M.push(G(e));
           return (
-            g.push(
+            (!o || D < A - 1) &&
+              M.push(
+                (0, b.jsx)(
+                  "div",
+                  { className: Bi().PageEllipsis, children: "…" },
+                  "ellipsis_next",
+                ),
+              ),
+            M.push(
               (0, b.jsx)(
                 "div",
                 {
                   className: (0, I.A)(
                     Bi().PageNumber,
                     Bi().PageChange,
-                    o == S - 1 && Bi().Hidden,
+                    o && _ >= A - 1 && Bi().Hidden,
                   ),
-                  onClick: () => l(o + 1),
+                  onClick: () => p(_ + 1),
                   children: ">",
                 },
                 "page_next",
@@ -21790,7 +21825,7 @@
                 (0, b.jsxs)("div", {
                   className: Bi().Body,
                   children: [
-                    m,
+                    B,
                     (0, b.jsx)("div", {
                       className: Bi().TabContainer,
                       children: (0, b.jsxs)("div", {
@@ -21798,12 +21833,12 @@
                         children: [
                           (0, b.jsx)(w.N_, {
                             to: v.J.news(),
-                            className: (0, I.A)(Bi().Tab, !c && Bi().Active),
+                            className: (0, I.A)(Bi().Tab, !g && Bi().Active),
                             children: (0, C.Wn)("#news_news"),
                           }),
                           (0, b.jsx)(w.N_, {
                             to: v.J.news("updates"),
-                            className: (0, I.A)(Bi().Tab, c && Bi().Active),
+                            className: (0, I.A)(Bi().Tab, g && Bi().Active),
                             children: (0, C.Wn)("#news_updates"),
                           }),
                         ],
@@ -21812,20 +21847,20 @@
                     (0, b.jsxs)("div", {
                       className: Bi().BottomSection,
                       children: [
-                        !c &&
+                        !g &&
                           (0, b.jsx)("div", {
                             className: Bi().SubEntries,
-                            children: _,
+                            children: T,
                           }),
-                        c &&
+                        g &&
                           (0, b.jsx)("div", {
                             className: Bi().SubUpdates,
-                            children: p,
+                            children: j,
                           }),
-                        !c &&
+                        !g &&
                           (0, b.jsx)("div", {
                             className: Bi().Pages,
-                            children: g,
+                            children: M,
                           }),
                         (0, b.jsx)(L.K, {}),
                       ],

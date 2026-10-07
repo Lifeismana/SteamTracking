@@ -990,7 +990,7 @@ function OnInitializeTransactionSuccess( result, bSaveBillingAddress )
 
 			return;
 		}
-		else if ( ( result.paymentmethod == 4 && method.value != 'storedpaypal' ) || result.paymentmethod == 3					|| result.paymentmethod == 5 || result.paymentmethod == 6					|| result.paymentmethod == 7 || result.paymentmethod == 9					|| result.paymentmethod == 10					|| result.paymentmethod == 11 || result.paymentmethod == 78					|| result.paymentmethod == 12					|| result.paymentmethod == 14					|| result.paymentmethod == 33					|| result.paymentmethod == 18 || result.paymentmethod == 19					|| result.paymentmethod == 20 || result.paymentmethod == 21					|| result.paymentmethod == 22 || result.paymentmethod == 23					|| result.paymentmethod == 24 || result.paymentmethod == 25					|| result.paymentmethod == 26 || result.paymentmethod == 27					|| result.paymentmethod == 28 || result.paymentmethod == 29					|| result.paymentmethod == 45 || result.paymentmethod == 46					|| result.paymentmethod == 47 || result.paymentmethod == 121					|| result.paymentmethod == 48					|| result.paymentmethod == 49 || result.paymentmethod == 50					|| result.paymentmethod == 51 || result.paymentmethod == 52					|| result.paymentmethod == 53 || result.paymentmethod == 54					|| result.paymentmethod == 55 || result.paymentmethod == 56					|| result.paymentmethod == 57 || result.paymentmethod == 58					|| result.paymentmethod == 59 || result.paymentmethod == 60					|| result.paymentmethod == 61 || result.paymentmethod == 62					|| result.paymentmethod == 66					|| result.paymentmethod == 31					|| result.paymentmethod == 34					|| result.paymentmethod == 36					|| result.paymentmethod == 37					|| result.paymentmethod == 38					|| result.paymentmethod == 65 || result.paymentmethod == 125					|| result.paymentmethod == 39					|| result.paymentmethod == 40					|| result.paymentmethod == 127					|| result.paymentmethod == 135					|| result.paymentmethod == 136					|| result.paymentmethod == 42					|| result.paymentmethod == 35					|| result.paymentmethod == 67					|| result.paymentmethod == 68					|| result.paymentmethod == 69					|| result.paymentmethod == 70					|| result.paymentmethod == 71					|| result.paymentmethod == 72					|| result.paymentmethod == 73					|| result.paymentmethod == 74					|| result.paymentmethod == 75					|| result.paymentmethod == 76					|| result.paymentmethod == 77					|| result.paymentmethod == 79					|| result.paymentmethod == 81					|| result.paymentmethod == 82					|| result.paymentmethod == 83					|| result.paymentmethod == 84					|| result.paymentmethod == 85					|| result.paymentmethod == 86					|| result.paymentmethod == 87					|| result.paymentmethod == 88					|| result.paymentmethod == 89					|| result.paymentmethod == 90					|| result.paymentmethod == 91					|| result.paymentmethod == 92					|| result.paymentmethod == 93					|| result.paymentmethod == 94					|| result.paymentmethod == 95					|| result.paymentmethod == 96					|| result.paymentmethod == 97					|| result.paymentmethod == 98					|| result.paymentmethod == 99					|| result.paymentmethod == 100					|| result.paymentmethod == 101					|| result.paymentmethod == 102					|| result.paymentmethod == 103					|| result.paymentmethod == 104					|| result.paymentmethod == 105					|| result.paymentmethod == 106					|| result.paymentmethod == 107					|| result.paymentmethod == 108					|| result.paymentmethod == 109					|| result.paymentmethod == 110					|| result.paymentmethod == 111					|| result.paymentmethod == 112					|| result.paymentmethod == 113					|| result.paymentmethod == 114					|| result.paymentmethod == 115					|| result.paymentmethod == 119					|| result.paymentmethod == 120					|| result.paymentmethod == 116					|| result.paymentmethod == 117					|| result.paymentmethod == 118					|| result.paymentmethod == 63					|| result.paymentmethod == 137					|| result.paymentmethod == 138					|| result.paymentmethod == 139					|| result.paymentmethod == 140					|| result.paymentmethod == 141					|| result.paymentmethod == 142					|| result.paymentmethod == 143					|| result.paymentmethod == 144					|| result.paymentmethod == 145					|| result.paymentmethod == 146					|| result.paymentmethod == 147					|| result.paymentmethod == 148					|| result.paymentmethod == 149					|| result.paymentmethod == 150					|| result.paymentmethod == 151					|| result.paymentmethod == 152					|| result.paymentmethod == 153					|| result.paymentmethod == 154					|| result.paymentmethod == 155					|| result.paymentmethod == 156					|| result.paymentmethod == 157					|| result.paymentmethod == 158					|| result.paymentmethod == 159					|| result.paymentmethod == 160					|| result.paymentmethod == 161					|| result.paymentmethod == 162					|| result.paymentmethod == 163					|| result.paymentmethod == 164					|| result.paymentmethod == 122				)
+		else if ( ( result.paymentmethod == 4 && method.value != 'storedpaypal' ) || result.paymentmethod == 3					|| result.paymentmethod == 5 || result.paymentmethod == 6					|| result.paymentmethod == 7 || result.paymentmethod == 9					|| result.paymentmethod == 10					|| result.paymentmethod == 11 || result.paymentmethod == 78					|| result.paymentmethod == 12					|| result.paymentmethod == 14					|| result.paymentmethod == 33					|| result.paymentmethod == 18 || result.paymentmethod == 19					|| result.paymentmethod == 20 || result.paymentmethod == 21					|| result.paymentmethod == 22 || result.paymentmethod == 23					|| result.paymentmethod == 24 || result.paymentmethod == 25					|| result.paymentmethod == 26 || result.paymentmethod == 27					|| result.paymentmethod == 28 || result.paymentmethod == 29					|| result.paymentmethod == 45 || result.paymentmethod == 46					|| result.paymentmethod == 47 || result.paymentmethod == 121					|| result.paymentmethod == 48					|| result.paymentmethod == 49 || result.paymentmethod == 50					|| result.paymentmethod == 51 || result.paymentmethod == 52					|| result.paymentmethod == 53 || result.paymentmethod == 54					|| result.paymentmethod == 55 || result.paymentmethod == 56					|| result.paymentmethod == 57 || result.paymentmethod == 58					|| result.paymentmethod == 59 || result.paymentmethod == 60					|| result.paymentmethod == 61 || result.paymentmethod == 62					|| result.paymentmethod == 66					|| result.paymentmethod == 31					|| result.paymentmethod == 34					|| result.paymentmethod == 36					|| result.paymentmethod == 37					|| result.paymentmethod == 38					|| result.paymentmethod == 65 || result.paymentmethod == 125					|| result.paymentmethod == 39					|| result.paymentmethod == 40					|| result.paymentmethod == 127					|| result.paymentmethod == 135					|| result.paymentmethod == 136					|| result.paymentmethod == 42					|| result.paymentmethod == 35					|| result.paymentmethod == 67					|| result.paymentmethod == 68					|| result.paymentmethod == 69					|| result.paymentmethod == 70					|| result.paymentmethod == 71					|| result.paymentmethod == 72					|| result.paymentmethod == 73					|| result.paymentmethod == 74					|| result.paymentmethod == 75					|| result.paymentmethod == 76					|| result.paymentmethod == 77					|| result.paymentmethod == 79					|| result.paymentmethod == 81					|| result.paymentmethod == 82					|| result.paymentmethod == 83					|| result.paymentmethod == 84					|| result.paymentmethod == 85					|| result.paymentmethod == 86					|| result.paymentmethod == 87					|| result.paymentmethod == 88					|| result.paymentmethod == 89					|| result.paymentmethod == 90					|| result.paymentmethod == 91					|| result.paymentmethod == 92					|| result.paymentmethod == 93					|| result.paymentmethod == 94					|| result.paymentmethod == 95					|| result.paymentmethod == 96					|| result.paymentmethod == 97					|| result.paymentmethod == 98					|| result.paymentmethod == 99					|| result.paymentmethod == 100					|| result.paymentmethod == 101					|| result.paymentmethod == 102					|| result.paymentmethod == 103					|| result.paymentmethod == 104					|| result.paymentmethod == 105					|| result.paymentmethod == 106					|| result.paymentmethod == 107					|| result.paymentmethod == 108					|| result.paymentmethod == 109					|| result.paymentmethod == 110					|| result.paymentmethod == 111					|| result.paymentmethod == 112					|| result.paymentmethod == 113					|| result.paymentmethod == 114					|| result.paymentmethod == 115					|| result.paymentmethod == 119					|| result.paymentmethod == 120					|| result.paymentmethod == 116					|| result.paymentmethod == 117					|| result.paymentmethod == 118					|| result.paymentmethod == 63					|| result.paymentmethod == 137					|| result.paymentmethod == 138					|| result.paymentmethod == 139					|| result.paymentmethod == 140					|| result.paymentmethod == 141					|| result.paymentmethod == 142					|| result.paymentmethod == 143					|| result.paymentmethod == 144					|| result.paymentmethod == 145					|| result.paymentmethod == 146					|| result.paymentmethod == 147					|| result.paymentmethod == 148					|| result.paymentmethod == 149					|| result.paymentmethod == 150					|| result.paymentmethod == 151					|| result.paymentmethod == 152					|| result.paymentmethod == 153					|| result.paymentmethod == 154					|| result.paymentmethod == 155					|| result.paymentmethod == 156					|| result.paymentmethod == 157					|| result.paymentmethod == 158					|| result.paymentmethod == 159					|| result.paymentmethod == 160					|| result.paymentmethod == 161					|| result.paymentmethod == 162					|| result.paymentmethod == 163					|| result.paymentmethod == 164					|| result.paymentmethod == 165					|| result.paymentmethod == 166					|| result.paymentmethod == 122				)
 		{
 			
 						$('is_external_finalize_transaction').value = 1;
@@ -2855,6 +2855,26 @@ function OnGetFinalPriceSuccess( result )
 						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Nuvei website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
 					}
 				}
+				else if ( method.value == 'cashapp' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Cash App Pay transactions are authorized through the Cash App website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to Cash App';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Cash App Pay customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Cash App website by signing in and completing your transaction.<br/><br/>This process can take up to several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+					}
+				}
+				else if ( method.value == 'wero' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Wero transactions are authorized through the Nuvei website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to Nuvei';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Wero customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Nuvei website by signing in and completing your transaction.<br/><br/>This process can take up to several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+					}
+				}
 			}
 			else
 			{
@@ -3650,7 +3670,7 @@ function UpdatePaymentInfoForm()
 			|| method.value == 'aupay' || method.value == 'alipayhk' || method.value == 'naverpay' || method.value == 'linkaja'
 			|| method.value == 'shopeepay' || method.value == 'grabpay' || method.value == 'paynow' || method.value == 'onlinebankingthailand'
 			|| method.value == 'cashoptionsthailand' || method.value == 'blik' || method.value == 'upi' || method.value == 'rupay'
-			|| method.value == 'swish'
+			|| method.value == 'swish' || method.value == 'wero'
 		)
 		{
 			bShowCountryVerification = true;
@@ -3690,6 +3710,10 @@ function UpdatePaymentInfoForm()
 		else if ( method.value == 'bitcoin' )
 		{
 						bShowCountryVerification = $('billing_country').value != 'US';
+		}
+		else if ( method.value == 'cashapp' )
+		{
+			g_bShowAddressForm = true;
 		}
 		else if ( method.value == 'interac' )
 		{
@@ -4993,6 +5017,14 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 			else if ( method.value == 'swish' && providerPaymentMethod == 164 )
 			{
 				$('payment_method_review_text').innerHTML = 'Swish';
+			}
+			else if ( method.value == 'cashapp' && providerPaymentMethod == 165 )
+			{
+				$('payment_method_review_text').innerHTML = 'Cash App Pay';
+			}
+			else if ( method.value == 'wero' && providerPaymentMethod == 166 )
+			{
+				$('payment_method_review_text').innerHTML = 'Wero';
 			}
     }
 
