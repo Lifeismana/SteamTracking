@@ -207,7 +207,6 @@ $\nY8O
 /data/src/common/filesystem_helpers.cpp
 /data/src/external/picojson/picojson.h
 /data/src/public/tier0/tslist.h
-/data/src/public/tier0/vprof.h
 /data/src/public/tier1/bitstring.h
 /data/src/public/tier1/smartptr.h
 /data/src/public/tier1/utlbuffer.h
@@ -450,6 +449,8 @@ CKeyValuesSystem dumping last %u keys added to system (oldest first):\n
 CKeyValuesSystem::AddStringToPool: key name too long (%u chars)
 CKeyValuesSystem::AddStringToPool: out of memory
 CKeyValuesSystem::AddStringToPool: over 75%% full (%u bytes left)
+CKeyValuesSystem::BSetHashTableBuckets: %u buckets is not a power of 2
+CKeyValuesSystem::BSetHashTableBuckets: %u key names were already added, keeping %u buckets
 CLAIMS
 CLEANING
 CLINIC
@@ -712,6 +713,7 @@ KeyValues::WriteAsBinary() called with a text buffer\n
 KeyValues::WriteAsBinary() called with an invalid buffer\n
 KeyValues::WriteAsBinary() overflowed buffer (%d bytes)\n
 KeyValuesSystem()
+KeyValuesSystemSetHashTableBuckets
 KeyValuesSystemSteam
 LACAIXA
 LAND
@@ -1056,6 +1058,12 @@ SteamThreadTools::CThreadMutex::~CThreadMutex()
 SteamThreadTools::CThreadRWLock::LockForWrite()
 SteamThreadTools::CThreadRWLock::UnlockWrite()
 SteamThreadTools::CThreadRWLock::WaitForRead()
+SteamThreadTools::CThreadSharedMutex::CThreadSharedMutex()
+SteamThreadTools::CThreadSharedMutex::LockExclusive()
+SteamThreadTools::CThreadSharedMutex::LockShared() const
+SteamThreadTools::CThreadSharedMutex::UnlockExclusive()
+SteamThreadTools::CThreadSharedMutex::UnlockShared() const
+SteamThreadTools::CThreadSharedMutex::~CThreadSharedMutex()
 SteamThreadTools::CThreadSpinLock::Lock(unsigned int) volatile
 SteamThreadTools::CThreadSyncObject::Wait(unsigned int)
 SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
@@ -1657,6 +1665,7 @@ cubBytesToRead < INT32_MAX
 cubData < FIO_MAX_IO_BYTES
 cubData < INT32_MAX
 dQy/
+data:
 decimal128
 decimal32
 decimal64
@@ -1865,7 +1874,6 @@ m_pSetIntValue
 m_pSetStringValue
 m_pStackHigh
 m_pkvLastKeyAdded != NULL
-m_pszName
 m_pthreadWatcher
 m_queueItemsPending.Count() == 0
 m_strCmdLine

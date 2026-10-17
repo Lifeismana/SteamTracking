@@ -229,14 +229,14 @@ $ORIGIN
 /tmp/.steam-sem-names
 /tmp/steam_monitor.log
 /tmp/steam_monitor.log.last
-00:29:06
-00:29:08
 0123456789ABCDEF
 0123456789abcdef
 12CStdMemAlloc
 16CAdHocValidation
 18CUtlCharConversion
 19CUtlNoEscConversion
+21:52:03
+21:52:06
 21CUtlCStringConversion
 31CAdHocValidation_SimpleCallback
 9IMemAlloc
@@ -346,7 +346,7 @@ No samples during profile period.\n
 No tracked allocs currently in use. Total %d\n
 OUT OF MEMORY
 Object
-Oct 14 2026
+Oct 16 2026
 Only thread can stop self: Use a higher-level protocol
 OverlayInput
 OverlayRendering
@@ -564,6 +564,7 @@ crashhandler002
 crashhandler003
 crashhandler004
 ctime_r
+data:
 daylight
 decimal128
 decimal32
@@ -794,6 +795,14 @@ pthread_mutexattr_destroy
 pthread_mutexattr_init
 pthread_mutexattr_settype
 pthread_once
+pthread_rwlock_destroy
+pthread_rwlock_init
+pthread_rwlock_rdlock
+pthread_rwlock_unlock
+pthread_rwlock_wrlock
+pthread_rwlockattr_destroy
+pthread_rwlockattr_init
+pthread_rwlockattr_setkind_np
 pthread_self
 pthread_setname_np
 pthread_setschedparam

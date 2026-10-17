@@ -160,6 +160,7 @@ Fossilize ERROR: Cannot use imported metadata together with whitelists.\n
 Fossilize ERROR: Failed to add blob to cache.\n
 Fossilize ERROR: Failed to allocate space for metadata block.\n
 Fossilize ERROR: Failed to create directory %s.\n
+Fossilize ERROR: Failed to create file "%s".\n
 Fossilize ERROR: Failed to create shared memory.\n
 Fossilize ERROR: Failed to extract blob.\n
 Fossilize ERROR: Failed to finalize archive.\n
@@ -546,6 +547,8 @@ bool
 boolean
 borderColor
 btowc
+bucket
+bucket.json
 bucketVariantDependencies
 bucketVariantFeatureDependencies
 buf error
@@ -639,6 +642,8 @@ descriptorBufferCaptureReplay
 descriptorBufferImageLayoutIgnored
 descriptorBufferPushDescriptors
 descriptorCount
+descriptorHeap
+descriptorHeapCaptureReplay
 descriptorSet
 descriptorType
 dgettext
@@ -797,6 +802,7 @@ long long
 lower
 mSx@
 magFilter
+maintenance8
 malloc
 mapEntries
 mappings
@@ -819,6 +825,9 @@ memmove
 memset
 meshShader
 meshShaderQueries
+micromap
+micromapCaptureReplay
+micromapHostCommands
 minDepth
 minDepthBounds
 minDepthClamp
@@ -877,6 +886,7 @@ pipe
 pipelineBindPoint
 pipelineFragmentShadingRate
 pipelineLayouts
+pipelineRobustness
 polygonMode
 posix_fadvise
 prctl

@@ -711,8 +711,6 @@ $\nY8O
 , not just within "
 , string URLText
 , string command, int default
-, string image
-, string image, string imagecolor, alignment imageAlignment, int preserveAspectRatio, int filtered
 , string labelText, string associate, alignment textAlignment, int wrap, string font, string flow_right
 , string leftText, string rightText
 , string progress, string variable
@@ -965,14 +963,12 @@ $\nY8O
 /data/src/vgui2/controls/EditablePanel.cpp
 /data/src/vgui2/controls/FileOpenDialog.cpp
 /data/src/vgui2/controls/Frame.cpp
-/data/src/vgui2/controls/GraphPanel.cpp
 /data/src/vgui2/controls/HTML.cpp
-/data/src/vgui2/controls/HotKeyEntry.cpp
+/data/src/vgui2/controls/HotKeyInfo.cpp
 /data/src/vgui2/controls/ImageList.cpp
 /data/src/vgui2/controls/ImagePanel.cpp
 /data/src/vgui2/controls/Label.cpp
 /data/src/vgui2/controls/ListPanel.cpp
-/data/src/vgui2/controls/ListViewPanel.cpp
 /data/src/vgui2/controls/Menu.cpp
 /data/src/vgui2/controls/MenuItem.cpp
 /data/src/vgui2/controls/Panel.cpp
@@ -980,7 +976,6 @@ $\nY8O
 /data/src/vgui2/controls/RichText.cpp
 /data/src/vgui2/controls/TextEntry.cpp
 /data/src/vgui2/controls/TextImage.cpp
-/data/src/vgui2/controls/ToolWindow.cpp
 /data/src/vgui2/controls/TreeView.cpp
 /data/src/vgui2/controls/TreeViewListControl.cpp
 /data/src/vgui2/controls/controls.cpp
@@ -1002,6 +997,7 @@ $\nY8O
 /proc/mounts
 /proc/self/fd/%d
 /proc/self/maps
+/proc/self/ns/pid
 /proc/stat
 /sbin/lsof
 /steamrtarm64
@@ -1050,11 +1046,9 @@ $\nY8O
 0 == sm_ThreadSafeQueueLogMsgSpew.Count()
 0)AA7A
 0000000000000000000000000000000000000000
-1000
 00003333
 000102030405060708091011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495969798990123456789abcdef
 00:00:00
-00:29:25
 01/01/00
 0123456789
 0123456789ABCDEF
@@ -1078,6 +1072,7 @@ $\nY8O
 0x%llx
 1.2.11
 1.6.37
+1000
 10BlankImage
 10CBasePanel
 10CHintLabel
@@ -1124,7 +1119,6 @@ $\nY8O
 10CUtlMemoryIN14CUtlLinkedListI10CUtlStringiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListI12CWatchingLogiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListI14CLogWatchParamiE10ListElem_tEE
-10CUtlMemoryIN14CUtlLinkedListIN4vgui10GraphPanel8Sample_tEiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListIN4vgui9ListPanel8column_tEhE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListIP10CUtlRBTreeIPvi8CDefLess25CDefRBTreeBalanceListenerIiES2_EiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListIP8CUtlDictIb22CDefCaselessStringLessiEiE10ListElem_tEE
@@ -1165,7 +1159,6 @@ $\nY8O
 10CUtlMemoryIPN4vgui8URLLabelEE
 10CUtlMemoryIPcE
 10CUtlMemoryIPwE
-10CUtlMemoryIfE
 10CUtlMemoryIhE
 10CUtlMemoryIiE
 10CUtlMemoryImE
@@ -1236,7 +1229,6 @@ $\nY8O
 10CUtlVectorIPN4vgui8URLLabelE10CUtlMemoryIS2_EE
 10CUtlVectorIPc10CUtlMemoryIS0_EE
 10CUtlVectorIPw10CUtlMemoryIS0_EE
-10CUtlVectorIf10CUtlMemoryIfEE
 10CUtlVectorIh10CUtlMemoryIhEE
 10CUtlVectorIi10CUtlMemoryIiEE
 10CUtlVectorIm10CUtlMemoryImEE
@@ -1332,11 +1324,9 @@ $\nY8O
 14CUtlLinkedListI10CUtlStringiE
 14CUtlLinkedListI12CWatchingLogiE
 14CUtlLinkedListI14CLogWatchParamiE
-14CUtlLinkedListIN4vgui10GraphPanel8Sample_tEiE
 14CUtlLinkedListIN4vgui9ListPanel8column_tEhE
 14CUtlLinkedListIP10CUtlRBTreeIPvi8CDefLess25CDefRBTreeBalanceListenerIiES1_EiE
 14CUtlLinkedListIP8CUtlDictIb22CDefCaselessStringLessiEiE
-14CUtlLinkedListIPN4vgui12ListViewItemEiE
 14CUtlLinkedListIPN4vgui13ListPanelItemEiE
 14CUtlLinkedListIPN4vgui8MenuItemEiE
 14CUtlLinkedListIPN4vgui8TreeNodeEiE
@@ -1528,6 +1518,7 @@ $\nY8O
 20CRefCountServiceBaseILb1E6CRefMTE
 20HTMLFramelessWrapper
 20IJSMethodCallHandler
+21:54:56
 21CClanAnnouncementInfo
 21CHTMLPageSecurityInfo
 21CMsgBrowserSetMinSize
@@ -1631,6 +1622,8 @@ $\nY8O
 35CMsgHorizontalScrollBarSizeResponse
 38CMsgSetBrowserViewDomainRequestMapping
 3\n&k_EWindowsUpdateRebootBehavior_Unknown
+3\n/k_ECompromiseDetectionType_LeakedCredentialList
+3\n/k_EContentModerationSanction_MarkedIncompatible
 3\n/k_EContentReportReason_BypassingProfanityFilter
 3\n/k_EContentReportReason_CSAMGroomingOrEnticement
 3\n/k_EContentReportReason_CredibleThreatOfViolence
@@ -1860,9 +1853,7 @@ AddFloat
 AddInt32
 AddInt64
 AddMessage
-AddNewTab
 AddString
-AddTabButton
 AddUInt32
 AddUInt64
 AddedGameToWishlist
@@ -1901,7 +1892,6 @@ Android
 AndroidExternalData
 AndroidInternalData
 AndroidSteamPackageRoot
-AnimatingImagePanel
 AnimationController
 Announcement
 Anonymous Game Server
@@ -2022,7 +2012,6 @@ BillingCurrency
 BillingTotal
 BitCash
 Bitcoin
-BitmapImagePanel
 Blik
 Block size: %s\tAlloc'd: %d (peak: %d)\tNum blobs: %d (%s)\n
 Blocked
@@ -2081,7 +2070,6 @@ CBasePanel::OnGameOverlayActivateRequested
 CBasePanel::OnOverlaySettingsChanged
 CBasePanel::OnOverlayStateChanged
 CBasePanel::ShellExecuteHook
-CBitmapImagePanel
 CBuildFactoryHelper:  Factory for '%s' already exists!!!!\n
 CCookie
 CCrypto::Base64Decode
@@ -2634,6 +2622,7 @@ Carian
 Carnet
 Cart is not valid for purchase
 Carte Bleue
+Cash App Pay
 Cash Card (Nodwin)
 Cash Options (Thailand)
 Cash on Delivery
@@ -2657,9 +2646,6 @@ CheckButton
 CheckButton (disabled)
 CheckButton::OnThink()
 CheckButtonChecked
-CheckButtonList
-CheckButtonList.CheckButton
-CheckButtonListControls
 CheckForLayoutFilesChanges
 Checking for game crash
 Cherokee
@@ -2787,9 +2773,7 @@ Contact Support
 Content Server
 Content Version
 Content unavailable
-Context
 ContextCommand
-ContextLabel
 ContextMenu
 Continue
 ControlFactory
@@ -2957,8 +2941,6 @@ Disk read failure
 Disk write failure
 DismissJSDialog
 Distance
-Divider
-Divider2
 Division or mod by zero: dividend.hi=
 Do Not Revive
 DoConversionModeChanged
@@ -2983,7 +2965,6 @@ DragDrop
 DragDrop.DragFrame
 DragDrop.DropFrame
 DragDroppedText
-DragPropertySheet
 DraggableRects
 Draws html perf data
 DropContext
@@ -3454,7 +3435,6 @@ FinalizingRenderStream
 Finansbank
 FindBar
 FindCount
-FindDefaultButton
 FindEntry
 Finnish
 First argument to Swap() (of type "
@@ -3645,7 +3625,6 @@ Got gameid on commandline: %llu\n
 Gothic
 GrabPay
 GraphLarge
-GraphPanel
 Gray color space not permitted on RGB PNG
 Greek
 Greenlight Items
@@ -3726,10 +3705,8 @@ Hiragana
 Hit absolute maximum emit event queue size -- NOT adding this event
 Home
 HorizScrollBar
-HotKeyEntry
 HotKeyPressed
 Hotkey
-HotkeyEntryClearButton
 HtmlFramelessPopup
 HtmlPopup
 Hung transaction cancelled
@@ -3833,7 +3810,6 @@ InputCompleted
 InputDialog
 Inscriptional_Pahlavi
 Inscriptional_Parthian
-InsertTabImage
 Install failed
 Install failed for one or more updates
 Install path removed
@@ -4299,14 +4275,12 @@ ListImage
 ListItemSelected
 ListPanel
 ListPanel column does not support both CUSTOMPANEL and CHECKABLE at the same time\n
-ListPanel.BgColor
 ListPanel.DisabledSelectedTextColor
 ListPanel.DisabledTextColor
 ListPanel.PostSectionLeading
 ListPanel.SelectedBgColor
 ListPanel.SelectedOutOfFocusBgColor
 ListPanel.SelectedTextColor
-ListPanel.TextBgColor
 ListPanel.TextColor
 ListPanel::AddColumnHeader() can only have one checkable column, which must be called 'check'\n
 ListPanel::AddItem
@@ -4328,9 +4302,6 @@ ListPanelDragger
 ListPanelInterior
 ListPanelSectionCollapser
 ListPanelSectionHeader
-ListViewItem
-ListViewItemSelected
-ListViewPanel
 Lisu
 Lithuanian
 Live Broadcast
@@ -4590,47 +4561,36 @@ N3IPC6IEventE
 N3IPC6IMutexE
 N4vgui10ClickPanelE
 N4vgui10FrameTitleE
-N4vgui10GraphPanelE
 N4vgui10ImagePanelE
 N4vgui10MenuButtonE
 N4vgui10MessageBoxE
-N4vgui10ToolWindowE
 N4vgui11CStyleImageE
 N4vgui11CheckButtonE
 N4vgui11FrameButtonE
-N4vgui11HotKeyEntryE
 N4vgui11InputDialogE
 N4vgui11ProgressBarE
 N4vgui11RadioButtonE
 N4vgui12AppRootPanelE
-N4vgui12ContextLabelE
 N4vgui12IClientPanelE
-N4vgui12ListViewItemE
 N4vgui12PropertyPageE
 N4vgui12ToggleButtonE
 N4vgui12TreeNodeTextE
 N4vgui13EditablePanelE
 N4vgui13FocusNavGroupE
 N4vgui13ListPanelItemE
-N4vgui13ListViewPanelE
 N4vgui13MenuSeparatorE
-N4vgui13PageDragFrameE
-N4vgui13PageDragPanelE
 N4vgui13PropertySheetE
 N4vgui13TooltipWindowE
 N4vgui13TreeNodeImageE
 N4vgui14ComboBoxButtonE
 N4vgui14CompositeImageE
 N4vgui14FileOpenDialogE
-N4vgui14TabCloseButtonE
 N4vgui15CFontWidthCacheE
-N4vgui15CheckButtonListE
 N4vgui15ScrollBarSliderE
 N4vgui16CaptionGripPanelE
 N4vgui16FrameCloseButtonE
 N4vgui16RichTextInteriorE
 N4vgui16TreeViewSubPanelE
-N4vgui17CBitmapImagePanelE
 N4vgui17FrameSystemButtonE
 N4vgui17ListPanelCheckBoxE
 N4vgui17ListPanelInteriorE
@@ -4640,10 +4600,8 @@ N4vgui18CTypingJumpHandlerE
 N4vgui18FileCompletionEditE
 N4vgui18FileCompletionMenuE
 N4vgui18HTMLFramelessPopupE
-N4vgui18IToolWindowFactoryE
 N4vgui18MenuItemCheckImageE
 N4vgui18ThrobberImagePanelE
-N4vgui19AnimatingImagePanelE
 N4vgui19AnimationControllerE
 N4vgui19FrameMaximizeButtonE
 N4vgui19FrameMinimizeButtonE
@@ -4654,7 +4612,6 @@ N4vgui20TextEntryClearButtonE
 N4vgui21DirectorySelectDialogE
 N4vgui21IPanelInputForwardingE
 N4vgui21ListPanelColumnHeaderE
-N4vgui22HotkeyEntryClearButtonE
 N4vgui22ListPanelCollapserBaseE
 N4vgui22ListPanelSectionHeaderE
 N4vgui25ListPanelSectionCollapserE
@@ -4669,7 +4626,6 @@ N4vgui5PanelE
 N4vgui6ButtonE
 N4vgui6IImageE
 N4vgui6SliderE
-N4vgui7DividerE
 N4vgui7MenuBarE
 N4vgui7PageTabE
 N4vgui7TooltipE
@@ -4690,7 +4646,6 @@ N4vgui9RGBAImageE
 N4vgui9ScrollBarE
 N4vgui9TextEntryE
 N4vgui9TextImageE
-N4vgui9ToolPanelE
 N4vgui9WrapPanelE
 N6google8protobuf10TextFormat17BaseTextGeneratorE
 N6google8protobuf10TextFormat17FieldValuePrinterE
@@ -4948,7 +4903,7 @@ OUT_OF_RANGE
 OXXO
 OZw3(?
 O\n\nAnnotation
-Oct 14 2026
+Oct 16 2026
 October
 Odia
 Offensive Avatar
@@ -5065,8 +5020,6 @@ PackageID
 Page
 PageChanged
 PageCountChanged
-PageDragFrame
-PageDragPanel
 PageHide
 PageLoadThrobber
 PageShow
@@ -5235,7 +5188,6 @@ Prompt
 PropertyPage
 PropertyPageControls
 PropertySheet
-PropertySheet.FlashTabColor
 PropertySheet.TabGap
 PropertySheet.TransitionEffectTime
 ProtectedStore
@@ -5555,6 +5507,7 @@ Shader
 Sharada
 Shared Only
 Shared library locked
+Shared object manager is owned by another pid namespace; IPC disabled in pid %d\n
 Shavian
 ShellCmd
 Shift
@@ -5746,6 +5699,12 @@ SteamThreadTools::CThreadMutex::CThreadMutex()
 SteamThreadTools::CThreadMutex::~CThreadMutex()
 SteamThreadTools::CThreadSemaphore::CThreadSemaphore(long, long)
 SteamThreadTools::CThreadSemaphore::Release(long)
+SteamThreadTools::CThreadSharedMutex::CThreadSharedMutex()
+SteamThreadTools::CThreadSharedMutex::LockExclusive()
+SteamThreadTools::CThreadSharedMutex::LockShared() const
+SteamThreadTools::CThreadSharedMutex::UnlockExclusive()
+SteamThreadTools::CThreadSharedMutex::UnlockShared() const
+SteamThreadTools::CThreadSharedMutex::~CThreadSharedMutex()
 SteamThreadTools::CThreadSpinLock::Lock(unsigned int) volatile
 SteamThreadTools::CThreadSyncObject::Wait(unsigned int)
 SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
@@ -5798,6 +5757,7 @@ Supported Types (%s)
 Suspect
 Suspected Hijacker
 Suspended
+Suspicious Content
 Swahili
 Swap
 SwappingStreamBuffers
@@ -5825,12 +5785,7 @@ TSQueueBase_Push
 TSQueueBase_UnsafeDummy
 TSQueueBase_UnsafePeek
 TSQueue_PopIntoFreeList
-TabCloseButton
 TabClosed
-TabMenuButton
-TabMenuButtonFlash
-TabMenuItemFlash
-TabPageCloseButton
 TabPosition
 TabPressed
 Tagalog
@@ -5858,7 +5813,6 @@ TextChanged
 TextClicked
 TextEntry
 TextEntry field is much too large: %d characters, %f pixels wanted, %d pixels available
-TextEntry.CursorColor
 TextEntry.IMEBGColor
 TextEntry.IMEFGColor
 TextEntryClearButton
@@ -5949,9 +5903,6 @@ Too many changes to this phone number
 Too many logon attempts
 Too many pending
 Too much image data
-ToolPanel
-ToolWindow
-ToolWindowSheet
 Tooltip.Anchor
 Tooltip.Delay
 TooltipHTML
@@ -6304,6 +6255,7 @@ WebSteamURL
 WebStop
 Wednesday
 Welsh
+Wero
 What city were you born in?
 What is the name of your pet?
 What is the name of your school?
@@ -7053,7 +7005,6 @@ chromehtml
 chromeos_public_88ac3843c888c7adb9cd406fbac4ff7a7d2cde9b
 chunk data is too large
 className
-clearbutton
 clickabletextaction
 client
 client_streaming
@@ -7435,7 +7386,6 @@ filipino
 fillcolor
 filler
 filter
-filtered
 filterinfo
 filters
 find
@@ -7454,7 +7404,6 @@ flock %s %s failed. errno = %d
 flock LOCK_EX %s failed, errno = %d\n
 flock LOCK_SH requested but file is not opened for reading, ignoring: %s\n
 floor
-fmod
 fnmatch
 focus
 focused
@@ -7482,7 +7431,6 @@ frame_minimize
 frame_mintosystray
 frame_title
 framefocus
-frames
 framesettitlebarvisible
 frametitle
 franchise
@@ -7845,9 +7793,7 @@ image
 image row stride too large
 image-height-only
 image-width-only
-imageAlignment
 imageSelected
-imagecolor
 imaginary
 import "$0";\n
 import public "$0";\n
@@ -8416,7 +8362,6 @@ lookbehind assertion is not fixed length
 loopback
 lost rgb to gray
 lost/gained channels
-lowRange < highRange
 lower
 lsb_release -d -s
 lseek
@@ -8451,7 +8396,6 @@ m_ExpandStateQueue
 m_Filenames
 m_FormatStream
 m_FormatStream[i].textStreamIndex > cullPos
-m_Frames
 m_GameID.IsSteamApp()
 m_HandleTable
 m_Images
@@ -8476,10 +8420,8 @@ m_PanelKeyBindingMapPool
 m_PanelMessageMapPool
 m_PerLineEllipses
 m_PostedMessages
-m_RangeList
 m_ReplacedKVs
 m_ResourceCache
-m_Samples
 m_SelectedItems
 m_SeparatorPanels
 m_SeparatorPanels.Count() == 0
@@ -8555,7 +8497,6 @@ m_pMutex->Wait() failed in ShMemStream::PutInternal\n
 m_pObj == NULL
 m_pOverlaySurface
 m_pParent == this
-m_pParent->IsDraggableTab()
 m_pRootNode == NULL
 m_pSetIntValue
 m_pSetStringValue
@@ -8700,7 +8641,6 @@ maximizebuttonvisible
 mbrtowc
 mbsnrtowcs
 mbsrtowcs
-mbtowc
 media
 medium
 megaupload.com
@@ -8923,14 +8863,12 @@ pPool->m_SpaceUsed < 0xFFFF
 pScheme
 pTemperature is a required paramater
 pToken
-pToolWindow
 pWatcher != NULL
 package
 package $0;\n\n
 packages
 packed
 page
-page->m_pToolWindow == this
 page_url
 paintbackground
 palette color-map: too few entries
@@ -8961,6 +8899,7 @@ pchBuffer
 pchData
 pchEncodedData
 pchMsg
+pchNode
 pchSteam2ID
 pch[cub - 1] != '\0' && pch[cub] == '\0'
 pclose
@@ -9437,7 +9376,6 @@ preferred_contrast
 preloadonly
 prepend
 prerelease
-preserveAspectRatio
 previous
 print
 printf
@@ -9450,7 +9388,6 @@ promise_handle
 promoted to moderator
 promoted to officer
 promoted to owner
-propertypage
 propertysheet
 proportional_float
 proportional_int
@@ -9580,8 +9517,6 @@ resource/layout/ingamepresentationfps.layout
 resource/layout/ingameraminfo.layout
 resource/layout/layoutdebugdialog.layout
 resource/layout/layoutdebugdialog_details.layout
-resource/layout/pagedragframe.layout
-resource/layout/toolwindow.layout
 resource/overlay_%language%.txt
 resource/platform_%language%.txt
 resource/styles/gameoverlay.styles
@@ -9813,7 +9748,6 @@ stdio
 stdout
 steam
 steam.pid
-steam/cached/icon_tab_placement_arrow
 steam:
 steam://
 steamIDChat.GetEAccountType() == k_EAccountTypeChat
@@ -9936,12 +9870,9 @@ tEXt: text too long
 tIME
 tRNS chunk has out-of-range samples for bit_depth
 tRNS must be after
-tabMenuMenu
 tabPosition
-tabname
 tabposition
 tabs
-tabtitle
 tag count too large
 tajik
 tall
@@ -10004,7 +9935,6 @@ too many text chunks
 too many unknown chunks
 too short
 tool
-toolpanelgroup
 tooltip
 tooltip_headline
 tooltip_label
@@ -10093,6 +10023,7 @@ unknown header flags set
 unknown interlace type
 unknown option bit(s) set
 unknown property name after \P or \p
+unknown_type
 unlink
 unmatched parentheses
 unrecognized ICC profile class

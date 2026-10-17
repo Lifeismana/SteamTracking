@@ -981,6 +981,7 @@
 !\fIDIU@
 !\fmHs8
 !\n\rincluded_apps
+!\n\vseason_pass
 !_Vse
 !aH3
 !bFoundNextToTimeout
@@ -1253,6 +1254,7 @@
 "YAh
 "[w3w
 "\nECRr\t
+"\n\fExtraDetails
 "\n\titem_type
 "\n\tlink_type
 "]2hp
@@ -1549,6 +1551,7 @@ $\n k_EMigrateRequest_ChoseDifferent
 $\n k_EPressOutletAction_ExitStaging
 $\n k_EProtoExecutionSiteSteamClient
 $\n k_EProtoServiceTypeSteamMessages
+$\n k_ERatingDescriptorImage_Invalid
 $\n k_ERemoteDeviceAuthorizationBusy
 $\n k_ERemoteDeviceStreamingCanceled
 $\n k_ERemoteDeviceStreamingDisabled
@@ -1562,6 +1565,9 @@ $\n k_EStorageDriveMediaType_Unknown
 $\n k_EStorageFormatStage_Finalizing
 $\n k_EStorageFormatStage_Formatting
 $\n k_EStorageFormatStage_NotRunning
+$\n k_EStoreAppDocumentType_QuickRef
+$\n k_EStoreAppDocumentType_TechTree
+$\n k_EStoreAppDocumentType_Warranty
 $\n k_EStoreBrowseFilterFailure_None
 $\n k_EStoreCategoryType_CloudGaming
 $\n k_EStreamChannelDataChannelStart
@@ -1615,6 +1621,7 @@ $qOH74iI
 $s0f
 $sLkW
 $steammessages_appratings_types.proto
+$steammessages_seasonpass_types.proto
 $swQ
 $tns
 $tnum
@@ -1836,6 +1843,7 @@ ${FILENAME}
 %\n!k_ESystemServiceState_Unavailable
 %\n!k_EUserReviewScore_MostlyNegative
 %\n!k_EUserReviewScore_MostlyPositive
+%\n!k_EVideoExtrasNote_PurchaseRental
 %\n!k_SystemAudioPortDirection_Output
 %\n!k_SystemAudioPortType_Video32RGBA
 %\n\rrating_agency
@@ -2184,6 +2192,7 @@ ${FILENAME}
 &\n"k_EPersonaStateFlag_InJoinableGame
 &\n"k_EProfileCustomizationTypeInvalid
 &\n"k_EPublishedFileStorageSystemDepot
+&\n"k_ERatingDescriptorImage_CERO_Love
 &\n"k_ERemoteClientBroadcastMsgOffline
 &\n"k_ERemoteClientServiceContentCache
 &\n"k_ERemoteDeviceAuthorizationDenied
@@ -2419,6 +2428,8 @@ ${FILENAME}
 '\n#k_EPersonaStateFlag_HasRichPresence
 '\n#k_EProfileCustomizationTypeMyGuides
 '\n#k_EProvideDeckFeedbackPreference_No
+'\n#k_ERatingDescriptorImage_CERO_Crime
+'\n#k_ERatingDescriptorImage_CERO_Drugs
 '\n#k_ERemoteClientServiceContentServer
 '\n#k_ERemoteClientServiceGameStreaming
 '\n#k_ERemoteClientServiceRemoteControl
@@ -2427,6 +2438,7 @@ ${FILENAME}
 '\n#k_ERemoteDeviceAuthorizationSuccess
 '\n#k_ERemoteDeviceStreamingPINRequired
 '\n#k_ESteamDatagramMsg_RouterPingReply
+'\n#k_EStoreAppDocumentType_Keybindings
 '\n#k_EStreamControlNegotiationComplete
 '\n#k_EStreamControlStartMicrophoneData
 '\n#k_EStreamControlToggleMagnification
@@ -2434,7 +2446,6 @@ ${FILENAME}
 '\n#k_EStreamTransportUDPRelay_OBSOLETE
 '\nODrA
 '\n\freview_score
-'\n\tanticheat
 '\n\tmessageid
 '\n\tplatforms
 '_aXh
@@ -2600,6 +2611,7 @@ ${FILENAME}
 (\n$k_EPressOutletMemberPendingState_MAX
 (\n$k_EProvideDeckFeedbackPreference_Yes
 (\n$k_EPublishedFileStorageSystemInvalid
+(\n$k_ERatingDescriptorImage_CERO_Horror
 (\n$k_ERemoteClientBroadcastMsgDiscovery
 (\n$k_ERemoteDeviceAuthorizationCanceled
 (\n$k_ERemoteDeviceAuthorizationResponse
@@ -2625,6 +2637,7 @@ ${FILENAME}
 (\r"6\n\rCInputTextMsg
 (\r"<\n&CMsgRemoteDeviceStreamingCancelRequest
 (\r"F\n\vCFrameEvent
+(\r"G\n\vCSeasonPass
 (\r"I\n!CMsgRemoteDeviceStreamingProgress
 (\r"I\n"CMsgRemoteClientBroadcastDiscovery
 (\r"R\n\fCAudioFormat
@@ -2651,10 +2664,12 @@ ${FILENAME}
 (\v2 .CHIDMessageToRemote.DeviceCloseH
 (\v2 .CHIDMessageToRemote.DeviceWriteH
 (\v2 .CStorePageFilter.SalePageFilter
+(\v2 .StoreItem.OptInRegistrationTags
 (\v2 .google.protobuf.DescriptorProto
 (\v2!.CMsgSteamDatagramP2PRoutes.Route
 (\v2!.CStreamPlayerConfig.CAudioConfig
 (\v2!.CVirtualControllerConfig.Control"
+(\v2!.StoreItem.ExtraDetails.Anticheat
 (\v2!.StoreItem.Screenshots.Screenshot
 (\v2!.google.protobuf.EnumValueOptions"
 (\v2".CGameNetworkingUI_ConnectionState"
@@ -2662,6 +2677,7 @@ ${FILENAME}
 (\v2".CRemoteClient_GetReplies_ResponseH
 (\v2".CStorePageFilter.ContentHubFilter
 (\v2".CTransportSignalMsg.WebRTCMessage
+(\v2".StoreItem.ExtraDetails.Metacritic
 (\v2".StoreItem.PurchaseOption.Discount
 (\v2#.CMsgSteamDatagramCertificateSigned
 (\v2#.CMsgSteamDatagramCertificateSigned"
@@ -2673,13 +2689,17 @@ ${FILENAME}
 (\v2#.CRemoteClient_Offline_NotificationH
 (\v2#.CRemoteClient_StartPairing_RequestH
 (\v2#.CVirtualControllerConfig.ActionSet
+(\v2#.StoreItem.ExtraDetails.CastAndCrew
+(\v2#.StoreItem.ExtraDetails.EarlyAccess
+(\v2#.StoreItem.ExtraDetails.PageSection
+(\v2#.StoreItem.ExtraDetails.PressReview
 (\v2#.StoreItem.Trailers.AdaptiveTrailer
 (\v2$.CGameNetworkingUI_ConnectionSummaryB
 (\v2$.CRemoteClient_CancelPairing_RequestH
 (\v2$.CRemoteClient_CreateSession_RequestH
 (\v2$.CRemoteClient_StartPairing_ResponseH
-(\v2$.StoreItem.AIGeneratedContentService
 (\v2$.StoreItem.BasicInfo.CreatorHomeLink
+(\v2$.StoreItem.ExtraDetails.LinksAndInfo
 (\v2$.google.protobuf.EnumDescriptorProto
 (\v2$.google.protobuf.FileDescriptorProto"
 (\v2$.google.protobuf.UninterpretedOption"/\n
@@ -2716,6 +2736,7 @@ ${FILENAME}
 (\v2).CRemotePlayTogetherGroupUpdateMsg.Player
 (\v2).google.protobuf.EnumValueDescriptorProto
 (\v2*.CHIDMessageToRemote.DeviceGetVendorStringH
+(\v2*.StoreItem.ExtraDetails.SystemRequirements
 (\v2+.CHIDMessageToRemote.DeviceGetFeatureReportH
 (\v2+.CHIDMessageToRemote.DeviceGetProductStringH
 (\v2+.CMsgSteamDatagramClientPingSampleReply.POP
@@ -2736,6 +2757,7 @@ ${FILENAME}
 (\v2..CStoreBrowse_GetPriceStops_Response.PriceStop
 (\v2..google.protobuf.DescriptorProto.ReservedRange
 (\v2/.CControllerConfigMsg.ControllerActiveConfigMsg
+(\v2/.StoreItem.ExtraDetails.SystemRequirements.Size
 (\v2/.google.protobuf.DescriptorProto.ExtensionRange
 (\v20.CHIDMessageToRemote.DeviceGetSerialNumberStringH
 (\v20.CMsgSteamDatagramRouterPingReply.RouteException
@@ -2745,6 +2767,7 @@ ${FILENAME}
 (\v20.CStoreBrowse_GetDLCForAppsSolr_Response.DLCList
 (\v21.CMsgRemoteDeviceStreamingRequest.ReservedGamepad
 (\v21.CMsgSteamNetworkingP2PRendezvous.ReliableMessage
+(\v21.StoreItem.ExtraDetails.AIGeneratedContentService
 (\v22.CMsgSteamNetworkingP2PRendezvous.ConnectionClosed
 (\v22.CRemoteClient_UnregisterStatusUpdate_NotificationH
 (\v22.CStoreBrowse_GetStoreCategories_Response.Category
@@ -2754,11 +2777,14 @@ ${FILENAME}
 (\v25.CMsgSteamDatagramClientSwitchedPrimary.RouterQuality
 (\v26.google.protobuf.EnumDescriptorProto.EnumReservedRange
 (\v27.CControllerConfigMsg.ControllerPersonalizationResponse
+(\v27.StoreItem.ExtraDetails.SystemRequirements.Requirements
 (\v29.CRemotePlayTogether_Notification.ControllerSlot_obsolete
 (\v2;.CHIDMessageFromRemote.DeviceInputReports.DeviceInputReport
 (\v2;.CStoreBrowse_GetContentHubConfig_Response.ContentHubConfig
+(\v2?.StoreItem.ExtraDetails.SystemRequirements.PlatformRequirements
 (\v2\f.CFrameEvent
 (\v2\f.CFrameStats
+(\v2\f.CSeasonPass
 (\v2\f.StoreItemID
 (\v2\n.StoreItem
 (\v2\n.StoreItem"R\n'CStoreBrowse_GetStoreCategories_Request
@@ -2945,6 +2971,7 @@ ${FILENAME}
 )\n%k_EnhancedMarketAppearanceStatus_None
 )\n%k_PublishedFileQueryType_RankedByVote
 )\n\ncategories
+)\n\nmilestones
 )\n\nmouse_down
 )\n\rdecoder_limit
 )\n\rdisplay_limit
@@ -3125,6 +3152,11 @@ ${FILENAME}
 *\n&k_EPersonaStateFlag_RemotePlayTogether
 *\n&k_EProtoServiceTypeVRGamepadUIMessages
 *\n&k_EProvideDeckFeedbackPreference_Unset
+*\n&k_EPurchaseNoteType_CreditCardRequired
+*\n&k_EPurchaseNoteType_SystemRequirements
+*\n&k_ERatingDescriptorImage_CERO_Gambling
+*\n&k_ERatingDescriptorImage_CERO_Language
+*\n&k_ERatingDescriptorImage_CERO_Violence
 *\n&k_ERemoteDeviceAuthorizationInProgress
 *\n&k_EResolutionAutomation_FullyAutomated
 *\n&k_ESteamDatagramMsg_DataClientToRouter
@@ -3132,6 +3164,7 @@ ${FILENAME}
 *\n&k_ESteamDatagramMsg_DataRouterToServer
 *\n&k_ESteamDatagramMsg_DataServerToRouter
 *\n&k_ESteamDatagramMsg_TicketDecryptReply
+*\n&k_EStoreAppDocumentType_GettingStarted
 *\n&k_EStoreCategoryType_ControllerSupport
 *\n&k_EStreamControlAuthenticationResponse
 *\n&k_EStreamControlGamepadRumble_OBSOLETE
@@ -3147,6 +3180,7 @@ ${FILENAME}
 *\n\vrelated_f2p
 *^\n\fELogFileType
 *_ds5
+*b\n\rEDisplayStyle
 *bfk(
 *bk7
 *dUA
@@ -3417,11 +3451,11 @@ ${FILENAME}
 ,\n(k_EStoreBrowseFilterFailure_NotPreferred
 ,\n(k_EStreamControlSetStreamingClientConfig
 ,\n(k_EStreamFrameResultDroppedDecodeCorrupt
+,\n(k_EVideoExtrasNote_PurchaseDeluxeEdition
 ,\n(k_EWindowsUpdateInstallationImpact_Minor
 ,\n(k_EnhancedMarketAppearanceStatus_Pending
 ,\n(k_PublishedFileQueryType_RankedByVotesUp
 ,\n\ffree_weekend
-,\n\fpress_review
 ,\n\tfinger_up
 ,a5y
 ,aFl
@@ -3670,6 +3704,7 @@ ${FILENAME}
 -\n)k_ESystemDisplayCompatibilityMode_Invalid
 -\n)k_EUserReviewScore_OverwhelminglyNegative
 -\n)k_EUserReviewScore_OverwhelminglyPositive
+-\n)k_EVideoExtrasNote_PurchaseSpecialEdition
 -\n)k_EWindowsUpdateInstallationImpact_Normal
 -\n)k_EWindowsUpdateOperationResult_Succeeded
 -\n\fmouse_motion
@@ -3818,6 +3853,7 @@ ${FILENAME}
 .CInputTouchFingerDownMsgH
 .CInputTouchFingerMotionMsgH
 .CInputTouchFingerUpMsgH
+.CLocalizationToken
 .CMsgGCRoutingProtoBufHeader
 .CMsgICECandidate
 .CMsgICERendezvous
@@ -3837,6 +3873,8 @@ ${FILENAME}
 .CRemoteClient_Task"&\n$CRemoteClient_AddClientTask_Response"f\n#CRemoteClient_TaskList_Notification
 .CRemoteClient_Task"g\n&CRemoteClient_MarkTaskComplete_Request
 .CRemoteHIDMsgH
+.CSeasonPassDateAndDisplay
+.CSeasonPassMilestoneB
 .CStoreBrowse_GetItems_Request
 .CStoreBrowse_GetItems_Response"
 .CStorePageFilter
@@ -3867,6 +3905,7 @@ ${FILENAME}
 .EContentDescriptorID"A\n
 .EContentHubDiscountFilterType
 .EControllerElementType
+.EDisplayStyle:
 .EFrameAccumulatedStat
 .EHIDDeviceDisconnectMethod
 .EHIDDeviceLocation
@@ -3875,10 +3914,13 @@ ${FILENAME}
 .EProtoExecutionSite:
 .EProtoServiceType: k_EProtoServiceTypeSteamMessages:D\n
 .ERatingAgency
+.ERatingDescriptorImage
+.ERatingDescriptorImage"
 .ERemoteClientBroadcastMsg
 .ERemoteDeviceStreamingResult
 .ESteamNetworkingSocketsCipher"'\n
 .ESteamOSCompatibilityCategory
+.EStoreAppDocumentType
 .EStoreAppType
 .EStoreBrowseFilterFailure: k_EStoreBrowseFilterFailure_None
 .EStoreCategoryType
@@ -3930,22 +3972,22 @@ ${FILENAME}
 .StoreBrowseItemDataRequest
 .StoreBrowseItemDataRequest"
 .StoreGameRating
-.StoreItem.Anticheat
 .StoreItem.Assets
 .StoreItem.BasicInfo
 .StoreItem.Categories
 .StoreItem.Demo
-.StoreItem.Eula
 .StoreItem.ExtraDetails
+.StoreItem.ExtraDetails.Episode
+.StoreItem.ExtraDetails.Eula
+.StoreItem.ExtraDetails.Season
 .StoreItem.FreeWeekend
 .StoreItem.IncludedItems
 .StoreItem.Link
 .StoreItem.PackageGroup
-.StoreItem.PageSection
 .StoreItem.Platforms
 .StoreItem.Platforms.VRSupport
 .StoreItem.Playtest
-.StoreItem.PressReview
+.StoreItem.PurchaseNote
 .StoreItem.PurchaseOption
 .StoreItem.RelatedF2P
 .StoreItem.RelatedItems
@@ -4155,6 +4197,7 @@ ${FILENAME}
 /\n+k_EContentReportSubjectAction_BannedFromHub
 /\n+k_EContentReportSubjectAction_OwnerDisputed
 /\n+k_EControllerElementTypeButtonJoystickRight
+/\n+k_ERatingDescriptorImage_CERO_SexualContent
 /\n+k_ERemoteDeviceStreamingDriversNotInstalled
 /\n+k_ERemoteDeviceStreamingSteamVRNotInstalled
 /\n+k_ESteamDatagramMsg_ClientPingSampleRequest
@@ -4486,8 +4529,6 @@ ${FILENAME}
 0000000000000000000000000000000000000000
 00000001
 000102030405060708091011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495969798990123456789abcdef
-00:29:06
-00:29:14
 00\fo
 01%3
 01%6
@@ -4731,6 +4772,8 @@ ${FILENAME}
 10CUtlMemoryIN11CUtlHashMapIj10CUtlVectorIP15COverlayElementS_IS3_EE10CDefEqualsIjE11HashFunctorIjEjE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapIj34CVirtualControllerActionSetState_t10CDefEqualsIjE11HashFunctorIjEjE12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapIj34CVirtualControllerActionSetState_t10CDefEqualsIjE11HashFunctorIjEjE6Node_tEE
+10CUtlMemoryIN11CUtlHashMapIjN25SteamNetworkingSocketsLib17SharedClusterData14DataCenterPingESt8equal_toIjESt4hashIjEjE12HashBucket_tEE
+10CUtlMemoryIN11CUtlHashMapIjN25SteamNetworkingSocketsLib17SharedClusterData14DataCenterPingESt8equal_toIjESt4hashIjEjE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapIjP15COverlayElement10CDefEqualsIjE11HashFunctorIjEjE12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapIjP15COverlayElement10CDefEqualsIjE11HashFunctorIjEjE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapIjP31CVirtualControllerLayoutPackage10CDefEqualsIjE11HashFunctorIjEjE12HashBucket_tEE
@@ -4761,6 +4804,7 @@ ${FILENAME}
 10CUtlVectorIN11CUtlHashMapI10CUtlStringP10CUtlBuffer10CDefEqualsIS1_E11HashFunctorIS1_E10StringViewE12HashBucket_tE10CUtlMemoryISA_EE
 10CUtlVectorIN11CUtlHashMapIiPN15COverlayElement11ImageData_tE10CDefEqualsIiE11HashFunctorIiEiE12HashBucket_tE10CUtlMemoryIS9_EE
 10CUtlVectorIN11CUtlHashMapIj34CVirtualControllerActionSetState_t10CDefEqualsIjE11HashFunctorIjEjE12HashBucket_tE10CUtlMemoryIS7_EE
+10CUtlVectorIN11CUtlHashMapIjN25SteamNetworkingSocketsLib17SharedClusterData14DataCenterPingESt8equal_toIjESt4hashIjEjE12HashBucket_tE10CUtlMemoryIS9_EE
 10CUtlVectorIN11CUtlHashMapIjP15COverlayElement10CDefEqualsIjE11HashFunctorIjEjE12HashBucket_tE10CUtlMemoryIS8_EE
 10CUtlVectorIN11CUtlHashMapIjP31CVirtualControllerLayoutPackage10CDefEqualsIjE11HashFunctorIjEjE12HashBucket_tE10CUtlMemoryIS8_EE
 10CUtlVectorIN11CUtlHashMapIjS_IP15COverlayElement10CUtlMemoryIS2_EE10CDefEqualsIjE11HashFunctorIjEjE12HashBucket_tES3_ISB_EE
@@ -4790,11 +4834,13 @@ ${FILENAME}
 11CFrameStats
 11CPathString
 11CRefCountedI20CRefCountServiceBaseILb1E6CRefMTEE
+11CSeasonPass
 11CSetIconMsg
 11CUtlHashMapI10CUtlStringP10CUtlBuffer10CDefEqualsIS0_E11HashFunctorIS0_E10StringViewE
 11CUtlHashMapIiPN15COverlayElement11ImageData_tE10CDefEqualsIiE11HashFunctorIiEiE
 11CUtlHashMapIj10CUtlVectorIP15COverlayElement10CUtlMemoryIS2_EE10CDefEqualsIjE11HashFunctorIjEjE
 11CUtlHashMapIj34CVirtualControllerActionSetState_t10CDefEqualsIjE11HashFunctorIjEjE
+11CUtlHashMapIjN25SteamNetworkingSocketsLib17SharedClusterData14DataCenterPingESt8equal_toIjESt4hashIjEjE
 11CUtlHashMapIjP15COverlayElement10CDefEqualsIjE11HashFunctorIjEjE
 11CUtlHashMapIjP31CVirtualControllerLayoutPackage10CDefEqualsIjE11HashFunctorIjEjE
 11CUtlHashMapIjb10CDefEqualsIjE11HashFunctorIjEjE
@@ -4877,7 +4923,6 @@ ${FILENAME}
 14IShakeListener
 14IStreamDecoder
 14StoreItem_Demo
-14StoreItem_Eula
 14StoreItem_Link
 1536
 156q
@@ -4996,7 +5041,6 @@ ${FILENAME}
 19CUtlNoEscConversion
 19CVirtualHereManager
 19I}
-19StoreItem_Anticheat
 19StoreItem_BasicInfo
 19StoreItem_Platforms
 19StreamDecoderThread
@@ -5090,6 +5134,7 @@ ${FILENAME}
 1\n-k_EPressOutletMemberPendingState_StagedDelete
 1\n-k_EProfileCustomizationTypeScreenshotShowcase
 1\n-k_EPublishedFileInappropriateProvider_Invalid
+1\n-k_ERatingDescriptorImage_CERO_DrinkingSmoking
 1\n-k_ERemoteClientBroadcastMsgClientIDDeconflict
 1\n-k_ERemoteClientBroadcastMsgPairingExclusivity
 1\n-k_ERemoteClientServiceRemoteInstallWithoutPin
@@ -5178,8 +5223,9 @@ ${FILENAME}
 2&N0(
 2'.CMsgProtoBufHeader.ESessionDisposition:
 2'Zmq
+2(.StoreItem.ExtraDetails.EVideoExtrasNote
 2(n4
-2).StoreItem.PageSection.EPageSectionBanner"
+2).StoreItem.PurchaseNote.EPurchaseNoteType
 2).google.protobuf.FileOptions.OptimizeMode:
 2)252Y2]2c2k2o2u2w2{2
 2)J3D\r
@@ -5192,6 +5238,7 @@ ${FILENAME}
 2+0L$0$N
 2+d}VO
 2+ss
+2,.StoreItem.ExtraDetails.Episode.EEpisodeType
 2,5m
 2-.CMsgSteamDatagramConnectionClosed.ERelayMode
 2-Finger-Tippen
@@ -5221,6 +5268,7 @@ ${FILENAME}
 20CPurchaseReceiptInfo
 20CRecordedInputStream
 20CRefCountServiceBaseILb1E6CRefMTE
+20CSeasonPassMilestone
 20CSetSpectatorModeMsg
 20CSetTargetBitrateMsg
 20CSetTouchIconDataMsg
@@ -5237,6 +5285,8 @@ ${FILENAME}
 20StoreItem_RelatedF2P
 214P&
 2168
+21:52:03
+21:52:47
 21AES_ECB_CipherContext
 21AES_GCM_CipherContext
 21CClanAnnouncementInfo
@@ -5252,8 +5302,6 @@ ${FILENAME}
 21CUtlCStringConversion
 21ISteamNetworkingUtils
 21StoreItem_FreeWeekend
-21StoreItem_PageSection
-21StoreItem_PressReview
 21StoreItem_ReleaseInfo
 21StoreItem_Screenshots
 21UserSystemInformation
@@ -5283,6 +5331,7 @@ ${FILENAME}
 22IClientNetworkingUtils
 22StoreItem_ExtraDetails
 22StoreItem_PackageGroup
+22StoreItem_PurchaseNote
 22StoreItem_RelatedItems
 232>
 23CActivationCodeItemInfo
@@ -5335,6 +5384,7 @@ ${FILENAME}
 25CRemotePlayTogetherDialog
 25CResumeControllerInputMsg
 25CSaveTouchConfigLayoutMsg
+25CSeasonPassDateAndDisplay
 25CSetStreamingClientConfig
 25CStreamPlayerMenubarToast
 25CStreamPlayerOverlayToast
@@ -5342,6 +5392,7 @@ ${FILENAME}
 25CVirtualControllerLayouts
 25SymmetricCryptContextBase
 25th
+26.StoreItem.ExtraDetails.PageSection.EPageSectionBanner"
 2654&"
 2654&'#
 26554&#"
@@ -5369,6 +5420,7 @@ ${FILENAME}
 27CMsgSteamDatagramDiagnostic
 27CRemoteClient_ClientDetails
 27CRemoteClient_DeviceDetails
+27StoreItem_ExtraDetails_Eula
 27StoreItem_SupportedLanguage
 28&,J@^Tbhv|
 28CGameNetworkingUI_AppSummary
@@ -5392,9 +5444,12 @@ ${FILENAME}
 29CStreamingClientHandshakeInfo
 29CStreamingServerHandshakeInfo
 29NAaI[
+29StoreItem_ExtraDetails_Season
 29StoreItem_Platforms_VRSupport
 29\n_l
+2:.StoreItem.ExtraDetails.SystemRequirements.ESysReqPlatform
 2<QF
+2=.StoreItem.ExtraDetails.SystemRequirements.EUnsupportedOSNote"s\n
 2=q3k
 2>/dev/null
 2>1y)
@@ -5574,6 +5629,7 @@ ${FILENAME}
 30CStoreBrowse_GetItems_Response
 30CTouchActionSetLayerRemovedMsg
 30CVirtualControllerGlobalConfig
+30StoreItem_ExtraDetails_Episode
 30StoreItem_Trailers_VideoSource
 31CAdHocValidation_SimpleCallback
 31CCommunity_ClanAnnouncementInfo
@@ -5585,6 +5641,7 @@ ${FILENAME}
 31CSetInputTemporarilyDisabledMsg
 31CStorePageFilter_SalePageFilter
 31CVirtualControllerLayoutPackage
+31StoreItem_OptInRegistrationTags
 31nPC
 3254##
 3254&#"
@@ -5631,17 +5688,17 @@ ${FILENAME}
 32654'#
 32654'#536
 32654''3254&##c
+326554&"
+326554&#"
+3267
 32654.
 32655
 32655&
 32655&&
-326554&"
 326554&#
-326554&#"
 326554&##
 326554&'
 326654&&#"
-3267
 3267!
 3267!5!&
 3267!5!&&#"
@@ -5675,6 +5732,7 @@ ${FILENAME}
 32CRemotePlayTogether_Notification
 32CStreamPlayerConfig_CAudioConfig
 32CVirtualControllerConfig_Control
+32StoreItem_ExtraDetails_Anticheat
 32StoreItem_Screenshots_Screenshot
 32UserContentDescriptorPreferences
 33/(F
@@ -5691,6 +5749,7 @@ ${FILENAME}
 33CRemotePlayTogetherGroupUpdateMsg
 33CStorePageFilter_ContentHubFilter
 33CTransportSignalMsg_WebRTCMessage
+33StoreItem_ExtraDetails_Metacritic
 33StoreItem_PurchaseOption_Discount
 33fU
 343V3x3
@@ -5708,6 +5767,10 @@ ${FILENAME}
 34CStoreBrowse_GetPriceStops_Request
 34CVirtualControllerActionSetState_t
 34CVirtualControllerConfig_ActionSet
+34StoreItem_ExtraDetails_CastAndCrew
+34StoreItem_ExtraDetails_EarlyAccess
+34StoreItem_ExtraDetails_PageSection
+34StoreItem_ExtraDetails_PressReview
 34StoreItem_Trailers_AdaptiveTrailer
 34^W
 354>
@@ -5725,8 +5788,8 @@ ${FILENAME}
 35CStoreBrowse_GetDLCForApps_Response
 35CStoreBrowse_GetPriceStops_Response
 35ISteamNetworkingConnectionSignaling
-35StoreItem_AIGeneratedContentService
 35StoreItem_BasicInfo_CreatorHomeLink
+35StoreItem_ExtraDetails_LinksAndInfo
 35pI
 36$32
 36632
@@ -5884,6 +5947,8 @@ ${FILENAME}
 3[6U#
 3\fsg
 3\n&k_EWindowsUpdateRebootBehavior_Unknown
+3\n/k_ECompromiseDetectionType_LeakedCredentialList
+3\n/k_EContentModerationSanction_MarkedIncompatible
 3\n/k_EContentReportReason_BypassingProfanityFilter
 3\n/k_EContentReportReason_CSAMGroomingOrEnticement
 3\n/k_EContentReportReason_CredibleThreatOfViolence
@@ -5997,6 +6062,7 @@ ${FILENAME}
 41CRemoteClient_AllocateRelayServer_Request
 41CRemoteClient_SteamBroadcast_Notification
 41CStoreBrowse_GetContentHubConfig_Response
+41StoreItem_ExtraDetails_SystemRequirements
 41w'B
 42CHIDMessageToRemote_DeviceGetFeatureReport
 42CHIDMessageToRemote_DeviceGetProductString
@@ -6038,10 +6104,10 @@ ${FILENAME}
 45CStoreBrowse_GetPriceStops_Response_PriceStop
 45rq
 46$a
+467.
 4632
 46632
 467&&54632
-467.
 4676654&#"
 46CControllerConfigMsg_ControllerActiveConfigMsg
 46CMsgSteamDatagramConnectionStatsClientToRouter
@@ -6049,6 +6115,7 @@ ${FILENAME}
 46CMsgSteamDatagramConnectionStatsRouterToServer
 46CMsgSteamDatagramConnectionStatsServerToRouter
 46CMsgSteamDatagramGameserverPingRequestEnvelope
+46StoreItem_ExtraDetails_SystemRequirements_Size
 46Yrh
 47#5!
 47&&54$32
@@ -6066,6 +6133,7 @@ ${FILENAME}
 48CMsgSteamNetworkingP2PRendezvous_ReliableMessage
 48CRemoteClient_DisableSteamBroadcast_Notification
 48D}6
+48StoreItem_ExtraDetails_AIGeneratedContentService
 48\nb
 49.#her
 49CMsgRemoteClientBroadcastClientPairingExclusivity
@@ -6166,6 +6234,7 @@ ${FILENAME}
 4\n\nmouse_mode
 4\n\rfinger_motion
 4\n\rstore_filters
+4\n\tanticheat
 4\rwN
 4\tOI
 4\vJu-
@@ -6267,6 +6336,7 @@ ${FILENAME}
 52{M
 52|{k
 531lo
+532654.
 532>
 536654#!5!
 53\ru`
@@ -6276,11 +6346,9 @@ ${FILENAME}
 54&#72
 54&'7
 546'2>
-5467.
 5467
 54632
 54663
-532654.
 546632
 5467!
 5467#".
@@ -6289,10 +6357,12 @@ ${FILENAME}
 5467'
 5467'!
 5467'7
+5467.
 546753
 546;
 54CControllerConfigMsg_ControllerPersonalizationResponse
 54CMsgRemoteDeviceAuthorizationRequest_CKeyEscrow_Ticket
+54StoreItem_ExtraDetails_SystemRequirements_Requirements
 55$8
 551f
 554663
@@ -6481,6 +6551,7 @@ ${FILENAME}
 60>T
 6144
 61iz
+62StoreItem_ExtraDetails_SystemRequirements_PlatformRequirements
 62d&
 63Y>
 63\vx
@@ -6597,6 +6668,7 @@ ${FILENAME}
 6\n2k_ESteamOSCompatibilityResultDisplayType_Invisible
 6\nV$o
 6\n\fmessage_type
+6\n\nmetacritic
 6\n\vdevice_open
 6\n\vdevice_read
 6\ne4j
@@ -7244,6 +7316,8 @@ ${FILENAME}
 9\n5k_EContentReportResolution_CountryRestrictionsChanged
 9\n5k_PublishedFileQueryType_RankedByAveragePlaytimeTrend
 9\n5k_PublishedFileQueryType_RankedByNumParentCollections
+9\n\fearly_access
+9\n\fpress_review
 9\n\noneof_decl
 9\v\nUc$NL\n
 9]dh
@@ -7386,6 +7460,7 @@ ${FILENAME}
 :\n6k_PublishedFileQueryType_RankedByPlaytimeSessionsTrend
 :\n\fclose_device
 :\n\freply_packet
+:\n\rcast_and_crew
 :\n\rquality_relay
 :\tCA=ZbYpp:|Y
 :aKoCy
@@ -7865,6 +7940,7 @@ ${FILENAME}
 =\n9k_EContentReportReason_FakedGenderedNonConsensualMaterial
 =\n9k_PublishedFileQueryType_RankedByLifetimePlaytimeSessions
 =\n9k_PublishedFileQueryType_RankedByTotalUniqueSubscriptions
+=\n\nMetacritic
 =\rdJk
 =\tUa7
 =aDCa=
@@ -8045,6 +8121,7 @@ ${FILENAME}
 ?\n;k_EContentReportReason_NegativeEffectonDiscourseOrElections
 ?\n;k_PublishedFileQueryType_RankedByInappropriateContentRating
 ?\n\nconnect_ok
+?\n\rdisplay_style
 ?\n\rinstantaneous
 ?\n\tp2p_scope
 ?`?`?`?`?v?
@@ -9876,6 +9953,7 @@ CHECK failed: z.first != NULL:
 CHI STA GIOCANDO?
 CHIDDeviceInfo
 CHIDDeviceInputReport
+CHIDDeviceListSDL(): Couldn't load %s, not enumerating devices\n
 CHIDMessageFromRemote
 CHIDMessageToRemote
 CHM;
@@ -9912,6 +9990,8 @@ CKeyValuesSystem dumping last %u keys added to system (oldest first):\n
 CKeyValuesSystem::AddStringToPool: key name too long (%u chars)
 CKeyValuesSystem::AddStringToPool: out of memory
 CKeyValuesSystem::AddStringToPool: over 75%% full (%u bytes left)
+CKeyValuesSystem::BSetHashTableBuckets: %u buckets is not a power of 2
+CKeyValuesSystem::BSetHashTableBuckets: %u key names were already added, keeping %u buckets
 CLE,
 CLIENTENGINE_INTERFACE_VERSION005
 CLIENT_EARLY_TRAFFIC_SECRET
@@ -10155,6 +10235,8 @@ CSIzmvv
 CSJN
 CSPName
 CSaveTouchConfigLayoutMsg
+CSeasonPassDateAndDisplay
+CSeasonPassMilestone
 CServerHandshakeMsg
 CSetActivityMsg
 CSetBitrateOverrideMsg
@@ -10351,8 +10433,8 @@ C\fFr
 C\kR
 C\n?k_EContentReportReason_MisleadingInformationAboutConsumerRights
 C\nTP
+C\n\nstorage_hq
 C\n\ralt_addresses
-C\n\tStoreItem
 C\n\tdlc_lists
 C\n\vprice_stops
 C\r[F9
@@ -11925,12 +12007,14 @@ EProvideDeckFeedbackPreference
 EPt\
 EPublishedFileQueryType
 EPublishedFileStorageSystem
+EPurchaseNoteType
 EQQl
 ERROR
 ERROR: %s: failed to set hostname\n
 ERROR: %s: failed to set timezone\n
 ERROR: Unable to create discovery socket\n
 ERROR: selector [%d] invalid\n
+ERatingDescriptorImage
 ERbN
 ERemoteClientBroadcastMsg
 ERemoteClientService
@@ -11958,6 +12042,7 @@ EStorageBlockContentType
 EStorageBlockFileSystemType
 EStorageDriveMediaType
 EStorageFormatStage
+EStoreAppDocumentType
 EStoreBrowseFilterFailure
 EStoreCategoryType
 EStoreItemType
@@ -11988,6 +12073,7 @@ EStreamTransport
 EStreamVersion
 EStreamVideoCodec
 EStreamingDataType
+ESysReqPlatform
 ESystemAudioChannel
 ESystemAudioDirection
 ESystemAudioPortDirection
@@ -12002,6 +12088,7 @@ ETrailerCategory
 EU8t
 EUXeeeR
 EUgo
+EUnsupportedOSNote
 EUp#
 EUp0
 EUserReviewScore
@@ -12084,6 +12171,7 @@ EVP_SignFinal
 EVP_VerifyFinal
 EVVEDUU
 EVb\fFn
+EVideoExtrasNote
 EW#yH
 EWindowStackingOrder
 EWindowsUpdateOperationResult
@@ -12273,6 +12361,7 @@ Eogonek
 EpBB:7D
 EpJA
 EpeC?
+Episode
 Epsilon
 Eq%t
 Eqhx
@@ -14909,6 +14998,7 @@ L[2kw
 L\Bv
 L\f4<PfC
 L\nCt
+L\n\vrecommended
 L\nmF
 L\rVovy
 L\rh9
@@ -15708,9 +15798,11 @@ N25SteamNetworkingSocketsLib16LinkStatsTrackerINS_34LinkStatsTrackerClientRelayS
 N25SteamNetworkingSocketsLib17CPacketLaggerRecvE
 N25SteamNetworkingSocketsLib17CPacketLaggerSendE
 N25SteamNetworkingSocketsLib17CRawUDPSocketImplE
+N25SteamNetworkingSocketsLib17SharedClusterDataE
 N25SteamNetworkingSocketsLib19CQueuedTaskOnTargetINS_27CSteamNetworkConnectionPipeEEE
 N25SteamNetworkingSocketsLib20CConnectionTransportE
 N25SteamNetworkingSocketsLib20LinkStatsTrackerBaseE
+N25SteamNetworkingSocketsLib20SteamDatagramNetworkE
 N25SteamNetworkingSocketsLib21CDedicatedBoundSocketE
 N25SteamNetworkingSocketsLib21CSteamNetworkingUtilsE
 N25SteamNetworkingSocketsLib22ScheduledMethodThinkerINS_27CConnectionTransportP2PBaseEEE
@@ -16555,7 +16647,7 @@ ObsS9M
 OcYd
 Oca_
 Ocircumflex.smcp\vOtilde.smcp
-Oct 14 2026
+Oct 16 2026
 October
 Ocultar teclado virtual
 Oculte os controles por toque no menu de configura
@@ -16661,6 +16753,7 @@ Opptak %dx%d @ %2.2f
 Opptak mislyktes
 Opre
 Opretter forbindelse til Steam...
+OptInRegistrationTags
 Optag input
 Optag input for afspilning
 Optagelse mislykkedes
@@ -17277,6 +17370,7 @@ Pk&93
 Pk=%gi
 PkTn
 Pkt number lurch by %lld; %04x->%04x
+PlatformRequirements
 Playback Input
 Playback recorded input
 Player
@@ -18117,6 +18211,7 @@ R\Y]q
 R\f9m
 R\n4A{i
 R\nAM_FZ
+R\n\tplatforms
 R\vDL+
 R\vY(s
 R]LV
@@ -18890,6 +18985,7 @@ SDRClient_EnableTOSProbes
 SDRClient_FakeClusterPing
 SDRClient_ForceProxyAddr
 SDRClient_ForceRelayCluster
+SDRClient_FreeStaticMemory
 SDRClient_LimitPingProbesToNearestN
 SDRClient_MinPingsBeforePingAccurate
 SDRClient_SingleSocket
@@ -19355,6 +19451,7 @@ Se till att du har en handkontroll!
 Se transmite %s
 Se transmite muzic
 Se transmite: Steam
+Season
 Sec-WebSocket-Key:
 Sec-WebSocket-Version:
 Second argument to Swap() (of type "
@@ -19995,6 +20092,7 @@ SymmetricConnect not supported
 Symw
 Synthetic oneofs must be after all other oneofs
 System Preferences
+SystemRequirements
 SystemSpew
 Sz.S
 S{Pp
@@ -22995,6 +23093,7 @@ Z~5pW3Y
 [%s] Lost all sessions.  Will re-confirm end-to-end connectivity.\n
 [%s] Lost backup #%d %s.  %s
 [%s] Lost primary session %s %s
+[%s] No forwarding target for %s, sending ConnectionClosed to relay only\n
 [%s] No relevant changes to SDR routing messsage, revision %d.\n
 [%s] Not using STUN servers as per P2P_Transport_ICE_Enable\n
 [%s] Not using TURN servers as per P2P_Transport_ICE_Enable\n
@@ -23432,6 +23531,7 @@ Z~5pW3Y
 \n$ControllerActiveConfigChangeResponse
 \n$steammessages_appratings_types.proto"
 \n$steammessages_gamenetworkingui.proto
+\n$steammessages_seasonpass_types.proto
 \n%*s
 \n%*sExtensions:
 \n%*sIssuer Key Hash:
@@ -23536,14 +23636,17 @@ Z~5pW3Y
 \n\fCStopRequest"
 \n\fClosedByPeer
 \n\fEAppTestType
+\n\fEEpisodeType
 \n\fEGpuDriverId
 \n\fEUpdaterType
-\n\fExtraDetails
 \n\fFieldOptions
 \n\fGroupUpdated
 \n\fLITE_RUNTIME
+\n\fLinksAndInfo
 \n\fPackageGroup
+\n\fPurchaseNote
 \n\fRelatedItems
+\n\fRequirements
 \n\fSTRING_PIECE
 \n\fTYPE_FIXED32
 \n\fTYPE_FIXED64
@@ -23570,6 +23673,7 @@ Z~5pW3Y
 \n\fdummy_varint
 \n\fh_steam_pipe
 \n\fhero_capsule
+\n\fhide_details
 \n\fhost_steamid
 \n\fhub_category
 \n\fignore_count
@@ -23585,6 +23689,7 @@ Z~5pW3Y
 \n\fmain_capsule
 \n\fmanufacturer
 \n\fmessage_body
+\n\fmilestone_id
 \n\fmy_timestamp
 \n\fmy_unix_time
 \n\fnetwork_test
@@ -23666,7 +23771,9 @@ Z~5pW3Y
 \n\nkludge_pad
 \n\nl4s_detect
 \n\nmanage_ceg
+\n\noptin_name
 \n\noptin_only
+\n\nos_version
 \n\npixel_bits
 \n\nproduct_id
 \n\nrequest_id
@@ -23675,6 +23782,7 @@ Z~5pW3Y
 \n\nscreenshot
 \n\nsdr_routes
 \n\nsession_id
+\n\nsound_card
 \n\nstart_time
 \n\nsteam_deck
 \n\nsystem_ram
@@ -23683,7 +23791,9 @@ Z~5pW3Y
 \n\nupdatetime
 \n\nusage_page
 \n\nvr_content
+\n\nvr_support
 \n\nvrhmd_only
+\n\nwhy_bbcode
 \n\nwindows_mr
 \n\nx_position
 \n\ny_position
@@ -23733,9 +23843,11 @@ Z~5pW3Y
 \n\rlast_frame_id
 \n\rlast_modified
 \n\rlauncher_type
+\n\rlegacy_bbcode
 \n\rlong_press_ms
 \n\rmac_addresses
 \n\rmanage_cdkeys
+\n\rmanufacturers
 \n\rmax_luminance
 \n\rmin_luminance
 \n\rmouse_enabled
@@ -23778,11 +23890,13 @@ Z~5pW3Y
 \n\tIPSec/IKE/Oakley curve #3 over a 155 bit binary field.\n\tNot suitable for ECDSA.\n\tQuestionable extension field!
 \n\tIPSec/IKE/Oakley curve #4 over a 185 bit binary field.\n\tNot suitable for ECDSA.\n\tQuestionable extension field!
 \n\tPlatforms
+\n\tVRSupport
 \n\taccountid
 \n\tack_relay
 \n\tback_ping
 \n\tbest_ping
 \n\tbest_time
+\n\tbroadband
 \n\tca_key_id
 \n\tcache_key
 \n\tcandidate
@@ -23793,6 +23907,7 @@ Z~5pW3Y
 \n\tcreatorid
 \n\tcursor_id
 \n\tdevice_id
+\n\tdirectors
 \n\tdummy_pad
 \n\te2e_score
 \n\tedit_info
@@ -23817,11 +23932,14 @@ Z~5pW3Y
 \n\tpackageid
 \n\tparent_id
 \n\tping_time
+\n\tprocessor
+\n\tproducers
 \n\tpublished
 \n\tqualified
 \n\trecord_id
 \n\trtime_end
 \n\tsignature
+\n\tstats_url
 \n\tsubtitles
 \n\tsupported
 \n\ttest_data
@@ -23840,6 +23958,7 @@ Z~5pW3Y
 \n\vCloseDevice
 \n\vDeviceClose
 \n\vEVRLinkCaps
+\n\vEarlyAccess
 \n\vEnumOptions
 \n\vFileOptions
 \n\vPageSection
@@ -23855,6 +23974,7 @@ Z~5pW3Y
 \n\vTYPE_UINT64
 \n\vactionBlock
 \n\vallow_alias
+\n\valways_show
 \n\vauth_key_id
 \n\vavatar_hash
 \n\vclan_avatar
@@ -23874,6 +23994,7 @@ Z~5pW3Y
 \n\vfrom_fakeip
 \n\vfull_report
 \n\vheader_text
+\n\vhighlighted
 \n\vhost_gameid
 \n\vice_enabled
 \n\vinstance_id
@@ -23908,9 +24029,11 @@ Z~5pW3Y
 \n\vsource_file
 \n\vstore_items
 \n\vsystem_info
+\n\vtext_bbcode
 \n\vticket_type
 \n\vtime_expiry
 \n\vto_identity
+\n\vtrace_flags
 \n\vvalve_index
 \n\vvoteupcount
 \n\vwebsite_url
@@ -24872,6 +24995,7 @@ aZo c
 aZ|w
 a\nTGW
 a\n\rRouterQuality
+a\n\tStoreItem
 a\rxg[
 a\thI
 a\ttKo%#
@@ -24910,6 +25034,8 @@ accessor_ == other.accessor_
 account
 acct
 accumulated_stats
+achievement_count
+achievements_visible
 ack block header
 ack count upper bits
 ack delay
@@ -24930,6 +25056,7 @@ active_connections
 active_discounts
 activer le micro
 activity
+actors
 ac|A
 ac|f
 ad dvcs
@@ -25390,6 +25517,7 @@ aux_data
 avP#
 avY;
 availableSpace
+available_documents
 available_video_modes_OBSOLETE
 avatar
 avatar_location
@@ -25536,6 +25664,7 @@ b`OD%
 ba6]
 baNzZA
 baQu
+backfilled_release
 background
 background_pressed
 background_selected
@@ -25823,6 +25952,7 @@ broadcast_live
 broadcaster_accountid
 broadcasting_active
 broken pipe
+browserapi_site
 bs!#ID
 bs\dh
 bss01
@@ -26041,6 +26171,7 @@ cV/U
 cV?j
 cXU(at
 cZSa
+c\n\vCastAndCrew
 c\rXg
 c\rauI_
 c\t0NA
@@ -26454,7 +26585,9 @@ colorpicker_instructions
 colorwheel
 com.google.protobufB
 com.valvesoftware.steam
+coming_soon_appid
 coming_soon_display
+coming_soon_display_type
 commaaccentrotate
 command not supported
 command"
@@ -26465,6 +26598,7 @@ commonName
 community-china.beta.valve.org
 community.csgo.com.cn
 community_assets/
+community_bbcode
 community_icon
 community_visible_stats
 comp
@@ -26674,6 +26808,7 @@ create_synthetic_message_hash
 create_ticket_prequel
 creator
 creator_clan_account_id
+creator_home_background
 creator_steamid
 critical
 critical,
@@ -27030,6 +27165,7 @@ cubPlaintextData
 curis
 curit
 curl
+current_state_bbcode
 curve
 curve does not support ecdh
 curve does not support signing
@@ -27278,6 +27414,7 @@ data too large for modulus
 data too small
 data too small for key size
 data"8\n
+data:
 dataEncipherment
 data_ == other.data_
 data_center_id
@@ -27285,6 +27422,7 @@ data_collect_method
 datacoll
 dataindl
 date
+dates
 daylight
 dayofdefeat.com
 dbUi
@@ -27381,7 +27519,9 @@ des3-wrap
 des_ede3_wrap_cipher
 descodifica
 description
+description_bbcode
 description_text
+descriptor_images
 desired_bitrate_kbps
 desired_framerate_denominator
 desired_framerate_numerator
@@ -27504,6 +27644,7 @@ direct3d11
 directory
 directory services (X.500)
 directory services - algorithms
+directx
 dirname error
 disable_amd_hardware_encoding
 disable_client_cursor
@@ -28182,6 +28323,8 @@ environ
 eob@
 eogonek
 eph fakeport #%d
+episode
+episode_appids
 epo>
 epoll_create1
 epoll_create1() failed, errno=%d
@@ -28783,6 +28926,7 @@ ftp@example.com
 ftruncate64
 fu`z
 full_description_bbcode
+full_version_bbcode
 fullname
 fullscreen_button
 func(%lu)
@@ -28994,6 +29138,7 @@ generator:
 generic
 generic cryptogram
 generic_string
+genreids
 georgian
 ger avtryckare
 ger kantknapp
@@ -29236,6 +29381,7 @@ gqr<
 gradientTransform
 gradientUnits
 graph
+graphics
 grasshopper-cbc
 grasshopper-cfb
 grasshopper-ctr
@@ -29452,6 +29598,7 @@ header crc mismatch
 header too long
 heading
 headline
+health_warning_url
 heartbeat request already pending
 hebrew
 height
@@ -29541,6 +29688,7 @@ hostname
 hot_x
 hot_y
 houseIdentifier
+how_long_bbcode
 hoz
 hoz.
 hpQA/_?
@@ -30376,6 +30524,7 @@ include_best_purchase_option
 include_extra_details
 include_full_description
 include_included_items
+include_optin_registration_tags
 include_platforms
 include_ratings
 include_release
@@ -30386,6 +30535,7 @@ include_tag_count
 include_trailers
 included_appids
 included_bundles
+included_creators
 included_game_count
 included_item_data_request
 included_items
@@ -30408,6 +30558,7 @@ incorrect policy syntax tag
 inde masa
 indent_len > 0
 indent_level > 0
+index
 index too large
 index too small
 indirectCRL
@@ -30678,6 +30829,7 @@ is_coming_soon
 is_commercial_license
 is_early_access
 is_free
+is_free_license
 is_free_temporarily
 is_free_to_keep
 is_from_external_source
@@ -30742,6 +30894,7 @@ itMsgStart->first.m_nMsgNum == nMsgNum
 it_IT
 italian
 item %p sentinel corrupted. skipping.\n
+item_store_eligible
 items
 iter
 iter->second.m_usecWhenAckPrior == m_receiverState.m_itPendingAck->second.m_usecWhenAckPrior
@@ -31336,6 +31489,16 @@ k_EDLCHighlightReason_None
 k_EDeviceLocationAny
 k_EDeviceLocationLocal
 k_EDeviceLocationRemote
+k_EDisplayStyleLetterbox
+k_EDisplayStyleLetterbox"
+k_EDisplayStyleStretch
+k_EDisplayStyleZoom
+k_EEpisodeType_BehindTheScenes
+k_EEpisodeType_Bonus
+k_EEpisodeType_Chapter
+k_EEpisodeType_Deleted
+k_EEpisodeType_Episode
+k_EEpisodeType_Unknown
 k_EEventBroadcastStart
 k_EEventMatchStart
 k_EEventPartnerMaxType
@@ -31451,6 +31614,9 @@ k_EPressOutletAction_Undeleted
 k_EPressOutletAction_Updated
 k_EProtoExecutionSiteUnknown
 k_EProtoExecutionSiteUnknown:m\n\fservice_type
+k_EPurchaseNoteType_LowViolence
+k_EPurchaseNoteType_None
+k_EPurchaseNoteType_Notice
 k_ERatingAgency_AGCOM
 k_ERatingAgency_BBFC
 k_ERatingAgency_CADPA
@@ -31526,6 +31692,11 @@ k_EStorageFormatStage_Invalid
 k_EStorageFormatStage_Rescuing
 k_EStorageFormatStage_Starting
 k_EStorageFormatStage_Testing
+k_EStoreAppDocumentType_MAX
+k_EStoreAppDocumentType_Manual
+k_EStoreAppDocumentType_Map
+k_EStoreAppDocumentType_None
+k_EStoreAppDocumentType_ReadMe
 k_EStoreAppType_Advertising
 k_EStoreAppType_Beta
 k_EStoreAppType_DLC
@@ -31725,6 +31896,11 @@ k_EStreamVideoCodecRaw
 k_EStreamingAudioData
 k_EStreamingMicrophoneData
 k_EStreamingVideoData
+k_ESysReqPlatform_Android
+k_ESysReqPlatform_Linux
+k_ESysReqPlatform_Mac
+k_ESysReqPlatform_Unknown
+k_ESysReqPlatform_Windows
 k_ESystemServiceState_Disabled
 k_ESystemServiceState_Enabled
 k_ETouchGestureDoubleTap
@@ -31775,6 +31951,9 @@ k_ETrayMenuElementBackground
 k_ETrayMenuElementCopyLayoutButton
 k_ETrayMenuElementPasteLayoutButton
 k_ETrayMenuElementResetLayoutButton
+k_EUnsupportedOSNote_Mac
+k_EUnsupportedOSNote_None
+k_EUnsupportedOSNote_Windows
 k_EUpdaterState_Applying
 k_EUpdaterState_Available
 k_EUpdaterState_Checking
@@ -31798,6 +31977,8 @@ k_EUserReviewScore_VeryPositive
 k_EVRLinkCapsAvailable
 k_EVRLinkCapsUnimplemented
 k_EVRLinkCapsUnknown
+k_EVideoExtrasNote_Purchase
+k_EVideoExtrasNote_Rental
 k_EWindowStackingOrder_Bottom
 k_EWindowStackingOrder_Invalid
 k_EWindowStackingOrder_Top
@@ -32276,7 +32457,7 @@ lh\n2Ta
 lhatod r
 lhhl
 liQS
-lib Oct 14 2026 00:29:13
+lib Oct 16 2026 21:52:35
 lib(%lu)
 libEGL.so.1
 libGL.so.1
@@ -32328,6 +32509,7 @@ link_touch_large_button_pressed
 links
 links.m_pNext == nullptr
 links.m_pPrev == nullptr
+links_and_info
 linux
 linux_release_date
 lira
@@ -32762,6 +32944,7 @@ m_listReadyRetryReliableRange[ relSeg.m_hStatusOrRetry ] == hSeg
 m_listSamples
 m_mapChildConnections.Count() == n-1
 m_mapConditionalSymbolTable
+m_mapDataCenterPingsByID
 m_mapDynamicJoysticks
 m_mapFileTimes
 m_mapFileWatchData
@@ -32864,6 +33047,7 @@ m_pktNumInFlight == 0 && m_eActivityLevel == ELinkActivityLevel::Active
 m_pkvLastKeyAdded != NULL
 m_pszName
 m_pthreadWatcher
+m_publicKeyGlobal
 m_queueFreeReports
 m_queueIndex == -1
 m_queueIndex >= 0
@@ -33080,6 +33264,7 @@ memchr
 memcmp
 memcpy
 memmove
+memory
 memory allocation failed
 memory buffer
 memory buffer routines
@@ -33144,6 +33329,7 @@ microphone_slider
 microsoft.com
 migrate_request_ip
 migrate_request_port
+milestone_desc
 mime no content type
 mime parse error
 mime sig parse error
@@ -34109,6 +34295,7 @@ not_in_users_language
 not_on_users_platform
 not_primary_session
 not_primary_transport
+notes
 noticeNumbers
 notice_section
 noticenos
@@ -34457,6 +34644,7 @@ one.onum
 one.smcp
 one.sup
 onetoone_button
+online_manual_url
 only oneshot supported
 only-if-cached, max-stale=2678400
 onlyAA
@@ -34505,6 +34693,7 @@ opnemen
 opptak
 opt3001
 optin
+optin_registration_tags
 option json_name is not allowed on extension fields.
 optional
 optionalSignature
@@ -34535,6 +34724,7 @@ os$d
 os2_
 osWK
 os_type
+os_version_unsupported
 oscca
 ossl_ecdh_compute_key
 ossl_ecdsa_sign_sig
@@ -35221,6 +35411,7 @@ point at infinity
 point coordinates blind failure
 point is not on curve
 points
+points_shop_eligible
 policy
 policy language already defined
 policy mismatch
@@ -35246,6 +35437,7 @@ ponse : %2.2f ms (%s)
 ponse : <1 ms (%s)
 pontban.
 poor
+pop.m_publicKeyPOP
 pop3
 pop3.
 pop_id
@@ -35296,6 +35488,7 @@ prflx
 price
 price_before_bundle_discount
 price_to_base_discount_on
+pricing_bbcode
 prim:
 primary
 prime%d:
@@ -35318,6 +35511,7 @@ priority_score
 priv [ %d ]
 priv:
 priv_key
+privacy_policy_url
 private
 private key decode error
 private key does not match certificate
@@ -35429,6 +35623,9 @@ pthread_rwlock_init
 pthread_rwlock_rdlock
 pthread_rwlock_unlock
 pthread_rwlock_wrlock
+pthread_rwlockattr_destroy
+pthread_rwlockattr_init
+pthread_rwlockattr_setkind_np
 pthread_self
 pthread_setname_np
 pthread_setschedparam
@@ -35460,6 +35657,7 @@ publisher_group_id
 punct
 pura koodaus
 purchase_description_bbcode
+purchase_notes
 purchase_option_name
 purchase_options
 pure virtual method called\n
@@ -36052,6 +36250,8 @@ requireExplicitPolicy
 required
 required cipher missing
 required compression algorithm missing
+requires_64bit
+requires_apple_silicon
 requires_reservation
 requires_shipping
 requires_signature
@@ -36290,11 +36490,13 @@ rt parma
 rt parmakla dokunarak, dokunmatik kontrolleri etkinle
 rtE1
 rten er optaget.
+rtime
 rtime32_end_time
 rtime32_last_modified
 rtime32_start_time
 rtime32_visibility_end
 rtime32_visibility_start
+rtime_complete
 rtime_estimated_notification
 rtime_mod_reviewed
 rtsmaskinen for mere information.
@@ -36307,6 +36509,7 @@ rulama zaman a
 rumble
 rumble_enabled
 rumble_off
+running_time_minutes
 russian
 rv1(
 rvHU
@@ -36577,6 +36780,7 @@ se visszaj
 seX\
 search only supported for directories
 searchGuide
+seasons
 seau
 seau et votre routeur ou ajuster vos param
 seau local.
@@ -36927,6 +37131,7 @@ shez a t
 shez.
 shhs
 shift_capslock_keycode
+shipped
 shmat
 shmdt
 shmget
@@ -36939,6 +37144,7 @@ should_suppress_discount_pct
 show_above_purchase
 show_broadcast
 show_in_search
+show_optional_vr_mode_notice
 shoz
 shoz nyomj B gombot
 shoz:
@@ -37427,6 +37633,7 @@ steamlink://
 steamlink_openvr
 steammessages_appratings_types.proto
 steammessages_base.proto
+steammessages_base.proto"L\n
 steammessages_gamenetworkingui.proto
 steammessages_hiddevices.proto
 steammessages_hiddevices.proto"
@@ -37434,6 +37641,7 @@ steammessages_remoteclient_discovery.proto
 steammessages_remoteclient_service_messages.proto
 steammessages_remoteplay.proto
 steammessages_remoteplay.proto"H\n
+steammessages_seasonpass_types.proto
 steammessages_steamawards_types.proto
 steammessages_storebrowse.steamclient.proto
 steammessages_streamplayer.proto
@@ -37461,6 +37669,7 @@ stop-color
 stop-opacity
 stop_waiting offset
 stop_waiting pktNum %llu offset %llu
+storage
 store
 store init error
 store_page_filter
@@ -37610,6 +37819,7 @@ system lib
 system library
 system_can_suspend
 system_default
+system_requirements
 szDomainName != nullptr
 szbz
 szka mozgat
@@ -38498,7 +38708,6 @@ tried to send packet to server, but socket not opened
 trjA
 trp{nM
 true
-true"
 trust
 trustRoot
 try_decode_PKCS12
@@ -39279,6 +39488,7 @@ uninstall_completely
 uninterpreted_option
 uniqueIdentifier
 uniqueMember
+units
 universalstring is wrong length
 unknown
 unknown CA
@@ -39419,6 +39629,7 @@ unsupported ssl version
 unsupported status type
 unsupported type
 unsupported version
+unsupported_os_note
 unu kullan
 unused
 unverified
@@ -39679,6 +39890,7 @@ value.unknown
 value.x509cert
 value.x509crl
 value=
+values
 valve
 valve.org
 valvesoftware.com
@@ -39776,6 +39988,7 @@ video upload begin
 video upload end
 video.so
 video64_server.so
+video_extras_note
 vietnamese
 viewBox
 view_error_data
@@ -40098,6 +40311,7 @@ we are done reading and this is set to close, stop send
 weak
 weak_dependency
 webrtc
+website
 websocket
 webui_auth_key
 weergeven
@@ -40108,6 +40322,12 @@ wfK*
 wfTm
 wg9j
 wg^\1
+wg_msg_trace_flags
+wg_msg_trace_gid
+wg_msg_trace_instance
+wg_msg_trace_status
+wg_msg_trace_steamid
+wg_msg_trace_token
 wg_token
 wge6
 wgm]u,
@@ -40168,6 +40388,7 @@ write %s failed, errno = %d\n
 write to read only BIO
 write_nal_unit
 write_state_machine
+writers
 writev
 writing strings
 wrm=
@@ -41111,7 +41332,6 @@ z~rvjnbfZ^RVJNBF
 ~Y]d2
 ~ZyT1
 ~\SGu
-~\n\tVRSupport
 ~]qSZ
 ~cIt
 ~dC,nI

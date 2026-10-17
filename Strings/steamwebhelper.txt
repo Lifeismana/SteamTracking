@@ -795,7 +795,7 @@ $d`D-laM
 *ZN19CCompositorGLThread22OnStackingOrderChangedEmmEUlPK19ICompositorDrawableE_
 *ZN19CX11EventDispatcher23UnregisterEventListenerEP24ICompositorEventListenerEUlPKS0_E_
 *ZN23CV8ManagerRenderProcess30CreateCallbackUnregisterObjectER13scoped_refptrI10CefV8ValueES0_I10CefBrowserEyEUlvE_
-*ZN23CV8ManagerRenderProcess32BRegisterOverlayCallbackInternalERK13scoped_refptrI12CefV8ContextERKS0_I10CefV8ValueERKSt6vectorIS6_SaIS6_EERS6_P13CefStringBaseI19CefStringTraitsUTF8EPKcP14CUtlLinkedListINS_12CallbackInfoEiEEUlvE_
+*ZN23CV8ManagerRenderProcess32BRegisterOverlayCallbackInternalERK13scoped_refptrI12CefV8ContextERKS0_I10CefV8ValueERKSt6vectorIS6_SaIS6_EERS6_P13CefStringBaseI19CefStringTraitsUTF8EPKcP14CUtlLinkedListI16V8CallbackInfo_tiEEUlvE_
 *ZNK6ConVar26GetCommaSeparatedSetOfIntsEvEUlRK10CUtlStringE_
 *ZNK6ConVar29GetCommaSeparatedSetOfStringsEvEUlRK10CUtlStringE_
 *\\n\fEExportCodec
@@ -962,7 +962,7 @@ $d`D-laM
 . Difference of
 .%.-.3.7.9.?.W.[.o.y.
 ...<truncated>...
-../public/steam_tray_posix.tga
+../public/steam_tray_posix.png
 ..Too many IDATs found
 ./google/protobuf/arena_impl.h
 ./google/protobuf/arenastring.h
@@ -1178,6 +1178,7 @@ $d`D-laM
 /proc/mounts
 /proc/self/fd/%d
 /proc/self/maps
+/proc/self/ns/pid
 /sbin/lsof
 /steamrtarm64
 /steamsysinfo
@@ -1234,7 +1235,6 @@ $d`D-laM
 00003333
 000102030405060708091011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495969798990123456789abcdef
 00:00:00
-00:29:17
 01/01/00
 0123456789
 0123456789.
@@ -1532,8 +1532,8 @@ $d`D-laM
 14CUtlLinkedListI10CUtlStringiE
 14CUtlLinkedListI12CWatchingLogiE
 14CUtlLinkedListI14CLogWatchParamiE
+14CUtlLinkedListI16V8CallbackInfo_tiE
 14CUtlLinkedListI7CUtlPtrI12CBrowserViewEiE
-14CUtlLinkedListIN23CV8ManagerRenderProcess12CallbackInfoEiE
 14CUtlLinkedListIP14CClientHandleriE
 14CUtlLinkedListIP16IBrowserComposeriE
 14CUtlLinkedListISt4pairIPmjEiE
@@ -2055,6 +2055,7 @@ $d`D-laM
 20CefPreferenceManager
 20CefV8ExceptionCToCpp
 20CefX509CertPrincipal
+21:54:52
 21CClanAnnouncementInfo
 21CHTMLPageSecurityInfo
 21CLogFileAsyncCallback
@@ -2131,6 +2132,7 @@ $d`D-laM
 23CefResourceSkipCallback
 23CefResponseFilterCppToC
 23CefRunQuickMenuCallback
+23CefSchemeHandlerFactory
 23_cef_browser_settings_t
 24CDirWatcherPollingThread
 24CMsgClearAllBrowsingData
@@ -2288,6 +2290,7 @@ $d`D-laM
 33CefPermissionPromptCallbackCToCpp
 33fU
 34CefSelectClientCertificateCallback
+35CLoopbackWorkerSchemeHandlerFactory
 35CMsgControllerActionSetMiscSettings
 35CMsgControllerInputModeShiftBinding
 35CMsgHorizontalScrollBarSizeResponse
@@ -2307,6 +2310,8 @@ $d`D-laM
 3DES(168)
 3Wk1^
 3\n&k_EWindowsUpdateRebootBehavior_Unknown
+3\n/k_ECompromiseDetectionType_LeakedCredentialList
+3\n/k_EContentModerationSanction_MarkedIncompatible
 3\n/k_EContentReportReason_BypassingProfanityFilter
 3\n/k_EContentReportReason_CSAMGroomingOrEnticement
 3\n/k_EContentReportReason_CredibleThreatOfViolence
@@ -2557,6 +2562,7 @@ $d`D-laM
 ?HAI\t81\t9dcG'
 ?\n;k_EContentReportReason_NegativeEffectonDiscourseOrElections
 ?\n;k_PublishedFileQueryType_RankedByInappropriateContentRating
+?contenthash=
 ?jOb
 @!@%@+@1@?@C@E@]@a@g@m@
 @0pp
@@ -4051,6 +4057,7 @@ CardNumber
 Carnet
 Cart is not valid for purchase
 Carte Bleue
+Cash App Pay
 Cash Card (Nodwin)
 Cash Options (Thailand)
 Cash on Delivery
@@ -6426,6 +6433,7 @@ IVRSteamPrivate_028
 IVRSteamPrivate_029
 IVRSteamPrivate_030
 IVRSteamPrivate_031
+IVRSteamPrivate_032
 IVRSystem_022
 I\nlQ
 I\tHA\t981G'dc
@@ -6995,6 +7003,7 @@ Logon Extra Security Disabled
 Looking to Play
 Looking to Trade
 Loop Detected
+Loopback worker request blocked, first party:%s request:%s
 Lost connection to the display %s;\nmost likely the X server was shut down or you killed/destroyed\nthe application.\n
 Low FPS
 Low Violence
@@ -7228,6 +7237,7 @@ N2vr19IVRSteamPrivate_028E
 N2vr19IVRSteamPrivate_029E
 N2vr19IVRSteamPrivate_030E
 N2vr19IVRSteamPrivate_031E
+N2vr19IVRSteamPrivate_032E
 N3IPC10ISharedMemE
 N3IPC11ISyncObjectE
 N3IPC17PosixSharedMemoryE
@@ -7254,7 +7264,7 @@ N5vrapi16IOpenVRInterfaceIN2vr14IVRHeadsetViewEEE
 N5vrapi16IOpenVRInterfaceIN2vr14IVROverlayViewEEE
 N5vrapi16IOpenVRInterfaceIN2vr15IVRApplicationsEEE
 N5vrapi16IOpenVRInterfaceIN2vr16IVRNotificationsEEE
-N5vrapi16IOpenVRInterfaceIN2vr19IVRSteamPrivate_031EEE
+N5vrapi16IOpenVRInterfaceIN2vr19IVRSteamPrivate_032EEE
 N5vrapi16IOpenVRInterfaceIN2vr8IVRInputEEE
 N5vrapi16IOpenVRInterfaceIN2vr8IVRPathsEEE
 N5vrapi16IOpenVRInterfaceIN2vr9IVRSystemEEE
@@ -7287,6 +7297,7 @@ N5vrapi33CVRSteamPrivateAdapter_027_as_028E
 N5vrapi33CVRSteamPrivateAdapter_028_as_029E
 N5vrapi33CVRSteamPrivateAdapter_029_as_030E
 N5vrapi33CVRSteamPrivateAdapter_030_as_031E
+N5vrapi33CVRSteamPrivateAdapter_031_as_032E
 N6google8protobuf10TextFormat17BaseTextGeneratorE
 N6google8protobuf10TextFormat17FieldValuePrinterE
 N6google8protobuf10TextFormat21FastFieldValuePrinterE
@@ -7698,7 +7709,7 @@ Object Signing
 Object Signing CA
 Obtained EMS handle %u
 Obtained XMS handle %u
-Oct 14 2026
+Oct 16 2026
 October
 Odia
 Offensive Avatar
@@ -8607,6 +8618,7 @@ SDL_VIDEO_X11_NET_WM_BYPASS_COMPOSITOR
 SDL_VIDEO_X11_SCALING_FACTOR
 SDL_VIDEO_X11_WINDOW_VISUALID
 SDL_WINDOWS_DETECT_DEVICE_HOTPLUG
+SDL_WINDOWS_ENABLE_MENU_MNEMONICS
 SDL_WINDOWS_ERASE_BACKGROUND_MODE
 SDL_WINDOW_ACTIVATE_WHEN_RAISED
 SDL_WINDOW_ACTIVATE_WHEN_SHOWN
@@ -8962,6 +8974,7 @@ Setup Error
 Shader
 Shared Only
 Shared library locked
+Shared object manager is owned by another pid namespace; IPC disabled in pid %d\n
 Shift
 Shipping
 Shipping address failed validation
@@ -9214,6 +9227,7 @@ Suspect
 Suspected Hijacker
 Suspended
 Suspension not allowed here
+Suspicious Content
 Swahili
 Swap
 Swedish
@@ -9955,6 +9969,7 @@ Webhelper: CCEFThread::BInit
 Webhelper: StartForceDisableAntiAliasingAndSharpening
 Wednesday
 Welsh
+Wero
 What city were you born in?
 What is the name of your pet?
 What is the name of your school?
@@ -9996,7 +10011,7 @@ Window.ProcessShuttingDown
 Window.ResizeTo
 Window.RestoreWindowSizeAndPosition
 Window.SetComposition
-Window.SetComposition requires 3 arguments. mode: {0 = hidden, 1 = notification, 2 = overlay, 3 = opaque}, appidCompositionQueue: [123456, 769], windowID: 1234
+Window.SetComposition requires 3 arguments. mode: {0 = hidden, 1 = notification, 2 = overlay, 3 = opaque, 4 = overlay keyboard, 5 = virtual menu}, appidCompositionQueue: [123456, 769], windowID: 1234
 Window.SetHideOnClose
 Window.SetHideOnClose takes one argument: <hide on close>?
 Window.SetKeyFocus
@@ -18171,7 +18186,6 @@ m_p == NULL
 m_pComposer.IsValid()
 m_pCompositeThread == nullptr
 m_pDataWritten
-m_pDragSource != nullptr
 m_pFontPackagePB
 m_pFontPackagePB->package_version() == 1
 m_pFromChromeStream
@@ -18313,6 +18327,7 @@ maskGenFunc
 master secret
 master_key
 matTransform
+max-age=31536000, immutable
 max-age=3600
 maxX
 maxY
@@ -18434,7 +18449,7 @@ mobile
 mobileTelephoneNumber
 mobilechat
 mode
-mode must be one of: {0 = hidden, 1 = notification, 2 = overlay, 3 = opaque, 4 = overlay keyboard}
+mode must be one of: {0 = hidden, 1 = notification, 2 = overlay, 3 = opaque, 4 = overlay keyboard, 5 = virtual menu}
 modf
 module initialization error
 module=
@@ -18489,7 +18504,7 @@ nBytes < (size_t)INT_MAX - curInsertPos - 1
 nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
 nCertBits
 nCommand > 0 && nCommand < eHTMLCommands_None
-nCompositionMode >= k_EUIComposition_Hidden && nCompositionMode <= k_EUIComposition_OverlayKeyboard
+nCompositionMode >= k_EUIComposition_Hidden && nCompositionMode <= k_EUIComposition_VirtualMenu
 nDay < 32
 nDay > 0
 nDecrypted == cubEncryptedData - k_nSymmetricBlockSize
@@ -20723,6 +20738,7 @@ steam.tv
 steam://
 steam://close/bigpicture
 steam://openexternalforpid/%u/%s
+steam://openurlforpid/%u/%s
 steamIDChat.GetEAccountType() == k_EAccountTypeChat
 steamIDClan.GetEAccountType() == k_EAccountTypeClan
 steamRealm
@@ -21426,6 +21442,7 @@ unknown trust id
 unknown ttyget errno value
 unknown version
 unknown\n%*s
+unknown_type
 unlink
 unprotectedAttrs
 unrecognized ICC profile class
@@ -21743,6 +21760,7 @@ winME
 winNT
 winVista
 winXP
+window.navigator.standalone = true
 window.postMessage( 'browser_process_details_changed', '*' );
 window.postMessage( 'display_changed', '*' );
 window.postMessage( 'go_back', '*' );
@@ -21757,6 +21775,7 @@ window.postMessage( 'window_lostfocus', '*' );
 window.postMessage( 'window_moved', '*' );
 window.postMessage( 'window_resized', '*' );
 window.postMessage( 'window_restored', '*' );
+window.print = function() {}
 window_bringtofront
 window_close
 window_defaultmonitorhasfullscreenwindow

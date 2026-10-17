@@ -99,10 +99,10 @@ $ORIGIN
 /sys/kernel/debug/tracing/trace_marker
 /sys/kernel/tracing/trace_marker
 /tmp/.steam-sem-names
-00:29:10
 0123456789ABCDEF
 12CStdMemAlloc
 16CAdHocValidation
+21:52:09
 31CAdHocValidation_SimpleCallback
 9IMemAlloc
 <family %u, %u bytes>
@@ -316,7 +316,7 @@ No samples during profile period.\n
 No tracked allocs currently in use. Total %d\n
 OUT OF MEMORY
 Object
-Oct 14 2026
+Oct 16 2026
 Only thread can stop self: Use a higher-level protocol
 OverlayFrameMark
 OverlayInput
@@ -479,6 +479,12 @@ SteamThreadTools::CThreadRWLock::UnlockWrite()
 SteamThreadTools::CThreadRWLock::WaitForRead()
 SteamThreadTools::CThreadSemaphore::CThreadSemaphore(long, long)
 SteamThreadTools::CThreadSemaphore::Release(long)
+SteamThreadTools::CThreadSharedMutex::CThreadSharedMutex()
+SteamThreadTools::CThreadSharedMutex::LockExclusive()
+SteamThreadTools::CThreadSharedMutex::LockShared() const
+SteamThreadTools::CThreadSharedMutex::UnlockExclusive()
+SteamThreadTools::CThreadSharedMutex::UnlockShared() const
+SteamThreadTools::CThreadSharedMutex::~CThreadSharedMutex()
 SteamThreadTools::CThreadSpinLock::Lock(unsigned int) volatile
 SteamThreadTools::CThreadSyncObject::AcquireSemaphoreInternal(unsigned int)
 SteamThreadTools::CThreadSyncObject::AssertUseable()
@@ -966,6 +972,14 @@ pthread_mutexattr_destroy
 pthread_mutexattr_init
 pthread_mutexattr_settype
 pthread_once
+pthread_rwlock_destroy
+pthread_rwlock_init
+pthread_rwlock_rdlock
+pthread_rwlock_unlock
+pthread_rwlock_wrlock
+pthread_rwlockattr_destroy
+pthread_rwlockattr_init
+pthread_rwlockattr_setkind_np
 pthread_self
 pthread_setname_np
 pthread_setschedparam

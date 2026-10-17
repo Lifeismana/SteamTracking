@@ -339,6 +339,7 @@ $\nY8O
 *10CUtlRBTreeIN12_GLOBAL__N_121CLocalizedStringTable17localizedstring_tEiPFbRKS2_S4_E25CDefRBTreeBalanceListenerIiES2_E
 *5KS
 *:JZjz
+*N12_GLOBAL__N_114CSerializedIMEE
 *N12_GLOBAL__N_117io_error_categoryE
 *N12_GLOBAL__N_121CLocalizedStringTableE
 *N12_GLOBAL__N_121system_error_categoryE
@@ -734,14 +735,18 @@ $\nY8O
 12CAddressInfo
 12CBaseSurface
 12CDynamicFuncIPF14SDL_PowerStatePiS1_EE
+12CDynamicFuncIPFP10SDL_WindowPKciimEE
+12CDynamicFuncIPFP18SDL_GLContextStateP10SDL_WindowEE
 12CDynamicFuncIPFP18SDL_GLContextStatevEE
 12CDynamicFuncIPFP9_XDisplayPKcEE
+12CDynamicFuncIPFPFvvEPKcEE
 12CDynamicFuncIPFPKcS1_EE
 12CDynamicFuncIPFPKcjEE
 12CDynamicFuncIPFPjPiEE
 12CDynamicFuncIPFb10SDL_GLAttrPiEE
 12CDynamicFuncIPFb10SDL_GLAttriEE
 12CDynamicFuncIPFbP10SDL_WindowP18SDL_GLContextStateEE
+12CDynamicFuncIPFbP18SDL_GLContextStateEE
 12CDynamicFuncIPFbPKcS1_EE
 12CDynamicFuncIPFbjEE
 12CDynamicFuncIPFbjPKcbEE
@@ -756,6 +761,7 @@ $\nY8O
 12CDynamicFuncIPFjjEE
 12CDynamicFuncIPFjvEE
 12CDynamicFuncIPFmP9_XDisplayPKciEE
+12CDynamicFuncIPFvP10SDL_WindowEE
 12CDynamicFuncIPFvPvEE
 12CDynamicFuncIPFvjEE
 12CDynamicFuncIPFvvEE
@@ -769,7 +775,6 @@ $\nY8O
 14CMachineIDInfo
 14CMessageObject
 14CSchemeManager
-14CSerializedIME
 14CUtlLinkedListI10CUtlStringiE
 14CUtlLinkedListI13MessageItem_tiE
 14CUtlLinkedListIN10CInputBase14InputContext_tEiE
@@ -862,7 +867,6 @@ $\nY8O
 7CUtlSetIyi8CDefLessE
 7\n\tenum_type
 7style_t
-7tS73
 7~8A
 8*KEY_8
 83L3
@@ -1427,6 +1431,7 @@ CursorExited
 CursorExitedChild
 CursorMoved
 CustomFontFiles
+Cw!vR
 Czech
 DATA_LOSS
 DBG_PATHMATCH
@@ -2522,9 +2527,15 @@ RunCommand: %s\n
 RunCommandGetOutput
 Russian
 SDL.display.HDR_enabled
+SDL_CreateWindow
+SDL_DestroyWindow
+SDL_GL_CreateContext
+SDL_GL_DestroyContext
 SDL_GL_GetAttribute
 SDL_GL_GetCurrentContext
+SDL_GL_GetProcAddress
 SDL_GL_MakeCurrent
+SDL_GL_ResetAttributes
 SDL_GL_SetAttribute
 SDL_GetBooleanProperty
 SDL_GetDisplayContentScale
@@ -2765,6 +2776,12 @@ SteamThreadTools::CThreadLocalBase::Set(void*)
 SteamThreadTools::CThreadLocalBase::~CThreadLocalBase()
 SteamThreadTools::CThreadMutex::CThreadMutex()
 SteamThreadTools::CThreadMutex::~CThreadMutex()
+SteamThreadTools::CThreadSharedMutex::CThreadSharedMutex()
+SteamThreadTools::CThreadSharedMutex::LockExclusive()
+SteamThreadTools::CThreadSharedMutex::LockShared() const
+SteamThreadTools::CThreadSharedMutex::UnlockExclusive()
+SteamThreadTools::CThreadSharedMutex::UnlockShared() const
+SteamThreadTools::CThreadSharedMutex::~CThreadSharedMutex()
 SteamThreadTools::CThreadSyncObject::Wait(unsigned int)
 SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
 SteamVProf::CVProfile::EnterScope(char const*, EVProfBugdetGroup, void*)
@@ -3152,6 +3169,7 @@ XSelectInput
 XSendEvent
 XSetClassHint
 XSetErrorHandler
+XSetIMValues
 XSetIOErrorHandler
 XSetInputFocus
 XSetSelectionOwner
@@ -3700,6 +3718,7 @@ desc.minCodePoint >= 0 && FcCharSetHasChar(diffSet, desc.minCodePoint) && (desc.
 description
 descs.Count() >= 1
 desktop
+destroyCallback
 dgettext
 dialogName && *dialogName
 digit
@@ -4707,6 +4726,7 @@ path
 pchBuffer
 pchData
 pchEncodedData
+pchNode
 pclose
 pcubDecodedData
 period
@@ -5241,7 +5261,6 @@ render_bg
 repeated
 request_space %llu
 required
-res > 0
 reserved_range
 resizeNumBits >= 0
 resourceClass

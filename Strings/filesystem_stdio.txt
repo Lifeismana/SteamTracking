@@ -74,7 +74,6 @@ $ORIGIN
 -fs_logbins
 -fs_target
 ./obj_filesystem_stdio_steamrtarm64/release/filesystem_stdio.so
-.C6u
 .bsp
 .cpl
 .steam_exec_test
@@ -284,7 +283,6 @@ GCC: (Debian 9.3.0-22) 9.3.0
 GLIBC_2.17
 GetFileSystemStableId requires a valid path
 GetFileSystemStableId requires a valid path: %s\n
-Gyw89X
 HOME
 IVALIDATE001
 Invalid FileWriterItem_t
@@ -455,6 +453,12 @@ SteamThreadTools::CThreadEvent::CThreadEvent(bool)
 SteamThreadTools::CThreadEvent::Set()
 SteamThreadTools::CThreadMutex::CThreadMutex()
 SteamThreadTools::CThreadMutex::~CThreadMutex()
+SteamThreadTools::CThreadSharedMutex::CThreadSharedMutex()
+SteamThreadTools::CThreadSharedMutex::LockExclusive()
+SteamThreadTools::CThreadSharedMutex::LockShared() const
+SteamThreadTools::CThreadSharedMutex::UnlockExclusive()
+SteamThreadTools::CThreadSharedMutex::UnlockShared() const
+SteamThreadTools::CThreadSharedMutex::~CThreadSharedMutex()
 SteamThreadTools::CThreadSyncObject::Wait(unsigned int)
 SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
 StringAfterPrefix
@@ -943,6 +947,7 @@ pWildCard
 packfile.m_bIsPackFile
 packfile.m_hPackFile
 pathID
+pchNode
 pclose
 poll
 popen

@@ -5,7 +5,6 @@
   what():
  !"#$%&'()*+,-./0123
  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
- !"#$%&'()*+,-./0123\n\venums.proto*
  +0000
  = { <proto text format> }". To set fields within it, use syntax like "
  BackUp() can only be called after Next().
@@ -736,6 +735,7 @@ $\nY8O
 *\n&k_PublishedFileQueryType_RankedByTrend
 *\n\frestrictions
 *^\n\fELogFileType
+*b\n\rEDisplayStyle
 *d\n\fEAudioFormat
 *m_vecControllers[ i ]
 *pchMsg && *pchMsg == '%'
@@ -784,8 +784,6 @@ $\nY8O
 , not just within "
 , string URLText
 , string command, int default
-, string image
-, string image, string imagecolor, alignment imageAlignment, int preserveAspectRatio, int filtered
 , string labelText, string associate, alignment textAlignment, int wrap, string font, string flow_right
 , string progress, string variable
 , string text, bool scrollbar
@@ -935,6 +933,7 @@ $\nY8O
 .EBrowserFeatureStatus"7\n
 .EBrowserGPUStatus
 .ECaptureFailedReason"H\n
+.EDisplayStyle:
 .EFrameAccumulatedStat
 .EGameRecordingErrorType"8\n%CClientNotificationGameRecordingStart
 .EJSRegisterMethodType"
@@ -1104,13 +1103,11 @@ $\nY8O
 /data/src/vgui2/controls/EditablePanel.cpp
 /data/src/vgui2/controls/FileOpenDialog.cpp
 /data/src/vgui2/controls/Frame.cpp
-/data/src/vgui2/controls/GraphPanel.cpp
 /data/src/vgui2/controls/HTML.cpp
 /data/src/vgui2/controls/ImageList.cpp
 /data/src/vgui2/controls/ImagePanel.cpp
 /data/src/vgui2/controls/Label.cpp
 /data/src/vgui2/controls/ListPanel.cpp
-/data/src/vgui2/controls/ListViewPanel.cpp
 /data/src/vgui2/controls/Menu.cpp
 /data/src/vgui2/controls/MenuItem.cpp
 /data/src/vgui2/controls/Panel.cpp
@@ -1226,7 +1223,6 @@ $\nY8O
 10CUtlMemoryIN14CUtlLinkedListI10CUtlStringiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListI12CWatchingLogiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListI14CLogWatchParamiE10ListElem_tEE
-10CUtlMemoryIN14CUtlLinkedListIN4vgui10GraphPanel8Sample_tEiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListIN4vgui9ListPanel8column_tEhE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListIP10CUtlRBTreeIPvi8CDefLess25CDefRBTreeBalanceListenerIiES2_EiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListIP8CUtlDictIb22CDefCaselessStringLessiEiE10ListElem_tEE
@@ -1262,7 +1258,6 @@ $\nY8O
 10CUtlMemoryIPN19CBaseUtlSymbolTableI14CBaseUtlSymbolItEE12StringPool_tEE
 10CUtlMemoryIPN4vgui10ClickPanelEE
 10CUtlMemoryIPN4vgui10MenuButtonEE
-10CUtlMemoryIPN4vgui10ToolWindowEE
 10CUtlMemoryIPN4vgui13MenuSeparatorEE
 10CUtlMemoryIPN4vgui6ButtonEE
 10CUtlMemoryIPN4vgui6IImageEE
@@ -1270,7 +1265,6 @@ $\nY8O
 10CUtlMemoryIPN4vgui8URLLabelEE
 10CUtlMemoryIPcE
 10CUtlMemoryIPwE
-10CUtlMemoryIfE
 10CUtlMemoryIhE
 10CUtlMemoryIiE
 10CUtlMemoryImE
@@ -1337,7 +1331,6 @@ $\nY8O
 10CUtlVectorIPN19CBaseUtlSymbolTableI14CBaseUtlSymbolItEE12StringPool_tE10CUtlMemoryIS5_EE
 10CUtlVectorIPN4vgui10ClickPanelE10CUtlMemoryIS2_EE
 10CUtlVectorIPN4vgui10MenuButtonE10CUtlMemoryIS2_EE
-10CUtlVectorIPN4vgui10ToolWindowE10CUtlMemoryIS2_EE
 10CUtlVectorIPN4vgui13MenuSeparatorE10CUtlMemoryIS2_EE
 10CUtlVectorIPN4vgui6ButtonE10CUtlMemoryIS2_EE
 10CUtlVectorIPN4vgui6IImageE10CUtlMemoryIS2_EE
@@ -1345,7 +1338,6 @@ $\nY8O
 10CUtlVectorIPN4vgui8URLLabelE10CUtlMemoryIS2_EE
 10CUtlVectorIPc10CUtlMemoryIS0_EE
 10CUtlVectorIPw10CUtlMemoryIS0_EE
-10CUtlVectorIf10CUtlMemoryIfEE
 10CUtlVectorIh10CUtlMemoryIhEE
 10CUtlVectorIi10CUtlMemoryIiEE
 10CUtlVectorIm10CUtlMemoryImEE
@@ -1453,11 +1445,9 @@ $\nY8O
 14CUtlLinkedListI10CUtlStringiE
 14CUtlLinkedListI12CWatchingLogiE
 14CUtlLinkedListI14CLogWatchParamiE
-14CUtlLinkedListIN4vgui10GraphPanel8Sample_tEiE
 14CUtlLinkedListIN4vgui9ListPanel8column_tEhE
 14CUtlLinkedListIP10CUtlRBTreeIPvi8CDefLess25CDefRBTreeBalanceListenerIiES1_EiE
 14CUtlLinkedListIP8CUtlDictIb22CDefCaselessStringLessiEiE
-14CUtlLinkedListIPN4vgui12ListViewItemEiE
 14CUtlLinkedListIPN4vgui13ListPanelItemEiE
 14CUtlLinkedListIPN4vgui8MenuItemEiE
 14CUtlLinkedListIPN4vgui8TreeNodeEiE
@@ -1895,6 +1885,8 @@ $\nY8O
 3\n&k_EWindowsUpdateRebootBehavior_Unknown
 3\n/k_EClientNotificationType_ClaimSteamDeckRewards
 3\n/k_EClientNotificationType_FamilyPurchaseRequest
+3\n/k_ECompromiseDetectionType_LeakedCredentialList
+3\n/k_EContentModerationSanction_MarkedIncompatible
 3\n/k_EContentReportReason_BypassingProfanityFilter
 3\n/k_EContentReportReason_CSAMGroomingOrEnticement
 3\n/k_EContentReportReason_CredibleThreatOfViolence
@@ -2094,6 +2086,7 @@ $\nY8O
 ???\f???????\n???\r?\t?\vN6google8protobuf2io14ErrorCollectorE
 ?\n;k_EContentReportReason_NegativeEffectonDiscourseOrElections
 ?\n;k_PublishedFileQueryType_RankedByInappropriateContentRating
+?\n\rdisplay_style
 ?\n\tp2p_scope
 @\n!ControllerPersonalizationResponse
 @bEnableLogTearOff
@@ -2145,7 +2138,6 @@ All files
 Already have converter for type %s, ignoring...\n
 Already saw decimal point or exponent; can't have another one.
 Amharic
-AnimatingImagePanel
 AnimationController
 Application built with libpng-
 Application jmp_buf size changed
@@ -2198,7 +2190,6 @@ BaseControls
 Basque
 Belarusian
 BgColor
-BitmapImagePanel
 Block size: %s\tAlloc'd: %d (peak: %d)\tNum blobs: %d (%s)\n
 Blocking global navigation to: %s\n
 Boolean default must be true or false.
@@ -2239,7 +2230,6 @@ CAdHocValidation::~CAdHocValidation()
 CAdHocValidation_SimpleCallback::CAdHocValidation_SimpleCallback(void (*)(CValidator&))
 CAuthenticationRequestMsg
 CAuthenticationResponseMsg
-CBitmapImagePanel
 CBroadcastController::OnBroadcastMicrophoneStatus
 CBroadcastController::OnBroadcastStatus
 CBroadcastController::OnBroadcastUploadStatus
@@ -3037,7 +3027,6 @@ DirectoryTreeView
 Disables new faster overlay HTML path (or enables if on a branch it's not on by default)
 DisarmItem
 DismissJSDialog
-Divider
 Division or mod by zero: dividend.hi=
 DoConversionModeChanged
 DoCopyAllText
@@ -3402,7 +3391,6 @@ GetUInt64
 GetUint64FromString() did not get correct peCS parameter
 GetVParent()
 Google.Protobuf.Reflection
-GraphPanel
 Gray color space not permitted on RGB PNG
 Greek
 GripPanel
@@ -3845,14 +3833,12 @@ ListImage
 ListItemSelected
 ListPanel
 ListPanel column does not support both CUSTOMPANEL and CHECKABLE at the same time\n
-ListPanel.BgColor
 ListPanel.DisabledSelectedTextColor
 ListPanel.DisabledTextColor
 ListPanel.PostSectionLeading
 ListPanel.SelectedBgColor
 ListPanel.SelectedOutOfFocusBgColor
 ListPanel.SelectedTextColor
-ListPanel.TextBgColor
 ListPanel.TextColor
 ListPanel::AddColumnHeader() can only have one checkable column, which must be called 'check'\n
 ListPanel::AddItem
@@ -3874,9 +3860,6 @@ ListPanelDragger
 ListPanelInterior
 ListPanelSectionCollapser
 ListPanelSectionHeader
-ListViewItem
-ListViewItemSelected
-ListViewPanel
 Lithuanian
 LoadDefaultControlSettings
 LoadFileIntoBuffer: NULL parameters
@@ -4061,7 +4044,6 @@ N27CSteamUIMessagingController17ChannelCallback_tE
 N27CSteamUIMessagingController37CCallbackInternal_OnClientPostMessageE
 N4vgui10ClickPanelE
 N4vgui10FrameTitleE
-N4vgui10GraphPanelE
 N4vgui10ImagePanelE
 N4vgui10MenuButtonE
 N4vgui10MessageBoxE
@@ -4072,13 +4054,11 @@ N4vgui11InputDialogE
 N4vgui11ProgressBarE
 N4vgui11RadioButtonE
 N4vgui12IClientPanelE
-N4vgui12ListViewItemE
 N4vgui12ToggleButtonE
 N4vgui12TreeNodeTextE
 N4vgui13EditablePanelE
 N4vgui13FocusNavGroupE
 N4vgui13ListPanelItemE
-N4vgui13ListViewPanelE
 N4vgui13MenuSeparatorE
 N4vgui13TooltipWindowE
 N4vgui13TreeNodeImageE
@@ -4091,7 +4071,6 @@ N4vgui16CaptionGripPanelE
 N4vgui16FrameCloseButtonE
 N4vgui16RichTextInteriorE
 N4vgui16TreeViewSubPanelE
-N4vgui17CBitmapImagePanelE
 N4vgui17FrameSystemButtonE
 N4vgui17ListPanelCheckBoxE
 N4vgui17ListPanelInteriorE
@@ -4102,7 +4081,6 @@ N4vgui18FileCompletionEditE
 N4vgui18FileCompletionMenuE
 N4vgui18MenuItemCheckImageE
 N4vgui18ThrobberImagePanelE
-N4vgui19AnimatingImagePanelE
 N4vgui19AnimationControllerE
 N4vgui19FrameMaximizeButtonE
 N4vgui19FrameMinimizeButtonE
@@ -4123,7 +4101,6 @@ N4vgui5LabelE
 N4vgui5PanelE
 N4vgui6ButtonE
 N4vgui6IImageE
-N4vgui7DividerE
 N4vgui7MenuBarE
 N4vgui7TooltipE
 N4vgui8ComboBoxE
@@ -4747,6 +4724,12 @@ SteamThreadTools::CThreadLocalBase::Set(void*)
 SteamThreadTools::CThreadLocalBase::~CThreadLocalBase()
 SteamThreadTools::CThreadMutex::CThreadMutex()
 SteamThreadTools::CThreadMutex::~CThreadMutex()
+SteamThreadTools::CThreadSharedMutex::CThreadSharedMutex()
+SteamThreadTools::CThreadSharedMutex::LockExclusive()
+SteamThreadTools::CThreadSharedMutex::LockShared() const
+SteamThreadTools::CThreadSharedMutex::UnlockExclusive()
+SteamThreadTools::CThreadSharedMutex::UnlockShared() const
+SteamThreadTools::CThreadSharedMutex::~CThreadSharedMutex()
 SteamThreadTools::CThreadSpinLock::Lock(unsigned int) volatile
 SteamThreadTools::CThreadSyncObject::Wait(unsigned int)
 SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
@@ -4852,7 +4835,6 @@ Too many IDATs found
 Too many arguments. %d arguments at most.
 Too many bytes for PNG signature
 Too much image data
-ToolWindow::s_ToolWindows
 Tooltip.Anchor
 Tooltip.Delay
 TooltipHTML
@@ -5348,6 +5330,7 @@ Zulu
 \n\vcustom_data
 \n\vdescription
 \n\vdpi_scaling
+\n\venums.proto*
 \n\vform_factor
 \n\vhwnd_parent
 \n\vinitialFile
@@ -6095,7 +6078,6 @@ filipino
 fillcolor
 filler
 filter
-filtered
 filterinfo
 filters
 find
@@ -6115,7 +6097,6 @@ flock %s %s failed. errno = %d
 flock LOCK_EX %s failed, errno = %d\n
 flock LOCK_SH requested but file is not opened for reading, ignoring: %s\n
 floor
-fmod
 fnmatch
 focus
 focused
@@ -6453,7 +6434,6 @@ i91k
 iCCP
 iCCP: invalid keyword
 iNewReadIndex != 3
-iNh(
 iSection < 32
 iSection >= 0
 iTXt
@@ -6479,9 +6459,7 @@ image
 image row stride too large
 image-height-only
 image-width-only
-imageAlignment
 imageSelected
-imagecolor
 imaginary
 import "$0";\n
 import public "$0";\n
@@ -6733,6 +6711,10 @@ k_EContentReportResolution_MAX
 k_EContentReportSubjectType_MAX
 k_EDLCHighlightReason_New
 k_EDLCHighlightReason_None
+k_EDisplayStyleLetterbox
+k_EDisplayStyleLetterbox"
+k_EDisplayStyleStretch
+k_EDisplayStyleZoom
 k_EExportCodec_Default
 k_EExportCodec_H264
 k_EExportCodec_H265
@@ -7140,7 +7122,6 @@ longjmp
 loopback
 lost rgb to gray
 lost/gained channels
-lowRange < highRange
 lower
 lseek
 lseek64
@@ -7167,7 +7148,6 @@ m_ExpandStateQueue
 m_Filenames
 m_FormatStream
 m_FormatStream[i].textStreamIndex > cullPos
-m_Frames
 m_HandleTable
 m_Images
 m_LineBreaks
@@ -7191,10 +7171,8 @@ m_PanelMessageMapPool
 m_ParentalSettings
 m_PerLineEllipses
 m_PostedMessages
-m_RangeList
 m_ReplacedKVs
 m_ResourceCache
-m_Samples
 m_SelectedItems
 m_SeparatorPanels
 m_SeparatorPanels.Count() == 0
@@ -7612,6 +7590,7 @@ pchData
 pchEncodedData
 pchInput
 pchMsg
+pchNode
 pchSteam2ID
 pch[cub - 1] != '\0' && pch[cub] == '\0'
 pclose
@@ -8081,7 +8060,6 @@ postdata
 pread64
 preferred_contrast
 prepend
-preserveAspectRatio
 pressed
 previous
 print
