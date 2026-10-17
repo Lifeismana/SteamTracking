@@ -163,5 +163,12 @@
     "PersonalCalendar_EmptyDay": "Pro tento den Vám nemáme co ukázat. <1>Zbytek svého osobního kalendáře najdete zde!</1>",
     "NewBadge": "NOVINKA",
     "Time_Today": "Dnes",
+    "DiscountsAndEvents_Title": "Slevy a výprodeje",
+    "DiscountsAndEvents_SeeMore": "Zobrazit další",
+    "DiscountsAndEvents_Banner_WeekendDeal": "Víkendová akce",
+    "DiscountsAndEvents_Banner_MidweekDeal": "Slevové šílenství",
+    "DiscountsAndEvents_Banner_DailyDeal": "Nabídka dne",
+    "DiscountsAndEvents_Banner_LargestDiscount": "Nejvyšší sleva",
+    "DiscountsAndEvents_LoadError": "V tuto chvíli se nepodařilo načíst slevy a výprodeje. Zkuste to později znovu.",
     "store_ui_dummy": "dont translate"
 }

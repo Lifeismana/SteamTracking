@@ -535,6 +535,7 @@ $\nY8O
 /max_brightness
 /name
 /proc/%d/environ
+/proc/%u/status
 /proc/device-tree/board-info/unit_sn
 /proc/device-tree/compatible
 /proc/device-tree/model
@@ -861,6 +862,7 @@ $\nY8O
 7CUtlSetIyi8CDefLessE
 7\n\tenum_type
 7style_t
+7tS73
 7~8A
 8*KEY_8
 83L3
@@ -2322,6 +2324,7 @@ NULL output buffer with non-zero size passed to Base64Encode
 NULL row buffer
 N[i4A
 Name
+Name:\t
 NamePart
 Need space between identifier and decimal point.
 Need space between number and identifier.
@@ -3209,6 +3212,7 @@ Zulu
 \n Total Panels %u, total size in Kb %u \n
 \n google/protobuf/descriptor.proto
 \nHey, you just set %s's number values to be 0.  Is that what you wanted?\n\nIf you do `%s = 123`, you will set the convar to `= 123` which becomes `0` for numeric uses.\nDid you mean to do `%s %s` instead?\n
+\nPPid:\t
 \nParsing attempt:
 \nYg:a
 \n\fFieldOptions
@@ -4123,7 +4127,6 @@ i91k
 iCCP
 iCCP: invalid keyword
 iIKEY_I
-iRet > 0
 iTXt
 iTXt: invalid compression
 iTXt: invalid keyword
@@ -5197,6 +5200,7 @@ punct
 pure virtual method called\n
 putc
 putwc
+pv-adverb
 pvecAddressesOut != nullptr || pSingleOutput != nullptr
 pwString
 pwrite64

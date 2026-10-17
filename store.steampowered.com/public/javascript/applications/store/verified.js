@@ -6,13 +6,13 @@
     {
       93256: (W, D, t) => {
         "use strict";
-        t.d(D, { u: () => c });
+        t.d(D, { u: () => d });
         var e = t(7850),
           u = t(29630),
           T = t(13465);
-        function c(f) {
-          const { strImageToken: C, language: I, strAltText: B } = f,
-            R = (0, u.z5)(C, I);
+        function d(h) {
+          const { strImageToken: M, language: P, strAltText: B } = h,
+            R = (0, u.z5)(M, P);
           return R
             ? typeof R == "string"
               ? (0, e.jsx)("img", { src: R, alt: B })
@@ -26,75 +26,75 @@
         var e = t(38340),
           u = t(9046),
           T = t(99412),
-          c = t(72604),
-          f = t(7742),
-          C = t(72849),
-          I = t(76559),
+          d = t(72604),
+          h = t(7742),
+          M = t(72849),
+          P = t(76559),
           B = t(71742),
           R = t(34592),
           G = t(51746),
-          v = t(72609),
+          g = t(72609),
           b = t(7850),
           O = t(90626);
-        function n(s, o) {
-          return `${s}/${o}`;
+        function n(s, c) {
+          return `${s}/${c}`;
         }
         const a = {},
           x = O.createContext(a);
-        function M(s) {
-          const { resolutions: o, children: r } = s;
-          return jsx(x.Provider, { value: o, children: r });
+        function A(s) {
+          const { resolutions: c, children: l } = s;
+          return jsx(x.Provider, { value: c, children: l });
         }
         function m() {
           return O.useContext(x);
         }
-        const y = new RegExp(
+        const L = new RegExp(
           `${e.eg.replace(/[{}]/g, "\\$&")}/(\\d+)/([0-9a-f]+\\.[a-z0-9]+)`,
           "gi",
         );
         function F(s) {
-          const o = [],
-            r = new Set();
-          for (const h of s.matchAll(y)) {
-            const l = Number.parseInt(h[1]),
-              E = h[2],
-              P = n(l, E);
-            l > 0 &&
-              !r.has(P) &&
-              (r.add(P), o.push({ clanAccountID: l, hashAndExt: E }));
+          const c = [],
+            l = new Set();
+          for (const o of s.matchAll(L)) {
+            const v = Number.parseInt(o[1]),
+              f = o[2],
+              C = n(v, f);
+            v > 0 &&
+              !l.has(C) &&
+              (l.add(C), c.push({ clanAccountID: v, hashAndExt: f }));
           }
-          return o;
+          return c;
         }
-        function U(s, o, r = 0) {
-          const h = m();
-          return K(s, o, r, h);
+        function U(s, c, l = 0) {
+          const o = m();
+          return K(s, c, l, o);
         }
-        async function z(s, o, r = 0) {
-          return K(s, o, r);
+        async function z(s, c, l = 0) {
+          return K(s, c, l);
         }
-        function K(s, o, r = 0, h) {
+        function K(s, c, l = 0, o) {
           if (!s || s.length == 0) return null;
           if (s?.startsWith(e.lw)) return i.ReplacementTokenToClanImageURL(s);
           if (s?.startsWith(e.eg)) {
-            const l = i.GetBaseURL(),
-              E = s.substring(e.eg.length + 1),
-              P = parseInt(E.substring(0, E.indexOf("/"))),
-              j = E.substring(E.indexOf("/") + 1),
-              p = i.GenerateURLFromHashAndExt(P, j);
-            if (h?.[n(P, j)] === !1) return p;
-            const g = i
-              .GetLocalizedClanImageFileNames(j, o)
-              .map((d) => l + P + "/" + d + "?t=" + r);
-            return g.push(p), g;
+            const v = i.GetBaseURL(),
+              f = s.substring(e.eg.length + 1),
+              C = parseInt(f.substring(0, f.indexOf("/"))),
+              S = f.substring(f.indexOf("/") + 1),
+              j = i.GenerateURLFromHashAndExt(C, S);
+            if (o?.[n(C, S)] === !1) return j;
+            const r = i
+              .GetLocalizedClanImageFileNames(S, c)
+              .map((p) => v + C + "/" + p + "?t=" + l);
+            return r.push(j), r;
           }
           return s;
         }
         const i = {
           GetBaseURL() {
-            return `${v.TS.CLAN_CDN_ASSET_URL}images/`;
+            return `${g.TS.CLAN_CDN_ASSET_URL}images/`;
           },
           GetBaseURLV2() {
-            return `${v.TS.CLAN_CDN_ASSET_URL}locimages/`;
+            return `${g.TS.CLAN_CDN_ASSET_URL}locimages/`;
           },
           ReplacementTokenToClanImageURL(s) {
             return (
@@ -103,12 +103,12 @@
             );
           },
           ExtractHashFromBBCodeURL(s) {
-            const r =
+            const l =
               /\/(?<clanid>[0-9]+)\/(?<filename>[0-9a-f]*)(?<extension>\.[^.]*)$/.exec(
                 s,
               );
-            return r?.groups
-              ? [r.groups.filename, parseInt(r.groups.clanid)]
+            return l?.groups
+              ? [l.groups.filename, parseInt(l.groups.clanid)]
               : [void 0, void 0];
           },
           GetExtensionString(s) {
@@ -123,122 +123,122 @@
             return s ? s.thumbnail_hash + this.GetExtensionString(s) : null;
           },
           GetHashFromHashAndExt(s) {
-            let o = s.substring(s.lastIndexOf("."));
-            return s.substring(0, s.length - o.length);
+            let c = s.substring(s.lastIndexOf("."));
+            return s.substring(0, s.length - c.length);
           },
           GetExtStringFromHashAndExt(s) {
             return s.substring(s.lastIndexOf("."));
           },
-          GetLocalizedClanImageFileNames(s, o) {
-            if (o == null) return [];
-            const r = this.GetHashFromHashAndExt(s),
-              h = this.GetExtStringFromHashAndExt(s),
-              l = [r + "/" + (0, T.LgB)(o) + h];
+          GetLocalizedClanImageFileNames(s, c) {
+            if (c == null) return [];
+            const l = this.GetHashFromHashAndExt(s),
+              o = this.GetExtStringFromHashAndExt(s),
+              v = [l + "/" + (0, T.LgB)(c) + o];
             return (
-              o == T.Pn1 && l.push(r + "/" + (0, T.x6o)((0, T.LgB)(o)) + h), l
+              c == T.Pn1 && v.push(l + "/" + (0, T.x6o)((0, T.LgB)(c)) + o), v
             );
           },
-          GenerateURLFromHashAndExt(s, o, r = u.wI.full) {
+          GenerateURLFromHashAndExt(s, c, l = u.wI.full) {
             return this.GenerateURLFromHashAndExtAndLang(
               s,
-              o,
-              r,
+              c,
+              l,
               T.xPp,
               void 0,
             );
           },
-          GenerateURLFromHashAndExtAndLang(s, o, r = u.wI.full, h, l) {
-            s instanceof I.b && (s = s.GetAccountID());
-            let E = this.GetBaseURL();
-            const P = h != null && h != T.xPp;
-            if (r == u.wI.full && !P) return E + s + "/" + o;
+          GenerateURLFromHashAndExtAndLang(s, c, l = u.wI.full, o, v) {
+            s instanceof P.b && (s = s.GetAccountID());
+            let f = this.GetBaseURL();
+            const C = o != null && o != T.xPp;
+            if (l == u.wI.full && !C) return f + s + "/" + c;
             {
-              let j = o.substring(o.lastIndexOf(".")),
-                p = o.substring(0, o.length - j.length);
-              return !P || h == T.Bhc || l != "localized_image_group"
-                ? E + s + "/" + p + r + j
-                : E + s + "/" + p + "/" + (0, T.x6o)((0, T.LgB)(h)) + j;
+              let S = c.substring(c.lastIndexOf(".")),
+                j = c.substring(0, c.length - S.length);
+              return !C || o == T.Bhc || v != "localized_image_group"
+                ? f + s + "/" + j + l + S
+                : f + s + "/" + j + "/" + (0, T.x6o)((0, T.LgB)(o)) + S;
             }
           },
           GetHashAndExtFromURL(s) {
-            let o = this.GetBaseURL();
-            return !s?.startsWith(o) ||
-              ((s = s.substring(o.length)), s.indexOf("/") == -1)
+            let c = this.GetBaseURL();
+            return !s?.startsWith(c) ||
+              ((s = s.substring(c.length)), s.indexOf("/") == -1)
               ? null
               : ((s = s.substring(s.indexOf("/") + 1)), s);
           },
-          GenerateEditableURLFromHashAndExt(s, o, r) {
-            let h =
-              v.TS.COMMUNITY_BASE_URL +
+          GenerateEditableURLFromHashAndExt(s, c, l) {
+            let o =
+              g.TS.COMMUNITY_BASE_URL +
               "gid/" +
               s.ConvertTo64BitString() +
               "/showclanimage/?image_hash_and_ext=" +
-              o;
-            return r && (h += "&lang=" + r), h;
+              c;
+            return l && (o += "&lang=" + l), o;
           },
           GetMimeType(s) {
             return (0, G.ab)(s);
           },
-          async AsyncGetImageResolution(s, o, r, h, l) {
-            const E = o + this.GetExtensionString({ file_type: r }),
-              P = this.GenerateEditableURLFromHashAndExt(s, E);
-            return await this.AsyncGetImageResolutionInternal(P, h, l);
+          async AsyncGetImageResolution(s, c, l, o, v) {
+            const f = c + this.GetExtensionString({ file_type: l }),
+              C = this.GenerateEditableURLFromHashAndExt(s, f);
+            return await this.AsyncGetImageResolutionInternal(C, o, v);
           },
-          async AsyncGetImageResolutionInternal(s, o, r) {
-            const h = (0, f.x0)();
-            let l = new Image();
-            (l.crossOrigin = "anonymous"),
-              (l.onerror = (p) => {
-                const g = { success: c.zi };
-                r ||
-                  ((g.err_msg =
+          async AsyncGetImageResolutionInternal(s, c, l) {
+            const o = (0, h.x0)();
+            let v = new Image();
+            (v.crossOrigin = "anonymous"),
+              (v.onerror = (j) => {
+                const r = { success: d.zi };
+                l ||
+                  ((r.err_msg =
                     "Load fail on url " +
                     s +
                     " with error: " +
-                    (0, R.H)(p).strErrorMsg),
-                  console.error(g.err_msg)),
-                  (g.success = c.zi),
-                  h.resolve(g);
+                    (0, R.H)(j).strErrorMsg),
+                  console.error(r.err_msg)),
+                  (r.success = d.zi),
+                  o.resolve(r);
               }),
-              (l.onload = () => {
-                const p = { success: c.zi };
+              (v.onload = () => {
+                const j = { success: d.zi };
                 if (
-                  ((p.width = l.width),
-                  (p.height = l.height),
-                  !(l.width > 0) || !(l.height > 0))
+                  ((j.width = v.width),
+                  (j.height = v.height),
+                  !(v.width > 0) || !(v.height > 0))
                 ) {
                   (0, B.wT)(
                     !1,
                     "unexpected image resolution discovered for strURL: " + s,
                   ),
-                    (p.err_msg = "No resolution reported for url " + s),
-                    h.resolve(p);
+                    (j.err_msg = "No resolution reported for url " + s),
+                    o.resolve(j);
                   return;
                 }
-                (p.success = c.R), h.resolve(p);
+                (j.success = d.R), o.resolve(j);
               }),
-              (l.src = s),
-              o.token.promise.catch(() => {
-                (l.onload = () => {}),
-                  (l.onerror = () => {}),
-                  h.resolve({ success: c.e9 });
+              (v.src = s),
+              c.token.promise.catch(() => {
+                (v.onload = () => {}),
+                  (v.onerror = () => {}),
+                  o.resolve({ success: d.e9 });
               });
-            let E;
-            const P = new Promise((p, g) => {
-              E = setTimeout(() => g(), 1e4);
+            let f;
+            const C = new Promise((j, r) => {
+              f = setTimeout(() => r(), 1e4);
             });
-            let j;
+            let S;
             try {
-              j = await Promise.race([P, h.promise]);
+              S = await Promise.race([C, o.promise]);
             } catch {
-              j = { success: c._3, err_msg: "We timed out processing images" };
+              S = { success: d._3, err_msg: "We timed out processing images" };
             } finally {
-              clearTimeout(E);
+              clearTimeout(f);
             }
-            return j;
+            return S;
           },
           BIsClanImageVideo(s) {
-            return s.file_type == C.bg.nn || s.file_type == C.bg.pJ;
+            return s.file_type == M.bg.nn || s.file_type == M.bg.pJ;
           },
         };
       },
@@ -257,13 +257,13 @@
           uploaded_time;
           loc_group_id;
         }
-        var u = ((c) => (
-          (c.full = ""),
-          (c.background_main = "_960x311"),
-          (c.background_mini = "_480x156"),
-          (c.capsule_main = "_400x225"),
-          (c.spotlight_main = "_1054x230"),
-          c
+        var u = ((d) => (
+          (d.full = ""),
+          (d.background_main = "_960x311"),
+          (d.background_mini = "_480x156"),
+          (d.capsule_main = "_400x225"),
+          (d.spotlight_main = "_1054x230"),
+          d
         ))(u || {});
         const T = [
           "localized_image_group",
@@ -278,26 +278,26 @@
       7742: (W, D, t) => {
         "use strict";
         t.d(D, { x0: () => u });
-        async function e(c) {
+        async function e(d) {
           try {
-            return await c;
-          } catch (f) {
-            console.error(f);
+            return await d;
+          } catch (h) {
+            console.error(h);
             return;
           }
         }
         function u() {
-          let c, f;
+          let d, h;
           return {
-            promise: new Promise((I, B) => {
-              (c = I), (f = B);
+            promise: new Promise((P, B) => {
+              (d = P), (h = B);
             }),
-            resolve: c,
-            reject: f,
+            resolve: d,
+            reject: h,
           };
         }
-        function T(c) {
-          return new Promise((f) => setTimeout(f, c));
+        function T(d) {
+          return new Promise((h) => setTimeout(h, d));
         }
       },
       95414: (W, D, t) => {
@@ -306,14 +306,14 @@
         var e = t(7850),
           u = t(90626),
           T = t(24660),
-          c = t(83482),
-          f = t(72865),
-          C = t(77200),
-          I = t(53113),
+          d = t(83482),
+          h = t(72865),
+          M = t(77200),
+          P = t(53113),
           B = t(68094),
           R = t(72609),
           G = t(3166);
-        function v(n) {
+        function g(n) {
           if (n) {
             if ("appid" in n) return "app";
             if ("bundleid" in n) return "bundle";
@@ -324,41 +324,41 @@
           const {
               id: a,
               hoverClassName: x,
-              fnGetIDOverride: M,
+              fnGetIDOverride: A,
               fnHoverState: m,
-              disableScreenshots: y,
+              disableScreenshots: L,
               children: F,
             } = n,
             U = u.useRef(null),
             z = u.useCallback(
               (i) => {
-                const s = v(a);
+                const s = g(a);
                 s &&
                   (m && m(!0),
                   window.GameHover &&
                     (U.current &&
-                      y &&
+                      L &&
                       (U.current.dataset.hoverDisableScreenshots = "true"),
-                    window.GameHover(M ? M() : U.current, i, "global_hover", {
+                    window.GameHover(A ? A() : U.current, i, "global_hover", {
                       type: s,
                       id: (0, B.G$)(a).id,
                       v6: 1,
                     })));
               },
-              [m, M, y, a],
+              [m, A, L, a],
             ),
             K = u.useCallback(
               (i) => {
-                v(a) &&
+                g(a) &&
                   (m && i.relatedTarget && m(!1),
                   window.HideGameHover &&
                     window.HideGameHover(
-                      M ? M() : U.current,
+                      A ? A() : U.current,
                       i,
                       "global_hover",
                     ));
               },
-              [a, m, M],
+              [a, m, A],
             );
           return (0, e.jsx)("div", {
             ref: U,
@@ -374,22 +374,22 @@
           const {
               id: a,
               strExtraParams: x,
-              fnOnClickOverride: M,
+              fnOnClickOverride: A,
               strOverrideURL: m,
             } = n,
-            y = (0, f.n9)(),
-            F = (0, C.w)(),
-            U = (0, I.NT)(
+            L = (0, h.n9)(),
+            F = (0, M.w)(),
+            U = (0, P.NT)(
               m ||
                 (a && "creatorid" in a
-                  ? (0, c.It)(
+                  ? (0, d.It)(
                       `${R.TS.STORE_BASE_URL}curator/${((0, B.G$))(a).id}${x ? `?${x}` : ""}`,
-                      y,
+                      L,
                       F,
                     )
-                  : (0, c.It)(
-                      `${R.TS.STORE_BASE_URL}${v(a)}/${((0, B.G$))(a).id}${x ? `?${x}` : ""}`,
-                      y,
+                  : (0, d.It)(
+                      `${R.TS.STORE_BASE_URL}${g(a)}/${((0, B.G$))(a).id}${x ? `?${x}` : ""}`,
+                      L,
                       F,
                     )),
             );
@@ -397,10 +397,10 @@
             ...n,
             children: (0, e.jsx)(T.Ii, {
               className: n.className,
-              href: M ? void 0 : U,
-              target: R.TS.IN_CLIENT || M ? void 0 : "_blank",
+              href: A ? void 0 : U,
+              target: R.TS.IN_CLIENT || A ? void 0 : "_blank",
               rel: "noopener noreferrer",
-              onClick: M,
+              onClick: A,
               children: n.children,
             }),
           });
@@ -412,36 +412,36 @@
         var e = t(7850),
           u = t(12997),
           T = t(90626),
-          c = t(52438);
-        const f = {
+          d = t(52438);
+        const h = {
             name: "trailerPrefs",
             options: { path: "/", secure: !0, maxAge: 720 * 60 * 60 * 1e3 },
             preferenceControls: { isTechnicallyNecessary: !0 },
           },
-          C = { flVolume: 0.8, bMuted: !0 };
-        function I(v) {
-          return v.flVolume === C.flVolume && v.bMuted === C.bMuted;
+          M = { flVolume: 0.8, bMuted: !0 };
+        function P(g) {
+          return g.flVolume === M.flVolume && g.bMuted === M.bMuted;
         }
         function B() {
           try {
-            const v = (0, c.j_)(f);
-            if (!v) return C;
-            const b = JSON.parse(v);
+            const g = (0, d.j_)(h);
+            if (!g) return M;
+            const b = JSON.parse(g);
             return {
-              flVolume: typeof b.flVolume == "number" ? b.flVolume : C.flVolume,
-              bMuted: typeof b.bMuted == "boolean" ? b.bMuted : C.bMuted,
+              flVolume: typeof b.flVolume == "number" ? b.flVolume : M.flVolume,
+              bMuted: typeof b.bMuted == "boolean" ? b.bMuted : M.bMuted,
             };
           } catch {
-            return C;
+            return M;
           }
         }
-        function R(v) {
-          I(v) || Object.keys(v).length == 0
-            ? (0, c.Y1)(f)
-            : (0, c.eV)(f, JSON.stringify(v));
+        function R(g) {
+          P(g) || Object.keys(g).length == 0
+            ? (0, d.Y1)(h)
+            : (0, d.eV)(h, JSON.stringify(g));
         }
-        function G(v) {
-          let { children: b } = v;
+        function G(g) {
+          let { children: b } = g;
           const [O, n] = (0, T.useState)(() => B());
           return (
             (0, T.useEffect)(() => {
@@ -459,113 +459,113 @@
       },
       64457: (W, D, t) => {
         "use strict";
-        t.d(D, { PE: () => K, Yg: () => F, _t: () => U, gO: () => i });
+        t.d(D, { PE: () => K, Yg: () => F, _t: () => U, gO: () => s });
         var e = t(7850),
           u = t(21721),
           T = t(25046),
-          c = t(40358),
-          f = t(68094),
-          C = t(41032),
-          I = t(90626),
+          d = t(40358),
+          h = t(68094),
+          M = t(41032),
+          P = t(90626),
           B = t(62571),
           R = t(40426),
           G = t(36118),
-          v = t(36707),
+          g = t(36707),
           b = t(18210),
           O = t(72609),
           n = t(96538),
           a = t(85599),
           x = t(64271),
-          M = t(48963),
-          m = t.n(M),
-          y = t(50573);
-        function F(o) {
-          const { id: r, bPopOutTrailerPlayback: h } = o,
-            { data: l } = (0, c.Yo)(r),
-            { data: E } = (0, c.j4)(r),
-            { data: P } = (0, c.J$)(r),
-            [j, p] = (0, I.useState)(!1),
-            [g, d] = (0, I.useState)(!1),
-            S = (0, C.dy)(),
-            L = l?.highlights?.filter((V) => !S || V.all_ages),
-            _ = L && L?.length > 0 ? L[0] : void 0,
-            A = I.useCallback(() => {
-              _ && (h ? d(!0) : p((V) => !V));
-            }, [_, h]);
-          if (!P)
+          A = t(48963),
+          m = t.n(A),
+          L = t(50573);
+        function F(l) {
+          const { id: o, bPopOutTrailerPlayback: v } = l,
+            { data: f } = (0, d.Yo)(o),
+            { data: C } = (0, d.j4)(o),
+            { data: S } = (0, d.J$)(o),
+            [j, r] = (0, P.useState)(!1),
+            [p, E] = (0, P.useState)(!1),
+            y = (0, M.dy)(),
+            _ = f?.highlights?.filter((V) => !y || V.all_ages),
+            I = _ && _?.length > 0 ? _[0] : void 0,
+            J = P.useCallback(() => {
+              I && (v ? E(!0) : r((V) => !V));
+            }, [I, v]);
+          if (!S)
             return (0, e.jsx)("div", {
-              className: (0, v.A)(m().HilightGrid, m().MediaContainer),
+              className: (0, g.A)(m().HilightGrid, m().MediaContainer),
               children: (0, e.jsx)(a.t, { size: "medium" }),
             });
-          const H = _
-            ? (0, e.jsx)(s, {
-                trailer: _,
+          const H = I
+            ? (0, e.jsx)(c, {
+                trailer: I,
                 bPlayVideo: j,
-                fnTogglePlayTrailer: A,
+                fnTogglePlayTrailer: J,
               })
             : null;
-          return !_ &&
-            !(E && E.all_ages_screenshots && E.all_ages_screenshots.length > 0)
+          return !I &&
+            !(C && C.all_ages_screenshots && C.all_ages_screenshots.length > 0)
             ? null
             : (0, e.jsxs)("div", {
-                className: (0, v.A)(m().HilightGrid, m().MediaContainer),
+                className: (0, g.A)(m().HilightGrid, m().MediaContainer),
                 children: [
                   (0, e.jsx)(U, {
                     elFeaturedInCenter: H,
-                    storeItemScreenshots: E,
-                    trailer: _,
-                    id: r,
-                    name: P.name || "",
+                    storeItemScreenshots: C,
+                    trailer: I,
+                    id: o,
+                    name: S.name || "",
                   }),
-                  h
+                  v
                     ? (0, e.jsx)(K, {
-                        id: r,
-                        bShowModal: g,
-                        hideModal: () => d(!1),
+                        id: o,
+                        bShowModal: p,
+                        hideModal: () => E(!1),
                       })
                     : (0, e.jsx)(z, {
-                        name: P.name || "",
-                        trailer: _,
+                        name: S.name || "",
+                        trailer: I,
                         bPlayVideo: j,
-                        fnTogglePlayTrailer: A,
+                        fnTogglePlayTrailer: J,
                         bControls: !0,
                       }),
                 ],
               });
         }
-        function U(o) {
+        function U(l) {
           const {
-              elFeaturedInCenter: r,
-              id: h,
-              name: l,
-              trailer: E,
-              storeItemScreenshots: P,
+              elFeaturedInCenter: o,
+              id: v,
+              name: f,
+              trailer: C,
+              storeItemScreenshots: S,
               featureElementclassName: j,
-              bUseTrailerAsFirstThumb: p,
-              bNoScreenShotModals: g,
-            } = o,
-            [d, S] = I.useState(void 0),
-            [L, _] = (0, R.XC)(),
-            A = (0, C.dy)(),
-            H = (0, I.useRef)(null),
-            [V, Q] = (0, I.useState)(0);
-          if (!h) return null;
-          const w = r || (d !== void 0 && d !== -1) ? d : 0,
-            J = new Array(),
+              bUseTrailerAsFirstThumb: r,
+              bNoScreenShotModals: p,
+            } = l,
+            [E, y] = P.useState(void 0),
+            [_, I] = (0, R.XC)(),
+            J = (0, M.dy)(),
+            H = (0, P.useRef)(null),
+            [V, q] = (0, P.useState)(0);
+          if (!v) return null;
+          const $ = o || (E !== void 0 && E !== -1) ? E : 0,
+            w = new Array(),
             Y = new Array();
-          p &&
-            E &&
-            (J.push(
+          r &&
+            C &&
+            (w.push(
               (0, e.jsx)(
-                s,
+                c,
                 {
-                  trailer: E,
+                  trailer: C,
                   bPlayVideo: !1,
                   fnTogglePlayTrailer: () => {},
-                  onMouseEnter: () => S(0),
+                  onMouseEnter: () => y(0),
                   onMouseLeave: () => {
-                    const $ = H.current;
-                    $ && Q($.currentTime);
+                    const N = H.current;
+                    N && q(N.currentTime);
                   },
                 },
                 "trail_thumb_",
@@ -576,8 +576,8 @@
                 z,
                 {
                   ref: H,
-                  name: l,
-                  trailer: E,
+                  name: f,
+                  trailer: C,
                   bControls: !1,
                   bPlayVideo: !0,
                   startTime: V,
@@ -586,43 +586,43 @@
                 "trail_inline",
               ),
             ));
-          const ee = (
-            A ? P?.all_ages_screenshots : P?.mature_content_screenshots
+          const se = (
+            J ? S?.all_ages_screenshots : S?.mature_content_screenshots
           )?.filter(Boolean);
           if (
-            (ee?.forEach(($, N) => {
-              if ((r || N > 0) && J.length < 3) {
-                const Z = (0, u.bu)($, "thumb"),
-                  ne = (0, u.bu)($, "600x338"),
-                  re = J.length;
-                J.push(
+            (se?.forEach((N, Q) => {
+              if ((o || Q > 0) && w.length < 3) {
+                const k = (0, u.bu)(N, "thumb"),
+                  re = (0, u.bu)(N, "600x338"),
+                  ae = w.length;
+                w.push(
                   (0, e.jsx)(
                     "div",
                     {
-                      className: (0, v.A)({
+                      className: (0, g.A)({
                         [m().ThumbnailCtn]: !0,
-                        [m().ThumbnialClickable]: !g,
+                        [m().ThumbnialClickable]: !p,
                       }),
-                      onMouseEnter: () => S(re),
-                      children: g
-                        ? (0, e.jsx)("img", { src: Z, alt: l })
+                      onMouseEnter: () => y(ae),
+                      children: p
+                        ? (0, e.jsx)("img", { src: k, alt: f })
                         : (0, e.jsx)("button", {
                             type: "button",
                             className: m().ThumbnailButton,
                             onClick: () => {
-                              const X = [...(ee || [])];
-                              if (X.length > 0) {
-                                for (let k = 0; k < N; ++k) {
-                                  const q = X.shift();
-                                  q && X.push(q);
+                              const te = [...(se || [])];
+                              if (te.length > 0) {
+                                for (let Z = 0; Z < Q; ++Z) {
+                                  const ne = te.shift();
+                                  ne && te.push(ne);
                                 }
-                                L(X.map((k) => (0, u.bu)(k, "full")));
+                                _(te.map((Z) => (0, u.bu)(Z, "full")));
                               }
                             },
-                            children: (0, e.jsx)("img", { src: Z, alt: l }),
+                            children: (0, e.jsx)("img", { src: k, alt: f }),
                           }),
                     },
-                    N + "_small_" + Z,
+                    Q + "_small_" + k,
                   ),
                 ),
                   Y.push(
@@ -630,41 +630,41 @@
                       "div",
                       {
                         className: m().ScreenshotDisplayCtn,
-                        children: (0, e.jsx)("img", { src: ne, alt: l }),
+                        children: (0, e.jsx)("img", { src: re, alt: f }),
                       },
-                      N + "_big_" + Z,
+                      Q + "_big_" + k,
                     ),
                   );
               }
             }),
-            !r && (!Y || Y.length == 0))
+            !o && (!Y || Y.length == 0))
           )
             return null;
-          const te = J.slice(0, 3),
-            se = Array.from({ length: Math.max(0, 3 - te.length) });
+          const ee = w.slice(0, 3),
+            X = Array.from({ length: Math.max(0, 3 - ee.length) });
           return (0, e.jsxs)(e.Fragment, {
             children: [
-              _,
+              I,
               (0, e.jsx)("div", {
                 className: j || m().MainMediaCtn,
                 children:
-                  r && (w === -1 || w === void 0)
-                    ? (0, e.jsx)(e.Fragment, { children: r })
+                  o && ($ === -1 || $ === void 0)
+                    ? (0, e.jsx)(e.Fragment, { children: o })
                     : (0, e.jsx)(e.Fragment, {
-                        children: w !== void 0 && Y[w],
+                        children: $ !== void 0 && Y[$],
                       }),
               }),
-              te.length > 0 &&
+              ee.length > 0 &&
                 (0, e.jsxs)("div", {
                   className: m().ScreenshotThumbnailRow,
-                  onMouseLeave: () => S(-1),
+                  onMouseLeave: () => y(-1),
                   children: [
-                    te,
-                    se.map(($, N) =>
+                    ee,
+                    X.map((N, Q) =>
                       (0, e.jsx)(
                         "div",
                         { className: m().ThumbnailCtn },
-                        `app_${(0, f.ER)(h)}_${N}`,
+                        `app_${(0, h.ER)(v)}_${Q}`,
                       ),
                     ),
                   ],
@@ -672,66 +672,66 @@
             ],
           });
         }
-        function z(o) {
+        function z(l) {
           const {
-            ref: r,
-            name: h,
-            trailer: l,
-            bControls: E,
-            bPlayVideo: P,
+            ref: o,
+            name: v,
+            trailer: f,
+            bControls: C,
+            bPlayVideo: S,
             fnTogglePlayTrailer: j,
-            startTime: p,
-          } = o;
+            startTime: r,
+          } = l;
           if (
-            ((0, I.useEffect)(() => {
-              const d = r?.current;
-              if (p != null && p > 0 && d) {
-                const S = () => {
-                  d.currentTime = p || 0;
+            ((0, P.useEffect)(() => {
+              const E = o?.current;
+              if (r != null && r > 0 && E) {
+                const y = () => {
+                  E.currentTime = r || 0;
                 };
                 return (
-                  d.addEventListener("loadedmetadata", S),
+                  E.addEventListener("loadedmetadata", y),
                   () => {
-                    d.removeEventListener("loadedmetadata", S);
+                    E.removeEventListener("loadedmetadata", y);
                   }
                 );
               }
-            }, [r, p]),
-            !l)
+            }, [o, r]),
+            !f)
           )
             return null;
-          let g = (0, v.A)(m().VideoLargeContainer, P && m().videoPlaying);
+          let p = (0, g.A)(m().VideoLargeContainer, S && m().videoPlaying);
           return (0, e.jsxs)("div", {
-            className: g,
+            className: p,
             onClick: j,
             role: "presentation",
             children: [
-              (0, e.jsx)(y.hj, {
-                name: h,
-                trailerCategory: l.trailer_category,
-                trailerDisplay: y.g,
+              (0, e.jsx)(L.hj, {
+                name: v,
+                trailerCategory: f.trailer_category,
+                trailerDisplay: L.g,
                 mouseOver: !1,
               }),
-              !!(P && l.microtrailer) &&
+              !!(S && f.microtrailer) &&
                 (0, e.jsx)("video", {
                   className: m().VideoLarge,
-                  ref: r,
-                  controls: E,
+                  ref: o,
+                  controls: C,
                   autoPlay: !0,
                   loop: !0,
                   muted: !0,
-                  poster: p != null && p > 0 ? void 0 : l.screenshot_full,
-                  children: l.microtrailer?.map((d) =>
-                    O.TS.IN_CLIENT && d.type == "video/mp4"
+                  poster: r != null && r > 0 ? void 0 : f.screenshot_full,
+                  children: f.microtrailer?.map((E) =>
+                    O.TS.IN_CLIENT && E.type == "video/mp4"
                       ? null
                       : (0, e.jsx)(
                           "source",
-                          { src: (0, T.M4)(l, d.filename || ""), type: d.type },
-                          d.filename,
+                          { src: (0, T.M4)(f, E.filename || ""), type: E.type },
+                          E.filename,
                         ),
                   ),
                 }),
-              E &&
+              C &&
                 (0, e.jsx)("button", {
                   type: "button",
                   className: m().CloseButton,
@@ -741,107 +741,110 @@
             ],
           });
         }
-        function K(o) {
-          const { id: r, bShowModal: h, trailerBaseID: l, hideModal: E } = o,
-            { data: P } = (0, c.J$)(r),
-            j = (0, T.kB)(r),
-            p = (0, I.useMemo)(() => {
+        function K(l) {
+          return l.bShowModal ? (0, e.jsx)(i, { ...l }) : null;
+        }
+        function i(l) {
+          const { id: o, bShowModal: v, trailerBaseID: f, hideModal: C } = l,
+            { data: S } = (0, d.J$)(o),
+            j = (0, T.kB)(o),
+            r = (0, P.useMemo)(() => {
               if (!(!j || j.length == 0)) {
-                if (l) {
-                  const H = j.find((V) => V.trailer_base_id == l);
+                if (f) {
+                  const H = j.find((V) => V.trailer_base_id == f);
                   if (H) return H;
                 }
                 return j[0];
               }
-            }, [j, l]),
-            g = I.useId(),
-            d = I.useId(),
+            }, [j, f]),
+            p = P.useId(),
+            E = P.useId(),
             {
-              rgDashTrailers: S,
-              rgHlsTrailers: L,
-              strCaptionManufest: _,
-              strScreenshot: A,
-            } = (0, I.useMemo)(() => {
-              if (!p)
+              rgDashTrailers: y,
+              rgHlsTrailers: _,
+              strCaptionManufest: I,
+              strScreenshot: J,
+            } = (0, P.useMemo)(() => {
+              if (!r)
                 return {
                   rgDashTrailers: [],
                   rgHlsTrailers: [],
                   strCaptionManufest: "",
                   strScreenshot: "",
                 };
-              const { rgDashTrailers: H, rgHlsTrailers: V } = (0, T.hg)(p);
+              const { rgDashTrailers: H, rgHlsTrailers: V } = (0, T.hg)(r);
               return {
                 rgDashTrailers: H,
                 rgHlsTrailers: V,
-                strCaptionManufest: (0, T.Wv)(p),
-                strScreenshot: (0, T.hl)(p),
+                strCaptionManufest: (0, T.Wv)(r),
+                strScreenshot: (0, T.hl)(r),
               };
-            }, [p]);
-          return !p || !p.adaptive_trailers || S.length == 0
+            }, [r]);
+          return !r || !r.adaptive_trailers || y.length == 0
             ? null
             : (0, e.jsx)(n.EN, {
-                active: h,
+                active: v,
                 children: (0, e.jsxs)(n.eV, {
-                  "aria-labelledby": (0, B.q)(g, d),
+                  "aria-labelledby": (0, B.q)(p, E),
                   bAllowFullSize: !0,
                   bOKDisabled: !0,
-                  closeModal: E,
+                  closeModal: C,
                   children: [
                     (0, e.jsx)("div", {
                       className: m().VideoPopupContainers,
                       children: (0, e.jsx)(x.P, {
-                        dashManifests: S,
-                        hlsManifest: L[0] || "",
-                        screenshot: A,
-                        altText: p.trailer_name,
+                        dashManifests: y,
+                        hlsManifest: _[0] || "",
+                        screenshot: J,
+                        altText: r.trailer_name,
                         muteWhenAutoplayBlocked: !0,
-                        captionManifest: _,
+                        captionManifest: I,
                       }),
                     }),
                     (0, e.jsx)("div", {
-                      id: g,
+                      id: p,
                       style: { display: "none" },
-                      children: P?.name || "",
+                      children: S?.name || "",
                     }),
                     (0, e.jsx)("div", {
-                      id: d,
+                      id: E,
                       style: { display: "none" },
-                      children: p.trailer_name,
+                      children: r.trailer_name,
                     }),
                   ],
                 }),
               });
         }
-        function i(o) {
-          const { appid: r, trailerBaseID: h, bShowModal: l, hideModal: E } = o,
-            P = (0, I.useMemo)(() => ({ appid: r }), [r]);
+        function s(l) {
+          const { appid: o, trailerBaseID: v, bShowModal: f, hideModal: C } = l,
+            S = (0, P.useMemo)(() => ({ appid: o }), [o]);
           return (0, e.jsx)(K, {
-            id: P,
-            trailerBaseID: h,
-            bShowModal: l,
-            hideModal: E,
+            id: S,
+            trailerBaseID: v,
+            bShowModal: f,
+            hideModal: C,
           });
         }
-        function s(o) {
+        function c(l) {
           const {
-            trailer: r,
-            fnTogglePlayTrailer: h,
-            bPlayVideo: l,
-            onMouseEnter: E,
-            onMouseLeave: P,
-          } = o;
+            trailer: o,
+            fnTogglePlayTrailer: v,
+            bPlayVideo: f,
+            onMouseEnter: C,
+            onMouseLeave: S,
+          } = l;
           return (0, e.jsxs)("div", {
-            className: (0, v.A)({
-              [m().VideoThumbnail]: !l,
-              [m().videoPlaying]: l,
+            className: (0, g.A)({
+              [m().VideoThumbnail]: !f,
+              [m().videoPlaying]: f,
               [m().ThumbnailCtn]: !0,
             }),
-            onClick: h,
-            onMouseEnter: E,
-            onMouseLeave: P,
+            onClick: v,
+            onMouseEnter: C,
+            onMouseLeave: S,
             role: "presentation",
             children: [
-              (0, e.jsx)("img", { src: (0, T.hl)(r), alt: r.trailer_name }),
+              (0, e.jsx)("img", { src: (0, T.hl)(o), alt: o.trailer_name }),
               (0, e.jsx)("button", {
                 type: "button",
                 className: m().VideoPlayButton,
@@ -854,48 +857,48 @@
       },
       85491: (W, D, t) => {
         "use strict";
-        t.d(D, { T: () => d });
+        t.d(D, { T: () => p });
         var e = t(7850),
-          u = t(78192),
+          u = t(48156),
           T = t(96378),
-          c = t(95414),
-          f = t(46727),
-          C = t(84607),
-          I = t(44267),
+          d = t(95414),
+          h = t(46727),
+          M = t(84607),
+          P = t(44267),
           B = t(41188),
           R = t(80104),
           G = t(77459),
-          v = t(29245),
+          g = t(29245),
           b = t(72838),
           O = t(39905),
           n = t(3348),
           a = t(40358),
           x = t(29522),
-          M = t(72865),
+          A = t(72865),
           m = t(75844),
-          y = t(90626),
+          L = t(90626),
           F = t(88743),
           U = t(83482),
           z = t(64457),
           K = t(76532),
           i = t.n(K),
           s = t(68094),
-          o = t(90740),
-          r = t(61431);
-        function h(S) {
+          c = t(90740),
+          l = t(61431);
+        function o(E) {
           const {
-              id: L,
+              id: y,
               bPurchaseOptionsExpanded: _,
-              fnCollapseOptions: A,
-              bPreferAssetWithoutOverride: H,
-            } = S,
-            { data: V } = (0, a.is)(L),
-            Q = (0, y.useRef)(null);
-          if (!V) return null;
-          const w = V.purchase_options;
-          return w
-            ? (0, e.jsx)(o.A, {
-                nodeRef: Q,
+              fnCollapseOptions: I,
+              bPreferAssetWithoutOverride: J,
+            } = E,
+            { data: H } = (0, a.is)(y),
+            V = (0, L.useRef)(null);
+          if (!H) return null;
+          const q = H.purchase_options;
+          return q
+            ? (0, e.jsx)(c.A, {
+                nodeRef: V,
                 in: _,
                 mountOnEnter: !0,
                 unmountOnExit: !0,
@@ -907,31 +910,31 @@
                   exitActive: i().Collapsing,
                 },
                 children: (0, e.jsxs)("div", {
-                  ref: Q,
+                  ref: V,
                   className: i().BundleContentsCtnTransition,
                   children: [
                     (0, e.jsx)("div", {
                       className: i().BundleContentsCtn,
-                      children: w
-                        .filter((J) => !!J.packageid)
-                        .map((J) =>
+                      children: q
+                        .filter(($) => !!$.packageid)
+                        .map(($) =>
                           (0, e.jsx)(
                             "div",
                             {
                               className: i().BundleContentItem,
-                              children: (0, e.jsx)(r.p, {
-                                id: J.packageid || 0,
+                              children: (0, e.jsx)(l.p, {
+                                id: $.packageid || 0,
                                 type: "sub",
                                 bForceSmallCapsuleArt: !0,
-                                bPreferAssetWithoutOverride: H,
+                                bPreferAssetWithoutOverride: J,
                               }),
                             },
-                            "purchaseitem_" + (0, s.ER)(L) + "_" + J.packageid,
+                            "purchaseitem_" + (0, s.ER)(y) + "_" + $.packageid,
                           ),
                         ),
                     }),
                     (0, e.jsx)("div", {
-                      onClick: A,
+                      onClick: I,
                       className: i().BundleShowButton,
                       children: (0, e.jsx)("button", {
                         className: i().ShowContentsButton,
@@ -943,65 +946,65 @@
               })
             : null;
         }
-        var l = t(4705),
-          E = t(6698),
-          P = t(38081),
-          j = t.n(P),
-          p = t(96155),
-          g = t(36707);
-        const d = (0, m.PA)((S) => {
-          const { id: L, type: _ } = S,
-            A = (0, F.zl)(L, _),
+        var v = t(4705),
+          f = t(6698),
+          C = t(38081),
+          S = t.n(C),
+          j = t(96155),
+          r = t(36707);
+        const p = (0, m.PA)((E) => {
+          const { id: y, type: _ } = E,
+            I = (0, F.zl)(y, _),
             {
-              bHidePrice: H,
-              bShowDemoButton: V,
-              bPreferDemoStorePage: Q,
-              bShowPurchaseOptionsButton: w,
-              bUseSubscriptionLayout: J,
-              bPreferAssetWithoutOverride: Y,
-            } = S,
-            [ee, te] = y.useState(!1),
-            se = () => te(!ee),
-            { data: $ } = (0, a.U2)(A),
-            { data: N } = (0, a.wl)(A),
-            { data: Z } = (0, a.by)(A),
-            { data: ne } = (0, a.xz)(A),
-            re = (0, x._Z)(A),
-            X = (0, M.n9)();
-          if (!$ || !N)
+              bHidePrice: J,
+              bShowDemoButton: H,
+              bPreferDemoStorePage: V,
+              bShowPurchaseOptionsButton: q,
+              bUseSubscriptionLayout: $,
+              bPreferAssetWithoutOverride: w,
+            } = E,
+            [Y, se] = L.useState(!1),
+            ee = () => se(!Y),
+            { data: X } = (0, a.U2)(I),
+            { data: N } = (0, a.wl)(I),
+            { data: Q } = (0, a.by)(I),
+            { data: k } = (0, a.xz)(I),
+            re = (0, x._Z)(I),
+            ae = (0, A.n9)();
+          if (!X || !N)
             return (0, e.jsx)(T.h, {
               capsules_per_row: [1],
               is_expanded_display: !0,
             });
-          const k = (0, U.L3)(X),
-            q = $.item_type == u.c6.qI;
+          const te = (0, U.L3)(ae),
+            Z = X.item_type == u.c6.qI;
           return (0, e.jsx)("div", {
-            className: (0, g.A)(
+            className: (0, r.A)(
               i().StoreSaleWidgetContainer,
               i().LibraryAssetExpandedDisplay,
               "LibraryAssetExpandedDisplay",
             ),
-            children: (0, e.jsxs)(E.oj, {
-              appid: q ? $.appid : void 0,
+            children: (0, e.jsxs)(f.oj, {
+              appid: Z ? X.appid : void 0,
               children: [
                 (0, e.jsxs)("div", {
                   className: i().StoreSaleWidgetLibraryAssetExtendedTop,
                   children: [
                     (0, e.jsx)("div", {
-                      className: (0, g.A)(i().StoreSaleWidgetLeft),
-                      children: (0, e.jsx)(c.u, {
-                        id: A,
-                        bPreferDemoStorePage: Q,
+                      className: (0, r.A)(i().StoreSaleWidgetLeft),
+                      children: (0, e.jsx)(d.u, {
+                        id: I,
+                        bPreferDemoStorePage: V,
                         children: (0, e.jsxs)("div", {
                           className: i().StoreSaleWidgetImage,
                           children: [
-                            (0, e.jsx)(f.V, { appids: re }),
-                            (0, e.jsx)(C.a, {
-                              id: A,
+                            (0, e.jsx)(h.V, { appids: re }),
+                            (0, e.jsx)(M.a, {
+                              id: I,
                               imageType: "library",
-                              bPreferAssetWithoutOverride: Y,
+                              bPreferAssetWithoutOverride: w,
                             }),
-                            (0, e.jsx)(p.J, { id: A }),
+                            (0, e.jsx)(j.J, { id: I }),
                           ],
                         }),
                       }),
@@ -1009,14 +1012,14 @@
                     (0, e.jsxs)("div", {
                       className: i().StoreSaleWidgetCrossCenterRight,
                       children: [
-                        q &&
-                          (0, e.jsx)(I.E, {
-                            id: A,
-                            classOverride: (0, g.A)(
-                              j().WishlistButtonNotTop,
+                        Z &&
+                          (0, e.jsx)(P.E, {
+                            id: I,
+                            classOverride: (0, r.A)(
+                              S().WishlistButtonNotTop,
                               "WishlistButton",
                             ),
-                            snr: k,
+                            snr: te,
                           }),
                         (0, e.jsxs)("div", {
                           className: i().StoreSaleWidgetContents,
@@ -1027,15 +1030,15 @@
                                 N.short_description &&
                                   N.short_description.length > 0 &&
                                   (0, e.jsx)("div", {
-                                    className: (0, g.A)(
+                                    className: (0, r.A)(
                                       i().StoreSaleWidgetShortDesc,
                                       "StoreSaleWidgetShortDesc",
                                     ),
                                     children: N.short_description,
                                   }),
                                 (0, e.jsx)(B.n, {
-                                  rgTagIDs: ne
-                                    ? ne.slice(0, 10).map((ae) => ae.tagid || 0)
+                                  rgTagIDs: k
+                                    ? k.slice(0, 10).map((ne) => ne.tagid || 0)
                                     : [],
                                   instanceNum: 0,
                                   bNoStoreLinks: !1,
@@ -1048,7 +1051,7 @@
                                       children: O.Z.LocalizeReact(
                                         "#Sale_ReleaseDate",
                                         (0, e.jsx)("span", {
-                                          children: (0, n.CC)(Z),
+                                          children: (0, n.CC)(Q),
                                         }),
                                       ),
                                     }),
@@ -1085,7 +1088,7 @@
                             (0, e.jsx)("div", {
                               className: i().StoreSaleLibraryAssetWidgetRight,
                               children: (0, e.jsx)(z.Yg, {
-                                id: A,
+                                id: I,
                                 bPopOutTrailerPlayback: !0,
                               }),
                             }),
@@ -1093,26 +1096,26 @@
                         }),
                         (0, e.jsx)("div", {
                           className: i().StoreSaleItemReview,
-                          children: (0, e.jsx)(R.J, { id: A }),
+                          children: (0, e.jsx)(R.J, { id: I }),
                         }),
                         (0, e.jsx)("div", {
                           className: i().CapsuleBottomBar,
                           children:
-                            J && q
+                            $ && Z
                               ? (0, e.jsx)(G.E, {
-                                  appid: $.appid,
+                                  appid: X.appid,
                                   bIsMuted: !1,
                                 })
                               : (0, e.jsxs)(e.Fragment, {
                                   children: [
-                                    (0, e.jsx)(v.Q, { id: A }),
-                                    (0, e.jsx)(l.w, {
-                                      id: A,
-                                      bShowDemoButton: V,
-                                      bHidePrice: H,
-                                      bShowPurchaseOptionsButton: w,
-                                      fnOnPurchaseOptionsClick: se,
-                                      bHideWishlistButton: $.is_coming_soon,
+                                    (0, e.jsx)(g.Q, { id: I }),
+                                    (0, e.jsx)(v.w, {
+                                      id: I,
+                                      bShowDemoButton: H,
+                                      bHidePrice: J,
+                                      bShowPurchaseOptionsButton: q,
+                                      fnOnPurchaseOptionsClick: ee,
+                                      bHideWishlistButton: X.is_coming_soon,
                                     }),
                                   ],
                                 }),
@@ -1121,21 +1124,21 @@
                           className: i().StoreSaleWidgetBgTint,
                           children: [
                             (0, e.jsx)(b.G, {
-                              id: A,
-                              bPreferAssetWithoutOverride: Y,
+                              id: I,
+                              bPreferAssetWithoutOverride: w,
                             }),
-                            (0, e.jsx)(p.J, { id: A }),
+                            (0, e.jsx)(j.J, { id: I }),
                           ],
                         }),
                       ],
                     }),
                   ],
                 }),
-                (0, e.jsx)(h, {
-                  id: A,
-                  bPurchaseOptionsExpanded: ee,
-                  fnCollapseOptions: se,
-                  bPreferAssetWithoutOverride: Y,
+                (0, e.jsx)(o, {
+                  id: I,
+                  bPurchaseOptionsExpanded: Y,
+                  fnCollapseOptions: ee,
+                  bPreferAssetWithoutOverride: w,
                 }),
               ],
             }),
@@ -1152,12 +1155,12 @@
       51746: (W, D, t) => {
         "use strict";
         t.d(D, {
-          EG: () => f,
+          EG: () => h,
           II: () => b,
           Uz: () => R,
           aL: () => B,
           ab: () => T,
-          zB: () => v,
+          zB: () => g,
         });
         var e = t(7742),
           u = t(72849);
@@ -1172,7 +1175,7 @@
           if (a.endsWith(".vtt")) return "text/vtt";
           if (a.endsWith(".webp")) return "image/webp";
         }
-        function c(n) {
+        function d(n) {
           switch (n) {
             case "image/jpeg":
               return ".jpg";
@@ -1199,7 +1202,7 @@
             ".jpg"
           );
         }
-        function f(n) {
+        function h(n) {
           switch (n) {
             case u.bg.iS:
               return ".jpg";
@@ -1219,27 +1222,27 @@
               return ".webp";
           }
         }
-        function C(n) {
+        function M(n) {
           const a = (0, e.x0)(),
             x = new Image();
           return (
             (x.onload = () => a.resolve(x)),
-            (x.onerror = (M) => {
-              console.error("LoadImage failed to load the image, details", M),
+            (x.onerror = (A) => {
+              console.error("LoadImage failed to load the image, details", A),
                 a.resolve(void 0);
             }),
             (x.src = n),
             a.promise
           );
         }
-        function I(n) {
+        function P(n) {
           const a = (0, e.x0)(),
             x = document.createElement("video");
           return (
             (x.preload = "metadata"),
             x.addEventListener("loadedmetadata", () => a.resolve(x)),
-            (x.onerror = (M) => {
-              console.error("LoadVideo failed to load the video, details", M),
+            (x.onerror = (A) => {
+              console.error("LoadVideo failed to load the video, details", A),
                 a.resolve(void 0);
             }),
             (x.src = n),
@@ -1253,24 +1256,24 @@
           return n.startsWith("video/");
         }
         function G(n, a) {
-          return a ? I(n) : C(n);
+          return a ? P(n) : M(n);
         }
-        async function v(n, a) {
-          if (a) return I(URL.createObjectURL(n));
+        async function g(n, a) {
+          if (a) return P(URL.createObjectURL(n));
           {
             const x = (0, e.x0)(),
-              M = new FileReader();
-            (M.onload = () => x.resolve(M.result ?? void 0)),
-              (M.onerror = () => {
+              A = new FileReader();
+            (A.onload = () => x.resolve(A.result ?? void 0)),
+              (A.onerror = () => {
                 console.error(
                   "GetMediaElementFromFile failed to load the image, details",
-                  M.error,
+                  A.error,
                 ),
                   x.resolve(void 0);
               }),
-              M.readAsDataURL(n);
+              A.readAsDataURL(n);
             const m = await x.promise;
-            return m ? C(m.toString()) : void 0;
+            return m ? M(m.toString()) : void 0;
           }
         }
         function b(n) {
@@ -1293,8 +1296,8 @@
             "connection",
             "upgrade",
           ]);
-          for (const M of a)
-            x.has(M.name.toLowerCase()) || (n[M.name] = M.value);
+          for (const A of a)
+            x.has(A.name.toLowerCase()) || (n[A.name] = A.value);
           return n;
         }
       },
@@ -1303,195 +1306,195 @@
         t.d(D, { c: () => T });
         var e = t(7850),
           u = t(90626);
-        function T(c) {
+        function T(d) {
           const {
-              rgSources: f,
-              onIncrementalError: C,
-              onError: I,
+              rgSources: h,
+              onIncrementalError: M,
+              onError: P,
               strAltText: B,
               ref: R,
               ...G
-            } = c,
-            [v, b] = u.useState(0),
-            O = u.useMemo(() => JSON.stringify(f), [f]),
+            } = d,
+            [g, b] = u.useState(0),
+            O = u.useMemo(() => JSON.stringify(h), [h]),
             [n, a] = u.useState(O);
           n != O && (a(O), b(0));
           const x = u.useMemo(() => {
-              let y = "";
+              let L = "";
               return (
-                f && f.length > v && (y = f[v]),
-                y ||
+                h && h.length > g && (L = h[g]),
+                L ||
                   (console.warn(
                     "MultiSourceImage created with no image src",
-                    c,
-                    v,
+                    d,
+                    g,
                   ),
-                  (y =
+                  (L =
                     "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=")),
-                y
+                L
               );
-            }, [f, v, c]),
-            M = u.useCallback(
-              (y) => {
-                C?.(y, f[v], v);
-                const F = v + 1;
-                F >= f.length && I && I(y), F < f.length && b(F);
+            }, [h, g, d]),
+            A = u.useCallback(
+              (L) => {
+                M?.(L, h[g], g);
+                const F = g + 1;
+                F >= h.length && P && P(L), F < h.length && b(F);
               },
-              [v, I, C, f],
+              [g, P, M, h],
             ),
             m = u.useRef(null);
           return (
             u.useImperativeHandle(
               R,
-              () => ({ imgRef: m, nSourceIndex: v, nSourceLength: f.length }),
-              [m, v, f],
+              () => ({ imgRef: m, nSourceIndex: g, nSourceLength: h.length }),
+              [m, g, h],
             ),
             u.useEffect(() => {
-              const y = m.current;
-              y?.complete && y.naturalWidth == 0 && (y.src = y.src);
+              const L = m.current;
+              L?.complete && L.naturalWidth == 0 && (L.src = L.src);
             }, []),
-            (0, e.jsx)("img", { ref: m, ...G, src: x, onError: M, alt: B }, n)
+            (0, e.jsx)("img", { ref: m, ...G, src: x, onError: A, alt: B }, n)
           );
         }
       },
       27068: (W, D, t) => {
         "use strict";
-        t.r(D), t.d(D, { default: () => p });
+        t.r(D), t.d(D, { default: () => j });
         var e = t(7850),
           u = t(93256),
           T = t(99412),
-          c = t(24660),
-          f = t(72609),
-          C = t(74107),
-          I = t(61431),
+          d = t(24660),
+          h = t(72609),
+          M = t(74107),
+          P = t(61431),
           B = t(21659),
           R = t(3166),
           G = t(85491);
-        function v(g) {
+        function g(r) {
           return (0, R.Qn)()
-            ? (0, e.jsx)(I.p, { ...g })
+            ? (0, e.jsx)(P.p, { ...r })
             : (0, B.c5)()
-              ? (0, e.jsx)(I.p, { ...g, bShowReviewSummary: !0 })
-              : (0, e.jsx)(G.T, { ...g });
+              ? (0, e.jsx)(P.p, { ...r, bShowReviewSummary: !0 })
+              : (0, e.jsx)(G.T, { ...r });
         }
         var b = t(63639),
           O = t(21721),
           n = t(25046),
           a = t(29522),
           x = t(40358),
-          M = t(72865),
+          A = t(72865),
           m = t(64271),
-          y = t(90626),
+          L = t(90626),
           F = t(25792),
           U = t(51079),
           z = t(36707),
           K = t(37882),
           i = t.n(K);
-        function s(g) {
-          const { appid: d, strUrlOverride: S } = g,
-            L = (0, a.$5)(d),
-            { data: _ } = (0, x.J$)(L);
+        function s(r) {
+          const { appid: p, strUrlOverride: E } = r,
+            y = (0, a.$5)(p),
+            { data: _ } = (0, x.J$)(y);
           return (
-            (0, y.useEffect)(() => {
+            (0, L.useEffect)(() => {
               if (_) {
-                const A = `${f.TS.STORE_BASE_URL}${_.store_url_path}`.replace(
+                const I = `${h.TS.STORE_BASE_URL}${_.store_url_path}`.replace(
                   "/app/",
-                  S ?? "/verified/",
+                  E ?? "/verified/",
                 );
-                A != window.location.href &&
-                  window.history.replaceState({}, "", A);
+                I != window.location.href &&
+                  window.history.replaceState({}, "", I);
               }
-            }, [_, S]),
-            !_ || !L
+            }, [_, E]),
+            !_ || !y
               ? null
               : (0, e.jsx)(U.Ay, {
                   method: "verifiedprogram",
                   children: (0, e.jsx)(F.tH, {
-                    children: (0, e.jsx)(r, { id: L }),
+                    children: (0, e.jsx)(l, { id: y }),
                   }),
                 })
           );
         }
-        function o(g) {
-          const { id: d } = g,
-            { data: S } = (0, x.J$)(d),
-            L = `${f.TS.CLAN_CDN_ASSET_URL}images/41316928/846f603df6057b070667f2741730c2038648955d.png`;
+        function c(r) {
+          const { id: p } = r,
+            { data: E } = (0, x.J$)(p),
+            y = `${h.TS.CLAN_CDN_ASSET_URL}images/41316928/846f603df6057b070667f2741730c2038648955d.png`;
           return (0, e.jsxs)(e.Fragment, {
             children: [
               (0, e.jsx)("div", {
                 className: i().Headline,
-                children: C.F5.LocalizeReact(
+                children: M.F5.LocalizeReact(
                   "#VerifiedProgram_DeckTitle",
-                  S?.name,
+                  E?.name,
                   (0, e.jsxs)("span", {
                     className: i().Verified,
                     children: [
                       (0, e.jsx)("img", {
-                        src: L,
-                        alt: C.F5.Localize("#VerifiedProgram_DeckAlt"),
+                        src: y,
+                        alt: M.F5.Localize("#VerifiedProgram_DeckAlt"),
                       }),
-                      C.F5.Localize("#VerifiedProgram_DeckTitle_Verified"),
+                      M.F5.Localize("#VerifiedProgram_DeckTitle_Verified"),
                     ],
                   }),
                 ),
               }),
               (0, e.jsx)("div", {
                 className: i().Subtitle,
-                children: C.F5.LocalizeReact(
+                children: M.F5.LocalizeReact(
                   "#VerifiedProgram_DeckSubTitle",
-                  (0, e.jsx)(c.Ii, {
+                  (0, e.jsx)(d.Ii, {
                     className: i().Link,
-                    href: `${f.TS.STORE_BASE_URL}greatondeck`,
-                    children: C.F5.Localize("#VerifiedProgram_GreatOnDeck"),
+                    href: `${h.TS.STORE_BASE_URL}greatondeck`,
+                    children: M.F5.Localize("#VerifiedProgram_GreatOnDeck"),
                   }),
                 ),
               }),
             ],
           });
         }
-        function r(g) {
-          const { id: d } = g;
+        function l(r) {
+          const { id: p } = r;
           return (0, e.jsxs)("div", {
             className: i().Ctn,
             children: [
-              (0, e.jsx)(h, { id: d }),
+              (0, e.jsx)(o, { id: p }),
               (0, e.jsxs)("div", {
                 className: (0, z.A)("page_content"),
                 children: [
-                  (0, e.jsx)(o, { id: d }),
-                  (0, e.jsx)(P, { id: d }),
-                  (0, e.jsx)(l, { id: d }),
-                  (0, e.jsx)(E, {}),
+                  (0, e.jsx)(c, { id: p }),
+                  (0, e.jsx)(C, { id: p }),
+                  (0, e.jsx)(v, { id: p }),
+                  (0, e.jsx)(f, {}),
                 ],
               }),
             ],
           });
         }
-        function h(g) {
-          const { id: d } = g,
-            { data: S } = (0, x.lv)(d);
-          if (!S) return null;
-          const L =
-            (0, O.b0)(S, "library_hero_2x") ?? (0, O.b0)(S, "library_hero");
+        function o(r) {
+          const { id: p } = r,
+            { data: E } = (0, x.lv)(p);
+          if (!E) return null;
+          const y =
+            (0, O.b0)(E, "library_hero_2x") ?? (0, O.b0)(E, "library_hero");
           return (0, e.jsxs)(e.Fragment, {
             children: [
               (0, e.jsx)("div", {
                 className: i().BackgroundImageCtn,
-                children: (0, e.jsx)("img", { src: L, alt: "" }),
+                children: (0, e.jsx)("img", { src: y, alt: "" }),
               }),
               (0, e.jsx)("div", {
                 className: i().BackgroundImageBlurCtn,
-                children: (0, e.jsx)("img", { src: L, alt: "" }),
+                children: (0, e.jsx)("img", { src: y, alt: "" }),
               }),
             ],
           });
         }
-        function l(g) {
-          const { id: d } = g;
+        function v(r) {
+          const { id: p } = r;
           return (0, e.jsx)("div", {
             className: i().CapsuleWrapper,
-            children: (0, e.jsx)(v, {
-              id: "appid" in d ? d.appid : 0,
+            children: (0, e.jsx)(g, {
+              id: "appid" in p ? p.appid : 0,
               type: "game",
               bShowDeckCompatibilityDialog: !1,
               bShowDemoButton: !0,
@@ -1500,24 +1503,24 @@
             }),
           });
         }
-        function E(g) {
-          const d = (0, M.aL)(
-            `${f.TS.STORE_BASE_URL}steamdeck?utm_source=verifiedpage`,
+        function f(r) {
+          const p = (0, A.aL)(
+            `${h.TS.STORE_BASE_URL}steamdeck?utm_source=verifiedpage`,
             "banner",
           );
-          return (0, e.jsx)(c.Ii, {
-            href: d,
+          return (0, e.jsx)(d.Ii, {
+            href: p,
             className: (0, z.A)(i().HardwareBannerCtn),
-            children: (0, e.jsx)(j, {}),
+            children: (0, e.jsx)(S, {}),
           });
         }
-        function P(g) {
-          const { id: d } = g,
-            { data: S } = (0, x.J$)(d),
-            L = (0, n.TH)(d);
-          if (!L) return null;
-          const _ = `${f.TS.CLAN_CDN_ASSET_URL}images/39049601/8f21143ba4f6331e117568740aa286e975a5afb1.png`,
-            { rgDashTrailers: A, rgHlsTrailers: H } = (0, n.hg)(L);
+        function C(r) {
+          const { id: p } = r,
+            { data: E } = (0, x.J$)(p),
+            y = (0, n.TH)(p);
+          if (!y) return null;
+          const _ = `${h.TS.CLAN_CDN_ASSET_URL}images/39049601/8f21143ba4f6331e117568740aa286e975a5afb1.png`,
+            { rgDashTrailers: I, rgHlsTrailers: J } = (0, n.hg)(y);
           return (0, e.jsxs)("div", {
             className: i().DeviceFullWidthShadow,
             children: [
@@ -1528,46 +1531,46 @@
                     children: (0, e.jsx)("div", {
                       className: i().TrailerCtn,
                       children: (0, e.jsx)(m.P, {
-                        dashManifests: A,
-                        hlsManifest: H[0],
+                        dashManifests: I,
+                        hlsManifest: J[0],
                         screenshot:
-                          L.screenshot_full ?? L.screenshot_medium ?? "",
-                        altText: S?.name ?? "",
+                          y.screenshot_full ?? y.screenshot_medium ?? "",
+                        altText: E?.name ?? "",
                         muteWhenAutoplayBlocked: !0,
                       }),
                     }),
                   }),
                   (0, e.jsx)("img", {
                     src: _,
-                    alt: C.F5.Localize("#VerifiedProgram_DeckDeviceAlt"),
+                    alt: M.F5.Localize("#VerifiedProgram_DeckDeviceAlt"),
                   }),
                 ],
               }),
               (0, e.jsx)("div", {
                 className: i().VideoDisclaimer,
-                children: C.F5.Localize("#VerifiedProgram_DeckDisclaimer"),
+                children: M.F5.Localize("#VerifiedProgram_DeckDisclaimer"),
               }),
             ],
           });
         }
-        function j(g) {
-          const d = (0, B.zI)(),
-            S = (0, T.sfN)(f.TS.LANGUAGE);
+        function S(r) {
+          const p = (0, B.zI)(),
+            E = (0, T.sfN)(h.TS.LANGUAGE);
           return (0, e.jsx)(u.u, {
-            language: S,
-            strAltText: C.F5.Localize("#VerifiedProgram_DeckShopBannerAlt"),
-            strImageToken: d
+            language: E,
+            strAltText: M.F5.Localize("#VerifiedProgram_DeckShopBannerAlt"),
+            strImageToken: p
               ? "{STEAM_CLAN_LOC_IMAGE}/39049601/6e0ec24257ee5ada6e922c2130eaa75ce83747e8.jpg"
               : "{STEAM_CLAN_LOC_IMAGE}/39049601/c18308dc60fd94678bb348608ddc0d6b8fdb11ab.jpg",
           });
         }
-        function p(g) {
+        function j(r) {
           const {
             match: {
-              params: { appid: d },
+              params: { appid: p },
             },
-          } = g;
-          return (0, e.jsx)(s, { appid: Number.parseInt(d) });
+          } = r;
+          return (0, e.jsx)(s, { appid: Number.parseInt(p) });
         }
       },
       37882: (W) => {

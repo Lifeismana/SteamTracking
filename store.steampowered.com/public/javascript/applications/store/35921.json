@@ -163,5 +163,12 @@
     "PersonalCalendar_EmptyDay": "เราไม่มีรายการวางจำหน่ายล่าสุดที่จะแนะนำให้คุณในวันนี้ <1>โปรดดูรายการที่เหลือในปฏิทินของคุณ!</1>",
     "NewBadge": "ใหม่",
     "Time_Today": "วันนี้",
+    "DiscountsAndEvents_Title": "ส่วนลดและกิจกรรม",
+    "DiscountsAndEvents_SeeMore": "ดูเพิ่มเติม",
+    "DiscountsAndEvents_Banner_WeekendDeal": "ข้อเสนอสุดสัปดาห์",
+    "DiscountsAndEvents_Banner_MidweekDeal": "ลดพิเศษกลางสัปดาห์",
+    "DiscountsAndEvents_Banner_DailyDeal": "ข้อเสนอประจำวัน",
+    "DiscountsAndEvents_Banner_LargestDiscount": "ส่วนลดที่มากที่สุด",
+    "DiscountsAndEvents_LoadError": "ไม่สามารถโหลดส่วนลดและกิจกรรมได้ในขณะนี้ โปรดลองใหม่อีกครั้งในภายหลัง",
     "store_ui_dummy": "dont translate"
 }

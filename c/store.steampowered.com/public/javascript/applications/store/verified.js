@@ -823,6 +823,13 @@
           });
         }
         function _(_) {
+          return _.bShowModal
+            ? (0, _.jsx)(_, {
+                ..._,
+              })
+            : null;
+        }
+        function _(_) {
           const { _: _, bShowModal: _, trailerBaseID: _, hideModal: _ } = _,
             { data: _ } = (0, _._)(_),
             _ = (0, _._)(_),

@@ -1021,6 +1021,25 @@
           FriendRequestViewActive: "_1b5xKOUwdrmbb5Ilhlyauo",
           VoiceRequested: "Iqaiqxgmw8WNL2eVIIc7z",
           chatRoomGroupHeader: "LGRmVDj0qJdGjBvCwq4bE",
+          PanelSection: "_1nYwgkJuvMuo1eOOgnXSke",
+          PanelSectionTitle: "_2QwcytuN6SEGA7T1MTAzuc",
+          Text: "_3_IYvsvk7yCygB1Y2iVCSJ",
+          PanelSectionRow: "_1IvPd7AfuU1J7ZSdK6Boy4",
+          Label: "_1PaybOaRPdYPkkEVT8165U",
+          ComingSoon: "L1c10YrzmFEUcYxpDR_RP",
+          QuickAccessNotifications: "_1_sClCY4Cb0G96ecdV90G5",
+          _: "_1r3hDEOMezCiVSiLHc-77i",
+          EmptyNotifications: "kIoY7nVftlkkQY2Pqwxa_",
+          LowBattery: "_2ci-S8FayYDIWGX2HNY-GC",
+          ReallyLow: "_3tgSYha9WGAUYTswMsULtO",
+          LowBatteryGauge: "i7VTuPTNllEMUTT4-ODaL",
+          Remaining: "_3o-SB7MKLHhxIPuJfFSapf",
+          BatterySectionContainer: "_3gOwbbTRqfTgMsiR7AoeCH",
+          BatteryIcon: "_32G-SlL--HCryfwVJF_VTA",
+          BatteryPercentageLabel: "_3n408deIaYOH2gUX0wXyFu",
+          BatteryDetailsLabels: "_2ZpI6_RybI8xZ7rdTzYSvx",
+          BatteryProjectedValue: "_3Po8gZoZqYcDO_RWBcvN6h",
+          BatteryProjectedLabel: "_1hwCDr4-hnjrXc_gnsHTvZ",
           Title: "_2sPGwX7JeMX4eRPkB2GO5k",
           PendingVoiceChats: "_3P2TGAycwIHzDN-lYof62O",
           PendingVoiceChatsList: "T_CxfOHI0pFdBEzVu-kHn",
@@ -1029,13 +1048,15 @@
           FriendVoiceChatSliderContainer: "_2Uf-0Z6C7U0MMzWK80PYzJ",
           SliderPadding: "_2K_pbOhL4q2dc5CCMMYBf7",
           FriendVoiceChatContainer: "_24xAnM5VBtJG2RFN1jye9d",
-          FriendVoiceChat: "_2h67VWTK4yphSgPmZ5hJn",
+          FriendVoiceChatButton: "RHCvO21-SRDmYD70hqbe",
           "ItemFocusAnim-darkerGrey": "lnDGl8nGSvCz839-917-q",
+          ConnectingIndicator: "sqgBaeWk0I-35zudEqKpD",
+          FriendVoiceChat: "_2h67VWTK4yphSgPmZ5hJn",
           GroupVoiceChatContainer: "_3A4u3QQzeiwpDdcyVY9OyW",
+          GroupRoomContainer: "_3s4cTsgc0vLKPOiNOs8ORA",
+          LeaveVoiceChat: "_1PjHmS8lPKM8U0ROnOovkZ",
           GroupContainer: "_3mrWePocrORa6f4J0IBpuf",
           GroupTitle: "_2aE5FfHO9-bXoWGORbslZ9",
-          LeaveVoiceChat: "_1PjHmS8lPKM8U0ROnOovkZ",
-          GroupRoomContainer: "_3s4cTsgc0vLKPOiNOs8ORA",
           ActiveVoiceRoom: "_3ATuV7mdOOEhKb3gIPu2ZT",
           UserInRoom: "_3_EgqsAt7NnxmcSnhp52jC",
           RoomHeader: "W7DiCopm0Ir_LrHcziiwb",
@@ -1176,6 +1197,7 @@
           ActiveCall: "_2Px9ydYEwVpx4Gp9DaJAkn",
           VoiceChatStatusBackground: "_3tZE2UeH95fnDb86wTmCFE",
           IncomingCall: "_1wRN-0fj8676oyIqQzlqa7",
+          NotConnected: "hB8BIMSc5iiY1poeonC0D",
           GroupVoice: "_39_vO56n2dArckePlhZzu9",
           FriendVoice: "_1ggXhygCNNirjAw-M8-IoV",
           BackgroundAnimation: "_2RxCgDLjtwiy_DYHHI9BcA",
@@ -3343,6 +3365,7 @@
           TickActive: "j418S4TEV2LS3JHn6an4s",
           LabelText: "_1eMTvSj5tJlivVheftbZ5S",
           DescriptionValue: "_11I0_AlsB40ak50752rsuy",
+          DescriptionValueText: "_2I8sf9EcaeDafQVkGR4nOC",
           EditableValue: "_3aMlipGagTx2AjSsMP_yZj",
           FakeEditableValue: "_1iWWSmS4pDD1vKNDTkghbh",
           RedBorder: "_2fKVyx5la8VQm8SreJZbjL",
@@ -7053,10 +7076,13 @@
         module.exports = {
           "duration-app-launch": "800ms",
           ControllerConfiguratorBackgroundContainer: "_3NbB0u_Osw6rCPmOlHzLdF",
+          SyncPlaceholderCenter: "_2usCwsThMQzSlOf5Fm4NDe",
+          SyncPlaceholderButton: "_2p_SJtkqpqRxKJndbAld_q",
           ControllerConfiguratorGamepadPage: "_1P8ycqpH6O8KTYk4as8V2O",
           ControllerConfiguratorMain: "APY6jDS50MNUPuX38IgC0",
           ControllerConfigurationActionButtons: "_2sULyQvjazul5EYSVGwl1T",
           Community: "_3XGnRLLtKQHwHt9XQ5JCFX",
+          VRSettingsButtonColumn: "_3FJwgUdHcDIw0JvGPQo-zk",
           ControllerSelectionContainer: "TYpuuReNb2qPgvjWhRNpL",
           Visible: "_1fpxbsuJYWt56w-4AnTiL2",
           TopSection: "_20sN9G_C5kZ9GO_mVUuWTD",
@@ -7072,6 +7098,7 @@
           ControllerSupportInfoSection: "_2q529ACD1lzjGBuZpbSp7O",
           SupportTitle: "_32f4mUbAzCnRxr-yFIrsQW",
           SupportLabel: "_2fNrpCE_Xp5xNOpejG5Krs",
+          VRSupportInfoSection: "_3h8Tnm7djwhw5d8fHlMMRB",
           ControllerImageRow: "_1XoxfJFCf-NNwj07YFdmKM",
           HasADevice: "_3RkZUp2ARA_mqqVR3ofLfe",
           ControllerInfoSVG: "_3RQ_skLh8kGSHw9GM9k5K9",
@@ -7112,6 +7139,7 @@
           NoQuickSettingsLabel: "_13Lwn24SnID_J9X9V5b57e",
           QuickSettingsFieldsContainer: "_3KXWx6W4d1AK_pVdSlbpj6",
           NeedsInstallWarning: "_279diqLoneyyPZVyctKAul",
+          ConfigLoadFailed: "_1tK_tSThJahec5LE8PCqYn",
           ConfigurationHeaderBold: "_2npy-QwFlnyLMK5yWzkDBQ",
           SmallTopButtons: "_1J8XcbGuxRBcFOzbn8K0NE",
           CommunityConfigCalloutPresent: "_1L7YnMgAtYrMlCCKSzrBjN",
@@ -9150,6 +9178,7 @@
           InstructionList: "_1BCbaDEB_TpNjPO_k7sHQz",
           DonglePage: "JeE9-9_EN6oxHwvW9JPIB",
           DongleContent: "pmWoMyWGaVzcFvh_1DfPr",
+          PairingProgress: "_1QtyWskSQDOL4n2IpmgWOY",
           PairingSuccessText: "_2ZyIpim8vIeL-NOayzPfUd",
           GuidedTourFinalDesc: "_1PxSdWK1PXAgUrww-Ves27",
           GuidedTourVideosDesc: "_1MNGHGUt5JKr7FKLK9AbjY",
@@ -17915,6 +17944,7 @@
           TickActive: "QYGphGT9-VInW1bWZmy5y",
           LabelText: "IW6oYqmgQFqmtby0vjH-4",
           DescriptionValue: "_32UKkQuhmS8Wq50hS4B1-m",
+          DescriptionValueText: "_13oMb2SLpUCQ5F2AKwar-k",
           EditableValue: "_1RCQr6jUIflhTYf-OyG0cJ",
           FakeEditableValue: "_2tt9uBUyXzUVCn5TavZfrc",
           RedBorder: "_1Rcvzbe03UsFt6tQ4kOEMW",
@@ -18159,6 +18189,14 @@
           Container: "_3SFRZYIb9Y2q7YsVtB3YKb",
           CollapseIconParent: "ehAsUVkW87U5OHZJohB5N",
           Collapsed: "_2hFLgYbxE-5r06ns3QN334",
+        };
+      },
+      chunkid: (module) => {
+        module.exports = {
+          WifiAPPairingProgress: "_1FqzSTgucjDq4na4kIEFr-",
+          Step: "_2aACF14g0Nqq92YHaVCoMj",
+          Icon: "_20bS6tFAUouZCyrr3pLCwM",
+          Done: "GGOFsqurzXReTGSkJdKah",
         };
       },
       chunkid: (module) => {
@@ -49610,6 +49648,7 @@
           m_StatsTimeout = 0;
           m_bUserHasDeniedMicPermissions = !1;
           m_bOutputMuted = !1;
+          m_bMicMuted = !1;
           static k_MaxPerUserGainMultiplier = 2;
           static k_MaxInputOutputGainValue = 4;
           m_AudioContext = void 0;
@@ -50520,10 +50559,11 @@
               : this.m_VoiceCallState.m_bInitiatedOneOnOneCall;
           }
           ToggleMicMuting() {
+            this.m_bMicMuted = !this.m_bMicMuted;
             for (let _ = 0; _ < this.m_rgAudioStreams.length; ++_) {
               let _ = this.m_rgAudioStreams[_];
               if (_.type == 1) {
-                _.muted = !_.muted;
+                _.muted = this.m_bMicMuted;
                 let _ = _.stream.getTracks();
                 for (let _ = 0; _ < _.length; _++) _[_].enabled = !_.muted;
                 _.muted
@@ -50553,10 +50593,7 @@
             return !0;
           }
           IsMicMuted() {
-            for (let _ = 0; _ < this.m_rgAudioStreams.length; ++_)
-              if (this.m_rgAudioStreams[_].type == 1)
-                return this.m_rgAudioStreams[_].muted;
-            return !1;
+            return this.m_bMicMuted;
           }
           ToggleOutputMuting() {
             this.m_bOutputMuted = !this.m_bOutputMuted;
@@ -51710,7 +51747,13 @@
                 (_.source_node = _),
                 (_.type = 1),
                 (_.accountid = this.m_CMInterface.steamid.GetAccountID()),
-                (_.muted = !1),
+                (_.muted = this.m_bMicMuted),
+                this.m_bMicMuted &&
+                  (_.getAudioTracks().forEach((_) => (_.enabled = !1)),
+                  this.m_MicInputGainNode.gain.setValueAtTime(
+                    0,
+                    this.m_AudioContext.currentTime,
+                  )),
                 (_.elem = void 0),
                 (_.output_gain_node = this.m_AudioContext.createGain()),
                 _.output_gain_node.gain.setValueAtTime(
@@ -53143,6 +53186,7 @@
           _([_._], _.prototype, "m_strPushToTalkDisplayString", 2),
           _([_._], _.prototype, "m_bUserHasDeniedMicPermissions", 2),
           _([_._], _.prototype, "m_bOutputMuted", 2),
+          _([_._], _.prototype, "m_bMicMuted", 2),
           _([_._], _.prototype, "m_AudioContext", 2),
           _([_._], _.prototype, "m_rgAudioStreams", 2),
           _([_._], _.prototype, "m_MicVolumeMeter", 2),
@@ -83924,6 +83968,8 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = "steamdb";
         const _ = (_) => {
             const _ = _.useRef(void 0),
@@ -84254,8 +84300,26 @@
                     _._.k_MaxInputOutputGainValue,
                   ),
             ),
-            _ = _.VoiceChat.GetVoiceInputGain() > 0,
-            _ = _.VoiceChat.GetVoiceOutputGain() > 0;
+            _ = (0, _._)(() => _.VoiceChat.IsMicMuted()),
+            _ = (0, _._)(() => _.VoiceChat.IsOutputMuted()),
+            _ = (0, _._)(() =>
+              _.VoiceChat.BIsAccountFullyConnectedToActiveVoiceChat(
+                _.VoiceChat.GetLocalAccountID(),
+              ),
+            ),
+            _ = _.useRef(50),
+            _ = _.useRef(50);
+          _ > 0 && (_.current = _), _ > 0 && (_.current = _);
+          const _ = () => {
+              _ && _.VoiceChat.GetVoiceInputGain() == 0
+                ? _(_.current)
+                : _.VoiceChat.ToggleMicMuting();
+            },
+            _ = () => {
+              _ && _.VoiceChat.GetVoiceOutputGain() == 0
+                ? _(_.current)
+                : _.VoiceChat.ToggleOutputMuting();
+            };
           if (!_.VoiceChat.IsAnyVoiceActive() || !_)
             return _.length != 0
               ? (0, _.jsx)(_, {
@@ -84280,6 +84344,15 @@
                   },
                   "https://steamloopback.host",
                 );
+            },
+            _ = (_) => {
+              SteamClient.Messaging.PostMessage(
+                "FriendsUI",
+                "OpenFriendChat",
+                JSON.stringify({
+                  accountid: _.accountid,
+                }),
+              );
             },
             _ = "#ffaa17",
             _ = (_) => {
@@ -84308,14 +84381,10 @@
                     onOKActionDescription: (0, _._)(
                       "#VoiceChat_AdjustMicVolume",
                     ),
-                    onSecondaryButton: _
-                      ? () => _.VoiceChat.ToggleMicMuting()
-                      : void 0,
+                    onSecondaryButton: _,
                     onSecondaryActionDescription: _
-                      ? _.VoiceChat.IsMicMuted()
-                        ? (0, _._)("#VoiceChat_UnmuteMic_Deck")
-                        : (0, _._)("#VoiceChat_MuteMic_Deck")
-                      : void 0,
+                      ? (0, _._)("#VoiceChat_UnmuteMic_Deck")
+                      : (0, _._)("#VoiceChat_MuteMic_Deck"),
                     onMenuButton: _,
                     onMenuActionDescription: (0, _._)(
                       "#VoiceChat_GoToAudioSettings",
@@ -84329,7 +84398,7 @@
                       onChange: _,
                       icon: (0, _.jsx)(_.EQ9, {
                         off: _ == 0,
-                        onClick: () => _.VoiceChat.ToggleMicMuting(),
+                        onClick: _,
                       }),
                       className: _().SliderPadding,
                       resetValue: 50,
@@ -84337,15 +84406,18 @@
                         trackForegroundColor: _,
                         side: "right",
                       },
+                      resetValueSecondaryButtonDisabled: !0,
                       showValue: !0,
                       childrenContainerWidth: "max",
                       renderValue: (_) =>
-                        _(
-                          _.VoiceChat.ConvertSliderToGainValue(
-                            _,
-                            _._.k_MaxInputOutputGainValue,
-                          ),
-                        ),
+                        _
+                          ? (0, _._)("#VoiceChat_Muted_Deck")
+                          : _(
+                              _.VoiceChat.ConvertSliderToGainValue(
+                                _,
+                                _._.k_MaxInputOutputGainValue,
+                              ),
+                            ),
                     }),
                   }),
                   (0, _.jsx)(_._, {
@@ -84353,14 +84425,10 @@
                     onOKActionDescription: (0, _._)(
                       "#VoiceChat_AdjustVoiceVolume",
                     ),
-                    onSecondaryButton: _
-                      ? () => _.VoiceChat.ToggleOutputMuting()
-                      : void 0,
+                    onSecondaryButton: _,
                     onSecondaryActionDescription: _
-                      ? _.VoiceChat.IsOutputMuted()
-                        ? (0, _._)("#VoiceChat_UnmuteVoice_Deck")
-                        : (0, _._)("#VoiceChat_MuteVoice_Deck")
-                      : void 0,
+                      ? (0, _._)("#VoiceChat_UnmuteVoice_Deck")
+                      : (0, _._)("#VoiceChat_MuteVoice_Deck"),
                     onMenuButton: _,
                     onMenuActionDescription: (0, _._)(
                       "#VoiceChat_GoToAudioSettings",
@@ -84374,7 +84442,7 @@
                       onChange: _,
                       icon: (0, _.jsx)(_.LeN, {
                         off: _ == 0,
-                        onClick: () => _.VoiceChat.ToggleOutputMuting(),
+                        onClick: _,
                       }),
                       className: _().SliderPadding,
                       resetValue: 50,
@@ -84382,15 +84450,18 @@
                         trackForegroundColor: _,
                         side: "right",
                       },
+                      resetValueSecondaryButtonDisabled: !0,
                       showValue: !0,
                       childrenContainerWidth: "max",
                       renderValue: (_) =>
-                        _(
-                          _.VoiceChat.ConvertSliderToGainValue(
-                            _,
-                            _._.k_MaxInputOutputGainValue,
-                          ),
-                        ),
+                        _
+                          ? (0, _._)("#VoiceChat_Muted_Deck")
+                          : _(
+                              _.VoiceChat.ConvertSliderToGainValue(
+                                _,
+                                _._.k_MaxInputOutputGainValue,
+                              ),
+                            ),
                     }),
                   }),
                   _ &&
@@ -84400,28 +84471,43 @@
                         "FriendVoiceChatContainer",
                       ),
                       children: [
-                        (0, _.jsx)(_._, {
-                          friend: _,
-                          className: (0, _._)(
-                            _().FriendVoiceChat,
-                            _.unread_message_count > 0 && "unreadFriend",
-                          ),
-                          context: {
-                            chat: _,
-                            chatContext: "friendslist",
-                          },
-                          avatarSize: "Medium",
-                          statusPosition: "right",
-                          listStatusIndicator: _,
-                        }),
                         (0, _.jsxs)(_._, {
-                          focusable: !0,
-                          className: _().LeaveVoiceChat,
-                          onActivate: () => _.VoiceChat.OnUserEndVoiceChat(),
+                          className: _().FriendVoiceChatButton,
                           children: [
-                            (0, _.jsx)(_.ETd, {}),
-                            (0, _._)("#VoiceChat_Leave"),
+                            (0, _.jsx)(_._, {
+                              friend: _,
+                              className: (0, _._)(
+                                _().FriendVoiceChat,
+                                _.unread_message_count > 0 && "unreadFriend",
+                              ),
+                              context: {
+                                chat: _,
+                                chatContext: "friendslist",
+                              },
+                              action: _,
+                              avatarSize: "Medium",
+                              statusPosition: "right",
+                              listStatusIndicator: _,
+                            }),
+                            (0, _.jsx)("div", {
+                              className: _().ConnectingIndicator,
+                              children: !_ && (0, _.jsx)(_.Spinner, {}),
+                            }),
                           ],
+                        }),
+                        (0, _.jsx)("div", {
+                          className: _().LeaveVoiceChat,
+                          children: (0, _.jsx)(_._, {
+                            children: (0, _.jsxs)(_._, {
+                              layout: "below",
+                              bottomSeparator: "none",
+                              onClick: () => _.VoiceChat.OnUserEndVoiceChat(),
+                              children: [
+                                (0, _.jsx)(_.ETd, {}),
+                                (0, _._)("#VoiceChat_Leave"),
+                              ],
+                            }),
+                          }),
                         }),
                       ],
                     }),
@@ -84457,14 +84543,19 @@
                           context: _,
                           chatRoom: _,
                         }),
-                        (0, _.jsxs)(_._, {
-                          focusable: !0,
+                        (0, _.jsx)("div", {
                           className: _().LeaveVoiceChat,
-                          onActivate: () => _.VoiceChat.OnUserEndVoiceChat(),
-                          children: [
-                            (0, _.jsx)(_.ETd, {}),
-                            (0, _._)("#VoiceChat_Leave"),
-                          ],
+                          children: (0, _.jsx)(_._, {
+                            children: (0, _.jsxs)(_._, {
+                              layout: "below",
+                              bottomSeparator: "none",
+                              onClick: () => _.VoiceChat.OnUserEndVoiceChat(),
+                              children: [
+                                (0, _.jsx)(_.ETd, {}),
+                                (0, _._)("#VoiceChat_Leave"),
+                              ],
+                            }),
+                          }),
                         }),
                       ],
                     }),
@@ -88318,6 +88409,11 @@
                 _.VoiceChat.IsOutputMuted() ||
                 _.VoiceChat.GetVoiceOutputGain() == 0,
             ),
+            _ = (0, _._)(() =>
+              _.VoiceChat.BIsAccountFullyConnectedToActiveVoiceChat(
+                _.VoiceChat.GetLocalAccountID(),
+              ),
+            ),
             _ = (0, _._)(() => _.FriendChatStore.GetAllChats());
           let _ = !1;
           const _ = (0, _._)(() =>
@@ -88349,6 +88445,7 @@
               _ && _.GroupVoice,
               _ && _.IncomingCall,
               _ && _.CallOnHold,
+              !_ && _.NotConnected,
             );
           let _ = {};
           if (_)
@@ -92982,6 +93079,8 @@
               "k_ERemoteClientLaunchUnauthorized"),
             (_[(_.k_ERemoteClientLaunchCaptureBusy = 30)] =
               "k_ERemoteClientLaunchCaptureBusy"),
+            (_[(_.k_ERemoteClientLaunchRequiresCloudConflictResolution = 31)] =
+              "k_ERemoteClientLaunchRequiresCloudConflictResolution"),
             _
           ))(_ || {});
       },
@@ -98933,7 +99032,7 @@
           _.useEffect(
             () => (
               _.OnMount(_),
-              _.document.hasFocus() && _.OnActivate(_),
+              _.document?.hasFocus() && _.OnActivate(_),
               () => {
                 _.Destroy(_);
               }
@@ -99161,6 +99260,7 @@
               navKey: _,
               noFocusRing: _,
               focusRingSizeElementID: _,
+              focusRingHasBorderRadius: _,
               focusable: _,
               navRef: _,
               actionDescriptionMap: _,
@@ -99188,6 +99288,7 @@
               navKey: _,
               noFocusRing: _,
               focusRingSizeElementID: _,
+              focusRingHasBorderRadius: _,
               focusable: _,
               navRef: _,
               onMoveUp: _,
@@ -100317,6 +100418,7 @@
           };
         class _ extends _._ {
           m_rgControllers = new Map();
+          m_NavController;
           constructor() {
             super(),
               typeof SteamClient < "u" &&
@@ -100394,7 +100496,24 @@
           }
           HandleSystemKeyEvents(_) {
             const _ = _[_.eKey];
-            _ && this.OnSystemButtonPress(_, _.nControllerIndex);
+            if (_) {
+              this.m_NavController?.SetSystemKeyAppIDHint(_.nAppID);
+              try {
+                this.OnSystemButtonPress(_, _.nControllerIndex);
+              } finally {
+                this.m_NavController?.SetSystemKeyAppIDHint(void 0);
+              }
+            }
+          }
+          Init(_) {
+            return (
+              (this.m_NavController = _),
+              {
+                Unregister: () => {
+                  this.m_NavController === _ && (this.m_NavController = void 0);
+                },
+              }
+            );
           }
           OnSystemButtonPress(_, _) {
             this.OnButtonDown(_, _), this.OnButtonUp(_, _);
@@ -101605,7 +101724,7 @@
             return this.GetElementForFocusRingMeasure()?.getBoundingClientRect();
           }
           GetBorderRadiusForFocusRing() {
-            if (!this.m_Properties?.focusRingSizeElementID) return;
+            if (!this.m_Properties?.focusRingHasBorderRadius) return;
             const _ = this.GetElementForFocusRingMeasure();
             if (!_) return;
             const _ = _.ownerDocument?.defaultView?.getComputedStyle(_);
@@ -120274,6 +120393,7 @@
           _: () => _,
           _: () => _,
           _: () => _,
+          _: () => _,
         });
         var _ = "steamdb";
         const _ = 0,
@@ -120312,7 +120432,8 @@
           _ = 37,
           _ = 38,
           _ = 39,
-          _ = 40;
+          _ = 40,
+          _ = 41;
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
@@ -168447,6 +168568,11 @@
                       _: 16005,
                       _: _._.readString,
                       _: _._.writeString,
+                    },
+                    screensaver_while_ingame: {
+                      _: 16006,
+                      _: _._.readBool,
+                      _: _._.writeBool,
                     },
                     game_notes_enable_spellcheck: {
                       _: 17001,
@@ -226442,6 +226568,7 @@
             _: () => _,
             _: () => _,
             _: () => _,
+            _: () => _,
           });
         var _ = {};
         __webpack_require__._(_),
@@ -228196,7 +228323,9 @@
           _ = 4,
           _ = 5,
           _ = 6,
-          _ = 7;
+          _ = 7,
+          _ = 8,
+          _ = 9;
         var _ = "steamdb";
         const _ = 1,
           _ = 2;
@@ -230135,6 +230264,23 @@
                       _: _._.readBool,
                       _: _._.writeBool,
                     },
+                    gaming_device_type: {
+                      _: 16,
+                      _: _._.readInt32,
+                      _: _._.writeInt32,
+                    },
+                    cloud_conflict_resolution: {
+                      _: 17,
+                      _: -1,
+                      _: _._.readInt32,
+                      _: _._.writeInt32,
+                    },
+                    controller_config_conflict_resolution: {
+                      _: 18,
+                      _: -1,
+                      _: _._.readInt32,
+                      _: _._.writeInt32,
+                    },
                   },
                 }),
               _.sm_m
@@ -230325,6 +230471,10 @@
                       _: _._.readBool,
                       _: _._.writeBool,
                     },
+                    cloud_conflict: {
+                      _: 13,
+                      _: _,
+                    },
                   },
                 }),
               _.sm_m
@@ -230365,6 +230515,78 @@
           }
           getClassName() {
             return "CMsgRemoteClientStartStreamResponse";
+          }
+        }
+        class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.appid || _._(_._()),
+              _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    appid: {
+                      _: 1,
+                      _: _._.readUint32,
+                      _: _._.writeUint32,
+                    },
+                    local_time: {
+                      _: 2,
+                      _: _._.readUint32,
+                      _: _._.writeUint32,
+                    },
+                    remote_time: {
+                      _: 3,
+                      _: _._.readUint32,
+                      _: _._.writeUint32,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _._(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _._(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new (_().BinaryReader)(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _._(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new (_().BinaryWriter)();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _._(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new (_().BinaryWriter)();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CMsgRemoteClientStartStreamResponse_CloudConflict";
           }
         }
         class _ extends _.Message {
@@ -230896,6 +231118,11 @@
                       _: _._.readString,
                       _: _._.writeString,
                     },
+                    supports_progress: {
+                      _: 3,
+                      _: _._.readBool,
+                      _: _._.writeBool,
+                    },
                   },
                 }),
               _.sm_m
@@ -230968,6 +231195,26 @@
                       _: 3,
                       _: _._.readString,
                       _: _._.writeString,
+                    },
+                    steps_done: {
+                      _: 4,
+                      _: _._.readInt32,
+                      _: _._.writeInt32,
+                    },
+                    steps_total: {
+                      _: 5,
+                      _: _._.readInt32,
+                      _: _._.writeInt32,
+                    },
+                    step_name: {
+                      _: 6,
+                      _: _._.readString,
+                      _: _._.writeString,
+                    },
+                    estimated_seconds: {
+                      _: 7,
+                      _: _._.readUint32,
+                      _: _._.writeUint32,
                     },
                   },
                 }),
@@ -232309,12 +232556,12 @@
                       _: _._.readBool,
                       _: _._.writeBool,
                     },
-                    pyrowave_custom_bitrate: {
+                    pyrowave_custom_bitrate_OBSOLETE: {
                       _: 36,
                       _: _._.readBool,
                       _: _._.writeBool,
                     },
-                    pyrowave_custom_bitrate_kbps: {
+                    pyrowave_custom_bitrate_kbps_OBSOLETE: {
                       _: 37,
                       _: _._.readInt32,
                       _: _._.writeInt32,
@@ -232328,6 +232575,12 @@
                       _: 39,
                       _: _._.readBool,
                       _: _._.writeBool,
+                    },
+                    pyrowave_bitrate_kbps: {
+                      _: 40,
+                      _: -1,
+                      _: _._.readInt32,
+                      _: _._.writeInt32,
                     },
                   },
                 }),
@@ -267505,6 +267758,114 @@
             return "CVRGamepadUI_Message_ShowPowerMenu_Response";
           }
         }
+        class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.app_id || _._(_._()),
+              _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    app_id: {
+                      _: 1,
+                      _: _._.readUint32,
+                      _: _._.writeUint32,
+                    },
+                    prefers_steam_input: {
+                      _: 2,
+                      _: _._.readBool,
+                      _: _._.writeBool,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _._(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _._(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new (_().BinaryReader)(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _._(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new (_().BinaryWriter)();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _._(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new (_().BinaryWriter)();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CVRGamepadUI_Message_SetAppVRInputPreference_Request";
+          }
+        }
+        class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _
+              ? {
+                  $jspbMessageInstance: _,
+                }
+              : {};
+          }
+          static fromObject(_) {
+            return new _();
+          }
+          static deserializeBinary(_) {
+            let _ = new (_().BinaryReader)(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _;
+          }
+          serializeBinary() {
+            var _ = new (_().BinaryWriter)();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {}
+          serializeBase64String() {
+            var _ = new (_().BinaryWriter)();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CVRGamepadUI_Message_SetAppVRInputPreference_Response";
+          }
+        }
         const _ = {
           "DashboardTabClicked#1": {
             msgClassRequest_t: _,
@@ -267837,6 +268198,11 @@
             msgClassResponse_t: _,
             strMethod: "ShowPowerMenu",
           },
+          "SetAppVRInputPreference#1": {
+            msgClassRequest_t: _,
+            msgClassResponse_t: _,
+            strMethod: "SetAppVRInputPreference",
+          },
         };
         class _ {
           m_Client;
@@ -267848,7 +268214,9 @@
               (this.GetAppIcon = this.GetAppIcon.bind(this)),
               (this.RequestAppQuit = this.RequestAppQuit.bind(this)),
               (this.NavigateInstance = this.NavigateInstance.bind(this)),
-              (this.ShowPowerMenu = this.ShowPowerMenu.bind(this));
+              (this.ShowPowerMenu = this.ShowPowerMenu.bind(this)),
+              (this.SetAppVRInputPreference =
+                this.SetAppVRInputPreference.bind(this));
           }
           ExecuteSteamURL(_, _) {
             return this.m_Client.SendVRGamepadUIRequest(
@@ -267901,6 +268269,14 @@
           ShowPowerMenu(_, _) {
             return this.m_Client.SendVRGamepadUIRequest(
               "ShowPowerMenu#1",
+              _.fromObject(_ ?? {}),
+              _,
+              _,
+            );
+          }
+          SetAppVRInputPreference(_, _) {
+            return this.m_Client.SendVRGamepadUIRequest(
+              "SetAppVRInputPreference#1",
               _.fromObject(_ ?? {}),
               _,
               _,
@@ -332344,6 +332720,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
+          _ = __webpack_require__("chunkid"),
           _ = "steamdb";
         function _(_) {
           const {
@@ -332368,9 +332745,10 @@
             [_, _] = _.useState(!1),
             [_, _] = _.useState(null),
             [_, _] = _.useState(null),
+            _ = (0, _._)(() => _?.visible),
             _ = _.useCallback(() => {
               let _ = _;
-              if (!_ || !_ || !_ || (_ && _ && !_.visible)) return;
+              if (!_ || !_ || !_ || (_ && _ && !_)) return;
               let _ = _.ownerDocument.defaultView;
               if (!_ || _.closed) return;
               (_.style.display = "flex"),
@@ -332441,7 +332819,7 @@
                 _ != _ && _(_),
                 _ != _ && _(_),
                 _ || _(!0);
-            }, [_, _, _, _, _, _, _, _, _, _, _, _, _]);
+            }, [_, _, _, _, _, _, _, _, _, _, _, _, _, _]);
           _.useEffect(() => _(), [_]);
           let _ = Object.assign(
               {
@@ -332450,7 +332828,7 @@
               },
               _,
             ),
-            _ = !_ || _.visible;
+            _ = !_ || _;
           return (0, _.jsx)("div", {
             popover: "manual",
             ref: _,
@@ -356362,8 +356740,13 @@
           _: () => _,
           _: () => _,
           _: () => _,
+          _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -356385,256 +356768,351 @@
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
           };
-        const _ = new _._("VR");
-        class _ {
-          constructor() {
-            (0, _._)(this);
-          }
-          m_rgMutualCapabilities = void 0;
-          m_bHMDPresent = void 0;
-          m_bHMDHardwareDetected = void 0;
-          m_strHMDName = void 0;
-          m_bIsVRRunning = void 0;
-          m_error = void 0;
-          m_eHMDActivityLevel = void 0;
-          m_bVRDeviceSeenRecently = !1;
-          m_unSceneAppID = _._;
-          m_rgTrackedDevices = void 0;
-          m_HMDSerialDetails = void 0;
-          m_bAnyTrackedDeviceHasBattery = void 0;
-          m_VRKeyboardState = {
-            m_bIsOpen: !1,
-            m_eVRKeyboardFlags: 0,
-            m_sInitialKeyboardText: "",
-            m_unOpenForAppID: _._,
-            m_sOpenForOverlayKey: "",
-            m_bDispatchEventsToSteamVR: !1,
-          };
-          m_bSimulatingVROnDesktop = !1;
-          m_mapAffordanceElems = new Map();
-          Init() {
-            SteamClient?.OpenVR?.RegisterForVRHardwareDetected?.(
-              this.OnVRHardwareDetected,
-            ),
-              SteamClient?.OpenVR?.RegisterForVRModeChange?.(
-                this.OnVRModeChanged,
-              ),
-              SteamClient?.OpenVR?.RegisterForVRTrackedDevices?.(
-                this.OnTrackedDevicesChanged,
-              ),
-              SteamClient?.OpenVR?.RegisterForHMDSerialDetails?.(
-                this.OnHMDSerialDetailsChanged,
-              ),
-              SteamClient?.OpenVR?.RegisterForStartupErrors?.(
-                this.OnStartupError,
-              ),
-              SteamClient?.OpenVR?.RegisterForHMDActivityLevelChanged?.(
-                this.OnHMDActivityLevelChanged,
-              ),
-              SteamClient?.OpenVR?.RegisterForVRSceneAppChange?.(
-                this.OnSceneAppChanged,
-              ),
-              SteamClient?.OpenVR?.Device.RegisterForVRDeviceSeenRecently(
-                this.OnVRDeviceSeenRecentlyChanged,
-              ),
-              SteamClient?.OpenVR?.Keyboard.RegisterForStatus?.(
-                this.OnKeyboardStatus,
-              ),
-              _._.Steam.SetImplementation("ExecuteSteamURL", (_) => {
-                _.url?.indexOf("steam://") == 0 &&
-                  SteamClient?.URL?.ExecuteSteamURL(_?.url);
-              }),
-              (0, _._)(() => {
-                const _ = Array.from(this.mutualCapabilities);
-                _.length > 0 &&
-                  _.Info("VR Mutual Capabilities: " + _.join(", "));
-              });
-          }
-          OnVRHardwareDetected(_, _, _) {
-            (this.m_bHMDPresent = _),
-              (this.m_bHMDHardwareDetected = _),
-              (this.m_strHMDName = _);
-          }
-          OnVRModeChanged(_) {
-            (this.m_bIsVRRunning = _), this.UpdateMutualCapabilities();
-          }
-          OnTrackedDevicesChanged(_) {
-            (this.m_rgTrackedDevices = _), this.UpdateTrackedDevicesBatteries();
-          }
-          OnHMDSerialDetailsChanged(_) {
-            this.m_HMDSerialDetails = _;
-          }
-          async UpdateTrackedDevicesBatteries() {
-            for (const _ of this.m_rgTrackedDevices)
-              if (await this.DeviceHasBattery(_)) {
-                this.m_bAnyTrackedDeviceHasBattery = !0;
-                return;
-              }
-            this.m_bAnyTrackedDeviceHasBattery = !1;
-          }
-          async DeviceHasBattery(_) {
-            let _ = !1,
-              _ = !1;
-            try {
-              (_ =
-                await SteamClient?.OpenVR?.DeviceProperties?.GetBoolDeviceProperty?.(
-                  _,
-                  _._.DeviceProvidesBatteryStatus_Bool,
-                )),
-                (_ = await SteamClient?.OpenVR?.Device?.BIsConnected?.(_));
-            } catch {
-              (_ = !1), (_ = !1);
+        const _ = new _._("VR"),
+          _ = class _ {
+            constructor() {
+              (0, _._)(this);
             }
-            return _ && _;
-          }
-          OnStartupError(_, _, _) {
-            let _;
-            _ != _._.k_EVRError_None &&
-              (_ = {
-                eClient: _,
-                eInit: _,
-                strInit: _,
-              }),
-              (this.m_error = _);
-          }
-          OnHMDActivityLevelChanged(_) {
-            this.m_eHMDActivityLevel = _;
-          }
-          OnSceneAppChanged(_) {
-            this.m_unSceneAppID = _;
-          }
-          OnVRDeviceSeenRecentlyChanged(_) {
-            this.m_bVRDeviceSeenRecently = _;
-          }
-          OnKeyboardStatus(_, _, _, _, _, _) {
-            this.m_VRKeyboardState = {
-              m_bIsOpen: _,
-              m_eVRKeyboardFlags: _,
-              m_sInitialKeyboardText: _,
-              m_unOpenForAppID: _,
-              m_sOpenForOverlayKey: _,
-              m_bDispatchEventsToSteamVR: _,
+            m_rgMutualCapabilities = void 0;
+            m_bHMDPresent = void 0;
+            m_bHMDHardwareDetected = void 0;
+            m_strHMDName = void 0;
+            m_bIsVRRunning = void 0;
+            m_error = void 0;
+            m_eHMDActivityLevel = void 0;
+            m_bVRDeviceSeenRecently = !1;
+            m_unSceneAppID = _._;
+            m_rgTrackedDevices = void 0;
+            m_HMDSerialDetails = void 0;
+            m_bAnyTrackedDeviceHasBattery = void 0;
+            m_VRKeyboardState = {
+              m_bIsOpen: !1,
+              m_eVRKeyboardFlags: 0,
+              m_sInitialKeyboardText: "",
+              m_unOpenForAppID: _._,
+              m_sOpenForOverlayKey: "",
+              m_bDispatchEventsToSteamVR: !1,
             };
-          }
-          get IsVRHMDPresent() {
-            return !!(
-              this.m_bSimulatingVROnDesktop ||
-              this.m_bHMDPresent ||
-              this.m_bHMDHardwareDetected
-            );
-          }
-          get CurrentSceneAppID() {
-            return this.m_unSceneAppID;
-          }
-          get HasVRHMDBeenSeen() {
-            return !!this.m_bVRDeviceSeenRecently;
-          }
-          get IsSteamVRRunning() {
-            return this.m_bSimulatingVROnDesktop || !!this.m_bIsVRRunning;
-          }
-          get IsSteamVRRunningAndHMDAwake() {
-            return this.IsSteamVRRunning && this.IsVRHMDAwake;
-          }
-          get TrackedDevices() {
-            return this.m_rgTrackedDevices;
-          }
-          get HMDSerialDetails() {
-            return this.m_HMDSerialDetails;
-          }
-          get GetFrameSerialDetails() {
-            if (this.m_HMDSerialDetails?.eComponentType === _._._)
+            m_bSimulatingVROnDesktop = !1;
+            m_mapAffordanceElems = new Map();
+            m_cloudStorage;
+            m_mapVRInputPreference = new Map();
+            Init() {
+              SteamClient?.OpenVR?.RegisterForVRHardwareDetected?.(
+                this.OnVRHardwareDetected,
+              ),
+                SteamClient?.OpenVR?.RegisterForVRModeChange?.(
+                  this.OnVRModeChanged,
+                ),
+                SteamClient?.OpenVR?.RegisterForVRTrackedDevices?.(
+                  this.OnTrackedDevicesChanged,
+                ),
+                SteamClient?.OpenVR?.RegisterForHMDSerialDetails?.(
+                  this.OnHMDSerialDetailsChanged,
+                ),
+                SteamClient?.OpenVR?.RegisterForStartupErrors?.(
+                  this.OnStartupError,
+                ),
+                SteamClient?.OpenVR?.RegisterForHMDActivityLevelChanged?.(
+                  this.OnHMDActivityLevelChanged,
+                ),
+                SteamClient?.OpenVR?.RegisterForVRSceneAppChange?.(
+                  this.OnSceneAppChanged,
+                ),
+                SteamClient?.OpenVR?.Device.RegisterForVRDeviceSeenRecently(
+                  this.OnVRDeviceSeenRecentlyChanged,
+                ),
+                SteamClient?.OpenVR?.Keyboard.RegisterForStatus?.(
+                  this.OnKeyboardStatus,
+                ),
+                _._.Steam.SetImplementation("ExecuteSteamURL", (_) => {
+                  _.url?.indexOf("steam://") == 0 &&
+                    SteamClient?.URL?.ExecuteSteamURL(_?.url);
+                }),
+                (0, _._)(() => {
+                  const _ = Array.from(this.mutualCapabilities);
+                  _.length > 0 &&
+                    _.Info("VR Mutual Capabilities: " + _.join(", "));
+                }),
+                (0, _._)(this.SyncVRSceneAppInputPreferenceWithSteamVR);
+            }
+            InitAfterLogin(_) {
+              (this.m_cloudStorage = _),
+                this.m_cloudStorage.RegisterForChangeNotifications(
+                  this.OnCloudStorageChanged,
+                ),
+                _._.Steam.SetImplementation("SetAppVRInputPreference", (_) => {
+                  if (!_.app_id)
+                    throw new Error("SetAppVRInputPreference: missing app_id");
+                  this.SetAppPrefersSteamInput(
+                    _.app_id,
+                    !!_?.prefers_steam_input,
+                  );
+                });
+            }
+            static k_strSceneAppInputPreferenceAppIdPath =
+              "/steam/scene_app_input_preference/app_id";
+            static k_strSceneAppInputPreferencePrefersSteamInputPath =
+              "/steam/scene_app_input_preference/prefers_steam_input";
+            BPublisherRecommendsSteamInput(_) {
+              return !!_._.GetAppDetails(_)
+                ?.bSteamInputVRControllerPreferGamepad;
+            }
+            BAppPrefersSteamInput(_) {
+              return (
+                this.GetVRInputPreference(_) ??
+                this.BPublisherRecommendsSteamInput(_)
+              );
+            }
+            SetAppPrefersSteamInput(_, _) {
+              const _ = this.BPublisherRecommendsSteamInput(_);
+              return this.SetVRInputPreference(_, _ == _ ? void 0 : _);
+            }
+            SyncVRSceneAppInputPreferenceWithSteamVR() {
+              if (!_.IsSteamVRRunning || !_.BHasMutualCapability(_._)) return;
+              const _ = _.CurrentSceneAppID;
+              let _ = !1;
+              _ != _._ &&
+                (_._.GetAppDetails(_) || _._.RequestAppDetails(_),
+                (_ = this.BAppPrefersSteamInput(_))),
+                SteamClient.OpenVR?.PathProperties?.SetBoolPathProperty(
+                  _.k_strSceneAppInputPreferencePrefersSteamInputPath,
+                  _,
+                ),
+                SteamClient.OpenVR?.PathProperties?.SetInt32PathProperty(
+                  _.k_strSceneAppInputPreferenceAppIdPath,
+                  _,
+                );
+            }
+            GetVRInputPreference(_) {
+              return this.m_mapVRInputPreference.get(_);
+            }
+            async SetVRInputPreference(_, _) {
+              if (!this.m_cloudStorage) return !1;
+              const _ = _.toString(),
+                _ = (await this.m_cloudStorage.GetObject(_)) || {};
+              if (_.vrsi === _) return !0;
+              _ === void 0 ? delete _.vrsi : (_.vrsi = _),
+                (0, _._)(() => {
+                  _ === void 0
+                    ? this.m_mapVRInputPreference.delete(_)
+                    : this.m_mapVRInputPreference.set(_, _);
+                });
+              try {
+                Object.keys(_).length == 0
+                  ? await this.m_cloudStorage.RemoveObject(_)
+                  : await this.m_cloudStorage.StoreObject(_, _);
+              } catch {
+                return !1;
+              }
+              return !0;
+            }
+            async OnCloudStorageChanged(_, _) {
+              for (let _ of _) {
+                const _ = parseInt(_);
+                if (_) {
+                  let _;
+                  try {
+                    _ = JSON.parse(this.m_cloudStorage.Get(_.toString())).vrsi;
+                  } catch {
+                    _ = void 0;
+                  }
+                  (0, _._)(() => {
+                    _ === void 0
+                      ? this.m_mapVRInputPreference.delete(_)
+                      : this.m_mapVRInputPreference.set(_, _);
+                  });
+                }
+              }
+            }
+            OnVRHardwareDetected(_, _, _) {
+              (this.m_bHMDPresent = _),
+                (this.m_bHMDHardwareDetected = _),
+                (this.m_strHMDName = _);
+            }
+            OnVRModeChanged(_) {
+              (this.m_bIsVRRunning = _), this.UpdateMutualCapabilities();
+            }
+            OnTrackedDevicesChanged(_) {
+              (this.m_rgTrackedDevices = _),
+                this.UpdateTrackedDevicesBatteries();
+            }
+            OnHMDSerialDetailsChanged(_) {
+              this.m_HMDSerialDetails = _;
+            }
+            async UpdateTrackedDevicesBatteries() {
+              for (const _ of this.m_rgTrackedDevices)
+                if (await this.DeviceHasBattery(_)) {
+                  this.m_bAnyTrackedDeviceHasBattery = !0;
+                  return;
+                }
+              this.m_bAnyTrackedDeviceHasBattery = !1;
+            }
+            async DeviceHasBattery(_) {
+              let _ = !1,
+                _ = !1;
+              try {
+                (_ =
+                  await SteamClient?.OpenVR?.DeviceProperties?.GetBoolDeviceProperty?.(
+                    _,
+                    _._.DeviceProvidesBatteryStatus_Bool,
+                  )),
+                  (_ = await SteamClient?.OpenVR?.Device?.BIsConnected?.(_));
+              } catch {
+                (_ = !1), (_ = !1);
+              }
+              return _ && _;
+            }
+            OnStartupError(_, _, _) {
+              let _;
+              _ != _._.k_EVRError_None &&
+                (_ = {
+                  eClient: _,
+                  eInit: _,
+                  strInit: _,
+                }),
+                (this.m_error = _);
+            }
+            OnHMDActivityLevelChanged(_) {
+              this.m_eHMDActivityLevel = _;
+            }
+            OnSceneAppChanged(_) {
+              this.m_unSceneAppID = _;
+            }
+            OnVRDeviceSeenRecentlyChanged(_) {
+              this.m_bVRDeviceSeenRecently = _;
+            }
+            OnKeyboardStatus(_, _, _, _, _, _) {
+              this.m_VRKeyboardState = {
+                m_bIsOpen: _,
+                m_eVRKeyboardFlags: _,
+                m_sInitialKeyboardText: _,
+                m_unOpenForAppID: _,
+                m_sOpenForOverlayKey: _,
+                m_bDispatchEventsToSteamVR: _,
+              };
+            }
+            get IsVRHMDPresent() {
+              return !!(
+                this.m_bSimulatingVROnDesktop ||
+                this.m_bHMDPresent ||
+                this.m_bHMDHardwareDetected
+              );
+            }
+            get CurrentSceneAppID() {
+              return this.m_unSceneAppID;
+            }
+            get HasVRHMDBeenSeen() {
+              return !!this.m_bVRDeviceSeenRecently;
+            }
+            get IsSteamVRRunning() {
+              return this.m_bSimulatingVROnDesktop || !!this.m_bIsVRRunning;
+            }
+            get IsSteamVRRunningAndHMDAwake() {
+              return this.IsSteamVRRunning && this.IsVRHMDAwake;
+            }
+            get TrackedDevices() {
+              return this.m_rgTrackedDevices;
+            }
+            get HMDSerialDetails() {
               return this.m_HMDSerialDetails;
-          }
-          get BAnyTrackedDeviceHasBattery() {
-            return this.m_bAnyTrackedDeviceHasBattery;
-          }
-          get IsSteamVRSimulatedOnDesktop() {
-            return this.m_bSimulatingVROnDesktop;
-          }
-          get IsVRHMDAwake() {
-            return (
-              this.m_bSimulatingVROnDesktop ||
-              this.m_eHMDActivityLevel == _._.UserInteraction
-            );
-          }
-          get VRKeyboardStatus() {
-            const _ =
-              (this.m_VRKeyboardState.m_eVRKeyboardFlags & _._.Minimal) != 0;
-            return {
-              bIsOpen: !!this.m_VRKeyboardState.m_bIsOpen,
-              sInitialText: this.m_VRKeyboardState.m_sInitialKeyboardText,
-              bMinimal: _,
-              bShowArrowKeys:
-                !_ ||
-                (this.m_VRKeyboardState.m_eVRKeyboardFlags &
-                  _._.ShowArrowKeys) !=
+            }
+            get GetFrameSerialDetails() {
+              if (this.m_HMDSerialDetails?.eComponentType === _._._)
+                return this.m_HMDSerialDetails;
+            }
+            get BAnyTrackedDeviceHasBattery() {
+              return this.m_bAnyTrackedDeviceHasBattery;
+            }
+            get IsSteamVRSimulatedOnDesktop() {
+              return this.m_bSimulatingVROnDesktop;
+            }
+            get IsVRHMDAwake() {
+              return (
+                this.m_bSimulatingVROnDesktop ||
+                this.m_eHMDActivityLevel == _._.UserInteraction
+              );
+            }
+            get VRKeyboardStatus() {
+              const _ =
+                (this.m_VRKeyboardState.m_eVRKeyboardFlags & _._.Minimal) != 0;
+              return {
+                bIsOpen: !!this.m_VRKeyboardState.m_bIsOpen,
+                sInitialText: this.m_VRKeyboardState.m_sInitialKeyboardText,
+                bMinimal: _,
+                bShowArrowKeys:
+                  !_ ||
+                  (this.m_VRKeyboardState.m_eVRKeyboardFlags &
+                    _._.ShowArrowKeys) !=
+                    0,
+                bShowDoneKey:
+                  (this.m_VRKeyboardState.m_eVRKeyboardFlags &
+                    _._.HideDoneKey) ==
                   0,
-              bShowDoneKey:
-                (this.m_VRKeyboardState.m_eVRKeyboardFlags & _._.HideDoneKey) ==
-                0,
-              unAppID: this.m_VRKeyboardState.m_unOpenForAppID,
-              sOverlayKey: this.m_VRKeyboardState.m_sOpenForOverlayKey,
-              bDispatchEventsToSteamVR:
-                this.m_VRKeyboardState.m_bDispatchEventsToSteamVR,
-            };
-          }
-          get VRHMDActivityLevel() {
-            return this.m_bSimulatingVROnDesktop
-              ? _._.UserInteraction
-              : this.m_eHMDActivityLevel;
-          }
-          get VRKeyboardDisplayFlags() {
-            return this.m_VRKeyboardState.m_eVRKeyboardFlags;
-          }
-          get error() {
-            return this.m_error;
-          }
-          ClearError() {
-            this.m_error = void 0;
-          }
-          SetSimulatingVROnDesktop(_) {
-            this.m_bSimulatingVROnDesktop = _;
-          }
-          SetInteractionAffordance(_, _, _) {
-            if (_ == null) return;
-            this.m_mapAffordanceElems.has(_) ||
-              this.m_mapAffordanceElems.set(_, new Set());
-            const _ = this.m_mapAffordanceElems.get(_),
-              _ =
+                unAppID: this.m_VRKeyboardState.m_unOpenForAppID,
+                sOverlayKey: this.m_VRKeyboardState.m_sOpenForOverlayKey,
+                bDispatchEventsToSteamVR:
+                  this.m_VRKeyboardState.m_bDispatchEventsToSteamVR,
+              };
+            }
+            get VRHMDActivityLevel() {
+              return this.m_bSimulatingVROnDesktop
+                ? _._.UserInteraction
+                : this.m_eHMDActivityLevel;
+            }
+            get VRKeyboardDisplayFlags() {
+              return this.m_VRKeyboardState.m_eVRKeyboardFlags;
+            }
+            get error() {
+              return this.m_error;
+            }
+            ClearError() {
+              this.m_error = void 0;
+            }
+            SetSimulatingVROnDesktop(_) {
+              this.m_bSimulatingVROnDesktop = _;
+            }
+            SetInteractionAffordance(_, _, _) {
+              if (_ == null) return;
+              this.m_mapAffordanceElems.has(_) ||
+                this.m_mapAffordanceElems.set(_, new Set());
+              const _ = this.m_mapAffordanceElems.get(_),
+                _ =
+                  Array.from(_).filter(
+                    (_) =>
+                      _.ownerDocument.defaultView ==
+                      _.ownerDocument.defaultView,
+                  ).length > 0;
+              _ ? _.add(_) : _.delete(_);
+              const _ =
                 Array.from(_).filter(
                   (_) =>
                     _.ownerDocument.defaultView == _.ownerDocument.defaultView,
                 ).length > 0;
-            _ ? _.add(_) : _.delete(_);
-            const _ =
-              Array.from(_).filter(
-                (_) =>
-                  _.ownerDocument.defaultView == _.ownerDocument.defaultView,
-              ).length > 0;
-            _ != _ &&
-              _.ownerDocument.defaultView?.SteamClient?.OpenVR?.SetOverlayInteractionAffordance(
-                _,
-                _,
-              );
-          }
-          BHasMutualCapability(_) {
-            return this.mutualCapabilities?.includes(_);
-          }
-          get mutualCapabilities() {
-            return this.m_rgMutualCapabilities ?? [];
-          }
-          async UpdateMutualCapabilities() {
-            if (this.IsSteamVRRunning)
-              try {
-                this.m_rgMutualCapabilities =
-                  await SteamClient?.OpenVR?.GetMutualCapabilities();
-              } catch (_) {
-                (this.m_rgMutualCapabilities = void 0),
-                  _.Error("Failed to fetch Mutual Capabilities:", _);
-              }
-            else this.m_rgMutualCapabilities = void 0;
-          }
-        }
+              _ != _ &&
+                _.ownerDocument.defaultView?.SteamClient?.OpenVR?.SetOverlayInteractionAffordance(
+                  _,
+                  _,
+                );
+            }
+            BHasMutualCapability(_) {
+              return this.mutualCapabilities?.includes(_);
+            }
+            get mutualCapabilities() {
+              return this.m_rgMutualCapabilities ?? [];
+            }
+            async UpdateMutualCapabilities() {
+              if (this.IsSteamVRRunning)
+                try {
+                  this.m_rgMutualCapabilities =
+                    await SteamClient?.OpenVR?.GetMutualCapabilities();
+                } catch (_) {
+                  (this.m_rgMutualCapabilities = void 0),
+                    _.Error("Failed to fetch Mutual Capabilities:", _);
+                }
+              else this.m_rgMutualCapabilities = void 0;
+            }
+          };
         _([_._], _.prototype, "m_rgMutualCapabilities", 2),
           _([_._], _.prototype, "m_bHMDPresent", 2),
           _([_._], _.prototype, "m_bHMDHardwareDetected", 2),
@@ -356649,6 +357127,9 @@
           _([_._], _.prototype, "m_bAnyTrackedDeviceHasBattery", 2),
           _([_._], _.prototype, "m_VRKeyboardState", 2),
           _([_._], _.prototype, "m_bSimulatingVROnDesktop", 2),
+          _([_._], _.prototype, "m_mapVRInputPreference", 2),
+          _([_._], _.prototype, "SyncVRSceneAppInputPreferenceWithSteamVR", 1),
+          _([_._], _.prototype, "OnCloudStorageChanged", 1),
           _([_._.bound], _.prototype, "OnVRHardwareDetected", 1),
           _([_._.bound], _.prototype, "OnVRModeChanged", 1),
           _([_._.bound], _.prototype, "OnTrackedDevicesChanged", 1),
@@ -356676,6 +357157,7 @@
           _([_._], _.prototype, "SetSimulatingVROnDesktop", 1),
           _([_._], _.prototype, "SetInteractionAffordance", 1),
           _([_._], _.prototype, "mutualCapabilities", 1);
+        let _ = _;
         function _(_, _) {
           const [_, _] = _.useState(),
             _ = _.useCallback(() => !0, []),
@@ -356720,7 +357202,7 @@
           return (0, _._)(() => _.IsVRHMDPresent);
         }
         function _() {
-          return useObserver(() => _.CurrentSceneAppID);
+          return (0, _._)(() => _.CurrentSceneAppID);
         }
         function _() {
           return (0, _._)(() => _.IsSteamVRRunning);
@@ -356739,6 +357221,9 @@
         }
         function _() {
           _.Init();
+        }
+        function _(_) {
+          _.InitAfterLogin(_);
         }
         function _() {
           return {
@@ -356851,6 +357336,27 @@
           return {
             bConnected: _,
             bHasBattery: _,
+          };
+        }
+        function _(_, _) {
+          const _ = useController(_),
+            _ = _(),
+            _ = _(),
+            _ = useObserver(() => !_.BAppPrefersSteamInput(_)),
+            _ =
+              _(
+                ESteamVRMutualCapability.k_SteamVRMutualCapability_SteamOwnsAppInputPreferences,
+              ) ?? !1,
+            _ = AppStore.GetAppOverviewByAppID(_),
+            _ = BIsVirtualVRGamepad(_?.eControllerType),
+            _ = _ && _ != k_nAppIdInvalid && _ == _,
+            _ = _ && !_ && !!_?.BSupportsVR(),
+            _ = _ && _ && (_ || _);
+          return {
+            bCanToggleVRGamepadMode: _,
+            bAppPrefersVRInput: _,
+            bAppIsActiveVRSceneApp: _,
+            bAppCurrentlyUsingVRInput: _ && _,
           };
         }
         const _ = new _(),
@@ -360380,6 +360886,7 @@
               OnTabChanged: _,
               classNameCtn: _,
               classNameTab: _,
+              focusRingHasBorderRadius: _,
               classNameTabContent: _,
               preferredFocus: _,
               bVerticalTabs: _,
@@ -360431,6 +360938,7 @@
                         tab: _,
                         OnTabClick: _,
                         classNameTab: _,
+                        focusRingHasBorderRadius: _,
                         active: _.key === _.key,
                         preferredFocus: _ === _.key,
                       },
@@ -360484,6 +360992,7 @@
             tab: _,
             OnTabClick: _,
             classNameTab: _,
+            focusRingHasBorderRadius: _,
             active: _,
             preferredFocus: _,
           } = _;
@@ -360503,6 +361012,7 @@
               ),
               onActivate: () => _(_),
               preferredFocus: _,
+              focusRingHasBorderRadius: _,
               children: [
                 !!_.vo_warning &&
                   (0, _.jsx)(_._, {
@@ -360776,6 +361286,7 @@
             autoFocus: _,
             onOpenBlogPost: _,
             eStartingTab: _ = _._,
+            bShowTabs: _ = !0,
           } = _;
           if (!_) return null;
           const _ = () => {
@@ -360888,8 +361399,39 @@
           const _ = (0, _._)(_.resolved_category),
             _ = (0, _._)(_.steamos_resolved_category),
             _ = (0, _._)(_.machine_resolved_category),
-            _ = (0, _._)(_.frame_resolved_category || _._),
-            _ = (_) =>
+            _ = (0, _._)(_.frame_resolved_category || _._);
+          if (!_) {
+            let _ = null;
+            switch (_) {
+              case _._:
+                _ = (0, _.jsx)(_, {
+                  ..._,
+                });
+                break;
+              case _._:
+              case _._:
+                _ = (0, _.jsx)(_, {
+                  ..._,
+                  deckBlogContent: _,
+                });
+                break;
+              case _._:
+                _ = (0, _.jsx)(_, {
+                  ..._,
+                });
+                break;
+              case _._:
+              default:
+                _ = (0, _.jsx)(_, {
+                  ..._,
+                  deckBlogContent: _,
+                });
+            }
+            return (0, _.jsx)(_._, {
+              children: _,
+            });
+          }
+          const _ = (_) =>
               window.sessionStorage.setItem(
                 "steamdeckcompatibility",
                 `?tab=${_.key}`,
@@ -360982,6 +361524,8 @@
             classNameTabContent: _().CompatibilityTabContent,
             startingTab: _.toString(),
             preferredFocus: !0,
+            bDisableRouting: !0,
+            focusRingHasBorderRadius: !0,
           });
         }
         function _(_) {
@@ -364544,10 +365088,8 @@
           const { value: _, children: _, role: _ = "radio", ..._ } = _,
             { value: _, setValue: _, disabled: _ } = _.useContext(_);
           let _ = _;
-          const _ = _.useId(),
-            _ = _ === _;
+          const _ = _ === _;
           return (0, _.jsx)(_._, {
-            focusRingSizeElementID: _.bSetFocusRingSizeElementID ? _ : void 0,
             role: _,
             "aria-checked": _,
             "aria-selected": _,
@@ -366143,6 +366685,7 @@
             if (!this.CanResetToDefault || this.m_eDragMode != 0) return;
             let _;
             (this.m_fLatestUserValue = this.props.resetValue),
+              (this.m_fLatestOnChangeValue = this.props.value),
               this.FireOnChange(this.props.resetValue, _),
               this.m_bInnerSliderHasFocus
                 ? (_ = this.props.resetValue > this.m_fLatestUserValue)
@@ -366189,6 +366732,7 @@
                 renderValue: _,
                 resetValue: _,
                 resetValueAppearance: _ = "top-caret",
+                resetValueSecondaryButtonDisabled: _,
                 showBookendLabels: _,
                 showHandle: _,
                 step: _,
@@ -366221,9 +366765,9 @@
               _ = _ == "top-caret",
               _ = !_,
               _ = _ || _,
-              _ = {};
-            this.CanResetToDefault &&
-              (_[_._.SECONDARY] = (0, _._)("#ResetToDefault"));
+              _ = {},
+              _ = this.CanResetToDefault && !_;
+            _ && (_[_._.SECONDARY] = (0, _._)("#ResetToDefault"));
             let _ = `${_().SliderHandle} SliderHandle`,
               _ = `${_().SliderHandleContainer} SliderHandleContainer `;
             _ == "verticalline"
@@ -366258,10 +366802,8 @@
               childFocusDisabled: _ || !_,
               onContextMenu: this.OnContextMenu,
               onOKButton: _ ? () => _._.PlayNavSound(_._.FailedNav) : void 0,
-              onSecondaryButton: this.CanResetToDefault
-                ? this.ResetToDefault
-                : void 0,
-              onSecondaryActionDescription: this.CanResetToDefault
+              onSecondaryButton: _ ? this.ResetToDefault : void 0,
+              onSecondaryActionDescription: _
                 ? (0, _._)("#ResetToDefault")
                 : void 0,
               actionDescriptionMap: _,
@@ -366529,7 +367071,10 @@
                   (0, _.jsx)("div", {
                     className: _().DescriptionValue,
                     "aria-hidden": !0,
-                    children: _,
+                    children: (0, _.jsx)("span", {
+                      className: _().DescriptionValueText,
+                      children: _,
+                    }),
                   }),
                 ],
               }));
@@ -402426,6 +402971,7 @@ ${_}`;
               uniformSizing: _ = !1,
               batteryCriticalThreshold: _ = 0.2,
               alert: _ = !1,
+              saver: _ = !1,
               className: _,
               forceWhiteChargingBolt: _,
               ..._
@@ -402433,37 +402979,72 @@ ${_}`;
             _ = _ == _._,
             _ = _ == _._,
             _ = _ || _,
+            [_, _] = (0, _._)(),
             _ = (0, _.jsxs)("svg", {
               ..._,
               width: _ ? void 0 : "34px",
               height: _ ? void 0 : "24px",
-              viewBox: _ ? "-4 0 52 36" : "0 0 48 36",
+              viewBox: _ ? "-8 0 52 36" : "0 0 48 36",
               className: _ ? _ : void 0,
               fill: "none",
               xmlns: "http://www.w3.org/2000/svg",
               children: [
-                !_ &&
-                  (0, _.jsx)("path", {
-                    fillRule: "evenodd",
-                    clipRule: "evenodd",
-                    _: "M39 6H0V30H39V22H42V14H39V6ZM36 9H3V27H36V9Z",
-                    fill: "currentColor",
-                  }),
-                (0, _.jsx)("svg", {
-                  _: "6",
-                  _: "12",
-                  width: "27",
-                  height: "12",
-                  children: (0, _.jsx)("rect", {
-                    width: `${_ * 100}%`,
-                    height: "100%",
-                    fill: _ <= _ ? "#E01D79" : "#59BF40",
+                (0, _.jsx)("defs", {
+                  children: (0, _.jsxs)("mask", {
+                    _: _,
+                    children: [
+                      (0, _.jsx)("rect", {
+                        _: "-20",
+                        _: "-20",
+                        width: "100",
+                        height: "100",
+                        fill: "#ffffff",
+                      }),
+                      (0, _.jsx)("path", {
+                        _: "M-2 20C7 22 9.1 28.17 11.18 33.34l-1.89.66l-.95-2.3c-.48.17-.98.3-1.34.3C-4 32 -7 15 -7 15c1 2 8 2.25 13 3.25S13 23.5 13 25.5s-1.75 3.75-1.75 3.75C8 20 -2 20 -2 20",
+                        fill: "none",
+                        stroke: "#000000",
+                        "stroke-width": "6",
+                        "stroke-linecap": "round",
+                        "stroke-linejoin": "round",
+                      }),
+                    ],
                   }),
                 }),
-                (_ || _) &&
-                  (0, _.jsx)("path", {
-                    _: "M16 20L21 11V16H26L21 25V20H16Z",
-                    fill: _ ? "white" : "currentColor",
+                (0, _.jsxs)("g", {
+                  mask: _ ? _ : void 0,
+                  children: [
+                    !_ &&
+                      (0, _.jsx)("path", {
+                        fillRule: "evenodd",
+                        clipRule: "evenodd",
+                        _: "M39 6H0V30H39V22H42V14H39V6ZM36 9H3V27H36V9Z",
+                        fill: "currentColor",
+                      }),
+                    (0, _.jsx)("svg", {
+                      _: "6",
+                      _: "12",
+                      width: "27",
+                      height: "12",
+                      children: (0, _.jsx)("rect", {
+                        width: `${_ * 100}%`,
+                        height: "100%",
+                        fill: _ <= _ ? "#E01D79" : "#59BF40",
+                      }),
+                    }),
+                    (_ || _) &&
+                      (0, _.jsx)("path", {
+                        _: "M16 20L21 11V16H26L21 25V20H16Z",
+                        fill: _ ? "white" : "currentColor",
+                      }),
+                  ],
+                }),
+                _ &&
+                  (0, _.jsx)(_.Fragment, {
+                    children: (0, _.jsx)("path", {
+                      _: "M-2 20C7 22 9.1 28.17 11.18 33.34l-1.89.66l-.95-2.3c-.48.17-.98.3-1.34.3C-4 32 -7 15 -7 15c1 2 8 2.25 13 3.25S13 23.5 13 25.5s-1.75 3.75-1.75 3.75C8 20 -2 20 -2 20",
+                      fill: "#59BF40",
+                    }),
                   }),
                 _ &&
                   (0, _.jsxs)(_.Fragment, {
@@ -402540,39 +403121,75 @@ ${_}`;
               batteryLevel: _,
               uniformSizing: _ = !1,
               alert: _ = !1,
+              saver: _ = !1,
               className: _,
               forceWhiteChargingBolt: _,
             } = _,
+            [_, _] = (0, _._)(),
             _ = (0, _.jsxs)("svg", {
               width: _ ? void 0 : "42",
               height: _ ? void 0 : "36",
-              viewBox: _ ? "-4 0 52 36" : _ ? "0 0 48 36" : "0 0 42 36",
+              viewBox: _ ? "-8 0 52 36" : _ ? "0 0 48 36" : "0 0 42 36",
               className: _ ? _ : void 0,
               fill: "none",
               xmlns: "http://www.w3.org/2000/svg",
               children: [
-                (0, _.jsx)("path", {
-                  _: "M33 24V12L6 12V24H33Z",
-                  fill: "#59BF40",
-                }),
-                !_ &&
-                  (0, _.jsx)("path", {
-                    fillRule: "evenodd",
-                    clipRule: "evenodd",
-                    _: "M0 6H39V14H42V22H39V30H0V6ZM3 9H36V27H3V9Z",
-                    fill: "currentColor",
+                (0, _.jsx)("defs", {
+                  children: (0, _.jsxs)("mask", {
+                    _: _,
+                    children: [
+                      (0, _.jsx)("rect", {
+                        _: "-20",
+                        _: "-20",
+                        width: "100",
+                        height: "100",
+                        fill: "#ffffff",
+                      }),
+                      (0, _.jsx)("path", {
+                        _: "M-2 20C7 22 9.1 28.17 11.18 33.34l-1.89.66l-.95-2.3c-.48.17-.98.3-1.34.3C-4 32 -7 15 -7 15c1 2 8 2.25 13 3.25S13 23.5 13 25.5s-1.75 3.75-1.75 3.75C8 20 -2 20 -2 20",
+                        fill: "none",
+                        stroke: "#000000",
+                        "stroke-width": "6",
+                        "stroke-linecap": "round",
+                        "stroke-linejoin": "round",
+                      }),
+                    ],
                   }),
+                }),
+                (0, _.jsxs)("g", {
+                  mask: _ ? _ : void 0,
+                  children: [
+                    (0, _.jsx)("path", {
+                      _: "M33 24V12L6 12V24H33Z",
+                      fill: "#59BF40",
+                    }),
+                    !_ &&
+                      (0, _.jsx)("path", {
+                        fillRule: "evenodd",
+                        clipRule: "evenodd",
+                        _: "M0 6H39V14H42V22H39V30H0V6ZM3 9H36V27H3V9Z",
+                        fill: "currentColor",
+                      }),
+                    _ &&
+                      (0, _.jsx)("path", {
+                        fillRule: "evenodd",
+                        clipRule: "evenodd",
+                        _: "M38.4774 6H0V30H39V22H42V18.4895C39.6953 17.5151 38.08 15.2509 38.08 12.6132C38.08 11.4277 38.4063 10.3177 38.9747 9.36634L38.4774 6ZM36 9H3V27H36V9Z",
+                        fill: "currentColor",
+                      }),
+                    (0, _.jsx)("path", {
+                      _: "M23.591 13.3334L18.3713 18.8147L16.0198 16.355L14.1665 18.2756L18.3713 22.6667L25.4443 15.254L23.591 13.3334Z",
+                      fill: _ ? "white" : "currentColor",
+                    }),
+                  ],
+                }),
                 _ &&
-                  (0, _.jsx)("path", {
-                    fillRule: "evenodd",
-                    clipRule: "evenodd",
-                    _: "M38.4774 6H0V30H39V22H42V18.4895C39.6953 17.5151 38.08 15.2509 38.08 12.6132C38.08 11.4277 38.4063 10.3177 38.9747 9.36634L38.4774 6ZM36 9H3V27H36V9Z",
-                    fill: "currentColor",
+                  (0, _.jsx)(_.Fragment, {
+                    children: (0, _.jsx)("path", {
+                      _: "M-2 20C7 22 9.1 28.17 11.18 33.34l-1.89.66l-.95-2.3c-.48.17-.98.3-1.34.3C-4 32 -7 15 -7 15c1 2 8 2.25 13 3.25S13 23.5 13 25.5s-1.75 3.75-1.75 3.75C8 20 -2 20 -2 20",
+                      fill: "#59BF40",
+                    }),
                   }),
-                (0, _.jsx)("path", {
-                  _: "M23.591 13.3334L18.3713 18.8147L16.0198 16.355L14.1665 18.2756L18.3713 22.6667L25.4443 15.254L23.591 13.3334Z",
-                  fill: _ ? "white" : "currentColor",
-                }),
                 _ &&
                   (0, _.jsxs)(_.Fragment, {
                     children: [
@@ -419996,7 +420613,7 @@ ${_}`;
         }
         const _ = (0, _.createContext)(!1);
         function _() {
-          return (0, _.useContext)(_);
+          return !0;
         }
         var _ = "steamdb";
         const _ = Intl.DateTimeFormat().resolvedOptions().timeZone,
@@ -420013,6 +420630,7 @@ ${_}`;
         }
         function _() {
           "document" in globalThis &&
+            _ &&
             (document.cookie = `timezoneName=${_};expires=${new Date(Date.now() + 36e5 * 24 * 365).toUTCString()};path=/;Secure;SameSite=None;`);
         }
         _();
@@ -440309,6 +440927,7 @@ Status Code:` +
           _: () => _,
           _: () => _,
           _: () => _,
+          _: () => _,
         });
         var _ = "steamdb";
         function _(_, _) {
@@ -440486,6 +441105,9 @@ Status Code:` +
         function _(_, _) {
           let _ = _.lastIndexOf(_);
           return _ == -1 ? "" : _.substr(_ + _.length);
+        }
+        function _(_) {
+          return !_ || _[0] == '"' ? _ : `"${_}"`;
         }
         function _(_) {
           return atob(_.replace(/-/g, "+").replace(/_/g, "/"));
@@ -443952,6 +444574,7 @@ Status Code:` +
           __webpack_require__._(_, {
             _: () => _,
             _: () => _,
+            _: () => _,
           });
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -443967,7 +444590,8 @@ Status Code:` +
           _ = 1,
           _ = 2,
           _ = 3,
-          _ = 4;
+          _ = 4,
+          _ = 5;
         var _ = "steamdb";
         function _(_) {
           return "unknown EUserConfigStoreNamespace ( " + _ + " )";
@@ -449871,7 +450495,6 @@ Status Code:` +
           _: () => _,
           _: () => _,
           _: () => _,
-          _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -449896,14 +450519,18 @@ Status Code:` +
         function _(_) {
           return _ == _._;
         }
-        const _ = "Steam Deck Stable",
+        const _ = ["Steam Deck Stable", "Steam Frame Hotfix"],
           _ = [
             "Steam Deck Beta",
             "Steam Beta Update",
             "Steam Families Beta",
             "Steam Internal Beta Client",
             "Steam Deck Internal Beta",
+            "Steam Frame Hotfix Preview",
           ];
+        function _(_) {
+          return _.includes(_);
+        }
         function _(_) {
           return _.includes(_);
         }
@@ -449911,7 +450538,7 @@ Status Code:` +
           const _ = (0, _._)()?.vecAvailableClientBetas?.find(
             (_) => _.nBetaID == _,
           );
-          return _ == _._ || _?.strName == _;
+          return _ == _._ || _(_?.strName);
         }
         function _(_) {
           const _ = (0, _._)()?.vecAvailableClientBetas?.find(
@@ -449922,7 +450549,7 @@ Status Code:` +
         function _() {
           const _ = (0, _._)(),
             _ = (0, _._)(),
-            _ = _.vecAvailableClientBetas.find((_) => _.strName == _),
+            _ = _.vecAvailableClientBetas.find((_) => _(_.strName)),
             _ = _.vecAvailableClientBetas.find((_) => _(_.strName)),
             _ = _.useCallback(async () => {
               await _.SelectOSBranch(_._),
@@ -449968,7 +450595,7 @@ Status Code:` +
           return _(_);
         }
         function _() {
-          return (0, _._)()?.bIsInClientBeta;
+          return useSettings()?.bIsInClientBeta;
         }
         function _() {
           const _ = (0, _._)();
@@ -458011,6 +458638,7 @@ Status Code:` +
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
         __webpack_require__._(module_exports, {
+          _: () => _,
           _: () => _,
           _: () => _,
           _: () => _,
@@ -467701,6 +468329,7 @@ Status Code:` +
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = "steamdb";
         function _() {
           const _ = (0, _._)(),
@@ -469146,9 +469775,7 @@ Status Code:` +
               : _?.xbox_controller_support == _._._ &&
                 (_ =
                   "#AppControllerConfiguration_SteamInputTranslation_Desc2_Partial");
-          const _ = () => _(_, _, !1),
-            _ = () => _(_, _, !0),
-            _ =
+          const _ =
               _ == _._ || _ == _._ || _ == _._ || (_ && (_ == _._ || _ == _._)),
             _ =
               !(0, _._)() ||
@@ -469163,15 +469790,10 @@ Status Code:` +
                     _ &&
                     (0, _.jsx)(_._, {
                       label: (0, _._)(_[0]),
-                      description: (0, _.jsx)(_.Fragment, {
-                        children: (0, _._)(_[1]),
-                      }),
-                      onClick: _?.bConfigurationEnabled ? _ : _,
-                      highlightOnFocus: !1,
+                      description: (0, _._)(_[1]),
+                      checked: !!_?.bConfigurationEnabled,
+                      onChange: (_) => _(_, _, _),
                       bottomSeparator: "standard",
-                      children: _?.bConfigurationEnabled
-                        ? (0, _._)("#AppProperties_SteamInputOff")
-                        : (0, _._)("#AppProperties_SteamInputOn"),
                     }),
                   !(0, _._)() &&
                     _ &&
@@ -469238,6 +469860,51 @@ Status Code:` +
             : null;
         }
         function _(_) {
+          const { appid: _, controllerIndex: _ } = _,
+            { bAppPrefersVRInput: _, bAppIsActiveVRSceneApp: _ } = (0, _._)(
+              _,
+              _,
+            ),
+            _ = (0, _._)() && _,
+            _ = (_) => _._.SetAppPrefersSteamInput(_, _),
+            _ = "current.scene.app.binding.list";
+          return (0, _.jsxs)("div", {
+            className: (0, _._)(
+              _.ControllerSupportInfoSection,
+              _.VRSupportInfoSection,
+            ),
+            children: [
+              (0, _.jsx)(_._, {
+                label: (0, _._)("#AppControllerConfiguration_UseGamepadInput"),
+                description: (0, _._)(
+                  "#AppControllerConfiguration_UseGamepadInput_Desc",
+                ),
+                checked: !_,
+                onChange: _,
+                bottomSeparator: "standard",
+              }),
+              _ &&
+                _ &&
+                (0, _.jsx)(_._, {
+                  className: _.ControllerConfigurationActionButtons,
+                  "flow-children": "row",
+                  children: (0, _.jsx)("div", {
+                    className: _.VRSettingsButtonColumn,
+                    children: (0, _.jsx)(_._, {
+                      onClick: () =>
+                        SteamClient.OpenVR?.VROverlay?.SwitchToDashboardOverlay(
+                          _,
+                        ),
+                      children: (0, _._)(
+                        "#AppControllerConfiguration_GoToVRSettings",
+                      ),
+                    }),
+                  }),
+                }),
+            ],
+          });
+        }
+        function _(_) {
           const _ = _._.GetController(_.controllerIndex)?.eControllerType;
           return (0, _.jsxs)("div", {
             className: (0, _._)(
@@ -469274,7 +469941,9 @@ Status Code:` +
             _ = (0, _._)(_),
             _ = (0, _._)() == _.LS$,
             [_, _] = _.useState(!1),
-            _ = _._.GetAppOverviewByAppID(_);
+            _ = _._.GetAppOverviewByAppID(_),
+            { bCanToggleVRGamepadMode: _, bAppCurrentlyUsingVRInput: _ } = (0,
+            _._)(_, _);
           _.useEffect(() => {
             _._.AddInterstitialToQueue({
               eInterstitial: _._.k_eIntro,
@@ -469346,13 +470015,20 @@ Status Code:` +
                             _.length == 0 || (!_ && _?.bConfigurationEnabled),
                           children: [
                             (0, _.jsx)(_, {}),
-                            (0, _.jsx)(_, {
-                              appid: _,
-                              controllerIndex: _,
-                              currentConfig: _,
-                              app: _,
-                            }),
-                            _?.bConfigurationEnabled &&
+                            _ &&
+                              (0, _.jsx)(_, {
+                                appid: _,
+                                controllerIndex: _,
+                              }),
+                            !_ &&
+                              (0, _.jsx)(_, {
+                                appid: _,
+                                controllerIndex: _,
+                                currentConfig: _,
+                                app: _,
+                              }),
+                            !_ &&
+                              _?.bConfigurationEnabled &&
                               (0, _.jsxs)(_.Fragment, {
                                 children: [
                                   (0, _.jsxs)("div", {
@@ -469398,6 +470074,7 @@ Status Code:` +
                           ],
                         }),
                         _ &&
+                          !_ &&
                           (0, _.jsx)(_, {
                             visible: _,
                             children: (0, _.jsx)(_, {
@@ -469416,6 +470093,31 @@ Status Code:` +
                         (0, _._)(
                           "#AppControllerConfiguration_ConfigNeedsGameInstall",
                         ),
+                      ],
+                    }),
+                  !_ &&
+                    _._.BEditingConfigurationLoadFailed &&
+                    !_._.IsUpdatingEditingConfiguration &&
+                    (0, _.jsxs)("div", {
+                      className: _.ConfigLoadFailed,
+                      children: [
+                        (0, _.jsx)(_._, {
+                          children: (0, _._)(
+                            "#ControllerConfigurator_ConfigLoadFailed_Title",
+                          ),
+                        }),
+                        (0, _.jsx)(_._, {
+                          children: (0, _._)(
+                            "#ControllerConfigurator_ConfigLoadFailed_Description",
+                          ),
+                        }),
+                        (0, _.jsx)(_._, {
+                          autoFocus: !0,
+                          onClick: _,
+                          children: (0, _._)(
+                            "#ControllerConfigurator_ConfigLoadFailed_ChooseNew",
+                          ),
+                        }),
                       ],
                     }),
                 ],
@@ -469454,11 +470156,25 @@ Status Code:` +
               className: _.ControllerConfiguratorBackgroundContainer,
               children: (0, _.jsx)("div", {
                 className: _.ControllerConfiguratorMain,
-                children: (0, _.jsx)(_._, {
-                  children: (0, _.jsx)(_._, {
-                    size: "medium",
-                    position: "center",
-                  }),
+                children: (0, _.jsxs)("div", {
+                  className: _.SyncPlaceholderCenter,
+                  children: [
+                    (0, _.jsx)(_._, {
+                      size: "xlarge",
+                      string: (0, _._)(
+                        "#ControllerConfigurator_SyncingCloudFiles",
+                      ),
+                    }),
+                    (0, _.jsx)("div", {
+                      className: _.SyncPlaceholderButton,
+                      children: (0, _.jsx)(_._, {
+                        onClick: _._.SkipCloudSyncWait,
+                        children: (0, _._)(
+                          "#ControllerConfigurator_SkipCloudSyncWait",
+                        ),
+                      }),
+                    }),
+                  ],
                 }),
               }),
             })
@@ -469496,7 +470212,8 @@ Status Code:` +
                         _?.close());
                   };
                   return function () {
-                    _._.SaveEditingConfiguration(_, !1, _);
+                    _._.ClearConfigLoadFailed(),
+                      _._.SaveEditingConfiguration(_, !1, _);
                   };
                 } else return () => {};
               }, [_, _, _, _]),
@@ -490914,6 +491631,8 @@ Status Code:` +
           m_PreviewConfiguration = void 0;
           m_ChordSummaryConfiguration = void 0;
           m_bIsUpdatingActiveConfiguration = !1;
+          m_bEditingConfigurationLoadFailed = !1;
+          m_bSelectedConfigLoadFailed = !1;
           m_nOutstandingConfigurationRequests = 0;
           m_nBatchedUpdateDepth = 0;
           m_pendingEditingConfigUpdate = void 0;
@@ -490932,6 +491651,7 @@ Status Code:` +
           m_controllerList = [];
           m_eConfigSelectionType = _._;
           m_bCloudSavePending = !0;
+          m_bSkipCloudSyncWait = !1;
           m_bRemotePlayConfigPending = !0;
           m_bCloudConflict = !1;
           m_ControllerConfiguratorFocusInput = void 0;
@@ -491056,6 +491776,12 @@ Status Code:` +
               !(!_ || !_?.binding_handle) &&
                 (this.StoreLoadedConfig(_),
                 (this.m_PreviewConfiguration = _?.binding_handle));
+          }
+          get BEditingConfigurationLoadFailed() {
+            return (
+              this.m_bEditingConfigurationLoadFailed ||
+              this.m_bSelectedConfigLoadFailed
+            );
           }
           get IsUpdatingEditingConfiguration() {
             return (
@@ -491251,6 +491977,7 @@ Status Code:` +
           }
           LoadEditingConfiguration(_, _) {
             _.Debug("Loading controller config for appid", _),
+              (this.m_bEditingConfigurationLoadFailed = !1),
               this.EditingConfigurationWillUpdate(),
               this.TrackEditingConfigurationRequest(
                 SteamClient.Input.StartEditingControllerConfigurationForAppIDAndControllerIndex(
@@ -491268,9 +491995,10 @@ Status Code:` +
                       _,
                       _,
                     ),
-                      (0, _._)(() =>
+                      (0, _._)(() => {
                         this.UpdateEditingConfiguration(_, _, null),
-                      );
+                          (this.m_bEditingConfigurationLoadFailed = !0);
+                      });
                   }),
               );
           }
@@ -491366,11 +492094,17 @@ Status Code:` +
                 });
               });
           }
+          ClearConfigLoadFailed() {
+            (this.m_bEditingConfigurationLoadFailed = !1),
+              (this.m_bSelectedConfigLoadFailed = !1);
+          }
           ClearEditingConfiguration() {
-            this.m_EditingConfiguration != null &&
-              this.m_EditingConfiguration != this.m_PreviewConfiguration &&
-              this.m_EditingConfiguration != this.m_ChordSummaryConfiguration &&
-              this.FreeControllerConfiguration(this.m_EditingConfiguration),
+            this.ClearConfigLoadFailed(),
+              this.m_EditingConfiguration != null &&
+                this.m_EditingConfiguration != this.m_PreviewConfiguration &&
+                this.m_EditingConfiguration !=
+                  this.m_ChordSummaryConfiguration &&
+                this.FreeControllerConfiguration(this.m_EditingConfiguration),
               (this.m_EditingConfiguration = void 0),
               (this.m_appId = void 0);
           }
@@ -491813,6 +492547,7 @@ Status Code:` +
           SyncDownControllerConfigs() {
             (this.m_bCloudSavePending = !0),
               (this.m_bCloudConflict = !1),
+              (this.m_bSkipCloudSyncWait = !1),
               SteamClient.Input.SyncCloudedControllerConfigs();
           }
           RequestRemotePlayControllerConfigs(_) {
@@ -491824,10 +492559,12 @@ Status Code:` +
               (this.m_strChooseBindingTab = ""),
               !this.m_bCloudSavePending && !this.m_bCloudConflict
                 ? SteamClient.Input.UploadChangesForCloudedControllerConfigs()
-                : this.m_bCloudConflict &&
-                  SteamClient.Input.DecrementCloudedControllerConfigsCounter(),
+                : SteamClient.Input.DecrementCloudedControllerConfigsCounter(),
               (this.m_appId = void 0),
               (this.m_unControllerIndex = void 0);
+          }
+          SkipCloudSyncWait() {
+            this.m_bSkipCloudSyncWait = !0;
           }
           ResolveControllerConfig(_) {
             (this.m_bCloudSavePending = !1),
@@ -491838,7 +492575,7 @@ Status Code:` +
             return this.m_bCloudConflict;
           }
           get BControllerConfigCloudSyncPending() {
-            return this.m_bCloudSavePending;
+            return this.m_bCloudSavePending && !this.m_bSkipCloudSyncWait;
           }
           get BRemotePlayConfigFetchPending() {
             return this.m_bRemotePlayConfigPending;
@@ -491933,17 +492670,26 @@ Status Code:` +
             this.m_mapCurrentSelectedConfigs.get(_) ||
               this.m_mapCurrentSelectedConfigs.set(_, new Map());
             let _ = this.m_mapCurrentSelectedConfigs.get(_).get(_);
-            return this.m_CurrentEditedConfigSelectedIdx ==
-              this.m_ConfigSelectionChangeIdx && _
-              ? _
-              : ((_ = await SteamClient.Input.GetConfigForAppAndController(
-                  _,
-                  _,
-                )),
-                this.m_mapCurrentSelectedConfigs.get(_) ||
-                  this.m_mapCurrentSelectedConfigs.set(_, new Map()),
-                this.m_mapCurrentSelectedConfigs.get(_).set(_, _),
-                this.m_mapCurrentSelectedConfigs.get(_).get(_));
+            if (
+              this.m_CurrentEditedConfigSelectedIdx ==
+                this.m_ConfigSelectionChangeIdx &&
+              _
+            )
+              return _;
+            (0, _._)(() => (this.m_bSelectedConfigLoadFailed = !1));
+            try {
+              _ = await SteamClient.Input.GetConfigForAppAndController(_, _);
+            } catch (_) {
+              _.Debug("GetConfigForAppAndController rejected", _, _),
+                (0, _._)(() => (this.m_bSelectedConfigLoadFailed = !0));
+              return;
+            }
+            return (
+              this.m_mapCurrentSelectedConfigs.get(_) ||
+                this.m_mapCurrentSelectedConfigs.set(_, new Map()),
+              this.m_mapCurrentSelectedConfigs.get(_).set(_, _),
+              this.m_mapCurrentSelectedConfigs.get(_).get(_)
+            );
           }
           SetActiveConfigForApp(_, _, _, _) {
             _ == _.qho && this.ClearChordSummaryConfiguration(),
@@ -492258,6 +493004,8 @@ Status Code:` +
           _([_._], _.prototype, "m_PreviewConfiguration", 2),
           _([_._], _.prototype, "m_ChordSummaryConfiguration", 2),
           _([_._], _.prototype, "m_bIsUpdatingActiveConfiguration", 2),
+          _([_._], _.prototype, "m_bEditingConfigurationLoadFailed", 2),
+          _([_._], _.prototype, "m_bSelectedConfigLoadFailed", 2),
           _([_._], _.prototype, "m_nOutstandingConfigurationRequests", 2),
           _([_._], _.prototype, "m_nBatchedUpdateDepth", 2),
           _([_._], _.prototype, "m_bChordHintVisible", 2),
@@ -492271,6 +493019,7 @@ Status Code:` +
           _([_._], _.prototype, "m_nVirtualMenuPreviewKey", 2),
           _([_._], _.prototype, "m_controllerList", 2),
           _([_._], _.prototype, "m_bCloudSavePending", 2),
+          _([_._], _.prototype, "m_bSkipCloudSyncWait", 2),
           _([_._], _.prototype, "m_bRemotePlayConfigPending", 2),
           _([_._], _.prototype, "m_bCloudConflict", 2),
           _([_._], _.prototype, "m_ControllerConfiguratorFocusInput", 2),
@@ -492311,6 +493060,7 @@ Status Code:` +
           _([_._.bound], _.prototype, "ReloadEditingConfiguration", 1),
           _([_._.bound], _.prototype, "PreviewConfiguration", 1),
           _([_._.bound], _.prototype, "LoadChordConfig", 1),
+          _([_._.bound], _.prototype, "ClearConfigLoadFailed", 1),
           _([_._.bound], _.prototype, "ClearEditingConfiguration", 1),
           _([_._.bound], _.prototype, "ConvertConfigToSelectionType", 1),
           _([_._.bound], _.prototype, "SaveEditingConfiguration", 1),
@@ -492347,6 +493097,7 @@ Status Code:` +
           _([_._.bound], _.prototype, "SyncDownControllerConfigs", 1),
           _([_._.bound], _.prototype, "RequestRemotePlayControllerConfigs", 1),
           _([_._.bound], _.prototype, "UploadControllerConfigs", 1),
+          _([_._.bound], _.prototype, "SkipCloudSyncWait", 1),
           _([_._.bound], _.prototype, "ResolveControllerConfig", 1),
           _([_._.bound], _.prototype, "SetActiveConfigForApp", 1),
           _([_._.bound], _.prototype, "SetVirtualMenuPreviewKey", 1),
@@ -495146,7 +495897,12 @@ Status Code:` +
               _ = (0, _._)(_),
               _ = _.useId();
             _.useEffect(() => _._.EnsureEditingConfiguration(_, _), [_, _]);
-            const [_, _] = _.useState(),
+            const _ = (0, _._)(
+                _._.GamepadUI.ControllerConfigurator.ChooseConfiguration.Root(
+                  _,
+                ),
+              ),
+              [_, _] = _.useState(),
               _ = (0, _._)(_.useCallback((_) => _(_.contentRect), [_]));
             let _;
             if (
@@ -495239,14 +495995,45 @@ Status Code:` +
                   }),
                 }),
               });
-            if (_) {
-              if (!_?.bConfigurationEnabled)
-                return (0, _.jsx)(_, {
-                  appid: _,
-                  controllerIndex: _,
-                  currentConfig: _,
-                });
-            } else return null;
+            if (
+              _._.BEditingConfigurationLoadFailed &&
+              !_._.EditingConfiguration &&
+              !_._.IsUpdatingEditingConfiguration
+            )
+              return (0, _.jsx)(_._, {
+                padForHeader: !_,
+                padForFooter: !_,
+                headerVisibility: _ ? "default" : "opaque",
+                children: (0, _.jsxs)("div", {
+                  className: _.OptedOutPage,
+                  children: [
+                    (0, _.jsx)(_._, {
+                      children: (0, _._)(
+                        "#ControllerConfigurator_ConfigLoadFailed_Title",
+                      ),
+                    }),
+                    (0, _.jsx)(_._, {
+                      children: (0, _._)(
+                        "#ControllerConfigurator_ConfigLoadFailed_Description",
+                      ),
+                    }),
+                    (0, _.jsx)(_._, {
+                      autoFocus: !0,
+                      onClick: () => _(),
+                      children: (0, _._)(
+                        "#ControllerConfigurator_ConfigLoadFailed_ChooseNew",
+                      ),
+                    }),
+                  ],
+                }),
+              });
+            if (!_ && !_._.PreviewedConfiguration) return null;
+            if (_ && !_.bConfigurationEnabled)
+              return (0, _.jsx)(_, {
+                appid: _,
+                controllerIndex: _,
+                currentConfig: _,
+              });
             const _ = _ + JSON.stringify([_, _]),
               _ = () => _?.NavigateHistory(-1);
             return (0, _.jsxs)(_._, {
@@ -496291,6 +497078,8 @@ Status Code:` +
         }
         function _(_) {
           switch (_) {
+            case _._:
+              return !0;
             case _._:
               return !0;
             case _._:
@@ -498981,6 +499770,7 @@ Status Code:` +
                     (0, _.jsx)(_._, {
                       children: (0, _.jsx)(_._, {
                         onOK: _,
+                        bOKDisabled: _.length == 0,
                         strOKText: (0, _._)("#SteamUI_ValveSurvey_SendSurvey"),
                         onCancel: _,
                       }),
@@ -515864,7 +516654,7 @@ Status Code:` +
                     button: "X",
                     "aria-label": (0, _._)("#GamepadKey_X"),
                   }),
-                (0, _._)("#GuidedTour_Frame_Skip"),
+                _.buttonText ?? (0, _._)("#GuidedTour_Frame_Skip"),
               ],
             }),
           });
@@ -517276,14 +518066,25 @@ Status Code:` +
           const _ = (0, _._)(),
             _ = _.filter((_) => _.bHasUnpairedWifiAP || _.bCanPairViaWifiAP),
             _ = _.length > 0,
-            [_, _] = (0, _.useState)(!1),
-            _ = _.some((_) => _.bConnectedViaWifiAP) && !_,
+            [_, _] = (0, _.useState)(void 0),
+            _ = (0, _._)(_),
+            _ = !!_ && !_.strResult,
+            _ = !!_?.strResult && _.bSucceeded,
+            _ = _?.strResult && !_.bSucceeded ? _.strResult : void 0,
+            [_] = (0, _._)("remote_play_wifi_ap_enabled"),
+            _ = (_.some((_) => _.bConnectedViaWifiAP) && !_) || _ === !1,
             [_, _] = (0, _.useState)(
               (0, _._)("#GuidedTour_FrameUnknownPCName"),
             ),
             _ = (0, _._)();
           if (
             ((0, _._)(_._.PairWifiDongle),
+            (0, _.useEffect)(
+              () => () => {
+                _ && _._.DismissWifiAPPair(_);
+              },
+              [_],
+            ),
             (0, _.useEffect)(() => {
               _ && _.nextPage();
             }, [_, _]),
@@ -517306,9 +518107,16 @@ Status Code:` +
                 },
               );
             },
-            _ = async (_) => {
-              (await SteamClient?.RemotePlay?.PairViaWifiAP(_)) == _._._ &&
-                (_(_[0].clientName), _(!0));
+            _ = (_) => {
+              _(
+                _.find((_) => _.clientId == _)?.clientName ??
+                  (0, _._)("#GuidedTour_FrameUnknownPCName"),
+              ),
+                _(_),
+                _._.PairViaWifiAP(_);
+            },
+            _ = () => {
+              _._.DismissWifiAPPair(_), _(void 0);
             };
           return _
             ? (0, _.jsxs)(_, {
@@ -517343,19 +518151,22 @@ Status Code:` +
               })
             : _
               ? (0, _.jsxs)(_, {
-                  onOk: () => _(_[0].clientId),
+                  onOk: () => null,
                   onCancel: _,
                   children: [
                     (0, _.jsxs)("div", {
                       className: _.TopContent,
                       children: [
                         (0, _.jsx)(_, {
-                          children: (0, _._)("#GuidedTour_PairWithComputer"),
+                          children: (0, _._)("#GuidedTour_PairingWithComputer"),
                         }),
                         (0, _.jsx)(_, {
                           className: _.CenterDesc,
                           children: (0, _._)(
-                            "#GuidedTour_WirelessAdapterDetected",
+                            "#GuidedTour_FramePairingWith",
+                            (0, _.jsx)(_, {
+                              strName: _,
+                            }),
                           ),
                         }),
                       ],
@@ -517364,35 +518175,26 @@ Status Code:` +
                       className: _.DongleContent,
                       children: [
                         (0, _.jsx)(_, {}),
-                        (0, _.jsx)(_, {
-                          strHostComputerName:
-                            _[0]?.clientName ??
-                            (0, _._)("#GuidedTour_FrameUnknownPCName"),
+                        (0, _.jsx)(_._, {
+                          clientId: _,
+                          className: _.PairingProgress,
                         }),
                       ],
                     }),
-                    (0, _.jsxs)(_._, {
+                    (0, _.jsx)(_._, {
                       className: _.ButtonContainer,
                       "flow-children": "row",
-                      children: [
-                        (0, _.jsx)(_, {
-                          buttonAction: _,
-                        }),
-                        (0, _.jsx)(_, {
-                          pairDongle: () => _(_[0].clientId),
-                          nextPage: _.nextPage,
-                          bDisabled: !1,
-                          children: (0, _._)("#GuidedTour_Frame_Pair"),
-                        }),
-                      ],
+                      children: (0, _.jsx)(_, {
+                        buttonAction: _,
+                        buttonText: (0, _._)("#Button_Cancel"),
+                      }),
                     }),
                   ],
                 })
-              : (0, _.jsx)(_, {
-                  onOk: _ && (() => _(_[0].clientId)),
-                  onCancel: _,
-                  children: (0, _.jsxs)(_._, {
-                    className: _.DonglePage,
+              : _
+                ? (0, _.jsxs)(_, {
+                    onOk: () => _(_[0].clientId),
+                    onCancel: _,
                     children: [
                       (0, _.jsxs)("div", {
                         className: _.TopContent,
@@ -517402,15 +518204,22 @@ Status Code:` +
                           }),
                           (0, _.jsx)(_, {
                             className: _.CenterDesc,
-                            children: (0, _._)(
-                              "#GuidedTour_SearchingForWirelessAdapter",
-                            ),
+                            children:
+                              _ ??
+                              (0, _._)("#GuidedTour_WirelessAdapterDetected"),
                           }),
                         ],
                       }),
                       (0, _.jsxs)("div", {
                         className: _.DongleContent,
-                        children: [(0, _.jsx)(_, {}), (0, _.jsx)(_, {})],
+                        children: [
+                          (0, _.jsx)(_, {}),
+                          (0, _.jsx)(_, {
+                            strHostComputerName:
+                              _[0]?.clientName ??
+                              (0, _._)("#GuidedTour_FrameUnknownPCName"),
+                          }),
+                        ],
                       }),
                       (0, _.jsxs)(_._, {
                         className: _.ButtonContainer,
@@ -517422,14 +518231,57 @@ Status Code:` +
                           (0, _.jsx)(_, {
                             pairDongle: () => _(_[0].clientId),
                             nextPage: _.nextPage,
-                            bDisabled: !_,
+                            bDisabled: !1,
                             children: (0, _._)("#GuidedTour_Frame_Pair"),
                           }),
                         ],
                       }),
                     ],
-                  }),
-                });
+                  })
+                : (0, _.jsx)(_, {
+                    onOk: _ && (() => _(_[0].clientId)),
+                    onCancel: _,
+                    children: (0, _.jsxs)(_._, {
+                      className: _.DonglePage,
+                      children: [
+                        (0, _.jsxs)("div", {
+                          className: _.TopContent,
+                          children: [
+                            (0, _.jsx)(_, {
+                              children: (0, _._)(
+                                "#GuidedTour_PairWithComputer",
+                              ),
+                            }),
+                            (0, _.jsx)(_, {
+                              className: _.CenterDesc,
+                              children: (0, _._)(
+                                "#GuidedTour_SearchingForWirelessAdapter",
+                              ),
+                            }),
+                          ],
+                        }),
+                        (0, _.jsxs)("div", {
+                          className: _.DongleContent,
+                          children: [(0, _.jsx)(_, {}), (0, _.jsx)(_, {})],
+                        }),
+                        (0, _.jsxs)(_._, {
+                          className: _.ButtonContainer,
+                          "flow-children": "row",
+                          children: [
+                            (0, _.jsx)(_, {
+                              buttonAction: _,
+                            }),
+                            (0, _.jsx)(_, {
+                              pairDongle: () => _(_[0].clientId),
+                              nextPage: _.nextPage,
+                              bDisabled: !_,
+                              children: (0, _._)("#GuidedTour_Frame_Pair"),
+                            }),
+                          ],
+                        }),
+                      ],
+                    }),
+                  });
         }
         function _(_) {
           const { onComplete: _ } = _;
@@ -518748,19 +519600,19 @@ Status Code:` +
                 (0, _.jsx)(_._, {
                   _: "VRAllGamesButton",
                   value: "AllGames",
-                  bSetFocusRingSizeElementID: !0,
+                  focusRingHasBorderRadius: !0,
                   children: (0, _._)("#Library_FilterCollection_VRSubtabs_All"),
                 }),
                 (0, _.jsx)(_._, {
                   _: "VRGamesOnlyButton",
                   value: "VR",
-                  bSetFocusRingSizeElementID: !0,
+                  focusRingHasBorderRadius: !0,
                   children: (0, _._)("#Library_FilterCollection_VRSubtabs_VR"),
                 }),
                 (0, _.jsx)(_._, {
                   _: "NonVRGamesButton",
                   value: "NonVR",
-                  bSetFocusRingSizeElementID: !0,
+                  focusRingHasBorderRadius: !0,
                   children: (0, _._)(
                     "#Library_FilterCollection_VRSubtabs_NonVR",
                   ),
@@ -518803,13 +519655,13 @@ Status Code:` +
                 (0, _.jsx)(_._, {
                   _: "VRAllGamesButton",
                   value: "All",
-                  bSetFocusRingSizeElementID: !0,
+                  focusRingHasBorderRadius: !0,
                   children: (0, _._)("#Library_FilterCollection_VRSubtabs_All"),
                 }),
                 (0, _.jsx)(_._, {
                   _: "VRGamesOnlyButton",
                   value: "InstalledLocally",
-                  bSetFocusRingSizeElementID: !0,
+                  focusRingHasBorderRadius: !0,
                   children: (0, _._)(
                     "#Library_FilterCollection_VRSubtabs_InstalledLocally",
                   ),
@@ -518817,7 +519669,7 @@ Status Code:` +
                 (0, _.jsx)(_._, {
                   _: "NonVRGamesButton",
                   value: "InstalledRemotely",
-                  bSetFocusRingSizeElementID: !0,
+                  focusRingHasBorderRadius: !0,
                   children: (0, _._)(
                     "#Library_FilterCollection_VRSubtabs_InstalledRemotely",
                   ),
@@ -522716,8 +523568,9 @@ Status Code:` +
           }, [_, _.length]);
         }
         function _(_) {
-          const { onContinue: _, onBack: _, animate: _ } = _;
-          (0, _._)(), _();
+          const { onContinue: _, onBack: _, animate: _ } = _,
+            _ = (0, _._)();
+          (0, _._)(_), _();
           const _ = (0, _._)(),
             _ = (0, _._)(),
             _ = _(_, _),
@@ -528787,7 +529640,6 @@ Status Code:` +
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = "steamdb";
         const _ = 0,
           _ = 1;
@@ -529172,24 +530024,30 @@ Status Code:` +
         }
         var _ = ((_) => (
           (_[(_.Hide = 0)] = "Hide"),
-          (_[(_.NotPresent = 1)] = "NotPresent"),
-          (_[(_.Unpaired = 2)] = "Unpaired"),
-          (_[(_.PairingInProgress = 3)] = "PairingInProgress"),
-          (_[(_.Paired = 4)] = "Paired"),
-          (_[(_.Ready = 5)] = "Ready"),
+          (_[(_.Disabled = 1)] = "Disabled"),
+          (_[(_.NotPresent = 2)] = "NotPresent"),
+          (_[(_.Unpaired = 3)] = "Unpaired"),
+          (_[(_.PairingInProgress = 4)] = "PairingInProgress"),
+          (_[(_.ConnectingInProgress = 5)] = "ConnectingInProgress"),
+          (_[(_.Paired = 6)] = "Paired"),
+          (_[(_.Ready = 7)] = "Ready"),
           _
         ))(_ || {});
         function _(_) {
           switch (_) {
             case 1:
-              return "#QuickAccess_Streaming_WirelessAdapterNotDetected";
+              return "#QuickAccess_Streaming_WirelessAdapterDisabled";
             case 2:
-              return "#QuickAccess_Streaming_WirelessAdapterPairingNeeded";
-            case 4:
-              return "#QuickAccess_Streaming_WirelessAdapterWaiting";
+              return "#QuickAccess_Streaming_WirelessAdapterNotDetected";
             case 3:
+              return "#QuickAccess_Streaming_WirelessAdapterPairingNeeded";
+            case 6:
+              return "#QuickAccess_Streaming_WirelessAdapterWaiting";
+            case 4:
               return "#QuickAccess_Streaming_WirelessAdapterPairingInProgress";
             case 5:
+              return "#QuickAccess_Streaming_WirelessAdapterConnectingInProgress";
+            case 7:
               return "#QuickAccess_Streaming_WirelessAdapterReady";
             default:
               return "";
@@ -529201,8 +530059,10 @@ Status Code:` +
             case 2:
             case 3:
             case 4:
-              return _().NotReady;
             case 5:
+            case 6:
+              return _().NotReady;
+            case 7:
               return _().Ready;
             default:
               return "";
@@ -529228,8 +530088,15 @@ Status Code:` +
         }
         function _(_) {
           const { device: _, bLocked: _, bDevMode: _ } = _,
-            [_, _] = _.useState(!1);
-          (0, _._)(() => _(!1), 18e3, [_]);
+            _ = (0, _._)(_.clientId, !0),
+            _ = !!_ && !_.strResult;
+          _.useEffect(
+            () => () => {
+              _._.GetWifiAPPairState(_.clientId)?.eResult !== void 0 &&
+                _._.DismissWifiAPPair(_.clientId);
+            },
+            [_.clientId],
+          );
           const [_, _] = _.useState(!1),
             _ = (0, _._)(),
             {
@@ -529245,7 +530112,8 @@ Status Code:` +
             }, [_]),
             _ = _.bCanStreamVR && !_,
             _ = _,
-            _ = _.bHasLocalConnection;
+            _ = _.bHasLocalConnection,
+            [_, _] = (0, _._)("remote_play_wifi_ap_enabled");
           let _ = 0;
           {
             const _ = _.bCanPairViaWifiAP,
@@ -529253,15 +530121,21 @@ Status Code:` +
               _ =
                 _.bConnectingViaWifiAP ||
                 (_.bConnectedViaWifiAP && !_.bHasLocalConnection);
-            _ ? (_ = 5) : _ ? (_ = 3) : _ ? (_ = 4) : _ ? (_ = 2) : (_ = 1);
+            _ === !1
+              ? (_ = 1)
+              : _
+                ? (_ = 7)
+                : _
+                  ? (_ = _.bConnecting ? 5 : 4)
+                  : _
+                    ? (_ = 6)
+                    : _
+                      ? (_ = 3)
+                      : (_ = 2);
           }
           const _ = !_ && !_.bHasSteamVRInstalled && _.bHasLocalConnection,
-            _ = async () => {
-              _(!0);
-              const _ = await SteamClient?.RemotePlay?.PairViaWifiAP(
-                _.clientId,
-              );
-              _(_ == _._._);
+            _ = () => {
+              _._.PairViaWifiAP(_.clientId);
             },
             _ = () => {
               _._.InstallApp(_.g5s, _.clientId);
@@ -529328,6 +530202,17 @@ Status Code:` +
                   className: (0, _._)(_().HostStatus, _(_)),
                   children: (0, _._)(_),
                 }),
+              _?.bShowBar &&
+                !_ &&
+                (0, _.jsx)("div", {
+                  className: (0, _._)(
+                    _().HostStatus,
+                    _().SteamVRInstallingProgressBar,
+                  ),
+                  style: {
+                    "--quickaccesspercent": `${_.nPercent}`,
+                  },
+                }),
               _ &&
                 !_ &&
                 (0, _.jsxs)(_.Fragment, {
@@ -529358,7 +530243,17 @@ Status Code:` +
                 (0, _.jsxs)("div", {
                   className: _().HostActions,
                   children: [
-                    _ == 2 &&
+                    _ == 1 &&
+                      (0, _.jsx)("div", {
+                        children: (0, _.jsx)(_._, {
+                          onClick: () => _(!0),
+                          disabled: _,
+                          children: (0, _._)(
+                            "#QuickAccess_Streaming_EnableWirelessAdapter",
+                          ),
+                        }),
+                      }),
+                    _ == 3 &&
                       (0, _.jsx)("div", {
                         children: (0, _.jsx)(_._, {
                           onClick: _,
@@ -529366,6 +530261,14 @@ Status Code:` +
                           children: (0, _._)(
                             "#QuickAccess_Streaming_PairWirelessAdapter",
                           ),
+                        }),
+                      }),
+                    (_ == 4 || _ == 5) &&
+                      (0, _.jsx)("div", {
+                        children: (0, _.jsx)(_._, {
+                          onClick: () => _._.DismissWifiAPPair(_.clientId),
+                          disabled: _,
+                          children: (0, _._)("#Button_Cancel"),
                         }),
                       }),
                     _ &&
@@ -529740,7 +530643,8 @@ Status Code:` +
               })).filter(({ stream: _ }) => _ != null)
             : [];
         }
-        var _ = "steamdb";
+        var _ = __webpack_require__("chunkid"),
+          _ = "steamdb";
         const _ = 0.1,
           _ = 0.25;
         function _() {
@@ -530130,6 +531034,7 @@ Status Code:` +
                   batteryLevel: _.state.flLevel,
                   uniformSizing: _,
                   alert: _.alert,
+                  saver: _.saver,
                   forceWhiteChargingBolt: _,
                 })
               : (0, _.jsx)(_.Battery, {
@@ -530137,6 +531042,7 @@ Status Code:` +
                   batteryLevel: _.state.flLevel,
                   uniformSizing: _,
                   alert: _.alert,
+                  saver: _.saver,
                   forceWhiteChargingBolt: _,
                 });
           return (0, _.jsxs)(_, {
@@ -530257,6 +531163,7 @@ Status Code:` +
                 icon: _,
                 deviceName: _,
                 alert: _.alert,
+                saver: _.saver,
                 sayFull: _ && _.devicePath == _._,
                 neverShowBatteryPercent: _.devicePath != _._,
               });
@@ -530300,6 +531207,7 @@ Status Code:` +
                 hasBattery: _,
                 deviceConnected: _,
                 alert: _,
+                saver: (0, _._)(),
               }),
             }),
             _ = (0, _.jsx)(_._, {
@@ -531053,6 +531961,7 @@ Status Code:` +
           _: () => _,
           _: () => _,
           _: () => _,
+          _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -531266,6 +532175,61 @@ Status Code:` +
             ),
             null
           );
+        }
+        function _(_) {
+          const _ = (0, _._)(),
+            _ = (0, _._)();
+          return (0, _.jsx)(_, {
+            ..._,
+            collapsible: !0,
+            focusedColumn: _,
+            instance: _,
+          });
+        }
+        function _(_) {
+          const {
+              stream: _,
+              visible: _,
+              focusedColumn: _,
+              collapsible: _,
+              instance: _,
+            } = _,
+            _ = _(_),
+            _ = _.useRef(void 0),
+            _ = (0, _._)(),
+            _ = (0, _._)(),
+            _ = _.IsAnyVRWindow(),
+            _ = (0, _._)(
+              _().ScrollMask,
+              _ && _().Collapsible,
+              _ == _._.Controller && _().HideMask,
+              _ && _().KeyBoardVisible,
+              _ && _().KeyBoardUsesIME,
+              _ && _().Visible,
+              _ && _()._,
+            ),
+            _ = (0, _._)(
+              _().AppRunningControls,
+              _ != _._.Menu && _().Collapsed,
+              _ && _().Visible,
+            ),
+            _ = (0, _.jsx)(_.Fragment, {
+              children: (0, _.jsx)(_, {
+                stream: _,
+                navRef: _,
+                collapsible: _,
+              }),
+            });
+          return (0, _.jsx)("div", {
+            className: _,
+            children: (0, _.jsx)(_._, {
+              ref: _,
+              className: _,
+              scrollIntoViewType: _._.NoTransform,
+              resetNavOnEntry: !0,
+              children: _,
+            }),
+          });
         }
         function _(_) {
           const _ = (0, _._)(),
@@ -531602,6 +532566,48 @@ Status Code:` +
                   }),
                 ],
               });
+        }
+        function _(_) {
+          const { stream: _, navRef: _, collapsible: _ } = _,
+            _ = (0, _._)(),
+            _ = (0, _._)(),
+            _ = (0, _._)(
+              _().NavigationColumn,
+              _ && _().Collapsible,
+              _ == _._.NavEntries && _().NavColumnFocused,
+              _ == _._.Controller && _().ControllerColumnFocused,
+            ),
+            _ = (0, _._)(_._.NavEntries),
+            _ = _.useCallback(() => {
+              SteamClient?.RemotePlay?.StopRemoteClientStream(
+                _.m_unGroupID,
+                _.m_steamid,
+                _.m_gameid,
+                _.m_clientid,
+              );
+            }, [_]);
+          if (_?.IsAnyVRWindow()) return null;
+          const _ = _._.GetDeviceName(_.m_clientid) ?? "";
+          return (0, _.jsxs)(_._, {
+            className: _,
+            "flow-children": "column",
+            onFocusWithin: _,
+            navRef: _,
+            children: [
+              (0, _.jsx)("div", {
+                className: _().CurrentGameTitle,
+                children: (0, _._)("#DesktopStream"),
+              }),
+              (0, _.jsx)(_, {
+                children: (0, _.jsx)(_, {
+                  text: (0, _._)("#AppOverlay_StopStreaming"),
+                  disabled: !1,
+                  active: !1,
+                  onActivate: _,
+                }),
+              }),
+            ],
+          });
         }
         function _(_, _) {
           const _ = _?.BrowserWindow;
@@ -532033,6 +533039,11 @@ Status Code:` +
             });
             (0, _._)(_?.GetRenderElement()?.ownerDocument.defaultView);
             const _ = (0, _._)(),
+              _ = (0, _._)(),
+              _ = (0, _._)().filter(
+                (_) => new _._(_.m_gameid).GetAppID() == _.U5N,
+              ),
+              _ = _ != null || (!_ && _.length > 0),
               _ = _(_),
               _ = (0, _._)(),
               { fnOnFocusNavActivated: _, fnOnFocusNavDeactivated: _ } = (0,
@@ -532345,6 +533356,7 @@ Status Code:` +
             _ = (0, _._)(),
             _ = (0, _._)();
           let _ = (0, _._)(),
+            _ = (0, _._)(),
             _ = (0, _._)() != _._.Menu;
           _.useEffect(() => {
             _ && _.current.scrollTo(0, 0);
@@ -532378,6 +533390,12 @@ Status Code:` +
                   loggedIn: _,
                   menuOpen: _,
                 }),
+                _ &&
+                  (0, _.jsx)(_._, {
+                    stream: _,
+                    visible: _,
+                    ownerWindow: _,
+                  }),
                 _ &&
                   (0, _.jsx)(_._, {
                     app: _,
@@ -532419,16 +533437,15 @@ Status Code:` +
         function _(_) {
           const _ = (0, _._)(),
             _ = (0, _._)(),
-            _ = (0, _._)(() => _.GetRunningApps()),
-            _ = !_?.IsAnyVRWindow(),
-            _ = (0, _._)().filter((_) => {
-              const _ = new _._(_.m_gameid);
-              return _ && _.GetAppID() == _.U5N;
-            }),
             _ = (0, _._)(),
             _ = (0, _._)(() => _.GetStoreURL(_)),
             _ = (0, _._)(),
             _ = (0, _._)(),
+            _ = (0, _._)(() => _.GetRunningApps()),
+            _ = (0, _._)().filter((_) => {
+              const _ = new _._(_.m_gameid);
+              return !_ && _.GetAppID() == _.U5N;
+            }),
             _ = (0, _._)(),
             _ = (0, _._)(),
             _ = _.useCallback(() => {
@@ -532636,7 +533653,21 @@ Status Code:` +
             _ = (0, _._)(_._.Menu),
             _ = _(_),
             _ = (0, _._)(),
-            _ = _.useCallback(() => _.SetFocusedApp(null), [_]);
+            _ = _.useCallback(() => {
+              _.SetFocusedApp(null), _.SetFocusedDesktopStream(null);
+            }, [_]),
+            _ = _.useCallback(
+              (_) => {
+                _.SetFocusedApp(_), _.SetFocusedDesktopStream(null);
+              },
+              [_],
+            ),
+            _ = _.useCallback(
+              (_) => {
+                _.SetFocusedApp(null), _.SetFocusedDesktopStream(_);
+              },
+              [_],
+            );
           return (0, _.jsxs)(_._, {
             role: "menu",
             "aria-label": (0, _._)("#MainMenu_Title"),
@@ -532671,7 +533702,7 @@ Status Code:` +
                         _,
                         {
                           ..._,
-                          onGamepadFocus: () => _.SetFocusedApp(_.app),
+                          onGamepadFocus: () => _(_.app),
                         },
                         _,
                       )
@@ -532680,7 +533711,7 @@ Status Code:` +
                           _,
                           {
                             ..._,
-                            onGamepadFocus: _,
+                            onGamepadFocus: () => _(_.stream),
                           },
                           _,
                         )
@@ -532800,8 +533831,10 @@ Status Code:` +
           _: () => _,
           _: () => _,
           _: () => _,
+          _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -532834,6 +533867,7 @@ Status Code:` +
           m_mapSelectedGuide = new _._();
           m_eGamingDeviceType = _.eSB;
           m_focusedApp = null;
+          m_focusedDesktopStream = null;
           m_mapAppControlsLastLocation = new Map();
           m_WindowInstance;
           constructor(_) {
@@ -532848,14 +533882,22 @@ Status Code:` +
             );
           }
           OnRunningAppsChanged() {
-            this.m_WindowInstance.RunningApps.findIndex(
-              (_) => _ == this.m_focusedApp,
-            ) >= 0 || ((this.m_eFocusedColumn = 0), (this.m_focusedApp = null));
+            let _ =
+              this.m_WindowInstance.RunningApps.findIndex(
+                (_) => _ == this.m_focusedApp,
+              ) >= 0;
+            _ || (this.m_focusedApp = null);
             const _ = this.m_WindowInstance.RunningApps.map(
               (_) => _.appid,
             ).filter(Boolean);
             for (const _ of this.m_mapAppControlsLastLocation.keys())
               _.includes(_) || this.m_mapAppControlsLastLocation.delete(_);
+            let _ =
+              _._.remoteClientStreams
+                .filter((_) => new _._(_.m_gameid).GetAppID() == _.U5N)
+                .findIndex((_) => _ == this.m_focusedDesktopStream) >= 0;
+            _ || (this.m_focusedDesktopStream = null),
+              !_ && !_ && (this.m_eFocusedColumn = 0);
           }
           GetRunningApps() {
             return this.m_WindowInstance.RunningApps;
@@ -532877,6 +533919,12 @@ Status Code:` +
           }
           GetFocusedApp() {
             return this.m_focusedApp;
+          }
+          SetFocusedDesktopStream(_) {
+            this.m_focusedDesktopStream = _;
+          }
+          GetFocusedDesktopStream() {
+            return this.m_focusedDesktopStream;
           }
           GetGamingDeviceType() {
             return this.m_eGamingDeviceType;
@@ -532910,6 +533958,7 @@ Status Code:` +
           _([_._], _.prototype, "m_mapSelectedGuide", 2),
           _([_._], _.prototype, "m_eGamingDeviceType", 2),
           _([_._], _.prototype, "m_focusedApp", 2),
+          _([_._], _.prototype, "m_focusedDesktopStream", 2),
           _([_._], _.prototype, "OnRunningAppsChanged", 1);
         function _() {
           const _ = (0, _._)();
@@ -532921,6 +533970,10 @@ Status Code:` +
         function _() {
           const _ = (0, _._)();
           return (0, _._)(() => _.GetFocusedApp());
+        }
+        function _() {
+          const _ = (0, _._)();
+          return (0, _._)(() => _.GetFocusedDesktopStream());
         }
         function _(_) {
           const _ = (0, _._)();
@@ -534991,7 +536044,7 @@ Status Code:` +
                 }),
                 index: _.nXInputIndex,
                 disabled: _,
-                displayedIndex: _ ? "!" : _ + 1,
+                displayedIndex: _ ? "!" : _ ? _ + 1 : _.nXInputIndex + 1,
                 onOptionsButton: () =>
                   SteamClient.Input.IdentifyController(_.nControllerIndex),
                 onOptionsActionDescription: (0, _._)(
@@ -537577,6 +538630,7 @@ Status Code:` +
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = "steamdb",
           _ = ((_) => (
             (_[(_.BackSpace = 65288)] = "BackSpace"),
@@ -538201,6 +539255,31 @@ Status Code:` +
           const _ = _ & 3;
           return (_ === 1 ? 0 : _) | (_ & 4);
         }
+        var _ = ((_) => (
+          (_[(_.Shared = 0)] = "Shared"),
+          (_[(_.LPad = 1)] = "LPad"),
+          (_[(_.RPad = 2)] = "RPad"),
+          (_[(_.Count = 3)] = "Count"),
+          _
+        ))(_ || {});
+        function _(_) {
+          return _ === _._.LPAD ? 1 : _ === _._.RPAD ? 2 : 0;
+        }
+        function _() {
+          return {
+            holdTarget: null,
+            longPressRow: null,
+            longPressCol: null,
+            bSentKey: !1,
+            nTimer: null,
+          };
+        }
+        const _ = 48;
+        function _(_, _, _) {
+          return _.findIndex(
+            (_) => _.longPressRow === _ && _.longPressCol === _,
+          );
+        }
         function _(_) {
           switch (_._.GetKeyboardLayoutSettings().currentLayout) {
             case _._._:
@@ -538281,6 +539360,7 @@ Status Code:` +
             _._,
             {
               className: _,
+              style: _.style,
               onMoveLeft: () => !0,
               onMoveRight: () => !0,
               onMoveUp: () => !0,
@@ -538406,6 +539486,7 @@ Status Code:` +
             parentRow: _,
             parentCol: _,
             bExtendRight: _,
+            style: _,
             nExtendedKeyTouched: _,
             children: _,
             onKeyFocus: _,
@@ -538434,6 +539515,7 @@ Status Code:` +
             _._,
             {
               className: _,
+              style: _,
               onMoveLeft: () => !0,
               onMoveRight: () => !0,
               onMoveUp: () => !0,
@@ -538560,7 +539642,8 @@ Status Code:` +
                 _ = _.FullEmojiList[_.index].key,
                 _ = _.FullEmojiList[_.index].nNumTints === 1,
                 _ = _ ? _(_, _.GetEmojiTint(_.index)) : _,
-                _ = _.longPressRow === _ && _.longPressCol === _,
+                _ = _(_.rgLongPress, _, _),
+                _ = _ >= 0,
                 _ =
                   (_.rgLayoutTouchCount[_] && _.rgLayoutTouchCount[_][_] > 0) ||
                   (_.keyDown.key == _ &&
@@ -538570,8 +539653,8 @@ Status Code:` +
                     : void 0;
               let _ = !0,
                 _;
-              if (_ && _ && _.holdTarget !== null) {
-                const _ = _.holdTarget;
+              if (_ && _ && _.rgLongPress[_].holdTarget !== null) {
+                const _ = _.rgLongPress[_].holdTarget;
                 let _ = _(_),
                   _ = _(_.ownerDocument.body);
                 (_ = _._ < _._),
@@ -538581,10 +539664,11 @@ Status Code:` +
                     parentRow: _,
                     parentCol: _,
                     bExtendRight: _,
+                    style: _.fnExtendedRowStyle(_, _._.Dark - _._.Light + 2, _),
                     nExtendedKeyTouched: _.nExtendedKeyTouched,
                     onKeyFocus: _.onKeyFocus,
                     onKeyHover: _.onKeyHover,
-                    children: _.holdSourceTouchpad,
+                    children: _.fnRenderExtendedRowTouchpad(_),
                   }));
               }
               return (0, _.jsx)(
@@ -538773,7 +539857,13 @@ Status Code:` +
             lastElement: void 0,
           };
           m_nBackspaceTimer = null;
-          m_nLongPressTimer = null;
+          m_rgLongPress = Array.from(
+            {
+              length: 3,
+            },
+            _,
+          );
+          m_nOpenExtendedRows = 0;
           m_mapTouched = new Set();
           constructor(_) {
             super(_),
@@ -538792,10 +539882,12 @@ Status Code:` +
                 curEmojiCategoryIndex: 0,
                 bIsInMultitouch: !1,
                 watchdogTimer: null,
-                holdTarget: null,
-                holdSource: _._.UNKNOWN,
-                longPressRow: null,
-                longPressCol: null,
+                rgLongPress: Array.from(
+                  {
+                    length: 3,
+                  },
+                  _,
+                ),
                 keyDown: {
                   key: null,
                   keyRow: -1,
@@ -538805,7 +539897,6 @@ Status Code:` +
                 bRightTrackpadActive: !1,
                 bLeftTrackpadDown: !1,
                 bRightTrackpadDown: !1,
-                bLongPressSentKey: !1,
                 bShowLayoutName: !1,
                 screenReaderElement: "",
               });
@@ -539114,28 +540205,30 @@ Status Code:` +
                 keyDown: _,
               });
               const _ = "clientX" in _,
+                _ = _ ? _._.MOUSE : _.detail.source,
                 _ = _.hasAttribute("data-extended-chars"),
                 _ = parseFloat(_.getAttribute("data-emoji-index")),
                 _ =
                   _.hasAttribute("data-emoji-index") &&
-                  _._.FullEmojiList[_].nNumTints != 0;
-              if (
-                (this.state.holdTarget &&
-                  (this.TypeKey(this.state.holdTarget),
-                  this.CancelLongPressTimer(),
-                  this.DismissLongPress(),
-                  this.ClearHoldTarget()),
-                _ || _ || _)
-              ) {
-                let _ = _;
-                this.StartLongPressTimer(_, _ ? _._.MOUSE : _.detail.source),
-                  _.addEventListener("mouseleave", this.OnKeyMouseLeave);
-              } else this.TypeKey(_);
-              _.stopPropagation(), _.preventDefault();
+                  _._.FullEmojiList[_].nNumTints != 0,
+                _ = this.LongPressSlot(_);
+              _.holdTarget &&
+                (this.TypeKey(_.holdTarget),
+                this.CancelLongPressTimer(_),
+                this.DismissLongPress(_),
+                this.ClearHoldTarget(_)),
+                _ || _ || _
+                  ? (this.StartLongPressTimer(_, _),
+                    _.addEventListener("mouseleave", this.OnKeyMouseLeave))
+                  : this.TypeKey(_),
+                _.stopPropagation(),
+                _.preventDefault();
             }
           }
           KeyUp(_) {
-            const { target: _ } = _;
+            const { target: _ } = _,
+              _ = "clientX" in _ ? _._.MOUSE : _.detail.source,
+              _ = this.LongPressSlot(_);
             if ((0, _._)(_)) {
               const _ = {
                 key: null,
@@ -539154,18 +540247,18 @@ Status Code:` +
               let _ =
                 _ !== null &&
                 _ !== null &&
-                this.state.longPressRow === _ &&
-                this.state.longPressCol === _;
-              this.state.bLongPressSentKey ||
-                (_ === this.state.holdTarget || _
+                _.longPressRow === _ &&
+                _.longPressCol === _;
+              _.bSentKey ||
+                (_ === _.holdTarget || _
                   ? this.TypeKey(_)
-                  : this.TypeKey(this.state.holdTarget),
+                  : this.TypeKey(_.holdTarget),
                 _.stopPropagation(),
                 _.preventDefault());
             }
-            this.CancelLongPressTimer(),
-              this.DismissLongPress(),
-              this.ClearHoldTarget();
+            this.CancelLongPressTimer(_),
+              this.DismissLongPress(_),
+              this.ClearHoldTarget(_);
           }
           OnMouseDown(_) {
             this.KeyDown(_);
@@ -539250,6 +540343,7 @@ Status Code:` +
                 (_ = this.getElementFromPointWorkaround(
                   this.m_leftTrackpad._,
                   this.m_leftTrackpad._,
+                  _._.LPAD,
                 )),
                   this.setState({
                     bLeftTrackpadDown: _,
@@ -539262,6 +540356,7 @@ Status Code:` +
                 (_ = this.getElementFromPointWorkaround(
                   this.m_rightTrackpad._,
                   this.m_rightTrackpad._,
+                  _._.RPAD,
                 )),
                   this.setState({
                     bRightTrackpadDown: _,
@@ -539407,55 +540502,69 @@ Status Code:` +
               !0
             );
           }
-          LongPressTimerExpired() {
-            if (this.state.holdTarget) {
-              const _ = this.state.holdTarget,
+          LongPressSlot(_) {
+            return this.m_rgLongPress[_(_)];
+          }
+          CommitLongPressState(_) {
+            const _ = this.m_rgLongPress.map((_) => ({
+              holdTarget: _.holdTarget,
+              longPressRow: _.longPressRow,
+              longPressCol: _.longPressCol,
+              bSentKey: _.bSentKey,
+            }));
+            this.setState(
+              {
+                rgLongPress: _,
+              },
+              _,
+            );
+          }
+          LongPressTimerExpired(_) {
+            const _ = this.LongPressSlot(_);
+            if (((_.nTimer = null), _.holdTarget)) {
+              const _ = _.holdTarget,
                 _ = parseFloat(_.getAttribute("data-key-row") || ""),
                 _ = parseFloat(_.getAttribute("data-key-col") || ""),
                 _ = _.getAttribute("data-key") == "Backspace";
-              this.setState({
-                longPressRow: _,
-                longPressCol: _,
-                bLongPressSentKey: _,
-              }),
-                _ || this.m_keyboardNavRef.current.PushState(),
-                _
-                  ? (this.StartLongPressTimer(
-                      this.state.holdTarget,
-                      this.state.holdSource,
-                      !0,
-                    ),
-                    this.TypeKey(_))
-                  : this.CancelLongPressTimer();
+              (_.longPressRow = _),
+                (_.longPressCol = _),
+                (_.bSentKey = _),
+                !_ &&
+                  this.m_nOpenExtendedRows++ === 0 &&
+                  this.m_keyboardNavRef.current.PushState(),
+                this.CommitLongPressState(),
+                _ &&
+                  (this.StartLongPressTimer(_.holdTarget, _, !0),
+                  this.TypeKey(_));
             }
           }
-          DismissLongPress() {
-            const _ =
-              (this.state.longPressRow || this.state.longPressCol) &&
-              !this.state.bLongPressSentKey;
-            this.setState(
-              {
-                longPressRow: null,
-                longPressCol: null,
-                bLongPressSentKey: !1,
-              },
-              _ ? () => this.m_keyboardNavRef.current.PopState() : null,
-            );
+          DismissLongPress(_) {
+            const _ = this.LongPressSlot(_),
+              _ =
+                (_.longPressRow !== null || _.longPressCol !== null) &&
+                !_.bSentKey;
+            (_.longPressRow = null), (_.longPressCol = null), (_.bSentKey = !1);
+            let _ = null;
+            _ &&
+              (--this.m_nOpenExtendedRows === 0
+                ? (_ = () => this.m_keyboardNavRef.current.PopState())
+                : (_ = () => {
+                    this.m_keyboardNavRef.current.PopState(),
+                      this.m_keyboardNavRef.current.PushState();
+                  })),
+              this.CommitLongPressState(_);
           }
           StartLongPressTimer(_, _, _ = !1) {
-            const _ = this.m_nLongPressTimer;
-            _ && window.clearTimeout(_);
-            const _ = window.setTimeout(
-              () => {
-                this.LongPressTimerExpired();
-              },
-              _ ? _.s_longPressRepeatThreshold : _.s_longPressThreshold,
-            );
-            (this.m_nLongPressTimer = _),
-              this.setState({
-                holdTarget: _,
-                holdSource: _,
-              });
+            const _ = this.LongPressSlot(_);
+            _.nTimer && window.clearTimeout(_.nTimer),
+              (_.nTimer = window.setTimeout(
+                () => {
+                  this.LongPressTimerExpired(_);
+                },
+                _ ? _.s_longPressRepeatThreshold : _.s_longPressThreshold,
+              )),
+              (_.holdTarget = _),
+              this.CommitLongPressState();
           }
           StartBackspaceTimer(_ = !1) {
             const _ = this.m_nBackspaceTimer;
@@ -539473,40 +540582,38 @@ Status Code:` +
               this.TypeKeyInternal({
                 strKey: "Backspace",
               }),
-              this.setState({
-                bLongPressSentKey: !0,
-              });
+              this.SetBackspaceButtonSentKey(!0);
           }
           DismissBackpaceTimer() {
-            this.setState({
-              bLongPressSentKey: !1,
-            });
+            this.SetBackspaceButtonSentKey(!1);
+          }
+          SetBackspaceButtonSentKey(_) {
+            (this.LongPressSlot(_._.GAMEPAD).bSentKey = _),
+              this.CommitLongPressState();
           }
           CancelBackpaceTimer() {
             const _ = this.m_nBackspaceTimer;
             _ && clearTimeout(_),
-              this.setState({
-                bLongPressSentKey: !1,
-              }),
+              this.SetBackspaceButtonSentKey(!1),
               (this.m_nBackspaceTimer = null);
           }
           OnKeyMouseLeave(_) {
-            this.CancelLongPressTimer(), this.ClearHoldTarget();
+            this.CancelLongPressTimer(_._.MOUSE),
+              this.ClearHoldTarget(_._.MOUSE);
           }
-          ClearHoldTarget() {
-            this.state.holdTarget &&
-              this.state.holdTarget.removeEventListener(
+          ClearHoldTarget(_) {
+            const _ = this.LongPressSlot(_);
+            _.holdTarget &&
+              _.holdTarget.removeEventListener(
                 "mouseleave",
                 this.OnKeyMouseLeave,
               ),
-              this.setState({
-                holdTarget: null,
-                holdSource: _._.UNKNOWN,
-              });
+              (_.holdTarget = null),
+              this.CommitLongPressState();
           }
-          CancelLongPressTimer() {
-            this.m_nLongPressTimer && clearTimeout(this.m_nLongPressTimer),
-              (this.m_nLongPressTimer = null);
+          CancelLongPressTimer(_) {
+            const _ = this.LongPressSlot(_);
+            _.nTimer && clearTimeout(_.nTimer), (_.nTimer = null);
           }
           ToggleStatesUpdate(_, _, _) {
             const _ = {};
@@ -539527,6 +540634,7 @@ Status Code:` +
             return _;
           }
           UpdateTouchState(_, _) {
+            const _ = this.LongPressSlot(_._.TOUCH);
             let _ = 0,
               _ = [],
               _ = -1,
@@ -539537,10 +540645,7 @@ Status Code:` +
               if ((0, _._)(_)) {
                 const _ = parseFloat(_.getAttribute("data-key-row") || ""),
                   _ = parseFloat(_.getAttribute("data-key-col") || "");
-                if (
-                  this.state.longPressRow !== null &&
-                  this.state.longPressCol !== null
-                ) {
+                if (_.longPressRow !== null && _.longPressCol !== null) {
                   const _ = _.elementFromPoint(_.clientX, _.clientY),
                     _ = _?.hasAttribute("parent-row")
                       ? parseFloat(_?.getAttribute("parent-row") || "")
@@ -539562,8 +540667,9 @@ Status Code:` +
                 _
                   ? (_ === null && (_ = {}), (_[_] = !0))
                   : this.m_mapTouched.has(_) &&
-                    this.state.longPressRow === null &&
-                    this.state.longPressCol === null &&
+                    _.longPressRow === null &&
+                    _.longPressCol === null &&
+                    (_.holdTarget === null || _.holdTarget === _) &&
                     this.StartLongPressTimer(_, _._.TOUCH);
               }
             }
@@ -539589,13 +540695,16 @@ Status Code:` +
               _.eHapticType,
               _.unIntensity,
               _.ndBGain,
-            ),
-              this.state.holdTarget &&
-                (this.TypeKey(this.state.holdTarget),
-                this.CancelLongPressTimer(),
-                this.DismissLongPress(),
-                this.ClearHoldTarget(),
-                this.m_mapTouched.delete(this.state.holdTarget));
+            );
+            const _ = this.LongPressSlot(_._.TOUCH);
+            if (_.holdTarget) {
+              const _ = _.holdTarget;
+              this.TypeKey(_),
+                this.CancelLongPressTimer(_._.TOUCH),
+                this.DismissLongPress(_._.TOUCH),
+                this.ClearHoldTarget(_._.TOUCH),
+                this.m_mapTouched.delete(_);
+            }
             for (let _ = 0; _ < _.changedTouches.length; ++_) {
               const _ = _.changedTouches[_].target;
               (0, _._)(_) && this.m_mapTouched.add(_);
@@ -539604,10 +540713,8 @@ Status Code:` +
               this.UpdateTouchState(_, _.touches);
           }
           HandleTouchMove(_) {
-            if (
-              this.state.longPressRow !== null &&
-              this.state.longPressCol !== null
-            ) {
+            const _ = this.LongPressSlot(_._.TOUCH);
+            if (_.longPressRow !== null && _.longPressCol !== null) {
               if (!(0, _._)(_.target)) return;
               const _ = _.target.ownerDocument;
               if (!_) return;
@@ -539621,12 +540728,13 @@ Status Code:` +
                 : null,
               _ = _.hasAttribute("parent-col")
                 ? parseFloat(_.getAttribute("parent-col") || "")
-                : null;
+                : null,
+              _ = this.LongPressSlot(_._.TOUCH);
             return (
               _ !== null &&
               _ !== null &&
-              this.state.longPressRow === _ &&
-              this.state.longPressCol === _
+              _.longPressRow === _ &&
+              _.longPressCol === _
             );
           }
           HandleTouchEnd(_) {
@@ -539643,16 +540751,16 @@ Status Code:` +
                     const _ = _.getAttribute("data-key");
                     if (_ == null) continue;
                     const _ = _.s_keyToggleData[_];
-                    !this.state.bLongPressSentKey &&
+                    !this.LongPressSlot(_._.TOUCH).bSentKey &&
                       (!_ || !this.state.bIsInMultitouch) &&
                       this.TypeKey(_ ? _ : _);
                   }
                 }
                 this.m_mapTouched.delete(_);
               }
-              this.CancelLongPressTimer(),
-                this.DismissLongPress(),
-                this.ClearHoldTarget(),
+              this.CancelLongPressTimer(_._.TOUCH),
+                this.DismissLongPress(_._.TOUCH),
+                this.ClearHoldTarget(_._.TOUCH),
                 this.UpdateTouchState(_, _.touches),
                 _.preventDefault(),
                 _.stopPropagation();
@@ -539684,61 +540792,43 @@ Status Code:` +
             let _ = [];
             for (let _ = 0; _ < _; ++_) _.push([]);
             let _ = _._.GetRecentEmoji();
-            this.m_emojiCategories.forEach((_, _) => {
-              let _ = 0,
-                _ = _.key === "Recent";
-              const _ =
-                  _ === this.m_emojiCategories.length - 1
-                    ? _._.FullEmojiList.length
-                    : this.m_emojiCategories[_ + 1].startIndex,
-                _ = _ ? _.length : _;
-              for (let _ = 0; _ < _; ++_) {
-                let _ = _.startIndex + _,
-                  _ = 0;
-                for (; _ < _; ) {
-                  const _ = _ ? _[_] : _,
-                    _ = _ + _.startColumn;
-                  let _ = {
-                    index: _,
-                    emoji: _._.FullEmojiList[_],
-                    category: _,
-                    row: _,
-                    column: _,
-                  };
-                  _[_].push(_), (_ += _), _++, (_ = Math.max(_, _));
-                }
-                for (; _ < _; ++_) _[_].push(void 0);
-              }
-            });
-            let _;
             return (
-              this.state.holdSource == _._.LPAD
-                ? (_ = (0, _.jsx)(_, {
-                    className: _().ExtendedRowTrackpad,
-                    pressed: this.state.bLeftTrackpadDown,
-                    input: this.m_trackpadInput,
-                    trackpad: _._.LPAD_TOUCH,
-                    fnCallback: this.OnLeftTrackpadAnalog,
-                  }))
-                : this.state.holdSource == _._.RPAD &&
-                  (_ = (0, _.jsx)(_, {
-                    className: _().ExtendedRowTrackpad,
-                    pressed: this.state.bRightTrackpadDown,
-                    input: this.m_trackpadInput,
-                    trackpad: _._.RPAD_TOUCH,
-                    fnCallback: this.OnRightTrackpadAnalog,
-                  })),
+              this.m_emojiCategories.forEach((_, _) => {
+                let _ = 0,
+                  _ = _.key === "Recent";
+                const _ =
+                    _ === this.m_emojiCategories.length - 1
+                      ? _._.FullEmojiList.length
+                      : this.m_emojiCategories[_ + 1].startIndex,
+                  _ = _ ? _.length : _;
+                for (let _ = 0; _ < _; ++_) {
+                  let _ = _.startIndex + _,
+                    _ = 0;
+                  for (; _ < _; ) {
+                    const _ = _ ? _[_] : _,
+                      _ = _ + _.startColumn;
+                    let _ = {
+                      index: _,
+                      emoji: _._.FullEmojiList[_],
+                      category: _,
+                      row: _,
+                      column: _,
+                    };
+                    _[_].push(_), (_ += _), _++, (_ = Math.max(_, _));
+                  }
+                  for (; _ < _; ++_) _[_].push(void 0);
+                }
+              }),
               {
                 EmojiStore: _._,
                 mapEmoji: _,
                 keyDown: this.state.keyDown,
                 bAnyTrackpadActive: this.BHasTrackpadHover(),
                 rgLayoutTouchCount: this.state.rgLayoutTouchCount,
-                longPressRow: this.state.longPressRow,
-                longPressCol: this.state.longPressCol,
+                rgLongPress: this.state.rgLongPress,
+                fnRenderExtendedRowTouchpad: this.RenderExtendedRowTouchpad,
+                fnExtendedRowStyle: this.ExtendedRowStyleForSlot,
                 nExtendedKeyTouched: this.state.nExtendedKeyTouched,
-                holdTarget: this.state.holdTarget,
-                holdSourceTouchpad: _,
                 onGamepadFocus: this.OnEmojiFocus,
                 onKeyFocus: this.OnKeyFocus,
                 onKeyHover: this.OnKeyHover,
@@ -540002,8 +541092,8 @@ Status Code:` +
                 this.state.keyDown.key == _ && _?.length > 0
                   ? _().Touched
                   : void 0,
-              _ =
-                this.state.longPressRow === _ && this.state.longPressCol === _,
+              _ = _(this.state.rgLongPress, _, _),
+              _ = _ >= 0,
               _ = _ === _ && _ === _ && !_,
               _ = _ instanceof Object && _.is_literal;
             let _;
@@ -540024,64 +541114,50 @@ Status Code:` +
             let _ = this.GetKeyClassNameForTheme(_, _, _),
               _ = (0, _._)(_().KeyboardKey, _, _, _, _, _, _, _),
               _;
-            if (_ != null && _) {
-              let _;
-              this.state.holdSource == _._.LPAD
-                ? (_ = (0, _.jsx)(_, {
-                    className: _().ExtendedRowTrackpad,
-                    pressed: this.state.bLeftTrackpadDown,
-                    input: this.m_trackpadInput,
-                    trackpad: _._.LPAD_TOUCH,
-                    fnCallback: this.OnLeftTrackpadAnalog,
-                  }))
-                : this.state.holdSource == _._.RPAD &&
-                  (_ = (0, _.jsx)(_, {
-                    className: _().ExtendedRowTrackpad,
-                    pressed: this.state.bRightTrackpadDown,
-                    input: this.m_trackpadInput,
-                    trackpad: _._.RPAD_TOUCH,
-                    fnCallback: this.OnRightTrackpadAnalog,
-                  })),
+            return (
+              _ != null &&
+                _ &&
                 (_ = (0, _.jsx)(_, {
                   extendedChars: _,
                   parentRow: _,
                   parentCol: _,
                   bIsUpperCase: _,
                   bExtendRight: _,
+                  style: this.ExtendedRowStyleForSlot(_, _.length, _),
                   nExtendedKeyTouched: _,
                   onKeyFocus: this.OnKeyFocus,
                   onKeyHover: this.OnKeyHover,
-                  children: _,
-                }));
-            }
-            return (0, _.jsx)(
-              _,
-              {
-                nRow: _,
-                nKey: _,
-                navRef: _,
-                bAutoFocus: _,
-                bFocusable: _,
-                bIsShift: _,
-                bHasTrackpadHover: this.BHasTrackpadHover(),
-                dataProps: _,
-                className: _,
-                innerClassName: _,
-                leftActionButton: _,
-                centerLeftActionButton: _,
-                rightActionButton: _,
-                label: _,
-                strLocDescription: _,
-                inactiveLabel: _,
-                strInactiveLabelDeadKeyStyle: _,
-                altGrLabel: _,
-                inactiveAltGrLabel: _,
-                extendedKeyRow: _,
-                onFocus: this.OnKeyFocus,
-                onHover: this.OnKeyHover,
-                ariaProps: _,
-              },
-              `KB.${_}.${_}`,
+                  children: this.RenderExtendedRowTouchpad(_),
+                })),
+              (0, _.jsx)(
+                _,
+                {
+                  nRow: _,
+                  nKey: _,
+                  navRef: _,
+                  bAutoFocus: _,
+                  bFocusable: _,
+                  bIsShift: _,
+                  bHasTrackpadHover: this.BHasTrackpadHover(),
+                  dataProps: _,
+                  className: _,
+                  innerClassName: _,
+                  leftActionButton: _,
+                  centerLeftActionButton: _,
+                  rightActionButton: _,
+                  label: _,
+                  strLocDescription: _,
+                  inactiveLabel: _,
+                  strInactiveLabelDeadKeyStyle: _,
+                  altGrLabel: _,
+                  inactiveAltGrLabel: _,
+                  extendedKeyRow: _,
+                  onFocus: this.OnKeyFocus,
+                  onHover: this.OnKeyHover,
+                  ariaProps: _,
+                },
+                `KB.${_}.${_}`,
+              )
             );
           }
           RenderTabBar(_, _, _, _, _) {
@@ -540122,8 +541198,12 @@ Status Code:` +
           KeyboardPanel(_) {
             const { className: _, children: _, ..._ } = _,
               _ = this.props.VirtualKeyboardManager,
-              _ = (0, _._)(() => this.GetKeyboardThemeClassName()),
-              _ = (0, _._)(() => _.KeyboardLocation);
+              [_, _] = _.useState("DefaultTheme");
+            _.useEffect(
+              () => (0, _._)(() => _(this.GetKeyboardThemeClassName())),
+              [],
+            );
+            const _ = (0, _._)(() => _.KeyboardLocation);
             return (0, _.jsxs)(_._, {
               ref: this.SetKeyboardDiv,
               navRef: this.m_keyboardNavRef,
@@ -540161,14 +541241,8 @@ Status Code:` +
           }
           RenderStandardKeyboard(_) {
             const { name: _, rgLayout: _, rgKeycodes: _ } = _,
-              _ =
-                this.state.holdSource == _._.LPAD &&
-                this.state.longPressCol !== null &&
-                this.state.longPressRow !== null,
-              _ =
-                this.state.holdSource == _._.RPAD &&
-                this.state.longPressCol !== null &&
-                this.state.longPressRow !== null,
+              _ = this.BTrackpadLongPressing(1),
+              _ = this.BTrackpadLongPressing(2),
               _ = "Layout_" + _,
               _ = this.BShowGlyphs(),
               _ = this.GetLayoutOptions();
@@ -540241,7 +541315,55 @@ Status Code:` +
               }
             }
           }
-          getElementFromPointWorkaround(_, _) {
+          BTrackpadLongPressing(_) {
+            const _ = this.state.rgLongPress[_];
+            return _.longPressCol !== null && _.longPressRow !== null;
+          }
+          ExtendedRowStyleForSlot(_, _, _) {
+            if (_ !== 1 && _ !== 2) return;
+            const _ = this.state.rgLongPress[_].holdTarget;
+            if (!_ || !this.m_keyboardDiv) return;
+            const _ = (0, _._)(this.m_keyboardDiv),
+              _ = this.m_keyboardDiv.getBoundingClientRect(),
+              _ = _.getBoundingClientRect(),
+              _ = _.left + _.width / 2,
+              _ = _ === 1 ? _.left : _,
+              _ = _ === 1 ? _ : _.right,
+              _ = _ * _ * _,
+              _ = _ ? _.left : _.right - _;
+            return {
+              left: ((0, _._)(_, _, Math.max(_, _ - _)) - _.left) / _,
+              right: "auto",
+            };
+          }
+          RenderExtendedRowTouchpad(_) {
+            if (_ === 1)
+              return (0, _.jsx)(_, {
+                className: _().ExtendedRowTrackpad,
+                pressed: this.state.bLeftTrackpadDown,
+                input: this.m_trackpadInput,
+                trackpad: _._.LPAD_TOUCH,
+                fnCallback: this.OnLeftTrackpadAnalog,
+              });
+            if (_ === 2)
+              return (0, _.jsx)(_, {
+                className: _().ExtendedRowTrackpad,
+                pressed: this.state.bRightTrackpadDown,
+                input: this.m_trackpadInput,
+                trackpad: _._.RPAD_TOUCH,
+                fnCallback: this.OnRightTrackpadAnalog,
+              });
+          }
+          BInForeignExtendedRow(_, _) {
+            const _ = _.closest(`.${_().KeyboardExtendedRow}`);
+            if (!_) return !1;
+            const _ = _.querySelector("[parent-row]"),
+              _ = parseFloat(_?.getAttribute("parent-row") || ""),
+              _ = parseFloat(_?.getAttribute("parent-col") || ""),
+              _ = this.LongPressSlot(_);
+            return !(_.longPressRow === _ && _.longPressCol === _);
+          }
+          getElementFromPointWorkaround(_, _, _) {
             const _ =
               this.m_keyboardDiv?.ownerDocument.defaultView ??
               this.props.windowInstance.BrowserWindow;
@@ -540252,8 +541374,9 @@ Status Code:` +
               const _ = (0, _._)(this.m_keyboardDiv);
               (_ *= _), (_ *= _);
             }
-            let _ = _.document.elementFromPoint(_, _);
-            return _ && (_.getAttribute("data-key") || (_ = void 0)), _;
+            for (const _ of _.document.elementsFromPoint(_, _))
+              if (!this.BInForeignExtendedRow(_, _))
+                return _.getAttribute("data-key") ? _ : void 0;
           }
           OnTrackpadAnalogInternal(_, _, _, _, _, _) {
             if (((_.active = _), (_._ = _), (_._ = _), _)) {
@@ -540267,7 +541390,11 @@ Status Code:` +
                   _ <= _._ + _.height
                 )
               ) {
-                let _ = this.getElementFromPointWorkaround(_, _);
+                let _ = this.getElementFromPointWorkaround(
+                  _,
+                  _,
+                  _ === _._ ? _._.LPAD : _._.RPAD,
+                );
                 _ != _.lastElement &&
                   (this.OnTrackpadHover(_.lastElement, _),
                   (_.lastElement = _),
@@ -540381,14 +541508,8 @@ Status Code:` +
                     this.m_emojiCategories.length
                 ],
               _ = _ ? this.GetEmojiGridProps() : null,
-              _ =
-                this.state.holdSource == _._.LPAD &&
-                this.state.longPressCol !== null &&
-                this.state.longPressRow !== null,
-              _ =
-                this.state.holdSource == _._.RPAD &&
-                this.state.longPressCol !== null &&
-                this.state.longPressRow !== null,
+              _ = this.BTrackpadLongPressing(1),
+              _ = this.BTrackpadLongPressing(2),
               _ = this.BShowGlyphs();
             return (0, _.jsxs)(this.KeyboardPanel, {
               className: (0, _._)(_().EmojiKeyboard),
@@ -540505,11 +541626,12 @@ Status Code:` +
           componentWillUnmount() {
             this.StopResizeListening(),
               this.CancelBackpaceTimer(),
-              this.DismissBackpaceTimer(),
-              this.CancelLongPressTimer(),
-              this.DismissLongPress(),
-              this.ClearHoldTarget(),
-              this.m_trackpadInput.EnableAnalogInputMessages(!1),
+              this.DismissBackpaceTimer();
+            for (const _ of [_._.GAMEPAD, _._.LPAD, _._.RPAD])
+              this.CancelLongPressTimer(_),
+                this.DismissLongPress(_),
+                this.ClearHoldTarget(_);
+            this.m_trackpadInput.EnableAnalogInputMessages(!1),
               this.ClearControllerInputWatchdogTimer();
           }
           render() {
@@ -540698,16 +541820,11 @@ Status Code:` +
           _([_._], _.prototype, "OnGamepadButtonUp", 1),
           _([_._], _.prototype, "DispatchEventByDataKey", 1),
           _([_._], _.prototype, "HandleNavOut", 1),
-          _([_._], _.prototype, "LongPressTimerExpired", 1),
-          _([_._], _.prototype, "DismissLongPress", 1),
-          _([_._], _.prototype, "StartLongPressTimer", 1),
           _([_._], _.prototype, "StartBackspaceTimer", 1),
           _([_._], _.prototype, "BackspaceTimeExpired", 1),
           _([_._], _.prototype, "DismissBackpaceTimer", 1),
           _([_._], _.prototype, "CancelBackpaceTimer", 1),
           _([_._], _.prototype, "OnKeyMouseLeave", 1),
-          _([_._], _.prototype, "ClearHoldTarget", 1),
-          _([_._], _.prototype, "CancelLongPressTimer", 1),
           _([_._], _.prototype, "HandleTouchStart", 1),
           _([_._], _.prototype, "HandleTouchMove", 1),
           _([_._], _.prototype, "IsCharacterFromActiveExtendedMenu", 1),
@@ -540721,6 +541838,8 @@ Status Code:` +
           _([_._], _.prototype, "OnKeyFocus", 1),
           _([_._], _.prototype, "OnKeyHover", 1),
           _([_._], _.prototype, "KeyboardPanel", 1),
+          _([_._], _.prototype, "ExtendedRowStyleForSlot", 1),
+          _([_._], _.prototype, "RenderExtendedRowTouchpad", 1),
           _([_._], _.prototype, "getElementFromPointWorkaround", 1),
           _([_._], _.prototype, "OnLeftTrackpadAnalog", 1),
           _([_._], _.prototype, "OnRightTrackpadAnalog", 1),
@@ -541032,8 +542151,11 @@ Status Code:` +
             _ = _.mode == _._.StandaloneKeyboard,
             _ = _.IsDesktopOverlayWindow(),
             _ = (0, _._)(),
-            _ = _._.GetKeyboardSkinTheme() ?? "DefaultTheme",
-            _ = (0, _._)(_, 100);
+            [_, _] = _.useState("DefaultTheme");
+          _.useEffect(() => {
+            _ && _(_._.GetKeyboardSkinTheme() ?? "DefaultTheme");
+          }, [_]);
+          const _ = (0, _._)(_, 100);
           (0, _._)(_, "VirtualKeyboardContainer"),
             _.useEffect(() => {
               _ &&
@@ -549597,9 +550719,7 @@ Status Code:` +
                   className: _.GutterBlur,
                   src: _,
                   autoPlay: !0,
-                  onPlay: _,
-                  onEnded: _,
-                  onError: _,
+                  muted: !0,
                 }),
               (0, _.jsx)("img", {
                 alt: "Steam Spinner Preload",
@@ -550757,6 +551877,7 @@ Status Code:` +
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
         __webpack_require__._(module_exports, {
+          _: () => _,
           _: () => _,
           _: () => _,
           _: () => _,
@@ -552239,6 +553360,7 @@ Status Code:` +
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = "steamdb",
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
@@ -552442,6 +553564,15 @@ Status Code:` +
                           "https://steamloopback.host",
                         );
                     }
+                  }
+                  break;
+                case "OpenFriendChat":
+                  {
+                    const _ = JSON.parse(_);
+                    this.ShowFriendChatDialog(
+                      _._.ActiveWindowInstance,
+                      _._.InitFromAccountID(_.accountid),
+                    );
                   }
                   break;
                 case "AcceptedGameInvite":
@@ -555193,6 +556324,8 @@ Status Code:` +
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = "steamdb",
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
@@ -555289,6 +556422,9 @@ Status Code:` +
               SteamClient.Streaming.RegisterForStreamingShowEula(
                 this.StreamingShowEula,
               ),
+              SteamClient.Streaming.RegisterForStreamingShowCloudConflict(
+                this.StreamingShowCloudConflict,
+              ),
               SteamClient.Streaming.RegisterForStreamingLaunchComplete(
                 this.StreamingLaunchComplete,
               ),
@@ -555373,6 +556509,36 @@ Status Code:` +
                 onCancel: _,
                 ownerWindow: _._.ActiveWindowInstance?.BrowserWindow,
               });
+          }
+          StreamingShowCloudConflict(_, _, _, _, _) {
+            const _ = _ == _.rmr;
+            let _ = !1;
+            const _ = (_) => {
+                (_ = !0),
+                  SteamClient.Streaming.StreamingSetCloudConflictResolution(
+                    _,
+                    _,
+                  );
+              },
+              _ = () => {
+                _ || SteamClient.Streaming.CancelStreamGame();
+              };
+            (0, _._)(
+              {
+                bOnAppLaunch: !0,
+                appid: _ ? _ : _,
+                remoteHost: {
+                  strMachineName: _,
+                  rtLocalTime: _,
+                  rtRemoteTime: _,
+                },
+                onCancel: _,
+                keepLocal: () => _(!0),
+                keepRemote: () => _(!1),
+                onOK: _,
+              },
+              _._.ActiveWindowInstance?.BrowserWindow ?? window,
+            );
           }
           StreamingLaunchComplete(_, _) {
             switch (
@@ -555496,6 +556662,7 @@ Status Code:` +
           _([_._], _.prototype, "StreamingStillDownloading", 1),
           _([_._], _.prototype, "StreamingShowLaunchOptions", 1),
           _([_._], _.prototype, "StreamingShowEula", 1),
+          _([_._], _.prototype, "StreamingShowCloudConflict", 1),
           _([_._.bound], _.prototype, "StreamingLaunchComplete", 1),
           _([_._], _.prototype, "InstallAppComplete", 1),
           _([_._], _.prototype, "StreamingClientFinished", 1),
@@ -561505,14 +562672,15 @@ Status Code:` +
             return null;
           });
         }
-        function _() {
+        function _(_) {
           const _ = _.Get();
-          (0, _._)(
-            () => (
-              _?.StartScanningForNetworks(), () => _?.StopScanningForNetworks()
-            ),
-            [_],
-          );
+          (0, _._)(() => {
+            if (_)
+              return (
+                _?.StartScanningForNetworks(),
+                () => _?.StopScanningForNetworks()
+              );
+          }, [_, _]);
         }
         function _() {
           return (0, _._)(() => _.Get().connectivityTestState);
@@ -567952,6 +569120,7 @@ Status Code:` +
                   },
                   focusable: _,
                   focusRingSizeElementID: _,
+                  focusRingHasBorderRadius: !0,
                   onGamepadDirection: _,
                   ref: _,
                   navRef: _,
@@ -568248,6 +569417,7 @@ Status Code:` +
                 ref: _,
                 navRef: _,
                 focusRingSizeElementID: _,
+                focusRingHasBorderRadius: !0,
                 onGamepadDirection: _,
                 className: (0, _._)(
                   _().AvatarButton,
@@ -568299,6 +569469,7 @@ Status Code:` +
                 ref: _,
                 navRef: _,
                 focusRingSizeElementID: _,
+                focusRingHasBorderRadius: !0,
                 onGamepadDirection: _,
                 className: (0, _._)(
                   _().QuickAccessButton,
@@ -568727,6 +569898,7 @@ Status Code:` +
                   fnScrollIntoViewHandler: _,
                   focusable: !0,
                   focusRingSizeElementID: _,
+                  focusRingHasBorderRadius: !0,
                   onGamepadDirection: _,
                   preferredFocus: _,
                   className: (0, _._)(
@@ -569909,6 +571081,7 @@ Status Code:` +
                   !_ && _().FadeBottom,
                 ),
                 focusRingSizeElementID: _,
+                focusRingHasBorderRadius: !0,
                 children: [
                   (0, _.jsx)("div", {
                     _: _,
@@ -596259,7 +597432,7 @@ Status Code:` +
           constructor(_ = null) {
             super(),
               _.prototype.connection_id || _._(_._()),
-              _.Message.initialize(this, _, 0, -1, [2, 3], null);
+              _.Message.initialize(this, _, 0, -1, [2], null);
           }
           static sm_m;
           static sm_mbf;
@@ -596285,12 +597458,6 @@ Status Code:` +
                     },
                     pops: {
                       _: 2,
-                      _: _,
-                      _: !0,
-                      _: !0,
-                    },
-                    legacy_data_centers: {
-                      _: 3,
                       _: _,
                       _: !0,
                       _: !0,
@@ -596342,7 +597509,7 @@ Status Code:` +
           constructor(_ = null) {
             super(),
               _.prototype.pop_id || _._(_._()),
-              _.Message.initialize(this, _, 0, -1, [7], null);
+              _.Message.initialize(this, _, 0, -1, void 0, null);
           }
           static sm_m;
           static sm_mbf;
@@ -596357,7 +597524,7 @@ Status Code:` +
                       _: _._.readFixed32,
                       _: _._.writeFixed32,
                     },
-                    default_front_ping_ms: {
+                    front_ping_ms: {
                       _: 2,
                       _: _._.readUint32,
                       _: _._.writeUint32,
@@ -596367,69 +597534,33 @@ Status Code:` +
                       _: _._.readUint32,
                       _: _._.writeUint32,
                     },
-                    alt_addresses: {
-                      _: 7,
-                      _: _,
-                      _: !0,
-                      _: !0,
-                    },
-                    default_e2e_ping_ms: {
+                    e2e_ping_ms: {
                       _: 3,
                       _: _._.readUint32,
                       _: _._.writeUint32,
                     },
-                    default_e2e_score: {
+                    e2e_score: {
                       _: 5,
                       _: _._.readUint32,
                       _: _._.writeUint32,
                     },
-                    p2p_via_peer_relay_pop_id: {
+                    e2e_p2p_peer_relay_pop_id: {
                       _: 6,
                       _: _._.readFixed32,
                       _: _._.writeFixed32,
                     },
-                    best_dc_ping_ms: {
+                    dc_ping_ms: {
                       _: 9,
                       _: _._.readUint32,
                       _: _._.writeUint32,
                     },
-                    best_dc_score: {
+                    dc_score: {
                       _: 10,
                       _: _._.readUint32,
                       _: _._.writeUint32,
                     },
-                    best_dc_via_relay_pop_id: {
+                    dc_via_relay_pop_id: {
                       _: 11,
-                      _: _._.readFixed32,
-                      _: _._.writeFixed32,
-                    },
-                    default_dc_ping_ms: {
-                      _: 12,
-                      _: _._.readUint32,
-                      _: _._.writeUint32,
-                    },
-                    default_dc_score: {
-                      _: 13,
-                      _: _._.readUint32,
-                      _: _._.writeUint32,
-                    },
-                    default_dc_via_relay_pop_id: {
-                      _: 14,
-                      _: _._.readFixed32,
-                      _: _._.writeFixed32,
-                    },
-                    test_dc_ping_ms: {
-                      _: 15,
-                      _: _._.readUint32,
-                      _: _._.writeUint32,
-                    },
-                    test_dc_score: {
-                      _: 16,
-                      _: _._.readUint32,
-                      _: _._.writeUint32,
-                    },
-                    test_dc_via_relay_pop_id: {
-                      _: 17,
                       _: _._.readFixed32,
                       _: _._.writeFixed32,
                     },
@@ -596473,150 +597604,6 @@ Status Code:` +
           }
           getClassName() {
             return "CMsgSteamDatagramClientPingSampleReply_POP";
-          }
-        }
-        class _ extends _.Message {
-          static ImplementsStaticInterface() {}
-          constructor(_ = null) {
-            super(),
-              _.prototype._ || _._(_._()),
-              _.Message.initialize(this, _, 0, -1, void 0, null);
-          }
-          static sm_m;
-          static sm_mbf;
-          static M() {
-            return (
-              _.sm_m ||
-                (_.sm_m = {
-                  proto: _,
-                  fields: {
-                    _: {
-                      _: 1,
-                      _: _._.readString,
-                      _: _._.writeString,
-                    },
-                    front_ping_ms: {
-                      _: 2,
-                      _: _._.readUint32,
-                      _: _._.writeUint32,
-                    },
-                    penalty: {
-                      _: 3,
-                      _: _._.readUint32,
-                      _: _._.writeUint32,
-                    },
-                  },
-                }),
-              _.sm_m
-            );
-          }
-          static MBF() {
-            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-          }
-          toObject(_ = !1) {
-            return _.toObject(_, this);
-          }
-          static toObject(_, _) {
-            return _._(_._(), _, _);
-          }
-          static fromObject(_) {
-            return _._(_._(), _);
-          }
-          static deserializeBinary(_) {
-            let _ = new (_().BinaryReader)(_),
-              _ = new _();
-            return _.deserializeBinaryFromReader(_, _);
-          }
-          static deserializeBinaryFromReader(_, _) {
-            return _._(_.MBF(), _, _);
-          }
-          serializeBinary() {
-            var _ = new (_().BinaryWriter)();
-            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-          }
-          static serializeBinaryToWriter(_, _) {
-            _._(_._(), _, _);
-          }
-          serializeBase64String() {
-            var _ = new (_().BinaryWriter)();
-            return (
-              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "CMsgSteamDatagramClientPingSampleReply_POP_AltAddress";
-          }
-        }
-        class _ extends _.Message {
-          static ImplementsStaticInterface() {}
-          constructor(_ = null) {
-            super(),
-              _.prototype.data_center_id || _._(_._()),
-              _.Message.initialize(this, _, 0, -1, void 0, null);
-          }
-          static sm_m;
-          static sm_mbf;
-          static M() {
-            return (
-              _.sm_m ||
-                (_.sm_m = {
-                  proto: _,
-                  fields: {
-                    data_center_id: {
-                      _: 1,
-                      _: _._.readFixed32,
-                      _: _._.writeFixed32,
-                    },
-                    best_dc_via_relay_pop_id: {
-                      _: 2,
-                      _: _._.readFixed32,
-                      _: _._.writeFixed32,
-                    },
-                    best_dc_ping_ms: {
-                      _: 3,
-                      _: _._.readUint32,
-                      _: _._.writeUint32,
-                    },
-                  },
-                }),
-              _.sm_m
-            );
-          }
-          static MBF() {
-            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-          }
-          toObject(_ = !1) {
-            return _.toObject(_, this);
-          }
-          static toObject(_, _) {
-            return _._(_._(), _, _);
-          }
-          static fromObject(_) {
-            return _._(_._(), _);
-          }
-          static deserializeBinary(_) {
-            let _ = new (_().BinaryReader)(_),
-              _ = new _();
-            return _.deserializeBinaryFromReader(_, _);
-          }
-          static deserializeBinaryFromReader(_, _) {
-            return _._(_.MBF(), _, _);
-          }
-          serializeBinary() {
-            var _ = new (_().BinaryWriter)();
-            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-          }
-          static serializeBinaryToWriter(_, _) {
-            _._(_._(), _, _);
-          }
-          serializeBase64String() {
-            var _ = new (_().BinaryWriter)();
-            return (
-              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "CMsgSteamDatagramClientPingSampleReply_LegacyDataCenter";
           }
         }
         class _ extends _.Message {
@@ -596690,6 +597677,11 @@ Status Code:` +
                       _: 12,
                       _: _,
                     },
+                    from_migrate_request: {
+                      _: 13,
+                      _: _._.readEnum,
+                      _: _._.writeEnum,
+                    },
                   },
                 }),
               _.sm_m
@@ -596731,6 +597723,13 @@ Status Code:` +
           getClassName() {
             return "CMsgSteamDatagramClientSwitchedPrimary";
           }
+        }
+        function _(_) {
+          return (
+            "unknown CMsgSteamDatagramClientSwitchedPrimary_EMigrateRequest ( " +
+            _ +
+            " )"
+          );
         }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
@@ -603464,6 +604463,7 @@ Status Code:` +
           _: () => _,
           _: () => _,
           _: () => _,
+          _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -603495,6 +604495,17 @@ Status Code:` +
             return _ && _ && _(_, _, _), _;
           };
         const _ = new _._("FriendsUI/RemotePlay");
+        function _() {
+          return {
+            bConnecting: !1,
+            msConnectStart: 0,
+            nEstimatedSeconds: 0,
+            nStepsDone: 0,
+            nStepsTotal: 0,
+            strStepName: "",
+            bDismissed: !1,
+          };
+        }
         class _ {
           constructor() {
             (0, _._)(this);
@@ -603518,6 +604529,7 @@ Status Code:` +
           m_sRemoteDeviceBeingPaired = void 0;
           m_sRemoteDeviceRequestingSpectatePermission = void 0;
           m_sRemoteDevicePairingPIN = void 0;
+          m_mapWifiAPPairState = _._.map();
           Init(_) {
             SteamClient.RemotePlay.RegisterForSettingsChanges(
               this.OnSettingsChanged,
@@ -603563,6 +604575,12 @@ Status Code:` +
               ),
               SteamClient.RemotePlay.RegisterForRemoteClientStopped(
                 this.OnRemoteClientStopped,
+              ),
+              SteamClient.RemotePlay.RegisterForPairWifiAPProgress(
+                this.OnPairWifiAPProgress,
+              ),
+              SteamClient.RemotePlay.RegisterForPairWifiAPResult(
+                this.OnPairWifiAPResult,
               );
           }
           get settings() {
@@ -603702,6 +604720,45 @@ Status Code:` +
           }
           get sRemoteDevicePairingPIN() {
             return this.m_sRemoteDevicePairingPIN;
+          }
+          GetWifiAPPairState(_) {
+            return this.m_mapWifiAPPairState.get(_);
+          }
+          BAnyWifiAPPairShown() {
+            return Array.from(this.m_mapWifiAPPairState.values()).some(
+              (_) => !_.bDismissed,
+            );
+          }
+          async PairViaWifiAP(_) {
+            this.m_mapWifiAPPairState.set(_, _());
+            const _ = await SteamClient.RemotePlay.PairViaWifiAP(_);
+            return this.OnPairWifiAPResult(_, _), _;
+          }
+          DismissWifiAPPair(_) {
+            const _ = this.m_mapWifiAPPairState.get(_);
+            _ &&
+              (_._.ON_FRAME &&
+                _.bConnecting &&
+                _.eResult === void 0 &&
+                SteamClient.RemotePlay.UnpairLocalWifiAP(),
+              (_.bDismissed = !0));
+          }
+          OnPairWifiAPProgress(_, _, _, _, _) {
+            let _ = this.m_mapWifiAPPairState.get(_);
+            (!_ || _.eResult !== void 0) &&
+              ((_ = _()), this.m_mapWifiAPPairState.set(_, _)),
+              _ &&
+                !_.bConnecting &&
+                ((_.bConnecting = !0),
+                (_.msConnectStart = Date.now()),
+                (_.nEstimatedSeconds = _)),
+              (_.nStepsDone = _),
+              (_.nStepsTotal = _),
+              (_.strStepName = _);
+          }
+          OnPairWifiAPResult(_, _) {
+            const _ = this.m_mapWifiAPPairState.get(_);
+            _ && (_.eResult = _);
           }
           async OnRemoteDevicePairingPINChanged(_, _) {
             (this.m_sRemoteDevicePairingPIN = _),
@@ -603848,6 +604905,8 @@ Status Code:` +
           _([_._], _.prototype, "OnSettingsChanged", 1),
           _([_._], _.prototype, "OnDevicesChanged", 1),
           _([_._], _.prototype, "OnRestrictedSessionChanged", 1),
+          _([_._], _.prototype, "OnPairWifiAPProgress", 1),
+          _([_._], _.prototype, "OnPairWifiAPResult", 1),
           _([_._], _.prototype, "OnRemoteDevicePairingPINChanged", 1),
           _([_._], _.prototype, "OnRemoteDeviceAuthorizationRequested", 1),
           _([_._], _.prototype, "OnRemoteDeviceAuthorizationCancelled", 1),
@@ -603921,6 +604980,16 @@ Status Code:` +
         function _() {
           return (0, _._)(() => _.sRemoteDevicePairingPIN);
         }
+        function _(_) {
+          return (0, _._)(() => {
+            const _ = _.GetWifiAPPairState(_);
+            return _ && !_.bDismissed
+              ? {
+                  ..._,
+                }
+              : void 0;
+          });
+        }
         function _() {
           const _ = (0, _._)(() => _.bAudioDriverDialogVisible),
             _ = _.useCallback(() => {
@@ -603959,6 +605028,8 @@ Status Code:` +
               return (0, _._)("#RemotePlay_PairWifiAPResult_Timeout");
             case _._._:
               return (0, _._)("#RemotePlay_PairWifiAPResult_Canceled");
+            case _._._:
+              return (0, _._)("#RemotePlay_PairWifiAPResult_ConnectFailed");
           }
         }
       },
@@ -613670,6 +614741,7 @@ Status Code:` +
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = "steamdb",
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
@@ -613896,6 +614968,10 @@ Status Code:` +
                   !0,
                   _,
                 ),
+                this.m_mapCloudStorage.set(
+                  _._._,
+                  await _._.ForNamespace(_._._),
+                ),
                 await (0, _._)(
                   "SteamApp Init - After Login - Remaining services",
                   [
@@ -613959,6 +615035,7 @@ Status Code:` +
                       "EAAccessPromptManager",
                       () => _._.Init(this.GetCloudStorageForLibrary()),
                     ],
+                    ["VRStore", () => (0, _._)(this.GetCloudStorage(_._._))],
                   ],
                   !0,
                   _,
@@ -615036,6 +616113,17 @@ Status Code:` +
                 this.m_valueIsActive.Set(_),
                 _ &&
                   this.m_LastActiveFocusNavTree?.OnContextActiveStateChanged(_);
+              const _ = this.m_LastActiveFocusNavTree;
+              if (_ && _ === void 0 && _?.Window == (_ ?? this.m_rootWindow)) {
+                const _ = _?.GetLastFocusedNode()?.Element,
+                  _ = _?.ownerDocument.activeElement;
+                _ &&
+                  _?.BIsActiveFocus() &&
+                  (!_ || _ == _.ownerDocument.body) &&
+                  _.focus({
+                    preventScroll: !0,
+                  });
+              }
             });
           }
           OnActivate(_) {
@@ -615255,6 +616343,8 @@ Status Code:` +
             nControllerStyle: _._,
           });
           m_bRestoringHistory = !1;
+          m_nSystemKeyAppIDHint;
+          m_fnSystemKeyContextResolver;
           m_fnGamepadEventUpdateBatcher = (_) => _();
           constructor() {
             window.FocusNavController = this;
@@ -615427,6 +616517,25 @@ Status Code:` +
           }
           GetEventTarget(_, _, _ = !1) {
             let _ = this.GetActiveContext();
+            if (
+              this.m_nSystemKeyAppIDHint &&
+              !_?.FindNavTreeInFocusedWindow()
+            ) {
+              const _ = this.m_fnSystemKeyContextResolver?.(
+                this.m_nSystemKeyAppIDHint,
+              );
+              _ &&
+                _ != _ &&
+                this.BCanActivateContext(_) &&
+                (_(
+                  `GetEventTarget: using ${_.LogName()} for system key AppID ${this.m_nSystemKeyAppIDHint} instead of ${_?.LogName() ?? "no context"}`,
+                ),
+                _?.ActiveWindow && _.OnDeactivate(_.ActiveWindow),
+                _.OnActivate(
+                  _.m_LastActiveFocusNavTree?.Window ?? _.RootWindow,
+                ),
+                (_ = _));
+            }
             !_ && _ && (_ = this.FindAnActiveContext());
             let _ = _?.ActiveWindow?.document.activeElement;
             if (_?.m_LastActiveNavTree) {
@@ -615600,6 +616709,12 @@ Status Code:` +
           }
           BIsInActiveContext(_) {
             return !!(_ && _.WindowContext == this.m_ActiveContext);
+          }
+          SetSystemKeyAppIDHint(_) {
+            this.m_nSystemKeyAppIDHint = _;
+          }
+          SetSystemKeyContextResolver(_) {
+            this.m_fnSystemKeyContextResolver = _;
           }
           RegisterForUnhandledButtonDownEvents(_) {
             return this.m_UnhandledButtonEventsCallbacks.Register(_);
@@ -616696,6 +617811,13 @@ Status Code:` +
               this.m_GamepadNavigationManager.RegisterForUnhandledButtonDownEvents(
                 this.OnUnhandledButtonDownEvent,
               ),
+              _._.IN_GAMESCOPE ||
+                this.m_GamepadNavigationManager.SetSystemKeyContextResolver(
+                  (_) =>
+                    this.WindowStore.GetOverlayInstances(_)
+                      .find((_) => _.IsGamepadUIOverlayWindow())
+                      ?.GetFocusNavContext(),
+                ),
               this.m_GamepadNavigationManager.SetGamepadEventUpdateBatcher(
                 _.unstable_batchedUpdates,
               );
@@ -616906,11 +618028,19 @@ Status Code:` +
           }
           OnPostSteamUIMessage(_, _, _) {
             switch (_) {
+              case "show-main-window":
+                this.m_WindowStore.MainWindowInstance?.BrowserWindow?.SteamClient.Window.BringToFront();
+                break;
               case "hide-main-window":
                 this.m_WindowStore.MainWindowInstance?.BrowserWindow?.SteamClient.Window.Minimize();
                 break;
               case "close-main-window":
                 this.m_WindowStore.MainWindowInstance?.BrowserWindow?.close();
+                break;
+              case "show-controller-configurator-window":
+                this.m_WindowStore.SteamUIWindows.find((_) =>
+                  _.IsControllerConfiguratorWindow(),
+                )?.BrowserWindow?.SteamClient.Window.BringToFront();
                 break;
             }
           }
@@ -619044,6 +620174,159 @@ Status Code:` +
             null
           );
         });
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(module_exports, {
+          _: () => _,
+          _: () => _,
+          _: () => _,
+        });
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = "steamdb",
+          _ = Object.defineProperty,
+          _ = Object.getOwnPropertyDescriptor,
+          _ = (_, _, _, _) => {
+            for (
+              var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
+              _ >= 0;
+              _--
+            )
+              (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
+            return _ && _ && _(_, _, _), _;
+          };
+        const _ = class _ {
+          constructor() {
+            (0, _._)(this);
+          }
+          m_cloudStorage;
+          m_mapVRInputPreference = new Map();
+          Init(_) {
+            (this.m_cloudStorage = _),
+              this.m_cloudStorage.RegisterForChangeNotifications(
+                this.OnCloudStorageChanged,
+              ),
+              _._.Steam.SetImplementation("SetAppVRInputPreference", (_) => {
+                if (!_.app_id)
+                  throw new Error("SetAppVRInputPreference: missing app_id");
+                this.SetAppPrefersSteamInput(
+                  _.app_id,
+                  !!_?.prefers_steam_input,
+                );
+              }),
+              (0, _._)(this.SyncVRSceneAppInputPreferenceWithSteamVR);
+          }
+          static k_strSceneAppInputPreferenceAppIdPath =
+            "/steam/scene_app_input_preference/app_id";
+          static k_strSceneAppInputPreferencePrefersSteamInputPath =
+            "/steam/scene_app_input_preference/prefers_steam_input";
+          BPublisherRecommendsSteamInput(_) {
+            return !!_._.GetAppDetails(_)?.bSteamInputVRControllerPreferGamepad;
+          }
+          BAppPrefersSteamInput(_) {
+            return (
+              this.GetVRInputPreference(_) ??
+              this.BPublisherRecommendsSteamInput(_)
+            );
+          }
+          SetAppPrefersSteamInput(_, _) {
+            const _ = this.BPublisherRecommendsSteamInput(_);
+            return this.SetVRInputPreference(_, _ == _ ? void 0 : _);
+          }
+          SyncVRSceneAppInputPreferenceWithSteamVR() {
+            if (!_._.IsSteamVRRunning || !_._.BHasMutualCapability(_._)) return;
+            const _ = _._.CurrentSceneAppID;
+            let _ = !1;
+            _ != _._ &&
+              (_._.GetAppDetails(_) || _._.RequestAppDetails(_),
+              (_ = this.BAppPrefersSteamInput(_))),
+              SteamClient.OpenVR?.PathProperties?.SetBoolPathProperty(
+                _.k_strSceneAppInputPreferencePrefersSteamInputPath,
+                _,
+              ),
+              SteamClient.OpenVR?.PathProperties?.SetInt32PathProperty(
+                _.k_strSceneAppInputPreferenceAppIdPath,
+                _,
+              );
+          }
+          GetVRInputPreference(_) {
+            return this.m_mapVRInputPreference.get(_);
+          }
+          async SetVRInputPreference(_, _) {
+            if (!this.m_cloudStorage) return !1;
+            const _ = _.toString(),
+              _ = (await this.m_cloudStorage.GetObject(_)) || {};
+            if (_.vrsi === _) return !0;
+            _ === void 0 ? delete _.vrsi : (_.vrsi = _),
+              (0, _._)(() => {
+                _ === void 0
+                  ? this.m_mapVRInputPreference.delete(_)
+                  : this.m_mapVRInputPreference.set(_, _);
+              });
+            try {
+              Object.keys(_).length == 0
+                ? await this.m_cloudStorage.RemoveObject(_)
+                : await this.m_cloudStorage.StoreObject(_, _);
+            } catch {
+              return !1;
+            }
+            return !0;
+          }
+          async OnCloudStorageChanged(_, _) {
+            for (let _ of _) {
+              const _ = parseInt(_);
+              if (_) {
+                let _;
+                try {
+                  _ = JSON.parse(this.m_cloudStorage.Get(_.toString())).vrsi;
+                } catch {
+                  _ = void 0;
+                }
+                (0, _._)(() => {
+                  _ === void 0
+                    ? this.m_mapVRInputPreference.delete(_)
+                    : this.m_mapVRInputPreference.set(_, _);
+                });
+              }
+            }
+          }
+        };
+        _([_._], _.prototype, "m_mapVRInputPreference", 2),
+          _([_._], _.prototype, "SyncVRSceneAppInputPreferenceWithSteamVR", 1),
+          _([_._], _.prototype, "OnCloudStorageChanged", 1);
+        let _ = _;
+        function _(_) {
+          _.Init(_);
+        }
+        function _(_, _) {
+          const _ = (0, _._)(_),
+            _ = (0, _._)(),
+            _ = (0, _._)(),
+            _ = (0, _._)(() => !_.BAppPrefersSteamInput(_)),
+            _ = (0, _._)(_._) ?? !1,
+            _ = _._.GetAppOverviewByAppID(_),
+            _ = (0, _._)(_?.eControllerType),
+            _ = _ && _ != _._ && _ == _,
+            _ = _ && !_ && !!_?.BSupportsVR(),
+            _ = _ && _ && (_ || _);
+          return {
+            bCanToggleVRGamepadMode: _,
+            bAppPrefersVRInput: _,
+            bAppIsActiveVRSceneApp: _,
+            bAppCurrentlyUsingVRInput: _ && _,
+          };
+        }
+        const _ = new _(),
+          _ = _;
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
@@ -642443,6 +643726,7 @@ Status Code:` +
                     },
                     onOpenBlogPost: _,
                     eStartingTab: _,
+                    bShowTabs: !1,
                   }),
                 }),
                 (0, _.jsx)(_._, {
@@ -642452,6 +643736,7 @@ Status Code:` +
                       strOKText: (0, _._)("#GameAction_Install"),
                       onOK: _,
                       onCancel: _,
+                      focusButton: "primary",
                     }),
                   }),
                 }),
@@ -642526,6 +643811,7 @@ Status Code:` +
                 onOK: _,
                 bOKDisabled: !_,
                 onCancel: _,
+                focusButton: "primary",
               });
         }
         function _(_) {
@@ -643136,7 +644422,9 @@ Status Code:` +
           const [_, _] = (0, _._)("skip_steamframe_pairing_dialog"),
             [_, _] = _.useState(_),
             [_, _] = _.useState([]),
+            [_, _] = _.useState(void 0),
             [_, _] = _.useState(!1),
+            _ = (0, _._)(_),
             _ = (0, _._)(() => _._.settings.bCanPairViaWifiAP),
             _ = (0, _._)(() => _._.devices.some((_) => _.bConnectedViaWifiAP)),
             _ = (0, _._)(1e4, [_, _]),
@@ -643145,119 +644433,136 @@ Status Code:` +
                 (_) => _.bHasUnpairedWifiAP && !_.includes(_.clientId),
               ),
             ),
-            _ = (0, _._)(),
             _ = _.useId(),
-            _ = _.length > 1,
-            _ = (0, _._)();
-          if (
-            _ ||
-            _ ||
-            _._.ON_FRAME ||
-            _._.ActiveWindowInstance?.BrowserWindow?.ConfigContext.IN_VR ||
-            !_ ||
-            _ ||
-            !_ ||
-            _.length == 0 ||
-            _?.IsVRGamepadUIOverlayWindow()
-          )
-            return null;
-          const _ = async () => {
-              _([..._, ..._.map((_) => _.clientId)]), _(_);
+            [_, _] = _.useState(!1);
+          _.useEffect(() => {
+            _.length > 1 && _(!0);
+          }, [_.length]);
+          const _ = _ ? _ : _ || _.length > 1,
+            _ = (0, _._)(),
+            _ = async () => {
+              _((_) => [..._, ..._.map((_) => _.clientId)]), _(_);
             },
-            _ = async (_) => {
-              _(!0);
-              const _ = await SteamClient?.RemotePlay?.PairViaWifiAP(_),
-                _ = () => {
-                  _(!1), _ == _._._ && _();
-                };
-              (0, _._)(
-                (0, _.jsx)(_._, {
-                  strTitle: (0, _._)("#RemotePlay_PairWifiAPResult_Title"),
-                  strDescription: (0, _._)(_),
-                  onOK: _,
-                  bAlertDialog: !0,
-                }),
-                _.ownerWindow ?? window,
-                {
-                  bForcePopOut: !0,
-                },
-              );
+            _ = (_) => {
+              _(_), _(_), _._.PairViaWifiAP(_);
+            },
+            _ = () => {
+              _._.DismissWifiAPPair(_),
+                _(void 0),
+                (!_?.strResult || _.bSucceeded) && (_((_) => [..._, _]), _());
             };
-          return (0, _.jsx)(_._, {
-            strName: "SteamFrameWirelessAdapterDialog",
-            onDismiss: _,
-            strTitle: (0, _._)("#SteamFrameWirelessAdapterDialog_Header"),
-            popupWidth: 500,
-            popupHeight: _ ? 350 : 270,
-            modal: !1,
-            children: (0, _.jsxs)(_._, {
-              title: (0, _._)("#SteamFrameWirelessAdapterDialog_Header"),
-              "aria-describedby": _,
-              onCancel: _,
-              children: [
-                (0, _.jsx)(_._, {
-                  _: _,
-                  children: (0, _._)(
-                    "#SteamFrameWirelessAdapterDialog_Description",
-                  ),
-                }),
-                _ &&
-                  (0, _.jsx)(_._, {
-                    children: (0, _.jsx)("div", {
-                      className: _().ClientList,
-                      children: _.map((_) =>
-                        (0, _.jsxs)(
-                          "div",
-                          {
-                            className: _().ClientListRow,
-                            children: [
-                              (0, _.jsx)("span", {
-                                className: _().ClientName,
-                                children: _.clientName,
-                              }),
-                              (0, _.jsx)(_._, {
-                                className: _().Button,
-                                onClick: () => _(_.clientId),
-                                children: (0, _._)(
-                                  "#SteamFrameWirelessAdapterDialog_Pair",
-                                ),
-                              }),
-                            ],
-                          },
-                          _.clientId || _.deviceId,
-                        ),
-                      ),
-                    }),
-                  }),
-                (0, _.jsx)(_._, {
-                  className: _().DontShowAgain,
-                  label: (0, _._)(
-                    "#SteamFrameWirelessAdapterDialog_DontShowAgain",
-                  ),
-                  checked: _,
-                  onChange: _,
-                }),
-                (0, _.jsxs)(_._, {
+          return _
+            ? (0, _.jsx)(_._, {
+                strName: "SteamFrameWirelessAdapterDialog",
+                onDismiss: _,
+                strTitle: (0, _._)("#SteamFrameWirelessAdapterDialog_Header"),
+                popupWidth: 500,
+                popupHeight: _ ? 350 : 270,
+                modal: !1,
+                children: (0, _.jsxs)(_._, {
+                  title: (0, _._)("#SteamFrameWirelessAdapterDialog_Header"),
+                  onCancel: _,
                   children: [
-                    _ &&
-                      (0, _.jsxs)(_._, {
+                    (0, _.jsx)(_._, {
+                      children: (0, _.jsx)(_._, {
+                        clientId: _,
+                      }),
+                    }),
+                    (0, _.jsx)(_._, {
+                      children: (0, _.jsx)(_._, {
                         onClick: _,
-                        children: [" ", (0, _._)("#Button_Cancel"), " "],
-                      }),
-                    !_ &&
-                      (0, _.jsx)(_._, {
-                        focusButton: "primary",
-                        strOKText: (0, _._)(
-                          "#SteamFrameWirelessAdapterDialog_Pair",
+                        children: (0, _._)(
+                          _?.strResult ? "#Button_Close" : "#Button_Cancel",
                         ),
-                        onOK: () => _(_[0].clientId),
-                        onCancel: _,
                       }),
+                    }),
                   ],
                 }),
-              ],
-            }),
-          });
+              })
+            : _ ||
+                _._.ON_FRAME ||
+                _._.ActiveWindowInstance?.BrowserWindow?.ConfigContext.IN_VR ||
+                !_ ||
+                _ ||
+                !_ ||
+                _.length == 0 ||
+                _?.IsVRGamepadUIOverlayWindow()
+              ? null
+              : (0, _.jsx)(_._, {
+                  strName: "SteamFrameWirelessAdapterDialog",
+                  onDismiss: _,
+                  strTitle: (0, _._)("#SteamFrameWirelessAdapterDialog_Header"),
+                  popupWidth: 500,
+                  popupHeight: _ ? 350 : 270,
+                  modal: !1,
+                  children: (0, _.jsxs)(_._, {
+                    title: (0, _._)("#SteamFrameWirelessAdapterDialog_Header"),
+                    "aria-describedby": _,
+                    onCancel: _,
+                    children: [
+                      (0, _.jsx)(_._, {
+                        _: _,
+                        children: (0, _._)(
+                          "#SteamFrameWirelessAdapterDialog_Description",
+                        ),
+                      }),
+                      _ &&
+                        (0, _.jsx)(_._, {
+                          children: (0, _.jsx)("div", {
+                            className: _().ClientList,
+                            children: _.map((_) =>
+                              (0, _.jsxs)(
+                                "div",
+                                {
+                                  className: _().ClientListRow,
+                                  children: [
+                                    (0, _.jsx)("span", {
+                                      className: _().ClientName,
+                                      children: _.clientName,
+                                    }),
+                                    (0, _.jsx)(_._, {
+                                      className: _().Button,
+                                      onClick: () => _(_.clientId),
+                                      children: (0, _._)(
+                                        "#SteamFrameWirelessAdapterDialog_Pair",
+                                      ),
+                                    }),
+                                  ],
+                                },
+                                _.clientId || _.deviceId,
+                              ),
+                            ),
+                          }),
+                        }),
+                      (0, _.jsx)(_._, {
+                        className: _().DontShowAgain,
+                        label: (0, _._)(
+                          "#SteamFrameWirelessAdapterDialog_DontShowAgain",
+                        ),
+                        checked: _,
+                        onChange: _,
+                      }),
+                      (0, _.jsxs)(_._, {
+                        children: [
+                          _ &&
+                            (0, _.jsxs)(_._, {
+                              onClick: _,
+                              children: [" ", (0, _._)("#Button_Cancel"), " "],
+                            }),
+                          !_ &&
+                            (0, _.jsx)(_._, {
+                              focusButton: "primary",
+                              strOKText: (0, _._)(
+                                "#SteamFrameWirelessAdapterDialog_Pair",
+                              ),
+                              onOK: () => _(_[0].clientId),
+                              onCancel: _,
+                            }),
+                        ],
+                      }),
+                    ],
+                  }),
+                });
         }
         var _ = ((_) => (
           (_[(_.k_EWaitingForUser = 0)] = "k_EWaitingForUser"),
@@ -643425,7 +644730,7 @@ Status Code:` +
             }),
           });
         }
-        function _() {
+        function _(_) {
           const _ = (0, _._)(_.g5s),
             _ = (0, _._)(_.lmQ);
           return !_?.bHasAnyLocalContent && !_?.bHasAnyLocalContent
@@ -643433,22 +644738,23 @@ Status Code:` +
             : (0, _.jsxs)(_.Fragment, {
                 children: [
                   (0, _.jsx)(_, {}),
-                  (0, _.jsx)(_, {}),
-                  (0, _.jsx)(_, {}),
+                  !_.bOnlyPairing &&
+                    (0, _.jsxs)(_.Fragment, {
+                      children: [(0, _.jsx)(_, {}), (0, _.jsx)(_, {})],
+                    }),
                 ],
               });
         }
         const _ = (0, _._)(function () {
           const _ = (0, _._)(),
-            _ = (0, _._)(() => _._.settings.bCanPairViaWifiAP);
-          return (0, _._)(() =>
-            _._.devices.some((_) => _.bConnectedViaWifiAP),
-          ) ||
-            !_ ||
-            !_ ||
-            _._.ON_FRAME
+            _ = (0, _._)(() => _._.settings.bCanPairViaWifiAP),
+            _ = (0, _._)(() => _._.devices.some((_) => _.bConnectedViaWifiAP)),
+            _ = (0, _._)(() => _._.BAnyWifiAPPairShown());
+          return (_ && !_) || !_ || !_ || _._.ON_FRAME
             ? null
-            : (0, _.jsx)(_, {});
+            : (0, _.jsx)(_, {
+                bOnlyPairing: _,
+              });
         });
         var _ = "steamdb";
         function _(_) {
@@ -645225,7 +646531,7 @@ Status Code:` +
             _ = (0, _._)("CommunitySingleScreenshot", _),
             _ = (0, _._)(),
             _ = (_) => _(_, _.currentTarget),
-            _ = _(_),
+            _ = _(_, "all"),
             {
               short_description: _,
               favorited: _ = 0,
@@ -645417,7 +646723,7 @@ Status Code:` +
             ],
           });
         }
-        function _(_) {
+        function _(_, _) {
           const { mutateAsync: _ } = (0, _._)(),
             _ = (0, _._)(),
             _ = (0, _._)();
@@ -645425,7 +646731,7 @@ Status Code:` +
             if (
               (_({
                 screenshots: [_],
-                location: "local",
+                location: _,
               }),
               "entries" in _)
             ) {
@@ -645443,13 +646749,13 @@ Status Code:` +
               _.Media.Grid({
                 bReplace: !0,
               });
-          }, [_, _, _, _]);
+          }, [_, _, _, _, _]);
         }
         function _(_) {
           const { screenshot: _ } = _,
             _ = _.rtCreated,
             _ = (0, _._)(_),
-            _ = _(_),
+            _ = _(_, "local"),
             _ = (0, _._)(),
             _ = (_) => _(_, _.currentTarget),
             _ = (0, _._)();
@@ -645487,7 +646793,7 @@ Status Code:` +
         }
         function _(_) {
           const { screenshot: _ } = _,
-            _ = _(_);
+            _ = _(_, "local");
           return (0, _.jsx)(_, {
             children: (0, _.jsx)(_, {
               grow: !0,
@@ -663539,7 +664845,7 @@ Status Code:` +
             [_] = (0, _._)(),
             _ = _.filter((_) => _.appid != null).map((_) => _.appid),
             _ = (0, _._)(_);
-          if (!_ || !_) return null;
+          if (!_) return null;
           const _ = (_) => {
               _.forEach((_) => {
                 SteamClient.Input.ClearSelectedConfigForApp(
@@ -663559,7 +664865,7 @@ Status Code:` +
                   );
               });
             },
-            _ = (0, _._)(),
+            _ = (0, _._)() && _,
             _ = _.length > 0;
           return _ || _
             ? (0, _.jsxs)(_._, {
@@ -693393,7 +694699,7 @@ Status Code:` +
               },
               _ = () => {
                 (0, _._)(_.strShortcutStartDir).then((_) => {
-                  _ && SteamClient.Apps.SetShortcutExe(_, _);
+                  _ && SteamClient.Apps.SetShortcutExe(_, (0, _._)(_));
                 });
               },
               _ = () => {
@@ -694275,27 +695581,53 @@ Status Code:` +
               : _.bOnAppLaunch
                 ? (0, _._)("#CloudConflict_AppLaunch_Header")
                 : (0, _._)("#CloudConflict_Header"),
-            _ = _
-              ? (0, _._)("#CloudConflict_ControllerConfigs_Description")
-              : _.bOnAppLaunch
-                ? (0, _._)(
-                    "#CloudConflict_AppLaunch_Description",
-                    _?.display_name ?? "",
-                  )
-                : (0, _._)("#CloudConflict_Description", _?.display_name ?? ""),
-            _ = _
-              ? (0, _._)("#CloudConflict_ControllerConfigs_KeepRemote")
-              : (0, _._)("#CloudConflict_KeepRemote"),
-            _ = _
-              ? (0, _._)("#CloudConflict_ControllerConfigs_KeepLocal")
-              : (0, _._)("#CloudConflict_KeepLocal"),
-            _ = _.bOnAppLaunch
+            _ = _.remoteHost;
+          let _ = _
+            ? (0, _._)("#CloudConflict_ControllerConfigs_Description")
+            : _.bOnAppLaunch
+              ? (0, _._)(
+                  "#CloudConflict_AppLaunch_Description",
+                  _?.display_name ?? "",
+                )
+              : (0, _._)("#CloudConflict_Description", _?.display_name ?? "");
+          _ &&
+            (_ = _
+              ? (0, _._)(
+                  "#CloudConflict_RemoteHost_ControllerConfigs_Description",
+                  _.strMachineName,
+                )
+              : (0, _._)(
+                  "#CloudConflict_RemoteHost_Description",
+                  _?.display_name ?? "",
+                  _.strMachineName,
+                ));
+          const _ = _
+            ? (0, _._)("#CloudConflict_ControllerConfigs_KeepRemote")
+            : (0, _._)("#CloudConflict_KeepRemote");
+          let _ = _
+            ? (0, _._)("#CloudConflict_ControllerConfigs_KeepLocal")
+            : (0, _._)("#CloudConflict_KeepLocal");
+          _ &&
+            (_ = _
+              ? (0, _._)(
+                  "#CloudConflict_RemoteHost_ControllerConfigs_KeepLocal",
+                  _.strMachineName,
+                )
+              : (0, _._)(
+                  "#CloudConflict_RemoteHost_KeepLocal",
+                  _.strMachineName,
+                ));
+          const _ = _.bOnAppLaunch
               ? (0, _._)("#CloudConflict_AppLaunch_Footer_Note")
               : (0, _._)("#CloudConflict_Footer_Note"),
             _ = (0, _._)(
-              () => SteamClient.Apps.GetConflictingFileTimestamps(_.appid),
-              [_.appid],
+              () =>
+                _
+                  ? Promise.resolve(void 0)
+                  : SteamClient.Apps.GetConflictingFileTimestamps(_.appid),
+              [_.appid, _],
             ),
+            _ = _ ?? _,
             _ = (_) => () => {
               _.closeModal && _.closeModal(), _ && _();
             };
@@ -694320,9 +695652,14 @@ Status Code:` +
                       _(
                         (0, _.jsx)("div", {
                           className: _().ChoiceNote,
-                          children: (0, _._)(
-                            "#CloudConflict_KeepLocal_Description",
-                          ),
+                          children: _
+                            ? (0, _._)(
+                                _
+                                  ? "#CloudConflict_RemoteHost_ControllerConfigs_KeepLocal_Description"
+                                  : "#CloudConflict_RemoteHost_KeepLocal_Description",
+                                _.strMachineName,
+                              )
+                            : (0, _._)("#CloudConflict_KeepLocal_Description"),
                         }),
                       );
                     break;
@@ -694331,15 +695668,20 @@ Status Code:` +
                       _(
                         (0, _.jsx)("div", {
                           className: _().ChoiceNote,
-                          children: (0, _._)(
-                            "#CloudConflict_KeepRemote_Description",
-                          ),
+                          children: _
+                            ? (0, _._)(
+                                _
+                                  ? "#CloudConflict_RemoteHost_ControllerConfigs_KeepRemote_Description"
+                                  : "#CloudConflict_RemoteHost_KeepRemote_Description",
+                                _.strMachineName,
+                              )
+                            : (0, _._)("#CloudConflict_KeepRemote_Description"),
                         }),
                       );
                     break;
                 }
               },
-              [1, 2, 0],
+              [1, 2, 0, _, _],
             ),
             _ = (_) => {
               switch (_) {
@@ -697745,7 +699087,7 @@ Status Code:` +
               _.nSteamVersion > 0
                 ? _.nSteamVersion.toString()
                 : (0, _._)("#Settings_System_SteamLocalBuild"),
-            _ = parseInt(1791327653),
+            _ = parseInt(1792098415),
             _ = _ && (0, _._)(_, _, _),
             _ = _.sSteamBuildDate,
             _ = (0, _._)() ? " GMT+0000" : " GMT-0800",
@@ -712506,9 +713848,10 @@ Status Code:` +
         function _(_) {
           (0, _.useEffect)(() => {
             const _ =
-              new URLSearchParams(window.location.search).get("PACKAGE_CL") ??
-              _;
-            (0, _._)().Init("Client Login", _, _.GetServiceTransport());
+                new URLSearchParams(window.location.search).get("PACKAGE_CL") ??
+                _,
+              _ = (0, _._)();
+            _.product || _.Init("Client Login", _, _.GetServiceTransport());
           }, [_]);
         }
       },
@@ -727114,8 +728457,6 @@ Status Code:` +
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = "steamdb";
         function _(_) {
           const { option: _, flags: _, onChange: _ } = _,
@@ -727231,18 +728572,14 @@ Status Code:` +
               });
         }
         function _(_) {
-          const _ = (0, _._)() && !(0, _._)(),
-            _ = (0, _._)(),
-            _ = (0, _._)(() => _._.settings?.bIsSteamSideload),
-            [_] = (0, _._)("enable_steamrt64_client");
-          return !_ || !(_ || _ || _)
-            ? null
-            : (0, _.jsx)(_._, {
+          return (0, _._)() && !(0, _._)()
+            ? (0, _.jsx)(_._, {
                 feature: _._,
                 label: (0, _._)("#Settings_Interface_SteamRTClient"),
                 bRequiresRestart: !0,
                 setting: "enable_steamrt64_client",
-              });
+              })
+            : null;
         }
         function _(_) {
           const [_, _] = _.useState(!1),
@@ -728434,7 +729771,7 @@ Status Code:` +
             _ = _(),
             _ = (0, _._)(),
             _ = (0, _._)();
-          (0, _._)();
+          (0, _._)(_);
           const [_, _] = (0, _._)(() => [
               _.filter((_) => _(_) && !_(_)),
               _.filter((_) => !_(_) && !_(_)),
@@ -732228,6 +733565,13 @@ Status Code:` +
                 onClick: _,
                 children: (0, _._)("#Settings_Customization_PreviewButton"),
               }),
+              (0, _.jsx)(_._, {
+                setting: "screensaver_while_ingame",
+                label: (0, _._)(
+                  "#Settings_Customization_Screensaver_WhileInGame",
+                ),
+                feature: _._,
+              }),
               (0, _.jsx)(_, {}),
             ],
           });
@@ -732425,8 +733769,10 @@ Status Code:` +
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = "steamdb";
+        const _ = -1,
+          _ = 0;
+        var _ = "steamdb";
         const _ = 0,
           _ = 1,
           _ = 2;
@@ -732765,10 +734111,7 @@ Status Code:` +
             _.set_enable_video_av1(_.enable_video_av1()),
             _.set_enable_video_pyrowave(_.enable_video_pyrowave()),
             _.set_pyrowave_yuv444(_.pyrowave_yuv444()),
-            _.set_pyrowave_custom_bitrate(_.pyrowave_custom_bitrate()),
-            _.set_pyrowave_custom_bitrate_kbps(
-              _.pyrowave_custom_bitrate_kbps(),
-            ),
+            _.set_pyrowave_bitrate_kbps(_.pyrowave_bitrate_kbps()),
             _.set_pyrowave_quality_modifier(_.pyrowave_quality_modifier()),
             _.set_enable_performance_icons(_.enable_performance_icons()),
             _.set_enable_microphone_streaming(_.enable_microphone_streaming()),
@@ -732799,7 +734142,7 @@ Status Code:` +
             },
             _ = () => {
               let _ = new _._();
-              _.set_width(1920), _.set_height(1080);
+              _.set_width(0), _.set_height(1080);
               let _ = new _._();
               _.set_mode(_);
               let _ = new _._();
@@ -732813,7 +734156,7 @@ Status Code:` +
             },
             _ = () => {
               let _ = new _._();
-              _.set_width(3840), _.set_height(2160);
+              _.set_width(0), _.set_height(2160);
               let _ = new _._();
               _.set_mode(_);
               let _ = new _._();
@@ -733015,227 +734358,233 @@ Status Code:` +
             (_.desired_resolution_x() ?? 0).toString() +
             "x" +
             (_.desired_resolution_y() ?? 0).toString();
-          const _ = 300;
-          let _ = (_.pyrowave_custom_bitrate_kbps() ?? 0) / 1e3;
-          return (
-            _ == 0 && (_ = _),
-            (0, _.jsxs)("div", {
-              _: _,
-              children: [
-                (0, _.jsxs)(_._, {
-                  fullWidth: !0,
+          const _ = _.pyrowave_bitrate_kbps() == _,
+            _ = 100,
+            _ = 1e3,
+            _ =
+              _.pyrowave_bitrate_kbps() == _
+                ? _
+                : _.pyrowave_bitrate_kbps() / 1e3;
+          return (0, _.jsxs)("div", {
+            _: _,
+            children: [
+              (0, _.jsxs)(_._, {
+                fullWidth: !0,
+                children: [
+                  (0, _.jsx)(_._, {
+                    feature: _._,
+                    _: _._,
+                    onClick: _,
+                    children: (0, _._)("#Settings_RemotePlay_UsePresetDefault"),
+                  }),
+                  (0, _.jsx)(_._, {
+                    feature: _._,
+                    _: _._,
+                    onClick: _,
+                    children: (0, _._)(
+                      "#Settings_RemotePlay_UsePresetEnhanced1080p",
+                    ),
+                  }),
+                  (0, _.jsx)(_._, {
+                    feature: _._,
+                    _: _._,
+                    onClick: _,
+                    children: (0, _._)(
+                      "#Settings_RemotePlay_UsePresetEnhanced4K",
+                    ),
+                  }),
+                ],
+              }),
+              _.can_toggle_fullscreen() &&
+                (0, _.jsx)(_._, {
+                  feature: _._,
+                  label: (0, _._)("#Settings_RemotePlay_WindowedMode"),
+                  checked: _.windowed(),
+                  onChange: (_) => {
+                    _.set_windowed(_), _(_);
+                  },
+                }),
+              (0, _.jsx)(_._, {
+                feature: _._,
+                label: (0, _._)("#Settings_RemotePlay_Video"),
+                rgOptions: _,
+                selectedOption: _.enable_video_streaming() ? _.quality() : -1,
+                onChange: _,
+              }),
+              (0, _.jsx)(_._, {
+                feature: _._,
+                label: (0, _._)("#Settings_RemotePlay_Audio"),
+                rgOptions: _,
+                selectedOption: _.enable_audio_streaming()
+                  ? _.audio_channels()
+                  : -1,
+                onChange: _,
+              }),
+              (0, _.jsx)(_._, {
+                feature: _._,
+                label: (0, _._)("#Settings_RemotePlay_Microphone"),
+                checked: _.enable_microphone_streaming(),
+                onChange: (_) => {
+                  _.set_enable_microphone_streaming(_), _(_);
+                },
+              }),
+              !_._.IN_GAMESCOPE &&
+                (0, _.jsx)(_._, {
+                  feature: _._,
+                  label: (0, _._)(
+                    "#Settings_RemotePlay_ControllerOverlayHotkey",
+                  ),
+                  description: (0, _._)(
+                    "#Settings_RemotePlay_ControllerOverlayHotkeyDescription",
+                  ),
+                  rgOptions: _,
+                  selectedOption: _.controller_overlay_hotkey() ?? "auto",
+                  onChange: _,
+                }),
+              (0, _.jsx)(_._, {
+                feature: _._,
+                label: (0, _._)("#Settings_RemotePlay_PerformanceOverlay"),
+                rgOptions: _,
+                selectedOption: _(_),
+                onChange: _,
+              }),
+              (0, _.jsx)(_._, {
+                feature: _._,
+                label: (0, _._)("#Settings_RemotePlay_Bandwidth"),
+                rgOptions: _,
+                selectedOption: _.desired_bitrate_kbps() ?? -1,
+                onChange: _,
+                contextMenuPositionOptions: {
+                  bMatchWidth: !1,
+                },
+              }),
+              (0, _.jsx)(_._, {
+                feature: _._,
+                label: (0, _._)("#Settings_RemotePlay_Framerate"),
+                rgOptions: _,
+                selectedOption: _.desired_framerate_numerator() ?? 0,
+                onChange: _,
+              }),
+              (0, _.jsx)(_._, {
+                feature: _._,
+                label: (0, _._)("#Settings_RemotePlay_Resolution"),
+                rgOptions: _,
+                selectedOption: _,
+                onChange: _,
+              }),
+              (0, _.jsx)(_._, {
+                feature: _._,
+                label: (0, _._)("#Settings_RemotePlay_HardwareDecoding"),
+                checked: _.enable_hardware_decoding(),
+                onChange: (_) => {
+                  _.set_enable_hardware_decoding(_), _(_);
+                },
+              }),
+              (0, _.jsx)(_._, {
+                feature: _._,
+                label: (0, _._)("#Settings_RemotePlay_HEVC"),
+                disabled: !_.bHEVCDecodeAvailable,
+                checked: _.bHEVCDecodeAvailable && _.enable_video_hevc(),
+                onChange: (_) => {
+                  _.set_enable_video_hevc(_), _(_);
+                },
+              }),
+              (0, _.jsx)(_._, {
+                feature: _._,
+                label: (0, _._)("#Settings_RemotePlay_AV1"),
+                disabled: !_.bAV1DecodeAvailable,
+                checked: _.bAV1DecodeAvailable && _.enable_video_av1(),
+                onChange: (_) => {
+                  _.set_enable_video_av1(_), _(_);
+                },
+              }),
+              (0, _.jsx)(_._, {
+                feature: _._,
+                label: (0, _._)("#Settings_RemotePlay_Pyrowave"),
+                description: (0, _._)(
+                  "#Settings_RemotePlay_PyrowaveDescription",
+                ),
+                disabled: !_.bPyrowaveDecodeAvailable,
+                checked:
+                  _.bPyrowaveDecodeAvailable && _.enable_video_pyrowave(),
+                onChange: (_) => {
+                  _.set_enable_video_pyrowave(_), _(_);
+                },
+              }),
+              _.bPyrowaveDecodeAvailable &&
+                _.enable_video_pyrowave() &&
+                (0, _.jsxs)(_.Fragment, {
                   children: [
                     (0, _.jsx)(_._, {
                       feature: _._,
-                      _: _._,
-                      onClick: _,
-                      children: (0, _._)(
-                        "#Settings_RemotePlay_UsePresetDefault",
-                      ),
+                      label: (0, _._)("#Settings_RemotePlay_Pyrowave_YUV444"),
+                      checked: _.pyrowave_yuv444(),
+                      onChange: (_) => {
+                        _.set_pyrowave_yuv444(_), _(_);
+                      },
+                      indentLevel: 1,
                     }),
                     (0, _.jsx)(_._, {
                       feature: _._,
-                      _: _._,
-                      onClick: _,
-                      children: (0, _._)(
-                        "#Settings_RemotePlay_UsePresetEnhanced1080p",
+                      label: (0, _._)(
+                        "#Settings_RemotePlay_Pyrowave_AutomaticBitrate",
                       ),
+                      checked: _,
+                      onChange: (_) => {
+                        _
+                          ? _.set_pyrowave_bitrate_kbps(_)
+                          : _.set_pyrowave_bitrate_kbps(3e5),
+                          _(_);
+                      },
+                      indentLevel: 1,
                     }),
-                    (0, _.jsx)(_._, {
-                      feature: _._,
-                      _: _._,
-                      onClick: _,
-                      children: (0, _._)(
-                        "#Settings_RemotePlay_UsePresetEnhanced4K",
-                      ),
-                    }),
-                  ],
-                }),
-                _.can_toggle_fullscreen() &&
-                  (0, _.jsx)(_._, {
-                    feature: _._,
-                    label: (0, _._)("#Settings_RemotePlay_WindowedMode"),
-                    checked: _.windowed(),
-                    onChange: (_) => {
-                      _.set_windowed(_), _(_);
-                    },
-                  }),
-                (0, _.jsx)(_._, {
-                  feature: _._,
-                  label: (0, _._)("#Settings_RemotePlay_Video"),
-                  rgOptions: _,
-                  selectedOption: _.enable_video_streaming() ? _.quality() : -1,
-                  onChange: _,
-                }),
-                (0, _.jsx)(_._, {
-                  feature: _._,
-                  label: (0, _._)("#Settings_RemotePlay_Audio"),
-                  rgOptions: _,
-                  selectedOption: _.enable_audio_streaming()
-                    ? _.audio_channels()
-                    : -1,
-                  onChange: _,
-                }),
-                (0, _.jsx)(_._, {
-                  feature: _._,
-                  label: (0, _._)("#Settings_RemotePlay_Microphone"),
-                  checked: _.enable_microphone_streaming(),
-                  onChange: (_) => {
-                    _.set_enable_microphone_streaming(_), _(_);
-                  },
-                }),
-                !_._.IN_GAMESCOPE &&
-                  (0, _.jsx)(_._, {
-                    feature: _._,
-                    label: (0, _._)(
-                      "#Settings_RemotePlay_ControllerOverlayHotkey",
-                    ),
-                    description: (0, _._)(
-                      "#Settings_RemotePlay_ControllerOverlayHotkeyDescription",
-                    ),
-                    rgOptions: _,
-                    selectedOption: _.controller_overlay_hotkey() ?? "auto",
-                    onChange: _,
-                  }),
-                (0, _.jsx)(_._, {
-                  feature: _._,
-                  label: (0, _._)("#Settings_RemotePlay_PerformanceOverlay"),
-                  rgOptions: _,
-                  selectedOption: _(_),
-                  onChange: _,
-                }),
-                (0, _.jsx)(_._, {
-                  feature: _._,
-                  label: (0, _._)("#Settings_RemotePlay_Bandwidth"),
-                  rgOptions: _,
-                  selectedOption: _.desired_bitrate_kbps() ?? -1,
-                  onChange: _,
-                  contextMenuPositionOptions: {
-                    bMatchWidth: !1,
-                  },
-                }),
-                (0, _.jsx)(_._, {
-                  feature: _._,
-                  label: (0, _._)("#Settings_RemotePlay_Framerate"),
-                  rgOptions: _,
-                  selectedOption: _.desired_framerate_numerator() ?? 0,
-                  onChange: _,
-                }),
-                (0, _.jsx)(_._, {
-                  feature: _._,
-                  label: (0, _._)("#Settings_RemotePlay_Resolution"),
-                  rgOptions: _,
-                  selectedOption: _,
-                  onChange: _,
-                }),
-                (0, _.jsx)(_._, {
-                  feature: _._,
-                  label: (0, _._)("#Settings_RemotePlay_HardwareDecoding"),
-                  checked: _.enable_hardware_decoding(),
-                  onChange: (_) => {
-                    _.set_enable_hardware_decoding(_), _(_);
-                  },
-                }),
-                (0, _.jsx)(_._, {
-                  feature: _._,
-                  label: (0, _._)("#Settings_RemotePlay_HEVC"),
-                  disabled: !_.bHEVCDecodeAvailable,
-                  checked: _.bHEVCDecodeAvailable && _.enable_video_hevc(),
-                  onChange: (_) => {
-                    _.set_enable_video_hevc(_), _(_);
-                  },
-                }),
-                (0, _.jsx)(_._, {
-                  feature: _._,
-                  label: (0, _._)("#Settings_RemotePlay_AV1"),
-                  disabled: !_.bAV1DecodeAvailable,
-                  checked: _.bAV1DecodeAvailable && _.enable_video_av1(),
-                  onChange: (_) => {
-                    _.set_enable_video_av1(_), _(_);
-                  },
-                }),
-                (0, _.jsx)(_._, {
-                  feature: _._,
-                  label: (0, _._)("#Settings_RemotePlay_Pyrowave"),
-                  description: (0, _._)(
-                    "#Settings_RemotePlay_PyrowaveDescription",
-                  ),
-                  disabled: !_.bPyrowaveDecodeAvailable,
-                  checked:
-                    _.bPyrowaveDecodeAvailable && _.enable_video_pyrowave(),
-                  onChange: (_) => {
-                    _.set_enable_video_pyrowave(_), _(_);
-                  },
-                }),
-                _.bPyrowaveDecodeAvailable &&
-                  _.enable_video_pyrowave() &&
-                  (0, _.jsxs)(_.Fragment, {
-                    children: [
-                      (0, _.jsx)(_._, {
-                        feature: _._,
-                        label: (0, _._)("#Settings_RemotePlay_Pyrowave_YUV444"),
-                        checked: _.pyrowave_yuv444(),
-                        onChange: (_) => {
-                          _.set_pyrowave_yuv444(_), _(_);
-                        },
-                        indentLevel: 1,
-                      }),
+                    _ &&
                       (0, _.jsx)(_._, {
                         feature: _._,
                         label: (0, _._)(
-                          "#Settings_RemotePlay_Pyrowave_AutomaticBitrate",
+                          "#Settings_RemotePlay_Pyrowave_QualityModifier",
                         ),
-                        checked: !_.pyrowave_custom_bitrate(),
+                        min: 0.5,
+                        max: 2,
+                        step: 0.1,
+                        value: _.pyrowave_quality_modifier() ?? 1,
+                        showValue: !0,
                         onChange: (_) => {
-                          _.set_pyrowave_custom_bitrate(!_), _(_);
+                          _.set_pyrowave_quality_modifier(_), _(_);
                         },
                         indentLevel: 1,
                       }),
-                      _.pyrowave_custom_bitrate() &&
-                        (0, _.jsx)(_._, {
-                          feature: _._,
-                          label: (0, _._)(
-                            "#Settings_RemotePlay_Pyrowave_CustomBitrate",
-                          ),
-                          min: 100,
-                          max: 500,
-                          step: 1,
-                          value: _,
-                          showValue: !0,
-                          onChange: (_) => {
-                            _.set_pyrowave_custom_bitrate_kbps(_ * 1e3), _(_);
-                          },
-                          indentLevel: 1,
-                        }),
-                      !_.pyrowave_custom_bitrate() &&
-                        (0, _.jsx)(_._, {
-                          feature: _._,
-                          label: (0, _._)(
-                            "#Settings_RemotePlay_Pyrowave_QualityModifier",
-                          ),
-                          min: 0.5,
-                          max: 2,
-                          step: 0.1,
-                          value: _.pyrowave_quality_modifier() ?? 1,
-                          showValue: !0,
-                          onChange: (_) => {
-                            _.set_pyrowave_quality_modifier(_), _(_);
-                          },
-                          indentLevel: 1,
-                        }),
-                    ],
-                  }),
-                (0, _.jsx)(_._, {
-                  feature: _._,
-                  label: (0, _._)("#Settings_RemotePlay_LowLatencyNetworking"),
-                  checked: _.enable_unreliable_fec(),
-                  onChange: (_) => {
-                    _.set_enable_unreliable_fec(_), _(_);
-                  },
+                    !_ &&
+                      (0, _.jsx)(_._, {
+                        feature: _._,
+                        label: (0, _._)(
+                          "#Settings_RemotePlay_Pyrowave_CustomBitrate",
+                        ),
+                        min: _,
+                        max: _,
+                        step: 1,
+                        value: _,
+                        showValue: !0,
+                        onChange: (_) => {
+                          _ == _
+                            ? _.set_pyrowave_bitrate_kbps(_)
+                            : _.set_pyrowave_bitrate_kbps(_ * 1e3),
+                            _(_);
+                        },
+                        indentLevel: 1,
+                      }),
+                  ],
                 }),
-              ],
-            })
-          );
+              (0, _.jsx)(_._, {
+                feature: _._,
+                label: (0, _._)("#Settings_RemotePlay_LowLatencyNetworking"),
+                checked: _.enable_unreliable_fec(),
+                onChange: (_) => {
+                  _.set_enable_unreliable_fec(_), _(_);
+                },
+              }),
+            ],
+          });
         }
         function _(_) {
           return _.status === _._
@@ -733328,21 +734677,27 @@ Status Code:` +
           });
         }
         function _(_) {
-          const { device: _, onPairResult: _ } = _,
-            [_, _] = _.useState(!1);
-          (0, _._)(() => _(!1), 15e3, [_]);
-          const { bCanPairViaWifiAP: _, bConnectedViaWifiAP: _ } = _,
-            _ = async () => {
-              _(!0);
-              const _ = await SteamClient?.RemotePlay?.PairViaWifiAP(
-                _.clientId,
-              );
-              _(_ == _._._), _ && _(_);
+          const { device: _ } = _,
+            { bCanPairViaWifiAP: _, bConnectedViaWifiAP: _ } = _,
+            _ = (0, _._)(_.clientId, !0),
+            _ = _ && !_.strResult;
+          _.useEffect(
+            () => () => {
+              _._.GetWifiAPPairState(_.clientId)?.eResult !== void 0 &&
+                _._.DismissWifiAPPair(_.clientId);
             },
-            _ = _.useId(),
+            [_.clientId],
+          );
+          const _ = _.useId(),
             _ = {
               accessibilityId: _,
               label: _.clientName,
+              description:
+                _ &&
+                (0, _.jsx)(_._, {
+                  clientId: _.clientId,
+                  bTransientResult: !0,
+                }),
             },
             _ = _._(_, _);
           return (
@@ -733359,11 +734714,18 @@ Status Code:` +
               ..._,
               children: [
                 !_ &&
+                  !_ &&
                   (0, _.jsx)(_._, {
-                    onClick: _,
-                    disabled: _,
+                    onClick: () => _._.PairViaWifiAP(_.clientId),
                     ..._,
                     children: (0, _._)("#Settings_RemotePlay_WifiAP_Pair"),
+                  }),
+                !_ &&
+                  _ &&
+                  (0, _.jsx)(_._, {
+                    onClick: () => _._.DismissWifiAPPair(_.clientId),
+                    ..._,
+                    children: (0, _._)("#Button_Cancel"),
                   }),
                 _ &&
                   (0, _.jsx)(_._, {
@@ -733413,7 +734775,6 @@ Status Code:` +
             [_, _] = (0, _._)("remote_play_wifi_ap_show_advanced"),
             [_] = (0, _._)("remote_play_wifi_ap_paired_ssid"),
             _ = _.useRef(void 0),
-            _ = (0, _._)(),
             _ = (0, _._)(),
             _ = [
               {
@@ -733501,13 +734862,6 @@ Status Code:` +
             ],
             _ = (_) => {
               _(_.data).includes(_) || _(0), _(_.data).includes(_) || _(0);
-            },
-            _ = (_) => {
-              (0, _._)(
-                (0, _._)("#RemotePlay_PairWifiAPResult_Title"),
-                (0, _._)(_),
-                _.ownerWindow ?? window,
-              );
             },
             _ = _.useId(),
             _ = _.useId(),
@@ -733753,7 +735107,6 @@ Status Code:` +
                             _,
                             {
                               device: _,
-                              onPairResult: _,
                             },
                             _.clientId ?? _.deviceId,
                           ),
@@ -735687,79 +737040,84 @@ Status Code:` +
                 _(_._._, !0).length,
                 _(_._._, !0).length,
               ) >= 15;
-          return (0, _.jsxs)(_._, {
-            className: (0, _._)(
-              _().NotificationListSection,
-              _ && _().LongHeaders,
-            ),
-            label: _(_),
-            children: [
-              (0, _.jsx)("div", {
-                ref: _,
-                className: _().StickyScrollSentinel,
-              }),
-              (0, _.jsxs)("div", {
-                className: (0, _._)(_().CheckboxHeaders, !_ && _().Scrolling),
+          return _.length === 0
+            ? null
+            : (0, _.jsxs)(_._, {
+                className: (0, _._)(
+                  _().NotificationListSection,
+                  _ && _().LongHeaders,
+                ),
+                label: _(_),
                 children: [
                   (0, _.jsx)("div", {
-                    className: _().NotifyViaHeader,
-                    children: _._.Localize(
-                      "#Account_Notification_Settings_Header_Notifyvia",
+                    ref: _,
+                    className: _().StickyScrollSentinel,
+                  }),
+                  (0, _.jsxs)("div", {
+                    className: (0, _._)(
+                      _().CheckboxHeaders,
+                      !_ && _().Scrolling,
                     ),
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: _().NotifyViaHeader,
+                        children: _._.Localize(
+                          "#Account_Notification_Settings_Header_Notifyvia",
+                        ),
+                      }),
+                      (0, _.jsx)("div", {
+                        className: _().CheckboxColumn,
+                        _: _.emailLabelId,
+                        children: _(_._._, !0),
+                      }),
+                      (0, _.jsx)(_._, {
+                        toolTipContent: _._.Localize(
+                          "#Account_Notification_Settings_Desktop_Tooltip",
+                        ),
+                        children: (0, _.jsx)("div", {
+                          className: _().CheckboxColumn,
+                          _: _.toastLabelId,
+                          children: _(_._._, !0),
+                        }),
+                      }),
+                      (0, _.jsx)(_._, {
+                        toolTipContent: _._.Localize(
+                          "#Account_Notification_Settings_Mobile_Tooltip",
+                        ),
+                        children: (0, _.jsx)("div", {
+                          className: _().CheckboxColumn,
+                          _: _.mobileLabelId,
+                          children: _(_._._, !0),
+                        }),
+                      }),
+                      (0, _.jsx)(_._, {
+                        toolTipContent: _._.Localize(
+                          "#Account_Notification_Settings_Feed_Tooltip",
+                        ),
+                        children: (0, _.jsxs)("div", {
+                          className: _().CheckboxColumn,
+                          _: _.feedLabelId,
+                          children: [_(_._._, !0), " "],
+                        }),
+                      }),
+                    ],
                   }),
-                  (0, _.jsx)("div", {
-                    className: _().CheckboxColumn,
-                    _: _.emailLabelId,
-                    children: _(_._._, !0),
-                  }),
-                  (0, _.jsx)(_._, {
-                    toolTipContent: _._.Localize(
-                      "#Account_Notification_Settings_Desktop_Tooltip",
+                  _.map((_) =>
+                    (0, _.jsx)(
+                      _,
+                      {
+                        setting: _,
+                        accessibilityIds: _,
+                        updateEmailOptOut: _,
+                        bOptOutAllEmail: _,
+                      },
+                      _.notifications?.notification_type ??
+                        `email-${_.emailSettings?.eEmailType}`,
                     ),
-                    children: (0, _.jsx)("div", {
-                      className: _().CheckboxColumn,
-                      _: _.toastLabelId,
-                      children: _(_._._, !0),
-                    }),
-                  }),
-                  (0, _.jsx)(_._, {
-                    toolTipContent: _._.Localize(
-                      "#Account_Notification_Settings_Mobile_Tooltip",
-                    ),
-                    children: (0, _.jsx)("div", {
-                      className: _().CheckboxColumn,
-                      _: _.mobileLabelId,
-                      children: _(_._._, !0),
-                    }),
-                  }),
-                  (0, _.jsx)(_._, {
-                    toolTipContent: _._.Localize(
-                      "#Account_Notification_Settings_Feed_Tooltip",
-                    ),
-                    children: (0, _.jsxs)("div", {
-                      className: _().CheckboxColumn,
-                      _: _.feedLabelId,
-                      children: [_(_._._, !0), " "],
-                    }),
-                  }),
+                  ),
+                  _ === _.k_ENotificationGroup_Wishlist && (0, _.jsx)(_, {}),
                 ],
-              }),
-              _.map((_) =>
-                (0, _.jsx)(
-                  _,
-                  {
-                    setting: _,
-                    accessibilityIds: _,
-                    updateEmailOptOut: _,
-                    bOptOutAllEmail: _,
-                  },
-                  _.notifications?.notification_type ??
-                    `email-${_.emailSettings?.eEmailType}`,
-                ),
-              ),
-              _ === _.k_ENotificationGroup_Wishlist && (0, _.jsx)(_, {}),
-            ],
-          });
+              });
         }
         function _(_) {
           const {
@@ -738707,7 +740065,7 @@ Status Code:` +
             _ = (0, _._)(_),
             _ = !0,
             _ = _.nSteamVersion > 0 ? _.nSteamVersion.toString() : "local",
-            _ = parseInt(1791327653),
+            _ = parseInt(1792098415),
             _ = _ && (0, _._)(_, _, _),
             _ = ((_.nCPUHz || 0) / 1e3 / 1e3 / 1e3).toFixed(2) + " GHz",
             _ = (0, _._)(_.nSystemRAMSizeMB * 1024 * 1024, 0),
@@ -739815,6 +741173,153 @@ Status Code:` +
               _,
             ],
           });
+        }
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(module_exports, {
+          _: () => _,
+          _: () => _,
+        });
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_),
+          _ = "steamdb";
+        const _ = 95,
+          _ = 300,
+          _ = 15e3;
+        function _(_, _ = !1) {
+          const _ = (0, _._)(_),
+            _ = _?.eResult !== void 0,
+            _ = _?.eResult == _._._,
+            _ = !!_?.bConnecting,
+            _ = (0, _._)(
+              () =>
+                !!_._.devices.find((_) => _.clientId == _)?.bConnectedViaWifiAP,
+            );
+          (0, _._)({
+            msInterval: 250,
+            bEnabled: _ && !_,
+          });
+          const [_, _] = _.useState(!1);
+          _.useEffect(() => {
+            if (!_ || !_ || !_) {
+              _(_);
+              return;
+            }
+            const _ = window.setTimeout(() => _(!0), _);
+            return () => window.clearTimeout(_);
+          }, [_, _, _]);
+          const _ = _ && _,
+            [_, _] = _.useState(!1),
+            [_, _] = _.useState(!1);
+          if (
+            (_.useEffect(() => {
+              if ((_(!1), _(!1), !_ || !_)) return;
+              const _ = window.setTimeout(() => _(!0), _);
+              return () => window.clearTimeout(_);
+            }, [_, _]),
+            _.useEffect(() => {
+              _ && _ && _(!0);
+            }, [_, _]),
+            !_ || (_ && _ && (_ || (_ && !_))))
+          )
+            return;
+          let _ = 0;
+          _
+            ? (_ = 100)
+            : _ &&
+              _.nEstimatedSeconds &&
+              (_ = Math.min(
+                _,
+                (100 * (Date.now() - _.msConnectStart)) /
+                  (_.nEstimatedSeconds * 1e3),
+              ));
+          let _;
+          return (
+            _ &&
+              _ &&
+              (_
+                ? (_ = (0, _._)(
+                    _
+                      ? "#RemotePlay_PairWifiAPResult_Connected"
+                      : "#RemotePlay_PairWifiAPResult_OK",
+                  ))
+                : (_ = (0, _._)(_.eResult))),
+            {
+              bPairing: !_ && !_,
+              bConnecting: _,
+              bShowBar: _ && !_,
+              nPercent: _,
+              nTransitionSec: _ ? _ / 1e3 : 0.25,
+              strResult: _,
+              bSucceeded: _,
+            }
+          );
+        }
+        function _(_) {
+          const _ = _(_.clientId, _.bTransientResult);
+          return _
+            ? (0, _.jsxs)("div", {
+                className: (0, _._)(_().WifiAPPairingProgress, _.className),
+                children: [
+                  !_.strResult &&
+                    (0, _.jsxs)("div", {
+                      className: _().Step,
+                      children: [
+                        _.bPairing
+                          ? (0, _.jsx)(_.Spinner, {
+                              className: _().Icon,
+                            })
+                          : (0, _.jsx)(_.Checkmark, {
+                              className: (0, _._)(_().Icon, _().Done),
+                            }),
+                        (0, _._)(
+                          _.bPairing
+                            ? "#RemotePlay_PairWifiAP_Pairing"
+                            : "#RemotePlay_PairWifiAP_Paired",
+                        ),
+                      ],
+                    }),
+                  !_.strResult &&
+                    _.bConnecting &&
+                    (0, _.jsxs)("div", {
+                      className: _().Step,
+                      children: [
+                        (0, _.jsx)(_.Spinner, {
+                          className: _().Icon,
+                        }),
+                        (0, _._)("#RemotePlay_PairWifiAP_Connecting"),
+                      ],
+                    }),
+                  _.bShowBar &&
+                    (0, _.jsx)(_._, {
+                      nProgress: _.nPercent,
+                      nTransitionSec: _.nTransitionSec,
+                    }),
+                  _.strResult &&
+                    (0, _.jsxs)("div", {
+                      className: (0, _._)(_().Step, _.bSucceeded && _().Done),
+                      children: [
+                        _.bSucceeded &&
+                          (0, _.jsx)(_.Checkmark, {
+                            className: _().Icon,
+                          }),
+                        _.strResult,
+                      ],
+                    }),
+                ],
+              })
+            : null;
         }
       },
       chunkid: (module, module_exports, __webpack_require__) => {

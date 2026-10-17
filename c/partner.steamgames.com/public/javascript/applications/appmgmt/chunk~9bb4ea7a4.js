@@ -14,6 +14,7 @@
           EyI: () => _,
           Bx6: () => _,
           GPz: () => _,
+          QAJ: () => _,
           xtC: () => _,
         });
         var _ = {};
@@ -5470,6 +5471,31 @@
                       _: 7,
                       _: _._.readBool,
                       _: _._.writeBool,
+                    },
+                    groups_completed_base: {
+                      _: 8,
+                      _: _._.readUint32,
+                      _: _._.writeUint32,
+                    },
+                    groups_total_base: {
+                      _: 9,
+                      _: _._.readUint32,
+                      _: _._.writeUint32,
+                    },
+                    groups_completed_dlc: {
+                      _: 10,
+                      _: _._.readUint32,
+                      _: _._.writeUint32,
+                    },
+                    groups_total_dlc: {
+                      _: 11,
+                      _: _._.readUint32,
+                      _: _._.writeUint32,
+                    },
+                    base_game_total: {
+                      _: 12,
+                      _: _._.readUint32,
+                      _: _._.writeUint32,
                     },
                   },
                 }),
@@ -11331,6 +11357,7 @@
               {
                 bConstMethod: !0,
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -11344,6 +11371,7 @@
                 bConstMethod: !0,
                 ePrivilege: 1,
                 eWebAPIKeyRequirement: 2,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -11365,6 +11393,7 @@
               bConstMethod: !0,
               ePrivilege: 1,
               eWebAPIKeyRequirement: 2,
+              rgBrowserAPISites: ["partner"],
             });
           }
           _.GetOwnedGames = _;
@@ -11383,6 +11412,7 @@
               {
                 bConstMethod: !0,
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -11530,6 +11560,7 @@
                 bConstMethod: !0,
                 ePrivilege: 1,
                 eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -11561,6 +11592,7 @@
                 bConstMethod: !0,
                 ePrivilege: 2,
                 eWebAPIKeyRequirement: 2,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -11574,6 +11606,7 @@
                 bConstMethod: !0,
                 ePrivilege: 2,
                 eWebAPIKeyRequirement: 2,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -11586,6 +11619,7 @@
               {
                 ePrivilege: 1,
                 eWebAPIKeyRequirement: 2,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -11599,6 +11633,7 @@
                 bConstMethod: !0,
                 ePrivilege: 2,
                 eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -11612,6 +11647,7 @@
                 bConstMethod: !0,
                 ePrivilege: 2,
                 eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -11625,6 +11661,7 @@
                 bConstMethod: !0,
                 ePrivilege: 2,
                 eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -11857,6 +11894,7 @@
               _,
               {
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }

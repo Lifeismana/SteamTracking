@@ -163,5 +163,12 @@
     "PersonalCalendar_EmptyDay": "В этот день для вас нет рекомендованных новинок <1>Посмотрите другие даты в своём календаре!</1>",
     "NewBadge": "НОВИНКА",
     "Time_Today": "Сегодня",
+    "DiscountsAndEvents_Title": "Скидки и мероприятия",
+    "DiscountsAndEvents_SeeMore": "Ещё",
+    "DiscountsAndEvents_Banner_WeekendDeal": "Акция на выходных",
+    "DiscountsAndEvents_Banner_MidweekDeal": "Акция посреди недели",
+    "DiscountsAndEvents_Banner_DailyDeal": "Предложение дня",
+    "DiscountsAndEvents_Banner_LargestDiscount": "Самая крупная скидка",
+    "DiscountsAndEvents_LoadError": "Не удалось загрузить скидки и мероприятия. Повторите попытку позже.",
     "store_ui_dummy": "dont translate"
 }

@@ -37,31 +37,6 @@ fi
 
 MAGIC_RESTART_EXITCODE=42
 
-function has_beta_optin()
-{
-	if [[ "$STEAMROOT" == "$HOME/devkit-game/steam" ]]; then
-		return 0
-	fi
-
-	local betafile="$STEAMROOT/package/beta"
-	if [ ! -r "$betafile" ]; then
-		# No beta file, not in beta
-		return 1
-	fi
-
-	local betaname="$(<"$betafile")"
-	local stablenames=( "" "steamdeck_stable" "chromeos_public_88ac3843c888c7adb9cd406fbac4ff7a7d2cde9b" )
-
-	for name in "${stablenames[@]}"; do
-		if [ "$betaname" == "$name" ]; then
-			# Opted into one of the "stable" betas
-			return 1
-		fi
-	done
-
-	return 0
-}
-
 create_legacy_entry_points () {
 	# Set up partial command-line compatibility with the legacy
 	# Steam Runtime 1 'scout' environment before running the
@@ -85,47 +60,44 @@ create_legacy_entry_points () {
 	ln -fns ../legacy-setup-stub.sh "$legacy/setup.sh"
 }
 
-# The steamrt3c experimental client is currently only available when steam
-# is opted in to the beta branch
-if has_beta_optin; then
-	case "${STEAM_FORCE_CLIENT-}" in
-		(ubuntu12_32 | scout | ldlp)
-			rm -f "$STEAMROOT/.steam-enable-steamrt64-client"
-			;;
-		(steamrt64 | steamrt3c | steamrt)
-			touch "$STEAMROOT/.steam-enable-steamrt64-client"
-			;;
-		("")
-			;;
-		(*)
-			log "Unknown value for STEAM_FORCE_CLIENT: $STEAM_FORCE_CLIENT"
-			;;
-	esac
+# Opt-in to the steamrt3c client
+case "${STEAM_FORCE_CLIENT-}" in
+	(ubuntu12_32 | scout | ldlp)
+		rm -f "$STEAMROOT/.steam-enable-steamrt64-client"
+		;;
+	(steamrt64 | steamrt3c | steamrt)
+		touch "$STEAMROOT/.steam-enable-steamrt64-client"
+		;;
+	("")
+		;;
+	(*)
+		log "Unknown value for STEAM_FORCE_CLIENT: $STEAM_FORCE_CLIENT"
+		;;
+esac
 
-	if [ -e "$STEAMROOT/.steam-enable-steamrt64-client" ]; then
-		if [ -x "$STEAMROOT/steamrt64/steam" ]; then
-			log "Starting SteamRT3 Steam"
+if [ -e "$STEAMROOT/.steam-enable-steamrt64-client" ]; then
+	if [ -x "$STEAMROOT/steamrt64/steam" ]; then
+		log "Starting SteamRT3 Steam"
 
-			# Some distros incorrectly set STEAM_RUNTIME before starting steam, which will
-			# prevent pressure-vessel from starting:
-			# Reference: https://github.com/ValveSoftware/steam-for-linux/issues/13597
-			unset STEAM_RUNTIME
+		# Some distros incorrectly set STEAM_RUNTIME before starting steam, which will
+		# prevent pressure-vessel from starting:
+		# Reference: https://github.com/ValveSoftware/steam-for-linux/issues/13597
+		unset STEAM_RUNTIME
 
-			# STEAM_RUNTIME_LIBRARY_PATH may be set if we are currently switching from
-			# Scout to SteamRT3
-			unset STEAM_RUNTIME_LIBRARY_PATH
+		# STEAM_RUNTIME_LIBRARY_PATH may be set if we are currently switching from
+		# Scout to SteamRT3
+		unset STEAM_RUNTIME_LIBRARY_PATH
 
-			create_legacy_entry_points
-			"$STEAMROOT/steamrt64/steam" "$@"
-			STATUS=$?
+		create_legacy_entry_points
+		"$STEAMROOT/steamrt64/steam" "$@"
+		STATUS=$?
 
-			# If steam requested to restart, then restart
-			if [ $STATUS -eq $MAGIC_RESTART_EXITCODE ] ; then
-				log "Restarting SteamRT3 Steam by request"
-				exec "$0" "$@"
-			fi
-			exit $STATUS
+		# If steam requested to restart, then restart
+		if [ $STATUS -eq $MAGIC_RESTART_EXITCODE ] ; then
+			log "Restarting SteamRT3 Steam by request"
+			exec "$0" "$@"
 		fi
+		exit $STATUS
 	fi
 fi
 

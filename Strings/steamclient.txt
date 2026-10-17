@@ -177,6 +177,7 @@
  - bytes  : %s read from disk at %s/sec, %s sent via network at %s/sec\n
  - chunks : %u pending, %u total sent, %u total requested\n
  - user %i : %s\n
+ --cert
  --controller-overlay-hotkey none
  --enable-duplicate-detection
  --force
@@ -185,8 +186,8 @@
  --mock-update-available
  --mock-update-error
  --openvr
- --relay %s
- --sdr_config "%s"
+ --relay
+ --sdr_config
  --settingsdata
  --vulkan
  -d3d12
@@ -291,6 +292,7 @@
  Tried to set runtime antidrift value, but we are using hardware calibration, so we're not analysing the raw gyro drift. Skip. ( %f,  %f,  %f ).\n
  Updated Acceleration Tolerance : %f\n
  Updated Gyroscope Tolerance For AutoDrift Calibration: %f\n
+ Valid parameters\n
  Workshop Content folder : "%s" - no update needed \n
  Workshop Content folder : "%s" - updated needed %s \n
  [clone
@@ -1299,9 +1301,7 @@
 "r\n.CGameRecording_UserUpdateTimelineEntry_Request
 "r\n;CMarketingMessages_GetMarketingMessageClickedStats_Response
 "revoke_action": %u,
-"serverId": "
 "steammessages_client_objects.proto"=\n(CCloud_ClientLogUploadCheck_Notification
-"storeId":"
 "t\n%CSiteLicense_LCSAssociateUser_Request
 "t\n*CContentBuilder_FinishDepotUpload_Response
 "t\n\rCMsgAddHeader
@@ -1901,6 +1901,7 @@ $\n k_EKeyEscrowUsageStreamingDevice
 $\n k_EMarketingMessageLookupInvalid
 $\n k_EMarketingMessageNoAssociation
 $\n k_EMarketingMessageVisiblePublic
+$\n k_EMigrateRequest_ChoseDifferent
 $\n k_EPressOutletAction_ExitStaging
 $\n k_EProtoExecutionSiteSteamClient
 $\n k_EProtoServiceTypeSteamMessages
@@ -2262,6 +2263,7 @@ $steammessages_parental_objects.proto"
 %\n!k_EProfileCustomizationTypeSalien
 %\n!k_ERemoteClientBroadcastMsgStatus
 %\n!k_ERemoteClientPairWifiAPCanceled
+%\n!k_ERemoteClientPairWifiAPProgress
 %\n!k_ERemoteClientServiceSiteLicense
 %\n!k_ERemoteDeviceStreamingInvisible
 %\n!k_ESteamDatagramMsg_P2PStatsRelay
@@ -2558,7 +2560,6 @@ $steammessages_parental_objects.proto"
 %s/.steam/steam
 %s/DXVK_state_cache
 %s/IAuthenticationService/RevokeToken/v1/
-%s/IEmbeddedClientService/AuthorizeDevice/v1/
 %s/IGameInventory/GetItemDefArchive/v0001
 %s/IGameInventory/GetItemDefPrices/v0001
 %s/IShaderService/GetBucketManifestUsingKeyHash/v0001/
@@ -3572,6 +3573,7 @@ $steammessages_parental_objects.proto"
 (\n multipath_packets_recv_sequenced
 (\n nonpreferred_product_prepurchase
 (\n offset_detection_min_clean_chunk
+(\n pyrowave_custom_bitrate_OBSOLETE
 (\n remove_from_download_list_app_id
 (\n#k_EMsgAMCheckClanInviteRateLimiting
 (\n#k_EMsgAMCheckClanMembershipResponse
@@ -4058,7 +4060,6 @@ $steammessages_parental_objects.proto"
 (\t"\\n*CBroadcast_UpdateChatMessageFlair_Response
 (\t"\v\n\tCPauseMsg"\f\n\nCResumeMsg"
 (\t"]\n"CShader_GetBucketManifest_Response
-(\t"^\n"CMsgRemoteClientPairWifiAPResponse
 (\t"_\n/CMsgClientRequestForgottenPasswordEmailResponse
 (\t"_\n\rGameListEntry
 (\t"`\n(CBroadcast_MuteBroadcastChatUser_Request
@@ -4386,6 +4387,7 @@ $steammessages_parental_objects.proto"
 (\v22.CInventory_ModifyItems_Request.ItemPropertyUpdate
 (\v22.CMsgClientGetUserStatsResponse.Achievement_Blocks
 (\v22.CMsgClientServersAvailable.Server_Types_Available
+(\v22.CMsgRemoteClientStartStreamResponse.CloudConflict
 (\v22.CMsgSteamNetworkingP2PRendezvous.ConnectionClosed
 (\v22.CRemoteClient_UnregisterStatusUpdate_NotificationH
 (\v22.CStoreBrowse_GetStoreCategories_Response.Category
@@ -4410,7 +4412,6 @@ $steammessages_parental_objects.proto"
 (\v26.CClientMetrics_GamePerformance_Notification.FrameRate
 (\v26.CContentBuilder_GetMissingDepotChunks_Response.Chunks
 (\v26.CFamilyGroups_GetSharedLibraryApps_Response.SharedApp
-(\v26.CMsgSteamDatagramClientPingSampleReply.POP.AltAddress
 (\v26.CSteamInputService_GetTritonPairingInfo_Response.Slot
 (\v26.CSteamTV_SetBroadcastChannelLinkRegions_Request.Links
 (\v26.google.protobuf.EnumDescriptorProto.EnumReservedRange
@@ -4431,7 +4432,6 @@ $steammessages_parental_objects.proto"
 (\v28.CFamilyGroups_GetPreferredLenders_Response.FamilyMember
 (\v28.CMsgClientGetAuthorizedDevicesResponse.AuthorizedDevice
 (\v28.CMsgRemoteClientDownloadsManagement.ChangeDownloadIndex
-(\v28.CMsgSteamDatagramClientPingSampleReply.LegacyDataCenter
 (\v28.CPlayer_GetFriendsGameplayInfo_Response.OwnGameplayInfo
 (\v28.CPlayer_GetPlayerLinkDetails_Response.PlayerLinkDetails
 (\v28.CPlayer_GetTopAchievementsForGames_Response.Achievement"{\n'CPlayer_GetAchievementsProgress_Request
@@ -5024,6 +5024,7 @@ $steammessages_parental_objects.proto"
 *23CInternalLambdaWorkItemIZN19CRemoteClientDongle17YldRunDongleCheckEvEUlvE_vE
 *23CInternalLambdaWorkItemIZN19CRemoteClientSoftAP21YieldingSendSoftAPCmdERK10CUtlStringEUlvE_S1_E
 *23CInternalLambdaWorkItemIZN20CBatteryStateManager21BYldQueryBatteryStateEP27SystemBatteryStateChanged_tEUlvE_bE
+*23CInternalLambdaWorkItemIZN20CDepotReconstructCtx30BYieldingInitializeChunkStoresEPKcEUlvE_vE
 *23CInternalLambdaWorkItemIZN20CDepotReconstructCtx30BYieldingInitializeDeltaChunksEPKcEUlvE_vE
 *23CInternalLambdaWorkItemIZN21CContentUpdateContext25YieldingCommitStagedFilesEvEUlvE0_vE
 *23CInternalLambdaWorkItemIZN21CContentUpdateContext25YieldingCommitStagedFilesEvEUlvE1_vE
@@ -5230,6 +5231,7 @@ $steammessages_parental_objects.proto"
 *ZN21CNetworkManagerClient23RequestUpdateDeviceDataEjEUlvE_
 *ZN21CNetworkManagerClient28TriggerGalileoWifiWorkaroundEvEUlvE_
 *ZN21CNetworkManagerDevice19OnWifiSignalChangedEP14_NMAccessPointEUlvE_
+*ZN23CRemoteClientPairWifiAP21BYieldingRunClientJobEvEUlRKN19CRemoteClientSoftAP17ConnectProgress_tEE_
 *ZN23CSystemPerfManagerLinux31SetRefreshRateExternallyManagedEbEUlvE_
 *ZN24CSystemDisplayManagerX114InitEvEUlPN12LinuxHelpers22ScreenChangedDetails_tEE_
 *ZN25SteamNetworkingSocketsLib24CSteamNetworkingUtilsSDR23BeginFetchNetworkConfigEbbEUlPNS_14HTTPResponse_tEE_
@@ -5255,6 +5257,7 @@ $steammessages_parental_objects.proto"
 *ZN28CSystemDisplayManagerWayland4InitEvEUlPN12LinuxHelpers22ScreenChangedDetails_tEE_
 *ZN29CRemoteStorageFileSyncContext19EYieldingUploadFileERK20RemoteFileCacheKey_tyPFbRK10CUtlBufferPvES6_bEUlP18CHTTPRequestHandlejE_
 *ZN29CRemoteStorageFileSyncContext21EYieldingDownloadFileERK20RemoteFileCacheKey_tEUlP18CHTTPRequestHandleR10CUtlBufferE_
+*ZN31CRemoteClientPairWifiAPResponse21BYieldingRunClientJobEP13IMsgNetPacketEUlRKN19CRemoteClientSoftAP17ConnectProgress_tEE_
 *ZN31CSteamEngineHTTPResponseHandler5ResetEvEUlP18CHTTPRequestHandleE_
 *ZN4CNet26CallbackDeleteOnCompletionEvE39CUnbufferedSendCallbackDeleteOnComplete
 *ZN5CUser12LogOnOfflineEbEUlvE_
@@ -5369,6 +5372,7 @@ $steammessages_parental_objects.proto"
 *\n&k_EProtoServiceTypeVRGamepadUIMessages
 *\n&k_EProvideDeckFeedbackPreference_Unset
 *\n&k_EQueryFilesSpecialFilter_ParentItems
+*\n&k_ERemoteClientPairWifiAPConnectFailed
 *\n&k_ERemoteDeviceAuthorizationInProgress
 *\n&k_EResolutionAutomation_FullyAutomated
 *\n&k_ESharedLibrary_AppExcluded_ByPartner
@@ -6109,6 +6113,7 @@ $steammessages_parental_objects.proto"
 -\n%e2e_quality_remote_instantaneous_time
 -\n%is_display_state_management_supported
 -\n%is_extended_cec_wake_device_supported
+-\n%pyrowave_custom_bitrate_kbps_OBSOLETE
 -\n(k_EMsgAMClientCreateFriendsGroupResponse
 -\n(k_EMsgAMClientDeleteFriendsGroupResponse
 -\n(k_EMsgAMClientManageFriendsGroupResponse
@@ -6339,7 +6344,6 @@ $steammessages_parental_objects.proto"
 -steamuniverse=Dev
 -steamuniverse=Internal
 -steamuniverse=Public
--testgfn_minutes
 -testlongoobeupdater
 -testoobe
 -testoobeupdater
@@ -7613,7 +7617,6 @@ $steammessages_parental_objects.proto"
 /data/src/clientdll/remoteclientjobs.cpp
 /data/src/clientdll/remoteclientmanager.cpp
 /data/src/clientdll/remoteclientmanager.h
-/data/src/clientdll/remoteclientstream.cpp
 /data/src/clientdll/remotestoragefilesynccontext.cpp
 /data/src/clientdll/shadercachemanager/../contentupdatecontext.h
 /data/src/clientdll/shadercachemanager/../depotfileverify.h
@@ -7642,10 +7645,10 @@ $steammessages_parental_objects.proto"
 /data/src/clientdll/systemdockmanager_linux.cpp:337
 /data/src/clientdll/systemdockmanager_linux.cpp:562
 /data/src/clientdll/systemmanager.cpp
-/data/src/clientdll/systemmanager.cpp:2554
-/data/src/clientdll/systemmanager.cpp:2887
-/data/src/clientdll/systemmanager.cpp:4431
-/data/src/clientdll/systemmanager.cpp:5026
+/data/src/clientdll/systemmanager.cpp:2578
+/data/src/clientdll/systemmanager.cpp:2911
+/data/src/clientdll/systemmanager.cpp:4455
+/data/src/clientdll/systemmanager.cpp:5050
 /data/src/clientdll/systemperfmanager.cpp
 /data/src/clientdll/systemperfmanager_linux.cpp
 /data/src/clientdll/systemperfmanager_linux.cpp:1185
@@ -8041,6 +8044,7 @@ $steammessages_parental_objects.proto"
 /proc/%d/environ
 /proc/%u/cmdline
 /proc/%u/stat
+/proc/%u/status
 /proc/device-tree/board-info/unit_sn
 /proc/device-tree/compatible
 /proc/device-tree/model
@@ -8244,6 +8248,9 @@ $steammessages_parental_objects.proto"
 0 bytes,
 0"W\n+CCommunity_GetUserPartnerEventNews_Response
 0)AA7A
+0000000000000000000000000000000000000000
+00000000
+0000000000000000
 0.0333
 0.050
 0.125
@@ -8294,9 +8301,6 @@ $steammessages_parental_objects.proto"
 0.CTransportValidation_CountOrderedBytes_Response
 0.CTransportValidation_RequestInvalidBool_Request
 0.CVideo_BeginGameRecordingSegmentsUpload_Request
-0000000000000000000000000000000000000000
-00000000
-0000000000000000
 00000001
 00003333
 000102030405060708091011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495969798990123456789abcdef
@@ -8564,7 +8568,6 @@ $steammessages_parental_objects.proto"
 10CUtlMemoryI22WebSocketCMListEntry_tE
 10CUtlMemoryI22WorkshopItemSnapshot_sE
 10CUtlMemoryI23AchievementLookupInfo_tE
-10CUtlMemoryI23ControllerAccountPair_tE
 10CUtlMemoryI23NetConnectPingResults_tE
 10CUtlMemoryI24ClientServiceMethodReg_tE
 10CUtlMemoryI24EControllerConfigFeatureE
@@ -8666,7 +8669,6 @@ $steammessages_parental_objects.proto"
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPK4CSHAP13CLocationInfoi15CShaPtrLessThanE6Node_tEiNS8_8CKeyLessE25CDefRBTreeBalanceListenerIiES4_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPK4CSHAP17ChunkRequestKey_ti15CShaPtrLessThanE6Node_tEiNS8_8CKeyLessE25CDefRBTreeBalanceListenerIiES4_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPK4CSHAPK11CDeltaChunki15CShaPtrLessThanE6Node_tEiNS9_8CKeyLessE25CDefRBTreeBalanceListenerIiES4_E6Node_tEE
-10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPK4CSHAPK20CManifestFileMappingi15CShaPtrLessThanE6Node_tEiNS9_8CKeyLessE25CDefRBTreeBalanceListenerIiES4_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPKc10CUtlStringi22CDefCaselessStringLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPKc13CSteamVarianti22CDefCaselessStringLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPKc16JobStatsBucket_ti19CMapStatsBucketLessIS3_EE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
@@ -8915,8 +8917,6 @@ $steammessages_parental_objects.proto"
 10CUtlMemoryIN11CUtlHashMapIj10CUtlString10CDefEqualsIjE11HashFunctorIjEjE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapIj10CUtlVectorIN14CCompatManager13CompatAlias_tES_IS3_EE10CDefEqualsIjE11HashFunctorIjEjE12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapIj10CUtlVectorIN14CCompatManager13CompatAlias_tES_IS3_EE10CDefEqualsIjE11HashFunctorIjEjE6Node_tEE
-10CUtlMemoryIN11CUtlHashMapIj16CloudGameState_t10CDefEqualsIjE11HashFunctorIjEjE12HashBucket_tEE
-10CUtlMemoryIN11CUtlHashMapIj16CloudGameState_t10CDefEqualsIjE11HashFunctorIjEjE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapIj18AppMinutesPlayed_t10CDefEqualsIjE11HashFunctorIjEjE12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapIj18AppMinutesPlayed_t10CDefEqualsIjE11HashFunctorIjEjE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapIj18CCopyableUtlVectorIiS_IiEE10CDefEqualsIjE11HashFunctorIjEjE12HashBucket_tEE
@@ -9107,9 +9107,11 @@ $steammessages_parental_objects.proto"
 10CUtlMemoryIP12ClChatRoom_tE
 10CUtlMemoryIP12ILogListenerE
 10CUtlMemoryIP13CRemoteClientE
+10CUtlMemoryIP14CGameActionSetE
 10CUtlMemoryIP14CUtlLinkedListIN10CIPCClient15ListUtlBuffer_tEiEE
 10CUtlMemoryIP15CChunkDataStoreE
 10CUtlMemoryIP15CP2PVoiceSystemE
+10CUtlMemoryIP15IControllerModeE
 10CUtlMemoryIP15IP2PVoiceSystemE
 10CUtlMemoryIP15ISystemNotifierE
 10CUtlMemoryIP16CFileTransferMgrE
@@ -9242,7 +9244,6 @@ $steammessages_parental_objects.proto"
 10CUtlRBTreeIN7CUtlMapIPK4CSHAP13CLocationInfoi15CShaPtrLessThanE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E
 10CUtlRBTreeIN7CUtlMapIPK4CSHAP17ChunkRequestKey_ti15CShaPtrLessThanE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E
 10CUtlRBTreeIN7CUtlMapIPK4CSHAPK11CDeltaChunki15CShaPtrLessThanE6Node_tEiNS8_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E
-10CUtlRBTreeIN7CUtlMapIPK4CSHAPK20CManifestFileMappingi15CShaPtrLessThanE6Node_tEiNS8_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E
 10CUtlRBTreeIN7CUtlMapIPKc10CUtlStringi22CDefCaselessStringLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
 10CUtlRBTreeIN7CUtlMapIPKc13CSteamVarianti22CDefCaselessStringLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
 10CUtlRBTreeIN7CUtlMapIPKc16JobStatsBucket_ti19CMapStatsBucketLessIS2_EE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
@@ -9434,7 +9435,6 @@ $steammessages_parental_objects.proto"
 10CUtlVectorI22WebSocketCMListEntry_t10CUtlMemoryIS0_EE
 10CUtlVectorI22WorkshopItemSnapshot_s10CUtlMemoryIS0_EE
 10CUtlVectorI23AchievementLookupInfo_t10CUtlMemoryIS0_EE
-10CUtlVectorI23ControllerAccountPair_t10CUtlMemoryIS0_EE
 10CUtlVectorI23NetConnectPingResults_t10CUtlMemoryIS0_EE
 10CUtlVectorI23VRHMDHardwareDetected_t10CUtlMemoryIS0_EE
 10CUtlVectorI24ClientServiceMethodReg_t10CUtlMemoryIS0_EE
@@ -9517,7 +9517,6 @@ $steammessages_parental_objects.proto"
 10CUtlVectorIN11CUtlHashMapIibSt8equal_toIiESt4hashIiEiE12HashBucket_tE10CUtlMemoryIS6_EE
 10CUtlVectorIN11CUtlHashMapIiy10CDefEqualsIiE11HashFunctorIiEiE12HashBucket_tE10CUtlMemoryIS6_EE
 10CUtlVectorIN11CUtlHashMapIj10CUtlString10CDefEqualsIjE11HashFunctorIjEjE12HashBucket_tE10CUtlMemoryIS7_EE
-10CUtlVectorIN11CUtlHashMapIj16CloudGameState_t10CDefEqualsIjE11HashFunctorIjEjE12HashBucket_tE10CUtlMemoryIS7_EE
 10CUtlVectorIN11CUtlHashMapIj18AppMinutesPlayed_t10CDefEqualsIjE11HashFunctorIjEjE12HashBucket_tE10CUtlMemoryIS7_EE
 10CUtlVectorIN11CUtlHashMapIj18CCopyableUtlVectorIi10CUtlMemoryIiEE10CDefEqualsIjE11HashFunctorIjEjE12HashBucket_tES2_ISA_EE
 10CUtlVectorIN11CUtlHashMapIj26UserEquippedProfileItems_t10CDefEqualsIjE11HashFunctorIjEjE12HashBucket_tE10CUtlMemoryIS7_EE
@@ -9623,9 +9622,11 @@ $steammessages_parental_objects.proto"
 10CUtlVectorIP12ClChatRoom_t10CUtlMemoryIS1_EE
 10CUtlVectorIP12ILogListener10CUtlMemoryIS1_EE
 10CUtlVectorIP13CRemoteClient10CUtlMemoryIS1_EE
+10CUtlVectorIP14CGameActionSet10CUtlMemoryIS1_EE
 10CUtlVectorIP14CUtlLinkedListIN10CIPCClient15ListUtlBuffer_tEiE10CUtlMemoryIS4_EE
 10CUtlVectorIP15CChunkDataStore10CUtlMemoryIS1_EE
 10CUtlVectorIP15CP2PVoiceSystem10CUtlMemoryIS1_EE
+10CUtlVectorIP15IControllerMode10CUtlMemoryIS1_EE
 10CUtlVectorIP15IP2PVoiceSystem10CUtlMemoryIS1_EE
 10CUtlVectorIP15ISystemNotifier10CUtlMemoryIS1_EE
 10CUtlVectorIP16CFileTransferMgr10CUtlMemoryIS1_EE
@@ -9811,7 +9812,6 @@ $steammessages_parental_objects.proto"
 11CUtlHashMapIiy10CDefEqualsIiE11HashFunctorIiEiE
 11CUtlHashMapIj10CUtlString10CDefEqualsIjE11HashFunctorIjEjE
 11CUtlHashMapIj10CUtlVectorIN14CCompatManager13CompatAlias_tE10CUtlMemoryIS2_EE10CDefEqualsIjE11HashFunctorIjEjE
-11CUtlHashMapIj16CloudGameState_t10CDefEqualsIjE11HashFunctorIjEjE
 11CUtlHashMapIj18AppMinutesPlayed_t10CDefEqualsIjE11HashFunctorIjEjE
 11CUtlHashMapIj18CCopyableUtlVectorIi10CUtlMemoryIiEE10CDefEqualsIjE11HashFunctorIjEjE
 11CUtlHashMapIj26UserEquippedProfileItems_t10CDefEqualsIjE11HashFunctorIjEjE
@@ -10267,7 +10267,6 @@ $steammessages_parental_objects.proto"
 12CProtoBufMsgI34CMsgClientGetClientDetailsResponseE
 12CProtoBufMsgI34CMsgClientInstallClientAppResponseE
 12CProtoBufMsgI34CMsgClientPICSChangesSinceResponseE
-12CProtoBufMsgI34CMsgClientRegisterAuthTicketWithCME
 12CProtoBufMsgI34CMsgClientRequestItemAnnouncementsE
 12CProtoBufMsgI34CMsgClientSharedLibraryStopPlayingE
 12CProtoBufMsgI34CMsgClientUCMAddScreenshotResponseE
@@ -11168,7 +11167,6 @@ $steammessages_parental_objects.proto"
 17CInternalCallbackI11CInGameChat13ChatRoomMsg_tE
 17CInternalCallbackI11CInGameChat23ChatMemberStateChange_tE
 17CInternalCallbackI12CCMInterface19ControllerDetails_tE
-17CInternalCallbackI12CCMInterface22AppConfigInitialized_tE
 17CInternalCallbackI12CCMInterface24ConnectivityTestResult_tE
 17CInternalCallbackI12CCMInterface24SystemGoingIntoSuspend_tE
 17CInternalCallbackI12CCMInterface26NetworkDeviceStateChange_tE
@@ -11242,7 +11240,6 @@ $steammessages_parental_objects.proto"
 17CInternalCallbackI19CRemoteClientSoftAP15VRModeChanged_tE
 17CInternalCallbackI20CClientNetworkingAPI41ClientNetworking_GotSDRPingLocationStringE
 17CInternalCallbackI20CRemoteClientManager15VRModeChanged_tE
-17CInternalCallbackI20CRemoteClientManager16AppInfoChanged_tE
 17CInternalCallbackI20CRemoteClientManager17LicensesUpdated_tE
 17CInternalCallbackI20CRemoteClientManager18AppUpdateStopped_tE
 17CInternalCallbackI20CRemoteClientManager21VRLinkInviteChanged_tE
@@ -11282,7 +11279,9 @@ $steammessages_parental_objects.proto"
 17CInternalCallbackI5CUser23SteamServersConnected_tE
 17CInternalCallbackI5CUser23VRHMDHardwareDetected_tE
 17CInternalCallbackI5CUser24RequestAccountLinkInfo_tE
+17CInternalCallbackI5CUser24SystemGoingIntoSuspend_tE
 17CInternalCallbackI5CUser26SteamServersDisconnected_tE
+17CInternalCallbackI5CUser27SystemResumingFromSuspend_tE
 17CInternalCallbackI5CUser30RemoteStorageAppSyncedClient_tE
 17CInternalCallbackI5CUser30RemoteStorageAppSyncedServer_tE
 17CInternalCallbackI5CUser33RemoteStorageAppSyncStatusCheck_tE
@@ -11431,7 +11430,6 @@ $steammessages_parental_objects.proto"
 18CGameActionBinding
 18CGameRecordingClip
 18CGameRecordingFile
-18CGetChipIDWorkItem
 18CGetCursorImageMsg
 18CGetStaleBucketJob
 18CHTTPClientRequest
@@ -11747,6 +11745,7 @@ $steammessages_parental_objects.proto"
 1H@H
 1Kay
 1[:`@eG9P V
+1\n%controller_config_conflict_resolution
 1\n)notifications_show_chat_room_notification
 1\n)password_or_secretqa_change_requires_code
 1\n,k_EMsgAISUpdateSubordinateContentDescription
@@ -11893,11 +11892,11 @@ $steammessages_parental_objects.proto"
 20.StoreItem.PackageGroup.EPackageGroupDisplayType
 200 Mbps
 2000
+2019
 2048
 20000
 2000000
 200M
-2019
 208.64.200.0/22
 208.78.164.0/22
 20AccountHardware_Stub
@@ -12983,6 +12982,7 @@ $steammessages_parental_objects.proto"
 26TestExternalPrivilege_Stub
 26UserRequestingFriendship_t
 26VoiceEnabledStateChanged_t
+27.CMsgSteamDatagramClientSwitchedPrimary.EMigrateRequest
 270.0
 2700
 27038
@@ -13103,7 +13103,6 @@ $steammessages_parental_objects.proto"
 27CPipewireEventObjectRemoved
 27CPlayer_GetPlayNext_Request
 27CPublishedFile_Vote_Request
-27CRangeCheckStreamingHandler
 27CRebootIntoWirelessWorkItem
 27CRemoteClientJobStartStream
 27CRemoteClient_ClientDetails
@@ -13898,7 +13897,6 @@ $steammessages_parental_objects.proto"
 32CClientJobReportParentalPlaytime
 32CClientJobStartPeerContentServer
 32CClientJobWriteScreenshotInfoVDF
-32CCloudGamingNVIDIAUpdateGameList
 32CCloudGaming_CreateNonce_Request
 32CCloud_AppSessionResume_Response
 32CCloud_AppSessionSuspend_Request
@@ -14038,7 +14036,6 @@ $steammessages_parental_objects.proto"
 33CChatRoom_ReorderChatRoom_Request
 33CChatRoom_SendChatMessage_Request
 33CChatRoom_SetUserBanState_Request
-33CClientJobAuthorizeEmbeddedClient
 33CClientJobCheckoutSiteLicenseSeat
 33CClientJobFriendRemovedFromSource
 33CClientJobMatchmakingLobbyChatMsg
@@ -15809,6 +15806,7 @@ $steammessages_parental_objects.proto"
 49CMsgClientGetUserStatsResponse_Achievement_Blocks
 49CMsgClientServersAvailable_Server_Types_Available
 49CMsgRemoteClientBroadcastClientPairingExclusivity
+49CMsgRemoteClientStartStreamResponse_CloudConflict
 49CMsgSteamDatagramConnectionStatsP2PClientToRouter
 49CMsgSteamDatagramConnectionStatsP2PRouterToClient
 49CMsgSteamDatagramSignedGameCoordinatorServerLogin
@@ -16036,7 +16034,6 @@ $steammessages_parental_objects.proto"
 53CMarketingMessages_GetActiveMarketingMessages_Request
 53CMarketingMessages_GetDisplayMarketingMessage_Request
 53CMsgControllerInputControllerActionCameraHorizonReset
-53CMsgSteamDatagramClientPingSampleReply_POP_AltAddress
 53CQueuedMatchmakingGameHost_SubmitPlayerResult_Request
 53CSteamEngine_SetOverlayEscapeKeyHandling_Notification
 53CSteamEngine_TextFilterDictionaryChanged_Notification
@@ -16102,7 +16099,6 @@ $steammessages_parental_objects.proto"
 55CMsgClientGetAuthorizedDevicesResponse_AuthorizedDevice
 55CMsgControllerInputControllerActionGameActionSetBinding
 55CMsgRemoteClientDownloadsManagement_ChangeDownloadIndex
-55CMsgSteamDatagramClientPingSampleReply_LegacyDataCenter
 55CPlayer_GetFriendsGameplayInfo_Response_OwnGameplayInfo
 55CPlayer_GetPlayerLinkDetails_Response_PlayerLinkDetails
 55CPlayer_GetTopAchievementsForGames_Response_Achievement
@@ -16485,7 +16481,6 @@ $steammessages_parental_objects.proto"
 7CUtlMapIPK4CSHAP13CLocationInfoi15CShaPtrLessThanE
 7CUtlMapIPK4CSHAP17ChunkRequestKey_ti15CShaPtrLessThanE
 7CUtlMapIPK4CSHAPK11CDeltaChunki15CShaPtrLessThanE
-7CUtlMapIPK4CSHAPK20CManifestFileMappingi15CShaPtrLessThanE
 7CUtlMapIPKc10CUtlStringi22CDefCaselessStringLessE
 7CUtlMapIPKc13CSteamVarianti22CDefCaselessStringLessE
 7CUtlMapIPKc16JobStatsBucket_ti19CMapStatsBucketLessIS1_EE
@@ -17243,7 +17238,6 @@ $steammessages_parental_objects.proto"
 @\n\fNotifyClient
 @\n\fNotifyServer
 @\n\funlock_times
-@\n\nAltAddress
 @\n\nDeviceRead
 @\n\noperations
 @\n\rnotifications
@@ -18103,6 +18097,7 @@ AppDisableUpdate
 AppEvents
 AppID
 AppID %d enabled filtering for language %s\n
+AppID %s PID %u was launched outside Steam, using container PID %u as root\n
 AppID %s adding PID %d as a tracked process
 AppID %s adding PID %d as a tracked process "%s"
 AppID %s no longer tracking PID %d, exit code %d
@@ -18126,6 +18121,7 @@ AppID %u does not advertise android as a supported platform, but a android speci
 AppID %u does not advertise linux as a supported platform, but a linux specific depot is present.\n
 AppID %u exited.
 AppID %u failed to downloading manifest %llu (%s)
+AppID %u failed to reload app state in place, staying uninstalled
 AppID %u failed to update ownership ticket (%s)
 AppID %u finished uninstall (%s)
 AppID %u finished update, %u mounted depots (BuildID %u) :
@@ -18243,7 +18239,6 @@ AsyncDisconnect( bDontWaitOnTCPShutdown: true )
 AsyncFileIOAlternateReadWrite
 AsyncFileIODisableWrite
 AsyncFileIOExpectOutstandingIO
-AsyncFileIOForceGenericIO
 AsyncFileIOMaxPendingWin32
 AsyncFileIOReadHandleCache
 AsyncFileIOWriteHandleCache
@@ -18338,13 +18333,13 @@ AuthorizedDevice
 AuthorizedLender/%u
 Auto Grant
 Auto Moderation
+Auto-Registering controller %u\n
 Auto-detected proxy settings: auto-detect(%s), proxy(%s), proxy-https(%s), exclude:\n
 Auto-filling the buffer (your application is buggy and/or got xruns)
 Auto-update blackout time
 Auto-verify game updates ever N days
 AutoCloud failed to write session info
 AutoDeny
-AutoRegisterControllerRegistrationToAccount
 AutoSignIntoFriends
 AutoUpdateBehavior
 AutoUpdateWindowEnabled
@@ -19886,7 +19881,6 @@ CClientVideo::InitBroadcastVideo: bogus init data
 CClientVideo::InitBroadcastVideo: job not started
 CClientVoiceCallPreAuthorize
 CClientVoiceCallPreAuthorizeResponse
-CCloudGamingNVIDIAUpdateGameList
 CCloudGaming_TimeRemaining
 CCloud_AppFileInfo
 CCloud_AppLaunchIntent_Request
@@ -20068,6 +20062,7 @@ CDepotHTTPDownloadInterface::CChunkRequestRedirectHandler - blocking attempted r
 CDepotReconstruct::YieldingPushAsyncPump() - BDispatchCompletedWorkItems CPU
 CDepotReconstruct::YieldingPushAsyncPump() - BDispatchCompletedWorkItems IO
 CDepotReconstructCtx::BInitializeDeltaChunks
+CDepotReconstructCtx::BYieldingInitializeChunkStores
 CDepotReconstructCtx::ThreadedClosePatchFile
 CDepotReconstructCtx::ThreadedFlushPatchFile
 CDisableHighResCaptureMsg"
@@ -21596,12 +21591,12 @@ CRemoteClientBroadcastHandler - discovery
 CRemoteClientBroadcastHandler - status
 CRemoteClientBroadcastHandler::Process
 CRemoteClientDongle: Dongle app depot finished installing/updating. Starting driver update check.
-CRemoteClientDongle: Dongle detected for the first time this run.
 CRemoteClientDongle: Failed to set low latency mode %s: %s (%d)
 CRemoteClientDongle: NMDeviceAdded detected dongle.
 CRemoteClientDongle: No holo-realtek-firmware-toggles helper script found, low latency mode unavailable
 CRemoteClientDongle: Running post-application driver update check.
 CRemoteClientDongle: Successfully set low latency mode %s
+CRemoteClientDongle: Wifi dongle detected for the first time this run. VID %04x PID %04x
 CRemoteClientDongle::OnRemoteClientUSBTriggerHotplug() valid
 CRemoteClientDongle::m_pWorkThreadPool
 CRemoteClientJobGetControllerConfig
@@ -21624,7 +21619,6 @@ CRemoteClientJobStartAppInstall received e_launch_result %d
 CRemoteClientJobStartAppInstall timed out waiting for reply
 CRemoteClientJobStartAppInstall::BYieldingRunClientJob starting appid %u on %llu (%s)
 CRemoteClientJobStartRemoteApp
-CRemoteClientJobStartRemoteApp couldn't get nonce for NVIDIA launch
 CRemoteClientJobStartRemoteApp launch_only success
 CRemoteClientJobStartRemoteApp received e_launch_result %d
 CRemoteClientJobStartRemoteApp starting authorization flow with %llu (%s)
@@ -21692,7 +21686,6 @@ CRemoteClientManager_BroadcastStatus
 CRemoteClientManager_BroadcastStatusForRemoteDeviceSessions
 CRemoteClientManager_CheckClientConnections
 CRemoteClientManager_CleanupAfterRefresh
-CRemoteClientManager_CloudGamingNVIDIAUpdateGameList
 CRemoteClientManager_PurgeDeadStreamClients
 CRemoteClientManager_SendQueuedBroadcastMessagesIfNecessary
 CRemoteClientManager_WaitForUITimeout
@@ -21709,14 +21702,14 @@ CRemoteClientSoftAP settings updated, enabled = %d, hotspot = %d, ssid = "%s"
 CRemoteClientSoftAP::Init
 CRemoteClientSoftAP::OnIPCountry
 CRemoteClientSoftAP::ScheduledStateCheck
+CRemoteClientSoftAP::SetPairedSSIDAndPassword
 CRemoteClientSoftAP::ThreadedSendSoftAPCmd
+CRemoteClientSoftAP::YieldingConnectWithFallbacks
 CRemoteClientSoftAP::m_pWorkThreadPool
 CRemoteClient_ClientDetails
 CRemoteClient_ClientLogin
 CRemoteClient_DeviceDetails
 CRemoteClient_Task
-CRemoteCloudServiceGFNGameListUpdate: Couldn't get GFN server
-CRemoteCloudServiceGFNGameListUpdate: got status %d from URL %s
 CRemoteDeviceJobAuthorizeDevice
 CRemoteDeviceJobAuthorizeDevice: couldn't use device public key
 CRemoteDeviceJobAuthorizeDevice: device token encryption failed
@@ -23002,8 +22995,6 @@ Cloud.SignalAppLaunchIntent#1
 Cloud.SuspendAppSession#1
 CloudClient.ClientLogUploadRequest#1
 CloudClient.NotifyAppStateChange#1
-CloudGaming.CreateNonce#1
-CloudGaming.GetTimeRemaining#1
 CloudKey
 CloudKeyCRC
 Club
@@ -23420,6 +23411,7 @@ Couldn't join game, invalid auth token: '%s'\n
 Couldn't join game, invalid relay server: '%s'\n
 Couldn't join game, it is blocked by parental settings\n
 Couldn't join game, it is not available in your country\n
+Couldn't launch stream client, invalid relay server: '%s'\n
 Couldn't open SDL controller %u: %s\n
 Couldn't open to sending socket for %s
 Couldn't open toc/bin, skipping %s.
@@ -23509,7 +23501,6 @@ CreatePublishedFileUpdateRequest
 CreateQueryAllUGCRequest
 CreateQueryUGCDetailsRequest
 CreateQueryUserUGCRequest
-CreateReconstructionContexts
 CreateRemotePlayTogetherMouseCursor
 CreateServerDataForCluster
 CreateSession
@@ -23535,7 +23526,9 @@ Created ipv4-only http client
 Created mapping %s when set to fail if created\n
 Created peer download interface to host %s (%s)
 Created shared memory when not owner %s\n
+Created virtual controller at slot %d for swap\n
 Created virtual controller at slot %u for controller %u\n
+Created virtual controller at slot %u to seat controller %u\n
 Created virtual controller controller %u\n
 CreatedByFollowedUsersRankedByPublicationDate
 CreatedByFriendsRankedByPublicationDate
@@ -23965,6 +23958,7 @@ DepotMinWriteGapSizeMB
 DepotPath
 DepotReconstruct::ChunkReadComplete: eDownload
 DepotReconstructionBadChunk
+DepotReconstructionForceGenericIO
 DepotReconstructionLowPrio
 DepotReconstructionNumIOThreads
 DepotUseAlternatingReadWrite
@@ -24673,6 +24667,7 @@ EMarketingMessageType
 EMarketingMessageVisibility
 EMessageReactionType
 EMicroTxnAuthResponse
+EMigrateRequest
 EMsg
 EMsg %d registered multiple times.
 EMsgClanAccountFlags
@@ -25012,9 +25007,8 @@ Email address mismatch
 Email not validated
 EmailAddrInfo
 Embedded client [%d:%d]\n
-Embedded client result - %d\n
+Embedded client access-code authorization is no longer supported\n
 Embedded client token - not connected, exiting.\n
-Embedded client token auth - %s, exiting.\n
 EmbeddedClient
 EmbeddedClient.AuthorizeCurrentDevice#1
 Emoticon
@@ -25638,6 +25632,8 @@ Failed to create socket for shared fd id: 0x%lx\n
 Failed to create socket for shared fd: %d\n
 Failed to create source type %d\n
 Failed to create temporary file %s
+Failed to create virtual controller at slot %d for swap\n
+Failed to create virtual controller at slot %u to seat controller %u\n
 Failed to de-serialize global system perf settings
 Failed to de-serialize legacy system perf settings
 Failed to de-serialize per-app system perf settings
@@ -25813,6 +25809,7 @@ Failed to reboot controller %u into wireless after successful pairing %d
 Failed to receive shared FD\n
 Failed to receive shared fd from server\n
 Failed to receive shared fd id: 0x%lx\n
+Failed to recreate virtual controller at slot %u during reset\n
 Failed to release screensaver inhibit lock: %s\n
 Failed to remove app dependency between %llu => %u! Error: %s (%s)
 Failed to remove dependency between %llu => %llu! Error: %s (%s)
@@ -26410,6 +26407,7 @@ G\nCk_EContentReportReason_HiddenAdvertisementOrCommercialCommunication
 G\n\fachievements
 G\n\nCallClient
 G\n\nGetTagList
+G\n\rCloudConflict
 G\n\rgroup_updated
 Galician
 Game
@@ -26498,7 +26496,6 @@ Gangsta
 Garanti
 Gateway Time-out
 GatherSystemInformation
-GeForce NOW
 GeneralDirectoryServer_FindServerIPAddrPorts
 GeneralNames
 GeneralString
@@ -27886,6 +27883,7 @@ ICE: Dropping Data Indication from %s: not our TURN server (%s).\n
 ICE: Dropping Data Indication from TURN: missing peer-address or data attribute.\n
 ICE: Dropping STUN message 0x%x from %s.\n
 ICE: Dropping STUN response 0x%x from %s: attribute parse or integrity failure.\n
+ICE: Dropping binding request: USERNAME length %u exceeds max %u.
 ICE: Dropping binding request: attribute parse or integrity failure.\n
 ICE: Dropping peer candidate with invalid address %s\n
 ICE: Host candidate has invalid address %s - gathering bug
@@ -28251,7 +28249,7 @@ Ignoring P2P CMsgSteamDatagramConnectRequest from %s; we're listening on %s, but
 Ignoring P2P CMsgSteamDatagramConnectRequest from %s; we're not listening on %s\n
 Ignoring P2P CMsgSteamDatagramConnectRequest.from_fakeip from %s, not sending to a FakeIP!
 Ignoring P2P connect request signal from '%s', no local identity?\n
-Ignoring P2P connection request from %s.  We cannot accept it since we don't have a cert yet!\n
+Ignoring P2P connection request from %s.  Auth not ready.  %s\n
 Ignoring P2P signal from %s.  For our cxn #%u, they first used remote cxn #%u, now using #%u
 Ignoring P2P signal from '%s', unknown remote connection #%u\n
 Ignoring P2PFailure notification about unknown ConnectionID %u from %s\n
@@ -29415,6 +29413,7 @@ Launch blocked by playtime window
 LaunchApp
 LaunchAppProgress
 LaunchAppResult
+LaunchAppResultRequestCloudConflictResolution
 LaunchAppResultRequestLaunchOption
 LaunchApplication
 LaunchGameMsgReceived_t
@@ -29443,7 +29442,6 @@ Left Gyro Rate switched from: %u us to: %u us.\n
 Left Gyro Sensor value: (%u us) fell outside of margin of error: (%u%%). Falling back on estimated polling value (%u us). \n
 Legacy Free Sub
 Legacy deadzoning for gyro signal. Only affects "As Mouse" and its derivative modes.
-LegacyDataCenter
 LegacyKey
 LegacyKeyDiskLocation
 LegacyKeyProofOfPurchaseTicket
@@ -29758,7 +29756,6 @@ M\n\nDeleteRole
 M\n\nGetBanList
 M\n\nNotifyText
 M\n\nRenameRole
-M\n\ralt_addresses
 M\n\vReviewLabel
 M\rLAI)haL<|p\t\t
 MaU(a[i
@@ -31887,6 +31884,7 @@ Nack range underflow, end=%lld, num=%lld
 NagleTime
 Name
 Name lookup for "%s" failed - %s\n
+Name:\t
 NameHistory\%d
 NameHistory\0
 NameInfo
@@ -31903,8 +31901,6 @@ NaverPay
 NearRank
 NearValue
 Need Auth
-Need cloud gaming launch implementation
-Need cloud gaming shutdown implementation
 Need new HTTP connection (%p) for %s (%s)\n
 Need space between identifier and decimal point.
 Need space between number and identifier.
@@ -32087,6 +32083,7 @@ No public or relay candidates from remote host
 No relay public key from network config (yet?)
 No response from server
 No routing secret.  This is allowed in dev environment, but not in production.
+No search plan step connected
 No signaling?
 No signature
 No signed cert?  We cannot probe relays without a cert
@@ -33248,6 +33245,7 @@ Peer (%s,%s) - %s
 Peer - %s (%s): %s
 Peer Server
 Peer connection %d disconnected
+Peer connectivity-check pair already has a request in flight
 Peer content server not running\n
 Peer content server status (%u connections):\n
 Peer haven't sent GOST certificate, required for selected ciphersuite
@@ -34328,7 +34326,6 @@ RemoveAppRelationship
 RemoveAuthenticator
 RemoveClient
 RemoveContentDescriptor
-RemoveControllerRegisteredAccount - Trying to remove account on an unconnected or unpaired controller.\n
 RemoveDependency
 RemoveFavoriteGame
 RemoveFriendFromGroup
@@ -35715,6 +35712,7 @@ STORE routines
 STREAM_CLOSED
 STRENGTH
 STRING
+STUN USERNAME exceeds RFC limit
 SUBTITLE
 SUCCESS %s%s, last-modified: %s
 SUCCESS %s%s, up to date
@@ -35818,6 +35816,7 @@ Screenshots
 Scroll Lock
 Scroll Lock Toggle
 Search
+Search plan step "%s" connected
 SearchForPlayers
 Seat checkout from %s %s for app (%u): FAILED - EResult (%d) %s (%ums)
 Seat checkout from %s %s for app (%u): SUCCESS - %ums
@@ -36608,6 +36607,7 @@ Simplified_Chinese
 Simulate a trackpad swipe on the right trackpad when the left pad is touched
 Simulate having already played this many seconds of playtime today, but not recently.
 Simulate having already played this many seconds of playtime.
+Simulate the OS telling us it is suspending
 SimulateUserActivity
 Sindhi
 Single Purchase
@@ -37909,7 +37909,7 @@ StoreGameRating
 StoreReviewSummary
 StoreStats
 StoreUserStats
-Stray data packet from host with no connection.  Ignoring.
+Stray data packet from host with no connection.
 Stream ID is invalid
 Stream is closing
 Stream was already closed or invalid
@@ -38943,7 +38943,6 @@ UFID
 UGC %llu is not available. Call UGCDownload() to download it\n
 UGC %llu is not available. You need to call UGCDownload() and get a positive response before calling UGCRead()\n
 UGC Image
-UGC range check  received more streaming content than requested even though the response code was 206 Partial Content
 UGCCDNReportPct
 UGCDownload
 UGCDownloadToLocation
@@ -38991,6 +38990,8 @@ URL Regex matched different number of params than job is registered for, URL is:
 URL:
 US-ASCII
 USB Sample
+USB\VID_28DE&PID_2432
+USB\VID_2C7C&PID_8206
 USE TLS
 USER
 USERNOTICE
@@ -39712,7 +39713,6 @@ Valencian
 Valid
 Valid palette required for paletted images
 Valid parameters:\n
-Valid parameters\n
 ValidateEmailAddress
 ValidateGlobals_NetMisc
 ValidateIPCSpewStatics
@@ -40533,6 +40533,7 @@ YieldingCheckForUpdateDummy
 YieldingCheckForUpdateOS
 YieldingCheckForUpdateSteamClient
 YieldingConnect
+YieldingCreateReconstructionContexts
 YieldingEnableGraphicsProfiling
 YieldingEnablePerfOverlay
 YieldingFindDriveNameForPath
@@ -41293,7 +41294,6 @@ Zulu
 [TXN:%llu]
 [Trace Recv] %s <- %s | %d bytes\n
 [Trace Send] %s -> %s | %d bytes\n
-[UGC] Range check received more streaming content than requested for URL %s%s
 [UGC][%llu] Couldn't create directory
 [UGC][%llu] Couldn't create temp file
 [UGC][%llu] Couldn't delete existing file with unexpected length %d
@@ -41532,6 +41532,7 @@ Zulu
 \n"CMsgClientGetClientDetailsResponse
 \n"CMsgClientPICSChangesSinceResponse
 \n"CMsgClientSharedLibraryStopPlaying
+\n"CMsgRemoteClientPairWifiAPResponse
 \n"CMsgSteamDatagramConnectionQuality
 \n"CMsgSteamDatagramP2PRoutingSummary
 \n"CPublishedFile_GetItemInfo_Request
@@ -42053,6 +42054,7 @@ Zulu
 \nHey, you just set %s's number values to be 0.  Is that what you wanted?\n\nIf you do `%s = 123`, you will set the convar to `= 123` which becomes `0` for numeric uses.\nDid you mean to do `%s %s` instead?\n
 \nLAN Peer sources:\n
 \nO1Ie
+\nPPid:\t
 \nParsing attempt:
 \nRunning as site license provider\n
 \nThis report shows all running jobs, organized into a tree based on what\nthey are waiting on.  If a job is waiting on X, then it will be indented\nand underneath X, a child in the tree.\n\nThe report contains three types of items:\n  - Jobs (prefixed by 'Job:')\n  - Things that jobs are waiting on (net messages, SQL, DBOs, memcached,\n    locks, HTTP, etc).  Note: a job can be a "thing a job is waiting on"\n\t(e.g. when it holds a lock), leading to a chain.\n  - Callers\n\nLegend:\n  Hier Jobs        :  Number of jobs in total, including this item and its descendants\n  Hier Avg Wait ms :  Average wait time (ms) of all jobs in this branch of the tree\n  Num Jobs         :  Number of jobs of this specific type waiting on this same cause chain\n  Job Avg Wait ms  :  Average wait time (ms) of the jobs of this type that have been waiting\n                      on this cause chain\n  Avg Job Dur ms   :  Average total job run time (ms).  Not just the time spent in the current\n                      yield.\n
@@ -42468,6 +42470,7 @@ Zulu
 \n\ncurrent_bw
 \n\ncurrent_ts
 \n\ncustom_url
+\n\ndc_ping_ms
 \n\ndemo_appid
 \n\ndependency
 \n\ndeprecated
@@ -42546,6 +42549,7 @@ Zulu
 \n\nlobby_type
 \n\nlocal_echo
 \n\nlocal_path
+\n\nlocal_time
 \n\nlook_names
 \n\nmachine_id
 \n\nmajor_axis
@@ -42625,6 +42629,7 @@ Zulu
 \n\nstate_name
 \n\nsteam_deck
 \n\nsteamid_to
+\n\nsteps_done
 \n\nstyle_name
 \n\nsubject_id
 \n\nsync_state
@@ -42700,7 +42705,6 @@ Zulu
 \n\rbatch_eresult
 \n\rbattery_level
 \n\rbbcode_format
-\n\rbest_dc_score
 \n\rbrowser_scale
 \n\rbytes_scanned
 \n\rcache_enabled
@@ -42955,7 +42959,6 @@ Zulu
 \n\rtdp_limit_min
 \n\rtemplate_type
 \n\rtemplate_vars
-\n\rtest_dc_score
 \n\rthumbnail_url
 \n\rtime_last_ack
 \n\rtime_received
@@ -43071,6 +43074,7 @@ Zulu
 \n\tdpi_scale
 \n\tdraggable
 \n\tdummy_pad
+\n\te2e_score
 \n\tearly_out
 \n\tecurrency
 \n\tedit_info
@@ -43213,6 +43217,7 @@ Zulu
 \n\tstart_dir
 \n\tstart_num
 \n\tsteam_ids
+\n\tstep_name
 \n\tsubtitles
 \n\tsupported
 \n\tsurvey_id
@@ -43352,6 +43357,7 @@ Zulu
 \n\vduration_ms
 \n\vdx_deviceid
 \n\vdx_vendorid
+\n\ve2e_ping_ms
 \n\vecallresult
 \n\venums.proto*
 \n\venvironment
@@ -43493,6 +43499,7 @@ Zulu
 \n\vregion_code
 \n\vrelay_popid
 \n\vremote_play
+\n\vremote_time
 \n\vreplay_year
 \n\vreport_text
 \n\vrequest_ids
@@ -43534,6 +43541,7 @@ Zulu
 \n\vsteam_realm
 \n\vsteamidhost
 \n\vsteamiduser
+\n\vsteps_total
 \n\vstore_appid
 \n\vstore_items
 \n\vstream_port
@@ -44154,7 +44162,6 @@ access
 access denied
 access-control-allow-origi
 access-control-allow-origin
-access_code
 accessibility_color_filter_name
 accessibility_desktop_ui_scale
 accessibility_reduce_motion
@@ -44423,7 +44430,6 @@ als_lux_alternate
 als_lux_median
 als_lux_primary
 alse
-alt.m_nPenalty == k_nSDRAltAddressPenalty_PingOnly
 alt_address_dropped
 alt_address_protocol_change
 alt_ping_complete
@@ -44796,7 +44802,6 @@ authenticator_time
 authenticator_type
 author snapshot
 author_snapshots
-authority
 authority and issuer serial number mismatch
 authority and subject key identifier mismatch
 authorityInfoAccess
@@ -44929,8 +44934,6 @@ bStillInQueue == ( pSeg->m_nOffset + pSeg->m_cbSegSize < pSeg->m_pMsg->m_cbSize 
 bStillInQueue == ( pSeg->m_pMsg->m_links.m_pQueue != nullptr )
 bStillInQueue || pSeg->m_pMsg->m_links.m_pNext == nullptr
 bStillInQueue || pSeg->m_pMsg->m_linksSecondaryQueue.m_pNext == nullptr
-bSubscribedFilesDecompressOnClient
-bSubscribedFilesUseRangeRequests
 bSuccess || pWorkItem->HasTimedOut()
 bUseIOCP
 bValidHandle == true
@@ -45115,8 +45118,6 @@ beginning write of microphone data to file %s (close Steam before using)\n
 beginning write of voice output data to file %s (close Steam before using)\n
 belarusian
 bellcanada
-best_dc_ping_ms
-best_dc_via_relay_pop_id
 best_ping_front_local
 best_ping_front_remote
 best_pop_local
@@ -45447,7 +45448,6 @@ bytes
 bytes %u-%u/%u
 bytes.
 bytes=
-bytes=%d-%d
 bytes=%llu-%llu
 bytesTransferred >= 0
 bytes_available
@@ -45883,6 +45883,7 @@ channel
 channel == impl_
 channel == iter->second
 channel named in candidate does not exist
+channelOverride
 channels
 channels_.find(name) == channels_.end()
 char
@@ -46101,7 +46102,6 @@ client_streaming
 client_supplied_steam_id
 client_supplied_steamid
 client_timestamp
-client_token
 clientcomm_version
 clienthello tlsext
 clientid
@@ -46132,6 +46132,8 @@ closing session
 cloud
 cloudFilename.IsValid()
 cloud\last_sync_state
+cloud_conflict
+cloud_conflict_resolution
 cloud_gaming_platform
 cloud_log
 cloud_sync_completed
@@ -46661,7 +46663,7 @@ crc32_z
 crc_encryptedticket
 crc_header_mismatch
 create != transport->HasChannel(iter->first)
-create\t%s\t%s\thbs6\t%s
+create\t%s\t%s\t%s\t%s
 create_if_not_found
 create_input_method
 create_session_request
@@ -47220,6 +47222,8 @@ dayofdefeat.com
 days
 dbo%wd\tf\vF
 dcObject
+dc_score
+dc_via_relay_pop_id
 dcobject
 ddeeeeee
 de_DE
@@ -47263,12 +47267,6 @@ default
 default.talk.google.com
 default_bindings
 default_chat_id
-default_dc_ping_ms
-default_dc_score
-default_dc_via_relay_pop_id
-default_e2e_ping_ms
-default_e2e_score
-default_front_ping_ms
 default_local_path
 default_mouse_mode
 default_role_id
@@ -47440,7 +47438,6 @@ device_get_serial_number_string
 device_get_vendor_string
 device_id_OBSOLETE
 device_identifier
-device_info
 device_provisioning_id
 device_reports
 device_request_full_report
@@ -47847,6 +47844,7 @@ e%qy
 e+ZQT
 e.nLockCount < 0xFFFF
 e.nLockCount == 0
+e2e_p2p_peer_relay_pop_id
 e2e_quality_local
 e2e_quality_remote
 e8p%
@@ -48309,6 +48307,7 @@ estackingorder
 estate
 estatus
 estimated_packet_rate
+estimated_seconds
 estimated_seconds_remaining
 estimated_size
 estimated_time_registered
@@ -48881,6 +48880,7 @@ from_dropped_reason
 from_identity_string
 from_ip
 from_limited_account
+from_migrate_request
 from_oslist
 from_quality_now
 from_quality_then
@@ -49344,6 +49344,7 @@ gesture
 gestures
 get raw key failed
 get-channels
+get-plan
 get-proxy-type-func
 getRootParserOf
 get_Count failed
@@ -49873,6 +49874,7 @@ hashes
 hashlen <= 32
 hausa
 have_version_hash
+hbs6
 hcontent
 hcontent_preview
 hd_ringbuf_get
@@ -50016,7 +50018,6 @@ http://%s
 http://%s%s
 http://%s%s%s
 http://%s/ipv6check
-http://%s/rangecheck
 http://%s/serverstatus/
 http://10.1.1.18:8282
 http://etherx.jabber.org/streams
@@ -50088,8 +50089,6 @@ https://my.steamchina.eccdnx.com/
 https://partner.steam-api.com
 https://partner.steamgames.com
 https://partner.steamgames.com/
-https://prod.cloudmatchbeta.nvidiagrid.net/v2/serverInfo
-https://public.games.geforce.com/graphql?query=%%7B%%0A%%20%%20apps(vpcId%%3A%%20%%22%s%%22%%2C%%20appStore%%3A%%20%%22STEAM%%22)%%20%%7B%%0A%%20%%20%%20%%20items%%20%%7B%%0A%%20%%20%%20%%20%%20%%20variants%%20%%7B%%0A%%20%%20%%20%%20%%20%%20%%20%%20id%%0A%%20%%20%%20%%20%%20%%20%%20%%20storeId%%0A%%20%%20%%20%%20%%20%%20%%7D%%0A%%20%%20%%20%%20%%7D%%0A%%20%%20%%7D%%0A%%7D
 https://s.team/q/
 https://shared.beta.steamstatic.com/
 https://shared.beta.steamstatic.com/store_item_assets/steam/apps
@@ -51885,6 +51884,9 @@ k_EMarketingMessageWeekendDeal
 k_EMessageReactionType_Emoticon
 k_EMessageReactionType_Invalid
 k_EMessageReactionType_Sticker
+k_EMigrateRequest_None
+k_EMigrateRequest_ObeyedTarget
+k_EMigrateRequest_Unknown
 k_EMouseControl_Button_Backk_EMouseControl_Button_Forwardk_EMouseControl_Button_Leftk_EMouseControl_Button_Middlek_EMouseControl_Button_Rightk_EMouseControl_Countk_EMouseControl_Scroll_Downk_EMouseControl_Scroll_Up
 k_EMouseModeAbsoluteCursor
 k_EMouseModeRelative
@@ -53169,7 +53171,7 @@ k_EStreamAudioCodecNone
 k_EStreamAudioCodecOpus
 k_EStreamAudioCodecRaw
 k_EStreamAudioCodecVorbis
-k_EStreamBitrateAutodetect
+k_EStreamBitrateAutomatic
 k_EStreamBitrateUnlimited
 k_EStreamChannelControl
 k_EStreamChannelDiscovery
@@ -53751,7 +53753,6 @@ legacy_authorized_steam_id
 legacy_challenge
 legacy_client_steam_id
 legacy_connection_id_src
-legacy_data_centers
 legacy_endpoint
 legacy_from_identity_binary
 legacy_from_steam_id
@@ -54050,17 +54051,19 @@ low-pri yield - /data/src/clientdll/clientjob.cpp:462
 low-pri yield - /data/src/clientdll/clientjob.cpp:771
 low-pri yield - /data/src/clientdll/clientjobbuildchunkstore.cpp:1000
 low-pri yield - /data/src/clientdll/clientugc.cpp:7078
-low-pri yield - /data/src/clientdll/compatmanager.cpp:2243
-low-pri yield - /data/src/clientdll/compatmanager.cpp:2501
-low-pri yield - /data/src/clientdll/compatmanager.cpp:2804
-low-pri yield - /data/src/clientdll/compatmanager.cpp:3587
-low-pri yield - /data/src/clientdll/compatmanager.cpp:3644
-low-pri yield - /data/src/clientdll/compatmanager.cpp:3657
-low-pri yield - /data/src/clientdll/compatmanager.cpp:3709
-low-pri yield - /data/src/clientdll/compatmanager.cpp:4316
+low-pri yield - /data/src/clientdll/compatmanager.cpp:2235
+low-pri yield - /data/src/clientdll/compatmanager.cpp:2493
+low-pri yield - /data/src/clientdll/compatmanager.cpp:2796
+low-pri yield - /data/src/clientdll/compatmanager.cpp:3579
+low-pri yield - /data/src/clientdll/compatmanager.cpp:3636
+low-pri yield - /data/src/clientdll/compatmanager.cpp:3649
+low-pri yield - /data/src/clientdll/compatmanager.cpp:3701
+low-pri yield - /data/src/clientdll/compatmanager.cpp:4333
+low-pri yield - /data/src/clientdll/contentupdatecontext.cpp:1376
+low-pri yield - /data/src/clientdll/contentupdatecontext.cpp:1412
 low-pri yield - /data/src/clientdll/csinterface.cpp:223
 low-pri yield - /data/src/clientdll/depotbuilder.cpp:107
-low-pri yield - /data/src/clientdll/depotreconstruct.cpp:3066
+low-pri yield - /data/src/clientdll/depotreconstruct.cpp:3130
 low-pri yield - /data/src/clientdll/peercontentserver.cpp:712
 low-pri yield - /data/src/clientdll/subscribedfilelistcache.cpp:397
 low-pri yield - /data/src/clientdll/subscribedfilelistcache.cpp:414
@@ -54440,10 +54443,8 @@ m_bRemote
 m_bRestartSteam
 m_bServerDebugTextPending
 m_bShutdownSystem
-m_bStreamingError || cTotalBytesReceived == (uint32)m_buffer.TellPut()
 m_bThreadActive != m_ThreadClient.IsAlive()
 m_bTrackCorruptChunks
-m_bUsedRelayOverride
 m_bWriteOutstanding
 m_bitsMigratedBuckets
 m_bufAuthToken
@@ -54656,7 +54657,6 @@ m_hashDictionaries
 m_hashKeys
 m_hashKeys.IsValidIndex( m_hashValues[iValIndex] )
 m_hashMap
-m_hashNVIDIACloudGames
 m_hashNodes
 m_hashNumAppGyroRequests
 m_hashPipes
@@ -54863,7 +54863,6 @@ m_mapFileMappings
 m_mapFileMappings[i]
 m_mapFileReadAsyncContexts
 m_mapFileRootOverrides
-m_mapFileSHAs
 m_mapFileTimes
 m_mapFileWatchData
 m_mapFileWatchData.Key( i )
@@ -55341,7 +55340,6 @@ m_pRef->m_pT
 m_pRegisteredWithMgr != nullptr
 m_pRegisteredWithMgr == nullptr
 m_pRemoteClientManager
-m_pRemoteClientNVIDIA
 m_pRemoteDevices
 m_pRemoteFileCacheInfo.Get()
 m_pRequest
@@ -56082,6 +56080,7 @@ m_vecChats
 m_vecChildren
 m_vecChinaBlockMinorsAppID
 m_vecChunkStores
+m_vecChunkStores not empty at start of BYieldingInitializeChunkStores
 m_vecChunks
 m_vecChunksByOffset
 m_vecChunks[i]
@@ -56210,6 +56209,7 @@ m_vecPendingAppConfigChanged
 m_vecPendingCommands
 m_vecPendingLicenses
 m_vecPendingPaintData
+m_vecPendingPeerRequests.empty()
 m_vecPendingRemoveBrowser
 m_vecPendingRemoves
 m_vecPendingToolRegistered
@@ -56244,6 +56244,8 @@ m_vecRequestsToSend.Count()
 m_vecRequestsToSend.Count() == 1
 m_vecResendStatus
 m_vecReservedStreamingControllers
+m_vecRetiredActionSets
+m_vecRetiredModes
 m_vecRichPresenceAppIDsToUpload
 m_vecRoutes.empty()
 m_vecSSLHostnames
@@ -56492,7 +56494,6 @@ maxsize=
 may_parallelize
 maybe_inappropriate_sex
 maybe_inappropriate_violence
-mb%d.bin
 mbrtowc
 mbsnrtowcs
 mbsrtowcs
@@ -56809,7 +56810,6 @@ msgBuffer.GetCurSize() >= sizeof(SNetMsgHeader_t) + sizeof(int)
 msgCommitResponse.file_committed()
 msgConnectionClosed.relay_mode() == CMsgSteamDatagramConnectionClosed_ERelayMode_None
 msgMulti.Body().message_body().size() < UINT_MAX
-msgPOP.default_dc_score() >= msgPOP.best_dc_score()
 msgResponse.Body().response_pending() == 0
 msgResponse.Body().token().size() == sizeof( callback.m_Token )
 msgResponse.fake_ip()
@@ -57361,7 +57361,6 @@ nmq(t
 nnbbpprrff
 nnvb
 no accept addr or service specified
-no access code
 no application protocol
 no bootstrapper found
 no cert set for us to verify
@@ -58006,7 +58005,6 @@ p2p_info
 p2p_routing_summary
 p2p_share_ip
 p2p_unusedtimeout
-p2p_via_peer_relay_pop_id
 p2ptransport.cc
 p2ptransportchannel.cc
 p2pvoice002
@@ -58202,7 +58200,8 @@ pKey->m_eTrust == k_ETrust_Revoked
 pKeyCallback
 pKeyValuesTextParser
 pKp\nZ
-pLocationEntry->pChangedFile != pChangedFile || pLocationEntry->ulOffset < ulOffset
+pLastLocation->pChangedFile != pChangedFile || pLastLocation->ulOffset < ulOffset
+pLastLocation->pNext == nullptr
 pLock
 pLock->BIsLocked()
 pLock->GetJobLocking() == this
@@ -58423,6 +58422,7 @@ pWorkItem->m_bDeferCompletion
 pWorkItem->m_bRunning
 pWorkThread != NULL
 pWorkThread->m_bFinished is false but thread is not running
+pWriteCtx->pLocationEntry->pChangedFile == pChangedFile && pWriteCtx->pLocationEntry->ulOffset == ulOffset
 pXhH
 pZlNr
 p\lHtW
@@ -59733,6 +59733,7 @@ putc
 puts
 putwc
 puubdfgklmnprssvxzaadeeeei
+pv-adverb
 pvCallback != NULL
 pvCallbackUDPCur || pvCallbackTCPCur
 pvecAddressesOut != nullptr || pSingleOutput != nullptr
@@ -59774,8 +59775,7 @@ pwrd_unicom
 pwrite64
 px\fG<
 py_generic_services
-pyrowave_custom_bitrate
-pyrowave_custom_bitrate_kbps
+pyrowave_bitrate_kbps
 pyrowave_quality_modifier
 pyrowave_yuv444
 pzKD)
@@ -60736,6 +60736,7 @@ sealed
 search only supported for directories
 search-cwd
 searchGuide
+searchPlan
 search_text_target
 searchbuttontext
 searchid
@@ -61812,7 +61813,7 @@ stderr
 stdin
 stdout
 steam
-steam Oct  6 2026 23:05:09
+steam Oct 14 2026 00:29:30
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n
@@ -62185,6 +62186,10 @@ streaming_v2\WifiAPHotspotSSID
 streaming_v2\WifiAPPairedPassword
 streaming_v2\WifiAPPairedSSID
 streaming_v2\WifiAPPairedTime
+streaming_v2\WifiAPPlanChannelOverride
+streaming_v2\WifiAPPlanHidden
+streaming_v2\WifiAPPlanMode
+streaming_v2\WifiAPPlanName
 streaming_v2\dongle\%llu\%s
 street
 streetAddress
@@ -62300,6 +62305,7 @@ supports_batches
 supports_brightness
 supports_color
 supports_os_updates
+supports_progress
 supports_rate_limit_response
 supports_remote_hid
 supports_speed
@@ -62465,11 +62471,10 @@ test
 test a voice encode
 test an opus voice encode
 test_concurrent_textfilter_change
-test_dc_ping_ms
-test_dc_via_relay_pop_id
 test_dropcon
 test_failnextconnect
 test_opus_voice_encode
+test_os_suspend
 test_param_0
 test_param_1
 test_param_2
@@ -64061,7 +64066,6 @@ vary
 vasprintf
 vcard-temp
 vcard-temp:x:update
-vecAccounts
 vecActiveActionSetLayerId
 vecBuckets.Count() > 0
 vecChunksByOffset.Count() == 0

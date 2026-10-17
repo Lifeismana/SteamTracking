@@ -376,6 +376,7 @@
     "ViewAllItems": "すべてのアイテムを表示",
     "Home_TrendingSection_Label": "話題のアイテム",
     "Home_TrendingSection_ViewMore": "その他のアイテムを表示...",
+    "Home_RecentSales_Label": "最近売れたアイテム",
     "Home_Badges_Label": "進行中のバッジ",
     "Home_Badges_ViewAll": "すべてのバッジを表示...",
     "Home_Badges_XOfYCardsCollected": "収集したカード：%1$s／%2$s",

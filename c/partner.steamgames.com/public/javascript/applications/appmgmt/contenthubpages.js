@@ -1086,6 +1086,7 @@
               size: _,
               radius: _,
               status: _,
+              color: _,
               rgOptions: _,
               multiselect: _,
               onClear: _,
@@ -1132,6 +1133,7 @@
               size: _,
               radius: _,
               status: _,
+              color: _,
               hasValue: _,
               tabIndex: 0,
               cursor: "pointer",
@@ -1634,7 +1636,7 @@
           static ReadFile(_) {
             return new Promise((_, _) => {
               const _ = new FileReader();
-              (_.onload = (_) => _(_.result)), _.readAsText(_);
+              (_.onload = () => _(_.result ?? "")), _.readAsText(_);
             });
           }
           static WriteFile(_, _) {

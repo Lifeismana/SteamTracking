@@ -74,6 +74,7 @@ $ORIGIN
 -fs_logbins
 -fs_target
 ./obj_filesystem_stdio_steamrtarm64/release/filesystem_stdio.so
+.C6u
 .bsp
 .cpl
 .steam_exec_test
@@ -283,6 +284,7 @@ GCC: (Debian 9.3.0-22) 9.3.0
 GLIBC_2.17
 GetFileSystemStableId requires a valid path
 GetFileSystemStableId requires a valid path: %s\n
+Gyw89X
 HOME
 IVALIDATE001
 Invalid FileWriterItem_t

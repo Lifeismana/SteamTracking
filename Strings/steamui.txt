@@ -117,7 +117,7 @@
  + scale
  +0000
  +connect %s
- +password "
+ +password
  - %s [locked by %s - %s / %s (%lums)]
  --bus-name=com.steampowered.App%u %s --
  --current-password
@@ -1912,6 +1912,7 @@ ${LANGUAGE}
 %8sVersion: %ld (0x%lx)\n
 %8sVersion: Unknown (%ld)\n
 %ATP
+%Customization/Screensaver/WhileInGame
 %Gamescope/IncludeSteamUIInScreenshots
 %K3 QQ+
 %LibraryWhatsNewShowOnlyProductUpdates
@@ -2027,6 +2028,7 @@ ${LANGUAGE}
 %\n!k_EProfileCustomizationTypeSalien
 %\n!k_ERemoteClientBroadcastMsgStatus
 %\n!k_ERemoteClientPairWifiAPCanceled
+%\n!k_ERemoteClientPairWifiAPProgress
 %\n!k_ERemoteClientServiceSiteLicense
 %\n!k_ERemoteDeviceStreamingInvisible
 %\n!k_ESteamDeckKeyboardLayout_Danish
@@ -2352,6 +2354,7 @@ ${LANGUAGE}
 %s: skipping set as steamos-manager is already in the desired state: %d -> %d
 %s: skipping set as steamos-manager is already in the desired state: %s -> %s
 %s: skipping, current value already matches
+%s: skipping, value already sent
 %s: starting
 %s: starting enumerate devices
 %s: starting update check
@@ -3123,6 +3126,7 @@ ${LANGUAGE}
 (\n is_available_on_current_platform
 (\n nonpreferred_product_prepurchase
 (\n offset_detection_min_clean_chunk
+(\n pyrowave_custom_bitrate_OBSOLETE
 (\n remove_from_download_list_app_id
 (\n#k_EMsgAMCheckClanInviteRateLimiting
 (\n#k_EMsgAMCheckClanMembershipResponse
@@ -3600,7 +3604,6 @@ ${LANGUAGE}
 (\t"\\n*CBroadcast_UpdateChatMessageFlair_Response
 (\t"\v\n\tCPauseMsg"\f\n\nCResumeMsg"
 (\t"]\n"CShader_GetBucketManifest_Response
-(\t"^\n"CMsgRemoteClientPairWifiAPResponse
 (\t"_\n\rGameListEntry
 (\t"`\n(CBroadcast_MuteBroadcastChatUser_Request
 (\t"`\n\nSteamAward
@@ -3865,6 +3868,7 @@ ${LANGUAGE}
 (\v21.CStore_GetUserGameInterestState_Response.InQueue
 (\v22.CClientMetrics_ContentDownloadResponse_HostCountsB
 (\v22.CInventory_ModifyItems_Request.ItemPropertyUpdate
+(\v22.CMsgRemoteClientStartStreamResponse.CloudConflict
 (\v22.CRemoteClient_UnregisterStatusUpdate_NotificationH
 (\v22.CStoreBrowse_GetStoreCategories_Response.Category
 (\v22.CVideo_GameRecordingSegmentUploadInfo.HTTPHeaders
@@ -4693,9 +4697,10 @@ ${LANGUAGE}
 *ZN22CScreensaverController10InitializeEvE34CWebUIScreensaverGetActiveStateJob
 *ZN22CScreensaverController10InitializeEvE36CWebUIScreensaverForceScreensaverJob
 *ZN22CScreensaverController10InitializeEvE40CWebUIScreensaverGetLocalScreensaversJob
-*ZN22CScreensaverController10InitializeEvEUlRK35CScreensaver_GetActiveState_RequestR36CScreensaver_GetActiveState_ResponseE1_
-*ZN22CScreensaverController10InitializeEvEUlRK37CScreensaver_ForceScreensaver_RequestR38CScreensaver_ForceScreensaver_ResponseE3_
-*ZN22CScreensaverController10InitializeEvEUlRK41CScreensaver_GetLocalScreensavers_RequestR42CScreensaver_GetLocalScreensavers_ResponseE2_
+*ZN22CScreensaverController10InitializeEvEUlRK35CScreensaver_GetActiveState_RequestR36CScreensaver_GetActiveState_ResponseE2_
+*ZN22CScreensaverController10InitializeEvEUlRK37CScreensaver_ForceScreensaver_RequestR38CScreensaver_ForceScreensaver_ResponseE4_
+*ZN22CScreensaverController10InitializeEvEUlRK41CScreensaver_GetLocalScreensavers_RequestR42CScreensaver_GetLocalScreensavers_ResponseE3_
+*ZN22CScreensaverController10InitializeEvEUlbE1_
 *ZN22CScreensaverController10InitializeEvEUliE0_
 *ZN22CScreensaverController10InitializeEvEUliE_
 *ZN22CSteamOSControllerStub10InitializeEvE27CWebUISteamOSSLSGetStateJob
@@ -5176,6 +5181,7 @@ ${LANGUAGE}
 *\n&k_EProtoServiceTypeVRGamepadUIMessages
 *\n&k_EProvideDeckFeedbackPreference_Unset
 *\n&k_EQueryFilesSpecialFilter_ParentItems
+*\n&k_ERemoteClientPairWifiAPConnectFailed
 *\n&k_ERemoteDeviceAuthorizationInProgress
 *\n&k_EResolutionAutomation_FullyAutomated
 *\n&k_ESharedLibrary_AppExcluded_ByPartner
@@ -5793,6 +5799,7 @@ ${LANGUAGE}
 -\n%adjusted_time_probe_frequency_seconds
 -\n%is_display_state_management_supported
 -\n%is_extended_cec_wake_device_supported
+-\n%pyrowave_custom_bitrate_kbps_OBSOLETE
 -\n(k_EMsgAMClientCreateFriendsGroupResponse
 -\n(k_EMsgAMClientDeleteFriendsGroupResponse
 -\n(k_EMsgAMClientManageFriendsGroupResponse
@@ -5954,6 +5961,7 @@ ${LANGUAGE}
 -perfectworld -fromlauncher %s
 -pipewire
 -pipewire-dmabuf
+-pipewire-fresh-start
 -pipewire-record-deck-ui
 -pretendeol
 -pretendeol32
@@ -7384,6 +7392,7 @@ ${LANGUAGE}
 /data/src/steamUI/gamestream/gamerecordingsession.cpp
 /data/src/steamUI/gamestream/gamestreamaudioencoder.cpp
 /data/src/steamUI/gamestream/gamestreamaudiomixer.cpp
+/data/src/steamUI/gamestream/gamestreamdmabufmanager.cpp
 /data/src/steamUI/gamestream/gamestreammanager.cpp
 /data/src/steamUI/gamestream/gamestreamsession.cpp
 /data/src/steamUI/gamestream/gamestreamsystem.cpp
@@ -7407,7 +7416,7 @@ ${LANGUAGE}
 /data/src/steamUI/hardwareupdatecontroller.cpp:412
 /data/src/steamUI/installfoldercontroller.cpp
 /data/src/steamUI/ledcontroller.cpp
-/data/src/steamUI/ledcontroller.cpp:1933
+/data/src/steamUI/ledcontroller.cpp:1965
 /data/src/steamUI/ledcontroller.cpp:601
 /data/src/steamUI/libraryassetcache.cpp
 /data/src/steamUI/loginusers.cpp
@@ -7450,7 +7459,7 @@ ${LANGUAGE}
 /data/src/steamUI/systemdevkitcontroller.cpp:75
 /data/src/steamUI/systemreportcontroller.cpp:150
 /data/src/steamUI/systemstoragecontroller.cpp
-/data/src/steamUI/systemstoragecontroller.cpp:1447
+/data/src/steamUI/systemstoragecontroller.cpp:1453
 /data/src/steamUI/threadedpromiseresolver.cpp
 /data/src/steamUI/userlogincontroller.cpp
 /data/src/steamUI/valvecontrollermanager.cpp
@@ -7578,6 +7587,7 @@ ${LANGUAGE}
 /proc/%d/environ
 /proc/%u/cmdline
 /proc/%u/stat
+/proc/%u/status
 /proc/device-tree/board-info/unit_sn
 /proc/device-tree/compatible
 /proc/device-tree/model
@@ -7619,6 +7629,7 @@ ${LANGUAGE}
 /tmp/hkkillfile
 /tmp/jupiter-wifi-trace.dat
 /tmp/specifycompattoolfile
+/tmp/steam_shared_fd_uid%u_rpid%u
 /u%d-Shm_%x
 /u%d-ValveIPCSharedObj-Steam
 /ubuntu12_32/steam-runtime/amd64/usr/bin/steam-runtime-launch-client
@@ -8799,6 +8810,7 @@ ${LANGUAGE}
 11VideoClient
 12 Mbps
 120min
+123456789
 127.0.0.1
 127.0.0.1:57343
 127.0.0.1:57344
@@ -8964,6 +8976,7 @@ ${LANGUAGE}
 13CCallbackImplILi8476EE
 13CCallbackImplILi84EE
 13CCallbackImplILi8EE
+13CCallbackImplILi96EE
 13CChatMentions
 13CCloudManager
 13CDebugDumpMsg
@@ -9035,6 +9048,7 @@ ${LANGUAGE}
 14CCryptoKeyBase
 14CFloatProperty
 14CFrameFunctionI11CHTTPClientE
+14CFrameFunctionI14CLEDControllerE
 14CFrameFunctionI19CQueuedLambdaRunnerE
 14CFrameFunctionI21CScheduledFunctionMgrE
 14CFrameFunctionI7CJobMgrE
@@ -9145,6 +9159,7 @@ ${LANGUAGE}
 14TwoFactor_Stub
 14VideoClip_Stub
 1536
+15000
 155.133.240.0/23
 1558-AFCM-4577
 15AccountHardware
@@ -9357,6 +9372,7 @@ ${LANGUAGE}
 16StoreItem_Assets
 16UserAccount_Stub
 16VideoClient_Stub
+1724792014
 17Achievements_Stub
 17CCaptureFailedMsg
 17CClientWalletInfo
@@ -9429,6 +9445,7 @@ ${LANGUAGE}
 17SleepManager_Stub
 17SteamInputManager
 17StoreItem_Reviews
+18446744073709551615
 18446744073709551615"p\n!CCloud_EnumerateUserFiles_Request
 18BasicRequestInfo_t
 18CAlignedBufferBase
@@ -9662,6 +9679,7 @@ ${LANGUAGE}
 1Kay
 1Ql\f
 1S9[
+1\n%controller_config_conflict_resolution
 1\n)notifications_show_chat_room_notification
 1\n,k_EMsgAISUpdateSubordinateContentDescription
 1\n,k_EMsgAMGetAccountFlagsForWGSpoofingResponse
@@ -9810,10 +9828,6 @@ ${LANGUAGE}
 200M
 2019
 2048
-15000
-123456789
-1724792014
-18446744073709551615
 208.64.200.0/22
 208.78.164.0/22
 20AccountHardware_Stub
@@ -9841,6 +9855,7 @@ ${LANGUAGE}
 20CJSMethodCallHandlerI12CGameActionsJiEE
 20CJSMethodCallHandlerI12CGameActionsJjPKcEE
 20CJSMethodCallHandlerI12CGameActionsJjPKcjEE
+20CJSMethodCallHandlerI12CGameActionsJjbEE
 20CJSMethodCallHandlerI15CInstallManagerJ9CSmartPtrI15CJSCallbackFuncEEE
 20CJSMethodCallHandlerI15CInstallManagerJ9CSmartPtrI18CJSCallbackPromiseEEE
 20CJSMethodCallHandlerI15CInstallManagerJEE
@@ -10734,6 +10749,7 @@ ${LANGUAGE}
 27CGameBroadcastRecordSession
 27CGameNotifications_Variable
 27CGameRecordingTimelineEvent
+27CGameStreamSharedFDReceiver
 27CGamescope_GetState_Request
 27CGetConfigInfoWorkerPromise
 27CHTTPServerClientConnection
@@ -12802,6 +12818,7 @@ ${LANGUAGE}
 49CMarketingMessages_PartnerPublishMessage_Response
 49CMarketingMessages_UpdateMarketingMessage_Request
 49CMsgRemoteClientBroadcastClientPairingExclusivity
+49CMsgRemoteClientStartStreamResponse_CloudConflict
 49CPlayer_GetPurchasedProfileCustomizations_Request
 49CPlayer_GetRecentPlaytimeSessionsForChild_Request
 49CPublishedFile_AreFilesInSubscriptionList_Request
@@ -13534,6 +13551,7 @@ ${LANGUAGE}
 8Bitdo Ultimate 2 Wireless Controller
 8CAutoPtrI10ILEDDeviceE
 8CAutoPtrI11CHTTPServerE
+8CAutoPtrI15CWorkThreadPoolE
 8CAutoPtrI15IMetricsFactoryE
 8CAutoPtrI18CJSServerListQueryE
 8CAutoPtrI20IBluetoothControllerE
@@ -15336,7 +15354,6 @@ AuthorizeService
 Authorized Device
 Auto Grant
 Auto Moderation
-Auto-Registering controller: %s, %s\n
 Auto-detected proxy settings: auto-detect(%s), proxy(%s), proxy-https(%s), exclude:\n
 AutoDeny
 AutoLogin
@@ -15370,7 +15387,6 @@ AvgNetworkMS
 AvgPingMS
 AvgServerBitrate
 Awaiting Destruction Connection Details:\n
-Awaiting_Logon
 Away
 Az7\f
 Azerbaijani
@@ -15555,7 +15571,6 @@ BN_usub
 BOOL
 BOOL ABSENT
 BOOLEAN
-BPM Offline controller registration %s, %s, using account %u\n
 BParseISO8601Duration
 BREAKPAD_DUMP_LOCATION
 BReceiveFile
@@ -16418,6 +16433,7 @@ CDesktopCapturePipeWire: Failed to create PipeWire main loop\n
 CDesktopCapturePipeWire: Failed to create PipeWire stream\n
 CDesktopCapturePipeWire: Failed to create a proxy for the screen cast portal: %s\n
 CDesktopCapturePipeWire: Failed to create a screen cast session: %s\n
+CDesktopCapturePipeWire: Failed to dup buffer fd %d: %s\n
 CDesktopCapturePipeWire: Failed to get PipeWire file descriptor: %s\n
 CDesktopCapturePipeWire: Failed to initialize the screen cast session.\n
 CDesktopCapturePipeWire: Failed to initialize the start of the screen cast session.\n
@@ -16447,6 +16463,7 @@ CDesktopCapturePipeWire: Video stream full!\n
 CDesktopCapturePipeWire: Video stream full.. couldn't get buffer!\n
 CDesktopCapturePipeWire: setting gamescope focus appid: %llu\n
 CDesktopCapturePipeWire: setting stream node path: gamescope\n
+CDesktopCapturePipeWire: the encoder has held buffer %llu for over %u ms\n
 CDesktopCapturePipeWire: unknown video format 0x%x\n
 CDesktopCapturePipeWire: updating capture appid: %s\n
 CDesktopCaptureX11: Couldn't attach shared memory\n
@@ -16661,6 +16678,9 @@ CGameStreamManager::OnVRHeadsetStreamingEnabledChanged
 CGameStreamManager::OnVRModeChanged
 CGameStreamManager::OnVRVRLinkActiveChanged
 CGameStreamSession::Init failed
+CGameStreamSharedFDReceiver: couldn't listen on %s: %s
+CGameStreamSharedFDReceiver: couldn't start the receiving thread
+CGameStreamSharedFDReceiver: unexpected message from a producer (%d bytes, magic 0x%x)
 CGameStreamSystemLinux: Couldn't convert icon image: %s\n
 CGameStreamSystemLinux: Couldn't create ARGB surface: %s\n
 CGameStreamSystemLinux: Couldn't create icon surface: %s\n
@@ -17219,6 +17239,8 @@ CJoinGameController::LaunchGame() video app %u
 CKeyEscrow_Request
 CKeyEscrow_Response
 CKeyEscrow_Ticket
+CLEDController
+CLEDController::BFrameFuncDispatchCompletedWorkItems
 CLEDController::OnAppUpdateStateChange
 CLEDController::OnPostLogonState
 CLEDController::OnSystemResumed
@@ -17759,6 +17781,8 @@ CNotificationController::OnStreamingClientConnected
 CNotificationController::OnStreamingClientDisconnected
 CNotificationController::UpdateItemAnnouncement
 COL$
+COLOR_ENCODING
+COLOR_RANGE
 COMMIT
 COMPLEMENTOFALL
 COMPLEMENTOFDEFAULT
@@ -18002,6 +18026,7 @@ CRemotePlayController::OnRemoteClientInputSettingsChange
 CRemotePlayController::OnRemoteClientInstallAppResult
 CRemotePlayController::OnRemoteClientLaunchFailed
 CRemotePlayController::OnRemoteClientOffline
+CRemotePlayController::OnRemoteClientPairWifiAPProgress
 CRemotePlayController::OnRemoteClientPairWifiAPResult
 CRemotePlayController::OnRemoteClientRemotePlayBitrateOverride
 CRemotePlayController::OnRemoteClientRemotePlayClearControllers
@@ -18059,6 +18084,7 @@ CSaveTouchConfigLayoutMsg
 CScheduledFunctionMgr::BFrameFuncRun
 CScheduler
 CScopedJobLock already holds lock, can't take another one.
+CScreensaverController::OnAppLifetimeNotice
 CScreensaverController::OnBatteryStateChanged
 CScreensaverController::OnUIModeChanged
 CSendSteamURLListJob
@@ -18998,7 +19024,7 @@ ChangeAppQueuePlacement
 ChangeDownloadIndex
 ChangeNumOpenSlots
 ChangePassphrase
-Changing adapter [old=%llu][new=%llu]\n
+Changing adapter [old=%s][new=%s]\n
 Changing record audio process: stopped
 Changing record audio processes. Associated window: %p. pids:
 Changing record window: %p (%llu)
@@ -19073,6 +19099,7 @@ Cleanup: Library cache cleanup completed in %llums and deleted %i files
 CleanupBackgroundRecordings
 CleanupSystemReports
 Clear
+Clear all Pipewire capture tokens and re-prompt user for what to capture
 ClearButton
 ClearCooldownSkip
 ClearField
@@ -19410,6 +19437,7 @@ Controller %d disconnected\n
 Controller Autosave: failed to open disk path %s
 Controller Autosave: failed to write to disk path %s
 Controller Binding
+Controller config cloud session count leaked: %d
 ControllerActiveConfigMsg
 ControllerBindings
 ControllerConfigResponse
@@ -22534,6 +22562,7 @@ G\nCk_EContentReportReason_HiddenAdvertisementOrCommercialCommunication
 G\n\fachievements
 G\n\nCallClient
 G\n\nGetTagList
+G\n\rCloudConflict
 G\n\rgroup_updated
 G_VALUE_TYPE (a) == G_VALUE_TYPE (b)
 G_wo
@@ -22573,6 +22602,7 @@ Game Recording Video Bytes
 Game Release
 Game Server
 Game Voucher
+Game bundled config missing on disk: %s\n
 Game streaming (server)
 Game: %s (%d)
 GameAction [AppID %u, ActionID %u] : %s changed task to %s with "%s"\n
@@ -23632,6 +23662,9 @@ IS_ALIGNED(src_width, 2)
 IStreamParser::BIsValidMsgType() invalid packet header (1st 8 bytes: 0x%02X%02X%02X%02X%02X%02X%02X%02X, %d bytes recv'd so far) discarding packet and closing connection\n
 IStreamParser::BIsValidMsgType() old packet header from out-of-date Steam build, discarding packet and closing connection\n
 IStreamParser::BIsValidMsgType() too-large cbMessageSize in message header (%u bytes, %d bytes recv'd so far) discarding packet and closing connection\n
+ITU-R BT.2020 YCbCr
+ITU-R BT.601 YCbCr
+ITU-R BT.709 YCbCr
 ITU-T
 ITc[
 ITsn=
@@ -24688,11 +24721,8 @@ LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PA
 LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" dbus-send --system --print-reply --dest=org.freedesktop.login1 /org/freedesktop/login1 org.freedesktop.login1.Manager.Suspend boolean:true
 LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" dbus-send --system --print-reply --dest=org.freedesktop.timedate1 /org/freedesktop/timedate1 org.freedesktop.timedate1.SetTimezone string:"%s" boolean:false
 LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" dbus-send --system --print-reply --dest=org.gnome.SettingsDaemon.DateTimeMechanism / org.gnome.SettingsDaemon.DateTimeMechanism.SetTimezone string:"%s"
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" jupiter-initial-firmware-update
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" jupiter-initial-firmware-update check
 LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" lsb_release -d -s
 LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" lspci -mm -n
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" steamos-prepare-oobe-test
 LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" steamos-session-select %s
 LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" xdg-icon-resource forceupdate
 LED effect must be started from the main thread
@@ -26498,6 +26528,7 @@ N21CRemotePlayController49CCallbackInternal_OnRemoteClientSoftAPStateChangeE
 N21CRemotePlayController49CCallbackInternal_OnRemoteClientStartStreamResultE
 N21CRemotePlayController49CCallbackInternal_OnRemoteDevicePairingPINChangedE
 N21CRemotePlayController50CCallbackInternal_OnRemoteClientDongleDisconnectedE
+N21CRemotePlayController50CCallbackInternal_OnRemoteClientPairWifiAPProgressE
 N21CRemotePlayController50CCallbackInternal_OnRemotePlayTogetherGroupCreatedE
 N21CRemotePlayController50CCallbackInternal_OnRemotePlayTogetherPlayerJoinedE
 N21CRemotePlayController50CCallbackInternal_OnStreamingClientSettingsChangedE
@@ -26566,6 +26597,7 @@ N22CGameSessionController37CCallbackInternal_OnScreenshotStartedE
 N22CGameSessionController37CCallbackInternal_OnScreenshotWrittenE
 N22CGameSessionController43CCallbackInternal_OnAppLifetimeNotificationE
 N22CScreensaverController33CCallbackInternal_OnUIModeChangedE
+N22CScreensaverController37CCallbackInternal_OnAppLifetimeNoticeE
 N22CScreensaverController39CCallbackInternal_OnBatteryStateChangedE
 N22CSteamUILocalDownloads32CCallbackInternal_OnDlcInstalledE
 N22CSteamUILocalDownloads32CCallbackInternal_OnInstallAppIDE
@@ -27348,6 +27380,7 @@ N\n\vGetWordBans
 N\r\nyd
 NaCl
 Name
+Name:\t
 NameEntry
 NamePart
 Nanaco
@@ -27390,6 +27423,7 @@ Network Authentication Required
 Network path
 Network problem detected: skipping wait
 Network send exceeded
+Network slow, flushing %d packets
 NetworkTest
 New Configurator Clear Selected Config for controller %d - AppID: %d.\n
 New Configurator Delete Personal Config %s.\n
@@ -27820,7 +27854,7 @@ Object Signing CA
 Objects
 Obtained EMS handle %u
 Obtained XMS handle %u
-Oct  6 2026 23:04:59
+Oct 14 2026 00:29:32
 Octal/hex numbers are not valid JSON values.
 October
 Odia
@@ -28656,6 +28690,7 @@ Plat_OutputDebugStringRaw
 Plat_RelativeTickFrequency
 Plat_RelativeTicks
 Plat_ShouldUseSteamDeckClientBranch
+Plat_TickAddMicroSec
 Plat_TickDiffMicroSec
 Plat_TickDiffMilliSec
 Plat_USTime
@@ -29170,7 +29205,7 @@ Rate
 Rate Limit Exceeded
 RateClanAnnouncement
 RateCommentThread
-Raw send failed: %d, packet %d, %d bytes, %d queued\n
+Raw send failed: %d, packet %d, %d bytes, %d packets queued\n
 Raw stream mode only supported for TCP connections
 Rbg.E
 ReArmMuraCalibration
@@ -29375,6 +29410,8 @@ RemotePlay.RegisterForInputDriverRestartNotice
 RemotePlay.RegisterForInputUsed
 RemotePlay.RegisterForInviteResult
 RemotePlay.RegisterForNetworkUtilizationUpdate
+RemotePlay.RegisterForPairWifiAPProgress
+RemotePlay.RegisterForPairWifiAPResult
 RemotePlay.RegisterForPlaceholderStateChanged
 RemotePlay.RegisterForPlayerInputSettingsChanged
 RemotePlay.RegisterForQualityOverride
@@ -30699,11 +30736,12 @@ SetWifiDebug
 SetWifiDebugMode
 SetWifiPowerManagement
 Sets
+Setting %s bitrate to %d Kbit/s
+Setting %s bitrate to %d Kbit/s, burst bitrate is %d Kbit/s
 Setting %s needs to have both min and max set
 Setting LED brightness to: %d
 Setting capture only gameID to %llu\n
 Setting display state: %d
-Setting target bitrate to %d Kbit/s, burst bitrate is %d Kbit/s
 Setting target framerate: %.2f [timing: game %.2f, capture %.2f, convert %.2f, encode %.2f, network %.2f, decode %.2f, display %.2f%s]
 Setting target property: type: '%s' name: '%s'
 SettingSideEffect: %s
@@ -30774,6 +30812,7 @@ SharedConnection.SendMsgAndAwaitBinaryResponse
 SharedConnection.SendMsgAndAwaitResponse
 SharedConnection.SubscribeToClientServiceMethod
 SharedConnection.SubscribeToEMsg
+SharedFDReceiver
 SharedJSContext
 SharedJSContext.GetDesiredSteamUIWindows#1
 Shavian
@@ -31367,6 +31406,7 @@ SteamOSManager1WifiPowerManagement1Proxy
 SteamOSManager: controller action - %d (%s)
 SteamOSManager: daemon not present
 SteamOSManager: failed to connect to OS service
+SteamOSManager: ignoring controller action %d (%s), screen reader is not supported
 SteamOSSLS.GetState#1
 SteamOSSLS.NotifyStateChanged#1
 SteamOSSLS.SetEnabled#1
@@ -31425,6 +31465,8 @@ SteamThreadTools::CThreadLocalBase::Set(void*)
 SteamThreadTools::CThreadLocalBase::~CThreadLocalBase()
 SteamThreadTools::CThreadMutex::CThreadMutex()
 SteamThreadTools::CThreadMutex::~CThreadMutex()
+SteamThreadTools::CThreadRWLock::LockForWrite()
+SteamThreadTools::CThreadRWLock::UnlockWrite()
 SteamThreadTools::CThreadRWLock::WaitForRead()
 SteamThreadTools::CThreadSpinLock::Lock(unsigned int) volatile
 SteamThreadTools::CThreadSyncObject::Wait(unsigned int)
@@ -31702,10 +31744,12 @@ Streaming.RegisterForStreamingClientLaunchProgress
 Streaming.RegisterForStreamingClientStarted
 Streaming.RegisterForStreamingLaunchComplete
 Streaming.RegisterForStreamingPrelaunchCheck
+Streaming.RegisterForStreamingShowCloudConflict
 Streaming.RegisterForStreamingShowEula
 Streaming.RegisterForStreamingShowLaunchOptions
 Streaming.RegisterForStreamingStillDownloading
 Streaming.StreamingContinueStreamGame
+Streaming.StreamingSetCloudConflictResolution
 Streaming.StreamingSetLaunchOption
 String
 String field
@@ -33244,6 +33288,7 @@ V_CP437CharsToUTF8
 V_ComposeFileName
 V_CopyAndFixSlashes
 V_EscapeShellArgumentAndAppend(CUtlStringBuilder*, char const*, bool)
+V_EscapeShellArgumentAndAppend(char*, unsigned long, char const*)
 V_ExtractDomainFromURL
 V_ExtractFileExtension
 V_ExtractFilePath
@@ -34005,6 +34050,8 @@ Y2A*
 Y77n
 Y9#C
 Y?fff?
+YCbCr full range
+YCbCr limited range
 YK}o
 YOU GOT A TROPHY!
 YOuc
@@ -34374,6 +34421,7 @@ Zulu
 \n"CGameRecording_QueryPhases_Request
 \n"CGameServers_FriendsQuery_Response
 \n"CGameServers_QueryByFakeIP_Request
+\n"CMsgRemoteClientPairWifiAPResponse
 \n"CPublishedFile_GetItemInfo_Request
 \n"CRemotePlay_SessionStarted_Request
 \n"CStoreBrowse_GetDLCForApps_Request
@@ -34834,6 +34882,7 @@ Zulu
 \n@CMarketingMessages_GetMarketingMessagesViewerRangeStats_Response
 \nHey, you just set %s's number values to be 0.  Is that what you wanted?\n\nIf you do `%s = 123`, you will set the convar to `= 123` which becomes `0` for numeric uses.\nDid you mean to do `%s %s` instead?\n
 \nO1Ie
+\nPPid:\t
 \nParsing attempt:
 \nSteam logging initialized: directory: %s\n\n
 \nThis report shows all running jobs, organized into a tree based on what\nthey are waiting on.  If a job is waiting on X, then it will be indented\nand underneath X, a child in the tree.\n\nThe report contains three types of items:\n  - Jobs (prefixed by 'Job:')\n  - Things that jobs are waiting on (net messages, SQL, DBOs, memcached,\n    locks, HTTP, etc).  Note: a job can be a "thing a job is waiting on"\n\t(e.g. when it holds a lock), leading to a chain.\n  - Callers\n\nLegend:\n  Hier Jobs        :  Number of jobs in total, including this item and its descendants\n  Hier Avg Wait ms :  Average wait time (ms) of all jobs in this branch of the tree\n  Num Jobs         :  Number of jobs of this specific type waiting on this same cause chain\n  Job Avg Wait ms  :  Average wait time (ms) of the jobs of this type that have been waiting\n                      on this cause chain\n  Avg Job Dur ms   :  Average total job run time (ms).  Not just the time spent in the current\n                      yield.\n
@@ -35266,6 +35315,7 @@ Zulu
 \n\nlink_index
 \n\nlocal_echo
 \n\nlocal_path
+\n\nlocal_time
 \n\nlook_names
 \n\nmachine_id
 \n\nmajor_axis
@@ -35332,6 +35382,7 @@ Zulu
 \n\nstate_name
 \n\nsteam_deck
 \n\nsteamid_to
+\n\nsteps_done
 \n\nstyle_name
 \n\nsubject_id
 \n\nsync_state
@@ -35851,6 +35902,7 @@ Zulu
 \n\tsource_id
 \n\tstart_dir
 \n\tstart_num
+\n\tstep_name
 \n\tstore_tag
 \n\tsubtitles
 \n\tsupported
@@ -36092,6 +36144,7 @@ Zulu
 \n\vraw_version
 \n\vrecent_peak
 \n\vregion_code
+\n\vremote_time
 \n\vreplay_year
 \n\vreport_text
 \n\vrequest_ids
@@ -36126,6 +36179,7 @@ Zulu
 \n\vsteam_realm
 \n\vsteamidhost
 \n\vsteamiduser
+\n\vsteps_total
 \n\vstore_appid
 \n\vstore_items
 \n\vstream_port
@@ -37548,6 +37602,7 @@ bSounds_PlayMessage
 bSounds_PlayOnline
 bSpoilers
 bSteamButton
+bSteamInputVRControllerPreferGamepad
 bStorePagePublished
 bSuccess
 bSuccess || pWorkItem->HasTimedOut()
@@ -38532,6 +38587,8 @@ closeonescape
 closing ) for (?C expected
 closing session
 cloud
+cloud_conflict
+cloud_conflict_resolution
 cloud_enabled
 cloud_file_exists
 cloud_get_file_info
@@ -38726,6 +38783,7 @@ config.vdf
 config/CheckForUpdatesBeforeLaunch
 config/ExternalRegistrationURL/%s
 config/ExternalRegistrationURL/default
+config/IgnoreIdleTimeout
 config/LaunchWithoutWorkshopUpdates
 config/NoUpdatesAfterInstall
 config/UseLaunchCommandLine
@@ -40640,6 +40698,7 @@ estackingorder
 estate
 estatus
 estimated_packet_rate
+estimated_seconds
 estimated_seconds_remaining
 estimated_size
 estimated_time_registered
@@ -40665,6 +40724,7 @@ ever_enabled
 evp_EncryptDecryptUpdate
 ewAS-?\t
 ewh/?y
+exUx
 exceeds application limits
 exceeds max fragment size
 excessive message size
@@ -46110,6 +46170,8 @@ jstype
 jstype is only allowed on int64, uint64, sint64, fixed64 or sfixed64 fields.
 jumplist_flags
 jupiter
+jupiter-initial-firmware-update
+jupiter-initial-firmware-update check
 jupiter-initial-firmware-update check returned: %d
 jupiter-initial-firmware-update returned: %d
 jupiter-wifi-trace.dat
@@ -47934,7 +47996,7 @@ k_EStreamAudioCodecNone
 k_EStreamAudioCodecOpus
 k_EStreamAudioCodecRaw
 k_EStreamAudioCodecVorbis
-k_EStreamBitrateAutodetect
+k_EStreamBitrateAutomatic
 k_EStreamBitrateUnlimited
 k_EStreamChannelControl
 k_EStreamChannelDiscovery
@@ -49463,6 +49525,7 @@ m_pWaylandContext
 m_pWebSocketConnectionCallback
 m_pWebUITransportController
 m_pWindow
+m_pWorkThreadPool
 m_pZip
 m_pZip == NULL
 m_pathPropertyListener
@@ -49829,6 +49892,7 @@ m_vecCallbacksStreamingClientShowProgressUI
 m_vecCallbacksStreamingClientStart
 m_vecCallbacksStreamingLaunchComplete
 m_vecCallbacksStreamingPrelaunchCheck
+m_vecCallbacksStreamingShowCloudConflict
 m_vecCallbacksStreamingShowLaunchOptions
 m_vecCallbacksStreamingStillDownloading
 m_vecCallbacksUsersChanged
@@ -51497,6 +51561,7 @@ pBuf == m_bufDecryptedRecvBuffer.PeekPut()
 pBuf->BIsUnbufferedSend()
 pBuffer
 pBuffer->TellPut() == 0
+pBuffer->m_nReferences > 0
 pCAL
 pCAL: invalid keyword
 pCRF
@@ -52908,6 +52973,7 @@ push_to_talk_enabled
 putc
 puts
 putwc
+pv-adverb
 pvCallback != NULL
 pvCallbackUDPCur || pvCallbackTCPCur
 pvecAddressesOut != nullptr || pSingleOutput != nullptr
@@ -52951,8 +53017,7 @@ pwrd_telecom
 pwrd_unicom
 pwrite64
 py_generic_services
-pyrowave_custom_bitrate
-pyrowave_custom_bitrate_kbps
+pyrowave_bitrate_kbps
 pyrowave_quality_modifier
 pyrowave_yuv444
 python3 "%s/devkit-utils/steamos-set-steam-client" --client %s
@@ -53741,6 +53806,7 @@ screen_reader_locales_available
 screenreader.vdf
 screensaver_current_id
 screensaver_settings
+screensaver_while_ingame
 screensavers
 screensavers\%s
 screenshot
@@ -54273,6 +54339,8 @@ shortname
 should retry
 should_hide_hint
 should_suppress_discount_pct
+show-controller-configurator-window
+show-main-window
 showDownArrow
 show_above_purchase
 show_advanced_update_channels
@@ -55093,6 +55161,7 @@ steammessages_workshop.steamclient.proto
 steamos
 steamos-passwd
 steamos-passwd --has-password
+steamos-prepare-oobe-test
 steamos-reset-tool factory-reset
 steamos-reset-tool os-status
 steamos-reset-tool: %s
@@ -55473,6 +55542,7 @@ supported_video_codecs
 supports_brightness
 supports_color
 supports_os_updates
+supports_progress
 supports_remote_hid
 supports_speed
 supports_startup_brightness
@@ -57315,6 +57385,7 @@ vr_connection_params
 vr_connection_ready
 vr_devices
 vr_devices_from_usb
+vr_force_steam_input
 vr_last_tracker_devices
 vr_link_invite_client_id
 vr_not_required

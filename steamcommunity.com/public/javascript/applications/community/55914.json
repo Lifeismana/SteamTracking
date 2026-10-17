@@ -376,6 +376,7 @@
     "ViewAllItems": "모든 아이템 보기",
     "Home_TrendingSection_Label": "인기 아이템",
     "Home_TrendingSection_ViewMore": "아이템 더 보기...",
+    "Home_RecentSales_Label": "최근 판매된 아이템",
     "Home_Badges_Label": "진행 중인 배지",
     "Home_Badges_ViewAll": "배지 모두 보기...",
     "Home_Badges_XOfYCardsCollected": "수집한 카드: %2$s개 중 %1$s개",

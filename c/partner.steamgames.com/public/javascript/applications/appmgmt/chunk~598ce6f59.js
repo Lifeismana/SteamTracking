@@ -7,8 +7,6 @@
       chunkid: (module, module_exports, __webpack_require__) => {
         __webpack_require__._(module_exports, {
           _: () => _,
-          _: () => _,
-          _: () => _,
         });
         var _ = {};
         __webpack_require__._(_),
@@ -710,6 +708,7 @@
                 bConstMethod: !0,
                 ePrivilege: 1,
                 eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }

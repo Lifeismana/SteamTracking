@@ -229,6 +229,8 @@ $ORIGIN
 /tmp/.steam-sem-names
 /tmp/steam_monitor.log
 /tmp/steam_monitor.log.last
+00:29:06
+00:29:08
 0123456789ABCDEF
 0123456789abcdef
 12CStdMemAlloc
@@ -236,8 +238,6 @@ $ORIGIN
 18CUtlCharConversion
 19CUtlNoEscConversion
 21CUtlCStringConversion
-23:04:33
-23:04:36
 31CAdHocValidation_SimpleCallback
 9IMemAlloc
 </script>
@@ -346,7 +346,7 @@ No samples during profile period.\n
 No tracked allocs currently in use. Total %d\n
 OUT OF MEMORY
 Object
-Oct  6 2026
+Oct 14 2026
 Only thread can stop self: Use a higher-level protocol
 OverlayInput
 OverlayRendering

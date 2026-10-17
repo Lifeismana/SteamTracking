@@ -506,7 +506,7 @@
             ? "spotlight"
             : _.banner === "daily_deal"
               ? "daily-deal"
-              : "spotlight_specials";
+              : "spotlight-specials";
         }
         function _(_) {
           const { initialData: _, initialDataUpdatedAt: _, previewTime: _ } = _,

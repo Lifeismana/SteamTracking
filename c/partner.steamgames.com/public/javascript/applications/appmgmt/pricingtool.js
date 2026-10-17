@@ -796,7 +796,6 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
           const [_, _] = (0, _.useState)(!1),
@@ -842,10 +841,7 @@
             "partnerbrowse_webapi_token",
             "application_config",
           );
-          return (
-            (0, _._)(!!_, "require partnerbrowse_webapi_token"),
-            (0, _._)(new _._(_._.WEBAPI_BASE_URL, _))
-          );
+          return (0, _._)(new _._(_._.WEBAPI_BASE_URL, _));
         }
         function _(_) {
           return _._.Initialize(_.GetServiceTransport(), _._.is_partner_member);
@@ -877,7 +873,7 @@
           static ReadFile(_) {
             return new Promise((_, _) => {
               const _ = new FileReader();
-              (_.onload = (_) => _(_.result)), _.readAsText(_);
+              (_.onload = () => _(_.result ?? "")), _.readAsText(_);
             });
           }
           static WriteFile(_, _) {

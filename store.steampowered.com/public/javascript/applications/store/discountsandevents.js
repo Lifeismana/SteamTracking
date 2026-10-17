@@ -260,7 +260,7 @@
         "use strict";
         e.d(S, { C0: () => h, Ck: () => j, mj: () => g });
         var t = e(7850),
-          P = e(78192),
+          P = e(48156),
           v = e(72609),
           E = e(40358),
           b = e(64238),
@@ -472,7 +472,7 @@
             ? "spotlight"
             : o.banner === "daily_deal"
               ? "daily-deal"
-              : "spotlight_specials";
+              : "spotlight-specials";
         }
         function Ce(o) {
           const { initialData: r, initialDataUpdatedAt: _, previewTime: D } = o,

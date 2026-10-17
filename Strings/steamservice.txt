@@ -1663,6 +1663,7 @@ $ffn
 /in_illuminance_raw
 /index.html
 /name
+/proc/%u/status
 /proc/device-tree/board-info/unit_sn
 /proc/device-tree/compatible
 /proc/device-tree/model
@@ -1750,6 +1751,7 @@ $ffn
 00000000
 000102030405060708091011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495969798990123456789abcdef
 00:00:00
+00:29:06
 01/01/00
 0123456789
 0123456789.
@@ -2328,7 +2330,6 @@ $ffn
 22CFutureSharedStateBase
 22IPCServerMapAndMutex_t
 22ISSLConnectionCallback
-23:04:33
 23CActivationCodeItemInfo
 23CClanEventUserNewsTuple
 23CDummyWebSocketCallback
@@ -2507,6 +2508,8 @@ $ffn
 6*Fc7
 6-nn
 6144
+8000
+8192
 65536
 60000000
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
@@ -2561,8 +2564,6 @@ $ffn
 7~8A
 8.K%G
 8/A0
-8000
-8192
 82\n:XPH
 83L3
 83N6
@@ -6874,6 +6875,7 @@ NVIDIA
 N[i4A
 N\r\nyd
 Name
+Name:\t
 NamePart
 Nanaco
 Naranja
@@ -7113,7 +7115,7 @@ Object
 Object Signer
 Object Signing
 Object Signing CA
-Oct  6 2026
+Oct 14 2026
 October
 Odia
 Offensive Avatar
@@ -9624,6 +9626,7 @@ Zulu
 \n:82H
 \nHey, you just set %s's number values to be 0.  Is that what you wanted?\n\nIf you do `%s = 123`, you will set the convar to `= 123` which becomes `0` for numeric uses.\nDid you mean to do `%s %s` instead?\n
 \nO1Ie
+\nPPid:\t
 \nParsing attempt:
 \nThis report shows all running jobs, organized into a tree based on what\nthey are waiting on.  If a job is waiting on X, then it will be indented\nand underneath X, a child in the tree.\n\nThe report contains three types of items:\n  - Jobs (prefixed by 'Job:')\n  - Things that jobs are waiting on (net messages, SQL, DBOs, memcached,\n    locks, HTTP, etc).  Note: a job can be a "thing a job is waiting on"\n\t(e.g. when it holds a lock), leading to a chain.\n  - Callers\n\nLegend:\n  Hier Jobs        :  Number of jobs in total, including this item and its descendants\n  Hier Avg Wait ms :  Average wait time (ms) of all jobs in this branch of the tree\n  Num Jobs         :  Number of jobs of this specific type waiting on this same cause chain\n  Job Avg Wait ms  :  Average wait time (ms) of the jobs of this type that have been waiting\n                      on this cause chain\n  Avg Job Dur ms   :  Average total job run time (ms).  Not just the time spent in the current\n                      yield.\n
 \nW2a
@@ -16658,6 +16661,7 @@ push response HEADERS: max concurrent streams exceeded
 push response HEADERS: stream_id == 0
 putc
 putwc
+pv-adverb
 pvCallback != NULL
 pvCallbackUDPCur || pvCallbackTCPCur
 pvecAddressesOut != nullptr || pSingleOutput != nullptr

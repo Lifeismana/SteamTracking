@@ -168,5 +168,7 @@
     "DiscountsAndEvents_Banner_WeekendDeal": "صفقة نهاية الأسبوع",
     "DiscountsAndEvents_Banner_MidweekDeal": "صفقة منتصف الأسبوع",
     "DiscountsAndEvents_Banner_DailyDeal": "صفقة اليوم",
+    "DiscountsAndEvents_Banner_LargestDiscount": "أكبر خصم",
+    "DiscountsAndEvents_LoadError": "تعذر تحميل الخصومات والفعاليات. يرجى المحاولة لاحقًا.",
     "store_ui_dummy": "dont translate"
 }

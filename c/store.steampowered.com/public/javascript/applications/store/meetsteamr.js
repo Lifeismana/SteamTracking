@@ -13,7 +13,8 @@
           const [_, _] = useState(!1);
           return (
             useEffect(() => {
-              startTransition(() => _(!0));
+              window.SSR && (window.SSR.hydrated = !0),
+                startTransition(() => _(!0));
             }, []),
             jsx(_.Provider, {
               value: _,
@@ -23,7 +24,7 @@
         }
         const _ = (0, _.createContext)(!1);
         function _() {
-          return (0, _.useContext)(_);
+          return !0;
         }
         const _ = Intl.DateTimeFormat().resolvedOptions().timeZone,
           _ =
@@ -39,6 +40,7 @@
         }
         function _() {
           "document" in globalThis &&
+            _ &&
             (document.cookie = `timezoneName=${_};expires=${new Date(Date.now() + 36e5 * 24 * 365).toUTCString()};path=/;Secure;SameSite=None;`);
         }
         _();

@@ -482,6 +482,7 @@ $\nY8O
 (KeyValues*)m_ReplacedKVs.Element(idx)
 (KeyValues*)m_ResourceCache.Element(idx)
 (\n disable_nvidia_hardware_encoding
+(\n pyrowave_custom_bitrate_OBSOLETE
 (\n#k_EStreamControlControllerConfigMsg
 (\n$k_EBroadcastPermissionFriendsAllowed
 (\n$k_EBroadcastPermissionFriendsApprove
@@ -831,6 +832,7 @@ $\nY8O
 -----CJSArray-----\n
 -----CJSObject-----\n
 -0123456789
+-\n%pyrowave_custom_bitrate_kbps_OBSOLETE
 -\n(k_EPersonaStateFlag_LaunchTypeCompatTool
 -\n(k_EStreamControlStopNeptuneData_OBSOLETE
 -\n(k_EStreamControlTouchActionSetLayerAdded
@@ -6451,6 +6453,7 @@ i91k
 iCCP
 iCCP: invalid keyword
 iNewReadIndex != 3
+iNh(
 iSection < 32
 iSection >= 0
 iTXt
@@ -6870,7 +6873,7 @@ k_EStreamAudioCodecNone
 k_EStreamAudioCodecOpus
 k_EStreamAudioCodecRaw
 k_EStreamAudioCodecVorbis
-k_EStreamBitrateAutodetect
+k_EStreamBitrateAutomatic
 k_EStreamBitrateUnlimited
 k_EStreamChannelControl
 k_EStreamChannelDiscovery
@@ -8118,8 +8121,7 @@ putwc
 pvecAddressesOut != nullptr || pSingleOutput != nullptr
 pwrite64
 py_generic_services
-pyrowave_custom_bitrate
-pyrowave_custom_bitrate_kbps
+pyrowave_bitrate_kbps
 pyrowave_quality_modifier
 pyrowave_yuv444
 qR5FE%

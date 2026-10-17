@@ -169,5 +169,6 @@
     "DiscountsAndEvents_Banner_MidweekDeal": "Midtuketilbud",
     "DiscountsAndEvents_Banner_DailyDeal": "Dagens tilbud",
     "DiscountsAndEvents_Banner_LargestDiscount": "Største rabatt",
+    "DiscountsAndEvents_LoadError": "Tilbud og begivenheter kunne ikke lastes nå. Prøv igjen senere.",
     "store_ui_dummy": "dont translate"
 }

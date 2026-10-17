@@ -994,6 +994,7 @@ $\nY8O
 /in_illuminance_integration_time
 /in_illuminance_raw
 /name
+/proc/%u/status
 /proc/device-tree/board-info/unit_sn
 /proc/device-tree/compatible
 /proc/device-tree/model
@@ -1049,9 +1050,11 @@ $\nY8O
 0 == sm_ThreadSafeQueueLogMsgSpew.Count()
 0)AA7A
 0000000000000000000000000000000000000000
+1000
 00003333
 000102030405060708091011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495969798990123456789abcdef
 00:00:00
+00:29:25
 01/01/00
 0123456789
 0123456789ABCDEF
@@ -1075,7 +1078,6 @@ $\nY8O
 0x%llx
 1.2.11
 1.6.37
-1000
 10BlankImage
 10CBasePanel
 10CHintLabel
@@ -1550,7 +1552,6 @@ $\nY8O
 22CMsgSetPIDShuttingDown
 22CMsgSetTargetFrameRate
 22SerializedOverlayPumps
-23:04:54
 23CActivationCodeItemInfo
 23CMsgBrowserErrorStrings
 23CMsgBrowserFocusChanged
@@ -4833,6 +4834,7 @@ NULL row buffer
 NVIDIA
 N[i4A
 Name
+Name:\t
 NameEntry
 NamePart
 Nanaco
@@ -4946,7 +4948,7 @@ OUT_OF_RANGE
 OXXO
 OZw3(?
 O\n\nAnnotation
-Oct  6 2026
+Oct 14 2026
 October
 Odia
 Offensive Avatar
@@ -6402,6 +6404,7 @@ Zulu
 \n&ESteamOSCompatibilityResultDisplayType
 \n(ESteamDeckCompatibilityResultDisplayType
 \nHey, you just set %s's number values to be 0.  Is that what you wanted?\n\nIf you do `%s = 123`, you will set the convar to `= 123` which becomes `0` for numeric uses.\nDid you mean to do `%s %s` instead?\n
+\nPPid:\t
 \nParsing attempt:
 \nYg:a
 \n\fEAppTestType
@@ -9483,6 +9486,7 @@ purchase
 pure virtual method called\n
 putc
 putwc
+pv-adverb
 pvecAddressesOut != nullptr || pSingleOutput != nullptr
 pw_csgo
 pw_dota2

@@ -163,5 +163,12 @@
     "PersonalCalendar_EmptyDay": "這一天沒有任何新發行的遊戲能推薦給您<1>歡迎查看行事曆上的其它日期！</1>",
     "NewBadge": "新",
     "Time_Today": "今天",
+    "DiscountsAndEvents_Title": "折扣與活動",
+    "DiscountsAndEvents_SeeMore": "查看更多",
+    "DiscountsAndEvents_Banner_WeekendDeal": "週末特價",
+    "DiscountsAndEvents_Banner_MidweekDeal": "週中特價",
+    "DiscountsAndEvents_Banner_DailyDeal": "今日特惠",
+    "DiscountsAndEvents_Banner_LargestDiscount": "最大折扣",
+    "DiscountsAndEvents_LoadError": "目前無法載入折扣與活動。請稍後再試。",
     "store_ui_dummy": "dont translate"
 }

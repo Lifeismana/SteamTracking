@@ -35,6 +35,7 @@ $ORIGIN
 -+xX0123456789abcdefABCDEF
 -0123456789
 ./obj_steamoverlayvulkanlayer_steamrtarm64/release/steamoverlayvulkanlayer.so
+/tmp/steam_shared_fd_uid%u_rpid%u
 0123456789
 17CPooledBufferData
 18CVulkanSharedImage
@@ -53,6 +54,7 @@ ASCII
 ASCII//TRANSLIT
 April
 August
+CDFS
 CLcx
 Constants
 December
@@ -196,10 +198,13 @@ Ucoeff
 Unknown error
 Uoffset
 VK_KHR_bind_memory2
+VK_KHR_external_memory_fd
+VK_KHR_external_semaphore_fd
 VK_KHR_get_memory_requirements2
 VK_KHR_maintenance1
 VK_KHR_maintenance2
 VK_KHR_sampler_ycbcr_conversion
+VK_KHR_timeline_semaphore
 VTT for
 Vcoeff
 Voffset
@@ -301,6 +306,7 @@ char16_t
 char32_t
 char8_t
 clock_gettime
+close
 cntrl
 color
 colorX
@@ -308,6 +314,7 @@ colorY
 color_in
 complex
 compositeDesc
+connect
 const_cast
 construction vtable for
 covariant return thunk to
@@ -333,6 +340,7 @@ eInputType
 eOutputType
 false
 fclose
+fcntl
 fdopen
 fflush
 fileno
@@ -364,8 +372,12 @@ generic
 get_nprocs
 getc
 getenv
+geteuid
+getpid
+getsockopt
 gettext
 gettimeofday
+getuid
 getwc
 gl_Position
 global constructors keyed to
@@ -446,17 +458,21 @@ putc
 putwc
 read
 realloc
+recv
 reference temporary #
 reinterpret_cast
 samCursor
 samDiffuse
 sampler0
+sendmsg
 setlocale
 setvbuf
 short
 signed char
 sizeof
 sizeof...
+snprintf
+socket
 space
 sprintf
 static_cast
@@ -480,6 +496,7 @@ stdin
 stdout
 strcasecmp
 strcmp
+strcpy
 strdup
 strerror
 string literal

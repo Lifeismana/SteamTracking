@@ -168,5 +168,7 @@
     "DiscountsAndEvents_Banner_WeekendDeal": "Weekenddeal",
     "DiscountsAndEvents_Banner_MidweekDeal": "Weekdeal",
     "DiscountsAndEvents_Banner_DailyDeal": "De aanbieding van vandaag",
+    "DiscountsAndEvents_Banner_LargestDiscount": "Hoogste korting",
+    "DiscountsAndEvents_LoadError": "Kortingen en evenementen konden niet worden geladen. Probeer het later opnieuw.",
     "store_ui_dummy": "dont translate"
 }

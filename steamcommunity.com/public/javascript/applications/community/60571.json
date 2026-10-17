@@ -176,7 +176,7 @@
     "moderationaction_escalated_for_csam": "因涉及儿童性侵害内容（CSAM），已转交给 Valve 处理",
     "moderationaction_escalated_for_terrorism": "因涉及恐怖主义，已转交给 Valve 处理",
     "moderationaction_claimed": "已领取",
-    "moderationaction_released": "已解除",
+    "moderationaction_released": "已释出",
     "moderationaction_privatemessaged": "私信已发送",
     "moderationaction_unknown": "未知操作",
     "moderationaction_ownerdisputed": "所有者已对处理提出争议",

@@ -6,151 +6,6 @@
         "use strict";
         __webpack_require__._(module_exports, {
           _: () => _,
-        });
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        function _(_) {
-          return (0, _.jsx)(_._, {
-            ..._,
-            viewBox: 16,
-            children: (0, _.jsx)("path", {
-              _: "M13.8182 1.94629L5.77816 9.98184L2.40483 6.61296L0.835938 8.18184L5.77816 13.1285L15.387 3.51518L13.8182 1.94629Z",
-              fill: "currentColor",
-            }),
-          });
-        }
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid");
-        function _(_) {
-          const {
-              checked: _,
-              onChange: _,
-              disabled: _,
-              children: _,
-              ref: _,
-              variant: _,
-              color: _,
-              align: _ = "center",
-              icon: _,
-              ..._
-            } = _,
-            _ = _ === "indeterminate",
-            _ = _ ?? (_ ? _ : _),
-            _ = () => {
-              _ || (_ && _(_ ? !0 : !_));
-            },
-            _ = (_) => {
-              _ ||
-                (_.key === " " &&
-                  (_(), _.preventDefault(), _.stopPropagation()));
-            },
-            _ = (0, _._)("Checkbox", _);
-          return (0, _.jsxs)(_._, {
-            align: _,
-            ref: _,
-            role: "checkbox",
-            "aria-checked": _ ? "mixed" : _,
-            "data-state": _(_),
-            className: _()(_.Root, _[`Variant-${_}`], _ && _.Disabled),
-            onClick: _,
-            tabIndex: 0,
-            onKeyDown: _,
-            cursor: "default",
-            "aria-disabled": _,
-            "data-accent-color": _,
-            ..._,
-            children: [
-              (0, _.jsx)("div", {
-                className: _.Checkbox,
-                children:
-                  _ &&
-                  (0, _.jsx)(_, {
-                    className: _.Icon,
-                  }),
-              }),
-              _,
-            ],
-          });
-        }
-        function _(_) {
-          return _ === "indeterminate" ? _ : _ ? "checked" : "unchecked";
-        }
-        function _(_) {
-          return (0, _.jsx)("svg", {
-            viewBox: "0 0 16 16",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            children: (0, _.jsx)("path", {
-              _: "M14.6663 7.11133H1.33301V9.33355H14.6663V7.11133Z",
-              fill: "currentColor",
-            }),
-          });
-        }
-      },
-      chunkid: (module, module_exports, __webpack_require__) => {
-        "use strict";
-        __webpack_require__._(module_exports, {
-          _: () => _,
-        });
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_);
-        function _(_) {
-          return (0, _.jsx)("svg", {
-            ..._(_),
-          });
-        }
-        const _ = [
-          ..._._,
-          {
-            prop: "size",
-            responsive: !0,
-            className: (_) => _[`IconSize-${_}`],
-          },
-          {
-            prop: "color",
-            className: _.Color,
-            cssProperty: (_) => ["--icon-color", _(_)],
-          },
-          {
-            prop: "hitSlop",
-            className: _.HitSlop,
-            cssProperty: (_) => [
-              "--hit-slop-custom",
-              typeof _ == "string" ? _ : "",
-            ],
-          },
-          _._.find(({ prop: _ }) => _ === "cursor"),
-        ];
-        function _(_) {
-          return !_ || _[0] === "#" ? _ : (0, _._)(_);
-        }
-        function _(_) {
-          const { viewBox: _, ..._ } = _,
-            _ = {
-              className: _.size ? void 0 : _.IconSizeDefault,
-              ..._,
-            };
-          return _ && (_.viewBox = _(_)), (0, _._)(_, _);
-        }
-        function _(_) {
-          if (_)
-            return typeof _ == "number"
-              ? `0 0 ${_} ${_}`
-              : typeof _ == "string"
-                ? _
-                : `0 0 ${_.width} ${_.height}`;
-        }
-      },
-      chunkid: (module, module_exports, __webpack_require__) => {
-        "use strict";
-        __webpack_require__._(module_exports, {
-          _: () => _,
           _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
@@ -991,18 +846,235 @@
               }),
           });
         }
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_);
+        function _(_, _) {
+          return _
+            ? _
+              ? !!_.valve_admin
+              : !!(_.valve_admin || _.support_user)
+            : !1;
+        }
+        function _(_, _) {
+          const _ = !!(_ && _.BIsClanAccount()),
+            { data: _ } = (0, _._)(_ ? _.GetAccountID() : 0);
+          return _ && _(_, _);
+        }
+        function _(_) {
+          const { clanSteamID: _, _: _ } = _;
+          return _(_, _.requireAdmin)
+            ? (0, _.jsx)("div", {
+                _: _,
+                className: (0, _._)(
+                  _.className,
+                  _.requireAdmin
+                    ? _.ValveOnlyAdminBackground
+                    : _.ValveOnlyBackground,
+                ),
+                children: _.children,
+              })
+            : null;
+        }
         var _ = __webpack_require__("chunkid");
+        const _ = 12,
+          _ = 240;
+        function _(_) {
+          const { event: _ } = _,
+            [_] = (0, _._)(_._, void 0),
+            [_, _] = _.useState(!1),
+            _ = (0, _._)("rgMLRecommenderWishlist", "application_config"),
+            _ = Array.isArray(_) && _.length > 0 && Number.isInteger(_[0]);
+          return !_.BIsNextFest() || !_ || _ == _._.Random || (0, _._)(_) > 0
+            ? null
+            : (0, _.jsxs)(_, {
+                clanSteamID: _.clanSteamID,
+                className: _().Ctn,
+                children: [
+                  (0, _.jsxs)(_._, {
+                    className: _().Header,
+                    onClick: () => _(!_),
+                    children: [
+                      _ ? "\u25BC" : "\u25B6",
+                      " Next Fest personalized order (VO)",
+                    ],
+                  }),
+                  _ &&
+                    (0, _.jsx)(_, {
+                      event: _,
+                      rgRecommendedAppIDs: _,
+                    }),
+                ],
+              });
+        }
+        function _(_) {
+          const { event: _, rgRecommendedAppIDs: _ } = _,
+            [_, _] = _.useState(void 0);
+          (0, _._)(_, _._);
+          const [_, _] = _.useState(void 0),
+            [_, _] = _.useState(""),
+            _ = _.jsondata.sale_ml_recommender_weight_exponent || _._,
+            _ = parseFloat(_),
+            _ = _ ?? (0, _._)(_),
+            _ = _ || _,
+            _ = _.useMemo(() => (0, _._)(_, _, (_) => _, _, _), [_, _, _]),
+            _ = _.useMemo(() => new Map(_.map((_, _) => [_, _])), [_]),
+            _ = _.useMemo(() => new Map(_.map((_, _) => [_, _])), [_]),
+            _ = _.length,
+            _ = (_) => _._.Get().GetApp(_)?.GetName() ?? `App ${_}`,
+            _ = (_) => `hsl(${Math.round((240 * _.get(_)) / _)}, 80%, 65%)`,
+            _ = (_, _) =>
+              (0, _.jsx)(
+                "div",
+                {
+                  className: (0, _._)(_().Row, _ == _ && _().Highlighted),
+                  style: {
+                    height: _,
+                    color: _(_),
+                  },
+                  title: `${_(_)} (${_}): recommended #${_.get(_) + 1}, shuffled to #${_.get(_) + 1}`,
+                  onMouseEnter: () => _(_),
+                  children: _,
+                },
+                _,
+              ),
+            _ = (_, _) =>
+              (0, _.jsx)(
+                "line",
+                {
+                  _: 0,
+                  _: (_.get(_) + 0.5) * _,
+                  _: _,
+                  _: (_.get(_) + 0.5) * _,
+                  stroke: _ ? "white" : _(_),
+                  strokeWidth: _ ? 2 : 1,
+                  strokeOpacity: _ ? 1 : _ === void 0 ? 0.6 : 0.15,
+                },
+                _,
+              );
+          return (0, _.jsxs)("div", {
+            className: _().Body,
+            children: [
+              (0, _.jsxs)("div", {
+                className: _().Summary,
+                children: [
+                  _,
+                  " recommendations, exponent ",
+                  _,
+                  _ < 0 && " (shuffle disabled)",
+                  ", seed ",
+                  _,
+                  ". Apps that aren't recommended are placed after these in a uniform random order. Each section shows the apps it contains in this same relative order. Hover a row to highlight it.",
+                ],
+              }),
+              (0, _.jsxs)("div", {
+                className: _().Controls,
+                children: [
+                  (0, _.jsx)(_._, {
+                    className: _().ControlButton,
+                    onClick: () => _(_._()),
+                    children: "Reshuffle",
+                  }),
+                  (0, _.jsxs)("label", {
+                    children: [
+                      "Exponent",
+                      " ",
+                      (0, _.jsx)("input", {
+                        type: "number",
+                        min: -1,
+                        step: 0.1,
+                        className: _().ExponentInput,
+                        placeholder: String(_),
+                        value: _,
+                        onChange: (_) => _(_.target.value),
+                      }),
+                    ],
+                  }),
+                  (_ !== void 0 || _ != "") &&
+                    (0, _.jsx)(_._, {
+                      className: _().ControlButton,
+                      onClick: () => {
+                        _(void 0), _("");
+                      },
+                      children: "Reset to page's order",
+                    }),
+                  (0, _.jsx)("span", {
+                    children: "Only affects this chart, not the page",
+                  }),
+                ],
+              }),
+              (0, _.jsxs)("div", {
+                className: _().Chart,
+                onMouseLeave: () => _(void 0),
+                children: [
+                  (0, _.jsxs)("div", {
+                    className: _().Column,
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: _().ColumnTitle,
+                        children: "Recommended order",
+                      }),
+                      _.map((_, _) => _(_, `#${_ + 1} ${_(_)}`)),
+                    ],
+                  }),
+                  (0, _.jsxs)("div", {
+                    className: _().Column,
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: _().ColumnTitle,
+                        children: "\xA0",
+                      }),
+                      (0, _.jsxs)("svg", {
+                        width: _,
+                        height: _ * _,
+                        children: [
+                          _.filter((_) => _ != _).map((_) => _(_, !1)),
+                          _ !== void 0 && _.has(_) && _(_, !0),
+                        ],
+                      }),
+                    ],
+                  }),
+                  (0, _.jsxs)("div", {
+                    className: _().Column,
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: _().ColumnTitle,
+                        children: "Shuffled order",
+                      }),
+                      _.map((_) => _(_, `#${_.get(_) + 1} ${_(_)}`)),
+                    ],
+                  }),
+                ],
+              }),
+            ],
+          });
+        }
         function _(_) {
           const {
             event: _,
             fnOnChangeDayIndex: _,
             addtionalAdminButtons: _,
           } = _;
-          return (0, _.jsx)(_._, {
-            eventModel: _,
-            fnOnUpdateSaleDayIndex: _,
-            addtionalAdminButtons: _,
-            bSupportsSticky: !0,
+          return (0, _.jsxs)(_.Fragment, {
+            children: [
+              (0, _.jsx)(_, {
+                event: _,
+              }),
+              (0, _.jsx)(_._, {
+                eventModel: _,
+                fnOnUpdateSaleDayIndex: _,
+                addtionalAdminButtons: _,
+                bSupportsSticky: !0,
+              }),
+            ],
           });
         }
         var _ = __webpack_require__("chunkid"),
@@ -1138,7 +1210,6 @@
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_, _, _, _) {
           let _ = _.jsondata.sale_background_img_groups.groups.find(
@@ -1261,7 +1332,6 @@
         }
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid");
         function _(_) {
@@ -1324,35 +1394,7 @@
         }
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        function _(_, _) {
-          return _
-            ? _
-              ? !!_.valve_admin
-              : !!(_.valve_admin || _.support_user)
-            : !1;
-        }
-        function _(_, _) {
-          const _ = !!(_ && _.BIsClanAccount()),
-            { data: _ } = (0, _._)(_ ? _.GetAccountID() : 0);
-          return _ && _(_, _);
-        }
-        function _(_) {
-          const { clanSteamID: _, _: _ } = _;
-          return _(_, _.requireAdmin)
-            ? (0, _.jsx)("div", {
-                _: _,
-                className: (0, _._)(
-                  _.className,
-                  _.requireAdmin
-                    ? _.ValveOnlyAdminBackground
-                    : _.ValveOnlyBackground,
-                ),
-                children: _.children,
-              })
-            : null;
-        }
-        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -2701,7 +2743,6 @@
           });
         }
         var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid");
@@ -5168,6 +5209,7 @@
           );
         }
         var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
           const {
@@ -5464,6 +5506,7 @@
           let _ = null;
           const _ = (0, _._)(),
             _ = (0, _._)(),
+            _ = (0, _._)(_),
             _ = _.useMemo(() => {
               const _ = _();
               if (!_) return;
@@ -5479,7 +5522,7 @@
                 _.GetContentHubTag(),
               ),
               _ = _ && !_ && !_.jsondata.content_hub_restricted_width;
-            let _ = (0, _._)(_, _, _, _, _);
+            let _ = (0, _._)(_, _, _, _, _, _);
             if (_ === void 0) return;
             if (!_)
               if ((0, _._)(_) && !_._.logged_in)
@@ -8537,33 +8580,6 @@
       },
       chunkid: (module) => {
         module.exports = {
-          Root: "_1kIuUssJvopWbHik1IKMG6",
-          "Variant-light": "zcrlDqGBY0Lrl7faLFoJI",
-          "Variant-dark": "_3b6kFRuG8ILziz88w8GESp",
-          "Variant-outline": "wlcXkTKJWe-SE0fCwIRwQ",
-          Disabled: "kLcGKsNxkoEqxgok6YzML",
-          Checkbox: "_3babFLLB0YYBf8znrlE7Dt",
-          Icon: "cngAYeP7ZvFo2pT_v3-xO",
-        };
-      },
-      chunkid: (module) => {
-        module.exports = {
-          Color: "_2Vc3a-PM4tOhJcD72NEq1U",
-          IconSizeDefault: "_20lX82QaoUw-iHboSsmZBI",
-          "IconSize-1": "_1zRMg9IjPqEIAejKQDDLYW",
-          "IconSize-2": "_3dn_hJnXYKfl38rjqz4y91",
-          "IconSize-3": "_2aoIykgGddbEHeCGgMR79l",
-          "IconSize-4": "_1Ypu_MleveHHMyLy8PVNy",
-          "IconSize-5": "e8vp9esm_uAhUEdfq5zjr",
-          "IconSize-6": "hXAsxCohKrk8qBq6Enfgt",
-          "IconSize-7": "_5TifSVb5dMP2wAaHIDqM_",
-          "IconSize-8": "_32KP-QSJpecoxuWZfWkqmy",
-          "IconSize-9": "_3TcYJ4xwprVIVhcdzwF17m",
-          HitSlop: "_1tiFDvBjIAQRZDbVwz8k2u",
-        };
-      },
-      chunkid: (module) => {
-        module.exports = {
           SalePageHiddenWarning: "_2h9U3L_8MxvbQ6TGGaeBYa",
           WarningText: "_2iB5yR1rkdynH8-UFCwUty",
         };
@@ -8772,6 +8788,22 @@
           ExampleSpacer: "oAEZygc5smKi6PjD-981",
           BroadcastPreviewContainer: "_3aLcrZxS4I4KVtUF0BdHds",
           SaleHeaderPreviewContainer: "GORXZE3lrdjE-QiVxXceW",
+        };
+      },
+      chunkid: (module) => {
+        module.exports = {
+          Ctn: "_1fmjHmozlsZ8ZXlDnql4Pe",
+          Header: "_1gKvHUxWanEHu-0GbjB4KV",
+          Body: "_3tPVeOGZDIVgS7KGdpTsXB",
+          Summary: "_3hyLqEQDWP9Sck6GY2mO9_",
+          Controls: "_2GkioR72RQBbHku00uxt47",
+          ControlButton: "_3ObP_u1dEak3ra2LLM7GVb",
+          ExponentInput: "_3a0Hx5NOSuPBHi9gp7kT2I",
+          Chart: "_2F7VrAMPKV6N4hhdOm4v6B",
+          Column: "FhDnO3NBSjZkWQv3No3N3",
+          ColumnTitle: "_2SG3j7hLVHdpo3WooeBJiv",
+          Row: "_2-m8vjFf_-iwN09EHqQm7c",
+          Highlighted: "kWJDRycQPH53McjlfFjQ-",
         };
       },
       chunkid: (module) => {

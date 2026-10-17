@@ -163,5 +163,12 @@
     "PersonalCalendar_EmptyDay": "Nous n'avons aucune nouveauté à vous recommander aujourd'hui. <1>Consultez le reste de votre calendrier !</1>",
     "NewBadge": "NOUVEAUTÉ",
     "Time_Today": "aujourd'hui",
+    "DiscountsAndEvents_Title": "Promotions et évènements",
+    "DiscountsAndEvents_SeeMore": "En voir plus",
+    "DiscountsAndEvents_Banner_WeekendDeal": "Offre du weekend",
+    "DiscountsAndEvents_Banner_MidweekDeal": "Offre de mi-semaine",
+    "DiscountsAndEvents_Banner_DailyDeal": "L'offre du jour",
+    "DiscountsAndEvents_Banner_LargestDiscount": "Remise la plus importante",
+    "DiscountsAndEvents_LoadError": "Les remises et évènements n'ont pas pu être chargés pour le moment. Veuillez réessayer plus tard.",
     "store_ui_dummy": "dont translate"
 }

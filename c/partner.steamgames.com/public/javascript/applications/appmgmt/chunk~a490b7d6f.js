@@ -153,6 +153,7 @@
             _: () => _,
             _: () => _,
             _: () => _,
+            _: () => _,
           });
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
@@ -3252,6 +3253,7 @@
               {
                 bConstMethod: !0,
                 ePrivilege: 4,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -3264,6 +3266,7 @@
               {
                 bConstMethod: !0,
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -3289,6 +3292,7 @@
                 bConstMethod: !0,
                 ePrivilege: 0,
                 eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -3301,6 +3305,7 @@
               {
                 bConstMethod: !0,
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -3323,6 +3328,7 @@
               (0, _._)(_, _),
               {
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -3333,6 +3339,7 @@
               (0, _._)(_, _),
               {
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -3356,6 +3363,7 @@
               _,
               {
                 ePrivilege: 4,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -3367,6 +3375,7 @@
               _,
               {
                 ePrivilege: 5,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -3378,6 +3387,7 @@
               _,
               {
                 ePrivilege: 4,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -3389,6 +3399,7 @@
               _,
               {
                 ePrivilege: 5,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -3400,6 +3411,7 @@
               _,
               {
                 ePrivilege: 4,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -3411,6 +3423,7 @@
               _,
               {
                 ePrivilege: 4,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -3422,6 +3435,7 @@
               _,
               {
                 ePrivilege: 4,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -3448,6 +3462,7 @@
                 bConstMethod: !0,
                 ePrivilege: 1,
                 eWebAPIKeyRequirement: 2,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -3461,6 +3476,7 @@
                 bConstMethod: !0,
                 ePrivilege: 1,
                 eWebAPIKeyRequirement: 2,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }

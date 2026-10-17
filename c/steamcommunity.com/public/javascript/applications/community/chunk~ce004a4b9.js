@@ -1276,6 +1276,7 @@
                 bConstMethod: !0,
                 ePrivilege: 1,
                 eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -3197,6 +3198,7 @@
                 bConstMethod: !0,
                 ePrivilege: 1,
                 eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -3252,6 +3254,7 @@
               {
                 ePrivilege: 1,
                 eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -4043,6 +4046,9 @@
         }
         function _(_, ..._) {
           const { data: _ } = (0, _._)(_);
+          return _(_, ..._);
+        }
+        function _(_, ..._) {
           if (!(_ != null && _.asset_url_format)) return;
           const _ = _.find((_) => {
             const _ = _[_];

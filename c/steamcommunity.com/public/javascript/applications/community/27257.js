@@ -1557,7 +1557,7 @@
               [_],
             );
           return (0, _.jsx)(_._, {
-            tooltip: "#Editor_Emoticon",
+            tooltip: (0, _._)("#Editor_Emoticon"),
             onClick: _,
             toggled: _,
             children: (0, _.jsx)(_.jZW, {}),
@@ -2536,7 +2536,7 @@
                   fnUpdateSession: _,
                 }),
               (0, _.jsx)(_._, {
-                tooltip: "#UserPolls_Toolbar_ttip",
+                tooltip: (0, _._)("#UserPolls_Toolbar_ttip"),
                 onClick: _,
                 toggled: _,
                 children: (0, _.jsx)(_.fQB, {}),
@@ -2572,14 +2572,14 @@
               _,
               _ &&
                 (0, _.jsx)(_._, {
-                  tooltip: "#EventEditor_InsertImage_Title",
+                  tooltip: (0, _._)("#EventEditor_InsertImage_Title"),
                   onClick: _,
                   toggled: _ == "image",
                   children: (0, _.jsx)(_._V3, {}),
                 }),
               _ &&
                 (0, _.jsx)(_._, {
-                  tooltip: "#EventEditor_EditVideo_Title",
+                  tooltip: (0, _._)("#EventEditor_EditVideo_Title"),
                   onClick: _,
                   toggled: _ == "video",
                   children: (0, _.jsx)(_.CeX, {}),
@@ -2613,7 +2613,7 @@
                   onSave: _,
                 }),
               (0, _.jsx)(_._, {
-                tooltip: "#EventEditor_InsertYouTube",
+                tooltip: (0, _._)("#EventEditor_InsertYouTube"),
                 onClick: _,
                 toggled: _,
                 children: (0, _.jsx)("img", {
@@ -2653,7 +2653,7 @@
                     fnUpdateSession: _,
                   }),
                 (0, _.jsx)(_._, {
-                  tooltip: "#MeetSteam_add_group_ttip",
+                  tooltip: (0, _._)("#MeetSteam_add_group_ttip"),
                   onClick: _,
                   toggled: _,
                   children: (0, _.jsx)("img", {
@@ -2693,7 +2693,7 @@
                     fnUpdateSession: _,
                   }),
                 (0, _.jsx)(_._, {
-                  tooltip: "#MeetSteam_add_schedule_ttip",
+                  tooltip: (0, _._)("#MeetSteam_add_schedule_ttip"),
                   onClick: _,
                   toggled: _,
                   children: (0, _.jsx)("img", {

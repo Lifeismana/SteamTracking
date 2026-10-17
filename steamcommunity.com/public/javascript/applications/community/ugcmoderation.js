@@ -4,35 +4,279 @@
   (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
     [37102],
     {
-      11038: (b, T, e) => {
+      93863: (M, E, n) => {
         "use strict";
-        e.r(T), e.d(T, { UGCBanDialogOnGlobalVariable: () => B });
-        var t = e(7850),
-          i = e(68031),
-          M = e(15252),
-          I = e(75083),
-          y = e(1522),
-          V = e(26072),
-          S = e(86392),
-          E = e(14432),
-          p = e(64388),
-          x = e(90626);
-        function f(P) {
-          return V.u.Localize("#moderation_ugcban_default_note", (0, S.Jt)(P));
+        n.r(E), n.d(E, { UGCBanDialogOnGlobalVariable: () => k });
+        var t = n(7850),
+          g = n(68031),
+          C = n(15252),
+          z = n(75083),
+          W = n(58952),
+          G = n(21663),
+          O = n(1522),
+          X = n(26072),
+          T = n(86392),
+          I = n(14432),
+          r = n(21113),
+          N = n(66243),
+          S = n(64388),
+          Y = n(39905),
+          f = n(90626),
+          q = n(37901);
+        const l = {};
+        (l.arabic = () => n.e(73735).then(n.t.bind(n, 73735, 19))),
+          (l.brazilian = () => n.e(14971).then(n.t.bind(n, 14971, 19))),
+          (l.bulgarian = () => n.e(37236).then(n.t.bind(n, 37236, 19))),
+          (l.czech = () => n.e(66898).then(n.t.bind(n, 66898, 19))),
+          (l.danish = () => n.e(19078).then(n.t.bind(n, 19078, 19))),
+          (l.dutch = () => n.e(14875).then(n.t.bind(n, 14875, 19))),
+          (l.english = () => n.e(46073).then(n.t.bind(n, 46073, 19))),
+          (l.finnish = () => n.e(17822).then(n.t.bind(n, 17822, 19))),
+          (l.french = () => n.e(53951).then(n.t.bind(n, 53951, 19))),
+          (l.german = () => n.e(71541).then(n.t.bind(n, 71541, 19))),
+          (l.greek = () => n.e(46145).then(n.t.bind(n, 46145, 19))),
+          (l.hungarian = () => n.e(5896).then(n.t.bind(n, 5896, 19))),
+          (l.indonesian = () => n.e(23187).then(n.t.bind(n, 23187, 19))),
+          (l.italian = () => n.e(80081).then(n.t.bind(n, 80081, 19))),
+          (l.japanese = () => n.e(41080).then(n.t.bind(n, 41080, 19))),
+          (l.koreana = () => n.e(99770).then(n.t.bind(n, 99770, 19))),
+          (l.latam = () => n.e(24306).then(n.t.bind(n, 24306, 19))),
+          (l.malay = () => n.e(87049).then(n.t.bind(n, 87049, 19))),
+          (l.norwegian = () => n.e(70269).then(n.t.bind(n, 70269, 19))),
+          (l.polish = () => n.e(19226).then(n.t.bind(n, 19226, 19))),
+          (l.portuguese = () => n.e(70554).then(n.t.bind(n, 70554, 19))),
+          (l.romanian = () => n.e(94900).then(n.t.bind(n, 94900, 19))),
+          (l.russian = () => n.e(68852).then(n.t.bind(n, 68852, 19))),
+          (l.sc_schinese = () => n.e(98574).then(n.t.bind(n, 98574, 19))),
+          (l.schinese = () => n.e(94951).then(n.t.bind(n, 94951, 19))),
+          (l.spanish = () => n.e(43649).then(n.t.bind(n, 43649, 19))),
+          (l.swedish = () => n.e(14416).then(n.t.bind(n, 14416, 19))),
+          (l.tchinese = () => n.e(17324).then(n.t.bind(n, 17324, 19))),
+          (l.thai = () => n.e(18073).then(n.t.bind(n, 18073, 19))),
+          (l.turkish = () => n.e(17153).then(n.t.bind(n, 17153, 19))),
+          (l.ukrainian = () => n.e(71147).then(n.t.bind(n, 71147, 19))),
+          (l.vietnamese = () => n.e(1544).then(n.t.bind(n, 1544, 19)));
+        async function _(c) {
+          if (l[c]) return l[c]();
         }
-        function B() {
-          const [P, N] = x.useState(null),
-            [u, Y] = x.useState(null),
-            [K, C] = x.useState(!1),
-            [o, l] = x.useState("");
-          if (
-            (x.useEffect(
+        const h = (0, q.l)(_);
+        var V = n(52211);
+        const H = [
+            { labelToken: "#Workshop_ItemAdmin_Ban_Preset_None" },
+            {
+              labelToken: "#Workshop_ItemAdmin_Ban_Preset_Copyright",
+              reasonToken: "#Workshop_ItemAdmin_Ban_Preset_CopyrightReason",
+              eModerationReason: r.OQ,
+            },
+          ],
+          F = [
+            { labelToken: "#Workshop_ItemAdmin_Ban_Preset_None" },
+            {
+              labelToken: "#Workshop_ItemAdmin_Ban_Preset_NoCounterNotice",
+              reasonToken:
+                "#Workshop_ItemAdmin_Ban_Preset_NoCounterNoticeReason",
+            },
+          ],
+          b = ["copyright", "other"],
+          B = ["copyright", "malware", "other"],
+          A = {
+            copyright: "#Workshop_ItemAdmin_Ban_Preset_Copyright",
+            malware: "#Workshop_ItemAdmin_Ban_Category_Malware",
+            other: "#Workshop_ItemAdmin_Ban_Category_Other",
+          };
+        function J(c) {
+          return X.u.Localize("#moderation_ugcban_default_note", (0, T.Jt)(c));
+        }
+        function U(c) {
+          const {
+              bBanned: v,
+              bIsSupport: x,
+              bWorkshopContent: y,
+              onConfirm: w,
+              onError: K,
+              onClose: R,
+            } = c,
+            Z = x && !v,
+            Q = !x && !v,
+            [P, L] = (0, f.useState)(c.strBanReason),
+            [j, o] = (0, f.useState)(null),
+            [s, a] = (0, f.useState)(!1),
+            [e, d] = (0, f.useState)(null),
+            [u, D] = (0, f.useState)(!1),
+            m = v ? F : H,
+            nn = h.Localize(
+              v
+                ? "#Workshop_ItemAdmin_Ban_Unset"
+                : "#Workshop_ItemAdmin_Ban_Set",
+            ),
+            tn =
+              !u &&
+              P.trim().length > 1 &&
+              !(Z && j === null) &&
+              !(Q && y && e === null),
+            on = () => {
+              D(!0);
+              const i = e == "malware" ? r.rU : j != null ? j : r.dk;
+              Promise.resolve(w(P.trim(), i)).then(R, ($) => {
+                D(!1), K == null || K($);
+              });
+            },
+            sn = (i) => {
+              i !== null &&
+                ((!P.trim() || (j !== null && P === J(j))) && L(J(i)), o(i)),
+                a(!1);
+            },
+            ln = (i) => {
+              L(i.reasonToken ? h.Localize(i.reasonToken) : ""),
+                i.eModerationReason !== void 0 &&
+                  j === null &&
+                  o(i.eModerationReason);
+            },
+            en = (i) => {
+              const $ = h.Localize(
+                "#Workshop_ItemAdmin_Ban_Preset_CopyrightReason",
+              );
+              i == "copyright" && P.trim().length === 0
+                ? L($)
+                : P === $ && L(""),
+                d(i);
+            };
+          return s
+            ? (0, t.jsx)(S.s, {
+                className: V.BanDialog,
+                strTitle: nn,
+                onClose: R,
+                children: (0, t.jsx)(I.F, {
+                  reasons: (0, T.cd)(),
+                  onSelect: sn,
+                }),
+              })
+            : (0, t.jsxs)(S.s, {
+                className: V.BanDialog,
+                strTitle: nn,
+                onClose: R,
+                children: [
+                  x &&
+                    (0, t.jsxs)(g.s, {
+                      direction: "column",
+                      gap: "2",
+                      marginBottom: "2",
+                      children: [
+                        Z &&
+                          (0, t.jsxs)(g.s, {
+                            direction: "row",
+                            gap: "2",
+                            align: "center",
+                            children: [
+                              (0, t.jsx)(C.EY, {
+                                children: h.Localize(
+                                  "#Workshop_ItemAdmin_Ban_Reason",
+                                ),
+                              }),
+                              (0, t.jsx)(z.$, {
+                                size: "1",
+                                color: "dull",
+                                onClick: () => a(!0),
+                                children:
+                                  j === null
+                                    ? h.Localize(
+                                        "#Workshop_ItemAdmin_Ban_Reason_Unselected",
+                                      )
+                                    : (0, T.Jt)(j),
+                              }),
+                            ],
+                          }),
+                        (0, t.jsxs)(g.s, {
+                          direction: "row",
+                          gap: "2",
+                          align: "center",
+                          children: [
+                            (0, t.jsx)(C.EY, {
+                              children: h.Localize(
+                                "#Workshop_ItemAdmin_Ban_Presets",
+                              ),
+                            }),
+                            (0, t.jsx)(W.l6, {
+                              options: m,
+                              getOptionLabel: (i) => h.Localize(i.labelToken),
+                              selectedValue: null,
+                              placeholder: h.Localize(m[0].labelToken),
+                              onSelectionChange: ln,
+                            }),
+                          ],
+                        }),
+                      ],
+                    }),
+                  Q &&
+                    (0, t.jsxs)(g.s, {
+                      direction: "column",
+                      gap: "2",
+                      marginBottom: "2",
+                      children: [
+                        (0, t.jsxs)(g.s, {
+                          direction: "row",
+                          gap: "2",
+                          align: "center",
+                          children: [
+                            (0, t.jsx)(C.EY, {
+                              children: h.Localize(
+                                "#Workshop_ItemAdmin_Ban_Reason",
+                              ),
+                            }),
+                            (0, t.jsx)(G.I, {
+                              options: y ? B : b,
+                              getOptionLabel: (i) => h.Localize(A[i]),
+                              value: e,
+                              onValueChange: en,
+                            }),
+                          ],
+                        }),
+                        e == "malware" &&
+                          (0, t.jsx)(C.EY, {
+                            children: h.Localize(
+                              "#Workshop_ItemAdmin_Ban_Category_MalwareDesc",
+                            ),
+                          }),
+                      ],
+                    }),
+                  (0, t.jsx)(O.f, {
+                    value: P,
+                    onTextChange: L,
+                    maxLength: 256,
+                    rows: 6,
+                    resize: "vertical",
+                  }),
+                  (0, t.jsxs)(g.s, {
+                    justify: "end",
+                    gap: "3",
+                    align: "center",
+                    marginTop: "3",
+                    children: [
+                      (0, t.jsx)(N.sP, {
+                        disabled: !tn,
+                        onClick: on,
+                        autoFocus: !0,
+                        children: Y.Z.Localize("#Button_OK"),
+                      }),
+                      (0, t.jsx)(N.Oh, {
+                        onClick: R,
+                        children: (0, t.jsx)("span", {
+                          children: Y.Z.Localize("#Button_Cancel"),
+                        }),
+                      }),
+                    ],
+                  }),
+                ],
+              });
+        }
+        var p = n(3166);
+        function k() {
+          const [c, v] = f.useState(null);
+          return (
+            f.useEffect(
               () => (
-                (window.ShowUGCBanDialog = (a, h) => {
-                  Y(null),
-                    C(!1),
-                    l(""),
-                    N({ cItems: a.length, fnOnConfirm: h });
+                (window.ShowUGCBanDialog = (x, y) => {
+                  v({ ...y, key: Date.now(), fnOnConfirm: x });
                 }),
                 () => {
                   delete window.ShowUGCBanDialog;
@@ -40,473 +284,296 @@
               ),
               [],
             ),
-            !P)
-          )
-            return null;
-          const g = () => N(null),
-            c = () => {
-              u === null || !o.trim() || (P.fnOnConfirm(u, o.trim()), g());
-            },
-            v = (a) => {
-              a !== null &&
-                ((!o.trim() || (u !== null && o === f(u))) && l(f(a)), Y(a)),
-                C(!1);
-            },
-            j = P.cItems > 1 ? `Ban ${P.cItems} items` : "Ban item";
-          return (0, t.jsxs)(p.s, {
-            onClose: g,
-            strTitle: j,
-            children: [
-              K && (0, t.jsx)(E.F, { reasons: (0, S.cd)(), onSelect: v }),
-              !K &&
-                (0, t.jsxs)(i.s, {
-                  direction: "column",
-                  gap: "2",
-                  minWidth: "400px",
-                  children: [
-                    (0, t.jsxs)(i.s, {
-                      direction: "row",
-                      gap: "2",
-                      align: "center",
-                      marginBottom: "2",
-                      children: [
-                        (0, t.jsx)(M.EY, { children: "Select a reason:" }),
-                        (0, t.jsx)(I.$, {
-                          size: "1",
-                          color: "dull",
-                          onClick: () => C(!0),
-                          children:
-                            u === null ? "Click to select..." : (0, S.Jt)(u),
-                        }),
-                      ],
-                    }),
-                    (0, t.jsx)(M.EY, { children: "Note:" }),
-                    (0, t.jsx)(y.f, {
-                      value: o,
-                      onTextChange: (a) => l(a),
-                      maxLength: 256,
-                    }),
-                    (0, t.jsxs)(i.s, {
-                      direction: "row",
-                      gap: "2",
-                      justify: "end",
-                      marginTop: "3",
-                      children: [
-                        (0, t.jsx)(I.$, {
-                          onClick: g,
-                          color: "dull",
-                          children: "Cancel",
-                        }),
-                        (0, t.jsx)(I.$, {
-                          disabled: u === null || !o.trim(),
-                          onClick: c,
-                          children: "Ban",
-                        }),
-                      ],
-                    }),
-                  ],
-                }),
-            ],
-          });
+            c
+              ? (0, t.jsx)(
+                  U,
+                  {
+                    bBanned: !1,
+                    strBanReason: "",
+                    bIsSupport: !!p.iA.is_support,
+                    bWorkshopContent: !!c.bWorkshopContent,
+                    onConfirm: (x, y) => c.fnOnConfirm(y, x),
+                    onClose: () => v(null),
+                  },
+                  c.key,
+                )
+              : null
+          );
         }
       },
-      31832: (b, T, e) => {
+      31832: (M, E, n) => {
         "use strict";
-        e.r(T), e.d(T, { UGCModerationSubjectPanel: () => Z });
-        var t = e(7850),
-          i = e(15252),
-          M = e(68031),
-          I = e(75083),
-          y = e(21663),
-          V = e(64981),
-          S = e(49527),
-          E = e(72609),
-          p = e(64388),
-          x = e(90626),
-          f = e(86067),
-          B = e(13725),
-          P = e(46085),
-          N = e(86392),
-          u = e(72524);
-        const Y = 0,
-          K = 1,
-          C = 2,
-          o = 3;
-        var l = e(64238),
-          g = e.n(l),
-          c = e(93249),
-          v = e.n(c);
-        function j(n) {
-          return !!n && n !== o;
+        n.r(E), n.d(E, { UGCModerationSubjectPanel: () => j });
+        var t = n(7850),
+          g = n(15252),
+          C = n(68031),
+          z = n(75083),
+          W = n(21663),
+          G = n(64981),
+          O = n(49527),
+          X = n(72609),
+          T = n(64388),
+          I = n(90626),
+          r = n(86067),
+          N = n(13725),
+          S = n(46085),
+          Y = n(86392),
+          f = n(72524);
+        const q = 0,
+          l = 1,
+          _ = 2,
+          h = 3;
+        var V = n(21113),
+          H = n(64238),
+          F = n.n(H),
+          b = n(93249),
+          B = n.n(b);
+        function A(o) {
+          return !!o && o !== h;
         }
-        function a(n) {
-          return j(n.status)
+        function J(o) {
+          var s, a;
+          return (
+            o.subject_type === G.z8 &&
+            ((s = o.coordinates) == null ? void 0 : s.ugc_content_type) ===
+              16 &&
+            !!(
+              (a = o.reports) != null && a.some((e) => e.report_reason === V.rU)
+            )
+          );
+        }
+        function U(o) {
+          return A(o.status)
             ? (0, t.jsxs)("span", {
-                className: g()(v().Pill, n.className),
-                children: [n.label, n.status === K && "?"],
+                className: F()(B().Pill, o.className),
+                children: [o.label, o.status === l && "?"],
               })
             : null;
         }
-        function h(n) {
-          return (0, t.jsx)(a, {
-            status: n.status,
-            className: v().TerrorismPill,
+        function p(o) {
+          return (0, t.jsx)(U, {
+            status: o.status,
+            className: B().TerrorismPill,
             label: "Terrorism",
           });
         }
-        function z(n) {
-          return (0, t.jsx)(a, {
-            status: n.status,
-            className: v().CSAMPill,
+        function k(o) {
+          return (0, t.jsx)(U, {
+            status: o.status,
+            className: B().CSAMPill,
             label: "CSAM",
           });
         }
-        function W(n) {
-          return (0, t.jsx)(a, {
-            status: n.status,
-            className: v().ViolencePill,
+        function c(o) {
+          return (0, t.jsx)(U, {
+            status: o.status,
+            className: B().ViolencePill,
             label: "Violent threat",
           });
         }
-        function F(n) {
-          const { subject: s } = n;
-          return !j(s.terrorism_status) &&
-            !j(s.csam_status) &&
-            !j(s.credible_threat_of_violence_status)
+        function v() {
+          return (0, t.jsx)("span", {
+            className: F()(B().Pill, B().MalwarePill),
+            children: "Malware?",
+          });
+        }
+        function x(o) {
+          const { subject: s } = o,
+            a = J(s);
+          return !A(s.terrorism_status) &&
+            !A(s.csam_status) &&
+            !A(s.credible_threat_of_violence_status) &&
+            !a
             ? null
-            : (0, t.jsxs)("div", {
+            : (0, t.jsxs)(C.s, {
+                wrap: "wrap",
+                gap: "1",
                 children: [
-                  (0, t.jsx)(h, { status: s.terrorism_status }),
-                  (0, t.jsx)(z, { status: s.csam_status }),
-                  (0, t.jsx)(W, {
+                  (0, t.jsx)(p, { status: s.terrorism_status }),
+                  (0, t.jsx)(k, { status: s.csam_status }),
+                  (0, t.jsx)(c, {
                     status: s.credible_threat_of_violence_status,
                   }),
+                  a && (0, t.jsx)(v, {}),
                 ],
               });
         }
-        function A(n) {
-          return { subject_type: V.z8, published_file_id: n };
+        function y(o) {
+          return { subject_type: G.z8, published_file_id: o };
         }
-        function R(n) {
-          return (0, P.OI)(A(n));
+        function w(o) {
+          return (0, S.OI)(y(o));
         }
-        function $(n) {
-          var s, m, r;
-          const U = (0, P.w3)(A(n.publishedFileID)),
-            [G, Q] = (0, x.useState)(!1);
-          if (U.isPending) return null;
-          if (U.isError)
-            return (0, t.jsx)(i.EY, {
-              children: f.T.Localize("#ugcsubjectpanel_error"),
+        function K(o) {
+          var s, a, e;
+          const d = (0, S.w3)(y(o.publishedFileID)),
+            [u, D] = (0, I.useState)(!1);
+          if (d.isPending) return null;
+          if (d.isError)
+            return (0, t.jsx)(g.EY, {
+              children: r.T.Localize("#ugcsubjectpanel_error"),
             });
-          const L = (s = U.data.subjects) == null ? void 0 : s[0];
-          return L
-            ? (0, t.jsxs)(M.s, {
+          const m = (s = d.data.subjects) == null ? void 0 : s[0];
+          return m
+            ? (0, t.jsxs)(C.s, {
                 direction: "column",
                 gap: "1",
                 children: [
-                  (0, t.jsx)(i.EY, { children: (0, N.hl)(L) }),
-                  (0, t.jsx)(F, { subject: L }),
-                  (0, t.jsx)(i.EY, {
-                    children: f.T.Localize(
+                  (0, t.jsx)(g.EY, { children: (0, Y.hl)(m) }),
+                  (0, t.jsx)(x, { subject: m }),
+                  (0, t.jsx)(g.EY, {
+                    children: r.T.Localize(
                       "#forumsubjectlist_subjectreportsummary",
-                      (m = L.unresolved_report_count) != null ? m : 0,
-                      (r = L.unresolved_dispute_count) != null ? r : 0,
+                      (a = m.unresolved_report_count) != null ? a : 0,
+                      (e = m.unresolved_dispute_count) != null ? e : 0,
                     ),
                   }),
-                  (0, t.jsxs)(M.s, {
+                  (0, t.jsxs)(C.s, {
                     direction: "row",
                     gap: "2",
                     children: [
-                      (0, t.jsx)(I.$, {
+                      (0, t.jsx)(z.$, {
                         size: "1",
                         color: "dull",
-                        onClick: () => Q(!0),
-                        children: f.T.Localize("#ugcsubjectpanel_history"),
+                        onClick: () => D(!0),
+                        children: r.T.Localize("#ugcsubjectpanel_history"),
                       }),
-                      (0, t.jsx)(_, { subject: L }),
-                      (0, t.jsx)(d, { subject: L }),
+                      (0, t.jsx)(R, { subject: m }),
+                      (0, t.jsx)(Z, { subject: m }),
+                      (0, t.jsx)(Q, { subject: m }),
                     ],
                   }),
-                  G && (0, t.jsx)(D, { subject: L, onClose: () => Q(!1) }),
+                  u && (0, t.jsx)(P, { subject: m, onClose: () => D(!1) }),
                 ],
               })
             : null;
         }
-        function _(n) {
-          const { subject: s } = n,
-            m = (0, P.YL)(s.reported_content_id ? [s.reported_content_id] : []),
-            r =
+        function R(o) {
+          const { subject: s } = o,
+            a = (0, S.YL)(s.reported_content_id ? [s.reported_content_id] : []),
+            e =
               !!s.assigned_moderator_steamid &&
               s.assigned_moderator_steamid !== "0";
           return !s.reported_content_id ||
-            !r ||
-            s.assigned_moderator_steamid !== E.iA.steamid
+            !e ||
+            s.assigned_moderator_steamid !== X.iA.steamid
             ? null
-            : (0, t.jsx)(I.$, {
+            : (0, t.jsx)(z.$, {
                 size: "1",
                 color: "dull",
-                loading: m.isPending,
-                onClick: () => m.mutate(),
-                children: f.T.Localize("#ugcsubjectpanel_release"),
+                loading: a.isPending,
+                onClick: () => a.mutate(),
+                children: r.T.Localize("#ugcsubjectpanel_release"),
               });
         }
-        function d(n) {
-          const { subject: s } = n,
-            [m, r] = (0, x.useState)(!1);
-          return !s.reported_content_id || s.resolved !== S.z_
+        function Z(o) {
+          const { subject: s } = o,
+            [a, e] = (0, I.useState)(!1);
+          return !s.reported_content_id || !(0, f.h)(s)
             ? null
             : (0, t.jsxs)(t.Fragment, {
                 children: [
-                  (0, t.jsx)(I.$, {
+                  (0, t.jsx)(z.$, {
                     size: "1",
                     color: "dull",
-                    onClick: () => r(!0),
-                    children: f.T.Localize("#moderation_escalation_escalate"),
+                    onClick: () => e(!0),
+                    children: r.T.Localize("#moderation_escalation_escalate"),
                   }),
-                  m &&
-                    (0, t.jsx)(p.s, {
-                      onClose: () => r(!1),
-                      strTitle: f.T.Localize("#moderation_escalation_escalate"),
-                      children: (0, t.jsx)(u.R, {
+                  a &&
+                    (0, t.jsx)(T.s, {
+                      onClose: () => e(!1),
+                      strTitle: r.T.Localize("#moderation_escalation_escalate"),
+                      children: (0, t.jsx)(f.R, {
                         reportedContentID: s.reported_content_id,
-                        onClose: () => r(!1),
+                        eCurrentLevel: s.required_moderator_level,
+                        onClose: () => e(!1),
                       }),
                     }),
                 ],
               });
         }
-        function D(n) {
-          const { subject: s, onClose: m } = n,
-            [r, U] = (0, x.useState)("reports");
-          return (0, t.jsx)(p.s, {
-            onClose: m,
-            strTitle: f.T.Localize("#ugcsubjectpanel_dialogtitle"),
-            children: (0, t.jsxs)(M.s, {
+        function Q(o) {
+          var s, a, e;
+          const { subject: d } = o,
+            u = (0, S.N8)();
+          return !!d.reported_content_id &&
+            ((s = d.resolved) != null ? s : O.z_) !== O.z_ &&
+            (((a = d.unresolved_report_count) != null ? a : 0) > 0 ||
+              ((e = d.unresolved_dispute_count) != null ? e : 0) > 0)
+            ? (0, t.jsx)(z.$, {
+                size: "1",
+                color: "dull",
+                loading: u.isPending,
+                onClick: () =>
+                  u.mutate({ reportedContentID: d.reported_content_id }),
+                children: r.T.Localize("#moderation_actions_sustain_short"),
+              })
+            : null;
+        }
+        function P(o) {
+          const { subject: s, onClose: a } = o,
+            [e, d] = (0, I.useState)("reports");
+          return (0, t.jsx)(T.s, {
+            onClose: a,
+            strTitle: r.T.Localize("#ugcsubjectpanel_dialogtitle"),
+            children: (0, t.jsxs)(C.s, {
               direction: "column",
               gap: "2",
               children: [
-                (0, t.jsxs)(y.I.Root, {
-                  value: r,
-                  onValueChange: (G) => U(G),
+                (0, t.jsxs)(W.I.Root, {
+                  value: e,
+                  onValueChange: (u) => d(u),
                   children: [
-                    (0, t.jsx)(y.I.Item, {
+                    (0, t.jsx)(W.I.Item, {
                       value: "reports",
-                      children: f.T.Localize("#ugcsubjectpanel_reports"),
+                      children: r.T.Localize("#ugcsubjectpanel_reports"),
                     }),
-                    (0, t.jsx)(y.I.Item, {
+                    (0, t.jsx)(W.I.Item, {
                       value: "history",
-                      children: f.T.Localize("#ugcsubjectpanel_history"),
+                      children: r.T.Localize("#ugcsubjectpanel_history"),
                     }),
                   ],
                 }),
-                r === "reports" && (0, t.jsx)(B.lX, { subject: s }),
-                r === "history" &&
-                  (0, t.jsx)(B.B8, {
+                e === "reports" && (0, t.jsx)(N.lX, { subject: s }),
+                e === "history" &&
+                  (0, t.jsx)(N.B8, {
                     reportedContentID: s.reported_content_id,
                   }),
               ],
             }),
           });
         }
-        var O = e(29385);
-        function Z(n) {
-          const { publishedFileID: s } = n,
-            m = (0, O.jE)();
+        var L = n(29385);
+        function j(o) {
+          const { publishedFileID: s } = o,
+            a = (0, L.jE)();
           return (
-            (0, x.useEffect)(() => {
-              const r = (U) => {
-                var G;
-                ((G = U.detail) == null ? void 0 : G.publishedFileID) == s &&
-                  m.invalidateQueries({ queryKey: R(s) });
+            (0, I.useEffect)(() => {
+              const e = (d) => {
+                var u;
+                ((u = d.detail) == null ? void 0 : u.publishedFileID) == s &&
+                  a.invalidateQueries({ queryKey: w(s) });
               };
               return (
-                window.addEventListener("ugc-moderation-resolved", r),
-                () => window.removeEventListener("ugc-moderation-resolved", r)
+                window.addEventListener("ugc-moderation-resolved", e),
+                () => window.removeEventListener("ugc-moderation-resolved", e)
               );
-            }, [m, s]),
-            (0, t.jsx)($, { publishedFileID: s })
+            }, [a, s]),
+            (0, t.jsx)(K, { publishedFileID: s })
           );
         }
       },
-      21663: (b, T, e) => {
-        "use strict";
-        e.d(T, { I: () => u });
-        var t = e(7850),
-          i = e(90626),
-          M = e(86946),
-          I = e(60351),
-          y = e(71742),
-          V = e(64238),
-          S = e.n(V),
-          E = e(53011),
-          p = e.n(E),
-          x = e(68031),
-          f = e(80549);
-        const B = (0, i.createContext)(null);
-        function P(C) {
-          const {
-              variant: o,
-              radius: l,
-              size: g,
-              status: c,
-              children: v,
-              value: j,
-              onValueChange: a,
-            } = C,
-            [h, z] = (0, i.useState)({}),
-            W = (0, i.useCallback)((_, d) => z((D) => ({ ...D, [d]: _ })), []),
-            F = (0, i.useCallback)(
-              (_, d) =>
-                z((D) => {
-                  const O = { ...D };
-                  return O[d] === _ && delete O[d], O;
-                }),
-              [],
-            ),
-            A = (_) => {
-              let d = 0;
-              switch (_.key) {
-                case " ":
-                case "Enter":
-                case "ArrowRight":
-                  d = 1;
-                  break;
-                case "ArrowLeft":
-                  d = -1;
-                  break;
-              }
-              if (d) {
-                const D = Array.from(Object.values(h)).sort(K);
-                let O;
-                if (j === null) O = d > 0 ? 0 : D.length - 1;
-                else {
-                  const s = h[j],
-                    m = D.findIndex((r) => r === s);
-                  (0, y.wT)(
-                    typeof m == "number",
-                    "Could not find current segmented value position",
-                  ),
-                    (O = m + d);
-                }
-                const Z = D[O < 0 ? D.length + O : O % D.length],
-                  n = Object.keys(h).find((s) => h[s] === Z);
-                typeof n != "string"
-                  ? console.error("Could not find next segmeneted value")
-                  : (a(n), _.stopPropagation(), _.preventDefault());
-              }
-            },
-            R = (0, f.f)("SegmentedControl", o),
-            $ = (0, i.useMemo)(
-              () => ({
-                value: j,
-                onValueChange: a,
-                register: W,
-                unregister: F,
-                radius: l,
-                size: g,
-              }),
-              [j, a, W, F, l, g],
-            );
-          return (0, t.jsx)(M.j, {
-            clickable: !1,
-            hoverable: !1,
-            focusable: !1,
-            variant: R,
-            radius: l,
-            size: g,
-            status: c,
-            className: S()(E.SegmentedControlBox, E[`Variant-${R}`]),
-            tabIndex: 0,
-            onKeyDown: A,
-            children: (0, t.jsx)(B.Provider, {
-              value: $,
-              children: (0, t.jsxs)(I.az, {
-                className: E.SegmentedControl,
-                style: { "--outer-radius": `var(--radius-${l})` },
-                children: [v, j !== null && (0, t.jsx)(Y, { radius: l })],
-              }),
-            }),
-          });
-        }
-        function N(C) {
-          const { value: o, children: l, disabled: g } = C,
-            c = (0, i.useContext)(B),
-            [v, j] = (0, i.useState)(),
-            { register: a, unregister: h } = c || {};
-          if (
-            ((0, i.useEffect)(
-              () => (!v || !a || !h ? () => {} : (a(v, o), () => h(v, o))),
-              [a, h, o, v],
-            ),
-            !c)
-          )
-            return null;
-          const { value: z, onValueChange: W, radius: F, size: A } = c,
-            R = o === z,
-            $ = (d) => {
-              d.stopPropagation(), d.preventDefault(), !(R || g) && W(o);
-            },
-            _ = l === void 0 ? o : l;
-          return (0, t.jsx)(x.s, {
-            justify: "center",
-            align: "center",
-            ref: j,
-            onClick: $,
-            "data-selected": R ? "true" : "false",
-            className: S()(E.Item, A && E[`Size-${A}`], g ? E.disabled : ""),
-            children: _,
-          });
-        }
-        function u(C) {
-          const { options: o, getOptionLabel: l = (c) => c, ...g } = C;
-          return (0, t.jsx)(u.Root, {
-            ...g,
-            children: o.map((c) =>
-              (0, t.jsx)(u.Item, { value: c, children: l(c) }, c),
-            ),
-          });
-        }
-        (u.Item = N), (u.Root = P);
-        function Y(C) {
-          const { radius: o } = C;
-          return (0, t.jsx)(I.az, {
-            className: E.IndicatorPosition,
-            children: (0, t.jsx)("div", { className: E.Indicator }),
-          });
-        }
-        function K(C, o) {
-          const l = C.compareDocumentPosition(o);
-          return l & Node.DOCUMENT_POSITION_FOLLOWING
-            ? -1
-            : l & Node.DOCUMENT_POSITION_PRECEDING
-              ? 1
-              : 0;
-        }
-      },
-      53011: (b) => {
-        b.exports = {
-          SegmentedControlBox: "_3tuJ3SHrhBu16Q7GZBtKyt",
-          Indicator: "_2OvUYpkiij1e7K-4vW8i9W",
-          SegmentedControl: "_3XFGk1-WmLNC9KlGi7IYtN",
-          IndicatorPosition: "_1Dgxrv7wtUW1EViSgrdMlA",
-          Item: "_2aNlsjcdOdHOtP8uACA3bM",
-          "Size-1": "_2Y43gK-c1jI0x35n45iZ0",
-          "Size-3": "_3ohjaEz8PkzSzIrIZKEdt9",
-          disabled: "_3gVhaCZ4k3QSnF9WhRZk5m",
-          "Variant-basic": "d2NNa31iY_ztalFCMja9O",
-          "Variant-inset": "_1FRhoIifZWCKbnl4jrnmG2",
-          "Variant-inset-glass": "_1gVVovvLBjwCxSH4wWUabt",
-          "Variant-dim": "_3qc1Re1q3AH_JYfN49uj8r",
-        };
-      },
-      93249: (b) => {
-        b.exports = {
+      93249: (M) => {
+        M.exports = {
           Pill: "_3EvT6MP5NCj5Ptsctv6H3A",
           TerrorismPill: "_2JGuTxE_EPq5pzUfrneLF-",
           CSAMPill: "_2GfEACqYfP_xZgMYtfZK9-",
           ViolencePill: "_2bDmZI3RxXA50zYGByOynN",
+          MalwarePill: "_3_g8g_pUDJsmJaS1K0aRVZ",
         };
+      },
+      52211: (M) => {
+        M.exports = { BanDialog: "_2S6JKTLe0bTYcB5bC8nT3-" };
       },
     },
   ]);

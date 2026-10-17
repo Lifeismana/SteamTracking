@@ -1,6 +1,14 @@
 
 var gValidURL = /^https?:\/\/(?:www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_\+.~#?&\/=]*)$/;
 
+// Returns '?legacy=1' when this page was opened with it, else ''. An admin who opened the legacy survey with
+// ?legacy=1 keeps it on the pages this script sends them to, so they are not sent to the SSR survey instead.
+// This file is cached, so it reads the page's address rather than having the server write the value in.
+function LegacySurveyQuery()
+{
+	return /[?&]legacy=1(&|$)/.test( window.location.search ) ? '?legacy=1' : '';
+}
+
 function RequireTextAnswer( $checkbox, $textElem )
 {
 	if ( !$checkbox.prop( 'checked' ) )
@@ -95,7 +103,7 @@ function SaveSurvey( appid, bIsSupport )
 	).done( function( response ) {
 		if ( response.success == 1 )
 		{
-			top.location.href =  'https://partner.steamgames.com/contentdescriptors/editsurvey/' + appid + '/' + response.surveyid;
+			top.location.href =  'https://partner.steamgames.com/contentdescriptors/editsurvey/' + appid + '/' + response.surveyid + '/' + LegacySurveyQuery();
 		}
 		else if ( response.success == 15 )
 		{
@@ -131,7 +139,7 @@ function DiscardChanges( appid )
 	).done( function( response ) {
 		if ( response.success == 1 )
 		{
-			top.location.href = 'https://partner.steamgames.com/contentdescriptors/listsurveys/' + appid + '/';
+			top.location.href = 'https://partner.steamgames.com/contentdescriptors/listsurveys/' + appid + '/' + LegacySurveyQuery();
 		}
 		else
 		{
@@ -158,7 +166,7 @@ function FinishSurvey( appid )
 
 			var dialog = ShowAlertDialog( 'Success!', 'Your changes have been successfully published to Steam. It may take a few minutes before your Store Page has been updated.' );
 			dialog.done( function() {
-				top.location.href = 'https://partner.steamgames.com/contentdescriptors/editsurvey/' + appid + '/';
+				top.location.href = 'https://partner.steamgames.com/contentdescriptors/editsurvey/' + appid + '/' + LegacySurveyQuery();
 			});
 		}
 		else

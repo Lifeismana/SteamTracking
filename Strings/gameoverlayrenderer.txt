@@ -24,6 +24,7 @@
 #version 150\nin vec4 Color;\nin vec2 TexCoord;\nout vec4 FragColor;\nuniform sampler2D Texture;\nvoid main(void)\n{\n\tFragColor = Color * texture(Texture, TexCoord);\n}\n
 #version 150\nuniform bool bFlipRendering;\nuniform int srcWidth;\nuniform int srcHeight;\nout vec2 textCoord;\nconst vec2 screenAlignedQuad[4] = vec2[]\n(\n\tvec2(-1.0,  1.0),\n\tvec2( 1.0,  1.0),\n\tvec2(-1.0, -1.0),\n\tvec2( 1.0, -1.0)\n);\nconst vec2 textureCoords[4] = vec2[]\n(\n\tvec2( 0.0,  0.0),\n\tvec2( 1.0,  0.0),\n\tvec2( 0.0,  1.0),\n\tvec2( 1.0,  1.0)\n);\nvoid main()\n{\n   gl_Position = vec4( screenAlignedQuad[ gl_VertexID ], 0.0, 1.0);\n   if ( bFlipRendering )\n       gl_Position.y = -gl_Position.y;\n   textCoord = vec2( textureCoords[ gl_VertexID ].x * srcWidth, textureCoords[ gl_VertexID ].y * srcHeight );\n}
 $ORIGIN
+%02x
 %a %b %d %H:%M:%S %Y UTC
 %llu
 %s: %d, %d, %d
@@ -198,11 +199,8 @@ Game OpenGL NV12
 Game OpenGL RGB
 Game Vulkan NV12
 Game Vulkan RGB
+Game Vulkan shared %s %s
 Game Vulkan shared KMT
-Game Vulkan shared NT I0FL
-Game Vulkan shared NT I444
-Game Vulkan shared NT I4FL
-Game Vulkan shared NT IYUV
 Game process locale is '%s'\n
 GameID = %llu, AppID = %u, OverlayGameID = %llu, PID: %u, tid %u Executable: %s\n
 GameOverlayRender_PIDStream
@@ -221,8 +219,12 @@ Gamepad UI: mouse moved, showing hw cursor\n
 Got EndFrame, but still have [%d] bytes remaining in render loop buffer\n
 Got hTexture of non NULL on shared texture draw but new shared tex update has no shared texture.\n
 HasXInput2
+I0FL
+I444
+I4FL
 IPC error: LockMgrMutex failed to acquire SysMgrMutex\n
 IPC: recovering abandoned mutex %p\n
+IYUV
 IgnoreChildProcesses
 Installed overlay error handler for process %d\n
 Invalid socket name parameters for shared fd\n
@@ -372,6 +374,7 @@ Video stream full.. couldn't get buffer!\n
 VulkanSteamOverlayDestroySwapChain
 VulkanSteamOverlayPresent
 VulkanSteamOverlayProcessCapturedFrame
+VulkanSteamOverlayProcessSharedPlanarFrame
 VulkanSteamOverlaySetWindowType
 Waiting for shared fd client failed\n
 Waiting on shared FD for texture %d: peer is too far ahead and sending FD for texture %d.\n

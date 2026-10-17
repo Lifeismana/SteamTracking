@@ -3131,6 +3131,7 @@
           _([_._], _.prototype, "GetLastTimeLanguageUpdated", 1);
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
           _ = (_, _, _) =>
@@ -3172,7 +3173,7 @@
           SetUpWebAPIInterface() {
             const _ = (0, _._)("faqstore", "application_config"),
               _ = _ == null ? void 0 : _.webapi_token;
-            this.m_steamInterface = new _._(_._.WEBAPI_BASE_URL, _);
+            this.m_steamInterface = (0, _._)(new _._(_._.WEBAPI_BASE_URL, _));
           }
           ReadInitialPayload() {
             const _ = (0, _._)("faqstore", "application_config");

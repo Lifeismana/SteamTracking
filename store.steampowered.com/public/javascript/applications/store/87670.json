@@ -163,5 +163,12 @@
     "PersonalCalendar_EmptyDay": "Meillä ei ole tänään suositeltavia uusia julkaisuja <1>Tutustu pelikalenterisi muuhun sisältöön!</1>",
     "NewBadge": "UUTTA",
     "Time_Today": "Tänään",
+    "DiscountsAndEvents_Title": "Alennukset ja tapahtumat",
+    "DiscountsAndEvents_SeeMore": "Näytä lisää",
+    "DiscountsAndEvents_Banner_WeekendDeal": "Viikonlopputarjous",
+    "DiscountsAndEvents_Banner_MidweekDeal": "Viikkotarjous",
+    "DiscountsAndEvents_Banner_DailyDeal": "Päivän tarjous",
+    "DiscountsAndEvents_Banner_LargestDiscount": "Suurin alennus",
+    "DiscountsAndEvents_LoadError": "Alennuksia ja tapahtumia ei voitu ladata juuri nyt. Yritä uudelleen myöhemmin.",
     "store_ui_dummy": "dont translate"
 }

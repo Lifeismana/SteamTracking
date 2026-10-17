@@ -5585,6 +5585,7 @@
               {
                 bConstMethod: !0,
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -5656,6 +5657,7 @@
               _,
               {
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -5676,6 +5678,7 @@
               bConstMethod: !0,
               ePrivilege: 2,
               eWebAPIKeyRequirement: 1,
+              rgBrowserAPISites: ["partner"],
             });
           }
           _.GetGamesFollowed = _;
@@ -5688,6 +5691,7 @@
                 bConstMethod: !0,
                 ePrivilege: 2,
                 eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -5700,6 +5704,7 @@
               {
                 bConstMethod: !0,
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -5752,6 +5757,7 @@
               _,
               {
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -5868,12 +5874,14 @@
           function _(_, _, _) {
             return _.SendMsg("Playtest.UpdateInvites#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
+              rgBrowserAPISites: ["partner"],
             });
           }
           _.UpdateInvites = _;
           function _(_, _, _) {
             return _.SendMsg("Playtest.GetInvites#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
+              rgBrowserAPISites: ["partner"],
             });
           }
           _.GetInvites = _;
@@ -5891,6 +5899,7 @@
           function _(_, _, _) {
             return _.SendMsg("Playtest.GetUserStatus#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
+              rgBrowserAPISites: ["partner"],
             });
           }
           _.GetUserStatus = _;

@@ -167,5 +167,8 @@
     "DiscountsAndEvents_SeeMore": "Ver mais",
     "DiscountsAndEvents_Banner_WeekendDeal": "Oferta do fim de semana",
     "DiscountsAndEvents_Banner_MidweekDeal": "Oferta do meio da semana",
+    "DiscountsAndEvents_Banner_DailyDeal": "Oferta de hoje",
+    "DiscountsAndEvents_Banner_LargestDiscount": "Maior desconto",
+    "DiscountsAndEvents_LoadError": "Não foi possível carregar os descontos e eventos no momento. Tente novamente mais tarde.",
     "store_ui_dummy": "dont translate"
 }

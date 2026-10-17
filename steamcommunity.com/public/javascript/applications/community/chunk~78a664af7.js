@@ -4,111 +4,111 @@
   (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
     [78010],
     {
-      23582: (G, te, i) => {
+      23582: (k, V, i) => {
         "use strict";
-        i.d(te, { l: () => Ct });
+        i.d(V, { l: () => Et });
         var t = i(7850),
-          Q = i(86336),
-          F = i(68031),
-          W = i(15252),
-          N = i(75083),
-          V = i(24660),
+          N = i(86336),
+          L = i(68031),
+          U = i(15252),
+          G = i(75083),
+          Q = i(24660),
           f = i(19298),
-          C = i(86067),
+          x = i(86067),
           l = i(86392),
           u = i(13725),
-          b = i(72524),
-          A = i(99412),
-          R = i(71742),
-          H = i(72604),
-          O = i(35038),
+          h = i(72524),
+          S = i(99412),
+          v = i(71742),
+          F = i(72604),
+          M = i(35038),
           P = i(64981),
-          g = i(21113),
-          z = i(20476),
-          U = i(4806),
-          d = i(80613),
-          m = i.n(d),
+          d = i(21113),
+          j = i(20476),
+          b = i(4806),
+          p = i(80613),
+          m = i.n(p),
           n = i(75245),
-          de = Object.defineProperty,
-          me = (r, e, s) =>
+          Y = Object.defineProperty,
+          se = (r, e, s) =>
             e in r
-              ? de(r, e, {
+              ? Y(r, e, {
                   enumerable: !0,
                   configurable: !0,
                   writable: !0,
                   value: s,
                 })
               : (r[e] = s),
-          E = (r, e, s) => me(r, typeof e != "symbol" ? e + "" : e, s);
+          z = (r, e, s) => se(r, typeof e != "symbol" ? e + "" : e, s);
         function pe(r) {
           return "unknown EHelpRequestType ( " + r + " )";
         }
-        function Le(r) {
+        function ge(r) {
           return "unknown EHelpRequestState ( " + r + " )";
         }
         function Ie(r) {
           return "unknown EHelpRequestReviewState ( " + r + " )";
         }
-        function J(r) {
+        function Pe(r) {
           return "unknown EHelpRequestStatsRollupInterval ( " + r + " )";
         }
-        function ge(r) {
+        function Z(r) {
           return "unknown EHelpRequestStatsResponderType ( " + r + " )";
         }
-        function ke(r) {
+        function fe(r) {
           return "unknown EHelpIssue ( " + r + " )";
         }
-        function ie(r) {
+        function _e(r) {
           return "unknown EHelpRequestEscalationLevel ( " + r + " )";
         }
-        function Fe(r) {
+        function oe(r) {
           return "unknown EHelpRequestMsgType ( " + r + " )";
         }
-        function $(r) {
+        function We(r) {
           return "unknown EHelpRequestAction ( " + r + " )";
         }
-        function Pe(r) {
+        function te(r) {
           return "unknown EHelpRequestSortOrder ( " + r + " )";
         }
-        function ae(r) {
+        function Fe(r) {
           return "unknown EHelpRequestPOPType ( " + r + " )";
         }
-        function qe(r) {
+        function le(r) {
           return "unknown EAnnouncementPlacement ( " + r + " )";
         }
-        function fe(r) {
+        function ke(r) {
           return "unknown ETickerCategoryLanguageRule ( " + r + " )";
         }
-        function v(r) {
+        function he(r) {
           return "unknown EPreapprovalResolution ( " + r + " )";
         }
-        function at(r) {
+        function B(r) {
           return "unknown EHelpRequestFeedbackCategory ( " + r + " )";
         }
-        function Pt(r) {
+        function ot(r) {
           return "unknown EHelpRequestFeedbackTargetType ( " + r + " )";
         }
-        function qt(r) {
+        function Ft(r) {
           return "unknown EFeedbackState ( " + r + " )";
         }
-        function Wt(r) {
+        function kt(r) {
           return "unknown ESupportActionSource ( " + r + " )";
         }
         function Ht(r) {
           return "unknown ERefundSupportAction ( " + r + " )";
         }
-        const he = class y extends d.Message {
+        const ve = class T extends p.Message {
           static ImplementsStaticInterface() {}
           constructor(e = null) {
             super(),
-              y.prototype.quicktext_id || n.Sg(y.M()),
-              d.Message.initialize(this, e, 0, -1, [6, 10, 11], null);
+              T.prototype.quicktext_id || n.Sg(T.M()),
+              p.Message.initialize(this, e, 0, -1, [6, 10, 11], null);
           }
           static M() {
             return (
-              y.sm_m ||
-                (y.sm_m = {
-                  proto: y,
+              T.sm_m ||
+                (T.sm_m = {
+                  proto: T,
                   fields: {
                     quicktext_id: {
                       n: 1,
@@ -131,7 +131,7 @@
                       pbr: n.qM.readPackedUint32,
                       bw: n.gp.writeRepeatedUint32,
                     },
-                    content: { n: 7, c: We },
+                    content: { n: 7, c: He },
                     button_text: {
                       n: 8,
                       br: n.qM.readString,
@@ -168,410 +168,6 @@
                       br: n.qM.readBool,
                       bw: n.gp.writeBool,
                     },
-                  },
-                }),
-              y.sm_m
-            );
-          }
-          static MBF() {
-            return y.sm_mbf || (y.sm_mbf = n.w0(y.M())), y.sm_mbf;
-          }
-          toObject(e = !1) {
-            return y.toObject(e, this);
-          }
-          static toObject(e, s) {
-            return n.BT(y.M(), e, s);
-          }
-          static fromObject(e) {
-            return n.Uq(y.M(), e);
-          }
-          static deserializeBinary(e) {
-            let s = new (m().BinaryReader)(e),
-              a = new y();
-            return y.deserializeBinaryFromReader(a, s);
-          }
-          static deserializeBinaryFromReader(e, s) {
-            return n.zj(y.MBF(), e, s);
-          }
-          serializeBinary() {
-            var e = new (m().BinaryWriter)();
-            return y.serializeBinaryToWriter(this, e), e.getResultBuffer();
-          }
-          static serializeBinaryToWriter(e, s) {
-            n.i0(y.M(), e, s);
-          }
-          serializeBase64String() {
-            var e = new (m().BinaryWriter)();
-            return (
-              y.serializeBinaryToWriter(this, e), e.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "CSupportData_QuickText";
-          }
-        };
-        E(he, "sm_m"), E(he, "sm_mbf");
-        let ot = he;
-        const ve = class S extends d.Message {
-          static ImplementsStaticInterface() {}
-          constructor(e = null) {
-            super(),
-              S.prototype.content || n.Sg(S.M()),
-              d.Message.initialize(this, e, 0, -1, void 0, null);
-          }
-          static M() {
-            return (
-              S.sm_m ||
-                (S.sm_m = {
-                  proto: S,
-                  fields: {
-                    content: {
-                      n: 1,
-                      br: n.qM.readString,
-                      bw: n.gp.writeString,
-                    },
-                    major_revision: {
-                      n: 2,
-                      br: n.qM.readUint32,
-                      bw: n.gp.writeUint32,
-                    },
-                    minor_revision: {
-                      n: 3,
-                      br: n.qM.readUint32,
-                      bw: n.gp.writeUint32,
-                    },
-                    author: { n: 4, br: n.qM.readUint32, bw: n.gp.writeUint32 },
-                    last_update: {
-                      n: 5,
-                      br: n.qM.readUint32,
-                      bw: n.gp.writeUint32,
-                    },
-                    language: { n: 6, br: n.qM.readInt32, bw: n.gp.writeInt32 },
-                  },
-                }),
-              S.sm_m
-            );
-          }
-          static MBF() {
-            return S.sm_mbf || (S.sm_mbf = n.w0(S.M())), S.sm_mbf;
-          }
-          toObject(e = !1) {
-            return S.toObject(e, this);
-          }
-          static toObject(e, s) {
-            return n.BT(S.M(), e, s);
-          }
-          static fromObject(e) {
-            return n.Uq(S.M(), e);
-          }
-          static deserializeBinary(e) {
-            let s = new (m().BinaryReader)(e),
-              a = new S();
-            return S.deserializeBinaryFromReader(a, s);
-          }
-          static deserializeBinaryFromReader(e, s) {
-            return n.zj(S.MBF(), e, s);
-          }
-          serializeBinary() {
-            var e = new (m().BinaryWriter)();
-            return S.serializeBinaryToWriter(this, e), e.getResultBuffer();
-          }
-          static serializeBinaryToWriter(e, s) {
-            n.i0(S.M(), e, s);
-          }
-          serializeBase64String() {
-            var e = new (m().BinaryWriter)();
-            return (
-              S.serializeBinaryToWriter(this, e), e.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "CSupportData_QuickTextContent";
-          }
-        };
-        E(ve, "sm_m"), E(ve, "sm_mbf");
-        let We = ve;
-        const be = class j extends d.Message {
-          static ImplementsStaticInterface() {}
-          constructor(e = null) {
-            super(),
-              j.prototype.quicktext_id || n.Sg(j.M()),
-              d.Message.initialize(this, e, 0, -1, void 0, null);
-          }
-          static M() {
-            return (
-              j.sm_m ||
-                (j.sm_m = {
-                  proto: j,
-                  fields: {
-                    quicktext_id: {
-                      n: 1,
-                      br: n.qM.readUint32,
-                      bw: n.gp.writeUint32,
-                    },
-                    language: {
-                      n: 2,
-                      br: n.qM.readString,
-                      bw: n.gp.writeString,
-                    },
-                    from_sql: { n: 3, br: n.qM.readBool, bw: n.gp.writeBool },
-                  },
-                }),
-              j.sm_m
-            );
-          }
-          static MBF() {
-            return j.sm_mbf || (j.sm_mbf = n.w0(j.M())), j.sm_mbf;
-          }
-          toObject(e = !1) {
-            return j.toObject(e, this);
-          }
-          static toObject(e, s) {
-            return n.BT(j.M(), e, s);
-          }
-          static fromObject(e) {
-            return n.Uq(j.M(), e);
-          }
-          static deserializeBinary(e) {
-            let s = new (m().BinaryReader)(e),
-              a = new j();
-            return j.deserializeBinaryFromReader(a, s);
-          }
-          static deserializeBinaryFromReader(e, s) {
-            return n.zj(j.MBF(), e, s);
-          }
-          serializeBinary() {
-            var e = new (m().BinaryWriter)();
-            return j.serializeBinaryToWriter(this, e), e.getResultBuffer();
-          }
-          static serializeBinaryToWriter(e, s) {
-            n.i0(j.M(), e, s);
-          }
-          serializeBase64String() {
-            var e = new (m().BinaryWriter)();
-            return (
-              j.serializeBinaryToWriter(this, e), e.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "CSupportAgents_GetQuickText_Request";
-          }
-        };
-        E(be, "sm_m"), E(be, "sm_mbf");
-        let He = be;
-        const ye = class x extends d.Message {
-          static ImplementsStaticInterface() {}
-          constructor(e = null) {
-            super(),
-              x.prototype.quicktext || n.Sg(x.M()),
-              d.Message.initialize(this, e, 0, -1, void 0, null);
-          }
-          static M() {
-            return (
-              x.sm_m ||
-                (x.sm_m = {
-                  proto: x,
-                  fields: {
-                    quicktext: { n: 1, c: ot },
-                    english_reference: { n: 2, c: We },
-                  },
-                }),
-              x.sm_m
-            );
-          }
-          static MBF() {
-            return x.sm_mbf || (x.sm_mbf = n.w0(x.M())), x.sm_mbf;
-          }
-          toObject(e = !1) {
-            return x.toObject(e, this);
-          }
-          static toObject(e, s) {
-            return n.BT(x.M(), e, s);
-          }
-          static fromObject(e) {
-            return n.Uq(x.M(), e);
-          }
-          static deserializeBinary(e) {
-            let s = new (m().BinaryReader)(e),
-              a = new x();
-            return x.deserializeBinaryFromReader(a, s);
-          }
-          static deserializeBinaryFromReader(e, s) {
-            return n.zj(x.MBF(), e, s);
-          }
-          serializeBinary() {
-            var e = new (m().BinaryWriter)();
-            return x.serializeBinaryToWriter(this, e), e.getResultBuffer();
-          }
-          static serializeBinaryToWriter(e, s) {
-            n.i0(x.M(), e, s);
-          }
-          serializeBase64String() {
-            var e = new (m().BinaryWriter)();
-            return (
-              x.serializeBinaryToWriter(this, e), e.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "CSupportAgents_GetQuickText_Response";
-          }
-        };
-        E(ye, "sm_m"), E(ye, "sm_mbf");
-        let lt = ye;
-        const Se = class B extends d.Message {
-          static ImplementsStaticInterface() {}
-          constructor(e = null) {
-            super(),
-              B.prototype.appid || n.Sg(B.M()),
-              d.Message.initialize(this, e, 0, -1, void 0, null);
-          }
-          static M() {
-            return (
-              B.sm_m ||
-                (B.sm_m = {
-                  proto: B,
-                  fields: {
-                    appid: { n: 1, br: n.qM.readUint32, bw: n.gp.writeUint32 },
-                    log_type: {
-                      n: 2,
-                      br: n.qM.readString,
-                      bw: n.gp.writeString,
-                    },
-                    version_string: {
-                      n: 3,
-                      br: n.qM.readString,
-                      bw: n.gp.writeString,
-                    },
-                    log_contents: {
-                      n: 4,
-                      br: n.qM.readString,
-                      bw: n.gp.writeString,
-                    },
-                    request_id: {
-                      n: 5,
-                      br: n.qM.readUint64String,
-                      bw: n.gp.writeUint64String,
-                    },
-                  },
-                }),
-              B.sm_m
-            );
-          }
-          static MBF() {
-            return B.sm_mbf || (B.sm_mbf = n.w0(B.M())), B.sm_mbf;
-          }
-          toObject(e = !1) {
-            return B.toObject(e, this);
-          }
-          static toObject(e, s) {
-            return n.BT(B.M(), e, s);
-          }
-          static fromObject(e) {
-            return n.Uq(B.M(), e);
-          }
-          static deserializeBinary(e) {
-            let s = new (m().BinaryReader)(e),
-              a = new B();
-            return B.deserializeBinaryFromReader(a, s);
-          }
-          static deserializeBinaryFromReader(e, s) {
-            return n.zj(B.MBF(), e, s);
-          }
-          serializeBinary() {
-            var e = new (m().BinaryWriter)();
-            return B.serializeBinaryToWriter(this, e), e.getResultBuffer();
-          }
-          static serializeBinaryToWriter(e, s) {
-            n.i0(B.M(), e, s);
-          }
-          serializeBase64String() {
-            var e = new (m().BinaryWriter)();
-            return (
-              B.serializeBinaryToWriter(this, e), e.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "CHelpRequestLogs_UploadUserApplicationLog_Request";
-          }
-        };
-        E(Se, "sm_m"), E(Se, "sm_mbf");
-        let ct = Se;
-        const je = class M extends d.Message {
-          static ImplementsStaticInterface() {}
-          constructor(e = null) {
-            super(),
-              M.prototype.id || n.Sg(M.M()),
-              d.Message.initialize(this, e, 0, -1, void 0, null);
-          }
-          static M() {
-            return (
-              M.sm_m ||
-                (M.sm_m = {
-                  proto: M,
-                  fields: {
-                    id: {
-                      n: 1,
-                      br: n.qM.readUint64String,
-                      bw: n.gp.writeUint64String,
-                    },
-                  },
-                }),
-              M.sm_m
-            );
-          }
-          static MBF() {
-            return M.sm_mbf || (M.sm_mbf = n.w0(M.M())), M.sm_mbf;
-          }
-          toObject(e = !1) {
-            return M.toObject(e, this);
-          }
-          static toObject(e, s) {
-            return n.BT(M.M(), e, s);
-          }
-          static fromObject(e) {
-            return n.Uq(M.M(), e);
-          }
-          static deserializeBinary(e) {
-            let s = new (m().BinaryReader)(e),
-              a = new M();
-            return M.deserializeBinaryFromReader(a, s);
-          }
-          static deserializeBinaryFromReader(e, s) {
-            return n.zj(M.MBF(), e, s);
-          }
-          serializeBinary() {
-            var e = new (m().BinaryWriter)();
-            return M.serializeBinaryToWriter(this, e), e.getResultBuffer();
-          }
-          static serializeBinaryToWriter(e, s) {
-            n.i0(M.M(), e, s);
-          }
-          serializeBase64String() {
-            var e = new (m().BinaryWriter)();
-            return (
-              M.serializeBinaryToWriter(this, e), e.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "CHelpRequestLogs_UploadUserApplicationLog_Response";
-          }
-        };
-        E(je, "sm_m"), E(je, "sm_mbf");
-        let ut = je;
-        const xe = class T extends d.Message {
-          static ImplementsStaticInterface() {}
-          constructor(e = null) {
-            super(),
-              T.prototype.appid || n.Sg(T.M()),
-              d.Message.initialize(this, e, 0, -1, void 0, null);
-          }
-          static M() {
-            return (
-              T.sm_m ||
-                (T.sm_m = {
-                  proto: T,
-                  fields: {
-                    appid: { n: 1, br: n.qM.readUint32, bw: n.gp.writeUint32 },
                   },
                 }),
               T.sm_m
@@ -611,17 +207,223 @@
             );
           }
           getClassName() {
-            return "CHelpRequestLogs_GetApplicationLogDemand_Request";
+            return "CSupportData_QuickText";
           }
         };
-        E(xe, "sm_m"), E(xe, "sm_mbf");
-        let dt = xe;
-        const Be = class w extends d.Message {
+        z(ve, "sm_m"), z(ve, "sm_mbf");
+        let lt = ve;
+        const be = class C extends p.Message {
           static ImplementsStaticInterface() {}
           constructor(e = null) {
             super(),
-              w.prototype.request_id || n.Sg(w.M()),
-              d.Message.initialize(this, e, 0, -1, void 0, null);
+              C.prototype.content || n.Sg(C.M()),
+              p.Message.initialize(this, e, 0, -1, void 0, null);
+          }
+          static M() {
+            return (
+              C.sm_m ||
+                (C.sm_m = {
+                  proto: C,
+                  fields: {
+                    content: {
+                      n: 1,
+                      br: n.qM.readString,
+                      bw: n.gp.writeString,
+                    },
+                    major_revision: {
+                      n: 2,
+                      br: n.qM.readUint32,
+                      bw: n.gp.writeUint32,
+                    },
+                    minor_revision: {
+                      n: 3,
+                      br: n.qM.readUint32,
+                      bw: n.gp.writeUint32,
+                    },
+                    author: { n: 4, br: n.qM.readUint32, bw: n.gp.writeUint32 },
+                    last_update: {
+                      n: 5,
+                      br: n.qM.readUint32,
+                      bw: n.gp.writeUint32,
+                    },
+                    language: { n: 6, br: n.qM.readInt32, bw: n.gp.writeInt32 },
+                  },
+                }),
+              C.sm_m
+            );
+          }
+          static MBF() {
+            return C.sm_mbf || (C.sm_mbf = n.w0(C.M())), C.sm_mbf;
+          }
+          toObject(e = !1) {
+            return C.toObject(e, this);
+          }
+          static toObject(e, s) {
+            return n.BT(C.M(), e, s);
+          }
+          static fromObject(e) {
+            return n.Uq(C.M(), e);
+          }
+          static deserializeBinary(e) {
+            let s = new (m().BinaryReader)(e),
+              a = new C();
+            return C.deserializeBinaryFromReader(a, s);
+          }
+          static deserializeBinaryFromReader(e, s) {
+            return n.zj(C.MBF(), e, s);
+          }
+          serializeBinary() {
+            var e = new (m().BinaryWriter)();
+            return C.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          }
+          static serializeBinaryToWriter(e, s) {
+            n.i0(C.M(), e, s);
+          }
+          serializeBase64String() {
+            var e = new (m().BinaryWriter)();
+            return (
+              C.serializeBinaryToWriter(this, e), e.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CSupportData_QuickTextContent";
+          }
+        };
+        z(be, "sm_m"), z(be, "sm_mbf");
+        let He = be;
+        const ye = class R extends p.Message {
+          static ImplementsStaticInterface() {}
+          constructor(e = null) {
+            super(),
+              R.prototype.quicktext_id || n.Sg(R.M()),
+              p.Message.initialize(this, e, 0, -1, void 0, null);
+          }
+          static M() {
+            return (
+              R.sm_m ||
+                (R.sm_m = {
+                  proto: R,
+                  fields: {
+                    quicktext_id: {
+                      n: 1,
+                      br: n.qM.readUint32,
+                      bw: n.gp.writeUint32,
+                    },
+                    language: {
+                      n: 2,
+                      br: n.qM.readString,
+                      bw: n.gp.writeString,
+                    },
+                    from_sql: { n: 3, br: n.qM.readBool, bw: n.gp.writeBool },
+                  },
+                }),
+              R.sm_m
+            );
+          }
+          static MBF() {
+            return R.sm_mbf || (R.sm_mbf = n.w0(R.M())), R.sm_mbf;
+          }
+          toObject(e = !1) {
+            return R.toObject(e, this);
+          }
+          static toObject(e, s) {
+            return n.BT(R.M(), e, s);
+          }
+          static fromObject(e) {
+            return n.Uq(R.M(), e);
+          }
+          static deserializeBinary(e) {
+            let s = new (m().BinaryReader)(e),
+              a = new R();
+            return R.deserializeBinaryFromReader(a, s);
+          }
+          static deserializeBinaryFromReader(e, s) {
+            return n.zj(R.MBF(), e, s);
+          }
+          serializeBinary() {
+            var e = new (m().BinaryWriter)();
+            return R.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          }
+          static serializeBinaryToWriter(e, s) {
+            n.i0(R.M(), e, s);
+          }
+          serializeBase64String() {
+            var e = new (m().BinaryWriter)();
+            return (
+              R.serializeBinaryToWriter(this, e), e.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CSupportAgents_GetQuickText_Request";
+          }
+        };
+        z(ye, "sm_m"), z(ye, "sm_mbf");
+        let qe = ye;
+        const xe = class E extends p.Message {
+          static ImplementsStaticInterface() {}
+          constructor(e = null) {
+            super(),
+              E.prototype.quicktext || n.Sg(E.M()),
+              p.Message.initialize(this, e, 0, -1, void 0, null);
+          }
+          static M() {
+            return (
+              E.sm_m ||
+                (E.sm_m = {
+                  proto: E,
+                  fields: {
+                    quicktext: { n: 1, c: lt },
+                    english_reference: { n: 2, c: He },
+                  },
+                }),
+              E.sm_m
+            );
+          }
+          static MBF() {
+            return E.sm_mbf || (E.sm_mbf = n.w0(E.M())), E.sm_mbf;
+          }
+          toObject(e = !1) {
+            return E.toObject(e, this);
+          }
+          static toObject(e, s) {
+            return n.BT(E.M(), e, s);
+          }
+          static fromObject(e) {
+            return n.Uq(E.M(), e);
+          }
+          static deserializeBinary(e) {
+            let s = new (m().BinaryReader)(e),
+              a = new E();
+            return E.deserializeBinaryFromReader(a, s);
+          }
+          static deserializeBinaryFromReader(e, s) {
+            return n.zj(E.MBF(), e, s);
+          }
+          serializeBinary() {
+            var e = new (m().BinaryWriter)();
+            return E.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          }
+          static serializeBinaryToWriter(e, s) {
+            n.i0(E.M(), e, s);
+          }
+          serializeBase64String() {
+            var e = new (m().BinaryWriter)();
+            return (
+              E.serializeBinaryToWriter(this, e), e.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CSupportAgents_GetQuickText_Response";
+          }
+        };
+        z(xe, "sm_m"), z(xe, "sm_mbf");
+        let ct = xe;
+        const Se = class w extends p.Message {
+          static ImplementsStaticInterface() {}
+          constructor(e = null) {
+            super(),
+              w.prototype.appid || n.Sg(w.M()),
+              p.Message.initialize(this, e, 0, -1, void 0, null);
           }
           static M() {
             return (
@@ -629,8 +431,24 @@
                 (w.sm_m = {
                   proto: w,
                   fields: {
+                    appid: { n: 1, br: n.qM.readUint32, bw: n.gp.writeUint32 },
+                    log_type: {
+                      n: 2,
+                      br: n.qM.readString,
+                      bw: n.gp.writeString,
+                    },
+                    version_string: {
+                      n: 3,
+                      br: n.qM.readString,
+                      bw: n.gp.writeString,
+                    },
+                    log_contents: {
+                      n: 4,
+                      br: n.qM.readString,
+                      bw: n.gp.writeString,
+                    },
                     request_id: {
-                      n: 1,
+                      n: 5,
                       br: n.qM.readUint64String,
                       bw: n.gp.writeUint64String,
                     },
@@ -673,165 +491,347 @@
             );
           }
           getClassName() {
+            return "CHelpRequestLogs_UploadUserApplicationLog_Request";
+          }
+        };
+        z(Se, "sm_m"), z(Se, "sm_mbf");
+        let ut = Se;
+        const je = class A extends p.Message {
+          static ImplementsStaticInterface() {}
+          constructor(e = null) {
+            super(),
+              A.prototype.id || n.Sg(A.M()),
+              p.Message.initialize(this, e, 0, -1, void 0, null);
+          }
+          static M() {
+            return (
+              A.sm_m ||
+                (A.sm_m = {
+                  proto: A,
+                  fields: {
+                    id: {
+                      n: 1,
+                      br: n.qM.readUint64String,
+                      bw: n.gp.writeUint64String,
+                    },
+                  },
+                }),
+              A.sm_m
+            );
+          }
+          static MBF() {
+            return A.sm_mbf || (A.sm_mbf = n.w0(A.M())), A.sm_mbf;
+          }
+          toObject(e = !1) {
+            return A.toObject(e, this);
+          }
+          static toObject(e, s) {
+            return n.BT(A.M(), e, s);
+          }
+          static fromObject(e) {
+            return n.Uq(A.M(), e);
+          }
+          static deserializeBinary(e) {
+            let s = new (m().BinaryReader)(e),
+              a = new A();
+            return A.deserializeBinaryFromReader(a, s);
+          }
+          static deserializeBinaryFromReader(e, s) {
+            return n.zj(A.MBF(), e, s);
+          }
+          serializeBinary() {
+            var e = new (m().BinaryWriter)();
+            return A.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          }
+          static serializeBinaryToWriter(e, s) {
+            n.i0(A.M(), e, s);
+          }
+          serializeBase64String() {
+            var e = new (m().BinaryWriter)();
+            return (
+              A.serializeBinaryToWriter(this, e), e.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CHelpRequestLogs_UploadUserApplicationLog_Response";
+          }
+        };
+        z(je, "sm_m"), z(je, "sm_mbf");
+        let dt = je;
+        const Be = class D extends p.Message {
+          static ImplementsStaticInterface() {}
+          constructor(e = null) {
+            super(),
+              D.prototype.appid || n.Sg(D.M()),
+              p.Message.initialize(this, e, 0, -1, void 0, null);
+          }
+          static M() {
+            return (
+              D.sm_m ||
+                (D.sm_m = {
+                  proto: D,
+                  fields: {
+                    appid: { n: 1, br: n.qM.readUint32, bw: n.gp.writeUint32 },
+                  },
+                }),
+              D.sm_m
+            );
+          }
+          static MBF() {
+            return D.sm_mbf || (D.sm_mbf = n.w0(D.M())), D.sm_mbf;
+          }
+          toObject(e = !1) {
+            return D.toObject(e, this);
+          }
+          static toObject(e, s) {
+            return n.BT(D.M(), e, s);
+          }
+          static fromObject(e) {
+            return n.Uq(D.M(), e);
+          }
+          static deserializeBinary(e) {
+            let s = new (m().BinaryReader)(e),
+              a = new D();
+            return D.deserializeBinaryFromReader(a, s);
+          }
+          static deserializeBinaryFromReader(e, s) {
+            return n.zj(D.MBF(), e, s);
+          }
+          serializeBinary() {
+            var e = new (m().BinaryWriter)();
+            return D.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          }
+          static serializeBinaryToWriter(e, s) {
+            n.i0(D.M(), e, s);
+          }
+          serializeBase64String() {
+            var e = new (m().BinaryWriter)();
+            return (
+              D.serializeBinaryToWriter(this, e), e.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CHelpRequestLogs_GetApplicationLogDemand_Request";
+          }
+        };
+        z(Be, "sm_m"), z(Be, "sm_mbf");
+        let mt = Be;
+        const Me = class O extends p.Message {
+          static ImplementsStaticInterface() {}
+          constructor(e = null) {
+            super(),
+              O.prototype.request_id || n.Sg(O.M()),
+              p.Message.initialize(this, e, 0, -1, void 0, null);
+          }
+          static M() {
+            return (
+              O.sm_m ||
+                (O.sm_m = {
+                  proto: O,
+                  fields: {
+                    request_id: {
+                      n: 1,
+                      br: n.qM.readUint64String,
+                      bw: n.gp.writeUint64String,
+                    },
+                  },
+                }),
+              O.sm_m
+            );
+          }
+          static MBF() {
+            return O.sm_mbf || (O.sm_mbf = n.w0(O.M())), O.sm_mbf;
+          }
+          toObject(e = !1) {
+            return O.toObject(e, this);
+          }
+          static toObject(e, s) {
+            return n.BT(O.M(), e, s);
+          }
+          static fromObject(e) {
+            return n.Uq(O.M(), e);
+          }
+          static deserializeBinary(e) {
+            let s = new (m().BinaryReader)(e),
+              a = new O();
+            return O.deserializeBinaryFromReader(a, s);
+          }
+          static deserializeBinaryFromReader(e, s) {
+            return n.zj(O.MBF(), e, s);
+          }
+          serializeBinary() {
+            var e = new (m().BinaryWriter)();
+            return O.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          }
+          static serializeBinaryToWriter(e, s) {
+            n.i0(O.M(), e, s);
+          }
+          serializeBase64String() {
+            var e = new (m().BinaryWriter)();
+            return (
+              O.serializeBinaryToWriter(this, e), e.getResultBase64String()
+            );
+          }
+          getClassName() {
             return "CHelpRequestLogs_GetApplicationLogDemand_Response";
           }
         };
-        E(Be, "sm_m"), E(Be, "sm_mbf");
-        let mt = Be;
-        var Me;
+        z(Me, "sm_m"), z(Me, "sm_mbf");
+        let pt = Me;
+        var Te;
         ((r) => {
-          function e(s, a, p) {
+          function e(s, a, g) {
             return s.SendMsg(
               "SupportAgents.GetQuickText#1",
-              (0, O.I8)(He, a, p),
-              lt,
+              (0, M.I8)(qe, a, g),
+              ct,
               { bConstMethod: !0, ePrivilege: 5 },
             );
           }
           r.GetQuickText = e;
-        })(Me || (Me = {}));
+        })(Te || (Te = {}));
         var Ne;
         ((r) => {
-          function e(a, p, h) {
+          function e(a, g, y) {
             return a.SendMsg(
               "HelpRequestLogs.UploadUserApplicationLog#1",
-              (0, O.I8)(ct, p, h),
-              ut,
+              (0, M.I8)(ut, g, y),
+              dt,
               { ePrivilege: 1 },
             );
           }
           r.UploadUserApplicationLog = e;
-          function s(a, p, h) {
+          function s(a, g, y) {
             return a.SendMsg(
               "HelpRequestLogs.GetApplicationLogDemand#1",
-              (0, O.I8)(dt, p, h),
-              mt,
+              (0, M.I8)(mt, g, y),
+              pt,
               { ePrivilege: 1 },
             );
           }
           r.GetApplicationLogDemand = s;
         })(Ne || (Ne = {}));
-        var pt = i(68312),
+        var gt = i(68312),
           Ge = i(66243),
           Qe = i(88942),
-          D = i(90626),
-          Te = i(56718),
-          gt = i(85599),
-          oe = i(36707),
-          we = i(3166),
-          ft = i(98580),
-          L = i.n(ft),
-          ht = i(14432);
-        const vt = {
-          [P.lN]: [g.lV, g.WA, g.XG, g.u1, g.Nd],
-          [P.NC]: [g.rf, g.M6, g.WA, g.o8, g.Nd],
+          I = i(90626),
+          Ce = i(56718),
+          ft = i(85599),
+          ce = i(36707),
+          Re = i(3166),
+          ht = i(98580),
+          _ = i.n(ht),
+          vt = i(14432);
+        const bt = {
+          [P.lN]: [d.lV, d.WA, d.XG, d.u1, d.Nd],
+          [P.NC]: [d.rf, d.M6, d.WA, d.o8, d.Nd],
         };
-        function bt(r) {
+        function yt(r) {
           var e;
-          const [s, a] = (0, D.useState)(null),
-            [p, h] = (0, D.useState)("main"),
-            [c, Y] = (0, D.useState)(!1),
-            [_, Ae] = (0, D.useState)(!1),
-            [K, le] = (0, D.useState)(null),
-            [I, Z] = (0, D.useState)(null),
-            [k, ne] = (0, D.useState)(null),
-            [se, ce] = (0, D.useState)(!1),
-            [X, ue] = (0, D.useState)(!1),
-            [ee, re] = (0, D.useState)(z.HH),
-            [ze, Ke] = (0, D.useState)(""),
-            Je =
+          const [s, a] = (0, I.useState)(null),
+            [g, y] = (0, I.useState)("main"),
+            [c, X] = (0, I.useState)(!1),
+            [K, De] = (0, I.useState)(!1),
+            [J, ue] = (0, I.useState)(null),
+            [W, $] = (0, I.useState)(null),
+            [H, re] = (0, I.useState)(null),
+            [ie, de] = (0, I.useState)(!1),
+            [ee, me] = (0, I.useState)(!1),
+            [ne, ae] = (0, I.useState)(j.HH),
+            [Oe, Je] = (0, I.useState)(""),
+            Ye =
               r.rtContentCreatedAt !== void 0
                 ? (Date.now() / 1e3 - r.rtContentCreatedAt) / (30 * 86400)
                 : !1,
-            Ye =
+            Ze =
               (e = r.subject.subject_type
-                ? vt[r.subject.subject_type]
+                ? bt[r.subject.subject_type]
                 : void 0) != null
                 ? e
                 : [],
-            Ot = c || _ || K || I || k || se || X,
+            Lt = c || K || J || W || H || ie || ee,
             Ue = St(r.authorSteamID);
-          let De = A.Bhc;
+          let ze = S.Bhc;
           if (Ue.isSuccess) {
             const o = Ue.data;
             o.pref_primary_language !== void 0 && o.pref_primary_language !== -1
-              ? (De = o.pref_primary_language)
+              ? (ze = o.pref_primary_language)
               : o.last_logon_langauge !== void 0 &&
                 o.last_logon_langauge !== -1 &&
-                (De = o.last_logon_langauge);
+                (ze = o.last_logon_langauge);
           }
-          const Lt = (0, l.AH)(s),
-            Oe = yt(Lt, De);
-          (0, D.useEffect)(() => {
-            var o, et, tt, nt, st, rt, it;
-            Ke(
-              (it =
-                (rt =
-                  (tt =
-                    (et = (o = Oe.data) == null ? void 0 : o.quicktext) == null
+          const It = (0, l.AH)(s),
+            Le = xt(It, ze);
+          (0, I.useEffect)(() => {
+            var o, tt, nt, st, rt, it, at;
+            Je(
+              (at =
+                (it =
+                  (nt =
+                    (tt = (o = Le.data) == null ? void 0 : o.quicktext) == null
                       ? void 0
-                      : et.content) == null
+                      : tt.content) == null
                     ? void 0
-                    : tt.content) != null
-                  ? rt
-                  : (st =
-                        (nt = Oe.data) == null
+                    : nt.content) != null
+                  ? it
+                  : (rt =
+                        (st = Le.data) == null
                           ? void 0
-                          : nt.english_reference) == null
+                          : st.english_reference) == null
                     ? void 0
-                    : st.content) != null
-                ? it
+                    : rt.content) != null
+                ? at
                 : "",
             );
-          }, [Oe.data, Ue.data]);
-          const Ze = !1,
-            Xe = !1,
+          }, [Le.data, Ue.data]);
+          const Xe = !1,
             $e = !1,
-            It = async () => {
-              (0, R.wT)(s !== null, "eReason must be non-null to sanction");
+            et = !1,
+            Pt = async () => {
+              (0, v.wT)(s !== null, "eReason must be non-null to sanction");
               const o = [];
-              c && o.push({ sanction: U.EF }),
-                _ && o.push({ sanction: U.Cv }),
-                K && o.push({ sanction: U.ME, days: K }),
-                I && o.push({ sanction: U.sR, days: I }),
-                k && o.push({ sanction: U.bX, days: k }),
-                se && o.push({ sanction: U.Fh, days: -1 }),
-                X && o.push({ sanction: U.X5 }),
-                ee === z.lp
-                  ? o.push({ sanction: U.nw, escalate_to: z.lp })
-                  : ee === z.PV &&
-                    o.push({ sanction: U.nw, escalate_to: z.PV }),
+              c && o.push({ sanction: b.EF }),
+                K && o.push({ sanction: b.Cv }),
+                J && o.push({ sanction: b.ME, days: J }),
+                W && o.push({ sanction: b.sR, days: W }),
+                H && o.push({ sanction: b.bX, days: H }),
+                ie && o.push({ sanction: b.Fh, days: -1 }),
+                ee && o.push({ sanction: b.X5 }),
+                ne === j.lp
+                  ? o.push({ sanction: b.nw, escalate_to: j.lp })
+                  : ne === j.PV &&
+                    o.push({ sanction: b.nw, escalate_to: j.PV }),
                 await r.sanctionMutation.mutateAsync({
                   sanctions: o,
-                  message: ze.trim(),
+                  message: Oe.trim(),
                   reason: s,
                 }),
                 r.onSanction();
             },
-            kt = (o) => {
-              a(o), h("main");
+            _t = (o) => {
+              a(o), y("main");
             },
-            Ft = (o) => {
-              o ? (ue(!0), ne(7), a(g.rU)) : (ue(!1), ne(-1));
+            Wt = (o) => {
+              o ? (me(!0), re(7), a(d.rU)) : (me(!1), re(-1));
             };
           return (0, t.jsxs)(t.Fragment, {
             children: [
-              p === "reason" &&
-                (0, t.jsx)(ht.F, { reasons: l.UL, onSelect: kt }),
-              p === "main" &&
+              g === "reason" &&
+                (0, t.jsx)(vt.F, { reasons: l.UL, onSelect: _t }),
+              g === "main" &&
                 (0, t.jsxs)(f.Z, {
                   children: [
                     (0, t.jsxs)(f.Z, {
-                      className: L().SanctionForm,
+                      className: _().SanctionForm,
                       children: [
                         r.sanctionMutation.isError &&
                           (0, t.jsxs)("div", {
-                            className: (0, oe.A)(
-                              L().OneColumn,
-                              L().ErrorMessage,
+                            className: (0, ce.A)(
+                              _().OneColumn,
+                              _().ErrorMessage,
                             ),
                             children: [
-                              (0, t.jsx)(Te.Q9b, {}),
+                              (0, t.jsx)(Ce.Q9b, {}),
                               " Error: ",
                               r.sanctionMutation.error.message,
                             ],
@@ -842,21 +842,21 @@
                         }),
                         (0, t.jsx)("button", {
                           id: "reason",
-                          className: L().ClickableText,
-                          onClick: () => h("reason"),
+                          className: _().ClickableText,
+                          onClick: () => y("reason"),
                           children:
                             s === null
-                              ? C.T.Localize(
+                              ? x.T.Localize(
                                   "#commentsanctiondialog_selectreason",
                                 )
                               : (0, l.Jt)(s),
                         }),
-                        Ye.length > 0 &&
+                        Ze.length > 0 &&
                           (0, t.jsx)("div", {
-                            className: L().QuickReasons,
-                            children: Ye.map((o) =>
+                            className: _().QuickReasons,
+                            children: Ze.map((o) =>
                               (0, t.jsx)(
-                                N.$,
+                                G.$,
                                 {
                                   onClick: () => a(s === o ? null : o),
                                   size: "1",
@@ -868,36 +868,36 @@
                             ),
                           }),
                         (0, t.jsxs)("label", {
-                          className: L().OneColumn,
+                          className: _().OneColumn,
                           children: [
                             (0, t.jsx)("input", {
                               type: "checkbox",
                               checked: c,
-                              onChange: (o) => Y(o.target.checked),
+                              onChange: (o) => X(o.target.checked),
                             }),
                             " Delete",
                           ],
                         }),
                         (0, t.jsxs)("label", {
-                          className: L().OneColumn,
+                          className: _().OneColumn,
                           children: [
                             (0, t.jsx)("input", {
                               type: "checkbox",
-                              checked: _,
-                              onChange: (o) => Ae(o.target.checked),
+                              checked: K,
+                              onChange: (o) => De(o.target.checked),
                             }),
                             " Issue Warning",
                           ],
                         }),
-                        Je &&
-                          !!K &&
+                        Ye &&
+                          !!J &&
                           (0, t.jsxs)("div", {
-                            className: (0, oe.A)(
-                              L().OneColumn,
-                              L().ErrorMessage,
+                            className: (0, ce.A)(
+                              _().OneColumn,
+                              _().ErrorMessage,
                             ),
                             children: [
-                              (0, t.jsx)(Te.Q9b, {}),
+                              (0, t.jsx)(Ce.Q9b, {}),
                               " Content is older than 30 days. Are you sure you want to ban?",
                             ],
                           }),
@@ -908,16 +908,16 @@
                                 htmlFor: "hubban",
                                 children: "Ban from hub:",
                               }),
-                              !Ze &&
+                              !Xe &&
                                 (0, t.jsxs)("select", {
                                   id: "hubban",
                                   onChange: (o) =>
-                                    le(
+                                    ue(
                                       o.target.value === "0"
                                         ? null
                                         : parseInt(o.target.value),
                                     ),
-                                  value: K != null ? K : 0,
+                                  value: J != null ? J : 0,
                                   children: [
                                     (0, t.jsx)("option", {
                                       value: "0",
@@ -957,22 +957,22 @@
                                     }),
                                   ],
                                 }),
-                              Ze &&
+                              Xe &&
                                 (0, t.jsx)("div", {
                                   id: "hubban",
                                   children: "Already banned from hub",
                                 }),
                             ],
                           }),
-                        Je &&
-                          !!I &&
+                        Ye &&
+                          !!W &&
                           (0, t.jsxs)("div", {
-                            className: (0, oe.A)(
-                              L().OneColumn,
-                              L().ErrorMessage,
+                            className: (0, ce.A)(
+                              _().OneColumn,
+                              _().ErrorMessage,
                             ),
                             children: [
-                              (0, t.jsx)(Te.Q9b, {}),
+                              (0, t.jsx)(Ce.Q9b, {}),
                               " Content is older than 30 days. Are you sure you want to ban?",
                             ],
                           }),
@@ -980,16 +980,16 @@
                           htmlFor: "communityban",
                           children: "Ban from community:",
                         }),
-                        !Xe &&
+                        !$e &&
                           (0, t.jsxs)("select", {
                             id: "communityban",
                             onChange: (o) =>
-                              Z(
+                              $(
                                 o.target.value === "0"
                                   ? null
                                   : parseInt(o.target.value),
                               ),
-                            value: I != null ? I : 0,
+                            value: W != null ? W : 0,
                             children: [
                               (0, t.jsx)("option", {
                                 value: "0",
@@ -1029,7 +1029,7 @@
                               }),
                             ],
                           }),
-                        Xe &&
+                        $e &&
                           (0, t.jsx)("div", {
                             id: "communityban",
                             children: "Already community banned.",
@@ -1040,14 +1040,14 @@
                         }),
                         (0, t.jsxs)("select", {
                           id: "deletecomments",
-                          disabled: X,
+                          disabled: ee,
                           onChange: (o) =>
-                            ne(
+                            re(
                               o.target.value === "-1"
                                 ? null
                                 : parseInt(o.target.value),
                             ),
-                          value: k != null ? k : -1,
+                          value: H != null ? H : -1,
                           children: [
                             (0, t.jsx)("option", {
                               value: "-1",
@@ -1075,29 +1075,29 @@
                             }),
                           ],
                         }),
-                        !$e &&
+                        !et &&
                           (0, t.jsxs)("span", {
-                            className: L().OneColumn,
+                            className: _().OneColumn,
                             children: [
                               (0, t.jsx)("input", {
                                 type: "checkbox",
-                                checked: se,
-                                onChange: (o) => ce(o.target.checked),
+                                checked: ie,
+                                onChange: (o) => de(o.target.checked),
                               }),
                               "\xA0Permanent trade ban",
                             ],
                           }),
-                        $e &&
+                        et &&
                           (0, t.jsx)("div", {
                             children: "Already trade banned.",
                           }),
                         (0, t.jsxs)("span", {
-                          className: L().OneColumn,
+                          className: _().OneColumn,
                           children: [
                             (0, t.jsx)("input", {
                               type: "checkbox",
-                              checked: X,
-                              onChange: (o) => Ft(o.target.checked),
+                              checked: ee,
+                              onChange: (o) => Wt(o.target.checked),
                             }),
                             "\xA0Mark as suspicious",
                           ],
@@ -1108,39 +1108,39 @@
                         }),
                         (0, t.jsxs)("select", {
                           id: "escalateto",
-                          onChange: (o) => re(parseInt(o.target.value)),
-                          value: ee,
+                          onChange: (o) => ae(parseInt(o.target.value)),
+                          value: ne,
                           children: [
                             (0, t.jsx)("option", {
-                              value: z.HH,
+                              value: j.HH,
                               children: "Do not escalate",
                             }),
                             (0, t.jsx)("option", {
-                              value: z.lp,
+                              value: j.lp,
                               children: "Supervisor",
                             }),
                             (0, t.jsx)("option", {
-                              value: z.PV,
+                              value: j.PV,
                               children: "Valve",
                             }),
                           ],
                         }),
                         (0, t.jsx)("textarea", {
-                          className: (0, oe.A)(
-                            L().OneColumn,
-                            L().MessageTextArea,
+                          className: (0, ce.A)(
+                            _().OneColumn,
+                            _().MessageTextArea,
                           ),
                           placeholder: "Message to send (required)",
-                          value: ze,
-                          onChange: (o) => Ke(o.target.value),
+                          value: Oe,
+                          onChange: (o) => Je(o.target.value),
                         }),
                       ],
                     }),
                     (0, t.jsxs)(f.Z, {
-                      className: L().BottomButtons,
+                      className: _().BottomButtons,
                       children: [
                         r.sanctionMutation.isPending &&
-                          (0, t.jsx)(gt.t, { size: "small" }),
+                          (0, t.jsx)(ft.t, { size: "small" }),
                         !r.sanctionMutation.isPending &&
                           (0, t.jsxs)(t.Fragment, {
                             children: [
@@ -1149,9 +1149,9 @@
                                 children: "Cancel",
                               }),
                               (0, t.jsx)(Ge.n9, {
-                                onClick: It,
+                                onClick: Pt,
                                 disabled:
-                                  s === null || !Ot || ze.trim().length === 0,
+                                  s === null || !Lt || Oe.trim().length === 0,
                                 children: "Sanction",
                               }),
                             ],
@@ -1163,21 +1163,21 @@
             ],
           });
         }
-        function yt(r, e) {
-          const s = (0, pt.KV)();
+        function xt(r, e) {
+          const s = (0, gt.KV)();
           return (0, Qe.I)({
             queryKey: ["get_quick_text", r, e],
             queryFn: async () => {
               if (r == null || e === void 0) return null;
-              const a = O.w.Init(He);
+              const a = M.w.Init(qe);
               a.Body().set_quicktext_id(r),
-                a.Body().set_language((0, A.LgB)(e));
-              const p = await Me.GetQuickText(s, a);
-              if (p.GetEResult() !== H.R)
+                a.Body().set_language((0, S.LgB)(e));
+              const g = await Te.GetQuickText(s, a);
+              if (g.GetEResult() !== F.R)
                 throw new Error(
-                  "useQuickText failed with EResult " + p.GetEResult(),
+                  "useQuickText failed with EResult " + g.GetEResult(),
                 );
-              return p.Body().toObject();
+              return g.Body().toObject();
             },
             enabled: r !== void 0,
           });
@@ -1189,56 +1189,56 @@
               if (r === "0" || !r) throw new Error("Invalid steamid");
               const s = await (
                 await fetch(
-                  `${we.TS.COMMUNITY_BASE_URL}profiles/${r}/ajaxlanguagepreferences`,
+                  `${Re.TS.COMMUNITY_BASE_URL}profiles/${r}/ajaxlanguagepreferences`,
                 )
               ).json();
-              if (s.success === H.R) return s.preferences;
+              if (s.success === F.R) return s.preferences;
               throw new Error(
                 "Failed GetPrimaryLanguageForUser. EResult: " + s.success,
               );
             },
           });
         }
-        var Ce = i(46085),
+        var Ee = i(46085),
           Ve = i(49527),
-          _e = i(19316),
-          Re = i(25792),
+          Ke = i(19316),
+          we = i(25792),
           jt = i(2801),
-          xt = i(15568),
-          Ee = i(36118),
-          Bt = i(21418),
-          Mt = i(71421),
-          Tt = i(41635),
-          wt = i(84670),
-          q = i.n(wt);
-        function Ct(r) {
+          Bt = i(15568),
+          Ae = i(36118),
+          Mt = i(21418),
+          Tt = i(71421),
+          Ct = i(41635),
+          Rt = i(84670),
+          q = i.n(Rt);
+        function Et(r) {
           const { subject: e } = r,
-            [s, a] = (0, D.useState)(!1),
-            p =
+            [s, a] = (0, I.useState)(!1),
+            g =
               e &&
               (e.unresolved_report_count > 0 || e.unresolved_dispute_count > 0),
-            h = (0, t.jsx)(Q.W, {
+            y = (0, t.jsx)(N.W, {
               onClick: () => a(!0),
-              children: (0, t.jsxs)(F.s, {
+              children: (0, t.jsxs)(L.s, {
                 direction: "row",
                 justify: "between",
                 align: "baseline",
                 gap: "1",
                 children: [
-                  p &&
+                  g &&
                     (0, t.jsx)("img", {
                       className: q().Flag,
-                      src: `${we.TS.COMMUNITY_BASE_URL}public/images/skin_1/notification_icon_flag.png`,
+                      src: `${Re.TS.COMMUNITY_BASE_URL}public/images/skin_1/notification_icon_flag.png`,
                     }),
-                  C.T.Localize("#commentsanctiondialog_moderate"),
+                  x.T.Localize("#commentsanctiondialog_moderate"),
                   e &&
-                    e.required_moderator_level === z.PV &&
+                    e.required_moderator_level === j.PV &&
                     (0, t.jsx)("span", {
                       className: q().ValveOnly,
                       children: "(VO)",
                     }),
                   e &&
-                    e.required_moderator_level === z.lp &&
+                    e.required_moderator_level === j.lp &&
                     (0, t.jsx)("span", {
                       className: q().SupervisorOnly,
                       children: "(Supervisor)",
@@ -1248,43 +1248,43 @@
             });
           return (0, t.jsxs)(t.Fragment, {
             children: [
-              s && (0, t.jsx)(Et, { onClose: () => a(!1), ...r }),
+              s && (0, t.jsx)(At, { onClose: () => a(!1), ...r }),
               e &&
-                (0, t.jsx)(Mt.Gq, {
-                  toolTipContent: (0, t.jsx)(Rt, { subject: e }),
+                (0, t.jsx)(Tt.Gq, {
+                  toolTipContent: (0, t.jsx)(wt, { subject: e }),
                   direction: "bottom",
                   nDelayShowMS: 0,
-                  children: h,
+                  children: y,
                 }),
-              !e && h,
+              !e && y,
             ],
           });
         }
-        function Rt(r) {
+        function wt(r) {
           const { subject: e } = r,
-            s = (0, D.useMemo)(() => {
+            s = (0, I.useMemo)(() => {
               var a;
-              const p = (0, Tt.D5)(
+              const g = (0, Ct.D5)(
                 (a = e == null ? void 0 : e.reports) != null ? a : [],
-                (h) => h.report_reason,
+                (y) => y.report_reason,
               );
-              return p.sort((h, c) => h[1] - c[1]), p;
+              return g.sort((y, c) => y[1] - c[1]), g;
             }, [e.reports]);
           return s.length === 0
             ? null
             : (0, t.jsxs)(t.Fragment, {
                 children: [
                   (0, t.jsx)("div", {
-                    children: C.T.Localize("#reasonlist_title"),
+                    children: x.T.Localize("#reasonlist_title"),
                   }),
-                  s.map(([a, p]) =>
+                  s.map(([a, g]) =>
                     (0, t.jsx)(
                       "div",
                       {
-                        children: C.T.Localize(
+                        children: x.T.Localize(
                           "#reasonlist_reasonwithcount",
                           (0, l.Jt)(a),
-                          p,
+                          g,
                         ),
                       },
                       a,
@@ -1293,60 +1293,60 @@
                 ],
               });
         }
-        function Et(r) {
+        function At(r) {
           var e, s, a;
           const {
-              sanctionMutation: p,
-              acquitMutation: h,
+              sanctionMutation: g,
+              acquitMutation: y,
               subject: c,
-              eSubjectType: Y,
-              gidComment: _,
-              clanSteamID: Ae,
-              authorSteamID: K,
-              onClose: le,
+              eSubjectType: X,
+              gidComment: K,
+              clanSteamID: De,
+              authorSteamID: J,
+              onClose: ue,
             } = r,
-            I = c == null ? void 0 : c.reported_content_id,
-            [Z, k] = (0, D.useState)("main"),
-            ne = [
+            W = c == null ? void 0 : c.reported_content_id,
+            [$, H] = (0, I.useState)("main"),
+            re = [
               {
                 name: "Reports",
                 key: "reports",
-                contents: (0, t.jsx)(Re.tH, {
+                contents: (0, t.jsx)(we.tH, {
                   children: (0, t.jsx)(u.lX, { subject: c }),
                 }),
               },
               {
                 name: "History",
                 key: "history",
-                contents: (0, t.jsx)(Re.tH, {
-                  children: (0, t.jsx)(u.B8, { reportedContentID: I }),
+                contents: (0, t.jsx)(we.tH, {
+                  children: (0, t.jsx)(u.B8, { reportedContentID: W }),
                 }),
               },
               {
                 name: "Details",
                 key: "details",
-                contents: (0, t.jsx)(Re.tH, { children: r.children }),
+                contents: (0, t.jsx)(we.tH, { children: r.children }),
               },
             ],
-            se = () => {
+            ie = () => {
               r.onClose(),
                 window.location.href.split("#").length === 1 &&
-                  _ !== l.Ie &&
-                  (window.location.href += "#c" + _),
+                  K !== l.Ie &&
+                  (window.location.href += "#c" + K),
                 window.location.reload();
             };
-          let ce = 0,
-            X = 0;
+          let de = 0,
+            ee = 0;
           if (c)
-            for (const re of c.reports)
-              re.time_resolved && !re.time_disputed && ce++,
-                re.time_dispute_resolved && X++;
-          const ue =
+            for (const ae of c.reports)
+              ae.time_resolved && !ae.time_disputed && de++,
+                ae.time_dispute_resolved && ee++;
+          const me =
               !!(c != null && c.reported_content_id) &&
               !c.owner_dispute_time &&
               c.resolved === Ve.S6,
-            ee = c !== void 0 && !!c.owner_dispute_time;
-          return (0, t.jsx)(xt.wA, {
+            ne = c !== void 0 && !!c.owner_dispute_time;
+          return (0, t.jsx)(Bt.wA, {
             onlyPopoutIfNeeded: !0,
             popupHeight: 340,
             popupWidth: 640,
@@ -1357,19 +1357,19 @@
               "aria-describedby": "moderate",
               onCancel: r.onClose,
               className: q().ModerateDialog,
-              children: (0, t.jsx)(_e.f3, {
-                children: (0, t.jsx)(_e.a3, {
+              children: (0, t.jsx)(Ke.f3, {
+                children: (0, t.jsx)(Ke.a3, {
                   children: (0, t.jsxs)("div", {
                     className: q().ModerateDialogCtn,
                     children: [
-                      Z === "main" &&
+                      $ === "main" &&
                         (0, t.jsxs)("div", {
                           className: q().ModerateCtn,
                           children: [
                             (0, t.jsxs)("div", {
                               className: q().ModerationData,
                               children: [
-                                (0, t.jsxs)(W.EY, {
+                                (0, t.jsxs)(U.EY, {
                                   as: "div",
                                   size: "3",
                                   contrast: "description",
@@ -1381,7 +1381,7 @@
                                       ? e
                                       : 0,
                                     " unresolved / ",
-                                    ce,
+                                    de,
                                     " resolved / ",
                                     (s =
                                       c == null
@@ -1390,12 +1390,12 @@
                                       ? s
                                       : 0,
                                     " disputed / ",
-                                    X,
+                                    ee,
                                     " disputes resolved",
                                   ],
                                 }),
-                                (0, t.jsx)(Bt.V, {
-                                  tabs: ne,
+                                (0, t.jsx)(Mt.V, {
+                                  tabs: re,
                                   bDisableRouting: !0,
                                 }),
                               ],
@@ -1404,13 +1404,13 @@
                               className: q().ModerationActionButtons,
                               children: [
                                 (0, t.jsx)("button", {
-                                  onClick: () => k("sanction"),
-                                  children: (0, t.jsxs)(F.s, {
+                                  onClick: () => H("sanction"),
+                                  children: (0, t.jsxs)(L.s, {
                                     direction: "row",
                                     justify: "center",
                                     align: "center",
                                     children: [
-                                      (0, t.jsx)(Ee.X, {
+                                      (0, t.jsx)(Ae.X, {
                                         className: q().SanctionIcon,
                                       }),
                                       " Sanction",
@@ -1419,41 +1419,42 @@
                                 }),
                                 (0, t.jsx)(Ut, {
                                   subject: c,
-                                  acquitMutation: h,
-                                  onClose: le,
+                                  acquitMutation: y,
+                                  onClose: ue,
                                 }),
-                                (0, t.jsx)(Dt, { subject: c, onClose: le }),
-                                (0, t.jsx)(V.fu, {
-                                  disabled: !I,
-                                  onClick: () => k("escalate"),
-                                  children: C.T.Localize(
-                                    "#moderation_escalation_escalate",
-                                  ),
-                                }),
-                                !ee &&
+                                (0, t.jsx)(zt, { subject: c, onClose: ue }),
+                                (0, h.h)(c) &&
+                                  (0, t.jsx)(Q.fu, {
+                                    disabled: !W,
+                                    onClick: () => H("escalate"),
+                                    children: x.T.Localize(
+                                      "#moderation_escalation_escalate",
+                                    ),
+                                  }),
+                                !ne &&
                                   (0, t.jsx)("button", {
-                                    disabled: !ue,
-                                    onClick: () => k("ownerdispute"),
+                                    disabled: !me,
+                                    onClick: () => H("ownerdispute"),
                                     children: "Owner Dispute",
                                   }),
-                                ee &&
+                                ne &&
                                   (0, t.jsxs)("span", {
                                     children: [
                                       (0, t.jsx)("a", {
-                                        href: `${we.TS.HELP_BASE_URL}tickermaster/ticket/${c.owner_dispute_details}`,
-                                        children: (0, t.jsx)(W.EY, {
+                                        href: `${Re.TS.HELP_BASE_URL}tickermaster/ticket/${c.owner_dispute_details}`,
+                                        children: (0, t.jsx)(U.EY, {
                                           size: "2",
-                                          children: C.T.Localize(
+                                          children: x.T.Localize(
                                             "#moderation_already_owner_disputed",
                                           ),
                                         }),
                                       }),
                                       (0, t.jsx)("button", {
-                                        disabled: !I,
+                                        disabled: !W,
                                         onClick: () =>
-                                          k("editownerdisputedetails"),
+                                          H("editownerdisputedetails"),
                                         className: q().EditButton,
-                                        children: (0, t.jsx)(Ee.ffu, {}),
+                                        children: (0, t.jsx)(Ae.ffu, {}),
                                       }),
                                     ],
                                   }),
@@ -1461,32 +1462,34 @@
                             }),
                           ],
                         }),
-                      Z === "escalate" &&
-                        !!I &&
-                        (0, t.jsx)(b.R, {
-                          reportedContentID: I,
-                          onClose: () => k("main"),
+                      $ === "escalate" &&
+                        !!W &&
+                        (0, t.jsx)(h.R, {
+                          reportedContentID: W,
+                          eCurrentLevel:
+                            c == null ? void 0 : c.required_moderator_level,
+                          onClose: () => H("main"),
                         }),
-                      Z === "sanction" &&
-                        (0, t.jsx)(bt, {
-                          subject: c != null ? c : { subject_type: Y },
-                          clanSteamID: Ae,
-                          authorSteamID: K,
-                          sanctionMutation: p,
-                          onSanction: se,
-                          onCancel: () => k("main"),
+                      $ === "sanction" &&
+                        (0, t.jsx)(yt, {
+                          subject: c != null ? c : { subject_type: X },
+                          clanSteamID: De,
+                          authorSteamID: J,
+                          sanctionMutation: g,
+                          onSanction: ie,
+                          onCancel: () => H("main"),
                         }),
-                      Z === "ownerdispute" &&
-                        !!I &&
-                        (0, t.jsx)(zt, {
-                          reportedContentID: I,
-                          onClose: () => k("main"),
+                      $ === "ownerdispute" &&
+                        !!W &&
+                        (0, t.jsx)(Ot, {
+                          reportedContentID: W,
+                          onClose: () => H("main"),
                         }),
-                      Z === "editownerdisputedetails" &&
-                        !!I &&
-                        (0, t.jsx)(At, {
-                          reportedContentID: I,
-                          onClose: () => k("main"),
+                      $ === "editownerdisputedetails" &&
+                        !!W &&
+                        (0, t.jsx)(Dt, {
+                          reportedContentID: W,
+                          onClose: () => H("main"),
                           currentDetails:
                             (a =
                               c == null ? void 0 : c.owner_dispute_details) !=
@@ -1501,70 +1504,70 @@
             }),
           });
         }
-        function At(r) {
+        function Dt(r) {
           const { reportedContentID: e, onClose: s, currentDetails: a } = r,
-            [p, h] = (0, D.useState)(a),
-            c = (0, Ce.wy)(e, p),
-            Y = async () => {
+            [g, y] = (0, I.useState)(a),
+            c = (0, Ee.wy)(e, g),
+            X = async () => {
               await c.mutateAsync(), s();
             };
           return (0, t.jsxs)(t.Fragment, {
             children: [
               (0, t.jsxs)("label", {
                 children: [
-                  (0, t.jsx)(W.EY, {
+                  (0, t.jsx)(U.EY, {
                     size: "2",
-                    children: C.T.Localize(
+                    children: x.T.Localize(
                       "#moderation_editownerdisputedetails_label",
                     ),
                   }),
                   (0, t.jsx)("input", {
                     type: "text",
-                    value: p,
-                    onChange: (_) => h(_.target.value),
+                    value: g,
+                    onChange: (K) => y(K.target.value),
                   }),
                 ],
               }),
-              (0, t.jsxs)(F.s, {
+              (0, t.jsxs)(L.s, {
                 justify: "between",
                 direction: "row",
                 children: [
-                  (0, t.jsx)(V.fu, {
-                    onClick: Y,
-                    children: C.T.Localize(
+                  (0, t.jsx)(Q.fu, {
+                    onClick: X,
+                    children: x.T.Localize(
                       "#moderation_editownerdisputedetails_save",
                     ),
                   }),
-                  (0, t.jsx)(N.$, {
+                  (0, t.jsx)(G.$, {
                     onClick: s,
                     loading: c.isPending,
-                    children: C.T.Localize("#moderation_ownerdispute_cancel"),
+                    children: x.T.Localize("#moderation_ownerdispute_cancel"),
                   }),
                 ],
               }),
             ],
           });
         }
-        function zt(r) {
+        function Ot(r) {
           const { reportedContentID: e, onClose: s } = r,
-            [a, p] = (0, D.useState)(""),
-            h = (0, Ce.y4)(e, a),
+            [a, g] = (0, I.useState)(""),
+            y = (0, Ee.y4)(e, a),
             c = async () => {
-              await h.mutateAsync(), s();
+              await y.mutateAsync(), s();
             };
           return (0, t.jsxs)(f.Z, {
             className: q().OwnerDisputeCtn,
             children: [
-              (0, t.jsx)(W.EY, {
+              (0, t.jsx)(U.EY, {
                 as: "div",
                 size: "2",
-                children: C.T.Localize("#moderation_ownerdispute_description"),
+                children: x.T.Localize("#moderation_ownerdispute_description"),
               }),
               (0, t.jsxs)("label", {
                 children: [
-                  (0, t.jsx)(W.EY, {
+                  (0, t.jsx)(U.EY, {
                     size: "2",
-                    children: C.T.Localize(
+                    children: x.T.Localize(
                       "#moderation_ownerdispute_ticketmastercode",
                     ),
                   }),
@@ -1572,21 +1575,21 @@
                   (0, t.jsx)("input", {
                     type: "text",
                     value: a,
-                    onChange: (Y) => p(Y.target.value),
+                    onChange: (X) => g(X.target.value),
                   }),
                 ],
               }),
-              (0, t.jsxs)(F.s, {
+              (0, t.jsxs)(L.s, {
                 justify: "between",
                 direction: "row",
                 children: [
-                  (0, t.jsx)(V.fu, {
+                  (0, t.jsx)(Q.fu, {
                     onClick: c,
-                    children: C.T.Localize("#moderation_ownerdispute_dispute"),
+                    children: x.T.Localize("#moderation_ownerdispute_dispute"),
                   }),
-                  (0, t.jsx)(V.fu, {
+                  (0, t.jsx)(Q.fu, {
                     onClick: s,
-                    children: C.T.Localize("#moderation_ownerdispute_cancel"),
+                    children: x.T.Localize("#moderation_ownerdispute_cancel"),
                   }),
                 ],
               }),
@@ -1595,290 +1598,374 @@
         }
         function Ut(r) {
           const { acquitMutation: e, onClose: s, subject: a } = r,
-            p =
+            g =
               a &&
               (a.unresolved_report_count > 0 || a.unresolved_dispute_count > 0),
-            h = async () => {
+            y = async () => {
               await e.mutateAsync(void 0), s();
             };
           return (0, t.jsx)("button", {
-            onClick: h,
-            disabled: !p,
-            children: (0, t.jsxs)(F.s, {
+            onClick: y,
+            disabled: !g,
+            children: (0, t.jsxs)(L.s, {
               direction: "row",
               justify: "center",
               align: "center",
               children: [
-                (0, t.jsx)(Ee.jlt, { className: q().AcquitIcon }),
+                (0, t.jsx)(Ae.jlt, { className: q().AcquitIcon }),
                 " ",
-                C.T.Localize("#moderation_actions_acquit"),
+                x.T.Localize("#moderation_actions_acquit"),
               ],
             }),
           });
         }
-        function Dt(r) {
+        function zt(r) {
           const { subject: e, onClose: s } = r,
             a =
               !!(e != null && e.reported_content_id) &&
               e.resolved !== Ve.z_ &&
               (e.unresolved_dispute_count > 0 || e.unresolved_report_count > 0),
-            p = (0, Ce.N8)(),
-            h = async () => {
+            g = (0, Ee.N8)(),
+            y = async () => {
               e != null &&
                 e.reported_content_id &&
-                (await p.mutateAsync({
+                (await g.mutateAsync({
                   reportedContentID: e.reported_content_id,
                 }),
                 s());
             };
           return (0, t.jsx)("button", {
-            onClick: h,
+            onClick: y,
             disabled: !a,
-            children: C.T.Localize("#moderation_actions_sustain"),
+            children: x.T.Localize("#moderation_actions_sustain"),
           });
         }
       },
-      179: (G, te, i) => {
+      86946: (k, V, i) => {
         "use strict";
-        i.d(te, {
-          Bm: () => W,
-          QD: () => V,
-          f3: () => F,
-          iV: () => C,
+        i.d(V, { j: () => u, w: () => h });
+        var t = i(7850),
+          N = i(64238),
+          L = i.n(N),
+          U = i(38878),
+          G = i.n(U),
+          Q = i(60351),
+          f = i(68031),
+          x = i(8928),
+          l = i(69289);
+        function u(S) {
+          const {
+              children: v,
+              beforeContent: F,
+              afterContent: M,
+              hasValue: P,
+              ...d
+            } = S,
+            j = h(d);
+          return (0, t.jsxs)(f.s, {
+            ...j,
+            align: "center",
+            "data-has-value": !!P,
+            minWidth: "0",
+            children: [
+              F && (0, t.jsx)(f.s, { paddingRight: "2", children: F }),
+              (0, t.jsx)(Q.az, { flexGrow: "1", minWidth: "0", children: v }),
+              M && (0, t.jsx)(f.s, { paddingLeft: "2", children: M }),
+            ],
+          });
+        }
+        function h(S) {
+          const {
+              variant: v = "basic",
+              size: F = "2",
+              radius: M,
+              focusable: P = !0,
+              hoverable: d = !0,
+              clickable: j = !0,
+              disabled: b,
+              className: p,
+              status: m,
+              color: n,
+              ...Y
+            } = S,
+            se = v === "underline" ? "none" : M;
+          return (0, l.mz)(
+            {
+              ...Y,
+              radius: se,
+              "data-status": m,
+              "data-dull-color": n && n !== "dull" ? n : void 0,
+              className: L()(
+                U.ControlBox,
+                P && !b && U.Focusable,
+                d && !b && U.Hoverable,
+                j && !b && U.Clickable,
+                b && U.Disabled,
+                U[`Variant-${v}`],
+                U[`Size-${F}`],
+                p,
+              ),
+            },
+            x.h,
+          );
+        }
+      },
+      98929: (k, V, i) => {
+        "use strict";
+        i.d(V, { F: () => L });
+        var t = i(24089),
+          N = i.n(t);
+        function L() {
+          return t.TextEntry;
+        }
+      },
+      179: (k, V, i) => {
+        "use strict";
+        i.d(V, {
+          Bm: () => U,
+          QD: () => Q,
+          f3: () => L,
+          iV: () => x,
           ip: () => f,
-          le: () => N,
+          le: () => G,
         });
         var t = i(90626),
-          Q = i(92757);
-        function F(l, u) {
-          let b;
-          if (typeof l == "string") b = l;
-          else if ("location" in l) b = l.location.search;
-          else if ("search" in l) b = l.search;
+          N = i(92757);
+        function L(l, u) {
+          let h;
+          if (typeof l == "string") h = l;
+          else if ("location" in l) h = l.location.search;
+          else if ("search" in l) h = l.search;
           else return;
-          const A = new URLSearchParams(b.substring(1));
-          if (A.has(u)) {
-            const R = A.getAll(u);
-            return R[R.length - 1];
+          const S = new URLSearchParams(h.substring(1));
+          if (S.has(u)) {
+            const v = S.getAll(u);
+            return v[v.length - 1];
           }
         }
-        function W(l, u, b, A = !1) {
-          const R = new URLSearchParams(l.location.search.substring(1));
-          if (b != null && b != null) {
-            if (R.get(u) == b) return;
-            R.set(u, b);
+        function U(l, u, h, S = !1) {
+          const v = new URLSearchParams(l.location.search.substring(1));
+          if (h != null && h != null) {
+            if (v.get(u) == h) return;
+            v.set(u, h);
           } else {
-            if (!R.has(u)) return;
-            R.delete(u);
+            if (!v.has(u)) return;
+            v.delete(u);
           }
-          A
-            ? l.replace(`?${R.toString()}`, { ...l.location.state })
-            : l.push(`?${R.toString()}`);
+          S
+            ? l.replace(`?${v.toString()}`, { ...l.location.state })
+            : l.push(`?${v.toString()}`);
         }
-        function N(l, u, b) {
-          W(l, u, b, !0);
+        function G(l, u, h) {
+          U(l, u, h, !0);
         }
-        function V(l, u) {
-          const b = (0, Q.W6)(),
-            A = (0, Q.zy)(),
-            R = (0, t.useMemo)(() => {
-              const O = F(A.search, l);
-              return O != null && O != null
+        function Q(l, u) {
+          const h = (0, N.W6)(),
+            S = (0, N.zy)(),
+            v = (0, t.useMemo)(() => {
+              const M = L(S.search, l);
+              return M != null && M != null
                 ? u != null && u != null
                   ? typeof u == "boolean"
-                    ? u.constructor(O !== "false")
-                    : u.constructor(O)
-                  : O
+                    ? u.constructor(M !== "false")
+                    : u.constructor(M)
+                  : M
                 : u;
-            }, [A.search, l, u]),
-            H = (0, t.useCallback)(
-              (O, P = !1) => {
-                W(b, l, O != null && O != null ? String(O) : null, P);
+            }, [S.search, l, u]),
+            F = (0, t.useCallback)(
+              (M, P = !1) => {
+                U(h, l, M != null && M != null ? String(M) : null, P);
               },
-              [b, l],
+              [h, l],
             );
-          return [R, H];
+          return [v, F];
         }
-        function f(l, u, b = !1) {
-          const A = new URLSearchParams(l.location.search.substring(1));
-          for (const R in u)
-            if (u.hasOwnProperty(R)) {
-              const H = u[R];
-              A.delete(R), H != null && H != null && A.append(R, H);
+        function f(l, u, h = !1) {
+          const S = new URLSearchParams(l.location.search.substring(1));
+          for (const v in u)
+            if (u.hasOwnProperty(v)) {
+              const F = u[v];
+              S.delete(v), F != null && F != null && S.append(v, F);
             }
-          b
-            ? l.replace(`?${A.toString()}`, { ...l.location.state })
-            : l.push(`?${A.toString()}`);
+          h
+            ? l.replace(`?${S.toString()}`, { ...l.location.state })
+            : l.push(`?${S.toString()}`);
         }
-        function C(l, u) {
+        function x(l, u) {
           f(l, u, !0);
         }
       },
-      21418: (G, te, i) => {
+      21418: (k, V, i) => {
         "use strict";
-        i.d(te, { V: () => R, a: () => H });
+        i.d(V, { V: () => v, a: () => F });
         var t = i(7850),
-          Q = i(90626),
-          F = i(36707),
-          W = i(18210),
-          N = i(179),
-          V = i(1990),
-          f = i.n(V),
-          C = i(71421),
+          N = i(90626),
+          L = i(36707),
+          U = i(18210),
+          G = i(179),
+          Q = i(1990),
+          f = i.n(Q),
+          x = i(71421),
           l = i(53107),
           u = i(19298),
-          b = i(20169),
-          A = i(92757);
-        function R(P) {
+          h = i(20169),
+          S = i(92757);
+        function v(P) {
           const {
-              tabs: g,
-              bDisableRouting: z,
-              startingTab: U,
-              controlledTab: d,
+              tabs: d,
+              bDisableRouting: j,
+              startingTab: b,
+              controlledTab: p,
               OnTabChanged: m,
               classNameCtn: n,
-              classNameTab: de,
-              classNameTabContent: me,
-              preferredFocus: E,
-              bVerticalTabs: pe,
-              bSticky: Le,
-              bChecklistMode: Ie,
+              classNameTab: Y,
+              focusRingHasBorderRadius: se,
+              classNameTabContent: z,
+              preferredFocus: pe,
+              bVerticalTabs: ge,
+              bSticky: Ie,
+              bChecklistMode: Pe,
             } = P,
-            J = (0, A.zy)(),
-            ge = (0, A.W6)(),
-            [ke, ie] = (0, Q.useState)(() => {
-              var v;
+            Z = (0, S.zy)(),
+            fe = (0, S.W6)(),
+            [_e, oe] = (0, N.useState)(() => {
+              var B;
               return (
-                U ||
-                (!z && (0, N.f3)(J, "tab") && (v = (0, N.f3)(J, "tab")) != null
-                  ? v
+                b ||
+                (!j && (0, G.f3)(Z, "tab") && (B = (0, G.f3)(Z, "tab")) != null
+                  ? B
                   : "")
               );
             });
-          (0, Q.useEffect)(() => {
-            if (!P.bDisableRouting && J) {
-              const v = (0, N.f3)(J, "tab");
-              v && ie(v);
+          (0, N.useEffect)(() => {
+            if (!P.bDisableRouting && Z) {
+              const B = (0, G.f3)(Z, "tab");
+              B && oe(B);
             }
-          }, [J, J.key, P.bDisableRouting, ie]);
-          const Fe = Q.useCallback(
-              (v) => {
-                ie(v.key),
-                  z || (0, N.Bm)(ge, "tab", v.key),
-                  m == null || m(v.key),
-                  v.onClick && v.onClick(v);
+          }, [Z, Z.key, P.bDisableRouting, oe]);
+          const We = N.useCallback(
+              (B) => {
+                oe(B.key),
+                  j || (0, G.Bm)(fe, "tab", B.key),
+                  m == null || m(B.key),
+                  B.onClick && B.onClick(B);
               },
-              [z, ge, m],
+              [j, fe, m],
             ),
-            $ = g.filter((v) => !v.hidden);
-          if (!$.length) return null;
-          const Pe = d != null ? d : ke,
-            ae = $.find((v) => v.key === Pe) || $[0],
-            qe = E ? (U != null ? U : $[0].key) : void 0,
-            fe = (0, t.jsxs)(t.Fragment, {
+            te = d.filter((B) => !B.hidden);
+          if (!te.length) return null;
+          const Fe = p != null ? p : _e,
+            le = te.find((B) => B.key === Fe) || te[0],
+            ke = pe ? (b != null ? b : te[0].key) : void 0,
+            he = (0, t.jsxs)(t.Fragment, {
               children: [
                 (0, t.jsx)(u.Z, {
-                  className: (0, F.A)(
+                  className: (0, L.A)(
                     f().GraphicalAssetsTabs,
-                    pe && f().GraphicalAssetsTabsVertical,
-                    Ie && f().ChecklistMode,
-                    Le && f().Sticky,
+                    ge && f().GraphicalAssetsTabsVertical,
+                    Pe && f().ChecklistMode,
+                    Ie && f().Sticky,
                     n,
                   ),
-                  navEntryPreferPosition: E ? b.iU.PREFERRED_CHILD : b.iU.FIRST,
-                  children: $.map((v, at) =>
+                  navEntryPreferPosition: pe
+                    ? h.iU.PREFERRED_CHILD
+                    : h.iU.FIRST,
+                  children: te.map((B, ot) =>
                     (0, t.jsx)(
-                      O,
+                      M,
                       {
-                        tab: v,
-                        OnTabClick: Fe,
-                        classNameTab: de,
-                        active: v.key === ae.key,
-                        preferredFocus: qe === v.key,
+                        tab: B,
+                        OnTabClick: We,
+                        classNameTab: Y,
+                        focusRingHasBorderRadius: se,
+                        active: B.key === le.key,
+                        preferredFocus: ke === B.key,
                       },
-                      v.key,
+                      B.key,
                     ),
                   ),
                 }),
-                ae && (0, t.jsx)(u.Z, { className: me, children: ae.contents }),
+                le && (0, t.jsx)(u.Z, { className: z, children: le.contents }),
               ],
             });
-          return pe
+          return ge
             ? (0, t.jsx)(u.Z, {
-                className: (0, F.A)(f().GraphicalAssetsTabsLayoutVertical),
-                children: fe,
+                className: (0, L.A)(f().GraphicalAssetsTabsLayoutVertical),
+                children: he,
               })
-            : fe;
+            : he;
         }
-        function H(P) {
+        function F(P) {
           const {
-            statusType: g = "success",
-            bShowStatusBox: z,
-            children: U,
+            statusType: d = "success",
+            bShowStatusBox: j,
+            children: b,
           } = P;
-          let d = "";
+          let p = "";
           return (
-            g === "success"
-              ? (d = f().StatusSuccess)
-              : g === "danger"
-                ? (d = f().StatusDanger)
-                : g === "caution"
-                  ? (d = f().StatusCaution)
-                  : g === "info"
-                    ? (d = f().StatusInfo)
-                    : g === "incomplete" && (d = f().StatusIncomplete),
+            d === "success"
+              ? (p = f().StatusSuccess)
+              : d === "danger"
+                ? (p = f().StatusDanger)
+                : d === "caution"
+                  ? (p = f().StatusCaution)
+                  : d === "info"
+                    ? (p = f().StatusInfo)
+                    : d === "incomplete" && (p = f().StatusIncomplete),
             (0, t.jsx)("div", {
-              className: (0, F.A)(
+              className: (0, L.A)(
                 f().GraphicalAssetStatus,
-                d,
-                z ? f().checklistBox : "",
+                p,
+                j ? f().checklistBox : "",
               ),
-              children: U,
+              children: b,
             })
           );
         }
-        function O(P) {
+        function M(P) {
           const {
-            tab: g,
-            OnTabClick: z,
-            classNameTab: U,
-            active: d,
-            preferredFocus: m,
+            tab: d,
+            OnTabClick: j,
+            classNameTab: b,
+            focusRingHasBorderRadius: p,
+            active: m,
+            preferredFocus: n,
           } = P;
           return (0, t.jsx)(l.e7, {
-            condition: !!(g.statusToolTip || g.tooltip),
-            wrap: (n) =>
-              (0, t.jsx)(C.he, {
-                toolTipContent: g.statusToolTip || g.tooltip,
-                children: n,
+            condition: !!(d.statusToolTip || d.tooltip),
+            wrap: (Y) =>
+              (0, t.jsx)(x.he, {
+                toolTipContent: d.statusToolTip || d.tooltip,
+                children: Y,
               }),
             children: (0, t.jsxs)(u.Z, {
-              className: (0, F.A)(
+              className: (0, L.A)(
                 f().GraphicalAssetsTab,
-                d && f().Active,
-                d && "ActiveTab",
-                U,
+                m && f().Active,
+                m && "ActiveTab",
+                b,
               ),
-              onActivate: () => z(g),
-              preferredFocus: m,
+              onActivate: () => j(d),
+              preferredFocus: n,
+              focusRingHasBorderRadius: p,
               children: [
-                !!g.vo_warning &&
-                  (0, t.jsx)(C.he, {
-                    toolTipContent: g.vo_warning,
+                !!d.vo_warning &&
+                  (0, t.jsx)(x.he, {
+                    toolTipContent: d.vo_warning,
                     children: (0, t.jsx)("div", {
                       className: f().VOWarning,
-                      children: (0, W.we)("#EventEditor_VOWarning"),
+                      children: (0, U.we)("#EventEditor_VOWarning"),
                     }),
                   }),
-                g.status,
-                g.name,
+                d.status,
+                d.name,
               ],
             }),
           });
         }
       },
-      84670: (G) => {
-        G.exports = {
+      84670: (k) => {
+        k.exports = {
           ModerateDialogCtn: "_1JFB_3Ek9uIS-ml-7C1V3",
           Flag: "_24i0Jj7bXsdJSJdDY0a4e9",
           ModerateCtn: "_2f8lQGhpOdBN1nDokNV-_v",
@@ -1891,8 +1978,31 @@
           SanctionIcon: "_3WS1gYqe89ISF4mi7dvtBU",
         };
       },
-      98580: (G) => {
-        G.exports = {
+      38878: (k) => {
+        k.exports = {
+          "Variant-basic": "xqG5GdDEeYauX2ots2DLl",
+          "Size-3": "_1K_Ve980-qBq8l1-cZJdw1",
+          "Variant-inset": "_2Z-Zr4UW8-jHrU5olM_rpn",
+          "Variant-inset-focus": "_2RYWJyn7v0tvoY5cR63QuI",
+          Focusable: "_1cd-wdIp5lIWsydAxII-vY",
+          "Variant-inset-glass": "_32JdL4FubsmwHfHXm6OB9I",
+          "Variant-underline": "yV_Aq5WutzzittgbOJ1R-",
+          "Variant-dim": "_2qQgKJgeeqc9lEI-i7HdsM",
+          "Variant-highlight": "EFvA4gLIikUE06LDGCqg5",
+          "Variant-bare": "_3vxqpebgJYIYNTcigTXx21",
+          ControlBox: "_2gL71Yq-HzVI9oOGyWu3jH",
+          Hoverable: "_8JNTStqpIYaMWQJx6g6hK",
+          Clickable: "_1KONo9A0HE0_NOK2F6uvXy",
+          Disabled: "_2I6xXve3oCxh8fra7SWTnq",
+          "Size-1": "_2e1xlPghh48rkP13ydQOPb",
+          "Size-2": "B7HtDxiiORArIRcBR9kVB",
+        };
+      },
+      24089: (k) => {
+        k.exports = { TextEntry: "_1vE-LsK6l_D_5yjbywZV1p" };
+      },
+      98580: (k) => {
+        k.exports = {
           BottomButtons: "mdeaaJPcT9kJyTGau_Zr7",
           SanctionForm: "_33cLeNjYsBEX2T0-B9gc5G",
           OneColumn: "_2LTDR9F3yb80ONcUPcDxo1",
@@ -1901,8 +2011,8 @@
           ErrorMessage: "_3_dhawEOV-fztaXEftlfxJ",
         };
       },
-      1990: (G) => {
-        G.exports = {
+      1990: (k) => {
+        k.exports = {
           narrowWidth: "500px",
           GraphicalAssetsTabs: "_3oSHTIvUhbK90D9Uvj438V",
           GraphicalAssetsTab: "_3lJb_YN8uykqLcm4eG1jRF",

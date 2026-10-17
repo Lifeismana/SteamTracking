@@ -168,5 +168,7 @@
     "DiscountsAndEvents_Banner_WeekendDeal": "周末特惠",
     "DiscountsAndEvents_Banner_MidweekDeal": "周间特惠",
     "DiscountsAndEvents_Banner_DailyDeal": "今日特惠",
+    "DiscountsAndEvents_Banner_LargestDiscount": "最大折扣",
+    "DiscountsAndEvents_LoadError": "暂时无法载入折扣与活动。请稍后重试。",
     "store_ui_dummy": "dont translate"
 }

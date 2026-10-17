@@ -1315,6 +1315,68 @@
         __webpack_require__._(module_exports, {
           _: () => _,
           _: () => _,
+        });
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        function _(_) {
+          const [_, _] = (0, _.useState)(!1),
+            [_] = (0, _.useState)(() => _()),
+            _ = (0, _.useMemo)(
+              () => ({
+                country: _._.COUNTRY,
+                language: _._.LANGUAGE,
+                bUsePartnerAPI: !0,
+              }),
+              [],
+            );
+          return (
+            (0, _.useEffect)(() => (_(!0), _(_)), [_]),
+            _
+              ? (0, _.createElement)(_._, {
+                  context: _,
+                  serviceTransportOverride: _.GetServiceTransport(),
+                  children: _.children,
+                })
+              : null
+          );
+        }
+        function _(_) {
+          const [_] = (0, _.useState)(() => _()),
+            _ = (0, _.useMemo)(
+              () => ({
+                country: _._.COUNTRY,
+                language: _._.LANGUAGE,
+                bUsePartnerAPI: !0,
+                bIncludeUnpublished: _.bIncludeUnpublished,
+              }),
+              [_.bIncludeUnpublished],
+            );
+          return (0, _.createElement)(_._, {
+            context: _,
+            serviceTransportOverride: _.GetServiceTransport(),
+            children: _.children,
+          });
+        }
+        function _() {
+          const _ = (0, _._)(
+            "partnerbrowse_webapi_token",
+            "application_config",
+          );
+          return (0, _._)(new _._(_._.WEBAPI_BASE_URL, _));
+        }
+        function _(_) {
+          return _._.Initialize(_.GetServiceTransport(), _._.is_partner_member);
+        }
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(module_exports, {
+          _: () => _,
+          _: () => _,
           _: () => _,
           _: () => _,
           _: () => _,

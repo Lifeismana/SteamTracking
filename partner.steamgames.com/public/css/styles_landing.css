@@ -1138,6 +1138,24 @@ p {
 	.buttonRow.disabled .new {
 		color: #6d7967;
 	}
+	.buttonRow .contentSurveyAttention {
+		display: inline-block;
+		margin-left: 8px;
+		padding: 0 6px;
+		border-radius: 2px;
+		background-color: #e5a83b;
+		color: #1b1e23;
+		font-size: 11px;
+		font-weight: 600;
+		line-height: 16px;
+		vertical-align: middle;
+	}
+	.buttonRow .contentSurveyAttention.newQuestions {
+		background-color: #A4D007;
+	}
+	.buttonRow .contentSurveyAttention.inherited {
+		background-color: #67c1f5;
+	}
 	.buttonRow .compatSection {
 		display: inline-flex;
 		flex-direction: row;

@@ -272,99 +272,6 @@
         "use strict";
         __webpack_require__._(module_exports, {
           _: () => _,
-          _: () => _,
-        });
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        function _(_) {
-          const {
-              children: _,
-              beforeContent: _,
-              afterContent: _,
-              hasValue: _,
-              ..._
-            } = _,
-            _ = _(_);
-          return (0, _.jsxs)(_._, {
-            ..._,
-            align: "center",
-            "data-has-value": !!_,
-            minWidth: "0",
-            children: [
-              _ &&
-                (0, _.jsx)(_._, {
-                  paddingRight: "2",
-                  children: _,
-                }),
-              (0, _.jsx)(_._, {
-                flexGrow: "1",
-                minWidth: "0",
-                children: _,
-              }),
-              _ &&
-                (0, _.jsx)(_._, {
-                  paddingLeft: "2",
-                  children: _,
-                }),
-            ],
-          });
-        }
-        function _(_) {
-          const {
-              variant: _ = "basic",
-              size: _ = "2",
-              radius: _,
-              focusable: _ = !0,
-              hoverable: _ = !0,
-              clickable: _ = !0,
-              disabled: _,
-              className: _,
-              status: _,
-              ..._
-            } = _,
-            _ = _ === "underline" ? "none" : _;
-          return (0, _._)(
-            {
-              ..._,
-              radius: _,
-              "data-status": _,
-              className: _()(
-                _.ControlBox,
-                _ && !_ && _.Focusable,
-                _ && !_ && _.Hoverable,
-                _ && !_ && _.Clickable,
-                _ && _.Disabled,
-                _[`Variant-${_}`],
-                _[`Size-${_}`],
-                _,
-              ),
-            },
-            _._,
-          );
-        }
-      },
-      chunkid: (module, module_exports, __webpack_require__) => {
-        "use strict";
-        __webpack_require__._(module_exports, {
-          _: () => _,
-        });
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_);
-        function _() {
-          return _.TextEntry;
-        }
-      },
-      chunkid: (module, module_exports, __webpack_require__) => {
-        "use strict";
-        __webpack_require__._(module_exports, {
-          _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -402,7 +309,7 @@
               disabled: _,
               variant: _,
             }),
-            _ = _ ? _._ : "textarea";
+            _ = _ ? _ : "textarea";
           return (0, _.jsx)(_, {
             ref: _,
             ..._,
@@ -411,6 +318,12 @@
             rows: _,
             readOnly: _,
             "aria-disabled": _,
+          });
+        }
+        function _(_) {
+          return (0, _.jsx)(_._, {
+            noFocusRing: !0,
+            ..._,
           });
         }
       },
@@ -525,13 +438,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
-          var _;
-          const { underline: _ = "auto", focusable: _, navProps: _, ..._ } = _,
-            _ = (0, _._)(),
-            _ =
-              (_ = _ != null ? _ : _ == null ? void 0 : _.focusable) != null
-                ? _
-                : !!_.href,
+          const { underline: _ = "auto", ..._ } = _,
             _ = (0, _._)(
               {
                 ..._,
@@ -540,15 +447,9 @@
               },
               _,
             );
-          return _ && (_ || _)
-            ? (0, _.jsx)(_._, {
-                ..._,
-                ...(_ || {}),
-                focusable: _,
-              })
-            : (0, _.jsx)("a", {
-                ..._,
-              });
+          return (0, _.jsx)(_._, {
+            ..._,
+          });
         }
         const _ = [
           ..._._,
@@ -636,8 +537,8 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
-        const _ = 1;
         function _(_) {
           var _, _, _, _, _;
           return (
@@ -651,7 +552,7 @@
               delete _.privacy_state,
             ((_ = _ == null ? void 0 : _.public_data) == null
               ? void 0
-              : _.profile_state) !== _ &&
+              : _.profile_state) !== _.IiA &&
               (_ == null || delete _.private_data),
             _
           );
@@ -694,6 +595,7 @@
         "use strict";
         __webpack_require__._(module_exports, {
           _: () => _,
+          _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -707,8 +609,24 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
+        const _ = [
+          [_._, "#moderation_escalationlevel_any"],
+          [_._, "#moderation_escalationlevel_supervisor"],
+          [_._, "#moderation_escalationlevel_valve"],
+        ];
         function _(_) {
+          var _;
+          return (
+            ((_ = _ == null ? void 0 : _.required_moderator_level) != null
+              ? _
+              : _._) < _._
+          );
+        }
+        function _(_) {
+          var _;
           const { reportedContentID: _, onClose: _ } = _,
+            _ = (_ = _.eCurrentLevel) != null ? _ : _._,
+            _ = _.filter(([_]) => _ > _),
             [_, _] = (0, _.useState)(_._),
             _ = (0, _._)(_),
             [_, _] = (0, _.useState)(""),
@@ -725,26 +643,20 @@
               (0, _.jsx)(_._, {
                 children: _._.Localize("#moderation_escalation_description"),
               }),
-              (0, _.jsxs)("select", {
+              (0, _.jsx)("select", {
                 className: _().EscalationLevelSelect,
                 value: _,
                 onChange: (_) => _(parseInt(_.target.value)),
-                children: [
-                  (0, _.jsx)("option", {
-                    value: _._,
-                    children: _._.Localize("#moderation_escalationlevel_any"),
-                  }),
-                  (0, _.jsx)("option", {
-                    value: _._,
-                    children: _._.Localize(
-                      "#moderation_escalationlevel_supervisor",
-                    ),
-                  }),
-                  (0, _.jsx)("option", {
-                    value: _._,
-                    children: _._.Localize("#moderation_escalationlevel_valve"),
-                  }),
-                ],
+                children: _.map(([_, _]) =>
+                  (0, _.jsx)(
+                    "option",
+                    {
+                      value: _,
+                      children: _._.Localize(_),
+                    },
+                    _,
+                  ),
+                ),
               }),
               (0, _.jsx)("label", {
                 children: _._.Localize("#moderation_escalation_escalationnote"),
@@ -766,6 +678,7 @@
                   }),
                   (0, _.jsx)(_._, {
                     onClick: _,
+                    disabled: _.length == 0,
                     loading: _.isPending,
                     children: _._.Localize("#moderation_escalation_escalate"),
                   }),
@@ -1917,31 +1830,6 @@
           WatchingBroadcast: "FhCJhs583_Ocqm0UT9y_d",
           AvatarFrame: "_3ZPXpi9X8K-n17XiGgTMdU",
           AvatarFrameImg: "Uk4DBWxeyo7Tn8SAl8afe",
-        };
-      },
-      chunkid: (module) => {
-        module.exports = {
-          "Variant-basic": "xqG5GdDEeYauX2ots2DLl",
-          "Size-3": "_1K_Ve980-qBq8l1-cZJdw1",
-          "Variant-inset": "_2Z-Zr4UW8-jHrU5olM_rpn",
-          "Variant-inset-focus": "_2RYWJyn7v0tvoY5cR63QuI",
-          Focusable: "_1cd-wdIp5lIWsydAxII-vY",
-          "Variant-inset-glass": "_32JdL4FubsmwHfHXm6OB9I",
-          "Variant-underline": "yV_Aq5WutzzittgbOJ1R-",
-          "Variant-dim": "_2qQgKJgeeqc9lEI-i7HdsM",
-          "Variant-highlight": "EFvA4gLIikUE06LDGCqg5",
-          "Variant-bare": "_3vxqpebgJYIYNTcigTXx21",
-          ControlBox: "_2gL71Yq-HzVI9oOGyWu3jH",
-          Hoverable: "_8JNTStqpIYaMWQJx6g6hK",
-          Clickable: "_1KONo9A0HE0_NOK2F6uvXy",
-          Disabled: "_2I6xXve3oCxh8fra7SWTnq",
-          "Size-1": "_2e1xlPghh48rkP13ydQOPb",
-          "Size-2": "B7HtDxiiORArIRcBR9kVB",
-        };
-      },
-      chunkid: (module) => {
-        module.exports = {
-          TextEntry: "_1vE-LsK6l_D_5yjbywZV1p",
         };
       },
       chunkid: (module) => {

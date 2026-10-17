@@ -13,7 +13,7 @@
           L = u(19565),
           me = u(23569),
           N = u(99931),
-          O = u(93519),
+          w = u(93519),
           ie = u(89984),
           G = u(79216);
         function se(a) {
@@ -166,8 +166,8 @@
           D = u(1880),
           C = u(69168),
           f = u(50660),
-          w = u(1397),
-          P = u.n(w),
+          O = u(1397),
+          P = u.n(O),
           V = u(99412),
           A = u(71742),
           F = u(50109),
@@ -1427,7 +1427,7 @@
               [i],
             );
           return (0, e.jsx)(f.ff, {
-            tooltip: "#Editor_Emoticon",
+            tooltip: (0, r.we)("#Editor_Emoticon"),
             onClick: d,
             toggled: n,
             children: (0, e.jsx)(xe.jZW, {}),
@@ -1440,9 +1440,9 @@
             (0, e.jsx)(Tt.iY, { emoticonStore: t, OnSelected: a.OnSelected })
           );
         }
-        var Ot = u(98609),
+        var wt = u(98609),
           T = u(40852),
-          wt = u(813),
+          Ot = u(813),
           kt = u(63287),
           $ = u.n(kt),
           Nt = u(5471),
@@ -1622,7 +1622,7 @@
         }
         function Lt(a) {
           const { clanAccountID: t, userPollDef: o, fnSetDef: s } = a,
-            [n, l] = (0, wt.TB)(t),
+            [n, l] = (0, Ot.TB)(t),
             [i, d] = (0, I.q3)(() => [
               o.voter_min_playtime_seconds,
               o.voter_eligibility,
@@ -1667,7 +1667,7 @@
                       if (m.data != o.voter_eligibility) {
                         let p = { ...o, voter_eligibility: m.data };
                         m.data == T.BY.k_EPollVoter_MinPlayTime &&
-                          (p.voter_min_playtime_seconds = 5 * we),
+                          (p.voter_min_playtime_seconds = 5 * Oe),
                           s(p);
                       }
                     },
@@ -1680,7 +1680,7 @@
                       children: (0, e.jsx)(_.pd, {
                         type: "number",
                         label: (0, r.we)("#UserPolls_MinPlayTime"),
-                        value: i / we,
+                        value: i / Oe,
                         min: 5,
                         onChange: (m) => {
                           var p, x;
@@ -1691,7 +1691,7 @@
                                 : p.value,
                             )) != null
                               ? x
-                              : 5) * we;
+                              : 5) * Oe;
                           o.voter_min_playtime_seconds != M &&
                             s({ ...o, voter_min_playtime_seconds: M });
                         },
@@ -1727,7 +1727,7 @@
                             o({
                               ...t,
                               poll_end_time: void 0,
-                              poll_end_days_since_start: Oe * ge,
+                              poll_end_days_since_start: we * ge,
                             });
                         },
                       }),
@@ -1779,7 +1779,7 @@
                               ...t,
                               poll_end_days_since_start: void 0,
                               poll_end_time:
-                                Math.floor(Date.now() / 1e3) + Oe * ge,
+                                Math.floor(Date.now() / 1e3) + we * ge,
                             });
                         },
                       }),
@@ -1820,9 +1820,9 @@
             ],
           });
         }
-        const Oe = 7,
+        const we = 7,
           ge = 1440 * 60,
-          we = 60;
+          Oe = 60;
         function ye(a, t) {
           if (a) {
             const s =
@@ -1834,7 +1834,7 @@
               poll_id: n,
               options: [],
               localized_poll_description: (0, de.$Y)([], V.bP9, null),
-              poll_end_days_since_start: Oe * ge,
+              poll_end_days_since_start: we * ge,
               poll_end_time: void 0,
               results_visibility_settings: T.$t.k_EPollResult_Visible_On_Demand,
               voter_eligibility: T.BY.k_EPollVoter_AnyUser,
@@ -2273,7 +2273,7 @@
                     s.nodes.meetsteamscheduleview &&
                       (0, e.jsx)(oo, { schema: s }),
                     s.nodes.userpolls &&
-                      Ot.iA.is_support &&
+                      wt.iA.is_support &&
                       (0, e.jsx)(Jt, { schema: s }),
                   ],
                 }),
@@ -2313,7 +2313,7 @@
                   fnUpdateSession: m,
                 }),
               (0, e.jsx)(f.ff, {
-                tooltip: "#UserPolls_Toolbar_ttip",
+                tooltip: (0, r.we)("#UserPolls_Toolbar_ttip"),
                 onClick: i,
                 toggled: l,
                 children: (0, e.jsx)(b.fQB, {}),
@@ -2339,7 +2339,7 @@
               showInsertVideoModal: x,
               imageModal: v,
               activeModal: M,
-            } = (0, O.wU)({
+            } = (0, w.wU)({
               clanSteamID: o,
               imageNodeType: l,
               videoNodeType: i,
@@ -2351,14 +2351,14 @@
               v,
               l &&
                 (0, e.jsx)(f.ff, {
-                  tooltip: "#EventEditor_InsertImage_Title",
+                  tooltip: (0, r.we)("#EventEditor_InsertImage_Title"),
                   onClick: p,
                   toggled: M == "image",
                   children: (0, e.jsx)(b._V3, {}),
                 }),
               i &&
                 (0, e.jsx)(f.ff, {
-                  tooltip: "#EventEditor_EditVideo_Title",
+                  tooltip: (0, r.we)("#EventEditor_EditVideo_Title"),
                   onClick: x,
                   toggled: M == "video",
                   children: (0, e.jsx)(b.CeX, {}),
@@ -2385,7 +2385,7 @@
             children: [
               n && (0, e.jsx)(Ee, { hideModal: d, onSave: c }),
               (0, e.jsx)(f.ff, {
-                tooltip: "#EventEditor_InsertYouTube",
+                tooltip: (0, r.we)("#EventEditor_InsertYouTube"),
                 onClick: l,
                 toggled: n,
                 children: (0, e.jsx)("img", { src: Ie.A }),
@@ -2418,7 +2418,7 @@
               children: [
                 l && (0, e.jsx)(rt, { hideModal: c, fnUpdateSession: m }),
                 (0, e.jsx)(f.ff, {
-                  tooltip: "#MeetSteam_add_group_ttip",
+                  tooltip: (0, r.we)("#MeetSteam_add_group_ttip"),
                   onClick: i,
                   toggled: l,
                   children: (0, e.jsx)("img", { src: Ie.A }),
@@ -2456,7 +2456,7 @@
                     fnUpdateSession: m,
                   }),
                 (0, e.jsx)(f.ff, {
-                  tooltip: "#MeetSteam_add_schedule_ttip",
+                  tooltip: (0, r.we)("#MeetSteam_add_schedule_ttip"),
                   onClick: i,
                   toggled: l,
                   children: (0, e.jsx)("img", { src: Ie.A }),
@@ -2565,8 +2565,8 @@
           (0, ve.i)(m, { msAutosaveTimeout: 1e3 });
           const { nodes: M, marks: g } = c.pm_schema;
           return (
-            (0, O.ww)(s, M.image, M.video, g.link, i),
-            (0, e.jsx)(O.Su, {
+            (0, w.ww)(s, M.image, M.video, g.link, i),
+            (0, e.jsx)(w.Su, {
               clanSteamID: o.GetClanSteamID(),
               imageNode: M.image,
               videoNode: M.video,
@@ -2605,7 +2605,7 @@
         });
         function Mo(a, t) {
           const { nodes: o } = t.pm_schema,
-            s = (0, O.w_)(a, o.image, o.video),
+            s = (0, w.w_)(a, o.image, o.video),
             n = (0, tt.s)(o.dynamiclink);
           return h.useCallback(
             (...l) => {
@@ -2672,12 +2672,12 @@
                 },
                 d && {
                   type: d,
-                  component: O.Yp,
+                  component: w.Yp,
                   readProps: (v) => p("image", v),
                 },
                 c && {
                   type: c,
-                  component: O.Yp,
+                  component: w.Yp,
                   readProps: (v) => p("video", v),
                 },
                 i.meetsteamsessiongroup && {
@@ -2730,7 +2730,7 @@
           L = u(90626),
           me = u(18210),
           N = u(29950),
-          O = u(12293),
+          w = u(12293),
           ie = u(19565),
           G = u(37341),
           se = u.n(G),
@@ -2747,19 +2747,19 @@
           const [te, Te] = L.useState(),
             [_e, Ee] = L.useState(),
             [ae, B] = L.useState(),
-            [y, I] = (0, O.E)(S),
+            [y, I] = (0, w.E)(S),
             pe = L.useMemo(
               () =>
                 new ve.k_({
                   props: {
-                    handleClickOn(b, D, C, f, w, P) {
-                      if (P && (w.ctrlKey || w.button == 1)) {
+                    handleClickOn(b, D, C, f, O, P) {
+                      if (P && (O.ctrlKey || O.button == 1)) {
                         const A = C.resolve(D - f)
                             .marks()
                             .find((q) => q.type == U),
                           F = A && (0, N.J)(A.attrs.href);
                         if (F)
-                          return W.current(F, w.view), w.preventDefault(), !0;
+                          return W.current(F, O.view), O.preventDefault(), !0;
                       }
                       return !1;
                     },
@@ -2772,8 +2772,8 @@
                         : !1;
                     },
                     clipboardTextParser(b, D, C, f) {
-                      const w = (0, h.F)(S, b, U, r);
-                      return w && new R.Ji(R.FK.from(w), D.start(), D.end());
+                      const O = (0, h.F)(S, b, U, r);
+                      return O && new R.Ji(R.FK.from(O), D.start(), D.end());
                     },
                     handlePaste(b, D, C) {
                       let f = [];
@@ -2787,21 +2787,21 @@
                         !f.length)
                       )
                         return !1;
-                      let w = b.state.tr;
-                      w.selection.empty || w.deleteSelection();
-                      let P = w.selection.from,
+                      let O = b.state.tr;
+                      O.selection.empty || O.deleteSelection();
+                      let P = O.selection.from,
                         V = 0;
                       for (const A of f) {
                         const { node: F, pos: q, rgNodes: Q } = A,
                           he = C.content.cut(V, q).append(R.FK.from(Q));
-                        w.insert(P, he),
+                        O.insert(P, he),
                           (P += he.size + 2),
                           (V = q + F.nodeSize);
                       }
                       return (
-                        w.insert(P, C.content.cut(V)),
-                        w.scrollIntoView(),
-                        b.dispatch(w),
+                        O.insert(P, C.content.cut(V)),
+                        O.scrollIntoView(),
+                        b.dispatch(O),
                         !0
                       );
                     },
@@ -2875,7 +2875,7 @@
           ve = u(72739);
         function L(N) {
           const {
-              id: O,
+              id: w,
               role: ie,
               visible: G = !0,
               className: se,
@@ -2888,7 +2888,7 @@
           return !G && !H && !h
             ? null
             : (0, e.jsx)("div", {
-                id: O,
+                id: w,
                 role: ie,
                 className: se,
                 ref: U,
@@ -2897,11 +2897,11 @@
                 children: _,
               });
         }
-        function me(N, O = "height", ie = 250) {
+        function me(N, w = "height", ie = 250) {
           const G = R.useRef(null),
             se = R.useRef(!0),
             [h, ee] = R.useState("idle"),
-            [z, _] = R.useState(N ? {} : { [O]: "0px", overflow: "hidden" }),
+            [z, _] = R.useState(N ? {} : { [w]: "0px", overflow: "hidden" }),
             [J, H] = R.useState(N);
           return (
             R.useLayoutEffect(() => {
@@ -2918,10 +2918,10 @@
             ),
             R.useLayoutEffect(() => {
               const r = G.current,
-                S = O == "height" ? "scrollHeight" : "scrollWidth",
+                S = w == "height" ? "scrollHeight" : "scrollWidth",
                 Y = () => {
                   ve.unstable_batchedUpdates(() => {
-                    _(N ? {} : { [O]: "0px", overflow: "hidden" }),
+                    _(N ? {} : { [w]: "0px", overflow: "hidden" }),
                       ee("idle"),
                       H(N);
                   });
@@ -2931,7 +2931,7 @@
                 W == 0
                   ? Y()
                   : (_((te) => ({
-                      [O]: N ? "0px" : `${W}px`,
+                      [w]: N ? "0px" : `${W}px`,
                       ...te,
                       overflow: "hidden",
                     })),
@@ -2940,7 +2940,7 @@
                 r.scrollTop;
                 const W = r[S];
                 return (
-                  _({ overflow: "hidden", [O]: N ? `${W}px` : "0px" }),
+                  _({ overflow: "hidden", [w]: N ? `${W}px` : "0px" }),
                   r.addEventListener("transitionend", Y),
                   () => {
                     r.removeEventListener("transitionend", Y);
@@ -2949,7 +2949,7 @@
               }
             }, [h, N]),
             {
-              style: { ...z, transition: `${O} ${ie}ms` },
+              style: { ...z, transition: `${w} ${ie}ms` },
               active: J,
               refDiv: G,
             }
