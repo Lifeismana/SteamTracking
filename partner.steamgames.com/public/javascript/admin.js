@@ -1210,7 +1210,7 @@ function UpdateRequiredStatuses()
 	} );
 }
 
-$J( function()
+document.addEventListener( 'DOMContentLoaded', function()
 {
 	if ( !$J( '.required_status' ).length )
 		return;
