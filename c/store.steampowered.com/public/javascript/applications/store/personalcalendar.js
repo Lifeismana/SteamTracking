@@ -335,20 +335,24 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
-          _ = ((_) => (
-            (_[(_.k_ETrailerGrowAmount_None = 0)] =
-              "k_ETrailerGrowAmount_None"),
-            (_[(_.k_ETrailerGrowAmount_Implicit = 1)] =
-              "k_ETrailerGrowAmount_Implicit"),
-            (_[(_.k_ETrailerGrowAmount_Medium = 2)] =
-              "k_ETrailerGrowAmount_Medium"),
-            _
-          ))(_ || {});
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_);
+        const _ = 6,
+          _ = 1e3;
+        var _ = ((_) => (
+          (_[(_.k_ETrailerGrowAmount_None = 0)] = "k_ETrailerGrowAmount_None"),
+          (_[(_.k_ETrailerGrowAmount_Implicit = 1)] =
+            "k_ETrailerGrowAmount_Implicit"),
+          (_[(_.k_ETrailerGrowAmount_Medium = 2)] =
+            "k_ETrailerGrowAmount_Medium"),
+          _
+        ))(_ || {});
         function _(_) {
           const { _: _, active: _, bIsHoverMode: _, eGrowOnActivate: _ } = _,
             { data: _ } = (0, _._)(_),
@@ -360,8 +364,14 @@
           const _ = (_) => {
               _.current = _.currentTarget.currentTime;
             },
-            _ = (0, _._)(_ ? _ : void 0);
-          if ((_ && _._.IN_MOBILE) || !_ || !_ || !_.visible || !_) return null;
+            _ = (0, _._)(_),
+            _ = (0, _._)(_ && !_ ? _ : void 0);
+          if ((_ && _._.IN_MOBILE) || !_ || !_ || !_.visible) return null;
+          if (_)
+            return (0, _.jsx)(_, {
+              _: _,
+            });
+          if (!_) return null;
           const _ = _.filter(
             (_) => _.microtrailer && _.microtrailer.length > 0,
           );
@@ -399,6 +409,42 @@
               trailer: _,
             }),
           });
+        }
+        function _(_) {
+          const { _: _ } = _,
+            { data: _ } = (0, _._)(_),
+            [_, _] = _.useState(0),
+            _ = _.useMemo(
+              () =>
+                [...(_?.all_ages_screenshots || [])]
+                  .sort((_, _) => _.ordinal - _.ordinal)
+                  .slice(0, _),
+              [_],
+            );
+          return (
+            (0, _._)(() => {
+              _.length > 0 && _((_) => (_ + 1) % _.length);
+            }, _),
+            _.length == 0
+              ? null
+              : (0, _.jsx)("div", {
+                  className: _().CapsuleMicroTrailer,
+                  children: _.map((_, _) =>
+                    (0, _.jsx)(
+                      "img",
+                      {
+                        className: _()(
+                          _().StandInScreenshot,
+                          _ == _ && _().Active,
+                        ),
+                        src: (0, _._)(_, "600x338"),
+                        alt: "",
+                      },
+                      _.filename,
+                    ),
+                  ),
+                })
+          );
         }
         function _(_) {
           const { trailer: _ } = _;
@@ -955,6 +1001,8 @@
           CapsuleMicroTrailer: "_2aMRbzoT83AkFGYSmCvnRe",
           GrowOnHoverImplicit: "_23t3208XMavZer6IZIxzSb",
           GrowOnHoverMedium: "_2aYdrHuuHZHrhgAJh-eZX3",
+          StandInScreenshot: "_2-XHjZrAl5QU5FbD89pHx7",
+          Active: "_3QeNGSw_792_gylsGKjVM3",
         };
       },
       chunkid: (module) => {

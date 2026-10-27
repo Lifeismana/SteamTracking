@@ -78596,6 +78596,7 @@
           _: () => _,
           _: () => _,
           _: () => _,
+          _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -78705,6 +78706,17 @@
                 _.content_descriptorids.includes(_._)
               : !0
             : !1;
+        }
+        function _(_) {
+          const { eAdultOnlyMediaBehavior: _ } = _.useContext(_),
+            _ = _(),
+            _ = _ == "allowed" && !_,
+            { data: _ } = (0, _._)(_ ? void 0 : _);
+          return _ || !_
+            ? !1
+            : _
+              ? !!_.content_descriptorids?.includes(_._)
+              : !0;
         }
       },
       chunkid: (module, module_exports, __webpack_require__) => {

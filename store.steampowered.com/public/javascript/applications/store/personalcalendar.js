@@ -4,68 +4,68 @@
   (self.webpackChunkstore = self.webpackChunkstore || []).push([
     [27701],
     {
-      79014: (R, I, e) => {
+      79014: (L, p, e) => {
         "use strict";
-        e.d(I, { A: () => D, i: () => O });
+        e.d(p, { A: () => v, i: () => P });
         var t = e(90626);
-        function O(c, ...h) {
+        function P(c, ...h) {
           const d = [],
-            E = new RegExp(/(.*?)<(\d+)>(.*?)<\/(\2)>/, "gs");
-          let f = 0,
+            M = new RegExp(/(.*?)<(\d+)>(.*?)<\/(\2)>/, "gs");
+          let O = 0,
             r;
-          for (; (r = E.exec(c)); ) {
-            (f += r[0].length), d.push(r[1]);
+          for (; (r = M.exec(c)); ) {
+            (O += r[0].length), d.push(r[1]);
             const s = parseInt(r[2]),
               a = r[3] || "",
-              i = O(a, ...h),
+              l = P(a, ...h),
               n = (s >= 1 && s <= h.length ? h[s - 1] : null)
-                ? t.cloneElement(h[s - 1], {}, a ? i : null)
+                ? t.cloneElement(h[s - 1], {}, a ? l : null)
                 : a;
             d.push(n);
           }
-          return d.push(c.substr(f)), t.createElement(t.Fragment, null, ...d);
+          return d.push(c.substr(O)), t.createElement(t.Fragment, null, ...d);
         }
-        function D(c, h = ["b", "i", "br"]) {
+        function v(c, h = ["b", "i", "br"]) {
           const d = h.join("|"),
-            E = [],
-            f = new RegExp(
+            M = [],
+            O = new RegExp(
               `(?<before>.*?)<(?<tagname>${d})>(?<contents>.*?)(?<endtag><\\/\\2>|$)`,
               "gs",
             );
           let r = 0,
             s;
-          for (; (s = f.exec(c)); ) {
+          for (; (s = O.exec(c)); ) {
             if (!s.groups) continue;
             if (!s.groups?.endtag) {
-              const o = s.groups.before.length + s.groups.tagname.length + 2;
-              (r += o), (f.lastIndex = s.index + o), E.push(s.groups.before);
-              const l = s[2],
-                v = t.createElement(l);
-              E.push(v);
+              const i = s.groups.before.length + s.groups.tagname.length + 2;
+              (r += i), (O.lastIndex = s.index + i), M.push(s.groups.before);
+              const m = s[2],
+                D = t.createElement(m);
+              M.push(D);
               continue;
             }
-            (r += s[0].length), E.push(s.groups.before);
+            (r += s[0].length), M.push(s.groups.before);
             const a = s.groups.tagname,
-              i = s.groups.contents || "";
-            let _ = null;
-            i && (_ = D(i, h));
-            const n = t.createElement(a, {}, _);
-            E.push(n);
+              l = s.groups.contents || "";
+            let o = null;
+            l && (o = v(l, h));
+            const n = t.createElement(a, {}, o);
+            M.push(n);
           }
-          return E.push(c.slice(r)), t.createElement(t.Fragment, null, ...E);
+          return M.push(c.slice(r)), t.createElement(t.Fragment, null, ...M);
         }
       },
-      95414: (R, I, e) => {
+      95414: (L, p, e) => {
         "use strict";
-        e.d(I, { j: () => i, u: () => _ });
+        e.d(p, { j: () => l, u: () => o });
         var t = e(7850),
-          O = e(90626),
-          D = e(24660),
+          P = e(90626),
+          v = e(24660),
           c = e(83482),
           h = e(72865),
           d = e(77200),
-          E = e(53113),
-          f = e(68094),
+          M = e(53113),
+          O = e(68094),
           r = e(72609),
           s = e(3166);
         function a(n) {
@@ -75,107 +75,107 @@
             if ("packageid" in n) return "sub";
           }
         }
-        function i(n) {
+        function l(n) {
           const {
-              id: o,
-              hoverClassName: l,
-              fnGetIDOverride: v,
-              fnHoverState: P,
-              disableScreenshots: M,
-              children: W,
+              id: i,
+              hoverClassName: m,
+              fnGetIDOverride: D,
+              fnHoverState: I,
+              disableScreenshots: C,
+              children: f,
             } = n,
-            p = O.useRef(null),
-            z = O.useCallback(
-              (j) => {
-                const K = a(o);
-                K &&
-                  (P && P(!0),
+            E = P.useRef(null),
+            T = P.useCallback(
+              (b) => {
+                const g = a(i);
+                g &&
+                  (I && I(!0),
                   window.GameHover &&
-                    (p.current &&
-                      M &&
-                      (p.current.dataset.hoverDisableScreenshots = "true"),
-                    window.GameHover(v ? v() : p.current, j, "global_hover", {
-                      type: K,
-                      id: (0, f.G$)(o).id,
+                    (E.current &&
+                      C &&
+                      (E.current.dataset.hoverDisableScreenshots = "true"),
+                    window.GameHover(D ? D() : E.current, b, "global_hover", {
+                      type: g,
+                      id: (0, O.G$)(i).id,
                       v6: 1,
                     })));
               },
-              [P, v, M, o],
+              [I, D, C, i],
             ),
-            b = O.useCallback(
-              (j) => {
-                a(o) &&
-                  (P && j.relatedTarget && P(!1),
+            K = P.useCallback(
+              (b) => {
+                a(i) &&
+                  (I && b.relatedTarget && I(!1),
                   window.HideGameHover &&
                     window.HideGameHover(
-                      v ? v() : p.current,
-                      j,
+                      D ? D() : E.current,
+                      b,
                       "global_hover",
                     ));
               },
-              [o, P, v],
+              [i, I, D],
             );
           return (0, t.jsx)("div", {
-            ref: p,
-            className: l,
-            onMouseEnter: z,
-            onMouseLeave: b,
-            onFocus: z,
-            onBlur: b,
-            children: W,
+            ref: E,
+            className: m,
+            onMouseEnter: T,
+            onMouseLeave: K,
+            onFocus: T,
+            onBlur: K,
+            children: f,
           });
         }
-        function _(n) {
+        function o(n) {
           const {
-              id: o,
-              strExtraParams: l,
-              fnOnClickOverride: v,
-              strOverrideURL: P,
+              id: i,
+              strExtraParams: m,
+              fnOnClickOverride: D,
+              strOverrideURL: I,
             } = n,
-            M = (0, h.n9)(),
-            W = (0, d.w)(),
-            p = (0, E.NT)(
-              P ||
-                (o && "creatorid" in o
+            C = (0, h.n9)(),
+            f = (0, d.w)(),
+            E = (0, M.NT)(
+              I ||
+                (i && "creatorid" in i
                   ? (0, c.It)(
-                      `${r.TS.STORE_BASE_URL}curator/${((0, f.G$))(o).id}${l ? `?${l}` : ""}`,
-                      M,
-                      W,
+                      `${r.TS.STORE_BASE_URL}curator/${((0, O.G$))(i).id}${m ? `?${m}` : ""}`,
+                      C,
+                      f,
                     )
                   : (0, c.It)(
-                      `${r.TS.STORE_BASE_URL}${a(o)}/${((0, f.G$))(o).id}${l ? `?${l}` : ""}`,
-                      M,
-                      W,
+                      `${r.TS.STORE_BASE_URL}${a(i)}/${((0, O.G$))(i).id}${m ? `?${m}` : ""}`,
+                      C,
+                      f,
                     )),
             );
-          return (0, t.jsx)(i, {
+          return (0, t.jsx)(l, {
             ...n,
-            children: (0, t.jsx)(D.Ii, {
+            children: (0, t.jsx)(v.Ii, {
               className: n.className,
-              href: v ? void 0 : p,
-              target: r.TS.IN_CLIENT || v ? void 0 : "_blank",
+              href: D ? void 0 : E,
+              target: r.TS.IN_CLIENT || D ? void 0 : "_blank",
               rel: "noopener noreferrer",
-              onClick: v,
+              onClick: D,
               children: n.children,
             }),
           });
         }
       },
-      81944: (R, I, e) => {
+      81944: (L, p, e) => {
         "use strict";
-        e.d(I, { J: () => E });
+        e.d(p, { J: () => M });
         var t = e(7850),
-          O = e(19298),
-          D = e(90626),
+          P = e(19298),
+          v = e(90626),
           c = e(79089),
           h = e(18938),
           d = e(2259);
-        class E extends D.Component {
+        class M extends v.Component {
           static GetScrollableClassname() {
             return "vt-scrollable";
           }
           m_observer = null;
-          m_refElement = D.createRef();
+          m_refElement = v.createRef();
           m_elTracked = null;
           m_bPreviouslyIntersecting = !1;
           BTriggerOnce() {
@@ -217,10 +217,10 @@
                 (this.m_elTracked = null)),
               !this.m_observer && s)
             ) {
-              let i = { root: this.FindScrollableAncestor(s) };
-              this.props.rootMargin && (i.rootMargin = this.props.rootMargin),
-                this.props.thresholds && (i.threshold = this.props.thresholds),
-                (this.m_observer = (0, d.md)(s, this.OnIntersection, i));
+              let l = { root: this.FindScrollableAncestor(s) };
+              this.props.rootMargin && (l.rootMargin = this.props.rootMargin),
+                this.props.thresholds && (l.threshold = this.props.thresholds),
+                (this.m_observer = (0, d.md)(s, this.OnIntersection, l));
             }
             this.m_observer &&
               s &&
@@ -235,7 +235,7 @@
               return !!(
                 a == "scroll" ||
                 a == "auto" ||
-                s.classList.contains(E.GetScrollableClassname())
+                s.classList.contains(M.GetScrollableClassname())
               );
             });
           }
@@ -260,11 +260,11 @@
               onVisibilityChange: r,
               rootMargin: s,
               trigger: a,
-              horizontal: i,
-              containerRef: _,
+              horizontal: l,
+              containerRef: o,
               ...n
             } = this.props;
-            return (0, t.jsx)(O.Z, {
+            return (0, t.jsx)(P.Z, {
               ref: this.HandleRef,
               ...n,
               children: this.props.children,
@@ -272,31 +272,31 @@
           }
         }
       },
-      97525: (R, I, e) => {
+      97525: (L, p, e) => {
         "use strict";
-        e.d(I, { i: () => f, o: () => r });
+        e.d(p, { i: () => O, o: () => r });
         var t = e(7850),
-          O = e(64238),
-          D = e.n(O),
+          P = e(64238),
+          v = e.n(P),
           c = e(90626),
           h = e(3166),
           d = e(2213),
-          E = e.n(d);
-        function f(s) {
-          const [a, i] = c.useState(!1),
-            _ = c.useCallback((o) => i(o && !!s), [s]),
+          M = e.n(d);
+        function O(s) {
+          const [a, l] = c.useState(!1),
+            o = c.useCallback((i) => l(i && !!s), [s]),
             n = c.useCallback(() => {
               !s || s.length === 0 || (window.location.href = s);
             }, [s]);
           return {
             bShowSeeMoreHint: a,
-            panelProps: { onFocusWithin: _, onOptionsButton: n },
+            panelProps: { onFocusWithin: o, onOptionsButton: n },
           };
         }
         function r(s) {
-          const { label: a, shown: i } = s;
+          const { label: a, shown: l } = s;
           return (0, t.jsxs)("div", {
-            className: D()(d.SeeMoreButtonGamepad, i && d.Focused),
+            className: v()(d.SeeMoreButtonGamepad, l && d.Focused),
             children: [
               (0, t.jsx)("img", {
                 src: `${h.TS.IMG_URL}ico_gamepad/shared_button_y.svg`,
@@ -307,128 +307,170 @@
           });
         }
       },
-      87249: (R, I, e) => {
+      87249: (L, p, e) => {
         "use strict";
-        e.d(I, { C0: () => a, Ck: () => _, mj: () => i });
+        e.d(p, { C0: () => m, Ck: () => C, mj: () => D });
         var t = e(7850),
-          O = e(48156),
-          D = e(72609),
-          c = e(40358),
-          h = e(64238),
-          d = e.n(h),
-          E = e(90626),
-          f = e(25046),
-          r = e(73187),
-          s = e.n(r),
-          a = ((n) => (
-            (n[(n.k_ETrailerGrowAmount_None = 0)] =
-              "k_ETrailerGrowAmount_None"),
-            (n[(n.k_ETrailerGrowAmount_Implicit = 1)] =
-              "k_ETrailerGrowAmount_Implicit"),
-            (n[(n.k_ETrailerGrowAmount_Medium = 2)] =
-              "k_ETrailerGrowAmount_Medium"),
-            n
-          ))(a || {});
-        function i(n) {
-          const { id: o, active: l, bIsHoverMode: v, eGrowOnActivate: P } = n,
-            { data: M } = (0, c.J$)(o),
-            W = E.useRef(0),
-            p = E.useRef(null);
-          E.useLayoutEffect(() => {
-            l && p.current && (p.current.currentTime = W.current);
-          }, [l]);
-          const z = (X) => {
-              W.current = X.currentTarget.currentTime;
+          P = e(48156),
+          v = e(72609),
+          c = e(64868),
+          h = e(40358),
+          d = e(41032),
+          M = e(64238),
+          O = e.n(M),
+          r = e(90626),
+          s = e(21721),
+          a = e(25046),
+          l = e(73187),
+          o = e.n(l);
+        const n = 6,
+          i = 1e3;
+        var m = ((f) => (
+          (f[(f.k_ETrailerGrowAmount_None = 0)] = "k_ETrailerGrowAmount_None"),
+          (f[(f.k_ETrailerGrowAmount_Implicit = 1)] =
+            "k_ETrailerGrowAmount_Implicit"),
+          (f[(f.k_ETrailerGrowAmount_Medium = 2)] =
+            "k_ETrailerGrowAmount_Medium"),
+          f
+        ))(m || {});
+        function D(f) {
+          const { id: E, active: T, bIsHoverMode: K, eGrowOnActivate: b } = f,
+            { data: g } = (0, h.J$)(E),
+            B = r.useRef(0),
+            F = r.useRef(null);
+          r.useLayoutEffect(() => {
+            T && F.current && (F.current.currentTime = B.current);
+          }, [T]);
+          const q = (V) => {
+              B.current = V.currentTarget.currentTime;
             },
-            b = (0, f.kB)(l ? o : void 0);
-          if ((v && D.TS.IN_MOBILE) || !l || !M || !M.visible || !b)
-            return null;
-          const j = b.filter(
-            (X) => X.microtrailer && X.microtrailer.length > 0,
+            _ = (0, d.nD)(E),
+            oe = (0, a.kB)(T && !_ ? E : void 0);
+          if ((K && v.TS.IN_MOBILE) || !T || !g || !g.visible) return null;
+          if (_) return (0, t.jsx)(I, { id: E });
+          if (!oe) return null;
+          const U = oe.filter(
+            (V) => V.microtrailer && V.microtrailer.length > 0,
           );
-          if (j.length === 0)
-            return M &&
-              M.related_items?.parent_appid &&
-              (M.type == O.uE.ue || M.type == O.uE.Vi)
-              ? (0, t.jsx)(i, {
-                  ...n,
-                  id: { appid: M.related_items.parent_appid },
+          if (U.length === 0)
+            return g &&
+              g.related_items?.parent_appid &&
+              (g.type == P.uE.ue || g.type == P.uE.Vi)
+              ? (0, t.jsx)(D, {
+                  ...f,
+                  id: { appid: g.related_items.parent_appid },
                 })
               : null;
-          let K;
-          switch (P) {
+          let ee;
+          switch (b) {
             case 1:
-              K = s().GrowOnHoverImplicit;
+              ee = o().GrowOnHoverImplicit;
               break;
             case 2:
-              K = s().GrowOnHoverMedium;
+              ee = o().GrowOnHoverMedium;
               break;
           }
-          const te = j[0];
+          const le = U[0];
           return (0, t.jsx)("video", {
-            className: d()(s().CapsuleMicroTrailer, K),
+            className: O()(o().CapsuleMicroTrailer, ee),
             loop: !0,
             muted: !0,
             controls: !1,
             autoPlay: !0,
-            ref: p,
+            ref: F,
             playsInline: !0,
-            onTimeUpdate: z,
-            children: (0, t.jsx)(_, { trailer: te }),
+            onTimeUpdate: q,
+            children: (0, t.jsx)(C, { trailer: le }),
           });
         }
-        function _(n) {
-          const { trailer: o } = n;
-          return !o || !o.microtrailer
+        function I(f) {
+          const { id: E } = f,
+            { data: T } = (0, h.j4)(E),
+            [K, b] = r.useState(0),
+            g = r.useMemo(
+              () =>
+                [...(T?.all_ages_screenshots || [])]
+                  .sort((F, q) => F.ordinal - q.ordinal)
+                  .slice(0, n),
+              [T],
+            );
+          return (
+            (0, c.$$)(() => {
+              g.length > 0 && b((B) => (B + 1) % g.length);
+            }, i),
+            g.length == 0
+              ? null
+              : (0, t.jsx)("div", {
+                  className: o().CapsuleMicroTrailer,
+                  children: g.map((B, F) =>
+                    (0, t.jsx)(
+                      "img",
+                      {
+                        className: O()(
+                          o().StandInScreenshot,
+                          F == K && o().Active,
+                        ),
+                        src: (0, s.bu)(B, "600x338"),
+                        alt: "",
+                      },
+                      B.filename,
+                    ),
+                  ),
+                })
+          );
+        }
+        function C(f) {
+          const { trailer: E } = f;
+          return !E || !E.microtrailer
             ? null
             : (0, t.jsx)(t.Fragment, {
-                children: o.microtrailer?.map((l) =>
-                  D.TS.IN_CLIENT && l.type == "video/mp4"
+                children: E.microtrailer?.map((T) =>
+                  v.TS.IN_CLIENT && T.type == "video/mp4"
                     ? null
                     : (0, t.jsx)(
                         "source",
-                        { src: (0, f.M4)(o, l.filename || ""), type: l.type },
-                        l.filename,
+                        { src: (0, a.M4)(E, T.filename || ""), type: T.type },
+                        T.filename,
                       ),
                 ),
               });
         }
       },
-      22959: (R, I, e) => {
+      22959: (L, p, e) => {
         "use strict";
-        e.r(I), e.d(I, { default: () => me });
+        e.r(p), e.d(p, { default: () => Ee });
         var t = e(7850),
-          O = e(52438),
-          D = e(24660),
+          P = e(52438),
+          v = e(24660),
           c = e(19298),
           h = e(20169),
           d = e(84346),
-          E = e(79014),
-          f = e(72609),
+          M = e(79014),
+          O = e(72609),
           r = e(95414),
           s = e(40358),
           a = e(72865),
-          i = e(32994),
-          _ = e(90626),
+          l = e(32994),
+          o = e(90626),
           n = e(18994),
-          o = e(83482),
-          l = e(87523),
-          v = e(19681),
-          P = e(68538),
-          M = e(90405),
-          W = e(77200),
-          p = e(36707),
-          z = e(30096),
-          b = e(3166),
-          j = e(98609),
-          K = e(21721),
-          te = e(97525),
-          X = e(87249),
-          oe = e(95995),
-          u = e(66139),
-          Ee = e.n(u),
-          w = e(45931);
-        const le = {
+          i = e(83482),
+          m = e(87523),
+          D = e(19681),
+          I = e(68538),
+          C = e(90405),
+          f = e(77200),
+          E = e(36707),
+          T = e(30096),
+          K = e(3166),
+          b = e(98609),
+          g = e(21721),
+          B = e(97525),
+          F = e(87249),
+          q = e(95995),
+          _ = e(66139),
+          oe = e.n(_),
+          U = e(45931);
+        const ee = {
           name: "personalcalendarPrefs",
           options: {
             path: "/personalcalendar",
@@ -437,292 +479,293 @@
           },
           preferenceControls: { isTechnicallyNecessary: !0 },
         };
-        var ie = ((m) => (
-          (m[(m.Show = 0)] = "Show"),
-          (m[(m.Only = 1)] = "Only"),
-          (m[(m.Hide = 2)] = "Hide"),
-          m
-        ))(ie || {});
-        function _e(m) {
+        var le = ((u) => (
+          (u[(u.Show = 0)] = "Show"),
+          (u[(u.Only = 1)] = "Only"),
+          (u[(u.Hide = 2)] = "Hide"),
+          u
+        ))(le || {});
+        function V(u) {
           const {
-              bShowNewBadge: T,
-              bHasFooterActionLegend: S,
-              onSeeMore: A,
-            } = m,
-            B = (0, O.j_)(le),
-            L = B ? JSON.parse(B) : void 0,
-            Y = (0, n.a4)(940),
+              bShowNewBadge: A,
+              bHasFooterActionLegend: x,
+              onSeeMore: W,
+            } = u,
+            N = (0, P.j_)(ee),
+            y = N ? JSON.parse(N) : void 0,
+            te = (0, n.a4)(940),
             J = (0, a.n9)(),
-            U = (0, W.w)(),
-            N = (0, b.Qn)(),
-            y = new Date().getDay(),
-            H = 10,
-            x = 13 + y,
-            $ = 22 - y,
-            Q = (0, l.GZ)(0, x, $),
-            k = (0, l.Gd)(x, $, !0, !0).flat(),
-            G = (0, o.It)(`${f.TS.STORE_BASE_URL}personalcalendar`, J, U),
-            { bShowSeeMoreHint: ne, panelProps: q } = (0, te.i)(G),
-            ee = w.d.Localize("#PersonalCalendar_Explore"),
-            re = _.useCallback(() => A?.(G), [A, G]);
-          if (!Q.data)
-            return (0, t.jsx)(c.Z, { className: u.PersonalCalendarWidget });
-          let F = Q.data.arrAppInfos;
+            H = (0, f.w)(),
+            w = (0, K.Qn)(),
+            j = new Date().getDay(),
+            Z = 10,
+            G = 13 + j,
+            X = 22 - j,
+            Y = (0, m.GZ)(0, G, X),
+            se = (0, m.Gd)(G, X, !0, !0).flat(),
+            $ = (0, i.It)(`${O.TS.STORE_BASE_URL}personalcalendar`, J, H),
+            { bShowSeeMoreHint: ie, panelProps: ne } = (0, B.i)($),
+            re = U.d.Localize("#PersonalCalendar_Explore"),
+            _e = o.useCallback(() => W?.($), [W, $]);
+          if (!Y.data)
+            return (0, t.jsx)(c.Z, { className: _.PersonalCalendarWidget });
+          let z = Y.data.arrAppInfos;
           return (
-            L &&
-              ((F = F.filter((g) => !L.bHideOwned || !g.bIsOwned)),
-              (F = F.filter((g) => !L.bHideEarlyAccess || !g.bIsEarlyAccess)),
-              (F = F.filter((g) => {
-                switch (L.eWishlistDisplay) {
+            y &&
+              ((z = z.filter((R) => !y.bHideOwned || !R.bIsOwned)),
+              (z = z.filter((R) => !y.bHideEarlyAccess || !R.bIsEarlyAccess)),
+              (z = z.filter((R) => {
+                switch (y.eWishlistDisplay) {
                   case 0:
                     return !0;
                   case 1:
-                    return g.bIsWishlisted;
+                    return R.bIsWishlisted;
                   case 2:
-                    return !g.bIsWishlisted;
+                    return !R.bIsWishlisted;
                   default:
                     return !0;
                 }
               }))),
             (0, t.jsxs)(c.Z, {
-              className: u.PersonalCalendarWidget,
+              className: _.PersonalCalendarWidget,
               navEntryPreferPosition: h.iU.PREFERRED_CHILD,
-              ...q,
-              onOptionsButton: A ? re : q.onOptionsButton,
-              onOptionsActionDescription: ee,
+              ...ne,
+              onOptionsButton: W ? _e : ne.onOptionsButton,
+              onOptionsActionDescription: re,
               children: [
                 (0, t.jsxs)("div", {
-                  className: u.TitleSection,
+                  className: _.TitleSection,
                   children: [
                     (0, t.jsxs)("div", {
-                      className: u.TitleSectionLeft,
+                      className: _.TitleSectionLeft,
                       children: [
                         (0, t.jsxs)("div", {
-                          className: u.Title,
+                          className: _.Title,
                           children: [
-                            T &&
+                            A &&
                               (0, t.jsx)("span", {
-                                className: u.NewBadge,
-                                children: w.d.Localize("#NewBadge"),
+                                className: _.NewBadge,
+                                children: U.d.Localize("#NewBadge"),
                               }),
-                            w.d.Localize("#PersonalCalendar_Title"),
+                            U.d.Localize("#PersonalCalendar_Title"),
                           ],
                         }),
                         (0, t.jsx)("div", {
-                          className: u.Subtitle,
-                          children: w.d.Localize("#PersonalCalendar_Subtitle"),
+                          className: _.Subtitle,
+                          children: U.d.Localize("#PersonalCalendar_Subtitle"),
                         }),
                       ],
                     }),
-                    !N &&
-                      (0, t.jsx)(ae, { calendarURL: G, location: "desktop" }),
-                    N && !S && (0, t.jsx)(te.o, { label: ee, shown: ne }),
+                    !w &&
+                      (0, t.jsx)(ce, { calendarURL: $, location: "desktop" }),
+                    w && !x && (0, t.jsx)(B.o, { label: re, shown: ie }),
                   ],
                 }),
-                (0, t.jsx)(P.F, {
+                (0, t.jsx)(I.F, {
                   visibleElements: 5,
                   hideArrows: !1,
                   disableEdgeWrap: !0,
-                  hidePips: N,
-                  screenIsWide: Y,
-                  startingSlide: H,
-                  className: N ? void 0 : "fiveElementEightGap",
-                  children: k.map((g, Z) =>
+                  hidePips: w,
+                  screenIsWide: te,
+                  startingSlide: Z,
+                  className: w ? void 0 : "fiveElementEightGap",
+                  children: se.map((R, Q) =>
                     (0, t.jsx)(
-                      ce,
+                      de,
                       {
-                        bInitialFocus: Z === H,
-                        nTimestamp: g,
+                        bInitialFocus: Q === Z,
+                        nTimestamp: R,
                         nNextTimestamp:
-                          Z < k.length - 1 ? k[Z + 1] : g + 1440 * 60,
-                        arrAppInfos: F,
-                        nRankThreshold: L?.nResultsToShow ?? 100,
+                          Q < se.length - 1 ? se[Q + 1] : R + 1440 * 60,
+                        arrAppInfos: z,
+                        nRankThreshold: y?.nResultsToShow ?? 100,
                       },
-                      g,
+                      R,
                     ),
                   ),
                 }),
-                !N && (0, t.jsx)(ae, { calendarURL: G, location: "mobile" }),
+                !w && (0, t.jsx)(ce, { calendarURL: $, location: "mobile" }),
               ],
             })
           );
         }
-        function ae(m) {
-          const { calendarURL: T, location: S } = m,
-            A = S == "mobile" ? "see_more_mobile" : "see_more_desktop";
+        function ce(u) {
+          const { calendarURL: A, location: x } = u,
+            W = x == "mobile" ? "see_more_mobile" : "see_more_desktop";
           return (0, t.jsx)("div", {
-            className: `see_more_link ${A} home_section_button`,
+            className: `see_more_link ${W} home_section_button`,
             children: (0, t.jsx)("a", {
-              href: T,
+              href: A,
               className: "btn_small btn_medium btnv6_white_transparent",
               children: (0, t.jsx)("span", {
-                children: w.d.Localize("#PersonalCalendar_Explore"),
+                children: U.d.Localize("#PersonalCalendar_Explore"),
               }),
             }),
           });
         }
-        function ce(m) {
+        function de(u) {
           const {
-              nTimestamp: T,
-              nNextTimestamp: S,
-              bInitialFocus: A,
-              arrAppInfos: B,
-              nRankThreshold: L,
-            } = m,
-            Y = (0, a.n9)(),
-            J = (0, W.w)(),
-            U = (0, o.It)(`${f.TS.STORE_BASE_URL}personalcalendar`, Y, J),
-            N = { weekday: "short" },
-            se = { day: "numeric", month: "numeric" },
-            y = new Date(T * 1e3),
-            H = new Date(),
-            x =
-              y.getDate() === H.getDate() &&
-              y.getMonth() === H.getMonth() &&
-              y.getFullYear() === H.getFullYear(),
-            $ = y > H,
-            Q = y.toLocaleDateString((0, d.J)(), N),
-            k = y.toLocaleString((0, d.J)(), se),
-            G = B.filter((C) => C.nReleaseDate > T && C.nReleaseDate < S).sort(
-              (C, V) =>
-                C.bIsWishlisted && !V.bIsWishlisted
+              nTimestamp: A,
+              nNextTimestamp: x,
+              bInitialFocus: W,
+              arrAppInfos: N,
+              nRankThreshold: y,
+            } = u,
+            te = (0, a.n9)(),
+            J = (0, f.w)(),
+            H = (0, i.It)(`${O.TS.STORE_BASE_URL}personalcalendar`, te, J),
+            w = { weekday: "short" },
+            ae = { day: "numeric", month: "numeric" },
+            j = new Date(A * 1e3),
+            Z = new Date(),
+            G =
+              j.getDate() === Z.getDate() &&
+              j.getMonth() === Z.getMonth() &&
+              j.getFullYear() === Z.getFullYear(),
+            X = j > Z,
+            Y = j.toLocaleDateString((0, d.J)(), w),
+            se = j.toLocaleString((0, d.J)(), ae),
+            $ = N.filter((S) => S.nReleaseDate > A && S.nReleaseDate < x).sort(
+              (S, k) =>
+                S.bIsWishlisted && !k.bIsWishlisted
                   ? -1
-                  : V.bIsWishlisted && !C.bIsWishlisted
+                  : k.bIsWishlisted && !S.bIsWishlisted
                     ? 1
-                    : C.nRank - V.nRank,
+                    : S.nRank - k.nRank,
             ),
-            ne = L ?? 100,
-            q = G.filter((C) => C.nRank <= ne).length - 2,
-            ee = G.length == 0,
-            [re, F] = _.useState(!1),
-            g = (0, b.Qn)(),
-            Z = _.useRef(null);
+            ie = y ?? 100,
+            ne = $.filter((S) => S.nRank <= ie).length - 2,
+            re = $.length == 0,
+            [_e, z] = o.useState(!1),
+            R = (0, K.Qn)(),
+            Q = o.useRef(null);
           return (
-            _.useEffect(() => {
-              if (A && g && Z.current) {
-                const C = Z.current.closest(".carousel__slide"),
-                  V = Z.current.closest(".carousel__slider-tray-wrapper");
-                V && C && (V.scrollLeft = C.offsetLeft);
+            o.useEffect(() => {
+              if (W && R && Q.current) {
+                const S = Q.current.closest(".carousel__slide"),
+                  k = Q.current.closest(".carousel__slider-tray-wrapper");
+                k && S && (k.scrollLeft = S.offsetLeft);
               }
-            }, [A, g]),
+            }, [W, R]),
             (0, t.jsxs)(c.Z, {
-              className: (0, p.A)(
-                u.PersonalCalendarWidgetDay,
-                x && u.TodayCtn,
-                $ && u.FutureCtn,
-                ee && u.EmptyDayCtn,
+              className: (0, E.A)(
+                _.PersonalCalendarWidgetDay,
+                G && _.TodayCtn,
+                X && _.FutureCtn,
+                re && _.EmptyDayCtn,
               ),
               "flow-children": "column",
               children: [
                 (0, t.jsxs)("div", {
-                  className: u.DayTitle,
+                  className: _.DayTitle,
                   children: [
-                    !x &&
+                    !G &&
                       (0, t.jsx)("div", {
-                        className: u.DayOfWeek,
-                        children: Q,
+                        className: _.DayOfWeek,
+                        children: Y,
                       }),
-                    !x && (0, t.jsx)("div", { className: u.Date, children: k }),
-                    x &&
+                    !G &&
+                      (0, t.jsx)("div", { className: _.Date, children: se }),
+                    G &&
                       (0, t.jsx)("div", {
-                        className: u.Today,
-                        children: w.d.Localize("#Time_Today"),
+                        className: _.Today,
+                        children: U.d.Localize("#Time_Today"),
                       }),
                   ],
                 }),
                 (0, t.jsx)(c.Z, {
-                  className: u.DayAppContainer,
+                  className: _.DayAppContainer,
                   "flow-children": "column",
                   navEntryPreferPosition: h.iU.MAINTAIN_Y,
-                  preferredFocus: A && !re,
-                  ref: Z,
-                  onFocusWithin: () => F(!0),
+                  preferredFocus: W && !_e,
+                  ref: Q,
+                  onFocusWithin: () => z(!0),
                   children: (0, t.jsxs)(t.Fragment, {
                     children: [
-                      G.slice(0, 2).map((C) =>
-                        (0, t.jsx)(de, { nAppID: C.nAppID }, C.nAppID),
+                      $.slice(0, 2).map((S) =>
+                        (0, t.jsx)(ue, { nAppID: S.nAppID }, S.nAppID),
                       ),
-                      ee &&
+                      re &&
                         (0, t.jsx)("div", {
-                          className: u.EmptyDay,
-                          children: (0, E.i)(
-                            w.d.Localize("#PersonalCalendar_EmptyDay"),
-                            (0, t.jsx)("a", { href: U }),
+                          className: _.EmptyDay,
+                          children: (0, M.i)(
+                            U.d.Localize("#PersonalCalendar_EmptyDay"),
+                            (0, t.jsx)("a", { href: H }),
                           ),
                         }),
                     ],
                   }),
                 }),
-                !g &&
-                  q > 0 &&
-                  (0, t.jsx)(D.Ii, {
-                    href: U,
-                    className: u.MoreGames,
-                    children: w.d.Localize("#PersonalCalendar_More", q),
+                !R &&
+                  ne > 0 &&
+                  (0, t.jsx)(v.Ii, {
+                    href: H,
+                    className: _.MoreGames,
+                    children: U.d.Localize("#PersonalCalendar_More", ne),
                   }),
               ],
             })
           );
         }
-        function de(m) {
-          const T = (0, s.lv)({ appid: m.nAppID }),
-            S = (0, n.a4)(940),
-            A = (0, b.Qn)(),
-            [B, L] = _.useState(!1),
-            [Y, J] = _.useState(!1),
-            U = _.useRef(null),
-            N = T.data === null ? void 0 : T.data,
-            se = S || A,
-            y = (0, v.l)(N, se ? "main_capsule" : "hero_capsule"),
-            { data: H } = (0, i.lI)(),
-            x = H?.preferences?.disable_microtrailers,
-            $ = B || Y;
+        function ue(u) {
+          const A = (0, s.lv)({ appid: u.nAppID }),
+            x = (0, n.a4)(940),
+            W = (0, K.Qn)(),
+            [N, y] = o.useState(!1),
+            [te, J] = o.useState(!1),
+            H = o.useRef(null),
+            w = A.data === null ? void 0 : A.data,
+            ae = x || W,
+            j = (0, D.l)(w, ae ? "main_capsule" : "hero_capsule"),
+            { data: Z } = (0, l.lI)(),
+            G = Z?.preferences?.disable_microtrailers,
+            X = N || te;
           return (
-            _.useEffect(() => {
+            o.useEffect(() => {
               if (
-                (U.current &&
-                  U.current.setAttribute(
+                (H.current &&
+                  H.current.setAttribute(
                     "data-ds-appid",
-                    m.nAppID.toString() ?? "",
+                    u.nAppID.toString() ?? "",
                   ),
                 window.GDynamicStore && window.$J)
               ) {
-                const Q = window.$J(U.current);
-                window.GDynamicStore.DecorateDynamicItems(Q);
+                const Y = window.$J(H.current);
+                window.GDynamicStore.DecorateDynamicItems(Y);
               }
-            }, [m.nAppID, U]),
+            }, [u.nAppID, H]),
             (0, t.jsx)(a.nn, {
               feature: "personalcalendar-homepage",
               children: (0, t.jsx)(c.Z, {
                 onGamepadFocus: () => J(!0),
                 onGamepadBlur: () => J(!1),
                 children: (0, t.jsx)(r.u, {
-                  id: { appid: m.nAppID },
-                  hoverClassName: u.StoreAppHover,
+                  id: { appid: u.nAppID },
+                  hoverClassName: _.StoreAppHover,
                   disableScreenshots: !0,
-                  children: (0, t.jsx)(oe.A, {
-                    appID: m.nAppID,
+                  children: (0, t.jsx)(q.A, {
+                    appID: u.nAppID,
                     children: (0, t.jsxs)(c.Z, {
-                      ref: U,
-                      className: (0, p.A)(u.StoreAppCapsule, B && u.Hovered),
-                      onMouseOver: () => L(!0),
-                      onMouseOut: () => L(!1),
+                      ref: H,
+                      className: (0, E.A)(_.StoreAppCapsule, N && _.Hovered),
+                      onMouseOver: () => y(!0),
+                      onMouseOut: () => y(!1),
                       children: [
                         (0, t.jsx)("img", {
-                          className: u.Image,
-                          src: y,
+                          className: _.Image,
+                          src: j,
                           alt: "",
                         }),
-                        x &&
-                          $ &&
-                          (0, t.jsx)(ue, {
-                            id: { appid: m.nAppID },
+                        G &&
+                          X &&
+                          (0, t.jsx)(me, {
+                            id: { appid: u.nAppID },
                             nIntervalMS: 1e3,
                           }),
-                        !x &&
-                          (0, t.jsx)(X.mj, {
-                            id: { appid: m.nAppID },
-                            active: $,
+                        !G &&
+                          (0, t.jsx)(F.mj, {
+                            id: { appid: u.nAppID },
+                            active: X,
                             bIsHoverMode: !0,
                           }),
                       ],
@@ -733,50 +776,50 @@
             })
           );
         }
-        function ue(m) {
-          const T = (0, K.DT)(m.id) ?? [],
-            [S, A] = _.useState(0);
+        function me(u) {
+          const A = (0, g.DT)(u.id) ?? [],
+            [x, W] = o.useState(0);
           return (
-            (0, z.$$)(() => {
-              T.length > 0 && A((S + 1) % T.length);
-            }, m.nIntervalMS),
-            !T?.length || S == -1
+            (0, T.$$)(() => {
+              A.length > 0 && W((x + 1) % A.length);
+            }, u.nIntervalMS),
+            !A?.length || x == -1
               ? null
               : (0, t.jsx)("div", {
-                  className: u.ScreenshotCycler,
-                  children: T.map((B, L) =>
+                  className: _.ScreenshotCycler,
+                  children: A.map((N, y) =>
                     (0, t.jsx)(
                       "img",
                       {
-                        className: (0, p.A)(u.Screenshot, L == S && u.Active),
+                        className: (0, E.A)(_.Screenshot, y == x && _.Active),
                         src:
-                          j.TS.BASE_URL_SHARED_CDN +
+                          b.TS.BASE_URL_SHARED_CDN +
                           "/store_item_assets/" +
-                          B.filename,
+                          N.filename,
                         alt: "",
                       },
-                      B.filename,
+                      N.filename,
                     ),
                   ),
                 })
           );
         }
-        function me(m) {
-          return f.iA.logged_in
-            ? (0, t.jsx)(M.K, {
+        function Ee(u) {
+          return O.iA.logged_in
+            ? (0, t.jsx)(C.K, {
                 placeholderHeight: 390,
                 rootMargin: "100% 0px 100% 0px",
-                children: (0, t.jsx)(_e, { ...m }),
+                children: (0, t.jsx)(V, { ...u }),
               })
             : null;
         }
       },
-      87523: (R, I, e) => {
+      87523: (L, p, e) => {
         "use strict";
-        e.d(I, { Ay: () => d, GZ: () => E, Gd: () => r });
+        e.d(p, { Ay: () => d, GZ: () => M, Gd: () => r });
         var t = e(41735),
-          O = e.n(t),
-          D = e(3166),
+          P = e.n(t),
+          v = e(3166),
           c = e(80902),
           h = e(40497);
         class d {
@@ -790,34 +833,34 @@
               d.s_PersonalCalendarStore
             );
           }
-          async GetCalendarRecommendations(a, i, _) {
+          async GetCalendarRecommendations(a, l, o) {
             const n = new Date();
-            n.setDate(n.getDate() + _), n.setHours(0, 0, 0, 0);
-            const o = new Date();
-            o.setDate(o.getDate() - i), o.setHours(0, 0, 0, 0);
-            const l = await h.L.fetchQuery(f(a, i, _));
+            n.setDate(n.getDate() + o), n.setHours(0, 0, 0, 0);
+            const i = new Date();
+            i.setDate(i.getDate() - l), i.setHours(0, 0, 0, 0);
+            const m = await h.L.fetchQuery(O(a, l, o));
             return (
-              (l.arrAppInfos = l.arrAppInfos.filter(
-                (v) =>
-                  v.nReleaseDate >= o.getTime() / 1e3 &&
-                  v.nReleaseDate < n.getTime() / 1e3,
+              (m.arrAppInfos = m.arrAppInfos.filter(
+                (D) =>
+                  D.nReleaseDate >= i.getTime() / 1e3 &&
+                  D.nReleaseDate < n.getTime() / 1e3,
               )),
-              l
+              m
             );
           }
           Init() {}
         }
-        function E(s, a, i) {
-          return (0, c.I)(f(s, a, i));
+        function M(s, a, l) {
+          return (0, c.I)(O(s, a, l));
         }
-        function f(s, a, i) {
+        function O(s, a, l) {
           return {
-            queryKey: ["personalcalendar", s, a, i],
+            queryKey: ["personalcalendar", s, a, l],
             queryFn: async () => {
-              const _ = { tag: s, days_backward: a, days_forward: i },
-                n = await O().get(
-                  `${D.TS.STORE_BASE_URL}personalcalendardata`,
-                  { params: _, timeout: 2e4, withCredentials: !0 },
+              const o = { tag: s, days_backward: a, days_forward: l },
+                n = await P().get(
+                  `${v.TS.STORE_BASE_URL}personalcalendardata`,
+                  { params: o, timeout: 2e4, withCredentials: !0 },
                 );
               return {
                 arrAppInfos: n.data.arrAppInfos,
@@ -825,57 +868,59 @@
                 bUsesWishlistedGames: n.data.bUsesWishlistedGames,
               };
             },
-            placeholderData: (_) => _,
+            placeholderData: (o) => o,
           };
         }
-        function r(s, a, i, _) {
+        function r(s, a, l, o) {
           const n = new Date();
-          if ((n.setDate(n.getDate() - s), i)) {
-            const M = n.getDay() % 7;
-            n.setDate(n.getDate() - M), n.setHours(0, 0, 0, 0);
+          if ((n.setDate(n.getDate() - s), l)) {
+            const C = n.getDay() % 7;
+            n.setDate(n.getDate() - C), n.setHours(0, 0, 0, 0);
           } else n.setHours(0, 0, 0, 0);
-          const o = [],
-            l = new Date(n),
-            v = Math.ceil((s + a) / 7);
-          for (let P = 0; P < v; P++) {
-            o.push([]);
-            for (let M = 0; M < 7; M++)
-              (!_ || (l.getDay() != 0 && l.getDay() != 6)) &&
-                o[P].push(Math.floor(l.getTime() / 1e3)),
-                l.setDate(l.getDate() + 1),
-                l.setHours(0, 0, 0, 0);
+          const i = [],
+            m = new Date(n),
+            D = Math.ceil((s + a) / 7);
+          for (let I = 0; I < D; I++) {
+            i.push([]);
+            for (let C = 0; C < 7; C++)
+              (!o || (m.getDay() != 0 && m.getDay() != 6)) &&
+                i[I].push(Math.floor(m.getTime() / 1e3)),
+                m.setDate(m.getDate() + 1),
+                m.setHours(0, 0, 0, 0);
           }
-          return o;
+          return i;
         }
       },
-      19681: (R, I, e) => {
+      19681: (L, p, e) => {
         "use strict";
-        e.d(I, { l: () => O });
+        e.d(p, { l: () => P });
         var t = e(98609);
-        function O(D, c) {
-          if (!(!D?.asset_url_format || typeof D[c] != "string"))
+        function P(v, c) {
+          if (!(!v?.asset_url_format || typeof v[c] != "string"))
             return (
               t.TS.BASE_URL_SHARED_CDN +
               "/store_item_assets/" +
-              D.asset_url_format.replace("${FILENAME}", D[c])
+              v.asset_url_format.replace("${FILENAME}", v[c])
             );
         }
       },
-      2213: (R) => {
-        R.exports = {
+      2213: (L) => {
+        L.exports = {
           SeeMoreButtonGamepad: "_3LB60XV--dXt2yYQ6dF5aT",
           Focused: "_3NISN-t8MP65UYQ4p5bNgh",
         };
       },
-      73187: (R) => {
-        R.exports = {
+      73187: (L) => {
+        L.exports = {
           CapsuleMicroTrailer: "_2aMRbzoT83AkFGYSmCvnRe",
           GrowOnHoverImplicit: "_23t3208XMavZer6IZIxzSb",
           GrowOnHoverMedium: "_2aYdrHuuHZHrhgAJh-eZX3",
+          StandInScreenshot: "_2-XHjZrAl5QU5FbD89pHx7",
+          Active: "_3QeNGSw_792_gylsGKjVM3",
         };
       },
-      66139: (R) => {
-        R.exports = {
+      66139: (L) => {
+        L.exports = {
           "duration-app-launch": "800ms",
           PersonalCalendarWidget: "_326_uhqq2I-hJwNRSqIZK4",
           TitleSection: "_2su8lGbBoTlZdVmMWOxDR3",

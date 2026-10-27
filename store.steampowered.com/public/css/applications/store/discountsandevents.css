@@ -482,6 +482,19 @@ html.responsive.touch .fiveElementEightGap {
   width: calc(100% + 5px);
   left: -5px;
 }
+._2aMRbzoT83AkFGYSmCvnRe ._2-XHjZrAl5QU5FbD89pHx7 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+._2aMRbzoT83AkFGYSmCvnRe ._2-XHjZrAl5QU5FbD89pHx7._3QeNGSw_792_gylsGKjVM3 {
+  opacity: 1;
+}
 .lFDjxBzZuxTU3aIPVDTK5 {
   display: flex;
   flex-direction: column;
