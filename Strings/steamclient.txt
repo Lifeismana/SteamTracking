@@ -1380,6 +1380,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 %s set to_virtual_port in rendezvous when connecting by FakeIP; ignored
 %s set-low-latency-mode %s
 %s should not be called
+%s streaming mode
 %s wrong user type
 %s#%d (via %s %s)
 %s#%u %s '%s'
@@ -2309,6 +2310,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 *ZN19CRemoteClientDongle14RunDongleCheckEvEUlvE_
 *ZN19CRemoteClientSoftAP11OnIPCountryEP11IPCountry_tEUlvE_
 *ZN19CRemoteClientSoftAP19ScheduledStateCheckEvEUlvE_
+*ZN19CRemoteClientSoftAP19UpdateStreamingModeEbEUlvE_
 *ZN19CRemoteClientSoftAP21NotifySettingsChangedERK10CUtlStringEUlvE_
 *ZN19CRemoteClientSoftAP24SetPairedSSIDAndPasswordERK10CUtlStringS2_EUlvE_
 *ZN19CRemoteClientSoftAP4InitEvEUlvE_
@@ -2897,13 +2899,13 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 ../clientdll/shadercachemanager/../depotreconstruct.h
 ../clientdll/shadercachemanager/../raterecorder.h
 ../clientdll/shadercachemanager/shadercachemanager.cpp
-../clientdll/shadercachemanager/shadercachemanager.cpp:2182
-../clientdll/shadercachemanager/shadercachemanager.cpp:2280
-../clientdll/shadercachemanager/shadercachemanager.cpp:2350
-../clientdll/shadercachemanager/shadercachemanager.cpp:2404
-../clientdll/shadercachemanager/shadercachemanager.cpp:4043
-../clientdll/shadercachemanager/shadercachemanager.cpp:4178
-../clientdll/shadercachemanager/shadercachemanager.cpp:4465
+../clientdll/shadercachemanager/shadercachemanager.cpp:2186
+../clientdll/shadercachemanager/shadercachemanager.cpp:2284
+../clientdll/shadercachemanager/shadercachemanager.cpp:2354
+../clientdll/shadercachemanager/shadercachemanager.cpp:2408
+../clientdll/shadercachemanager/shadercachemanager.cpp:4055
+../clientdll/shadercachemanager/shadercachemanager.cpp:4190
+../clientdll/shadercachemanager/shadercachemanager.cpp:4477
 ../clientdll/shadercachemanager/shadercompilejob.cpp
 ../clientdll/shadercachemanager/shadercontentupdatejob.cpp
 ../clientdll/sitelicenseclient.cpp
@@ -2922,7 +2924,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 ../clientdll/systemmanager.cpp:2674
 ../clientdll/systemmanager.cpp:3021
 ../clientdll/systemmanager.cpp:4706
-../clientdll/systemmanager.cpp:5175
+../clientdll/systemmanager.cpp:5195
 ../clientdll/systemperfmanager.cpp
 ../clientdll/systemperfmanager_linux.cpp
 ../clientdll/systemperfmanager_linux.cpp:1185
@@ -3358,6 +3360,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 /dev/urandom
 /dfs/download/%s/
 /downloading
+/etc/atomic-update.conf.d
 /etc/mtab
 /etc/os-release
 /etc/pki/tls/cert.pem
@@ -14280,6 +14283,7 @@ CFileWriter::Close
 CFileWriter::FlushInternal
 CFileWriter::Write
 CFileWriterThread
+CFindCurrentBucketJob
 CFindCurrentBucketJob::ThreadedCreateDiskCacheDirectories
 CForgetAPJob
 CForgetAPJob::ThreadedForgetAP
@@ -30636,6 +30640,7 @@ UpdateSomething
 UpdateSteamAnnouncementLastRead
 UpdateStreamClientNetworkUtilization
 UpdateStreamClientResolution
+UpdateStreamingMode
 UpdateStreamingSessionInputPermissions
 UpdateTime
 UpdateTimelineRichPresence_t
@@ -33774,6 +33779,7 @@ bShaderEnableFossilizeLayer
 bShaderEnableUpload
 bShaderFossilizeFastMerge
 bShaderPrecompiledCache
+bShaderSerializeDriverQuery
 bShaderVerboseLogs
 bSingleFileUpdateMode
 bSteam3LimitedUserEnable
@@ -46629,7 +46635,7 @@ stderr
 stdin
 stdout
 steam
-steam Oct 22 2026 21:37:05
+steam Oct 26 2026 22:11:27
 steam-runtime-launch-client
 steam-runtime-launch-client --alongside-steam --
 steam-runtime-launch-client --alongside-steam -- bash -c "for i in \`xrandr | grep ' connected' | cut -d' ' -f1 | xargs\`; do xrandr --output \$i --gamma %f:%f:%f; done" &
@@ -47039,6 +47045,8 @@ streaming_v2\WifiAPPlanHidden
 streaming_v2\WifiAPPlanMode
 streaming_v2\WifiAPPlanName
 streaming_v2\dongle\%llu\%s
+streamoff\n
+streamon\n
 street
 streetAddress
 strerror

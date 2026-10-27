@@ -2,8 +2,8 @@
   (self.webpackChunksteamui = self.webpackChunksteamui || []).push([
     [1731],
     {
-      27752: (Fe) => {
-        Fe.exports = {
+      27752: (Oe) => {
+        Oe.exports = {
           Keyboard: "_45rH7-kY4P2uVEb3TxZhm",
           KeyboardKey: "_2KhPXikozxMpbIRo_6jPxW",
           Touched: "_3UFQq1GinEyksceos-TETi",
@@ -92,40 +92,40 @@
           AriaLiveRegion: "_22bLGoFMHrFvf4j7UkybsL",
         };
       },
-      1135: (Fe, Be, b) => {
+      1135: (Oe, Ne, p) => {
         "use strict";
-        b.r(Be),
-          b.d(Be, {
-            ClientBoundsCenterPos2: () => Re,
-            VirtualKeyboard: () => Xt,
-            useAnnounceOnFocus: () => me,
+        p.r(Ne),
+          p.d(Ne, {
+            ClientBoundsCenterPos2: () => Ae,
+            VirtualKeyboard: () => Qt,
+            useAnnounceOnFocus: () => ge,
           });
-        var i = b(62540),
-          oe = b(25538),
-          rt = b(88794),
-          de = b(5757),
-          xe = b(26596),
-          W = b(71921),
-          it = b(5363),
-          G = b(93716),
-          Z = b(18143),
-          lt = b(45645),
-          Oe = b(90095),
-          ct = b(41230),
-          dt = b(89193),
-          v = b(63696),
-          ut = b(78325),
-          ht = b(85858),
-          be = b(43251),
-          mt = b(44727),
-          yt = b(23569),
-          A = b(38850),
-          Ne = b(54654),
-          gt = b(17900),
-          m = b(20505),
-          Te = b(74562),
-          Ke = b(26256),
-          J = b(13944),
+        var l = p(62540),
+          oe = p(25538),
+          lt = p(88794),
+          he = p(5757),
+          xe = p(26596),
+          z = p(71921),
+          ct = p(5363),
+          G = p(93716),
+          Z = p(18143),
+          dt = p(45645),
+          He = p(90095),
+          ut = p(41230),
+          ht = p(89193),
+          K = p(63696),
+          mt = p(78325),
+          yt = p(85858),
+          be = p(43251),
+          gt = p(44727),
+          ft = p(23569),
+          j = p(38850),
+          _e = p(54654),
+          pt = p(17900),
+          m = p(20505),
+          Te = p(74562),
+          Ke = p(26256),
+          q = p(13944),
           X = ((e) => (
             (e[(e.BackSpace = 65288)] = "BackSpace"),
             (e[(e.Tab = 65289)] = "Tab"),
@@ -134,43 +134,45 @@
             (e[(e.Page_Down = 65366)] = "Page_Down"),
             e
           ))(X || {}),
-          H = b(78544),
-          Ce = b(67758),
-          q = b(14181),
-          ae = b(83422),
-          O = b(69385),
-          He = b(68584),
-          Ee = b(28644),
-          ft = b(81133),
-          w = b(8658),
-          z = b(57575),
-          $ = b(7727),
-          ue = b(23365),
-          E = b(71262),
-          pt = b(27752),
-          n = b.n(pt),
-          T = b(40222),
-          he = b(6739),
-          bt = b(96017),
-          Tt = b(52872),
-          Y = b(43471),
-          Kt = b(81417),
-          Ct = b(7810);
-        const _e = 44,
-          Me = 58,
+          M = p(78544),
+          Ce = p(67758),
+          ee = p(14181),
+          ne = p(83422),
+          N = p(69385),
+          Me = p(68584),
+          Ee = p(28644),
+          bt = p(81133),
+          R = p(8658),
+          W = p(57575),
+          $ = p(7727),
+          me = p(23365),
+          Ie = p(85456),
+          x = p(71262),
+          Tt = p(6460),
+          Kt = p(27752),
+          n = p.n(Kt),
+          b = p(40222),
+          ye = p(6739),
+          Ct = p(96017),
+          kt = p(52872),
+          Y = p(43471),
+          vt = p(81417),
+          St = p(7810);
+        const Ge = 44,
+          Ve = 58,
           ke = 3;
-        function kt(e) {
+        function xt(e) {
           let {
             steamItem: t,
             row: o,
             column: a,
             itemWidth: s,
-            touched: l,
+            touched: i,
             ignoreFocusState: r,
             onFocus: c,
             onHover: f,
           } = e;
-          const K = {
+          const C = {
             "data-key-row": o,
             "data-key-col": a,
             "data-key": t.item.name,
@@ -179,201 +181,201 @@
               position: "absolute",
               width: `${s}px`,
               height: "100%",
-              top: `${o * _e}px`,
+              top: `${o * Ge}px`,
               left: `${a * s}px`,
             },
-            u,
+            d,
             h = t.type;
           switch (h) {
             case "Emoticon_t":
-              (K["data-key-handler"] = "emoticon"),
-                (u = (0, i.jsx)(ae.kS, { emoticon: t.item, large: !0 }));
+              (C["data-key-handler"] = "emoticon"),
+                (d = (0, l.jsx)(ne.kS, { emoticon: t.item, large: !0 }));
               break;
             case "Sticker_t":
-              (K["data-key-handler"] = "sticker"),
-                (u = (0, i.jsx)(ae.eE, { sticker: t.item }));
+              (C["data-key-handler"] = "sticker"),
+                (d = (0, l.jsx)(ne.eE, { sticker: t.item }));
               break;
             case "Effect_t":
-              (K["data-key-handler"] = "roomeffect"),
-                (u = (0, i.jsx)(ae.P6, {
+              (C["data-key-handler"] = "roomeffect"),
+                (d = (0, l.jsx)(ne.P6, {
                   className: n().Effect,
                   effect: t.item,
-                  roomEffectSettings: Kt.B,
+                  roomEffectSettings: vt.B,
                 }));
               break;
           }
-          let k = l ? n().Touched : void 0;
-          const p = me(t.item.name, c, f);
-          return (0, i.jsx)(A.Z, {
+          let k = i ? n().Touched : void 0;
+          const T = ge(t.item.name, c, f);
+          return (0, l.jsx)(j.Z, {
             style: g,
             id: `KB.Steam_${h}_${o}.${a}`,
             focusable: !0,
-            className: (0, w.A)(n().KeyboardSteamItemKey, k),
+            className: (0, R.A)(n().KeyboardSteamItemKey, k),
             focusClassName: r ? void 0 : n().Focused,
             "aria-label": t.item.name,
-            ...p,
-            ...K,
-            children: u,
+            ...T,
+            ...C,
+            children: d,
           });
         }
-        function St(e) {
+        function Et(e) {
           let {
               steamItems: t,
               row: o,
               columnStart: a,
               columnEnd: s,
-              itemWidth: l,
+              itemWidth: i,
               keyDown: r,
               rgLayoutTouchCount: c,
               bAnyTrackpadActive: f,
-              onKeyFocus: K,
+              onKeyFocus: C,
               onKeyHover: g,
             } = e,
-            u = [];
+            d = [];
           for (let h = a; h <= s; ++h) {
             let k = h * ke + o,
-              p = t[k];
-            if (p) {
-              let S = (c[o] != null && c[o][h] > 0) || r == p.item.name,
-                L = (0, i.jsx)(
-                  kt,
+              T = t[k];
+            if (T) {
+              let S = (c[o] != null && c[o][h] > 0) || r == T.item.name,
+                w = (0, l.jsx)(
+                  xt,
                   {
-                    steamItem: p,
+                    steamItem: T,
                     row: o,
                     column: h,
-                    itemWidth: l,
+                    itemWidth: i,
                     touched: S,
                     ignoreFocusState: f,
-                    onFocus: K,
+                    onFocus: C,
                     onHover: g,
                   },
                   k,
                 );
-              u.push(L);
+              d.push(w);
             }
           }
-          return (0, i.jsx)(i.Fragment, { children: u });
+          return (0, l.jsx)(l.Fragment, { children: d });
         }
-        function vt() {
-          return (0, Oe.q3)(() => Y.Nb.EmoticonStore.is_initialized);
+        function It() {
+          return (0, He.q3)(() => Y.Nb.EmoticonStore.is_initialized);
         }
-        function xt(e) {
+        function wt(e) {
           let {
               filter: t,
               keyDown: o,
               rgLayoutTouchCount: a,
               bAnyTrackpadActive: s,
-              onKeyFocus: l,
+              onKeyFocus: i,
               onKeyHover: r,
             } = e,
-            c = v.useRef(void 0);
-          v.useEffect(() => Y.Nb.EmoticonStore.UpdateEmoticonList(), []);
+            c = K.useRef(void 0);
+          K.useEffect(() => Y.Nb.EmoticonStore.UpdateEmoticonList(), []);
           const f = Y.Nb.EmoticonStore.GetTimeReceivedNewestEmoticon(),
-            K = Y.Nb.EmoticonStore.GetTimeReceivedForStickerOrEffect(),
-            g = vt(),
-            u = he.iA.logged_in;
-          let [h, k] = v.useState([]);
-          v.useEffect(() => {
-            let C = [];
-            if (u) {
+            C = Y.Nb.EmoticonStore.GetTimeReceivedForStickerOrEffect(),
+            g = It(),
+            d = ye.iA.logged_in;
+          let [h, k] = K.useState([]);
+          K.useEffect(() => {
+            let v = [];
+            if (d) {
               switch (t) {
                 case "RecentSteamItems":
-                  let D = Y.Nb.EmoticonStore.recent_emoticons.map((j) => ({
+                  let P = Y.Nb.EmoticonStore.recent_emoticons.map((A) => ({
                       type: "Emoticon_t",
-                      item: j,
+                      item: A,
                     })),
-                    B = Y.Nb.EmoticonStore.recent_stickers.map((j) => ({
+                    B = Y.Nb.EmoticonStore.recent_stickers.map((A) => ({
                       type: "Sticker_t",
-                      item: j,
+                      item: A,
                     }));
-                  C = D.concat(B);
+                  v = P.concat(B);
                   break;
                 case "Emoticons":
-                  C = Y.Nb.EmoticonStore.emoticon_list.map((j) => ({
+                  v = Y.Nb.EmoticonStore.emoticon_list.map((A) => ({
                     type: "Emoticon_t",
-                    item: j,
+                    item: A,
                   }));
                   break;
                 case "Stickers":
-                  C = Y.Nb.EmoticonStore.GetStickerList().map((j) => ({
+                  v = Y.Nb.EmoticonStore.GetStickerList().map((A) => ({
                     type: "Sticker_t",
-                    item: j,
+                    item: A,
                   }));
                   break;
                 case "ChatFX":
-                  C = Y.Nb.EmoticonStore.GetEffectList().map((j) => ({
+                  v = Y.Nb.EmoticonStore.GetEffectList().map((A) => ({
                     type: "Effect_t",
-                    item: j,
+                    item: A,
                   }));
                   break;
               }
-              k(C);
+              k(v);
             }
-          }, [u, t, k, g, f, K]);
-          const p = Math.ceil(h.length / ke),
-            S = (0, Ct.Te)({
-              count: p,
+          }, [d, t, k, g, f, C]);
+          const T = Math.ceil(h.length / ke),
+            S = (0, St.Te)({
+              count: T,
               horizontal: !0,
               getScrollElement: () => c.current,
-              estimateSize: v.useCallback(() => Me, []),
+              estimateSize: K.useCallback(() => Ve, []),
               overscan: 1,
             });
-          let L = [];
-          const R = S.getVirtualItems(),
-            x = S.getTotalSize();
-          if (R.length != 0) {
-            let D = R[0].index,
-              B = D + R.length;
-            for (let j = 0; j < ke; ++j) {
-              let _ = (0, i.jsx)(
-                St,
+          let w = [];
+          const L = S.getVirtualItems(),
+            E = S.getTotalSize();
+          if (L.length != 0) {
+            let P = L[0].index,
+              B = P + L.length;
+            for (let A = 0; A < ke; ++A) {
+              let H = (0, l.jsx)(
+                Et,
                 {
                   steamItems: h,
-                  row: j,
-                  columnStart: D,
+                  row: A,
+                  columnStart: P,
                   columnEnd: B,
-                  itemWidth: Me,
+                  itemWidth: Ve,
                   rgLayoutTouchCount: a,
                   keyDown: o,
                   bAnyTrackpadActive: s,
-                  onKeyFocus: l,
+                  onKeyFocus: i,
                   onKeyHover: r,
                 },
-                j,
+                A,
               );
-              L.push(_);
+              w.push(H);
             }
           }
-          const P = { height: `${_e * ke}px`, width: `${x}px` };
-          return (0, i.jsx)(Tt.MS, {
+          const D = { height: `${Ge * ke}px`, width: `${E}px` };
+          return (0, l.jsx)(kt.MS, {
             ref: c,
             scrollDirection: "x",
-            children: (0, i.jsxs)(bt.g, {
+            children: (0, l.jsxs)(Ct.g, {
               children: [
-                u &&
+                d &&
                   g &&
-                  x != 0 &&
-                  (0, i.jsx)(A.Z, {
+                  E != 0 &&
+                  (0, l.jsx)(j.Z, {
                     className: n().KeyboardSteamItems,
-                    style: P,
+                    style: D,
                     "flow-children": "grid",
-                    children: L,
+                    children: w,
                   }),
-                u &&
+                d &&
                   g &&
-                  x == 0 &&
-                  (0, i.jsx)(A.Z, {
+                  E == 0 &&
+                  (0, l.jsx)(j.Z, {
                     className: n().KeyboardSteamItemsNotLoggedIn,
                     children: (0, $.we)("#Keyboard_SteamItems_None"),
                   }),
-                u &&
+                d &&
                   !g &&
-                  (0, i.jsx)(A.Z, {
+                  (0, l.jsx)(j.Z, {
                     className: n().KeyboardSteamItemsNotLoggedIn,
                     children: (0, $.we)("#Keyboard_SteamItems_Loading"),
                   }),
-                !u &&
-                  (0, i.jsx)(A.Z, {
+                !d &&
+                  (0, l.jsx)(j.Z, {
                     className: n().KeyboardSteamItemsNotLoggedIn,
                     children: (0, $.we)("#Keyboard_SteamItems_NotLoggedIn"),
                   }),
@@ -381,13 +383,13 @@
             }),
           });
         }
-        var Et = b(58508),
-          It = b(1574),
-          Ge = Object.defineProperty,
-          wt = Object.getOwnPropertyDescriptor,
-          Lt = (e, t, o) =>
+        var Rt = p(58508),
+          Lt = p(1574),
+          Ue = Object.defineProperty,
+          At = Object.getOwnPropertyDescriptor,
+          jt = (e, t, o) =>
             t in e
-              ? Ge(e, t, {
+              ? Ue(e, t, {
                   enumerable: !0,
                   configurable: !0,
                   writable: !0,
@@ -396,16 +398,16 @@
               : (e[t] = o),
           I = (e, t, o, a) => {
             for (
-              var s = a > 1 ? void 0 : a ? wt(t, o) : t, l = e.length - 1, r;
-              l >= 0;
-              l--
+              var s = a > 1 ? void 0 : a ? At(t, o) : t, i = e.length - 1, r;
+              i >= 0;
+              i--
             )
-              (r = e[l]) && (s = (a ? r(t, o, s) : r(s)) || s);
-            return a && s && Ge(t, o, s), s;
+              (r = e[i]) && (s = (a ? r(t, o, s) : r(s)) || s);
+            return a && s && Ue(t, o, s), s;
           },
-          N = (e, t, o) => Lt(e, typeof t != "symbol" ? t + "" : t, o);
-        const Ie = new It.wd("VirtualKeyboard"),
-          Rt = {
+          _ = (e, t, o) => jt(e, typeof t != "symbol" ? t + "" : t, o);
+        const we = new Lt.wd("VirtualKeyboard"),
+          Dt = {
             \u3131: "\u1100",
             \u3132: "\u1101",
             \u3134: "\u1102",
@@ -489,199 +491,199 @@
             \u318D: "\u119E",
             \u318E: "\u11A1",
           },
-          At = (e) => {
+          Pt = (e) => {
             const {
               onCommitText: t,
               onForwardKeyEvent: o,
               onDeleteSurroundingText: a,
             } = e;
-            return (0, J.u7)(t, o, a), null;
+            return (0, q.u7)(t, o, a), null;
           },
-          jt = (e) => {
+          Ft = (e) => {
             const { layout: t } = e;
-            return (0, J.mQ)(t), null;
+            return (0, q.mQ)(t), null;
           },
-          Dt = (e) => {
+          Bt = (e) => {
             const {
                 layout: t,
                 bHasTrackpadHover: o,
                 rgLayoutTouchCount: a,
               } = e,
-              s = (0, J.E5)(t),
-              { strText: l, nCursorPos: r, bVisible: c } = (0, J.kM)(),
-              { strText: f, bVisible: K } = (0, J.VX)(),
+              s = (0, q.E5)(t),
+              { strText: i, nCursorPos: r, bVisible: c } = (0, q.kM)(),
+              { strText: f, bVisible: C } = (0, q.VX)(),
               {
                 vecCandidates: g,
-                nCursorPos: u,
+                nCursorPos: d,
                 nPageSize: h,
                 nCursorInPage: k,
-                bIsCursorVisible: p,
+                bIsCursorVisible: T,
                 bVisible: S,
-              } = (0, J.WF)();
-            let [L, R] = v.useState("");
-            const x = v.useCallback(() => {
-                R("");
+              } = (0, q.WF)();
+            let [w, L] = K.useState("");
+            const E = K.useCallback(() => {
+                L("");
               }, []),
-              P = r - (t == H.Gx.I6 ? 1 : 0),
-              C = l.slice(0, P),
-              D =
-                K &&
-                (t == H.Gx.jK || t == H.Gx.UC || t == H.Gx.yz || t == H.Gx.I6),
-              B = c && l !== "" && !D && t != H.Gx.Ih,
-              j = K && t != H.Gx.CJ && t != H.Gx.K5;
+              D = r - (t == M.Gx.I6 ? 1 : 0),
+              v = i.slice(0, D),
+              P =
+                C &&
+                (t == M.Gx.jK || t == M.Gx.UC || t == M.Gx.yz || t == M.Gx.I6),
+              B = c && i !== "" && !P && t != M.Gx.Ih,
+              A = C && t != M.Gx.CJ && t != M.Gx.K5;
             if (
-              (v.useEffect(() => {
-                W.O.SetKeyboardIMEVisible(j || B || S);
-              }, [j, B, S]),
+              (K.useEffect(() => {
+                z.O.SetKeyboardIMEVisible(A || B || S);
+              }, [A, B, S]),
               s)
             )
-              return (0, i.jsx)(
-                A.Z,
+              return (0, l.jsx)(
+                j.Z,
                 {
-                  className: (0, w.A)(
+                  className: (0, R.A)(
                     n().KeyboardRow,
                     "Row_IME",
                     n().KeyboardImeUnavailable,
                   ),
                   "flow-children": "row",
                   ...Ke.C3,
-                  children: (0, i.jsx)("span", {
+                  children: (0, l.jsx)("span", {
                     children: (0, $.we)("#Keyboard_IME_Not_available"),
                   }),
                 },
                 "KB.IME",
               );
-            if (!j && !B && !S) return null;
-            const _ = f.split(" (")[0];
-            let M = (ee) => ee;
-            (t == H.Gx.Ih || t == H.Gx.I6) && (M = (ee) => ee.split(" ")[0]);
-            const F = Math.floor(u / h) * h,
-              ye = S && u >= h,
-              ge = S && g.length - F >= h,
-              ne = de.oy.ActiveNavigationSourceType !== m.Vz.GAMEPAD || o;
-            let re = o ? n().FocusedIgnored : n().Focused;
-            return (0, i.jsxs)(
-              A.Z,
+            if (!A && !B && !S) return null;
+            const H = f.split(" (")[0];
+            let O = (Q) => Q;
+            (t == M.Gx.Ih || t == M.Gx.I6) && (O = (Q) => Q.split(" ")[0]);
+            const F = Math.floor(d / h) * h,
+              ae = S && d >= h,
+              se = S && g.length - F >= h,
+              ie = he.oy.ActiveNavigationSourceType !== m.Vz.GAMEPAD || o;
+            let le = o ? n().FocusedIgnored : n().Focused;
+            return (0, l.jsxs)(
+              j.Z,
               {
-                className: (0, w.A)(n().KeyboardRow, "Row_IME", "Row_-1"),
+                className: (0, R.A)(n().KeyboardRow, "Row_IME", "Row_-1"),
                 "flow-children": "row",
                 ...Ke.C3,
                 navEntryPreferPosition: Te.iU.MAINTAIN_X,
                 children: [
-                  j &&
-                    (0, i.jsx)(
-                      A.Z,
+                  A &&
+                    (0, l.jsx)(
+                      j.Z,
                       {
                         autoFocus: !1,
                         focusable: !1,
-                        className: (0, w.A)(n().KeyboardImeAuxText),
-                        children: (0, i.jsx)("span", {
-                          children: (D ? C : "") + _,
+                        className: (0, R.A)(n().KeyboardImeAuxText),
+                        children: (0, l.jsx)("span", {
+                          children: (P ? v : "") + H,
                         }),
                       },
                       "KB.Aux",
                     ),
                   B &&
-                    (0, i.jsx)(
-                      A.Z,
+                    (0, l.jsx)(
+                      j.Z,
                       {
                         autoFocus: !1,
                         focusable: !1,
-                        className: (0, w.A)(n().KeyboardImePreeditText),
-                        children: (0, i.jsx)("span", { children: l }),
+                        className: (0, R.A)(n().KeyboardImePreeditText),
+                        children: (0, l.jsx)("span", { children: i }),
                       },
                       "KB.Preedit",
                     ),
                   S &&
-                    g.slice(F, F + h).map((ee, U) => {
-                      const ie = p && U == u - F,
-                        le = a[-1] && a[-1][U] > 0 ? n().Touched : void 0;
-                      return (0, i.jsx)(
-                        A.Z,
+                    g.slice(F, F + h).map((Q, U) => {
+                      const fe = T && U == d - F,
+                        pe = a[-1] && a[-1][U] > 0 ? n().Touched : void 0;
+                      return (0, l.jsx)(
+                        j.Z,
                         {
-                          autoFocus: ie && ne,
+                          autoFocus: fe && ie,
                           focusable: !0,
-                          className: (0, w.A)(
+                          className: (0, R.A)(
                             `Col_${U}`,
                             n().KeyboardKeyHitArea,
-                            ie ? n().KeyboardImeLutKeyCursor : void 0,
+                            fe ? n().KeyboardImeLutKeyCursor : void 0,
                           ),
-                          onGamepadFocus: () => R(`KB.LUT.${U}`),
-                          onGamepadBlur: x,
+                          onGamepadFocus: () => L(`KB.LUT.${U}`),
+                          onGamepadBlur: E,
                           "data-key": `IME_LUT_Select_${U}`,
                           "data-key-row": -1,
                           "data-key-col": U,
-                          children: (0, i.jsx)(A.Z, {
-                            className: (0, w.A)(
-                              le,
+                          children: (0, l.jsx)(j.Z, {
+                            className: (0, R.A)(
+                              pe,
                               n().KeyboardKey,
                               n().KeyboardImeLutKey,
-                              L === `KB.LUT.${U}` ? re : void 0,
+                              w === `KB.LUT.${U}` ? le : void 0,
                             ),
-                            children: (0, i.jsx)("span", { children: M(ee) }),
+                            children: (0, l.jsx)("span", { children: O(Q) }),
                           }),
                         },
                         `KB.LUT.${U}`,
                       );
                     }),
-                  ye &&
-                    (0, i.jsx)(
-                      A.Z,
+                  ae &&
+                    (0, l.jsx)(
+                      j.Z,
                       {
                         autoFocus: !1,
                         focusable: !0,
-                        className: (0, w.A)(
+                        className: (0, R.A)(
                           n().KeyboardKeyHitArea,
                           n().KeyboardImeLutNavSize,
                         ),
-                        onGamepadFocus: () => R("KB.LUT.Up"),
-                        onGamepadBlur: x,
+                        onGamepadFocus: () => L("KB.LUT.Up"),
+                        onGamepadBlur: E,
                         "data-key": "IME_LUT_Up",
-                        children: (0, i.jsxs)(A.Z, {
-                          className: (0, w.A)(
+                        children: (0, l.jsxs)(j.Z, {
+                          className: (0, R.A)(
                             n().KeyboardKey,
                             n().KeyboardImeLutNav,
                             n().KeyboardImeLutKey,
-                            L === "KB.LUT.Up" ? re : void 0,
+                            w === "KB.LUT.Up" ? le : void 0,
                           ),
                           children: [
                             e.bShowGlyphs &&
-                              (0, i.jsx)(oe.WD, {
+                              (0, l.jsx)(oe.WD, {
                                 className: n().KeyboardImeLutActionGlyph,
-                                button: q.g4.LeftBumper,
+                                button: ee.g4.LeftBumper,
                               }),
-                            O.KaratLeft({}),
+                            N.KaratLeft({}),
                           ],
                         }),
                       },
                       "KB.LUT.Up",
                     ),
-                  ge &&
-                    (0, i.jsx)(
-                      A.Z,
+                  se &&
+                    (0, l.jsx)(
+                      j.Z,
                       {
                         autoFocus: !1,
                         focusable: !0,
-                        className: (0, w.A)(
+                        className: (0, R.A)(
                           n().KeyboardKeyHitArea,
                           n().KeyboardImeLutNavSize,
                         ),
-                        onGamepadFocus: () => R("KB.LUT.Down"),
-                        onGamepadBlur: x,
+                        onGamepadFocus: () => L("KB.LUT.Down"),
+                        onGamepadBlur: E,
                         "data-key": "IME_LUT_Down",
-                        children: (0, i.jsxs)(A.Z, {
-                          className: (0, w.A)(
+                        children: (0, l.jsxs)(j.Z, {
+                          className: (0, R.A)(
                             n().KeyboardKey,
                             n().KeyboardImeLutNav,
                             n().KeyboardImeLutKey,
-                            L === "KB.LUT.Down" ? re : void 0,
+                            w === "KB.LUT.Down" ? le : void 0,
                           ),
                           children: [
-                            O.KaratRight({}),
+                            N.KaratRight({}),
                             e.bShowGlyphs &&
-                              (0, i.jsx)(oe.WD, {
+                              (0, l.jsx)(oe.WD, {
                                 className: n().KeyboardImeLutActionGlyph,
-                                button: q.g4.RightBumper,
+                                button: ee.g4.RightBumper,
                               }),
                           ],
                         }),
@@ -693,19 +695,19 @@
               "KB.IME",
             );
           },
-          Pt = (e) => {
+          Ot = (e) => {
             const {
               VirtualKeyboardManager: t,
               onActiveElementChanged: o,
               onActiveElementClicked: a,
             } = e;
             return (
-              (0, E.hL)(t.OnActiveElementChanged, o),
-              (0, E.hL)(t.OnActiveElementClicked, a),
+              (0, x.hL)(t.OnActiveElementChanged, o),
+              (0, x.hL)(t.OnActiveElementClicked, a),
               null
             );
           };
-        var Ft = ((e) => (
+        var Nt = ((e) => (
             (e[(e.Off = 0)] = "Off"),
             (e[(e.OneShot = 1)] = "OneShot"),
             (e[(e.Stuck = 2)] = "Stuck"),
@@ -713,39 +715,39 @@
             (e[(e.Held = 4)] = "Held"),
             (e[(e.On = 7)] = "On"),
             e
-          ))(Ft || {}),
-          Bt = ((e) => (
+          ))(Nt || {}),
+          Ht = ((e) => (
             (e[(e.Layout_Standard = 0)] = "Layout_Standard"),
             (e[(e.Layout_Numeric = 1)] = "Layout_Numeric"),
             (e[(e.Layout_Emoji = 2)] = "Layout_Emoji"),
             (e[(e.Layout_SteamItems = 3)] = "Layout_SteamItems"),
             e
-          ))(Bt || {});
-        function we(e) {
+          ))(Ht || {});
+        function Re(e) {
           return (e & 3) === 0 ? 2 : 0;
         }
-        function Ve(e) {
+        function We(e) {
           const t = e & 3;
           return t === 0 ? 1 : t === 1 ? 2 : 0;
         }
         function V(e) {
           return (e & 7) !== 0;
         }
-        function Se(e) {
+        function ve(e) {
           const t = e & 3;
           return (t === 1 ? 0 : t) | (e & 4);
         }
-        var Ot = ((e) => (
+        var _t = ((e) => (
           (e[(e.Shared = 0)] = "Shared"),
           (e[(e.LPad = 1)] = "LPad"),
           (e[(e.RPad = 2)] = "RPad"),
           (e[(e.Count = 3)] = "Count"),
           e
-        ))(Ot || {});
-        function Nt(e) {
+        ))(_t || {});
+        function Mt(e) {
           return e === m.Vz.LPAD ? 1 : e === m.Vz.RPAD ? 2 : 0;
         }
-        function Ue() {
+        function ze() {
           return {
             holdTarget: null,
             longPressRow: null,
@@ -754,55 +756,55 @@
             nTimer: null,
           };
         }
-        const Ht = 48;
-        function ze(e, t, o) {
+        const Gt = 48;
+        function Ze(e, t, o) {
           return e.findIndex(
             (a) => a.longPressRow === t && a.longPressCol === o,
           );
         }
-        function ve(e) {
-          switch (W.O.GetKeyboardLayoutSettings().currentLayout) {
-            case H.Gx.oI:
-            case H.Gx.vO:
+        function Se(e) {
+          switch (z.O.GetKeyboardLayoutSettings().currentLayout) {
+            case M.Gx.oI:
+            case M.Gx.vO:
               return e.toLocaleUpperCase("TR");
             default:
               return e.toLocaleUpperCase();
           }
         }
-        function _t(e) {
+        function Vt(e) {
           const {
               strKey: t,
               column: o,
               parentRow: a,
               parentCol: s,
-              navRef: l,
+              navRef: i,
               autoFocus: r,
               focusClassName: c,
               className: f,
-              onFocus: K,
+              onFocus: C,
               onHover: g,
-              children: u,
+              children: d,
             } = e,
             {
               onGamepadFocus: h,
               onGamepadBlur: k,
-              onMouseEnter: p,
+              onMouseEnter: T,
               onMouseLeave: S,
-            } = me(t, K, g),
-            L = v.useCallback(
-              (x) => {
-                x.stopPropagation(), h(x);
+            } = ge(t, C, g),
+            w = K.useCallback(
+              (E) => {
+                E.stopPropagation(), h(E);
               },
               [h],
             ),
-            R = v.useCallback(
-              (x) => {
-                x.stopPropagation(), k(x);
+            L = K.useCallback(
+              (E) => {
+                E.stopPropagation(), k(E);
               },
               [k],
             );
-          return (0, i.jsx)(A.Z, {
-            navRef: l,
+          return (0, l.jsx)(j.Z, {
+            navRef: i,
             autoFocus: r,
             focusable: !0,
             "data-key": t,
@@ -810,32 +812,32 @@
             "data-key-is-literal": 1,
             "parent-row": a,
             "parent-col": s,
-            className: (0, w.A)(n().KeyboardExtendedKey, f),
+            className: (0, R.A)(n().KeyboardExtendedKey, f),
             focusClassName: c,
-            onGamepadFocus: L,
-            onGamepadBlur: R,
-            onMouseEnter: p,
+            onGamepadFocus: w,
+            onGamepadBlur: L,
+            onMouseEnter: T,
             onMouseLeave: S,
-            children: (0, i.jsx)("span", {
+            children: (0, l.jsx)("span", {
               style: { pointerEvents: "none" },
-              children: u,
+              children: d,
             }),
           });
         }
-        function Mt(e) {
+        function Ut(e) {
           const t = e.bExtendRight ? 0 : e.extendedChars.length - 1;
-          let o = de.oy.ActiveNavigationSourceType === m.Vz.GAMEPAD;
-          const a = v.useRef(void 0);
-          v.useEffect(() => {
+          let o = he.oy.ActiveNavigationSourceType === m.Vz.GAMEPAD;
+          const a = K.useRef(void 0);
+          K.useEffect(() => {
             o && a.current.TakeFocus();
           }, [o]);
-          let s = (0, w.A)(
+          let s = (0, R.A)(
             n().KeyboardExtendedRow,
             e.bExtendRight ? n().Right : n().Left,
             e.parentRow == 0 ? n().TopRow : void 0,
           );
-          return (0, i.jsxs)(
-            A.Z,
+          return (0, l.jsxs)(
+            j.Z,
             {
               className: s,
               style: e.style,
@@ -845,13 +847,13 @@
               onMoveDown: () => !0,
               focusable: !1,
               children: [
-                e.extendedChars.map((l, r) =>
-                  (0, i.jsx)(
-                    _t,
+                e.extendedChars.map((i, r) =>
+                  (0, l.jsx)(
+                    Vt,
                     {
                       navRef: r === t && o ? a : null,
                       autoFocus: r === t && o,
-                      strKey: l,
+                      strKey: i,
                       column: r,
                       parentRow: e.parentRow,
                       parentCol: e.parentCol,
@@ -860,10 +862,10 @@
                       onFocus: e.onKeyFocus,
                       onHover: e.onKeyHover,
                       children: e.bIsUpperCase
-                        ? ve(e.extendedChars[r])
+                        ? Se(e.extendedChars[r])
                         : e.extendedChars[r],
                     },
-                    `KB.Ext_${l}`,
+                    `KB.Ext_${i}`,
                   ),
                 ),
                 e.children,
@@ -890,26 +892,26 @@
             ? o.replace("%TINT_PLACEHOLDER%", a[t])
             : o + a[t];
         }
-        function me(e, t, o) {
-          const a = v.useCallback(
+        function ge(e, t, o) {
+          const a = K.useCallback(
               (c) => {
                 t(e, !0);
               },
               [e, t],
             ),
-            s = v.useCallback(
+            s = K.useCallback(
               (c) => {
                 t(e, !1);
               },
               [e, t],
             ),
-            l = v.useCallback(
+            i = K.useCallback(
               (c) => {
                 o(e, !0);
               },
               [e, o],
             ),
-            r = v.useCallback(
+            r = K.useCallback(
               (c) => {
                 o(e, !1);
               },
@@ -918,27 +920,27 @@
           return {
             onGamepadFocus: a,
             onGamepadBlur: s,
-            onMouseEnter: l,
+            onMouseEnter: i,
             onMouseLeave: r,
           };
         }
-        function Gt(e) {
+        function Wt(e) {
           const {
               emoji: t,
               index: o,
               tint: a,
               column: s,
-              parentRow: l,
+              parentRow: i,
               parentCol: r,
               navRef: c,
               autoFocus: f,
-              focusClassName: K,
+              focusClassName: C,
               className: g,
-              onFocus: u,
+              onFocus: d,
               onHover: h,
             } = e,
-            k = me(t, u, h);
-          return (0, i.jsx)(A.Z, {
+            k = ge(t, d, h);
+          return (0, l.jsx)(j.Z, {
             navRef: c,
             autoFocus: f,
             focusable: !0,
@@ -946,50 +948,50 @@
             "data-key-col": s,
             "data-emoji-index": o,
             "data-emoji-tint": a,
-            "parent-row": l,
+            "parent-row": i,
             "parent-col": r,
-            className: (0, w.A)(n().KeyboardExtendedKey, g),
-            focusClassName: K,
+            className: (0, R.A)(n().KeyboardExtendedKey, g),
+            focusClassName: C,
             ...k,
-            children: (0, i.jsx)("span", { children: t }),
+            children: (0, l.jsx)("span", { children: t }),
           });
         }
-        function Vt(e) {
+        function zt(e) {
           const {
             emoji: t,
             emojiIndex: o,
             parentRow: a,
             parentCol: s,
-            bExtendRight: l,
+            bExtendRight: i,
             style: r,
             nExtendedKeyTouched: c,
             children: f,
-            onKeyFocus: K,
+            onKeyFocus: C,
             onKeyHover: g,
           } = e;
-          let u = [],
+          let d = [],
             h = [];
-          for (let x = Z.C.Light; x <= Z.C.Dark; x++)
-            u.push(Le(t, x)), h.push(x);
+          for (let E = Z.C.Light; E <= Z.C.Dark; E++)
+            d.push(Le(t, E)), h.push(E);
           let k = Le(t, Z.C.Default);
-          l
-            ? (u.unshift(k), h.unshift(Z.C.Default))
-            : (u.push(k), h.push(Z.C.Default));
-          const p = l ? 0 : u.length - 1;
-          let S = de.oy.ActiveNavigationSourceType === m.Vz.GAMEPAD;
-          const L = v.useRef(void 0);
-          v.useEffect(() => {
-            S && L.current.TakeFocus();
+          i
+            ? (d.unshift(k), h.unshift(Z.C.Default))
+            : (d.push(k), h.push(Z.C.Default));
+          const T = i ? 0 : d.length - 1;
+          let S = he.oy.ActiveNavigationSourceType === m.Vz.GAMEPAD;
+          const w = K.useRef(void 0);
+          K.useEffect(() => {
+            S && w.current.TakeFocus();
           }, [S]);
-          let R = (0, w.A)(
+          let L = (0, R.A)(
             n().KeyboardExtendedRow,
-            l ? n().Right : n().Left,
+            i ? n().Right : n().Left,
             a == 0 ? n().TopRow : void 0,
           );
-          return (0, i.jsxs)(
-            A.Z,
+          return (0, l.jsxs)(
+            j.Z,
             {
-              className: R,
+              className: L,
               style: r,
               onMoveLeft: () => !0,
               onMoveRight: () => !0,
@@ -997,177 +999,177 @@
               onMoveDown: () => !0,
               focusable: !1,
               children: [
-                u.map((x, P) =>
-                  (0, i.jsx)(
-                    Gt,
+                d.map((E, D) =>
+                  (0, l.jsx)(
+                    Wt,
                     {
-                      navRef: P === p && S ? L : null,
-                      autoFocus: P === p && S,
-                      emoji: x,
-                      column: P,
+                      navRef: D === T && S ? w : null,
+                      autoFocus: D === T && S,
+                      emoji: E,
+                      column: D,
                       index: o,
-                      tint: h[P],
+                      tint: h[D],
                       parentRow: a,
                       parentCol: s,
-                      className: (0, w.A)(
+                      className: (0, R.A)(
                         n().KeyboardExtendedKey,
-                        c == P && n().Touched,
+                        c == D && n().Touched,
                       ),
                       focusClassName: f ? void 0 : n().Focused,
-                      onFocus: K,
+                      onFocus: C,
                       onHover: g,
                     },
-                    `KB.Ext_${x}`,
+                    `KB.Ext_${E}`,
                   ),
                 ),
                 f,
               ],
             },
-            `KB.EmojiTintRow_${u[p]}`,
+            `KB.EmojiTintRow_${d[T]}`,
           );
         }
-        function Ut(e) {
+        function Zt(e) {
           return {
             x: { min: e.left, max: e.right },
             y: { min: e.top, max: e.bottom },
           };
         }
-        function zt(e) {
-          return Ut(e.getBoundingClientRect());
+        function Xt(e) {
+          return Zt(e.getBoundingClientRect());
         }
-        function Re(e) {
-          return (0, ft.wH)(zt(e));
+        function Ae(e) {
+          return (0, bt.wH)(Xt(e));
         }
-        function Wt(e) {
+        function $t(e) {
           const {
               emoji: t,
               row: o,
               column: a,
               bAnyTrackpadActive: s,
-              strTintedEmoji: l,
+              strTintedEmoji: i,
               onFocus: r,
               onHover: c,
               className: f,
-              children: K,
+              children: C,
               style: g,
-              onGamepadFocus: u,
+              onGamepadFocus: d,
             } = e,
-            h = l,
-            k = v.useCallback(
-              (R) => {
-                u(R), r(h, !0);
+            h = i,
+            k = K.useCallback(
+              (L) => {
+                d(L), r(h, !0);
               },
-              [h, u, r],
+              [h, d, r],
             ),
-            p = v.useCallback(() => {
+            T = K.useCallback(() => {
               r(h, !1);
             }, [h, r]),
-            S = v.useCallback(() => {
+            S = K.useCallback(() => {
               c(h, !0);
             }, [h, c]),
-            L = v.useCallback(() => {
+            w = K.useCallback(() => {
               c(h, !1);
             }, [h, c]);
-          return (0, i.jsxs)(A.Z, {
+          return (0, l.jsxs)(j.Z, {
             id: `KB.${t.category.key}_Emoji_${o}.${a}`,
             focusable: !0,
-            "data-key": l,
+            "data-key": i,
             "data-key-row": o,
             "data-key-col": a,
             "data-emoji-index": t.index,
             "data-category-index": t.category.categoryIndex,
-            className: (0, w.A)(n().KeyboardEmojiKey, f),
+            className: (0, R.A)(n().KeyboardEmojiKey, f),
             focusClassName: s ? n().FocusedIgnored : n().Focused,
             onGamepadFocus: k,
-            onGamepadBlur: p,
+            onGamepadBlur: T,
             onMouseEnter: S,
-            onMouseLeave: L,
+            onMouseLeave: w,
             style: g,
-            children: [(0, i.jsx)("span", { children: l }), K],
+            children: [(0, l.jsx)("span", { children: i }), C],
           });
         }
-        function Zt(e) {
+        function Yt(e) {
           const { EmojiStore: t, mapEmoji: o, bAnyTrackpadActive: a } = e;
           let s = 44,
-            l = 58,
+            i = 58,
             r = o.length,
             c = o[0].length,
-            f = 15 * l,
-            K = r * s,
-            g = function (u) {
+            f = 15 * i,
+            C = r * s,
+            g = function (d) {
               if (
-                o[u.rowIndex] === void 0 ||
-                o[u.rowIndex][u.columnIndex] === void 0
+                o[d.rowIndex] === void 0 ||
+                o[d.rowIndex][d.columnIndex] === void 0
               )
                 return null;
-              const h = o[u.rowIndex][u.columnIndex],
+              const h = o[d.rowIndex][d.columnIndex],
                 k = h.column,
-                p = h.row,
+                T = h.row,
                 S = t.FullEmojiList[h.index].key,
-                L = t.FullEmojiList[h.index].nNumTints === 1,
-                R = L ? Le(S, t.GetEmojiTint(h.index)) : S,
-                x = ze(e.rgLongPress, p, k),
-                P = x >= 0,
-                D =
-                  (e.rgLayoutTouchCount[p] && e.rgLayoutTouchCount[p][k] > 0) ||
-                  (e.keyDown.key == R &&
-                    e.keyDown.keyRow == p &&
+                w = t.FullEmojiList[h.index].nNumTints === 1,
+                L = w ? Le(S, t.GetEmojiTint(h.index)) : S,
+                E = Ze(e.rgLongPress, T, k),
+                D = E >= 0,
+                P =
+                  (e.rgLayoutTouchCount[T] && e.rgLayoutTouchCount[T][k] > 0) ||
+                  (e.keyDown.key == L &&
+                    e.keyDown.keyRow == T &&
                     e.keyDown.keyCol == k)
                     ? n().Touched
                     : void 0;
               let B = !0,
-                j;
-              if (L && P && e.rgLongPress[x].holdTarget !== null) {
-                const _ = e.rgLongPress[x].holdTarget;
-                let M = Re(_),
-                  F = Re(_.ownerDocument.body);
-                (B = M.x < F.x),
-                  (j = (0, i.jsx)(Vt, {
+                A;
+              if (w && D && e.rgLongPress[E].holdTarget !== null) {
+                const H = e.rgLongPress[E].holdTarget;
+                let O = Ae(H),
+                  F = Ae(H.ownerDocument.body);
+                (B = O.x < F.x),
+                  (A = (0, l.jsx)(zt, {
                     emoji: S,
                     emojiIndex: h.index,
-                    parentRow: p,
+                    parentRow: T,
                     parentCol: k,
                     bExtendRight: B,
-                    style: e.fnExtendedRowStyle(x, Z.C.Dark - Z.C.Light + 2, B),
+                    style: e.fnExtendedRowStyle(E, Z.C.Dark - Z.C.Light + 2, B),
                     nExtendedKeyTouched: e.nExtendedKeyTouched,
                     onKeyFocus: e.onKeyFocus,
                     onKeyHover: e.onKeyHover,
-                    children: e.fnRenderExtendedRowTouchpad(x),
+                    children: e.fnRenderExtendedRowTouchpad(E),
                   }));
               }
-              return (0, i.jsx)(
-                Wt,
+              return (0, l.jsx)(
+                $t,
                 {
                   emoji: h,
-                  row: p,
+                  row: T,
                   column: k,
-                  strTintedEmoji: R,
+                  strTintedEmoji: L,
                   bAnyTrackpadActive: a,
-                  className: D,
-                  style: u.style,
+                  className: P,
+                  style: d.style,
                   onGamepadFocus: e.onGamepadFocus,
                   onFocus: e.onKeyFocus,
                   onHover: e.onKeyHover,
-                  children: j,
+                  children: A,
                 },
-                `KB.${h.category.key}_Emoji_${p}.${k}`,
+                `KB.${h.category.key}_Emoji_${T}.${k}`,
               );
             };
-          return (0, i.jsx)(ht.xA, {
+          return (0, l.jsx)(yt.xA, {
             columnCount: c,
             overscanColumnCount: 2,
             rowCount: r,
             width: f,
-            height: K,
-            columnWidth: l,
+            height: C,
+            columnWidth: i,
             rowHeight: s,
             cellRenderer: g,
             className: n().EmojiKeyboardGrid,
             style: { overflowY: "hidden" },
           });
         }
-        function Xt(e) {
-          const t = (0, Et.JP)();
+        function Qt(e) {
+          const t = (0, Rt.JP)();
           let o;
           return (
             e.windowInstance?.IsAnyVRWindow()
@@ -1175,7 +1177,7 @@
                   Paste: !1,
                   AllowMove: !1,
                   Arrows: t.bShowArrowKeys,
-                  DoneInsteadOfHide: t.bShowDoneKey && (0, it.Wx)(),
+                  DoneInsteadOfHide: t.bShowDoneKey && (0, ct.Wx)(),
                 })
               : (o = {
                   Paste: !0,
@@ -1183,75 +1185,75 @@
                   Arrows: !0,
                   DoneInsteadOfHide: !1,
                 }),
-            (0, i.jsx)(he.QO.Consumer, {
-              children: (a) => (0, i.jsx)(d, { configContext: a, ...e, ...o }),
+            (0, l.jsx)(ye.QO.Consumer, {
+              children: (a) => (0, l.jsx)(u, { configContext: a, ...e, ...o }),
             })
           );
         }
-        const We = {
+        const Xe = {
             key: "SwitchKeys_Recent",
-            label: O.Recent,
-            type: T.dI.Character,
+            label: N.Recent,
+            type: b.dI.Character,
             emojiCategoryIndex: 0,
             strLocDescription: "#Emoji_Recent",
           },
-          Ze = {
+          $e = {
             key: "SwitchKeys_People",
-            label: O.Emoji,
-            type: T.dI.Character,
+            label: N.Emoji,
+            type: b.dI.Character,
             emojiCategoryIndex: 1,
             strLocDescription: "#Emoji_People",
           },
-          Xe = {
+          Ye = {
             key: "SwitchKeys_Activity",
-            label: O.Activities,
-            type: T.dI.Character,
+            label: N.Activities,
+            type: b.dI.Character,
             emojiCategoryIndex: 2,
             strLocDescription: "#Emoji_Activity",
           },
-          $e = {
+          Qe = {
             key: "SwitchKeys_Animals",
-            label: O.Nature,
-            type: T.dI.Character,
+            label: N.Nature,
+            type: b.dI.Character,
             emojiCategoryIndex: 3,
             strLocDescription: "#Emoji_Animals",
           },
-          Ye = {
+          Je = {
             key: "SwitchKeys_Food",
-            label: O.Food,
-            type: T.dI.Character,
+            label: N.Food,
+            type: b.dI.Character,
             emojiCategoryIndex: 4,
             strLocDescription: "#Emoji_Food",
           },
-          Qe = {
+          qe = {
             key: "SwitchKeys_Travel",
-            label: O.Travel,
-            type: T.dI.Character,
+            label: N.Travel,
+            type: b.dI.Character,
             emojiCategoryIndex: 5,
             strLocDescription: "#Emoji_Travel",
           },
-          Je = {
+          et = {
             key: "SwitchKeys_Objects",
-            label: O.Objects,
-            type: T.dI.Character,
+            label: N.Objects,
+            type: b.dI.Character,
             emojiCategoryIndex: 6,
             strLocDescription: "#Emoji_Objects",
           },
-          qe = {
+          tt = {
             key: "SwitchKeys_Symbols",
-            label: O.Symbols,
-            type: T.dI.Character,
+            label: N.Symbols,
+            type: b.dI.Character,
             emojiCategoryIndex: 7,
             strLocDescription: "#Emoji_Symbols",
           },
-          et = {
+          ot = {
             key: "SwitchKeys_Flags",
-            label: O.Flags,
-            type: T.dI.Character,
+            label: N.Flags,
+            type: b.dI.Character,
             emojiCategoryIndex: 8,
             strLocDescription: "#Emoji_Flags",
           };
-        let d = class extends v.Component {
+        let u = class extends K.Component {
           m_emojiCategories;
           InitEmojiCategories(e) {
             if (this.m_emojiCategories) return;
@@ -1281,7 +1283,7 @@
               startColumn: 0,
               categoryIndex: 0,
             });
-            let a = Math.ceil(e.GetMaxRecentEmoji() / d.s_numEmojiRows);
+            let a = Math.ceil(e.GetMaxRecentEmoji() / u.s_numEmojiRows);
             for (let s = 0; s < t.length; s++)
               this.m_emojiCategories.push({
                 key: o[s],
@@ -1290,23 +1292,24 @@
                 categoryIndex: s + 1,
               }),
                 s < t.length - 1 &&
-                  (a += Math.ceil((t[s + 1] - t[s]) / d.s_numEmojiRows));
+                  (a += Math.ceil((t[s + 1] - t[s]) / u.s_numEmojiRows));
           }
           WithEmojiStore(e) {
             this.InitEmojiCategories(G._), e(G._);
           }
           m_keyboardDiv = null;
-          m_keyboardNavRef = v.createRef();
+          m_keyboardNavRef = K.createRef();
           m_emojiHeaderMapRefs = new Map();
-          m_emojiScrollRef = v.createRef();
+          m_emojiScrollRef = K.createRef();
           m_resizeObserver;
-          m_trackpadInput = new gt.E();
+          m_trackpadInput = new pt.E();
           m_leftTrackpad = { active: !1, x: 0, y: 0, lastElement: void 0 };
           m_rightTrackpad = { active: !1, x: 0, y: 0, lastElement: void 0 };
           m_nBackspaceTimer = null;
-          m_rgLongPress = Array.from({ length: 3 }, Ue);
+          m_rgLongPress = Array.from({ length: 3 }, ze);
           m_nOpenExtendedRows = 0;
           m_mapTouched = new Set();
+          m_trackpadHover = (0, Tt.Jc)(!1);
           constructor(e) {
             super(e),
               (this.state = {
@@ -1320,11 +1323,11 @@
                 rgLayoutTouchCount: [],
                 nExtendedKeyTouched: -1,
                 layoutState: 0,
-                standardLayout: (0, T.r_)(),
+                standardLayout: (0, b.r_)(),
                 curEmojiCategoryIndex: 0,
                 bIsInMultitouch: !1,
                 watchdogTimer: null,
-                rgLongPress: Array.from({ length: 3 }, Ue),
+                rgLongPress: Array.from({ length: 3 }, ze),
                 keyDown: { key: null, keyRow: -1, keyCol: -1 },
                 bLeftTrackpadActive: !1,
                 bRightTrackpadActive: !1,
@@ -1336,7 +1339,7 @@
           }
           AnnounceToScreenReader(e) {
             e != this.state.screenReaderElement &&
-              (Ie.Debug("Announcing", e),
+              (we.Debug("Announcing", e),
               this.setState({ screenReaderElement: e }));
           }
           m_timerShowLayoutName;
@@ -1355,9 +1358,9 @@
               1,
             ),
               this.SetLayoutNameTimeout(),
-              this.AnnounceToScreenReader((0, $.we)((0, T.r_)().locToken)),
+              this.AnnounceToScreenReader((0, $.we)((0, b.r_)().locToken)),
               this.setState({
-                standardLayout: (0, T.r_)(),
+                standardLayout: (0, b.r_)(),
                 bShowLayoutName: !0,
               });
           }
@@ -1387,27 +1390,27 @@
               strKeycode: o,
               strIsLiteral: a,
               strKeyHandler: s,
-              strEmojiIndex: l,
+              strEmojiIndex: i,
               strEmojiTint: r,
               strShifted: c,
               strDeadKeyNext: f,
-              strDeadKeyCombined: K,
+              strDeadKeyCombined: C,
             } = e;
-            const g = d.s_keyToggleData[t];
+            const g = u.s_keyToggleData[t];
             if (g)
               g === "CapsLock"
-                ? this.setState((u, h) => ({
-                    ...u,
+                ? this.setState((d, h) => ({
+                    ...d,
                     toggleStates: {
-                      ...u.toggleStates,
-                      [g]: we(u.toggleStates[g]),
+                      ...d.toggleStates,
+                      [g]: Re(d.toggleStates[g]),
                     },
                   }))
-                : this.setState((u, h) => ({
-                    ...u,
+                : this.setState((d, h) => ({
+                    ...d,
                     toggleStates: {
-                      ...u.toggleStates,
-                      [g]: Ve(u.toggleStates[g]),
+                      ...d.toggleStates,
+                      [g]: We(d.toggleStates[g]),
                     },
                   }));
             else {
@@ -1415,7 +1418,7 @@
                 if (t.endsWith("ABC")) this.setState({ layoutState: 0 });
                 else if (t.endsWith("123")) this.setState({ layoutState: 1 });
                 else if (t.endsWith("Steam"))
-                  this.WithEmojiStore((u) => {
+                  this.WithEmojiStore((d) => {
                     if (this.props.bStandalone)
                       this.setState({
                         layoutState: 2,
@@ -1423,7 +1426,7 @@
                       });
                     else {
                       let h =
-                        d.s_rgSteamItemCategories.indexOf("RecentSteamItems") +
+                        u.s_rgSteamItemCategories.indexOf("RecentSteamItems") +
                         this.m_emojiCategories.length;
                       this.setState({
                         layoutState: 3,
@@ -1431,11 +1434,11 @@
                       });
                     }
                   });
-                else if (t.endsWith("Layout")) (0, T.gM)(this.OnLayoutChanged);
+                else if (t.endsWith("Layout")) (0, b.gM)(this.OnLayoutChanged);
                 else if (t.endsWith("Emoji")) this.setState({ layoutState: 2 });
                 else {
-                  const u = t.replace("SwitchKeys_", "");
-                  let h = d.s_rgSteamItemCategories.indexOf(u);
+                  const d = t.replace("SwitchKeys_", "");
+                  let h = u.s_rgSteamItemCategories.indexOf(d);
                   this.WithEmojiStore((k) => {
                     if (h != -1)
                       (h += this.m_emojiCategories.length),
@@ -1444,14 +1447,14 @@
                           curEmojiCategoryIndex: h,
                         });
                     else {
-                      const p = this.m_emojiCategories.find(
-                        ({ key: S }) => S === u,
+                      const T = this.m_emojiCategories.find(
+                        ({ key: S }) => S === d,
                       );
-                      p !== void 0 &&
-                        (this.OnSelectEmojiCategory(p),
+                      T !== void 0 &&
+                        (this.OnSelectEmojiCategory(T),
                         this.setState({
                           layoutState: 2,
-                          curEmojiCategoryIndex: p.categoryIndex,
+                          curEmojiCategoryIndex: T.categoryIndex,
                         }));
                     }
                   });
@@ -1464,33 +1467,33 @@
                     ? this.context &&
                       this.context.process_key_event(X.Page_Up, 0, 0)
                     : t.startsWith("IME_LUT_Select_") &&
-                      (0, J.CB)(
+                      (0, q.CB)(
                         this.context,
                         this.state.standardLayout.layout,
                         parseInt(t.substring(15)),
                       );
               else {
-                const u = parseInt(l);
+                const d = parseInt(i);
                 if (
                   this.state.layoutState === 2 &&
-                  !isNaN(u) &&
-                  (G._.AddRecentEmoji(u), r !== null)
+                  !isNaN(d) &&
+                  (G._.AddRecentEmoji(d), r !== null)
                 ) {
                   let h = parseInt(r);
-                  G._.AddEmojiTint(u, h);
+                  G._.AddEmojiTint(d, h);
                 }
                 t.length === 1 &&
                   (V(this.state.toggleStates.Shift) ||
                     V(this.state.toggleStates.CapsLock)) &&
                   !c &&
-                  (t = ve(t)),
+                  (t = Se(t)),
                   s
                     ? this.HandleSpecialBehaviorForKey(t, s)
                     : f
                       ? this.props.VirtualKeyboardManager.HandleDeadKeyDown(
                           t,
                           f,
-                          K,
+                          C,
                         )
                       : t === "VKMove"
                         ? this.RotateWindowPosition()
@@ -1508,47 +1511,47 @@
                                 t,
                                 V(this.state.toggleStates.Shift),
                               ))
-                            : (async (k, p) => {
+                            : (async (k, T) => {
                                 let S = !1;
                                 if (this.context) {
-                                  let L;
+                                  let w;
                                   switch (k) {
                                     case "Backspace":
-                                      L = X.BackSpace;
+                                      w = X.BackSpace;
                                       break;
                                     case "Tab":
-                                      L = X.Tab;
+                                      w = X.Tab;
                                       break;
                                     case "Enter":
-                                      L = X.Return;
+                                      w = X.Return;
                                       break;
                                     default:
-                                      L = k.charCodeAt(0);
+                                      w = k.charCodeAt(0);
                                       break;
                                   }
-                                  const R = parseFloat(o) || 0,
-                                    x = p ? IBus.ModifierType.SHIFT_MASK : 0;
+                                  const L = parseFloat(o) || 0,
+                                    E = T ? IBus.ModifierType.SHIFT_MASK : 0;
                                   S = !!(await this.context.process_key_event(
+                                    w,
                                     L,
-                                    R,
-                                    x,
+                                    E,
                                   ));
                                 }
                                 S ||
                                   this.props.VirtualKeyboardManager.HandleVirtualKeyDown(
                                     k,
-                                    p,
+                                    T,
                                   );
                               })(t, V(this.state.toggleStates.Shift));
               }
-              this.setState((u, h) => ({
-                ...u,
+              this.setState((d, h) => ({
+                ...d,
                 toggleStates: {
-                  ...u.toggleStates,
-                  Shift: Se(u.toggleStates.Shift),
-                  Control: Se(u.toggleStates.Control),
-                  Alt: Se(u.toggleStates.Alt),
-                  AltGr: Se(u.toggleStates.AltGr),
+                  ...d.toggleStates,
+                  Shift: ve(d.toggleStates.Shift),
+                  Control: ve(d.toggleStates.Control),
+                  Alt: ve(d.toggleStates.Alt),
+                  AltGr: ve(d.toggleStates.AltGr),
                 },
               }));
             }
@@ -1581,7 +1584,7 @@
                 );
           }
           OnCommitText(e) {
-            (e = e.replace(/./g, (t) => Rt[t] || t)),
+            (e = e.replace(/./g, (t) => Dt[t] || t)),
               this.props.VirtualKeyboardManager.HandleVirtualKeyDown(e, !1);
           }
           OnActiveElementChangedOrClicked(e) {
@@ -1596,7 +1599,7 @@
                 );
                 break;
               case "sticker":
-                rt.LN.TrackStickerUsage(e, Date.now() / 1e3),
+                lt.LN.TrackStickerUsage(e, Date.now() / 1e3),
                   this.props.VirtualKeyboardManager.HandleVirtualKeyDown(
                     `/sticker ${e}\r`,
                     V(this.state.toggleStates.Shift),
@@ -1612,22 +1615,22 @@
           }
           KeyDown(e) {
             const { target: t } = e;
-            if ((0, z.kD)(t)) {
+            if ((0, W.kD)(t)) {
               Ce.eZ.PlayNavSound(Ce.PN.Typing, !0);
               const o = parseFloat(t.getAttribute("data-key-row")),
                 a = parseFloat(t.getAttribute("data-key-col")),
-                l = { key: t.getAttribute("data-key"), keyRow: o, keyCol: a };
-              this.setState({ keyDown: l });
+                i = { key: t.getAttribute("data-key"), keyRow: o, keyCol: a };
+              this.setState({ keyDown: i });
               const r = "clientX" in e,
                 c = r ? m.Vz.MOUSE : e.detail.source,
                 f = t.hasAttribute("data-extended-chars"),
-                K = parseFloat(t.getAttribute("data-emoji-index")),
+                C = parseFloat(t.getAttribute("data-emoji-index")),
                 g =
                   t.hasAttribute("data-emoji-index") &&
-                  G._.FullEmojiList[K].nNumTints != 0,
-                u = this.LongPressSlot(c);
-              u.holdTarget &&
-                (this.TypeKey(u.holdTarget),
+                  G._.FullEmojiList[C].nNumTints != 0,
+                d = this.LongPressSlot(c);
+              d.holdTarget &&
+                (this.TypeKey(d.holdTarget),
                 this.CancelLongPressTimer(c),
                 this.DismissLongPress(c),
                 this.ClearHoldTarget(c)),
@@ -1643,19 +1646,19 @@
             const { target: t } = e,
               o = "clientX" in e ? m.Vz.MOUSE : e.detail.source,
               a = this.LongPressSlot(o);
-            if ((0, z.kD)(t)) {
+            if ((0, W.kD)(t)) {
               const s = { key: null, keyRow: -1, keyCol: -1 };
               this.setState({ keyDown: s });
-              const l = t.hasAttribute("parent-row")
+              const i = t.hasAttribute("parent-row")
                   ? parseFloat(t.getAttribute("parent-row") || "")
                   : null,
                 r = t.hasAttribute("parent-col")
                   ? parseFloat(t.getAttribute("parent-col") || "")
                   : null;
               let c =
-                l !== null &&
+                i !== null &&
                 r !== null &&
-                a.longPressRow === l &&
+                a.longPressRow === i &&
                 a.longPressCol === r;
               a.bSentKey ||
                 (t === a.holdTarget || c
@@ -1677,24 +1680,24 @@
           OnSelectEmojiCategory(e) {
             let t = G._.GetRecentEmoji(),
               o =
-                e.key != "Recent" ? Math.ceil(t.length / d.s_numEmojiRows) : 0,
+                e.key != "Recent" ? Math.ceil(t.length / u.s_numEmojiRows) : 0,
               a =
                 e.key != "Recent"
-                  ? Math.ceil(G._.GetMaxRecentEmoji() / d.s_numEmojiRows)
+                  ? Math.ceil(G._.GetMaxRecentEmoji() / u.s_numEmojiRows)
                   : 0,
-              l = (e.startColumn - a + o) * d.s_EmojiKeyWidth;
+              i = (e.startColumn - a + o) * u.s_EmojiKeyWidth;
             if (this.m_emojiScrollRef.current) {
               let r = this.m_emojiScrollRef.current.firstChild;
-              r.scrollLeft = l;
+              r.scrollLeft = i;
             }
           }
           OnSelectSiblingEmojiCategory(e) {
             this.WithEmojiStore((t) => {
               const o = this.m_emojiCategories.length,
-                a = d.s_rgSteamItemCategories.length;
+                a = u.s_rgSteamItemCategories.length;
               let s = this.state.curEmojiCategoryIndex;
               s += e;
-              let l;
+              let i;
               switch (this.state.layoutState) {
                 case 3:
                   {
@@ -1708,13 +1711,13 @@
                           curEmojiCategoryIndex: s,
                         }),
                           this.OnSelectEmojiCategory(f),
-                          (l = f.key);
+                          (i = f.key);
                       } else
                         this.setState({
                           layoutState: 3,
                           curEmojiCategoryIndex: s,
                         }),
-                          (l = d.s_rgSteamItemCategories[c]);
+                          (i = u.s_rgSteamItemCategories[c]);
                   }
                   break;
                 case 2:
@@ -1724,17 +1727,17 @@
                         layoutState: 3,
                         curEmojiCategoryIndex: s,
                       }),
-                      (l = d.s_rgSteamItemCategories[a - 1]);
+                      (i = u.s_rgSteamItemCategories[a - 1]);
                   else if (s < o && s >= 0) {
                     let c = this.m_emojiCategories[s];
                     this.setState({ layoutState: 2, curEmojiCategoryIndex: s }),
                       this.OnSelectEmojiCategory(c),
-                      (l = c.key);
+                      (i = c.key);
                   }
                   break;
               }
-              let r = l
-                ? this.m_emojiHeaderMapRefs.get("SwitchKeys_" + l)
+              let r = i
+                ? this.m_emojiHeaderMapRefs.get("SwitchKeys_" + i)
                 : void 0;
               r && r.current && r.current.TakeFocus();
             });
@@ -1767,7 +1770,7 @@
                 break;
             }
             o &&
-              (0, Ne.AE)(o, t ? "vgp_onbuttondown" : "vgp_onbuttonup", {
+              (0, _e.AE)(o, t ? "vgp_onbuttondown" : "vgp_onbuttonup", {
                 button: m.pR.OK,
                 source: a,
                 is_repeat: !1,
@@ -1785,7 +1788,7 @@
                 this.HandleTrackpadClick(e.detail.button, !0);
                 break;
               case m.pR.TRIGGER_LEFT:
-                this.m_leftTrackpad.active && W.O.TrackpadTypingTriggerAsClick
+                this.m_leftTrackpad.active && z.O.TrackpadTypingTriggerAsClick
                   ? this.HandleTrackpadClick(e.detail.button, !0)
                   : this.setState((t, o) => ({
                       ...t,
@@ -1796,7 +1799,7 @@
                 this.HandleTrackpadClick(e.detail.button, !0);
                 break;
               case m.pR.TRIGGER_RIGHT:
-                this.m_rightTrackpad.active && W.O.TrackpadTypingTriggerAsClick
+                this.m_rightTrackpad.active && z.O.TrackpadTypingTriggerAsClick
                   ? this.HandleTrackpadClick(e.detail.button, !0)
                   : this.DispatchEventByDataKey("Enter", !0);
                 break;
@@ -1837,7 +1840,7 @@
                 break;
               case m.pR.TRIGGER_RIGHT:
                 this.state.bRightTrackpadDown &&
-                W.O.TrackpadTypingTriggerAsClick
+                z.O.TrackpadTypingTriggerAsClick
                   ? this.HandleTrackpadClick(e.detail.button, !1)
                   : this.DispatchEventByDataKey("Enter", !1);
                 break;
@@ -1845,7 +1848,7 @@
                 this.HandleTrackpadClick(e.detail.button, !1);
                 break;
               case m.pR.TRIGGER_LEFT:
-                this.state.bLeftTrackpadDown && W.O.TrackpadTypingTriggerAsClick
+                this.state.bLeftTrackpadDown && z.O.TrackpadTypingTriggerAsClick
                   ? this.HandleTrackpadClick(e.detail.button, !1)
                   : this.setState((t, o) => ({
                       ...t,
@@ -1857,7 +1860,7 @@
                   ...t,
                   toggleStates: {
                     ...t.toggleStates,
-                    CapsLock: we(t.toggleStates.CapsLock),
+                    CapsLock: Re(t.toggleStates.CapsLock),
                   },
                 }));
                 break;
@@ -1877,7 +1880,7 @@
               this.props.windowInstance.BrowserWindow
             )?.document.querySelector('[data-key="' + e + '"]');
             return a
-              ? ((0, Ne.AE)(a, t ? "vgp_onbuttondown" : "vgp_onbuttonup", {
+              ? ((0, _e.AE)(a, t ? "vgp_onbuttondown" : "vgp_onbuttonup", {
                   button: m.pR.OK,
                   source: m.Vz.GAMEPAD,
                   is_repeat: !1,
@@ -1894,7 +1897,7 @@
             );
           }
           LongPressSlot(e) {
-            return this.m_rgLongPress[Nt(e)];
+            return this.m_rgLongPress[Mt(e)];
           }
           CommitLongPressState(e) {
             const t = this.m_rgLongPress.map((o) => ({
@@ -1947,7 +1950,7 @@
                 () => {
                   this.LongPressTimerExpired(t);
                 },
-                o ? d.s_longPressRepeatThreshold : d.s_longPressThreshold,
+                o ? u.s_longPressRepeatThreshold : u.s_longPressThreshold,
               )),
               (a.holdTarget = e),
               this.CommitLongPressState();
@@ -1959,7 +1962,7 @@
               () => {
                 this.BackspaceTimeExpired();
               },
-              e ? d.s_longPressRepeatThreshold : d.s_longPressThreshold,
+              e ? u.s_longPressRepeatThreshold : u.s_longPressThreshold,
             );
             this.m_nBackspaceTimer = o;
           }
@@ -2002,17 +2005,17 @@
           ToggleStatesUpdate(e, t, o) {
             const a = {};
             for (const s in e) {
-              const l = s,
-                r = e[l],
-                c = (t && t[l]) || !1;
-              a[l] = c
+              const i = s,
+                r = e[i],
+                c = (t && t[i]) || !1;
+              a[i] = c
                 ? r | 4
                 : r & 4
                   ? o
                     ? 0
-                    : l === "CapsLock"
-                      ? we(r)
-                      : Ve(r)
+                    : i === "CapsLock"
+                      ? Re(r)
+                      : We(r)
                   : r;
             }
             return a;
@@ -2021,46 +2024,46 @@
             const o = this.LongPressSlot(m.Vz.TOUCH);
             let a = 0,
               s = [],
-              l = -1,
+              i = -1,
               r = null;
             for (let c = 0; c < t.length; ++c) {
               const f = t[c],
-                K = f.target;
-              if ((0, z.kD)(K)) {
-                const g = parseFloat(K.getAttribute("data-key-row") || ""),
-                  u = parseFloat(K.getAttribute("data-key-col") || "");
+                C = f.target;
+              if ((0, W.kD)(C)) {
+                const g = parseFloat(C.getAttribute("data-key-row") || ""),
+                  d = parseFloat(C.getAttribute("data-key-col") || "");
                 if (o.longPressRow !== null && o.longPressCol !== null) {
-                  const p = e.elementFromPoint(f.clientX, f.clientY),
-                    S = p?.hasAttribute("parent-row")
-                      ? parseFloat(p?.getAttribute("parent-row") || "")
+                  const T = e.elementFromPoint(f.clientX, f.clientY),
+                    S = T?.hasAttribute("parent-row")
+                      ? parseFloat(T?.getAttribute("parent-row") || "")
                       : null,
-                    L = p?.hasAttribute("parent-col")
-                      ? parseFloat(p?.getAttribute("parent-col") || "")
+                    w = T?.hasAttribute("parent-col")
+                      ? parseFloat(T?.getAttribute("parent-col") || "")
                       : null;
                   S !== null &&
-                    L !== null &&
-                    (l = parseFloat(p?.getAttribute("data-key-col") || ""));
+                    w !== null &&
+                    (i = parseFloat(T?.getAttribute("data-key-col") || ""));
                 }
                 s[g] === void 0 && (s[g] = []),
-                  s[g][u] || (s[g][u] = 0),
-                  ++s[g][u],
+                  s[g][d] || (s[g][d] = 0),
+                  ++s[g][d],
                   ++a;
-                const h = K.getAttribute("data-key");
+                const h = C.getAttribute("data-key");
                 if (h == null) continue;
-                const k = d.s_keyToggleData[h];
+                const k = u.s_keyToggleData[h];
                 k
                   ? (r === null && (r = {}), (r[k] = !0))
-                  : this.m_mapTouched.has(K) &&
+                  : this.m_mapTouched.has(C) &&
                     o.longPressRow === null &&
                     o.longPressCol === null &&
-                    (o.holdTarget === null || o.holdTarget === K) &&
-                    this.StartLongPressTimer(K, m.Vz.TOUCH);
+                    (o.holdTarget === null || o.holdTarget === C) &&
+                    this.StartLongPressTimer(C, m.Vz.TOUCH);
               }
             }
             this.setState((c, f) => ({
               ...c,
               rgLayoutTouchCount: s,
-              nExtendedKeyTouched: l,
+              nExtendedKeyTouched: i,
               toggleStates: this.ToggleStatesUpdate(
                 c.toggleStates,
                 r,
@@ -2070,10 +2073,10 @@
             }));
           }
           HandleTouchStart(e) {
-            if (!(0, z.kD)(e.target)) return;
+            if (!(0, W.kD)(e.target)) return;
             const t = e.target.ownerDocument;
             if (!t) return;
-            const o = W.O.HapticSettings;
+            const o = z.O.HapticSettings;
             xe.l.PlaySteamDeckHaptic(
               be.t3,
               o.eHapticType,
@@ -2091,15 +2094,15 @@
             }
             for (let s = 0; s < e.changedTouches.length; ++s) {
               const r = e.changedTouches[s].target;
-              (0, z.kD)(r) && this.m_mapTouched.add(r);
+              (0, W.kD)(r) && this.m_mapTouched.add(r);
             }
-            (0, he.rf)() || Ce.eZ.PlayNavSound(Ce.PN.Typing, !0),
+            (0, ye.rf)() || Ce.eZ.PlayNavSound(Ce.PN.Typing, !0),
               this.UpdateTouchState(t, e.touches);
           }
           HandleTouchMove(e) {
             const t = this.LongPressSlot(m.Vz.TOUCH);
             if (t.longPressRow !== null && t.longPressCol !== null) {
-              if (!(0, z.kD)(e.target)) return;
+              if (!(0, W.kD)(e.target)) return;
               const o = e.target.ownerDocument;
               if (!o) return;
               this.UpdateTouchState(o, e.touches);
@@ -2122,22 +2125,22 @@
             );
           }
           HandleTouchEnd(e) {
-            if (!(0, z.kD)(e.target)) return;
+            if (!(0, W.kD)(e.target)) return;
             const t = e.target.ownerDocument;
             if (t) {
               for (let o = 0; o < e.changedTouches.length; ++o) {
                 const a = e.changedTouches[o],
                   s = a.target,
-                  l = this.ElementFromTouch(t, a);
-                if ((0, z.kD)(l) && (0, z.kD)(s)) {
-                  const r = this.IsCharacterFromActiveExtendedMenu(l);
+                  i = this.ElementFromTouch(t, a);
+                if ((0, W.kD)(i) && (0, W.kD)(s)) {
+                  const r = this.IsCharacterFromActiveExtendedMenu(i);
                   if (this.m_mapTouched.has(s) || r) {
                     const f = s.getAttribute("data-key");
                     if (f == null) continue;
-                    const K = d.s_keyToggleData[f];
+                    const C = u.s_keyToggleData[f];
                     !this.LongPressSlot(m.Vz.TOUCH).bSentKey &&
-                      (!K || !this.state.bIsInMultitouch) &&
-                      this.TypeKey(r ? l : s);
+                      (!C || !this.state.bIsInMultitouch) &&
+                      this.TypeKey(r ? i : s);
                   }
                 }
                 this.m_mapTouched.delete(s);
@@ -2164,39 +2167,39 @@
           }
           OnEmojiFocus(e) {
             const { target: t } = e;
-            if ((0, z.kD)(t)) {
+            if ((0, W.kD)(t)) {
               const a = parseInt(t.getAttribute("data-category-index"));
               this.setState({ curEmojiCategoryIndex: a });
             }
           }
           GetEmojiGridProps() {
-            const e = d.s_numEmojiRows;
+            const e = u.s_numEmojiRows;
             let t = [];
             for (let s = 0; s < e; ++s) t.push([]);
             let o = G._.GetRecentEmoji();
             return (
-              this.m_emojiCategories.forEach((s, l) => {
+              this.m_emojiCategories.forEach((s, i) => {
                 let r = 0,
                   c = s.key === "Recent";
                 const f =
-                    l === this.m_emojiCategories.length - 1
+                    i === this.m_emojiCategories.length - 1
                       ? G._.FullEmojiList.length
-                      : this.m_emojiCategories[l + 1].startIndex,
-                  K = c ? o.length : f;
+                      : this.m_emojiCategories[i + 1].startIndex,
+                  C = c ? o.length : f;
                 for (let g = 0; g < e; ++g) {
-                  let u = s.startIndex + g,
+                  let d = s.startIndex + g,
                     h = 0;
-                  for (; u < K; ) {
-                    const k = c ? o[u] : u,
-                      p = h + s.startColumn;
+                  for (; d < C; ) {
+                    const k = c ? o[d] : d,
+                      T = h + s.startColumn;
                     let S = {
                       index: k,
                       emoji: G._.FullEmojiList[k],
                       category: s,
                       row: g,
-                      column: p,
+                      column: T,
                     };
-                    t[g].push(S), (u += e), h++, (r = Math.max(h, r));
+                    t[g].push(S), (d += e), h++, (r = Math.max(h, r));
                   }
                   for (; h < r; ++h) t[g].push(void 0);
                 }
@@ -2218,13 +2221,13 @@
             );
           }
           GetKeyboardThemeClassName() {
-            return lt.iG.GetKeyboardSkinTheme() ?? "DefaultTheme";
+            return dt.iG.GetKeyboardSkinTheme() ?? "DefaultTheme";
           }
           GetKeyClassNameForTheme(e, t, o) {
             let a = "Col_" + o;
             if (e instanceof Object) {
               let s = e;
-              return s.type != T.dI.Spacebar ? a + " KeyTheme_" + s.key : null;
+              return s.type != b.dI.Spacebar ? a + " KeyTheme_" + s.key : null;
             }
             return a + " KeyTheme_" + e;
           }
@@ -2235,8 +2238,8 @@
           }
           FilterButtonForTrackpad(e) {
             if (
-              !(this.state.bLeftTrackpadActive && e == q.g4.LeftTrigger) &&
-              !(this.state.bRightTrackpadActive && e == q.g4.RightTrigger)
+              !(this.state.bLeftTrackpadActive && e == ee.g4.LeftTrigger) &&
+              !(this.state.bRightTrackpadActive && e == ee.g4.RightTrigger)
             )
               return e;
           }
@@ -2289,7 +2292,7 @@
           BIsKeyEnabled(e) {
             switch (e) {
               case "SwitchKeys_Layout":
-                if ((0, T.G$)().length == 1) return !1;
+                if ((0, b.G$)().length == 1) return !1;
                 break;
               case "VKMove":
                 return !!(this.props.bStandalone || this.BPositionedKeyboard());
@@ -2320,33 +2323,33 @@
             return this.props;
           }
           OnKeyFocus(e, t) {
-            t && (Ie.Debug("Focused", e, t), this.AnnounceToScreenReader(e));
+            t && (we.Debug("Focused", e, t), this.AnnounceToScreenReader(e));
           }
           OnKeyHover(e, t) {
-            t && Ie.Debug("Hovered", e, t);
+            t && we.Debug("Hovered", e, t);
           }
-          RenderKey(e, t, o, a, s, l, r, c) {
+          RenderKey(e, t, o, a, s, i, r, c) {
             const { VirtualKeyboardManager: f } = this.props,
               {
-                toggleStates: K,
+                toggleStates: C,
                 rgLayoutTouchCount: g,
-                nExtendedKeyTouched: u,
+                nExtendedKeyTouched: d,
               } = this.state,
               h = V(this.state.toggleStates.Shift),
               k = V(this.state.toggleStates.CapsLock),
-              p = V(this.state.toggleStates.AltGr),
+              T = V(this.state.toggleStates.AltGr),
               S = h && k ? !1 : h || k,
-              L = this.BShowGlyphs();
+              w = this.BShowGlyphs();
             if (((a = this.FilterKeyCapSpec(a)), !a)) return null;
-            const R = (y) => (y ? (y instanceof Object ? y.key : y) : ""),
-              x = (y) =>
+            const L = (y) => (y ? (y instanceof Object ? y.key : y) : ""),
+              E = (y) =>
                 typeof y == "function"
                   ? y({})
                   : typeof y == "string" && y !== "#" && y.startsWith("#")
                     ? (0, $.we)(y)
                     : y,
-              P = (y) =>
-                p
+              D = (y) =>
+                T
                   ? y instanceof Array
                     ? y.length > 2
                       ? y.length > 3
@@ -2375,165 +2378,165 @@
                           !1,
                         ]
                     : [y, null, null, null, !1],
-              [C, D, B, j, _] = P(a),
-              M = (y) =>
+              [v, P, B, A, H] = D(a),
+              O = (y) =>
                 y === null
                   ? null
                   : y instanceof Object
                     ? y.key === "Enter" && f.GetEnterKeyLabel()
-                      ? x(f.GetEnterKeyLabel())
+                      ? E(f.GetEnterKeyLabel())
                       : S &&
-                          !_ &&
+                          !H &&
                           typeof y.label == "string" &&
                           y.label.length === 1
-                        ? x(ve(y.label))
-                        : y.type == T.dI.Spacebar && this.state.bShowLayoutName
+                        ? E(Se(y.label))
+                        : y.type == b.dI.Spacebar && this.state.bShowLayoutName
                           ? (0, $.we)(this.state.standardLayout.locToken)
-                          : x(y.label)
+                          : E(y.label)
                     : y,
-              [F, ye, ge, [ne, re, ee]] =
-                C instanceof Object
+              [F, ae, se, [ie, le, Q]] =
+                v instanceof Object
                   ? [
-                      C.key,
-                      M(C),
-                      C.strLocDescription,
-                      (C.type != null && d.s_keyCapTypeData[C.type]) || [
+                      v.key,
+                      O(v),
+                      v.strLocDescription,
+                      (v.type != null && u.s_keyCapTypeData[v.type]) || [
                         void 0,
                         void 0,
                         !0,
                       ],
                     ]
                   : [
-                      C,
-                      S && !_ && C?.length === 1 ? ve(C) : C,
+                      v,
+                      S && !H && v?.length === 1 ? Se(v) : v,
                       void 0,
                       [void 0, void 0, !0],
                     ],
-              U = M(D),
-              ie = M(B),
-              le = M(j),
-              fe = r && s < r / 2;
-            let Q = null;
+              U = O(P),
+              fe = O(B),
+              pe = O(A),
+              ce = r && s < r / 2;
+            let J = null;
             if (F?.length == 1 && F !== " ") {
               let y = F;
-              C instanceof Object &&
-                C.extended_keys !== void 0 &&
-                (y = C.extended_keys),
+              v instanceof Object &&
+                v.extended_keys !== void 0 &&
+                (y = v.extended_keys),
                 a instanceof Array &&
                   a.length > 1 &&
-                  (p
-                    ? ((y += R(a[1])), (y += R(a[0])))
-                    : ((y += R(a[1])),
-                      a.length > 2 && (y += R(a[2])),
-                      a.length > 3 && (y += R(a[3])))),
-                (y += d.s_rgExtendedKeys[F] ?? ""),
-                (Q = y.split("").filter((nt, lo, co) => co.indexOf(nt) === lo)),
-                fe || (Q = Q.reverse());
+                  (T
+                    ? ((y += L(a[1])), (y += L(a[0])))
+                    : ((y += L(a[1])),
+                      a.length > 2 && (y += L(a[2])),
+                      a.length > 3 && (y += L(a[3])))),
+                (y += u.s_rgExtendedKeys[F] ?? ""),
+                (J = y.split("").filter((it, yo, go) => go.indexOf(it) === yo)),
+                ce || (J = J.reverse());
             }
-            const Ae =
-                C instanceof Object && C.dead
+            const je =
+                v instanceof Object && v.dead
                   ? F == f.GetDeadKeyPending()
                     ? n().KeyboardKeyDeadKeyActive
                     : n().KeyboardKeyDeadKey
                   : void 0,
-              pe =
-                D instanceof Object && D.dead
-                  ? D.key == f.GetDeadKeyPending()
+              De =
+                P instanceof Object && P.dead
+                  ? P.key == f.GetDeadKeyPending()
                     ? n().InactiveLabelDeadKeyActive
                     : n().InactiveLabelDeadKey
                   : void 0,
-              te = C instanceof Object ? C.dead_next : null,
-              tt = C instanceof Object ? C.dead_combined : null,
-              Qt =
-                L && C instanceof Object
-                  ? this.FilterButtonForTrackpad(C.leftActionButton)
+              de = v instanceof Object ? v.dead_next : null,
+              te = v instanceof Object ? v.dead_combined : null,
+              oo =
+                w && v instanceof Object
+                  ? this.FilterButtonForTrackpad(v.leftActionButton)
                   : void 0,
-              Jt =
-                L && C instanceof Object
-                  ? this.FilterButtonForTrackpad(C.centerLeftActionButton)
+              ao =
+                w && v instanceof Object
+                  ? this.FilterButtonForTrackpad(v.centerLeftActionButton)
                   : void 0,
-              qt =
-                L && C instanceof Object
-                  ? this.FilterButtonForTrackpad(C.rightActionButton)
+              so =
+                w && v instanceof Object
+                  ? this.FilterButtonForTrackpad(v.rightActionButton)
                   : void 0,
-              ot = C instanceof Object ? C.emojiCategoryIndex : void 0,
-              eo =
-                C instanceof Object && ot === this.state.curEmojiCategoryIndex
+              st = v instanceof Object ? v.emojiCategoryIndex : void 0,
+              no =
+                v instanceof Object && st === this.state.curEmojiCategoryIndex
                   ? n().KeyboardCategoryKeyHighlight
                   : void 0,
-              je = d.s_keyToggleData[F],
-              to = je
-                ? K[je] & 1
+              Pe = u.s_keyToggleData[F],
+              ro = Pe
+                ? C[Pe] & 1
                   ? n().ToggleOneShot
-                  : K[je] & 6
+                  : C[Pe] & 6
                     ? n().ToggleOn
                     : void 0
                 : void 0,
-              oo = g[e] && g[e][s] > 0 ? n().Touched : void 0,
-              ao =
+              io = g[e] && g[e][s] > 0 ? n().Touched : void 0,
+              lo =
                 this.state.keyDown.key == F && F?.length > 0
                   ? n().Touched
                   : void 0,
-              De = ze(this.state.rgLongPress, e, s),
-              at = De >= 0,
-              so = e === t && s === o && !at,
-              no = C instanceof Object && C.is_literal;
-            let Pe;
-            ot !== void 0 &&
-              ((Pe = this.m_emojiHeaderMapRefs.get(F) || (0, mt.b$)()),
-              this.m_emojiHeaderMapRefs.set(F, Pe));
-            const ce = {
+              Fe = Ze(this.state.rgLongPress, e, s),
+              nt = Fe >= 0,
+              co = e === t && s === o && !nt,
+              uo = v instanceof Object && v.is_literal;
+            let Be;
+            st !== void 0 &&
+              ((Be = this.m_emojiHeaderMapRefs.get(F) || (0, gt.b$)()),
+              this.m_emojiHeaderMapRefs.set(F, Be));
+            const ue = {
               "data-key": F,
               "data-key-row": e,
               "data-key-col": s,
-              "data-keycode": l || 0,
+              "data-keycode": i || 0,
             };
-            Q && (ce["data-extended-chars"] = 1),
-              _ && (ce["data-key-shifted"] = 1),
-              te && (ce["data-dead-key-next"] = te),
-              tt && (ce["data-dead-key-combined"] = tt),
-              no && (ce["data-key-is-literal"] = 1);
-            let ro = this.GetKeyClassNameForTheme(C, e, s),
-              io = (0, w.A)(n().KeyboardKey, ne, to, oo, ao, Ae, eo, ro),
-              st;
+            J && (ue["data-extended-chars"] = 1),
+              H && (ue["data-key-shifted"] = 1),
+              de && (ue["data-dead-key-next"] = de),
+              te && (ue["data-dead-key-combined"] = te),
+              uo && (ue["data-key-is-literal"] = 1);
+            let ho = this.GetKeyClassNameForTheme(v, e, s),
+              mo = (0, R.A)(n().KeyboardKey, ie, ro, io, lo, je, no, ho),
+              rt;
             return (
-              Q != null &&
-                at &&
-                (st = (0, i.jsx)(Mt, {
-                  extendedChars: Q,
+              J != null &&
+                nt &&
+                (rt = (0, l.jsx)(Ut, {
+                  extendedChars: J,
                   parentRow: e,
                   parentCol: s,
                   bIsUpperCase: S,
-                  bExtendRight: fe,
-                  style: this.ExtendedRowStyleForSlot(De, Q.length, fe),
-                  nExtendedKeyTouched: u,
+                  bExtendRight: ce,
+                  style: this.ExtendedRowStyleForSlot(Fe, J.length, ce),
+                  nExtendedKeyTouched: d,
                   onKeyFocus: this.OnKeyFocus,
                   onKeyHover: this.OnKeyHover,
-                  children: this.RenderExtendedRowTouchpad(De),
+                  children: this.RenderExtendedRowTouchpad(Fe),
                 })),
-              (0, i.jsx)(
-                $t,
+              (0, l.jsx)(
+                eo,
                 {
                   nRow: e,
                   nKey: s,
-                  navRef: Pe,
-                  bAutoFocus: so,
-                  bFocusable: ee,
+                  navRef: Be,
+                  bAutoFocus: co,
+                  bFocusable: Q,
                   bIsShift: h,
-                  bHasTrackpadHover: this.BHasTrackpadHover(),
-                  dataProps: ce,
-                  className: re,
-                  innerClassName: io,
-                  leftActionButton: Qt,
-                  centerLeftActionButton: Jt,
-                  rightActionButton: qt,
-                  label: ye,
-                  strLocDescription: ge,
+                  trackpadHover: this.m_trackpadHover,
+                  dataProps: ue,
+                  className: le,
+                  innerClassName: mo,
+                  leftActionButton: oo,
+                  centerLeftActionButton: ao,
+                  rightActionButton: so,
+                  label: ae,
+                  strLocDescription: se,
                   inactiveLabel: U,
-                  strInactiveLabelDeadKeyStyle: pe,
-                  altGrLabel: ie,
-                  inactiveAltGrLabel: le,
-                  extendedKeyRow: st,
+                  strInactiveLabelDeadKeyStyle: De,
+                  altGrLabel: fe,
+                  inactiveAltGrLabel: pe,
+                  extendedKeyRow: rt,
                   onFocus: this.OnKeyFocus,
                   onHover: this.OnKeyHover,
                   ariaProps: c,
@@ -2543,16 +2546,16 @@
             );
           }
           RenderTabBar(e, t, o, a, s) {
-            return (0, i.jsx)(
-              A.Z,
+            return (0, l.jsx)(
+              j.Z,
               {
                 role: "tablist",
-                className: (0, w.A)(n().KeyboardRow, "Row_" + o),
+                className: (0, R.A)(n().KeyboardRow, "Row_" + o),
                 "flow-children": "row",
                 ...Ke.C3,
                 navEntryPreferPosition: Te.iU.MAINTAIN_X,
-                children: e.map((l, r) =>
-                  this.RenderKey(o, a, s, l, r, t?.[r] || 0, e.length, {
+                children: e.map((i, r) =>
+                  this.RenderKey(o, a, s, i, r, t?.[r] || 0, e.length, {
                     role: "tab",
                   }),
                 ),
@@ -2561,17 +2564,17 @@
             );
           }
           RenderKeyboardRow(e, t, o, a, s) {
-            return (0, i.jsx)(
-              A.Z,
+            return (0, l.jsx)(
+              j.Z,
               {
                 role: "row",
                 "aria-rowindex": o + 1,
-                className: (0, w.A)(n().KeyboardRow, "Row_" + o),
+                className: (0, R.A)(n().KeyboardRow, "Row_" + o),
                 "flow-children": "row",
                 ...Ke.C3,
                 navEntryPreferPosition: Te.iU.MAINTAIN_X,
-                children: e.map((l, r) =>
-                  this.RenderKey(o, a, s, l, r, t?.[r] || 0, e.length),
+                children: e.map((i, r) =>
+                  this.RenderKey(o, a, s, i, r, t?.[r] || 0, e.length),
                 ),
               },
               `KB.${o}`,
@@ -2580,23 +2583,23 @@
           KeyboardPanel(e) {
             const { className: t, children: o, ...a } = e,
               s = this.props.VirtualKeyboardManager,
-              [l, r] = v.useState("DefaultTheme");
-            v.useEffect(
-              () => (0, dt.fm)(() => r(this.GetKeyboardThemeClassName())),
+              [i, r] = K.useState("DefaultTheme");
+            K.useEffect(
+              () => (0, ht.fm)(() => r(this.GetKeyboardThemeClassName())),
               [],
             );
-            const c = (0, Oe.q3)(() => s.KeyboardLocation);
-            return (0, i.jsxs)(A.Z, {
+            const c = (0, He.q3)(() => s.KeyboardLocation);
+            return (0, l.jsxs)(j.Z, {
               ref: this.SetKeyboardDiv,
               navRef: this.m_keyboardNavRef,
               role: "grid",
               "flow-children": "grid",
               autoFocus: !0,
               focusable: !1,
-              className: (0, w.A)(
+              className: (0, R.A)(
                 t,
                 n().Keyboard,
-                l,
+                i,
                 this.BPositionedKeyboard() && c,
                 this.BPositionedKeyboard() && n().Modal,
                 this.props.bVRFloatingKeyboard && n().VRFloatingKeyboard,
@@ -2613,7 +2616,7 @@
               onMoveUp: this.HandleNavOut,
               children: [
                 o,
-                (0, i.jsx)("div", {
+                (0, l.jsx)("div", {
                   className: n().AriaLiveRegion,
                   "aria-live": "assertive",
                   children: this.state.screenReaderElement,
@@ -2624,57 +2627,57 @@
           RenderStandardKeyboard(e) {
             const { name: t, rgLayout: o, rgKeycodes: a } = e,
               s = this.BTrackpadLongPressing(1),
-              l = this.BTrackpadLongPressing(2),
+              i = this.BTrackpadLongPressing(2),
               r = "Layout_" + t,
               c = this.BShowGlyphs(),
               f = this.GetLayoutOptions();
-            return (0, i.jsxs)(this.KeyboardPanel, {
-              className: (0, w.A)(n().Keyboard, r),
+            return (0, l.jsxs)(this.KeyboardPanel, {
+              className: (0, R.A)(n().Keyboard, r),
               scrollIntoViewWhenChildFocused: "force",
               children: [
-                (0, i.jsx)(Dt, {
+                (0, l.jsx)(Bt, {
                   layout: e.layout,
                   bHasTrackpadHover: this.BHasTrackpadHover(),
                   rgLayoutTouchCount: this.state.rgLayoutTouchCount,
                   bShowGlyphs: c,
                 }),
-                (0, i.jsx)(At, {
+                (0, l.jsx)(Pt, {
                   onCommitText: this.OnCommitText,
                   onForwardKeyEvent: this.OnForwardKeyEvent,
                   onDeleteSurroundingText: this.OnDeleteSurroundingText,
                 }),
-                (0, i.jsx)(Pt, {
+                (0, l.jsx)(Ot, {
                   VirtualKeyboardManager: this.props.VirtualKeyboardManager,
                   onActiveElementChanged: this.OnActiveElementChangedOrClicked,
                   onActiveElementClicked: this.OnActiveElementChangedOrClicked,
                 }),
-                (0, i.jsx)(jt, { layout: e.layout }),
-                o(f).map((K, g) =>
+                (0, l.jsx)(Ft, { layout: e.layout }),
+                o(f).map((C, g) =>
                   this.RenderKeyboardRow(
-                    K,
+                    C,
                     a?.[g],
                     g,
-                    d.s_initialFocusRow,
-                    d.s_initialFocusColumn,
+                    u.s_initialFocusRow,
+                    u.s_initialFocusColumn,
                   ),
                 ),
                 !s &&
-                  (0, i.jsx)(se, {
+                  (0, l.jsx)(re, {
                     className: n().LeftTrackpad,
                     pressed: this.state.bLeftTrackpadDown,
                     input: this.m_trackpadInput,
                     trackpad: m.pR.LPAD_TOUCH,
                     fnCallback: this.OnLeftTrackpadAnalog,
                   }),
-                !l &&
-                  (0, i.jsx)(se, {
+                !i &&
+                  (0, l.jsx)(re, {
                     className: n().RightTrackpad,
                     pressed: this.state.bRightTrackpadDown,
                     input: this.m_trackpadInput,
                     trackpad: m.pR.RPAD_TOUCH,
                     fnCallback: this.OnRightTrackpadAnalog,
                   }),
-                (0, i.jsx)(Yt, {
+                (0, l.jsx)(to, {
                   keyboard: this.m_keyboardDiv,
                   fnCallback: this.OnRightTrackpadAnalog,
                 }),
@@ -2704,21 +2707,21 @@
             const a = this.state.rgLongPress[e].holdTarget;
             if (!a || !this.m_keyboardDiv) return;
             const s = (0, Ee.DH)(this.m_keyboardDiv),
-              l = this.m_keyboardDiv.getBoundingClientRect(),
+              i = this.m_keyboardDiv.getBoundingClientRect(),
               r = a.getBoundingClientRect(),
-              c = l.left + l.width / 2,
-              f = e === 1 ? l.left : c,
-              K = e === 1 ? c : l.right,
-              g = t * Ht * s,
-              u = o ? r.left : r.right - g;
+              c = i.left + i.width / 2,
+              f = e === 1 ? i.left : c,
+              C = e === 1 ? c : i.right,
+              g = t * Gt * s,
+              d = o ? r.left : r.right - g;
             return {
-              left: ((0, ue.OQ)(u, f, Math.max(f, K - g)) - r.left) / s,
+              left: ((0, me.OQ)(d, f, Math.max(f, C - g)) - r.left) / s,
               right: "auto",
             };
           }
           RenderExtendedRowTouchpad(e) {
             if (e === 1)
-              return (0, i.jsx)(se, {
+              return (0, l.jsx)(re, {
                 className: n().ExtendedRowTrackpad,
                 pressed: this.state.bLeftTrackpadDown,
                 input: this.m_trackpadInput,
@@ -2726,7 +2729,7 @@
                 fnCallback: this.OnLeftTrackpadAnalog,
               });
             if (e === 2)
-              return (0, i.jsx)(se, {
+              return (0, l.jsx)(re, {
                 className: n().ExtendedRowTrackpad,
                 pressed: this.state.bRightTrackpadDown,
                 input: this.m_trackpadInput,
@@ -2739,17 +2742,17 @@
             if (!o) return !1;
             const a = o.querySelector("[parent-row]"),
               s = parseFloat(a?.getAttribute("parent-row") || ""),
-              l = parseFloat(a?.getAttribute("parent-col") || ""),
+              i = parseFloat(a?.getAttribute("parent-col") || ""),
               r = this.LongPressSlot(t);
-            return !(r.longPressRow === s && r.longPressCol === l);
+            return !(r.longPressRow === s && r.longPressCol === i);
           }
           getElementFromPointWorkaround(e, t, o) {
             const a =
               this.m_keyboardDiv?.ownerDocument.defaultView ??
               this.props.windowInstance.BrowserWindow;
             if (
-              de.oy.WindowStore.BHasStandaloneConfiguratorWindow() ||
-              de.oy.WindowStore.BHasStandaloneKeyboard()
+              he.oy.WindowStore.BHasStandaloneConfiguratorWindow() ||
+              he.oy.WindowStore.BHasStandaloneKeyboard()
             ) {
               const s = (0, Ee.DH)(this.m_keyboardDiv);
               (e *= s), (t *= s);
@@ -2758,7 +2761,7 @@
               if (!this.BInForeignExtendedRow(s, o))
                 return s.getAttribute("data-key") ? s : void 0;
           }
-          OnTrackpadAnalogInternal(e, t, o, a, s, l) {
+          OnTrackpadAnalogInternal(e, t, o, a, s, i) {
             if (((e.active = o), (e.x = a), (e.y = s), o)) {
               let r = e.lastElement?.getBoundingClientRect();
               if (
@@ -2778,10 +2781,10 @@
                 c != e.lastElement &&
                   (this.OnTrackpadHover(e.lastElement, c),
                   (e.lastElement = c),
-                  xe.l.PlayHaptic(l, t, xe.n.Tick, 1, 0),
+                  xe.l.PlayHaptic(i, t, xe.n.Tick, 1, 0),
                   this.m_keyboardDiv?.ownerDocument.defaultView.SteamClient?.OpenVR?.TriggerOverlayHapticEffect(
-                    o ? He.en.ButtonEnter : He.en.ButtonLeave,
-                    l,
+                    o ? Me.en.ButtonEnter : Me.en.ButtonLeave,
+                    i,
                   ));
               } else {
                 const c = e.lastElement.firstElementChild;
@@ -2818,44 +2821,44 @@
                 this.setState({ bRightTrackpadActive: e });
           }
           RenderNumericKeyboard() {
-            const e = { key: "ArrowLeft", label: O.KaratLeft, type: T.dI.Meta },
-              t = { key: "ArrowRight", label: O.KaratRight, type: T.dI.Meta },
-              o = { key: "SwitchKeys_Steam", label: O.Emoji, type: T.dI.Meta },
-              a = { key: "SwitchKeys_ABC", label: "ABC", type: T.dI.Meta },
+            const e = { key: "ArrowLeft", label: N.KaratLeft, type: b.dI.Meta },
+              t = { key: "ArrowRight", label: N.KaratRight, type: b.dI.Meta },
+              o = { key: "SwitchKeys_Steam", label: N.Emoji, type: b.dI.Meta },
+              a = { key: "SwitchKeys_ABC", label: "ABC", type: b.dI.Meta },
               s = {
                 key: "Enter",
                 label: "Enter",
-                type: T.dI.Enter,
-                leftActionButton: q.g4.RightTrigger,
+                type: b.dI.Enter,
+                leftActionButton: ee.g4.RightTrigger,
               },
-              l = { key: "VKClose", label: O.HideKeyboard, type: T.dI.Meta };
-            return (0, i.jsxs)(this.KeyboardPanel, {
-              className: (0, w.A)(n().NumericKeypad),
+              i = { key: "VKClose", label: N.HideKeyboard, type: b.dI.Meta };
+            return (0, l.jsxs)(this.KeyboardPanel, {
+              className: (0, R.A)(n().NumericKeypad),
               children: [
-                (0, i.jsxs)(A.Z, {
+                (0, l.jsxs)(j.Z, {
                   className: n().NumericLeftCtn,
                   children: [
                     this.RenderKey(4, 0, 0, o, 0),
                     this.RenderKey(4, 0, 0, a, 1),
                   ],
                 }),
-                (0, i.jsx)(A.Z, {
+                (0, l.jsx)(j.Z, {
                   "flow-children": "grid",
                   className: n().NumberPad,
-                  children: d.s_rgNumericLayout.map((r, c) =>
+                  children: u.s_rgNumericLayout.map((r, c) =>
                     this.RenderKeyboardRow(r, void 0, c, 0, 0),
                   ),
                 }),
-                (0, i.jsxs)(A.Z, {
+                (0, l.jsxs)(j.Z, {
                   className: n().NumericRightCtn,
                   children: [
                     this.RenderKey(4, 0, 0, e, 0),
                     this.RenderKey(4, 0, 0, t, 1),
-                    (0, i.jsxs)(A.Z, {
+                    (0, l.jsxs)(j.Z, {
                       className: n().Controls,
                       children: [
                         this.RenderKey(1, 0, 0, s, 0),
-                        this.RenderKey(2, 0, 0, l, 1),
+                        this.RenderKey(2, 0, 0, i, 1),
                       ],
                     }),
                   ],
@@ -2866,57 +2869,57 @@
           RenderSteamItemsAndEmojiKeyboard() {
             const e = this.state.layoutState == 2,
               t =
-                d.s_rgSteamItemCategories[
+                u.s_rgSteamItemCategories[
                   this.state.curEmojiCategoryIndex -
                     this.m_emojiCategories.length
                 ],
               o = e ? this.GetEmojiGridProps() : null,
               a = this.BTrackpadLongPressing(1),
               s = this.BTrackpadLongPressing(2),
-              l = this.BShowGlyphs();
-            return (0, i.jsxs)(this.KeyboardPanel, {
-              className: (0, w.A)(n().EmojiKeyboard),
+              i = this.BShowGlyphs();
+            return (0, l.jsxs)(this.KeyboardPanel, {
+              className: (0, R.A)(n().EmojiKeyboard),
               children: [
-                (0, i.jsxs)(A.Z, {
+                (0, l.jsxs)(j.Z, {
                   className: n().KeyboardEmojiHeader,
                   children: [
-                    l &&
-                      (0, i.jsx)(oe.WD, {
+                    i &&
+                      (0, l.jsx)(oe.WD, {
                         className: n().CategoryScrollLeft,
-                        button: q.g4.LeftBumper,
+                        button: ee.g4.LeftBumper,
                       }),
                     !this.props.bStandalone &&
                       this.RenderTabBar(
-                        d.s_rgCombinedSteamAndEmojiRowHeader,
+                        u.s_rgCombinedSteamAndEmojiRowHeader,
                         void 0,
                         -1,
                         0,
                         0,
                       ),
                     this.props.bStandalone &&
-                      this.RenderTabBar(d.s_rgEmojiRowHeader, void 0, -1, 0, 0),
-                    l &&
-                      (0, i.jsx)(oe.WD, {
+                      this.RenderTabBar(u.s_rgEmojiRowHeader, void 0, -1, 0, 0),
+                    i &&
+                      (0, l.jsx)(oe.WD, {
                         className: n().CategoryScrollRight,
-                        button: q.g4.RightBumper,
+                        button: ee.g4.RightBumper,
                       }),
                   ],
                 }),
                 e &&
-                  (0, i.jsx)(
-                    A.Z,
+                  (0, l.jsx)(
+                    j.Z,
                     {
                       role: "tabpanel",
                       "flow-children": "grid",
                       className: n().KeyboardEmojiContainer,
                       ref: this.m_emojiScrollRef,
                       navEntryPreferPosition: Te.iU.MAINTAIN_X,
-                      children: o && (0, i.jsx)(Zt, { ...o }),
+                      children: o && (0, l.jsx)(Yt, { ...o }),
                     },
                     "KB.Emoji_Container",
                   ),
                 !e &&
-                  (0, i.jsx)(xt, {
+                  (0, l.jsx)(wt, {
                     filter: t,
                     keyDown: this.state.keyDown.key,
                     rgLayoutTouchCount: this.state.rgLayoutTouchCount,
@@ -2925,14 +2928,14 @@
                     onKeyHover: this.OnKeyHover,
                   }),
                 this.RenderKeyboardRow(
-                  d.s_rgSteamItemsBottomRow(this.GetLayoutOptions()),
+                  u.s_rgSteamItemsBottomRow(this.GetLayoutOptions()),
                   void 0,
                   4,
                   0,
                   0,
                 ),
                 !a &&
-                  (0, i.jsx)(se, {
+                  (0, l.jsx)(re, {
                     className: n().LeftTrackpad,
                     pressed: this.state.bLeftTrackpadDown,
                     input: this.m_trackpadInput,
@@ -2940,7 +2943,7 @@
                     fnCallback: this.OnLeftTrackpadAnalog,
                   }),
                 !s &&
-                  (0, i.jsx)(se, {
+                  (0, l.jsx)(re, {
                     className: n().RightTrackpad,
                     pressed: this.state.bRightTrackpadDown,
                     input: this.m_trackpadInput,
@@ -2969,8 +2972,11 @@
             window.clearInterval(this.state.watchdogTimer),
               this.setState({ watchdogTimer: null });
           }
+          componentDidUpdate() {
+            this.m_trackpadHover.Set(this.BHasTrackpadHover());
+          }
           componentDidMount() {
-            W.O.GetKeyboardLayoutSettings().selectedLayouts.length != 1 &&
+            z.O.GetKeyboardLayoutSettings().selectedLayouts.length != 1 &&
               (this.SetLayoutNameTimeout(),
               this.setState({ bShowLayoutName: !0 })),
               this.m_trackpadInput.EnableAnalogInputMessages(!0),
@@ -2985,6 +2991,7 @@
                 this.DismissLongPress(e),
                 this.ClearHoldTarget(e);
             this.m_trackpadInput.EnableAnalogInputMessages(!1),
+              this.m_trackpadInput.Destroy(),
               this.ClearControllerInputWatchdogTimer();
           }
           render() {
@@ -2999,53 +3006,53 @@
             }
           }
         };
-        N(d, "contextType", J.E3),
-          N(d, "s_keyCapTypeData", {
-            [T.dI.Character]: [
+        _(u, "contextType", q.E3),
+          _(u, "s_keyCapTypeData", {
+            [b.dI.Character]: [
               n().KeyboardCharacterKey,
               n().KeyboardCharacterKeySize,
               !0,
             ],
-            [T.dI.Half]: [n().KeyboardHalfKey, n().KeyboardHalfKeySize, !0],
-            [T.dI.Tab]: [n().KeyboardTabKey, n().KeyboardTabKeySize, !0],
-            [T.dI.Meta]: [n().KeyboardMetaKey, n().KeyboardMetaKeySize, !0],
-            [T.dI.Close]: [
+            [b.dI.Half]: [n().KeyboardHalfKey, n().KeyboardHalfKeySize, !0],
+            [b.dI.Tab]: [n().KeyboardTabKey, n().KeyboardTabKeySize, !0],
+            [b.dI.Meta]: [n().KeyboardMetaKey, n().KeyboardMetaKeySize, !0],
+            [b.dI.Close]: [
               n().KeyboardCharacterKey,
               n().KeyboardMetaKeySize,
               !0,
             ],
-            [T.dI.Caps]: [n().KeyboardCapsKey, n().KeyboardCapsKeySize, !0],
-            [T.dI.Backspace]: [
+            [b.dI.Caps]: [n().KeyboardCapsKey, n().KeyboardCapsKeySize, !0],
+            [b.dI.Backspace]: [
               n().KeyboardBackspace,
               n().KeyboardBackspaceSize,
               !0,
             ],
-            [T.dI.Enter]: [n().KeyboardEnter, n().KeyboardEnterSize, !0],
-            [T.dI.LeftShift]: [
+            [b.dI.Enter]: [n().KeyboardEnter, n().KeyboardEnterSize, !0],
+            [b.dI.LeftShift]: [
               n().KeyboardLeftShift,
               n().KeyboardLeftShiftSize,
               !0,
             ],
-            [T.dI.RightShift]: [
+            [b.dI.RightShift]: [
               n().KeyboardRightShift,
               n().KeyboardRightShiftSize,
               !0,
             ],
-            [T.dI.Spacebar]: [
+            [b.dI.Spacebar]: [
               n().KeyboardSpacebar,
               n().KeyboardSpacebarSize,
               !0,
             ],
-            [T.dI.Spacer25]: [n().KeyboardSpacer, n().KeyboardSpacerSize, !1],
+            [b.dI.Spacer25]: [n().KeyboardSpacer, n().KeyboardSpacerSize, !1],
           }),
-          N(d, "s_keyToggleData", {
+          _(u, "s_keyToggleData", {
             Shift: "Shift",
             CapsLock: "CapsLock",
             Control: "Control",
             Alt: "Alt",
             AltGr: "AltGr",
           }),
-          N(d, "s_rgNumericLayout", [
+          _(u, "s_rgNumericLayout", [
             ["7", "8", "9"],
             ["4", "5", "6"],
             ["1", "2", "3"],
@@ -3055,47 +3062,45 @@
               {
                 key: "Backspace",
                 label: "#Key_Backspace",
-                type: T.dI.Backspace,
-                centerLeftActionButton: q.g4.X,
+                type: b.dI.Backspace,
+                centerLeftActionButton: ee.g4.X,
               },
             ],
           ]),
-          N(d, "s_rgCombinedSteamAndEmojiRowHeader", [
+          _(u, "s_rgCombinedSteamAndEmojiRowHeader", [
             {
               key: "SwitchKeys_RecentSteamItems",
-              label: O.ClockOutline,
-              type: T.dI.Character,
+              label: N.ClockOutline,
+              type: b.dI.Character,
               emojiCategoryIndex: 9,
               bSteamItemCategory: !0,
               strLocDescription: "#Emoji_RecentSteamItems",
             },
             {
               key: "SwitchKeys_Emoticons",
-              label: () => (0, i.jsx)(ae.ZT, {}),
-              type: T.dI.Character,
+              label: () => (0, l.jsx)(ne.ZT, {}),
+              type: b.dI.Character,
               emojiCategoryIndex: 10,
               bSteamItemCategory: !0,
               strLocDescription: "#Emoji_Emoticons",
             },
             {
               key: "SwitchKeys_Stickers",
-              label: () => (0, i.jsx)(ae.qm, {}),
-              type: T.dI.Character,
+              label: () => (0, l.jsx)(ne.qm, {}),
+              type: b.dI.Character,
               emojiCategoryIndex: 11,
               bSteamItemCategory: !0,
               strLocDescription: "#Emoji_Stickers",
             },
             {
               key: "SwitchKeys_ChatFX",
-              label: () => (0, i.jsx)(ae.Mj, {}),
-              type: T.dI.Character,
+              label: () => (0, l.jsx)(ne.Mj, {}),
+              type: b.dI.Character,
               emojiCategoryIndex: 12,
               bSteamItemCategory: !0,
               strLocDescription: "#Emoji_ChatFX",
             },
-            { key: "", label: "", type: T.dI.Spacer25 },
-            We,
-            Ze,
+            { key: "", label: "", type: b.dI.Spacer25 },
             Xe,
             $e,
             Ye,
@@ -3103,24 +3108,26 @@
             Je,
             qe,
             et,
+            tt,
+            ot,
           ]),
-          N(d, "s_rgEmojiRowHeader", [We, Ze, Xe, $e, Ye, Qe, Je, qe, et]),
-          N(d, "s_rgSteamItemsBottomRow", (e) => [
-            { key: "SwitchKeys_ABC", label: "ABC", type: T.dI.Meta },
-            T.fF,
-            T.jP,
-            T.WG,
-            e.Arrows ? [T.Md, T.GO] : void 0,
-            e.Arrows ? [T.B6, T.xl] : void 0,
-            [e.DoneInsteadOfHide ? T.gg : T.k6, e.AllowMove ? T.zi : void 0],
+          _(u, "s_rgEmojiRowHeader", [Xe, $e, Ye, Qe, Je, qe, et, tt, ot]),
+          _(u, "s_rgSteamItemsBottomRow", (e) => [
+            { key: "SwitchKeys_ABC", label: "ABC", type: b.dI.Meta },
+            b.fF,
+            b.jP,
+            b.WG,
+            e.Arrows ? [b.Md, b.GO] : void 0,
+            e.Arrows ? [b.B6, b.xl] : void 0,
+            [e.DoneInsteadOfHide ? b.gg : b.k6, e.AllowMove ? b.zi : void 0],
           ]),
-          N(d, "s_rgSteamItemCategories", [
+          _(u, "s_rgSteamItemCategories", [
             "RecentSteamItems",
             "Emoticons",
             "Stickers",
             "ChatFX",
           ]),
-          N(d, "s_rgExtendedKeys", {
+          _(u, "s_rgExtendedKeys", {
             a: "\xE1\xE0\xE2\xE3\xE4\xE5\xE6\u0101\u0105",
             c: "\u0107\xE7\u010D",
             e: "\xE9\xE8\xEA\xEB\u0113\u0117\u0119",
@@ -3144,128 +3151,129 @@
             "%": "\u2030",
             "&": "\xA7",
           }),
-          N(d, "s_initialFocusRow", 2),
-          N(d, "s_initialFocusColumn", 5),
-          N(d, "s_numEmojiRows", 3),
-          N(d, "s_EmojiKeyWidth", 58),
-          N(d, "s_longPressThreshold", 450),
-          N(d, "s_longPressRepeatThreshold", 200),
-          I([E.oI], d.prototype, "AnnounceToScreenReader", 1),
-          I([E.oI], d.prototype, "OnLayoutChanged", 1),
-          I([E.oI], d.prototype, "OnForwardKeyEvent", 1),
-          I([E.oI], d.prototype, "OnDeleteSurroundingText", 1),
-          I([E.oI], d.prototype, "OnCommitText", 1),
-          I([E.oI], d.prototype, "OnActiveElementChangedOrClicked", 1),
-          I([E.oI], d.prototype, "KeyDown", 1),
-          I([E.oI], d.prototype, "KeyUp", 1),
-          I([E.oI], d.prototype, "OnMouseDown", 1),
-          I([E.oI], d.prototype, "OnMouseUp", 1),
-          I([E.oI], d.prototype, "HandleTrackpadClick", 1),
-          I([E.oI], d.prototype, "OnGamepadButtonDown", 1),
-          I([E.oI], d.prototype, "OnGamepadButtonUp", 1),
-          I([E.oI], d.prototype, "DispatchEventByDataKey", 1),
-          I([E.oI], d.prototype, "HandleNavOut", 1),
-          I([E.oI], d.prototype, "StartBackspaceTimer", 1),
-          I([E.oI], d.prototype, "BackspaceTimeExpired", 1),
-          I([E.oI], d.prototype, "DismissBackpaceTimer", 1),
-          I([E.oI], d.prototype, "CancelBackpaceTimer", 1),
-          I([E.oI], d.prototype, "OnKeyMouseLeave", 1),
-          I([E.oI], d.prototype, "HandleTouchStart", 1),
-          I([E.oI], d.prototype, "HandleTouchMove", 1),
-          I([E.oI], d.prototype, "IsCharacterFromActiveExtendedMenu", 1),
-          I([E.oI], d.prototype, "HandleTouchEnd", 1),
-          I([E.oI], d.prototype, "HandleTouchCancel", 1),
-          I([E.oI], d.prototype, "ElementFromTouch", 1),
-          I([E.oI], d.prototype, "OnEmojiFocus", 1),
-          I([E.oI], d.prototype, "SetKeyboardDiv", 1),
-          I([E.oI], d.prototype, "UpdateWindowSize", 1),
-          I([E.oI], d.prototype, "RotateWindowPosition", 1),
-          I([E.oI], d.prototype, "OnKeyFocus", 1),
-          I([E.oI], d.prototype, "OnKeyHover", 1),
-          I([E.oI], d.prototype, "KeyboardPanel", 1),
-          I([E.oI], d.prototype, "ExtendedRowStyleForSlot", 1),
-          I([E.oI], d.prototype, "RenderExtendedRowTouchpad", 1),
-          I([E.oI], d.prototype, "getElementFromPointWorkaround", 1),
-          I([E.oI], d.prototype, "OnLeftTrackpadAnalog", 1),
-          I([E.oI], d.prototype, "OnRightTrackpadAnalog", 1),
-          (d = I([ct.PA], d));
-        function $t(e) {
+          _(u, "s_initialFocusRow", 2),
+          _(u, "s_initialFocusColumn", 5),
+          _(u, "s_numEmojiRows", 3),
+          _(u, "s_EmojiKeyWidth", 58),
+          _(u, "s_longPressThreshold", 450),
+          _(u, "s_longPressRepeatThreshold", 200),
+          I([x.oI], u.prototype, "AnnounceToScreenReader", 1),
+          I([x.oI], u.prototype, "OnLayoutChanged", 1),
+          I([x.oI], u.prototype, "OnForwardKeyEvent", 1),
+          I([x.oI], u.prototype, "OnDeleteSurroundingText", 1),
+          I([x.oI], u.prototype, "OnCommitText", 1),
+          I([x.oI], u.prototype, "OnActiveElementChangedOrClicked", 1),
+          I([x.oI], u.prototype, "KeyDown", 1),
+          I([x.oI], u.prototype, "KeyUp", 1),
+          I([x.oI], u.prototype, "OnMouseDown", 1),
+          I([x.oI], u.prototype, "OnMouseUp", 1),
+          I([x.oI], u.prototype, "HandleTrackpadClick", 1),
+          I([x.oI], u.prototype, "OnGamepadButtonDown", 1),
+          I([x.oI], u.prototype, "OnGamepadButtonUp", 1),
+          I([x.oI], u.prototype, "DispatchEventByDataKey", 1),
+          I([x.oI], u.prototype, "HandleNavOut", 1),
+          I([x.oI], u.prototype, "StartBackspaceTimer", 1),
+          I([x.oI], u.prototype, "BackspaceTimeExpired", 1),
+          I([x.oI], u.prototype, "DismissBackpaceTimer", 1),
+          I([x.oI], u.prototype, "CancelBackpaceTimer", 1),
+          I([x.oI], u.prototype, "OnKeyMouseLeave", 1),
+          I([x.oI], u.prototype, "HandleTouchStart", 1),
+          I([x.oI], u.prototype, "HandleTouchMove", 1),
+          I([x.oI], u.prototype, "IsCharacterFromActiveExtendedMenu", 1),
+          I([x.oI], u.prototype, "HandleTouchEnd", 1),
+          I([x.oI], u.prototype, "HandleTouchCancel", 1),
+          I([x.oI], u.prototype, "ElementFromTouch", 1),
+          I([x.oI], u.prototype, "OnEmojiFocus", 1),
+          I([x.oI], u.prototype, "SetKeyboardDiv", 1),
+          I([x.oI], u.prototype, "UpdateWindowSize", 1),
+          I([x.oI], u.prototype, "RotateWindowPosition", 1),
+          I([x.oI], u.prototype, "OnKeyFocus", 1),
+          I([x.oI], u.prototype, "OnKeyHover", 1),
+          I([x.oI], u.prototype, "KeyboardPanel", 1),
+          I([x.oI], u.prototype, "ExtendedRowStyleForSlot", 1),
+          I([x.oI], u.prototype, "RenderExtendedRowTouchpad", 1),
+          I([x.oI], u.prototype, "getElementFromPointWorkaround", 1),
+          I([x.oI], u.prototype, "OnLeftTrackpadAnalog", 1),
+          I([x.oI], u.prototype, "OnRightTrackpadAnalog", 1),
+          (u = I([ut.PA], u));
+        function Jt(e) {
           const {
               nRow: t,
               nKey: o,
               navRef: a,
               bAutoFocus: s,
-              bFocusable: l,
+              bFocusable: i,
               bIsShift: r,
-              bHasTrackpadHover: c,
+              trackpadHover: c,
               dataProps: f,
-              className: K,
+              className: C,
               innerClassName: g,
-              leftActionButton: u,
+              leftActionButton: d,
               centerLeftActionButton: h,
               rightActionButton: k,
-              label: p,
+              label: T,
               inactiveLabel: S,
-              strInactiveLabelDeadKeyStyle: L,
-              strLocDescription: R,
-              altGrLabel: x,
-              inactiveAltGrLabel: P,
-              extendedKeyRow: C,
-              onFocus: D,
+              strInactiveLabelDeadKeyStyle: w,
+              strLocDescription: L,
+              altGrLabel: E,
+              inactiveAltGrLabel: D,
+              extendedKeyRow: v,
+              onFocus: P,
               onHover: B,
-              ariaProps: j = {
+              ariaProps: A = {
                 role: "gridcell",
                 "aria-colindex": e.dataProps["data-key-col"],
               },
             } = e,
-            _ = (0, he.Xk)(),
-            [M, F] = v.useState(!1),
-            [ye, ge] = v.useState(!1),
-            ne = (0, yt.bJ)(),
-            ie = (ne && !c && M) || ((!ne || _) && ye),
-            le = R ? (0, $.we)(R) : p;
-          v.useEffect(() => {
-            M && D(le, !0);
-          }, [r, D]);
-          const fe = v.useCallback(
-              (pe, te) => {
-                F(te), D(pe, te);
+            H = (0, ye.Xk)(),
+            [O, F] = K.useState(!1),
+            [ae, se] = K.useState(!1),
+            ie = (0, ft.bJ)(),
+            Q = !((0, x.gc)(O ? c : void 0) ?? !1) && O,
+            pe = (ie && Q) || ((!ie || H) && ae),
+            ce = L ? (0, $.we)(L) : T;
+          K.useEffect(() => {
+            O && P(ce, !0);
+          }, [r, P]);
+          const J = K.useCallback(
+              (de, te) => {
+                F(te), P(de, te);
               },
-              [D],
+              [P],
             ),
-            Q = v.useCallback(
-              (pe, te) => {
-                ge(te), B(pe, te);
+            je = K.useCallback(
+              (de, te) => {
+                se(te), B(de, te);
               },
               [B],
             ),
-            Ae = me(le, fe, Q);
-          return (0, i.jsx)("div", {
+            De = ge(ce, J, je);
+          return (0, l.jsx)("div", {
             style: { display: "contents" },
-            ...j,
-            children: (0, i.jsxs)(A.Z, {
+            ...A,
+            children: (0, l.jsxs)(j.Z, {
               navRef: a,
               role: "button",
-              "aria-label": (0, $.we)(R),
+              "aria-label": (0, $.we)(L),
               autoFocus: s,
-              focusable: l,
+              focusable: i,
               ...f,
-              className: (0, w.A)(n().KeyboardKeyHitArea, K),
-              ...Ae,
+              className: (0, R.A)(n().KeyboardKeyHitArea, C),
+              ...De,
               children: [
-                C,
-                (0, i.jsxs)("div", {
-                  className: (0, w.A)(g, ie && n().Focused),
+                v,
+                (0, l.jsxs)("div", {
+                  className: (0, R.A)(g, pe && n().Focused),
                   children: [
-                    u === void 0
+                    d === void 0
                       ? null
-                      : (0, i.jsx)("div", {
-                          className: (0, w.A)(
+                      : (0, l.jsx)("div", {
+                          className: (0, R.A)(
                             n().ActionButtonGlyph,
                             n().KeyboardActionButtonLeft,
                           ),
-                          children: (0, i.jsx)(oe.WD, {
-                            button: u,
+                          children: (0, l.jsx)(oe.WD, {
+                            button: d,
                             bKnockout: !0,
                             ...f,
                           }),
@@ -3273,66 +3281,66 @@
                     S === null
                       ? null
                       : r
-                        ? (0, i.jsx)("span", {
+                        ? (0, l.jsx)("span", {
                             className: n().ShiftActive,
-                            children: p,
+                            children: T,
                           })
-                        : (0, i.jsx)("span", {
-                            className: (0, w.A)(n().ShiftedLabel, L),
+                        : (0, l.jsx)("span", {
+                            className: (0, R.A)(n().ShiftedLabel, w),
                             children: S,
                           }),
                     S === null
-                      ? (0, i.jsx)("span", { children: p })
+                      ? (0, l.jsx)("span", { children: T })
                       : r
-                        ? (0, i.jsx)("span", {
+                        ? (0, l.jsx)("span", {
                             className: n().InactiveLabel,
                             children: S,
                           })
-                        : (0, i.jsx)("span", { children: p }),
-                    x === null || P === null
+                        : (0, l.jsx)("span", { children: T }),
+                    E === null || D === null
                       ? null
                       : r
-                        ? (0, i.jsx)("span", {
-                            className: (0, w.A)(
+                        ? (0, l.jsx)("span", {
+                            className: (0, R.A)(
                               n().ShiftActive,
                               n().AltGrLabel,
                             ),
-                            children: x,
+                            children: E,
                           })
-                        : (0, i.jsx)("span", {
-                            className: (0, w.A)(
+                        : (0, l.jsx)("span", {
+                            className: (0, R.A)(
                               n().ShiftedLabel,
                               n().AltGrLabel,
                             ),
-                            children: P,
+                            children: D,
                           }),
-                    x === null
+                    E === null
                       ? null
-                      : P === null
-                        ? (0, i.jsx)("span", {
+                      : D === null
+                        ? (0, l.jsx)("span", {
                             className: n().AltGrLabel,
-                            children: x,
+                            children: E,
                           })
                         : r
-                          ? (0, i.jsx)("span", {
-                              className: (0, w.A)(
+                          ? (0, l.jsx)("span", {
+                              className: (0, R.A)(
                                 n().InactiveLabel,
                                 n().AltGrLabel,
                               ),
-                              children: P,
+                              children: D,
                             })
-                          : (0, i.jsx)("span", {
+                          : (0, l.jsx)("span", {
                               className: n().AltGrLabel,
-                              children: x,
+                              children: E,
                             }),
                     k === void 0
                       ? null
-                      : (0, i.jsx)("div", {
-                          className: (0, w.A)(
+                      : (0, l.jsx)("div", {
+                          className: (0, R.A)(
                             n().ActionButtonGlyph,
                             n().KeyboardActionButtonRight,
                           ),
-                          children: (0, i.jsx)(oe.WD, {
+                          children: (0, l.jsx)(oe.WD, {
                             button: k,
                             bKnockout: !0,
                             ...f,
@@ -3340,12 +3348,12 @@
                         }),
                     h === void 0
                       ? null
-                      : (0, i.jsx)("div", {
-                          className: (0, w.A)(
+                      : (0, l.jsx)("div", {
+                          className: (0, R.A)(
                             n().ActionButtonGlyph,
                             n().KeyboardActionButtonCenterLeft,
                           ),
-                          children: (0, i.jsx)(oe.WD, {
+                          children: (0, l.jsx)(oe.WD, {
                             button: h,
                             bKnockout: !0,
                             ...f,
@@ -3357,49 +3365,107 @@
             }),
           });
         }
-        function se(e) {
+        function qt(e, t) {
+          const { dataProps: o, ariaProps: a, ...s } = e,
+            { dataProps: i, ariaProps: r, ...c } = t;
+          return (
+            (0, Ie.e)(s, c) && (0, Ie.e)(o, i) && (0, Ie.e)({ ...a }, { ...r })
+          );
+        }
+        const eo = K.memo(Jt, qt);
+        function at(e, t, o) {
+          const a = 50 * (1 + (0, me.OQ)(e * o, -1, 1)) + "cqw",
+            s = 100 * 0.5 * (1 - (0, me.OQ)(t * o, -1, 1)) + "cqh";
+          return `clamp( 0px, calc( ${a} - 15px ), calc( 100cqw - 30px ) ) clamp( 0px, calc( ${s} - 15px ), calc( 100cqh - 30px ) )`;
+        }
+        function re(e) {
           let { input: t, fnCallback: o } = e,
-            a = (e.inputScale ?? 1) * W.O.TrackPadTypingInputScale,
-            s = v.useRef(void 0),
-            [l, r] = v.useState(),
-            c = v.useRef(void 0);
-          const f = v.useCallback(() => {
+            a = (e.inputScale ?? 1) * z.O.TrackPadTypingInputScale,
+            s = K.useRef(void 0),
+            [i, r] = K.useState(),
+            c = K.useRef(void 0),
+            f = K.useRef(null),
+            C = K.useRef(!1);
+          const g = K.useRef(e);
+          g.current = e;
+          const d = K.useRef(a);
+          d.current = a;
+          const h = K.useRef(void 0),
+            k = K.useRef(void 0),
+            T = K.useCallback(() => {
               c.current && ((c.current = void 0), o(!1, 0, 0)),
+                (C.current = !1),
                 r({ active: !1, trackpadX: 0, trackpadY: 0 });
             }, [o, c]),
-            K = v.useCallback((p) => {
-              s.current = p;
+            S = K.useCallback((D) => {
+              s.current = D;
             }, []),
-            g = v.useCallback(
-              (p, S, L, R) => {
-                let x = () => {
-                  if (
-                    p == e.trackpad &&
-                    (r({ active: !0, trackpadX: L, trackpadY: R }), s.current)
-                  ) {
-                    let P = 0.5 * (1 + (0, ue.OQ)(L * a, -1, 1)),
-                      C = 0.5 * (1 - (0, ue.OQ)(R * a, -1, 1)),
-                      D = s.current.getBoundingClientRect(),
-                      B = D.left + D.width * P,
-                      j = D.top + D.height * C;
-                    e.fnCallback(!0, B, j, S),
-                      c.current !== void 0 && window.clearTimeout(c.current),
-                      (c.current = window.setTimeout(f, 100));
+            w = K.useCallback(
+              (D, v, P, B) => {
+                let A = () => {
+                  if (D == g.current.trackpad) {
+                    if (
+                      (C.current ||
+                        ((C.current = !0),
+                        r({ active: !0, trackpadX: P, trackpadY: B })),
+                      s.current)
+                    ) {
+                      let H = 0.5 * (1 + (0, me.OQ)(P * d.current, -1, 1)),
+                        O = 0.5 * (1 - (0, me.OQ)(B * d.current, -1, 1)),
+                        F = s.current.getBoundingClientRect(),
+                        ae = F.left + F.width * H,
+                        se = F.top + F.height * O;
+                      g.current.fnCallback(!0, ae, se, v),
+                        c.current !== void 0 && window.clearTimeout(c.current),
+                        (c.current = window.setTimeout(T, 100));
+                    }
+                    f.current &&
+                      (f.current.style.translate = at(P, B, d.current));
                   }
                 };
-                ut.unstable_batchedUpdates(x);
+                mt.unstable_batchedUpdates(A);
               },
-              [e, c, f, a],
+              [T],
+            ),
+            L = K.useCallback(
+              (D, v, P, B) => {
+                if (D != g.current.trackpad) return;
+                const A = s.current?.ownerDocument.defaultView;
+                if (!A) {
+                  w(D, v, P, B);
+                  return;
+                }
+                if (
+                  ((h.current = { button: D, controller_index: v, x: P, y: B }),
+                  k.current)
+                )
+                  return;
+                const H = A.requestAnimationFrame(() => {
+                  k.current = void 0;
+                  const O = h.current;
+                  (h.current = void 0),
+                    O && w(O.button, O.controller_index, O.x, O.y);
+                });
+                k.current = { ownerWindow: A, nFrame: H };
+              },
+              [w],
             );
           if (
-            (v.useEffect(() => {
+            (K.useEffect(
+              () => () => {
+                k.current?.ownerWindow.cancelAnimationFrame(k.current.nFrame),
+                  (k.current = void 0);
+              },
+              [],
+            ),
+            K.useEffect(() => {
               if (t) {
-                let p = t.RegisterForAnalog(g);
-                return () => p.Unregister();
+                let D = t.RegisterForAnalog(L);
+                return () => D.Unregister();
               }
               return () => {};
-            }, [t, g]),
-            v.useEffect(
+            }, [t, L]),
+            K.useEffect(
               () => () => {
                 c.current !== void 0 &&
                   (o(!1, 0, 0),
@@ -3408,38 +3474,34 @@
               },
               [o],
             ),
-            !l?.active)
+            !i?.active)
           )
             return null;
-          let u = 100 * 0.5 * (1 + (0, ue.OQ)(l.trackpadX * a, -1, 1)) + "%",
-            h = 100 * 0.5 * (1 - (0, ue.OQ)(l.trackpadY * a, -1, 1)) + "%",
-            k = {
-              left: `clamp( 0px, calc( ${u} - 15px ), calc( 100% - 30px ) )`,
-              top: `clamp( 0px, calc( ${h} - 15px ), calc( 100% - 30px ) )`,
-            };
-          return (0, i.jsx)(A.Z, {
-            ref: K,
-            className: (0, w.A)(n().TouchpadPointerContainer, e.className),
-            children: (0, i.jsx)("svg", {
-              className: (0, w.A)(
+          let E = { translate: at(i.trackpadX, i.trackpadY, a) };
+          return (0, l.jsx)(j.Z, {
+            ref: S,
+            className: (0, R.A)(n().TouchpadPointerContainer, e.className),
+            children: (0, l.jsx)("svg", {
+              ref: f,
+              className: (0, R.A)(
                 n().TouchpadPointer,
                 e.pressed && n().PressedDown,
               ),
-              style: k,
-              children: (0, i.jsx)("circle", { cx: "50%", cy: "50%", r: "10" }),
+              style: E,
+              children: (0, l.jsx)("circle", { cx: "50%", cy: "50%", r: "10" }),
             }),
           });
         }
-        const Yt = (e) => {
+        const to = (e) => {
           const { keyboard: t, fnCallback: o } = e,
-            a = (0, he.rP)();
+            a = (0, ye.rP)();
           return (
-            v.useEffect(() => {
+            K.useEffect(() => {
               if (!a.IN_VR) return;
               const s =
                 t?.ownerDocument.defaultView.SteamClient?.OpenVR?.VROverlay.RegisterForCursorMovement(
-                  (l, r, c, f) => {
-                    l === 1 && o(r, c, f, l);
+                  (i, r, c, f) => {
+                    i === 1 && o(r, c, f, i);
                   },
                 );
               return () => s?.unregister();

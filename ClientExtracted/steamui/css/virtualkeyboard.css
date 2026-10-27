@@ -27782,6 +27782,7 @@
   top: 0;
   bottom: 0;
   z-index: 2;
+  container-type: size;
 }
 ._1nlEaO2cq2lOAtkp0DNjRp._2g-R0QX4-DcLVBHAVVQuza {
   left: 0;
@@ -27795,6 +27796,8 @@
 }
 ._1nlEaO2cq2lOAtkp0DNjRp .jfjnA3b-cE-LyIb8AGLI0 {
   position: absolute;
+  left: 0;
+  top: 0;
   width: 30px;
   height: 30px;
   opacity: 0.5;

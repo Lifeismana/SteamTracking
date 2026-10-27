@@ -1878,9 +1878,6 @@ $ORIGIN
 20IHTTPRedirectHandler
 20ISSLThreadedSendSink
 20IUniformRandomStream
-21:36:58
-21:37:05
-21:37:06
 21CClanAnnouncementInfo
 21CEC25519PublicKeyBase
 21CHTTPClientConnection
@@ -1893,6 +1890,8 @@ $ORIGIN
 21CScheduledFunctionMgr
 21CUtlCStringConversion
 21UserSystemInformation
+22:11:20
+22:11:28
 22CBaseScheduledFunction
 22CClanMatchEventByRange
 22CClientStructNetPacket
@@ -6790,7 +6789,7 @@ Object Signing
 Object Signing CA
 Obtained EMS handle %u
 Obtained XMS handle %u
-Oct 22 2026
+Oct 26 2026
 October
 Odia
 Offensive Avatar
@@ -8231,7 +8230,7 @@ StartSteamRTLogger
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Oct 22 2026 21:37:05
+Startup - updater built Oct 26 2026 22:11:28
 State
 StaticFileWriterThread()
 Steam

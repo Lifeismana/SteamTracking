@@ -148,6 +148,8 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -1357,6 +1359,7 @@
           );
           m_nOpenExtendedRows = 0;
           m_mapTouched = new Set();
+          m_trackpadHover = (0, _._)(!1);
           constructor(_) {
             super(_),
               (this.state = {
@@ -2630,7 +2633,7 @@
                   bAutoFocus: _,
                   bFocusable: _,
                   bIsShift: _,
-                  bHasTrackpadHover: this.BHasTrackpadHover(),
+                  trackpadHover: this.m_trackpadHover,
                   dataProps: _,
                   className: _,
                   innerClassName: _,
@@ -3106,6 +3109,9 @@
                 watchdogTimer: null,
               });
           }
+          componentDidUpdate() {
+            this.m_trackpadHover.Set(this.BHasTrackpadHover());
+          }
           componentDidMount() {
             _._.GetKeyboardLayoutSettings().selectedLayouts.length != 1 &&
               (this.SetLayoutNameTimeout(),
@@ -3124,6 +3130,7 @@
                 this.DismissLongPress(_),
                 this.ClearHoldTarget(_);
             this.m_trackpadInput.EnableAnalogInputMessages(!1),
+              this.m_trackpadInput.Destroy(),
               this.ClearControllerInputWatchdogTimer();
           }
           render() {
@@ -3344,7 +3351,7 @@
               bAutoFocus: _,
               bFocusable: _,
               bIsShift: _,
-              bHasTrackpadHover: _,
+              trackpadHover: _,
               dataProps: _,
               className: _,
               innerClassName: _,
@@ -3369,7 +3376,8 @@
             [_, _] = _.useState(!1),
             [_, _] = _.useState(!1),
             _ = (0, _._)(),
-            _ = (_ && !_ && _) || ((!_ || _) && _),
+            _ = !((0, _._)(_ ? _ : void 0) ?? !1) && _,
+            _ = (_ && _) || ((!_ || _) && _),
             _ = _ ? (0, _._)(_) : _;
           _.useEffect(() => {
             _ && _(_, !0);
@@ -3510,14 +3518,45 @@
             }),
           });
         }
+        function _(_, _) {
+          const { dataProps: _, ariaProps: _, ..._ } = _,
+            { dataProps: _, ariaProps: _, ..._ } = _;
+          return (
+            (0, _._)(_, _) &&
+            (0, _._)(_, _) &&
+            (0, _._)(
+              {
+                ..._,
+              },
+              {
+                ..._,
+              },
+            )
+          );
+        }
+        const _ = _.memo(_, _);
+        function _(_, _, _) {
+          const _ = 50 * (1 + (0, _._)(_ * _, -1, 1)) + "cqw",
+            _ = 100 * 0.5 * (1 - (0, _._)(_ * _, -1, 1)) + "cqh";
+          return `clamp( 0px, calc( ${_} - 15px ), calc( 100cqw - 30px ) ) clamp( 0px, calc( ${_} - 15px ), calc( 100cqh - 30px ) )`;
+        }
         function _(_) {
           let { input: _, fnCallback: _ } = _,
             _ = (_.inputScale ?? 1) * _._.TrackPadTypingInputScale,
             _ = _.useRef(void 0),
             [_, _] = _.useState(),
-            _ = _.useRef(void 0);
-          const _ = _.useCallback(() => {
+            _ = _.useRef(void 0),
+            _ = _.useRef(null),
+            _ = _.useRef(!1);
+          const _ = _.useRef(_);
+          _.current = _;
+          const _ = _.useRef(_);
+          _.current = _;
+          const _ = _.useRef(void 0),
+            _ = _.useRef(void 0),
+            _ = _.useCallback(() => {
               _.current && ((_.current = void 0), _(!1, 0, 0)),
+                (_.current = !1),
                 _({
                   active: !1,
                   trackpadX: 0,
@@ -3530,31 +3569,74 @@
             _ = _.useCallback(
               (_, _, _, _) => {
                 let _ = () => {
-                  if (
-                    _ == _.trackpad &&
-                    (_({
-                      active: !0,
-                      trackpadX: _,
-                      trackpadY: _,
-                    }),
-                    _.current)
-                  ) {
-                    let _ = 0.5 * (1 + (0, _._)(_ * _, -1, 1)),
-                      _ = 0.5 * (1 - (0, _._)(_ * _, -1, 1)),
-                      _ = _.current.getBoundingClientRect(),
-                      _ = _.left + _.width * _,
-                      _ = _.top + _.height * _;
-                    _.fnCallback(!0, _, _, _),
-                      _.current !== void 0 && window.clearTimeout(_.current),
-                      (_.current = window.setTimeout(_, 100));
+                  if (_ == _.current.trackpad) {
+                    if (
+                      (_.current ||
+                        ((_.current = !0),
+                        _({
+                          active: !0,
+                          trackpadX: _,
+                          trackpadY: _,
+                        })),
+                      _.current)
+                    ) {
+                      let _ = 0.5 * (1 + (0, _._)(_ * _.current, -1, 1)),
+                        _ = 0.5 * (1 - (0, _._)(_ * _.current, -1, 1)),
+                        _ = _.current.getBoundingClientRect(),
+                        _ = _.left + _.width * _,
+                        _ = _.top + _.height * _;
+                      _.current.fnCallback(!0, _, _, _),
+                        _.current !== void 0 && window.clearTimeout(_.current),
+                        (_.current = window.setTimeout(_, 100));
+                    }
+                    _.current &&
+                      (_.current.style.translate = _(_, _, _.current));
                   }
                 };
                 _.unstable_batchedUpdates(_);
               },
-              [_, _, _, _],
+              [_],
+            ),
+            _ = _.useCallback(
+              (_, _, _, _) => {
+                if (_ != _.current.trackpad) return;
+                const _ = _.current?.ownerDocument.defaultView;
+                if (!_) {
+                  _(_, _, _, _);
+                  return;
+                }
+                if (
+                  ((_.current = {
+                    button: _,
+                    controller_index: _,
+                    _: _,
+                    _: _,
+                  }),
+                  _.current)
+                )
+                  return;
+                const _ = _.requestAnimationFrame(() => {
+                  _.current = void 0;
+                  const _ = _.current;
+                  (_.current = void 0),
+                    _ && _(_.button, _.controller_index, _._, _._);
+                });
+                _.current = {
+                  ownerWindow: _,
+                  nFrame: _,
+                };
+              },
+              [_],
             );
           if (
-            (_.useEffect(() => {
+            (_.useEffect(
+              () => () => {
+                _.current?.ownerWindow.cancelAnimationFrame(_.current.nFrame),
+                  (_.current = void 0);
+              },
+              [],
+            ),
+            _.useEffect(() => {
               if (_) {
                 let _ = _.RegisterForAnalog(_);
                 return () => _.Unregister();
@@ -3577,16 +3659,14 @@
             !_?.active)
           )
             return null;
-          let _ = 100 * 0.5 * (1 + (0, _._)(_.trackpadX * _, -1, 1)) + "%",
-            _ = 100 * 0.5 * (1 - (0, _._)(_.trackpadY * _, -1, 1)) + "%",
-            _ = {
-              left: `clamp( 0px, calc( ${_} - 15px ), calc( 100% - 30px ) )`,
-              top: `clamp( 0px, calc( ${_} - 15px ), calc( 100% - 30px ) )`,
-            };
+          let _ = {
+            translate: _(_.trackpadX, _.trackpadY, _),
+          };
           return (0, _.jsx)(_._, {
             ref: _,
             className: (0, _._)(_().TouchpadPointerContainer, _.className),
             children: (0, _.jsx)("svg", {
+              ref: _,
               className: (0, _._)(
                 _().TouchpadPointer,
                 _.pressed && _().PressedDown,

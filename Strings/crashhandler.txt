@@ -235,7 +235,6 @@ $ORIGIN
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
-++CCUNGu
 -- Hierarchical Call Graph --\n
 -- Profile scopes sorted by average time (including children) --
 -- Profile scopes sorted by average time (without children) --
@@ -361,8 +360,8 @@ $ORIGIN
 19CUtlNoEscConversion
 20CUniformRandomStream
 20IUniformRandomStream
-21:36:58
 21CUtlCStringConversion
+22:11:20
 24CDirWatcherPollingThread
 31CAdHocValidation_SimpleCallback
 64 >= identifier_length
@@ -588,7 +587,7 @@ No samples during profile period.\n
 No tracked allocs currently in use. Total %d\n
 OUT OF MEMORY
 Object
-Oct 22 2026
+Oct 26 2026
 Only thread can stop self: Use a higher-level protocol
 PDF128_
 PDF16_

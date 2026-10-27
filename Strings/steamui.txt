@@ -1335,7 +1335,6 @@ ${LANGUAGE}
 ( m_AssocHandles[nAssocIdx].nFlags & k_nAssocClosed ) == 0
 ( m_cubRecvMsg + pHdr->m_cbPkt ) <= k_cubMaxMsgNetworkSize
 ( m_iHead & nNewCapacityMask ) == nNewCapacity - nPreSplit
-( m_pingEntries.Count() % 2 ) == 0
 ( unsigned )elem <= ( unsigned )m_Size
 (!((uintptr_t)(src_height) & ((2)-1)))
 (!((uintptr_t)(src_width) & ((2)-1)))
@@ -3408,6 +3407,7 @@ ${LANGUAGE}
 10CUtlMemoryIN11CUtlHashMapIyj10CDefEqualsIyE11HashFunctorIyEyE12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapIyj10CDefEqualsIyE11HashFunctorIyEyE6Node_tEE
 10CUtlMemoryIN12CHTTPHeaders8Header_tEE
+10CUtlMemoryIN13CStreamServer10MTUProbe_tEE
 10CUtlMemoryIN13CStreamServer14DelayedInput_tEE
 10CUtlMemoryIN14CUDPConnection20ConnectPingResults_tEE
 10CUtlMemoryIN14CUpdateManager14AppTimestamp_tEE
@@ -3740,6 +3740,7 @@ ${LANGUAGE}
 10CUtlVectorIN11CUtlHashMapIyi10CDefEqualsIyE11HashFunctorIyEyE12HashBucket_tE10CUtlMemoryIS6_EE
 10CUtlVectorIN11CUtlHashMapIyj10CDefEqualsIyE11HashFunctorIyEyE12HashBucket_tE10CUtlMemoryIS6_EE
 10CUtlVectorIN12CHTTPHeaders8Header_tE10CUtlMemoryIS1_EE
+10CUtlVectorIN13CStreamServer10MTUProbe_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN13CStreamServer14DelayedInput_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN14CUDPConnection20ConnectPingResults_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN14CUpdateManager14AppTimestamp_tE10CUtlMemoryIS1_EE
@@ -12409,6 +12410,7 @@ CVGUIFileOpenDialog
 CVProfLabel
 CVProfPanel
 CVProfile_ExitScope
+CVR2DGameOverlay: Could not create new texture
 CVR2DGameOverlay::OnAppEventStateChange
 CVR2DGameOverlay::OnVR2DOverlayGameLaunched
 CVR2DGameOverlay::OnVRSceneApplicationChanged
@@ -13217,6 +13219,7 @@ Couldn't parse transport signal message\n
 Couldn't query PIDs for %s - possibly exited\n
 Couldn't resolve autosave path %s\n
 Couldn't scale cursor: %s\n
+Couldn't send ping with MTU %d\n
 Couldn't serialize controller configuration.
 CountLocks(): %d, locks[0]: (0x%p), pLock: 0x%p, this: 0x%p\n
 CountLocks(): %d, this: 0x%p, pLock = 0x%p\n
@@ -18171,9 +18174,10 @@ MOUSE_RIGHT
 MP4 Media File (*.mp4)
 MPEG Media File (*.mpeg)
 MPEG Media File (*.mpg)
+MTU %d is too high\n
 MTU discovery complete, detected value %d\n
+MTU discovery didn't find a working MTU, using the minimum\n
 MTU discovery failed, no ping response\n
-MTU too high, reducing and trying with MTU %d\n
 MTU too low: %d\n
 MTUDiscovery
 MUSIC
@@ -20061,7 +20065,7 @@ Object Signing CA
 Objects
 Obtained EMS handle %u
 Obtained XMS handle %u
-Oct 22 2026 21:37:08
+Oct 26 2026 22:11:32
 Octal/hex numbers are not valid JSON values.
 October
 Odia
@@ -20822,10 +20826,8 @@ PickColor
 PinCorner
 PinValidda
 Ping
-Ping MTU dropped, resending with MTU %d\n
-Ping failed, reduced increment to %d\n
 Ping response, expected MTU %d, but client received packet size %d\n
-Ping timeout, resending with MTU %d\n
+Ping timeout, resending MTU probes\n
 PingTimeForCurrentCellID
 Pinged %s but got reply from %s?
 PinnedCornerOffsetX
@@ -22593,8 +22595,8 @@ Sending msg of type '%s' with timeout=0.  Receiver won't have any time to servic
 Sending of an email failed
 Sending up to %u queued request(s) for %s\n
 Sends the user to the User Chooser even if they have 0 or 1 accounts
+Sent %d pings with MTU %d to %d\n
 Sent message: %s - %u bytes\n
-Sent ping with MTU %d, increment = %d\n
 SentenceMode
 SentenceModeMenu
 Sentiment
@@ -37425,6 +37427,7 @@ m_vecLicenseID.Count() > 0
 m_vecLocalMRUAppTimestamps
 m_vecMRUApps
 m_vecMRUIgnoredApps
+m_vecMTUProbes
 m_vecMarketingMessages
 m_vecMenuButtons
 m_vecMetrics
@@ -37761,6 +37764,7 @@ min_protocol
 min_scale_factor
 minidump_assert
 minidump_crash
+minidump_stackoverflow
 minimum
 minimumUpdatePeriod
 minor_revision
@@ -38702,6 +38706,7 @@ outputData
 overall_estimated_time_remaining_sec
 overall_percent_complete
 overflow error
+overflows the stack to test stack overflow crash reporting
 overlay_fps_counter_allow_km_driver
 overlay_fps_counter_bgopacity
 overlay_fps_counter_corner

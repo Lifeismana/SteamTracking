@@ -575,22 +575,19 @@
           VoiceChatQuickChatChannelOption: "_21sBMXM8yoKeuW-fKle3Vy",
           ManageVoiceChannelsModal: "_1A5sybPJ1uj5L0yEov5pSi",
           ManageTextChannelsModal: "_2ESbSV_OamZwsQ75qTxOLH",
+          StackedDialogButtons: "_3ARs1HOsLeaY-o5ninetzL",
+          AddChannelFooterBtn: "fBKKfrxBO77AfTPu-9SOY",
           ManageVoiceChannels: "HblucrrNRsNtaEt_eYxcQ",
           AddVoiceChannelBtn: "_31CQegG4qXrryhxOqK4ayk",
           "ItemFocusAnim-darkerGrey": "_1s9fLAatjfVbTwgp2zAkY-",
           ChannelStatusLabel: "_3c_tAB15TxENLtcfo9XNCH",
           ChatRoomGroupControlsSteamDeck: "_6udMTfuHsNkasAQ1R-O5o",
           currentUserInVoiceChannel: "_317dWjdq1bg1XjAWa2Xq7X",
-          HasActiveVoiceRoom: "_3gZWMRL--wCwME-HQFJYo6",
           VoiceChannelCount: "_2HK80obo1pIa5zXZDgkHIL",
           "ItemFocusAnim-darkGrey": "_3fsSApBiput7vr-sf-t7QK",
-          "ItemFocusAnim-green": "_1kXGOgODUHlSrk-Rmbv_S6",
-          RightAlignedStats: "_2gUWsEef-Ms6hQUarKADjP",
-          MemberCount: "aNTrI4-MiVMGeA-6jO1a7",
-          InGame: "dybxDXyVtKhL3WexIME8s",
-          Total: "_1gZ7zgkalfL9thXx9A2hy3",
           TextChannelCount: "_1CEGT0e7_QyJfHmORhjDOb",
-          ChatRoomGroupControlsFiller: "_2mSjvLET6Tnk0FSggx7NB4",
+          TextChannels: "_2c176UDWJkDEMBx9GPe802",
+          VoiceChannels: "_1PEmCVMpR9-fIBkQkz5CqH",
           UnreadTextChannel: "_1YQwCw4IfvCam27CxUyXTS",
           GroupMemberListDialog: "_3WxqTXJnkBZp49FnN7BNDY",
           ChatRoomVoiceInviteDialog: "_1XTPkS8gW1EFzwiiwdQkvg",
@@ -614,6 +611,7 @@
           ChatTabTransitionGroup: "_3f1rJf0BU79ub9YR2KihaT",
           ChatTab: "_2XZq-_f6npaQdAgeRzKIkz",
           Active: "Yd-DsWkYiFiYwpci--Yk_",
+          UnreadGlow: "_2ve8VIOIUS5rjAzmJvjVS-",
           ChatTabTransition_Enter: "_3oMENEr8B3XRqYBUZN0wxj",
           ChatTabTransition_EnterActive: "_3FCPV9HGkWZ1fvzA7HH0db",
           ChatTabTransition_Exit: "_3U5nKyNTQNOpbQ6ZYdTpNN",
@@ -629,7 +627,6 @@
           IsNotFriendLabel: "_27aBcQj9X3JIZtB5GGXNcW",
           ChatTabContent_ChatRoom: "_3hCFlMxf40SP2WVNOubSvf",
           ChatTabContent_ChatRoomName: "_1HNpQBKKKQ1tG2OZH3CSsh",
-          UnreadGlow: "_2ve8VIOIUS5rjAzmJvjVS-",
           UnreadCircle: "jMumuBBbjOf_v5JU9RpmZ",
         };
       },
@@ -641,6 +638,10 @@
           NoIconLabel: "_2c3OKW255HvX-X5cpenCgx",
           ChannelsButtons: "Rv511F1U683LQWJLvan2r",
           Notification: "_1cjXkI2JrN71BK7A2YXaYa",
+          GamepadSaveGroupDialog: "_1vt-ao5j0J4zT3cOnoOtD7",
+          GamepadLeaveRow: "Fmaya3yb_AwiTxw7LneIa",
+          GamepadLeaveButton: "r8x7rW4LKELa_hf6l10hQ",
+          GamepadGroupSettings: "_2KbKVsPjM320xulFNqGSXS",
           LeaveButton: "_1NqKTWvxtFgflRlqLTtv7e",
           PermissionsEdit: "_1PFRw63SmEC5gmtojKrml1",
           Back: "_2jkBm4Wv_CFFjeaDrhEKax",
@@ -870,22 +871,28 @@
           PendingVoiceChats: "_3P2TGAycwIHzDN-lYof62O",
           PendingVoiceChatsList: "T_CxfOHI0pFdBEzVu-kHn",
           PendingVoiceChatRequest: "_3-ev3alpb4Y1sgxrxp_LA2",
+          FriendVoiceChat: "_2h67VWTK4yphSgPmZ5hJn",
+          VoiceChatRequestButton: "_2z4T1UDCcXXa-gca4-UQOi",
+          Accept: "_1Aj_lBXUK-9KgPzgey3Ob",
+          Decline: "_32vav_6eesRRYJWZJDX5bg",
+          "ItemFocusAnim-darkerGrey": "lnDGl8nGSvCz839-917-q",
+          none: "_7e5Wnd1MVNgUAU-0goE4H",
           VoiceChatList: "_3RPaPwdCZoCW6eX8k9QyRj",
           FriendVoiceChatSliderContainer: "_2Uf-0Z6C7U0MMzWK80PYzJ",
           SliderPadding: "_2K_pbOhL4q2dc5CCMMYBf7",
           FriendVoiceChatContainer: "_24xAnM5VBtJG2RFN1jye9d",
           FriendVoiceChatButton: "RHCvO21-SRDmYD70hqbe",
-          "ItemFocusAnim-darkerGrey": "lnDGl8nGSvCz839-917-q",
           ConnectingIndicator: "sqgBaeWk0I-35zudEqKpD",
-          FriendVoiceChat: "_2h67VWTK4yphSgPmZ5hJn",
           GroupVoiceChatContainer: "_3A4u3QQzeiwpDdcyVY9OyW",
           GroupRoomContainer: "_3s4cTsgc0vLKPOiNOs8ORA",
+          GroupVoiceChatMember: "O9JL1vwVA6fEgHO0EXtUT",
           LeaveVoiceChat: "_1PjHmS8lPKM8U0ROnOovkZ",
           GroupContainer: "_3mrWePocrORa6f4J0IBpuf",
           GroupTitle: "_2aE5FfHO9-bXoWGORbslZ9",
           ActiveVoiceRoom: "_3ATuV7mdOOEhKb3gIPu2ZT",
           UserInRoom: "_3_EgqsAt7NnxmcSnhp52jC",
           RoomHeader: "W7DiCopm0Ir_LrHcziiwb",
+          RoomHeaderRow: "_1czQXd9eaBYtKurI7cYy0p",
           RoomTitle: "_3YVhXjpwB5ZoVDzsJoLYu7",
           GroupVoiceChatFriend: "_2qjnKmrLcuDf0CeJlygjHB",
           MicMutedLocally: "_2Kf6w1NQ797OCShY6SwPhE",
@@ -4684,6 +4691,9 @@
           ShortTemplate: "fntOoeLPSTpmyXGGmgf99",
           TwoLine: "P1FhGdWv2NCXZXWsaKqqY",
           FullWidth: "_6EcDVXFHtdirTkETQjKOK",
+          WithSuffix: "_23Jr45_dBWp9BWhwlJ6H18",
+          BodyText: "_1W7sXKA9OZ_GpXPpxziz1J",
+          BodySuffix: "_3lklpR3-pz299o9EuX81Xd",
         };
       },
       chunkid: (module) => {
@@ -7749,6 +7759,7 @@
           Locked: "_6VgzCF2SUmrf2wBDqeoTz",
           FamilyView: "_3QfCJiGtW4KNPMAZoVX9is",
           VoiceChatStatus: "_32nVDpTyn9nSc1IncKbzg0",
+          VoiceChatStatusItem: "_13F6Sxy89IAvPiDGZfTwmo",
           UnreadChatMessages: "_3gfH2_uQacJnSfnqjscMq-",
           HasActiveSupportAlert: "_2IweByP8a5BamWAj_7Tsmo",
           HeaderDownloadContainer: "_2ssr3-L3TQNdrX6NI1-Gzn",
@@ -18627,8 +18638,11 @@
         __webpack_require__._(module_exports, {
           _: () => _,
           _: () => _,
+          _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -18644,6 +18658,19 @@
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
           };
+        function _(_) {
+          return _ == "gameinvite" || _ == "lobbyinvite";
+        }
+        function _(_) {
+          return !_.startsWith("[gameinvite") && !_.startsWith("[lobbyinvite")
+            ? !1
+            : (0, _._)(_).every(
+                (_) =>
+                  ((_.type == _._ || _.type == _._) &&
+                    _(_.type == _._ ? _.tag : _.text)) ||
+                  (_.type == _._ && !_.text.trim()),
+              );
+        }
         function _(_, _, _, _, _) {
           let _ = _._.InitFromAccountID(_),
             _;
@@ -18746,18 +18773,40 @@
         class _ {
           m_mapGameInvites = new Map();
           m_mapDismissedInvites = _._.map();
+          m_mapLatestInvite = _._.map(void 0, {
+            deep: !1,
+          });
+          m_bDismissedInvitesLoaded = !1;
           Init() {
-            _._.SettingsStore.GetObjectFromLocalStorageWhenReady(_, _).then(
-              (_) => {
-                let _ = new Date();
-                _.setDate(_.getDate() - 14), this.m_mapDismissedInvites.clear();
-                for (let _ in _.dismisstimes) {
-                  let _ = parseInt(_),
-                    _ = _.dismisstimes[_];
-                  new Date(_ * 1e3) < _ || this.m_mapDismissedInvites.set(_, _);
-                }
-              },
-            );
+            (this.m_bDismissedInvitesLoaded = !1),
+              _._.SettingsStore.GetObjectFromLocalStorageWhenReady(_, _).then(
+                (_) => {
+                  let _ = new Date();
+                  _.setDate(_.getDate() - 14);
+                  let _ = new Map(this.m_mapDismissedInvites);
+                  this.m_mapDismissedInvites.clear();
+                  for (let _ in _.dismisstimes) {
+                    let _ = parseInt(_),
+                      _ = _.dismisstimes[_];
+                    new Date(_ * 1e3) < _ ||
+                      this.m_mapDismissedInvites.set(_, _);
+                  }
+                  let _ = !1;
+                  _.forEach((_, _) => {
+                    this.m_mapDismissedInvites.get(_) >= _ ||
+                      (this.m_mapDismissedInvites.set(_, _), (_ = !0));
+                  }),
+                    (this.m_bDismissedInvitesLoaded = !0),
+                    _ && this.WriteToLocalStorage(),
+                    this.m_mapGameInvites.forEach((_, _) => {
+                      let _ = this.m_mapDismissedInvites.get(_);
+                      _ &&
+                        _.forEach((_) => {
+                          _.rtTimestamp <= _ && (_.bDismissed = !0);
+                        });
+                    });
+                },
+              );
           }
           RegisterGameInvite(_, _, _, _, _, _) {
             let _ = this.m_mapGameInvites.get(_);
@@ -18771,9 +18820,52 @@
                 _.set(_, _),
                 _.forEach((_) => {
                   _.rtTimestamp < _ && _.DismissInvite();
-                });
+                }),
+                this.m_mapLatestInvite.get(_)?.rtTimestamp > _ ||
+                  this.m_mapLatestInvite.set(_, _);
             }
             return _;
+          }
+          RegisterGameInvitesInMessage(_, _, _) {
+            if (!(!_ || _.indexOf("invite") < 0))
+              for (let _ of (0, _._)(_))
+                _.type == _._ &&
+                  (_.tag == "gameinvite"
+                    ? this.RegisterGameInvite(
+                        _,
+                        _,
+                        parseInt(_.args.appid),
+                        _.args.connect,
+                        _.args.remoteplay,
+                        void 0,
+                      )
+                    : _.tag == "lobbyinvite" &&
+                      this.RegisterGameInvite(
+                        _,
+                        _,
+                        parseInt(_.args.appid),
+                        "",
+                        "",
+                        _.args.lobbyid,
+                      ));
+          }
+          GetPendingInvite(_) {
+            let _ = this.m_mapLatestInvite.get(_);
+            if (
+              !(!_ || _.bDismissed || _.bAccepted || _.bOld) &&
+              _._.FriendStore.GetPlayer(_).persona.m_unGamePlayedAppID ==
+                _.appID
+            )
+              return _;
+          }
+          GetPendingInvites(_) {
+            let _ = [];
+            for (let _ of this.m_mapLatestInvite.keys()) {
+              if (_ == _._.FriendStore.self.accountid || !_(_)) continue;
+              let _ = this.GetPendingInvite(_);
+              _ && _.push(_);
+            }
+            return _.sort((_, _) => _.rtTimestamp - _.rtTimestamp);
           }
           m_mapInviteByCode = new Map();
           RecordDismissTime(_) {
@@ -18783,7 +18875,7 @@
                 _.unAccountIDInviter,
                 _.rtTimestamp,
               ),
-              this.WriteToLocalStorage());
+              this.m_bDismissedInvitesLoaded && this.WriteToLocalStorage());
           }
           WriteToLocalStorage() {
             _._.SettingsStore.StoreObjectInLocalStorage(_, {
@@ -27549,8 +27641,15 @@
                       _ = _
                         ? this.m_ChatStore.FriendStore.self.persona.m_steamid
                         : _,
-                      _ = this.GetFriendChat(_.GetAccountID(), !_),
-                      _ = _?.GetVisibilityState() ?? _._;
+                      _ = this.GetFriendChat(_.GetAccountID(), !_);
+                    !_ &&
+                      !_.is_blocked &&
+                      this.m_ChatStore.GameInviteStore.RegisterGameInvitesInMessage(
+                        _.GetAccountID(),
+                        _.Body().rtime32_server_timestamp(),
+                        _.Body().message(),
+                      );
+                    let _ = _?.GetVisibilityState() ?? _._;
                     if (
                       (!_ &&
                         !_ &&
@@ -27872,6 +27971,15 @@
               this.m_MessageSendQueue
                 .InitFromStorage()
                 .then(() => this.InitQueuedMessages());
+          }
+          AddMessagesToHistory(_, _) {
+            for (let _ of _)
+              this.m_ChatStore.GameInviteStore.RegisterGameInvitesInMessage(
+                _.unAccountID,
+                _.rtTimestamp,
+                _.strMessage,
+              );
+            super.AddMessagesToHistory(_, _);
           }
           GetLastMessage() {
             if (!this.m_strLastMessage && !this.m_bChatLogsLoaded) {
@@ -30316,353 +30424,6 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _, _) => {
-            for (
-              var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
-              _ >= 0;
-              _--
-            )
-              (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
-            return _ && _ && _(_, _, _), _;
-          };
-        function _(_) {
-          const { appID: _ } = _,
-            [_] = (0, _._)(_, {
-              include_assets_without_overrides: !0,
-            }),
-            _ = _?.GetAssetsWithoutOverrides()?.GetHeaderURL();
-          return _
-            ? (0, _.jsx)("img", {
-                src: _,
-                className: _.strClassNames,
-              })
-            : null;
-        }
-        let _ = class extends _.Component {
-          state = {
-            bCanAcceptRemotePlayInvite: !1,
-          };
-          async componentDidMount() {
-            if (this.props.gameInvite.remoteplayString) {
-              let _ = this.props.gameInvite.remoteplayString.split("&"),
-                _ = "restricted_countries=",
-                _ = "";
-              _.forEach((_) => {
-                _.startsWith(_) && (_ = _.slice(_.length));
-              });
-              const _ = await _._.RemotePlayStore.BCanAcceptInviteForGame(
-                this.props.gameInvite.appID.toString(),
-                _,
-              );
-              this.setState({
-                bCanAcceptRemotePlayInvite: _,
-              });
-            }
-          }
-          AcceptGameInvite() {
-            this.props.gameInvite.AcceptGameInvite();
-          }
-          BCanAcceptVoiceChat() {
-            let _ = this.props.inviter,
-              _ = _.efriendrelationship == _.UXi,
-              _ = _.efriendrelationship == _.qNf,
-              _ = _.persona.is_online && !_ && !_ && !_.is_blocked;
-            return !_._.VoiceStore.IsAnyVoiceActive() && _;
-          }
-          AcceptGameInviteAndVoiceChat() {
-            this.props.gameInvite.AcceptGameInvite(),
-              this.BCanAcceptVoiceChat() &&
-                _._.UIStore.ShowFriendChatDialogAndStartVoice(
-                  _._.GetDefaultBrowserContext(),
-                  this.props.inviter.accountid,
-                );
-          }
-          DismissInvite() {
-            this.props.gameInvite.DismissInvite();
-          }
-          OnShowGameContextMenu(_) {
-            (0, _._)(_(_), this.props.gameInvite.appID, _);
-          }
-          render() {
-            let _ = _._.AppInfoStore.GetAppInfo(this.props.gameInvite.appID);
-            if (
-              (_ ||
-                ((_ = new _._(this.props.gameInvite.appID)),
-                _.DeserializeFromCacheObject({
-                  strName: (0, _._)("#ChatRoom_GameInvite_UnreleasedGame"),
-                  strIconURL: "",
-                  strLogoURL: "",
-                  eAppType: _._,
-                })),
-              _._.FriendStore.self == this.props.inviter)
-            ) {
-              let _ = this.props.inviteTarget.display_name,
-                _ = this.props.gameInvite.remoteplayString
-                  ? "#ChatRoom_GameInviteRemotePlay_YouInvited"
-                  : "#ChatRoom_GameInvite_YouInvited";
-              return (0, _.jsx)("div", {
-                className: "gameInviteSelf",
-                children: (0, _.jsx)("div", {
-                  onClick: this.OnShowGameContextMenu,
-                  children: (0, _._)(
-                    _,
-                    _,
-                    (0, _.jsx)("img", {
-                      src: _.icon_url,
-                      className: "productImage",
-                    }),
-                    _.name,
-                  ),
-                }),
-              });
-            }
-            if (
-              this.props.gameInvite.bOld ||
-              this.props.gameInvite.bDismissed ||
-              this.props.inviter.persona.m_unGamePlayedAppID !=
-                this.props.gameInvite.appID
-            ) {
-              let _ = this.props.inviter.display_name,
-                _ = this.props.gameInvite.remoteplayString
-                  ? "#ChatRoom_GameInviteRemotePlay_Dismissed"
-                  : "#ChatRoom_GameInvite_Dismissed";
-              return (0, _.jsx)("div", {
-                className: "gameInviteDismissed",
-                children: (0, _.jsx)("div", {
-                  onClick: this.OnShowGameContextMenu,
-                  children: (0, _._)(
-                    _,
-                    _,
-                    (0, _.jsx)("img", {
-                      src: _.icon_url,
-                      className: "productImage",
-                    }),
-                    _.name,
-                  ),
-                }),
-              });
-            }
-            if (this.props.gameInvite.bAccepted) {
-              let _ = this.props.gameInvite.remoteplayString
-                ? "#ChatRoom_GameInviteRemotePlay_Accepted"
-                : "#ChatRoom_GameInvite_Accepted";
-              return (0, _.jsx)("div", {
-                className: "gameInviteAccepted",
-                children: (0, _.jsx)("div", {
-                  onClick: this.OnShowGameContextMenu,
-                  children: (0, _._)(
-                    _,
-                    (0, _.jsx)("img", {
-                      src: _.icon_url,
-                      className: "productImage",
-                    }),
-                    _.name,
-                  ),
-                }),
-              });
-            }
-            if (
-              this.props.gameInvite.remoteplayString &&
-              !this.state.bCanAcceptRemotePlayInvite
-            ) {
-              let _ = this.props.inviter.display_name;
-              return (0, _.jsx)("div", {
-                className: "gameInviteDismissed",
-                children: (0, _.jsx)("div", {
-                  onClick: this.OnShowGameContextMenu,
-                  children: (0, _._)(
-                    "#ChatRoom_GameInviteRemotePlay_CantAccept",
-                    _,
-                    (0, _.jsx)("img", {
-                      src: _.icon_url,
-                      className: "productImage",
-                    }),
-                    _.name,
-                  ),
-                }),
-              });
-            }
-            let _ = this.props.inviter,
-              _ = null,
-              _ = _.persona.player_group_size - 1;
-            if (
-              _.persona.m_unGamePlayedAppID == this.props.gameInvite.appID &&
-              _.persona.player_group_size > 0
-            ) {
-              let _ = _.persona.player_group;
-              _ &&
-                (_ = _._.FriendStore.FriendGroupStore.ingame_group.member_list
-                  .map((_) =>
-                    _ != _ && _.persona.player_group == _
-                      ? (_--,
-                        (0, _.jsx)(
-                          _._,
-                          {
-                            friend: _,
-                            context: null,
-                          },
-                          _.accountid,
-                        ))
-                      : null,
-                  )
-                  .filter(Boolean));
-            }
-            let _ = {
-              paddingLeft: 0,
-              display: "flex",
-              alignItems: "stretch",
-              overflow: "hidden",
-            };
-            this.props.chatGutterWidth &&
-              (_.marginLeft = "-" + this.props.chatGutterWidth + "px");
-            let _ = this.props.gameInvite.remoteplayString
-                ? "#ChatRoom_GameInviteRemotePlay_Invite"
-                : "#ChatRoom_GameInvite_Invite",
-              _ = (0, _._)(_, this.props.inviter.display_name),
-              _ =
-                this.props.gameInvite.remoteplayString &&
-                this.BCanAcceptVoiceChat() &&
-                _._.VoiceStore.BPartnerHasAcceptedOrInitiatedOneOnOneChat(
-                  this.props.inviter.accountid,
-                ),
-              _ = _._.ParentalStore.BIsAppBlocked(this.props.gameInvite.appID),
-              _ = _?.length || _ > 0;
-            return (0, _.jsxs)(_._, {
-              className: "msg ChatMessageInvite gameInviteMsg",
-              style: _,
-              onOKButton: _ ? null : this.AcceptGameInvite,
-              onOKActionDescription: _
-                ? null
-                : (0, _._)("#ChatRoom_GameInvite_Accept"),
-              children: [
-                (0, _.jsxs)("div", {
-                  className: "leftInviteContainer",
-                  style: {
-                    overflow: "visible",
-                  },
-                  children: [
-                    (0, _.jsx)(_, {
-                      appID: this.props.gameInvite.appID,
-                      strClassNames: "productImage productImageBlur",
-                    }),
-                    (0, _.jsx)(_, {
-                      appID: this.props.gameInvite.appID,
-                      strClassNames: "productImage",
-                    }),
-                  ],
-                }),
-                (0, _.jsxs)("div", {
-                  className: "rightInviteContainer",
-                  children: [
-                    (0, _.jsxs)("div", {
-                      className: "centerBlock",
-                      children: [
-                        (0, _.jsxs)("div", {
-                          className: "invitedTimeLabel",
-                          children: [
-                            (0, _._)("#ChatRoom_GameInvite_InviteTime"),
-                            (0, _.jsx)(_._, {
-                              rtime: this.props.gameInvite.rtTimestamp,
-                              bTimeOnly: !0,
-                            }),
-                          ],
-                        }),
-                        (0, _.jsx)(_._, {
-                          children: (0, _.jsx)("div", {
-                            className: "inviteLabel",
-                            children: _,
-                          }),
-                        }),
-                        (0, _.jsx)(_._, {
-                          children: (0, _.jsx)("div", {
-                            className: "productName",
-                            children: _.name,
-                          }),
-                        }),
-                        _ &&
-                          (0, _.jsx)(_._, {
-                            children: (0, _.jsxs)("div", {
-                              className: "playingWithBlock",
-                              children: [
-                                (0, _.jsx)("div", {
-                                  children: (0, _._)(
-                                    "#ChatRoom_GameInvite_PlayingWith",
-                                  ),
-                                }),
-                                (0, _.jsxs)("div", {
-                                  className: "playingWithAvatars",
-                                  children: [
-                                    (0, _.jsx)("div", {
-                                      className: "playingWithLine",
-                                    }),
-                                    _,
-                                    _ > 0 &&
-                                      (0, _.jsxs)("div", {
-                                        className: "playingWithExtraCount",
-                                        children: [
-                                          (0, _._)(
-                                            "#ChatRoom_GameInvite_PartyMore",
-                                            _,
-                                          ),
-                                          " ",
-                                        ],
-                                      }),
-                                  ],
-                                }),
-                              ],
-                            }),
-                          }),
-                      ],
-                    }),
-                    (0, _.jsx)("div", {
-                      className: "acceptButtonsGroup",
-                      children: _
-                        ? (0, _.jsx)("div", {
-                            children: (0, _._)(
-                              "#ChatRoom_GameInvite_Family_View",
-                            ),
-                          })
-                        : (0, _.jsxs)(_.Fragment, {
-                            children: [
-                              (0, _.jsx)("button", {
-                                className: "DialogButton GreenPlay",
-                                onClick: this.AcceptGameInvite,
-                                children: (0, _._)(
-                                  "#ChatRoom_GameInvite_Accept",
-                                ),
-                              }),
-                              _ &&
-                                (0, _.jsx)("button", {
-                                  className: "DialogButton GreenPlay",
-                                  onClick: this.AcceptGameInviteAndVoiceChat,
-                                  children: (0, _._)(
-                                    "#ChatRoom_GameInvite_Accept_And_Voice_Chat",
-                                  ),
-                                }),
-                            ],
-                          }),
-                    }),
-                    (0, _.jsx)("div", {
-                      className: "closeButton",
-                      onClick: this.DismissInvite,
-                      children: (0, _.jsx)(_.sED, {}),
-                    }),
-                  ],
-                }),
-              ],
-            });
-          }
-        };
-        _([_._], _.prototype, "AcceptGameInvite", 1),
-          _([_._], _.prototype, "BCanAcceptVoiceChat", 1),
-          _([_._], _.prototype, "AcceptGameInviteAndVoiceChat", 1),
-          _([_._], _.prototype, "DismissInvite", 1),
-          _([_._], _.prototype, "OnShowGameContextMenu", 1),
-          (_ = _([_._], _));
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
@@ -31491,7 +31252,8 @@
             };
           };
         }
-        var _ = __webpack_require__("chunkid");
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
         function _(_) {
           const {
             href: _,
@@ -33674,6 +33436,7 @@
           }
         }
         class _ extends _._ {
+          static contextType = _._;
           constructor(_) {
             super(_),
               (this.state = {
@@ -33709,14 +33472,18 @@
             );
           }
           render() {
-            return (0, _.jsx)(_, {
-              inviter: this.state.inviter,
-              inviteTarget: this.state.inviteTarget,
-              gameInvite: this.state.gameInvite,
-            });
+            return this.context?.IN_GAMEPADUI &&
+              this.state.inviter != _._.FriendStore.self
+              ? null
+              : (0, _.jsx)(_._, {
+                  inviter: this.state.inviter,
+                  inviteTarget: this.state.inviteTarget,
+                  gameInvite: this.state.gameInvite,
+                });
           }
         }
         class _ extends _._ {
+          static contextType = _._;
           constructor(_) {
             super(_),
               (this.state = {
@@ -33751,11 +33518,14 @@
             );
           }
           render() {
-            return (0, _.jsx)(_, {
-              inviter: this.state.inviter,
-              inviteTarget: this.state.inviteTarget,
-              gameInvite: this.state.gameInvite,
-            });
+            return this.context?.IN_GAMEPADUI &&
+              this.state.inviter != _._.FriendStore.self
+              ? null
+              : (0, _.jsx)(_._, {
+                  inviter: this.state.inviter,
+                  inviteTarget: this.state.inviteTarget,
+                  gameInvite: this.state.gameInvite,
+                });
           }
         }
         class _ extends _._ {
@@ -39774,6 +39544,7 @@
           m_FriendsListSteamDeckActiveTabCallbackList = new _._();
           m_overlayCreatedCallbackList = new _._();
           m_bQamFriendsChatExpanded = !1;
+          m_bIgnoreQamFriendsChatExpand = !1;
           GetRootChatPerContextData() {
             return this.GetPerContextChatData(_._);
           }
@@ -40532,11 +40303,15 @@
           FriendsListSteamDeckActiveTabCallbackList() {
             return this.m_FriendsListSteamDeckActiveTabCallbackList;
           }
+          SetIgnoreQAMFriendsChatExpand(_) {
+            this.m_bIgnoreQamFriendsChatExpand = _;
+          }
           get IsQAMFriendsChatExpanded() {
             return this.m_bQamFriendsChatExpanded;
           }
           SetQAMFriendsChatExpanded(_) {
-            (this.m_bQamFriendsChatExpanded = _),
+            (_ && this.m_bIgnoreQamFriendsChatExpand) ||
+              ((this.m_bQamFriendsChatExpanded = _),
               _
                 ? window.parent.postMessage(
                     {
@@ -40549,7 +40324,7 @@
                       message: "QamFriendsHidden",
                     },
                     "https://steamloopback.host",
-                  );
+                  ));
           }
           BIsAnyWindowVisible() {
             return _._.IN_MOBILE
@@ -50198,6 +49973,8 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_);
         const _ = ({ message: _, name: _, renderImage: _, ..._ }) =>
           (0, _.jsx)(
@@ -50237,6 +50014,7 @@
             "inviteDrop",
           );
         var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -50792,30 +50570,16 @@
                               chatView: this.props.chatView,
                               additionalClasses: void 0,
                             }),
-                          this.context?.IN_GAMEPADUI &&
-                            (0, _.jsxs)(_._, {
-                              className: "RightSideButtonContainer",
-                              "flow-children": "column",
-                              children: [
-                                (0, _.jsx)(_, {
-                                  chatView: this.props.chatView,
-                                  bSteamDeck: !0,
-                                }),
-                                !_.chat_partner.is_friend &&
-                                  (0, _.jsx)(_, {
-                                    friend: _.chat_partner,
-                                  }),
-                                (0, _.jsx)(_, {
-                                  chatView: this.props.chatView,
-                                  additionalClasses: void 0,
-                                }),
-                              ],
-                            }),
                           (0, _.jsx)("div", {
                             className: "dropTargetBox",
                           }),
                         ],
                       }),
+                      this.context?.IN_GAMEPADUI &&
+                        !_ &&
+                        (0, _.jsx)(_._, {
+                          unAccountIDFriend: _.chat_partner.accountid,
+                        }),
                       _,
                     ],
                   }),
@@ -50841,9 +50605,59 @@
                 ..._,
                 navEntryPreferPosition: _._.PREFERRED_CHILD,
                 children: [
-                  (0, _.jsx)("div", {
-                    className: "chatHeader",
-                  }),
+                  this.context?.IN_GAMEPADUI
+                    ? (0, _.jsxs)(_._, {
+                        className: (0, _._)(
+                          "chatHeader titleBarContainer FriendChatHeaderSteamDeck",
+                          _.chat_partner.persona.is_ingame && "InGameHeader",
+                        ),
+                        "flow-children": "row",
+                        children: [
+                          this.props.tab &&
+                            (0, _.jsx)(_._, {
+                              tab: this.props.tab,
+                              active: !0,
+                              selectTab: () => {},
+                              bNotFocusable: !0,
+                              bHideVoiceStatus: !0,
+                            }),
+                          (0, _.jsxs)(_._, {
+                            className: "RightSideButtonContainer",
+                            "flow-children": "row",
+                            children: [
+                              (0, _.jsx)("div", {
+                                className: "FriendChatHeaderVoiceStatus",
+                                children: (0, _._)(this.props.chatView),
+                              }),
+                              this.props.tab?.GetUnreadMessageCount() > 0 &&
+                                (0, _.jsx)("div", {
+                                  className: "FriendChatHeaderUnreadCount",
+                                  children:
+                                    this.props.tab.GetUnreadMessageCount(),
+                                }),
+                              (0, _.jsx)(_, {
+                                friend: _.chat_partner,
+                                tab: this.props.tab,
+                              }),
+                              (0, _.jsx)(_, {
+                                chatView: this.props.chatView,
+                                bSteamDeck: !0,
+                              }),
+                              !_.chat_partner.is_friend &&
+                                (0, _.jsx)(_, {
+                                  friend: _.chat_partner,
+                                }),
+                              (0, _.jsx)(_, {
+                                chatView: this.props.chatView,
+                                additionalClasses: void 0,
+                              }),
+                            ],
+                          }),
+                        ],
+                      })
+                    : (0, _.jsx)("div", {
+                        className: "chatHeader",
+                      }),
                   this.props.isActive &&
                     (0, _.jsx)(_, {
                       chatView: this.props.chatView,
@@ -50957,6 +50771,29 @@
             onActivate: _,
             onOKActionDescription: (0, _._)("#Friend_Menu_AddToFriendsList"),
             children: (0, _.jsx)(_.sdo, {}),
+          });
+        }
+        function _(_) {
+          let { friend: _, tab: _ } = _;
+          const _ = _.useCallback(
+            (_) => {
+              (0, _._)(
+                (0, _._)(_),
+                {
+                  tab: _,
+                },
+                _,
+                _,
+              );
+            },
+            [_, _],
+          );
+          return (0, _.jsx)(_._, {
+            focusable: !0,
+            className: "FriendActionsButton",
+            onActivate: _,
+            onOKActionDescription: (0, _._)("#Chat_Tab_ContextMenu"),
+            children: (0, _.jsx)(_.Dots, {}),
           });
         }
         let _ = class extends _.Component {
@@ -51333,6 +51170,23 @@
           OnChatTabRef(_) {
             this.m_refChatTabs = _;
           }
+          OnMenuButton(_) {
+            let _ = this.props.tabs.activeTab;
+            _ &&
+              (_ instanceof _._
+                ? (0, _._)(_, _.GetGroup(), {
+                    tab: _,
+                  })
+                : _.GetChatView()?.IsFriendChat() &&
+                  (0, _._)(
+                    (0, _._)(_),
+                    {
+                      tab: _,
+                    },
+                    _.GetChatView().chat.chat_partner,
+                    _,
+                  ));
+          }
           render() {
             let _ = this.props.tabs.activeTab;
             const _ = this.m_refChatTabs?.GetDragTab();
@@ -51361,6 +51215,7 @@
                     : (_ = (0, _.jsx)(_, {
                         chatView: _.GetChatView(),
                         isActive: _ == _,
+                        tab: _,
                       })),
                 (0, _.jsx)(
                   _._,
@@ -51374,36 +51229,31 @@
                 )
               );
             });
-            return (0, _.jsxs)(_._, {
+            return (0, _.jsx)(_._, {
               className: "multiChatDialog GamepadMode",
               navEntryPreferPosition: _._.PREFERRED_CHILD,
-              children: [
-                _ &&
-                  _.IsFriendChat() &&
-                  (0, _.jsx)(_._, {
-                    tab: _,
-                    active: !0,
-                    selectTab: () => {},
-                  }),
-                (0, _.jsxs)(_._, {
-                  className: "chatDialogs",
-                  preferredFocus: !0,
-                  children: [
-                    _.length == 0 &&
-                      (0, _.jsx)("div", {
-                        className: "emptyChatDialogs",
-                        children: (0, _._)(
-                          "#Chat_EmptyDialogsWindowGamePadUIMsg",
-                        ),
-                      }),
-                    _,
-                  ],
-                }),
-              ],
+              onMenuButton: this.OnMenuButton,
+              onMenuActionDescription: (0, _._)("#Chat_Tab_ContextMenu"),
+              children: (0, _.jsxs)(_._, {
+                className: "chatDialogs",
+                preferredFocus: !0,
+                children: [
+                  _.length == 0 &&
+                    (0, _.jsx)("div", {
+                      className: "emptyChatDialogs",
+                      children: (0, _._)(
+                        "#Chat_EmptyDialogsWindowGamePadUIMsg",
+                      ),
+                    }),
+                  _,
+                ],
+              }),
             });
           }
         };
-        _([_._], _.prototype, "OnChatTabRef", 1), (_ = _([_._], _));
+        _([_._], _.prototype, "OnChatTabRef", 1),
+          _([_._], _.prototype, "OnMenuButton", 1),
+          (_ = _([_._], _));
         let _ = class extends _.Component {
           constructor(_) {
             super(_);
@@ -55899,6 +55749,1785 @@
           _: () => _,
           _: () => _,
           _: () => _,
+          _: () => _,
+          _: () => _,
+        });
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = Object.defineProperty,
+          _ = Object.getOwnPropertyDescriptor,
+          _ = (_, _, _, _) => {
+            for (
+              var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
+              _ >= 0;
+              _--
+            )
+              (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
+            return _ && _ && _(_, _, _), _;
+          };
+        function _(_) {
+          const { appID: _ } = _,
+            [_] = (0, _._)(_, {
+              include_assets_without_overrides: !0,
+            }),
+            _ = _?.GetAssetsWithoutOverrides()?.GetHeaderURL();
+          return _
+            ? (0, _.jsx)("img", {
+                src: _,
+                className: _.strClassNames,
+              })
+            : null;
+        }
+        async function _(_) {
+          let _ = _.remoteplayString.split("&"),
+            _ = "restricted_countries=",
+            _ = "";
+          return (
+            _.forEach((_) => {
+              _.startsWith(_) && (_ = _.slice(_.length));
+            }),
+            _._.RemotePlayStore.BCanAcceptInviteForGame(_.appID.toString(), _)
+          );
+        }
+        function _(_) {
+          let _ = _.efriendrelationship == _.UXi,
+            _ = _.efriendrelationship == _.qNf,
+            _ = _.persona.is_online && !_ && !_ && !_.is_blocked;
+          return !_._.VoiceStore.IsAnyVoiceActive() && _;
+        }
+        function _(_, _) {
+          _.AcceptGameInvite(),
+            _(_) &&
+              _._.UIStore.ShowFriendChatDialogAndStartVoice(
+                _._.GetDefaultBrowserContext(),
+                _.accountid,
+              );
+        }
+        let _ = class extends _.Component {
+          state = {
+            bCanAcceptRemotePlayInvite: !1,
+          };
+          async componentDidMount() {
+            if (this.props.gameInvite.remoteplayString) {
+              const _ = await _(this.props.gameInvite);
+              this.setState({
+                bCanAcceptRemotePlayInvite: _,
+              });
+            }
+          }
+          AcceptGameInvite() {
+            this.props.gameInvite.AcceptGameInvite();
+          }
+          BCanAcceptVoiceChat() {
+            return _(this.props.inviter);
+          }
+          AcceptGameInviteAndVoiceChat() {
+            _(this.props.gameInvite, this.props.inviter);
+          }
+          DismissInvite() {
+            this.props.gameInvite.DismissInvite();
+          }
+          OnShowGameContextMenu(_) {
+            (0, _._)((0, _._)(_), this.props.gameInvite.appID, _);
+          }
+          render() {
+            let _ = _._.AppInfoStore.GetAppInfo(this.props.gameInvite.appID);
+            if (
+              (_ ||
+                ((_ = new _._(this.props.gameInvite.appID)),
+                _.DeserializeFromCacheObject({
+                  strName: (0, _._)("#ChatRoom_GameInvite_UnreleasedGame"),
+                  strIconURL: "",
+                  strLogoURL: "",
+                  eAppType: _._,
+                })),
+              _._.FriendStore.self == this.props.inviter)
+            ) {
+              let _ = this.props.inviteTarget.display_name,
+                _ = this.props.gameInvite.remoteplayString
+                  ? "#ChatRoom_GameInviteRemotePlay_YouInvited"
+                  : "#ChatRoom_GameInvite_YouInvited";
+              return (0, _.jsx)("div", {
+                className: "gameInviteSelf",
+                children: (0, _.jsx)("div", {
+                  onClick: this.OnShowGameContextMenu,
+                  children: (0, _._)(
+                    _,
+                    _,
+                    (0, _.jsx)("img", {
+                      src: _.icon_url,
+                      className: "productImage",
+                    }),
+                    _.name,
+                  ),
+                }),
+              });
+            }
+            if (
+              this.props.gameInvite.bOld ||
+              this.props.gameInvite.bDismissed ||
+              this.props.inviter.persona.m_unGamePlayedAppID !=
+                this.props.gameInvite.appID
+            ) {
+              let _ = this.props.inviter.display_name,
+                _ = this.props.gameInvite.remoteplayString
+                  ? "#ChatRoom_GameInviteRemotePlay_Dismissed"
+                  : "#ChatRoom_GameInvite_Dismissed";
+              return (0, _.jsx)("div", {
+                className: "gameInviteDismissed",
+                children: (0, _.jsx)("div", {
+                  onClick: this.OnShowGameContextMenu,
+                  children: (0, _._)(
+                    _,
+                    _,
+                    (0, _.jsx)("img", {
+                      src: _.icon_url,
+                      className: "productImage",
+                    }),
+                    _.name,
+                  ),
+                }),
+              });
+            }
+            if (this.props.gameInvite.bAccepted) {
+              let _ = this.props.gameInvite.remoteplayString
+                ? "#ChatRoom_GameInviteRemotePlay_Accepted"
+                : "#ChatRoom_GameInvite_Accepted";
+              return (0, _.jsx)("div", {
+                className: "gameInviteAccepted",
+                children: (0, _.jsx)("div", {
+                  onClick: this.OnShowGameContextMenu,
+                  children: (0, _._)(
+                    _,
+                    (0, _.jsx)("img", {
+                      src: _.icon_url,
+                      className: "productImage",
+                    }),
+                    _.name,
+                  ),
+                }),
+              });
+            }
+            if (
+              this.props.gameInvite.remoteplayString &&
+              !this.state.bCanAcceptRemotePlayInvite
+            ) {
+              let _ = this.props.inviter.display_name;
+              return (0, _.jsx)("div", {
+                className: "gameInviteDismissed",
+                children: (0, _.jsx)("div", {
+                  onClick: this.OnShowGameContextMenu,
+                  children: (0, _._)(
+                    "#ChatRoom_GameInviteRemotePlay_CantAccept",
+                    _,
+                    (0, _.jsx)("img", {
+                      src: _.icon_url,
+                      className: "productImage",
+                    }),
+                    _.name,
+                  ),
+                }),
+              });
+            }
+            let _ = this.props.inviter,
+              _ = null,
+              _ = _.persona.player_group_size - 1;
+            if (
+              _.persona.m_unGamePlayedAppID == this.props.gameInvite.appID &&
+              _.persona.player_group_size > 0
+            ) {
+              let _ = _.persona.player_group;
+              _ &&
+                (_ = _._.FriendStore.FriendGroupStore.ingame_group.member_list
+                  .map((_) =>
+                    _ != _ && _.persona.player_group == _
+                      ? (_--,
+                        (0, _.jsx)(
+                          _._,
+                          {
+                            friend: _,
+                            context: null,
+                          },
+                          _.accountid,
+                        ))
+                      : null,
+                  )
+                  .filter(Boolean));
+            }
+            let _ = {
+              paddingLeft: 0,
+              display: "flex",
+              alignItems: "stretch",
+              overflow: "hidden",
+            };
+            this.props.chatGutterWidth &&
+              (_.marginLeft = "-" + this.props.chatGutterWidth + "px");
+            let _ = this.props.gameInvite.remoteplayString
+                ? "#ChatRoom_GameInviteRemotePlay_Invite"
+                : "#ChatRoom_GameInvite_Invite",
+              _ = (0, _._)(_, this.props.inviter.display_name),
+              _ =
+                this.props.gameInvite.remoteplayString &&
+                this.BCanAcceptVoiceChat() &&
+                _._.VoiceStore.BPartnerHasAcceptedOrInitiatedOneOnOneChat(
+                  this.props.inviter.accountid,
+                ),
+              _ = _._.ParentalStore.BIsAppBlocked(this.props.gameInvite.appID),
+              _ = _?.length || _ > 0;
+            return (0, _.jsxs)(_._, {
+              className: "msg ChatMessageInvite gameInviteMsg",
+              style: _,
+              onOKButton: _ ? null : this.AcceptGameInvite,
+              onOKActionDescription: _
+                ? null
+                : (0, _._)("#ChatRoom_GameInvite_Accept"),
+              children: [
+                (0, _.jsxs)("div", {
+                  className: "leftInviteContainer",
+                  style: {
+                    overflow: "visible",
+                  },
+                  children: [
+                    (0, _.jsx)(_, {
+                      appID: this.props.gameInvite.appID,
+                      strClassNames: "productImage productImageBlur",
+                    }),
+                    (0, _.jsx)(_, {
+                      appID: this.props.gameInvite.appID,
+                      strClassNames: "productImage",
+                    }),
+                  ],
+                }),
+                (0, _.jsxs)("div", {
+                  className: "rightInviteContainer",
+                  children: [
+                    (0, _.jsxs)("div", {
+                      className: "centerBlock",
+                      children: [
+                        (0, _.jsxs)("div", {
+                          className: "invitedTimeLabel",
+                          children: [
+                            (0, _._)("#ChatRoom_GameInvite_InviteTime"),
+                            (0, _.jsx)(_._, {
+                              rtime: this.props.gameInvite.rtTimestamp,
+                              bTimeOnly: !0,
+                            }),
+                          ],
+                        }),
+                        (0, _.jsx)(_._, {
+                          children: (0, _.jsx)("div", {
+                            className: "inviteLabel",
+                            children: _,
+                          }),
+                        }),
+                        (0, _.jsx)(_._, {
+                          children: (0, _.jsx)("div", {
+                            className: "productName",
+                            children: _.name,
+                          }),
+                        }),
+                        _ &&
+                          (0, _.jsx)(_._, {
+                            children: (0, _.jsxs)("div", {
+                              className: "playingWithBlock",
+                              children: [
+                                (0, _.jsx)("div", {
+                                  children: (0, _._)(
+                                    "#ChatRoom_GameInvite_PlayingWith",
+                                  ),
+                                }),
+                                (0, _.jsxs)("div", {
+                                  className: "playingWithAvatars",
+                                  children: [
+                                    (0, _.jsx)("div", {
+                                      className: "playingWithLine",
+                                    }),
+                                    _,
+                                    _ > 0 &&
+                                      (0, _.jsxs)("div", {
+                                        className: "playingWithExtraCount",
+                                        children: [
+                                          (0, _._)(
+                                            "#ChatRoom_GameInvite_PartyMore",
+                                            _,
+                                          ),
+                                          " ",
+                                        ],
+                                      }),
+                                  ],
+                                }),
+                              ],
+                            }),
+                          }),
+                      ],
+                    }),
+                    (0, _.jsx)("div", {
+                      className: "acceptButtonsGroup",
+                      children: _
+                        ? (0, _.jsx)("div", {
+                            children: (0, _._)(
+                              "#ChatRoom_GameInvite_Family_View",
+                            ),
+                          })
+                        : (0, _.jsxs)(_.Fragment, {
+                            children: [
+                              (0, _.jsx)("button", {
+                                className: "DialogButton GreenPlay",
+                                onClick: this.AcceptGameInvite,
+                                children: (0, _._)(
+                                  "#ChatRoom_GameInvite_Accept",
+                                ),
+                              }),
+                              _ &&
+                                (0, _.jsx)("button", {
+                                  className: "DialogButton GreenPlay",
+                                  onClick: this.AcceptGameInviteAndVoiceChat,
+                                  children: (0, _._)(
+                                    "#ChatRoom_GameInvite_Accept_And_Voice_Chat",
+                                  ),
+                                }),
+                            ],
+                          }),
+                    }),
+                    (0, _.jsx)("div", {
+                      className: "closeButton",
+                      onClick: this.DismissInvite,
+                      children: (0, _.jsx)(_.sED, {}),
+                    }),
+                  ],
+                }),
+              ],
+            });
+          }
+        };
+        _([_._], _.prototype, "AcceptGameInvite", 1),
+          _([_._], _.prototype, "BCanAcceptVoiceChat", 1),
+          _([_._], _.prototype, "AcceptGameInviteAndVoiceChat", 1),
+          _([_._], _.prototype, "DismissInvite", 1),
+          _([_._], _.prototype, "OnShowGameContextMenu", 1),
+          (_ = _([_._], _));
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(module_exports, {
+          _: () => _,
+          _: () => _,
+          _: () => _,
+        });
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = Object.defineProperty,
+          _ = Object.getOwnPropertyDescriptor,
+          _ = (_, _, _) =>
+            _ in _
+              ? _(_, _, {
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+                  value: _,
+                })
+              : (_[_] = _),
+          _ = (_, _, _, _) => {
+            for (
+              var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
+              _ >= 0;
+              _--
+            )
+              (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
+            return _ && _ && _(_, _, _), _;
+          },
+          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+        const _ = (_) =>
+          _._.IN_CLIENT
+            ? (0, _.jsx)(_._, {
+                ..._,
+              })
+            : (0, _.jsx)(_._, {
+                ..._,
+              });
+        let _ = class extends _.Component {
+          m_renderContext;
+          GetFriendRenderContext() {
+            let _ = this.props.groupView.GetGroup();
+            return (
+              (!this.m_renderContext || this.m_renderContext.group != _) &&
+                (this.m_renderContext = {
+                  group: _,
+                  chatContext: "chatmemberlist",
+                }),
+              this.m_renderContext
+            );
+          }
+          GetMembersMatchingSearch(_) {
+            let _ = this.props.groupView.GetGroup(),
+              _ = _(_.memberList.member_list, _);
+            return _.sort(_._.DefaultFriendSortComparator), _;
+          }
+          OnMemberListToggleViewClick() {
+            this.props.groupView.SetMemberListCollapsed(
+              this.props.groupView.isMemberListExpanded,
+            );
+          }
+          OnSearchInput(_) {
+            this.props.groupView.UpdateMemberSearch(_.currentTarget.value);
+          }
+          OnSearchSubmit(_) {
+            _.preventDefault();
+            let _ = this.props.groupView,
+              _ = _.normalizedMemberSearch;
+            if (_ && _.length) {
+              let _ = this.GetMembersMatchingSearch(_);
+              _.length && _[0].OpenChatDialog((0, _._)(_));
+            }
+            _.ClearMemberSearch();
+          }
+          OnSearchKeyDown(_) {
+            _.keyCode == _._ &&
+              (_.preventDefault(),
+              _.currentTarget.blur(),
+              this.props.groupView.ClearMemberSearch());
+          }
+          OnClearSearch() {
+            this.props.groupView.ClearMemberSearch();
+          }
+          OnSearchFocus() {
+            this.props.groupView.UpdateMemberSearch(
+              this.props.groupView.GetMemberSearch(),
+            );
+          }
+          OnSearchBlur() {
+            this.props.groupView.GetMemberSearch().length == 0 &&
+              this.props.groupView.ClearMemberSearch();
+          }
+          render() {
+            let _ = this.props.groupView,
+              _ = _.isMemberListExpanded,
+              _ = _.GetMemberSearch(),
+              _ = "MemberListColumn",
+              _ = (0, _._)("#Tooltip_MemberCollapse");
+            _ ||
+              ((_ += " MemberListViewCompact"),
+              (_ = (0, _._)("#Tooltip_MemberExpand")));
+            let _ = _.IsMemberSearchActive(),
+              _ = "MemberListOptionsContainer";
+            return (
+              _ && (_ += " SearchActive"),
+              (0, _.jsxs)(_._, {
+                className: _,
+                children: [
+                  (0, _.jsxs)("div", {
+                    className: _,
+                    children: [
+                      (0, _.jsx)("div", {
+                        className:
+                          "MemberListOption ToggleMemberListView" +
+                          (_.length > 0 ? " SearchActive" : ""),
+                        onClick: this.OnMemberListToggleViewClick,
+                        title: _,
+                        children: (0, _.jsx)(_.F2T, {}),
+                      }),
+                      (0, _.jsx)("form", {
+                        className: "socialInputContainer",
+                        name: "friendSearchForm",
+                        onSubmit: this.OnSearchSubmit,
+                        children: (0, _.jsxs)("div", {
+                          className: "inputContainer no-drag",
+                          children: [
+                            (0, _.jsx)("input", {
+                              className: "friendSearchInput",
+                              type: "text",
+                              name: "memberlistSearch",
+                              placeholder: (0, _._)("#SearchByName"),
+                              value: _,
+                              onChange: this.OnSearchInput,
+                              onKeyDown: this.OnSearchKeyDown,
+                              onFocus: this.OnSearchFocus,
+                              onBlur: this.OnSearchBlur,
+                              autoComplete: "off",
+                            }),
+                            _.has_search_error
+                              ? (0, _.jsx)("div", {
+                                  className: "friendSearchError",
+                                  title: (0, _._)("#SearchError"),
+                                  children: (0, _.jsx)(_.eTF, {
+                                    color: "red",
+                                  }),
+                                })
+                              : (0, _.jsx)("div", {
+                                  className: "friendSearchClear",
+                                  onClick: this.OnClearSearch,
+                                  children: (0, _.jsx)(_.sED, {}),
+                                }),
+                          ],
+                        }),
+                      }),
+                    ],
+                  }),
+                  (0, _.jsx)(_._, {
+                    style: {
+                      display: "flex",
+                      flex: 1,
+                      position: "relative",
+                    },
+                    "flow-children": "column",
+                    children: _.GetGroup().BIsMemberListVirtualized()
+                      ? (0, _.jsx)(_, {
+                          groupView: this.props.groupView,
+                          inactive: this.props.inactive,
+                          context: this.GetFriendRenderContext(),
+                        })
+                      : (0, _.jsx)(_, {
+                          groupView: this.props.groupView,
+                          inactive: this.props.inactive,
+                          context: this.GetFriendRenderContext(),
+                        }),
+                  }),
+                  (0, _.jsx)("div", {
+                    className: "disconnectBlocker",
+                  }),
+                ],
+              })
+            );
+          }
+        };
+        _([_._], _.prototype, "OnMemberListToggleViewClick", 1),
+          _([_._], _.prototype, "OnSearchInput", 1),
+          _([_._], _.prototype, "OnSearchSubmit", 1),
+          _([_._], _.prototype, "OnSearchKeyDown", 1),
+          _([_._], _.prototype, "OnClearSearch", 1),
+          _([_._], _.prototype, "OnSearchFocus", 1),
+          _([_._], _.prototype, "OnSearchBlur", 1),
+          (_ = _([_._], _));
+        let _ = class extends _.Component {
+          m_renderContext;
+          GetFriendRenderContext() {
+            let _ = this.props.groupView.GetGroup();
+            return (
+              (!this.m_renderContext || this.m_renderContext.group != _) &&
+                (this.m_renderContext = {
+                  group: _,
+                  chatContext: "chatmemberlistselection",
+                }),
+              this.m_renderContext
+            );
+          }
+          GetMembersMatchingSearch(_) {
+            let _ = this.props.groupView.GetGroup(),
+              _ = _(_.memberList.member_list, _);
+            return _.sort(_._.DefaultFriendSortComparator), _;
+          }
+          OnSearchInput(_) {
+            this.props.groupView.UpdateMemberSearch(_.currentTarget.value);
+          }
+          OnSearchSubmit(_) {
+            _.preventDefault();
+            let _ = this.props.groupView,
+              _ = _.normalizedMemberSearch;
+            if (_ && _.length) {
+              let _ = this.GetMembersMatchingSearch(_);
+              _.length && _[0].OpenChatDialog((0, _._)(_));
+            }
+            _.ClearMemberSearch();
+          }
+          OnSearchKeyDown(_) {
+            _.keyCode == _._ &&
+              (_.preventDefault(),
+              _.currentTarget.blur(),
+              this.props.groupView.ClearMemberSearch());
+          }
+          OnClearSearch() {
+            this.props.groupView.ClearMemberSearch();
+          }
+          OnSearchFocus() {
+            this.props.groupView.UpdateMemberSearch(
+              this.props.groupView.GetMemberSearch(),
+            );
+          }
+          OnSearchBlur() {
+            this.props.groupView.GetMemberSearch().length == 0 &&
+              this.props.groupView.ClearMemberSearch();
+          }
+          render() {
+            let _ = this.props.groupView,
+              _ = !0,
+              _ = _.GetMemberSearch(),
+              _ = "GamepadMode MemberListColumn",
+              _ = _.IsMemberSearchActive(),
+              _ = "MemberListOptionsContainer";
+            _ && (_ += " SearchActive");
+            const _ = (_) => ({
+              onActivate: (_) => {
+                _.OpenChatDialog((0, _._)(_)), this.props.onAction();
+              },
+              onOKActionDescription: (0, _._)("#Friend_Menu_SendMessage"),
+            });
+            return (0, _.jsx)(_, {
+              className: _,
+              group: _.GetGroup(),
+              children: (0, _.jsxs)(_._, {
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _,
+                    children: (0, _.jsx)("form", {
+                      className: "socialInputContainer",
+                      name: "friendSearchForm",
+                      onSubmit: this.OnSearchSubmit,
+                      children: (0, _.jsxs)(_._, {
+                        className: "inputContainer no-drag",
+                        "flow-children": "row",
+                        children: [
+                          (0, _.jsx)(_._, {
+                            className: "friendSearchInput",
+                            type: "text",
+                            name: "memberlistSearch",
+                            placeholder: (0, _._)("#SearchByName"),
+                            value: _,
+                            onChange: this.OnSearchInput,
+                            onKeyDown: this.OnSearchKeyDown,
+                            onFocus: this.OnSearchFocus,
+                            onBlur: this.OnSearchBlur,
+                            autoComplete: "off",
+                          }),
+                          _.has_search_error
+                            ? (0, _.jsx)("div", {
+                                className: "friendSearchError",
+                                title: (0, _._)("#SearchError"),
+                                children: (0, _.jsx)(_.eTF, {
+                                  color: "red",
+                                }),
+                              })
+                            : (0, _.jsx)(_._, {
+                                className: "friendSearchClear",
+                                onActivate: this.OnClearSearch,
+                                children: (0, _.jsx)(_.sED, {}),
+                              }),
+                        ],
+                      }),
+                    }),
+                  }),
+                  (0, _.jsx)(_._, {
+                    style: {
+                      display: "flex",
+                      flex: 1,
+                      position: "relative",
+                      minHeight: "300px",
+                    },
+                    "flow-children": "column",
+                    onGamepadDirection: _,
+                    children: _.GetGroup().BIsMemberListVirtualized()
+                      ? (0, _.jsx)(_, {
+                          groupView: this.props.groupView,
+                          inactive: this.props.inactive,
+                          context: this.GetFriendRenderContext(),
+                          fnGetPanelProps: _,
+                        })
+                      : (0, _.jsx)(_, {
+                          groupView: this.props.groupView,
+                          inactive: this.props.inactive,
+                          context: this.GetFriendRenderContext(),
+                          fnGetPanelProps: _,
+                        }),
+                  }),
+                  (0, _.jsx)("div", {
+                    className: "disconnectBlocker",
+                  }),
+                ],
+              }),
+            });
+          }
+        };
+        _([_._], _.prototype, "OnSearchInput", 1),
+          _([_._], _.prototype, "OnSearchSubmit", 1),
+          _([_._], _.prototype, "OnSearchKeyDown", 1),
+          _([_._], _.prototype, "OnClearSearch", 1),
+          _([_._], _.prototype, "OnSearchFocus", 1),
+          _([_._], _.prototype, "OnSearchBlur", 1),
+          (_ = _([_._], _));
+        const _ = (0, _._)((_) => {
+          const { className: _, group: _, children: _ } = _,
+            _ = _._.FriendStore.self,
+            _ = _.persona.m_unGamePlayedAppID,
+            _ = _._.IN_CLIENT && (0, _._)("WebChat.GetPrivateConnectString"),
+            [_, _] = _.useState("");
+          _.useEffect(() => {
+            _("");
+            let _ = !1;
+            return (
+              _ != 0 &&
+                _ &&
+                _(_)
+                  .then((_) => {
+                    _ || _(_);
+                  })
+                  .catch(() => {}),
+              () => {
+                _ = !0;
+              }
+            );
+          }, [_, _]);
+          const _ = _.persona.m_game_lobby_id,
+            _ =
+              _ != 0 &&
+              ((!!_ && _ != "0") || !!_ || !!_.persona.connect_string),
+            _ =
+              _.BIsMemberListVirtualized() ||
+              _.memberList.member_list.some(
+                (_) =>
+                  _ != _ &&
+                  _.persona.m_unGamePlayedAppID != 0 &&
+                  (!!_.GetMemberPartyBeacon(_.accountid) ||
+                    _.persona.is_in_joinable_game),
+              );
+          return (0, _.jsx)(_._, {
+            className: (0, _._)(
+              _,
+              !_ && "NoInviteColumn",
+              !_ && "NoJoinColumn",
+            ),
+            "flow-children": "column",
+            children: _,
+          });
+        });
+        function _(_) {
+          const _ = _.detail.button == _._.DIR_DOWN;
+          if (!_ && _.detail.button != _._.DIR_UP) return !1;
+          const _ = _.target?.closest?.(".chatMemberRow"),
+            _ = _?.parentElement?.parentElement;
+          if (!_) return !1;
+          for (
+            let _ = _ ? _.nextElementSibling : _.previousElementSibling;
+            _;
+            _ = _ ? _.nextElementSibling : _.previousElementSibling
+          )
+            if (_.classList.contains("chatMemberRow")) return !1;
+          const _ = _.scrollTop;
+          return (
+            _
+              ? (_.scrollTop = Math.max(
+                  _,
+                  _.offsetTop + 2 * _.offsetHeight - _.clientHeight,
+                ))
+              : (_.scrollTop = Math.min(_, _.offsetTop - _.offsetHeight)),
+            _.scrollTop != _
+          );
+        }
+        function _(_) {
+          return _ ? 36 : 28;
+        }
+        function _(_) {
+          return _ ? 44 : 36;
+        }
+        let _ = class extends _.Component {
+          render() {
+            const { groupView: _ } = this.props,
+              _ = _.IsMemberSearchActive() && _.search_results !== void 0;
+            return (0, _.jsx)(_, {
+              children: ({ height: _, width: _ }) =>
+                _
+                  ? (0, _.jsx)(_, {
+                      ...this.props,
+                      width: _,
+                      height: _,
+                    })
+                  : (0, _.jsx)(_, {
+                      ...this.props,
+                      width: _,
+                      height: _,
+                    }),
+            });
+          }
+        };
+        _ = _([_._], _);
+        let _ = class extends _.Component {
+          render() {
+            const {
+                width: _,
+                height: _,
+                groupView: _,
+                context: _,
+                fnGetPanelProps: _,
+              } = this.props,
+              _ = _.GetGroup().memberCountTotal;
+            let _ = this.props.groupView.GetVirtualizedMemberListView();
+            return (
+              _.GetViewChangenumber(),
+              (0, _.jsx)(_._, {
+                width: _,
+                height: _,
+                itemCount: _,
+                itemSize: _(this.context?.IN_GAMEPADUI),
+                overscanCount: 10,
+                onItemsRendered: this.OnItemsRendered,
+                itemKey: (_) => _.GetAccountIDAt(_) || _,
+                style: {
+                  overflowX: "hidden",
+                },
+                children: (_) =>
+                  (0, _.jsx)(_, {
+                    ..._,
+                    virtualizer: _,
+                    groupView: _,
+                    context: _,
+                    fnGetPanelProps: _,
+                  }),
+              })
+            );
+          }
+          OnItemsRendered(_) {
+            this.props.groupView
+              .GetVirtualizedMemberListView()
+              .SetViewExtents(_.visibleStartIndex, _.visibleStopIndex);
+          }
+        };
+        _(_, "contextType", _._),
+          _([_._], _.prototype, "OnItemsRendered", 1),
+          (_ = _([_._], _));
+        let _ = class extends _.Component {
+          render() {
+            const {
+                width: _,
+                height: _,
+                groupView: _,
+                context: _,
+                fnGetPanelProps: _,
+              } = this.props,
+              _ = _.search_results.length;
+            return (0, _.jsx)(_._, {
+              width: _,
+              height: _,
+              itemCount: _,
+              itemSize: _(this.context?.IN_GAMEPADUI),
+              overscanCount: 10,
+              itemKey: (_) => _.search_results[_].friend.accountid,
+              style: {
+                overflowX: "hidden",
+              },
+              children: (_) =>
+                (0, _.jsx)(_, {
+                  ..._,
+                  player: _.search_results[_.index].friend,
+                  groupView: _,
+                  context: _,
+                  fnGetPanelProps: _,
+                }),
+            });
+          }
+        };
+        _(_, "contextType", _._), (_ = _([_._], _));
+        class _ extends _.Component {
+          render() {
+            const {
+                index: _,
+                style: _,
+                virtualizer: _,
+                groupView: _,
+                context: _,
+                fnGetPanelProps: _,
+              } = this.props,
+              _ = _.GetAccountIDAt(_);
+            if (!_) return null;
+            const _ = _.GetMember(_);
+            return _
+              ? (0, _.jsx)(_, {
+                  player: _,
+                  groupView: _,
+                  style: _,
+                  context: _,
+                  fnGetPanelProps: _,
+                })
+              : null;
+          }
+        }
+        const _ = ({
+          style: _,
+          player: _,
+          groupView: _,
+          className: _,
+          bHideGameName: _,
+          context: _,
+          fnGetPanelProps: _,
+        }) => {
+          let _ = (0, _._)(),
+            _ = _ ? _(_) : {};
+          return (0, _.jsx)(_._, {
+            style: {
+              ..._,
+              height: `${_(_)}px`,
+            },
+            ...(_ ? {} : _),
+            className: _ ? (0, _._)(_, "chatMemberRow") : _,
+            "flow-children": _ ? "row" : void 0,
+            navEntryPreferPosition: _ ? _._.MAINTAIN_X : void 0,
+            children: _
+              ? (0, _.jsxs)(_.Fragment, {
+                  children: [
+                    (0, _.jsx)(_._, {
+                      ..._,
+                      className: "chatMemberRowMain",
+                      children: (0, _.jsx)(_, {
+                        friend: _,
+                        bHideGameName: _,
+                        groupView: _,
+                        context: _,
+                      }),
+                    }),
+                    (0, _.jsx)(_, {
+                      player: _,
+                      group: _.GetGroup(),
+                      context: _,
+                    }),
+                  ],
+                })
+              : (0, _.jsx)(_, {
+                  friend: _,
+                  bHideGameName: _,
+                  groupView: _,
+                  context: _,
+                }),
+          });
+        };
+        let _;
+        function _(_) {
+          if (_?.unAppID != _) {
+            const _ = SteamClient.WebChat.GetPrivateConnectString(_).then(
+              (_) => _ ?? "",
+            );
+            (_ = {
+              unAppID: _,
+              promise: _,
+            }),
+              _.catch(() => {}).finally(() => {
+                _?.promise == _ && (_ = void 0);
+              });
+          }
+          return _.promise;
+        }
+        const _ = (0, _._)((_) => {
+          const { player: _, group: _, context: _, bMenuOnly: _ } = _,
+            _ = _._.FriendStore.self,
+            _ = _ == _,
+            _ = _.persona.m_unGamePlayedAppID,
+            _ = !_ && !_ && _.persona.is_online && _ != 0,
+            _ = _._.IN_CLIENT && (0, _._)("WebChat.GetPrivateConnectString"),
+            [_, _] = _.useState("");
+          _.useEffect(() => {
+            _("");
+            let _ = !1;
+            return (
+              _ &&
+                _ &&
+                _(_)
+                  .then((_) => {
+                    _ || _(_);
+                  })
+                  .catch(() => {}),
+              () => {
+                _ = !0;
+              }
+            );
+          }, [_, _, _]);
+          const _ = _.persona.m_game_lobby_id,
+            _ = _ != 0 && !!_ && _ != "0",
+            _ = _ || _.persona.connect_string,
+            _ = _.is_friend || _.persona.m_unGamePlayedAppID == _,
+            _ = _ && (_ || (!!_ && _)),
+            _ = _.GetMemberPartyBeacon(_.accountid),
+            _ = _.persona.m_unGamePlayedAppID,
+            [_, _] = _.useState(void 0);
+          _.useEffect(() => {
+            _(void 0);
+            let _ = !1;
+            return (
+              !_ &&
+                !_ &&
+                _ != 0 &&
+                "SteamClient" in globalThis &&
+                SteamClient.Apps?.GetIsSubscribedApp?.(_)
+                  .then((_) => {
+                    _ || _(_);
+                  })
+                  .catch(() => {}),
+              () => {
+                _ = !0;
+              }
+            );
+          }, [_, _, _]);
+          const _ =
+              !_ && _ != 0 && !!_ && (!!_ || _.persona.is_in_joinable_game),
+            _ = async () => {
+              if (_) {
+                _._.FriendStore.InviteToLobby(_, _, _.persona.m_game_lobby_id);
+                return;
+              }
+              let _ = _;
+              _ &&
+                (_ = (await _(_).catch(() => "")) || _.persona.connect_string),
+                _ && _._.FriendStore.InviteToGame(_, _, _);
+            },
+            _ = (_) => {
+              const _ = _.persona;
+              if (_)
+                SteamClient.URL.ExecuteSteamURL(
+                  `steam://joinparty/${_.m_unGamePlayedAppID}/${_.beacon_id}`,
+                );
+              else if (_.is_in_joinable_game)
+                if (_.has_joinable_game_flag && !_.connect_string) {
+                  const _ = (0, _._)(_);
+                  (0, _._)(
+                    (0, _.jsx)(_._, {
+                      friend: _,
+                      ownerWindow: _,
+                    }),
+                    _,
+                    {
+                      browserContext: (0, _._)(_),
+                    },
+                  );
+                } else
+                  SteamClient.URL.ExecuteSteamURL(
+                    (0, _._)(
+                      _.GetAccountID(),
+                      _.m_unGamePlayedAppID,
+                      _.connect_string,
+                      null,
+                      _.is_in_valid_lobby && _.m_game_lobby_id,
+                    ),
+                  );
+            };
+          return _ && _
+            ? null
+            : (0, _.jsxs)(_._, {
+                className: "chatMemberGameButtons",
+                "flow-children": "row",
+                navEntryPreferPosition: _._.MAINTAIN_X,
+                onMenuButton: (_) => {
+                  (0, _._)((0, _._)(_), _, _, _);
+                },
+                onMenuActionDescription: (0, _._)("#Chat_Tab_ContextMenu"),
+                children: [
+                  !_ &&
+                    (0, _.jsx)(_._, {
+                      focusable: _,
+                      className: (0, _._)(
+                        "chatMemberGameButton chatMemberInviteButton",
+                        !_ && "Hidden",
+                      ),
+                      onActivate: _ ? _ : void 0,
+                      onOKActionDescription: (0, _._)(
+                        "#Friend_Menu_InviteToLobby",
+                      ),
+                      children: (0, _._)("#Friend_Menu_InviteToLobby"),
+                    }),
+                  !_ &&
+                    (0, _.jsx)(_._, {
+                      focusable: _,
+                      className: (0, _._)(
+                        "chatMemberGameButton chatMemberJoinButton",
+                        !_ && "Hidden",
+                      ),
+                      onActivate: _ ? _ : void 0,
+                      onOKActionDescription: (0, _._)(
+                        "#Friend_Menu_JoinFriendGame",
+                      ),
+                      children: (0, _._)("#Friend_Menu_JoinFriendGame"),
+                    }),
+                  (0, _.jsx)(_._, {
+                    focusable: !0,
+                    className: "chatMemberGameButton chatMemberMenuButton",
+                    onActivate: (_) => (0, _._)((0, _._)(_), _, _, _),
+                    onOKActionDescription: (0, _._)("#Chat_Tab_ContextMenu"),
+                    children: (0, _.jsx)(_.Dots, {}),
+                  }),
+                ],
+              });
+        });
+        function _(_, _) {
+          return _.filter((_) => _.BMatchesSearchString(_, !1));
+        }
+        let _ = class extends _.Component {
+          state = {
+            collapsedBuckets: {},
+          };
+          m_disposeGetMemberList;
+          constructor(_) {
+            super(_),
+              (this.m_disposeGetMemberList =
+                _._.GroupMemberStore.RegisterForGroupMemberList(
+                  this.OnMemberListChanged,
+                  _.groupView.GetGroup().GetGroupID(),
+                ));
+          }
+          OnMemberListChanged() {
+            this.forceUpdate();
+          }
+          componentWillUnmount() {
+            this.m_disposeGetMemberList.unregister();
+          }
+          SortedPlayerSortFunc(_, _) {
+            return _.display_name.localeCompare(_.display_name);
+          }
+          BuildFilteredBuckets(_, _) {
+            let _ = [];
+            for (let _ of _) {
+              let _ = _(_.member_list, _);
+              if (_.length > 0) {
+                let _ = new _._(_._, this.SortedPlayerSortFunc, () => {});
+                _.SetMembers(_), _.push(_);
+              }
+            }
+            return _;
+          }
+          render() {
+            const {
+                inactive: _,
+                groupView: _,
+                context: _,
+                fnGetPanelProps: _,
+              } = this.props,
+              { collapsedBuckets: _ } = this.state;
+            if (_) return null;
+            let _ = _._.GroupMemberStore.GetGroupMemberList(
+              _.GetGroup().GetGroupID(),
+            );
+            if (_.length == 0) return null;
+            let _ = _.normalizedMemberSearch;
+            _.length > 0 && (_ = this.BuildFilteredBuckets(_, _));
+            const _ = (_, _, _) => {
+                const _ = _[_],
+                  _ = _._ === _._ ? "partybeacon" : "regular";
+                return (0, _.jsx)(_, {
+                  style: _,
+                  className: `chatroomBucket_${_}`,
+                  bHideGameName: _.BIsGameGroup(),
+                  groupView: _,
+                  player: _.member_list[_],
+                  context: _,
+                  fnGetPanelProps: _,
+                });
+              },
+              _ = (_, _) => {
+                const _ = _[_],
+                  _ = _[_._];
+                return (0, _.jsx)(_, {
+                  collapsible: _.length > 1,
+                  collapsed: _,
+                  memberCount: _.member_list.length,
+                  name: _.name,
+                  onCollapseChanged: () =>
+                    this.setState({
+                      collapsedBuckets: {
+                        ..._,
+                        [_._]: !_,
+                      },
+                    }),
+                  style: _,
+                });
+              },
+              _ = this.context?.IN_GAMEPADUI;
+            return (0, _.jsx)("div", {
+              className: (0, _._)(
+                !_ && "CompactFriendsList",
+                "chatRoomMembers",
+                "groupMemberList",
+              ),
+              children: (0, _.jsx)("div", {
+                className: "friendGroup",
+                style: {
+                  width: "100%",
+                  height: "100%",
+                },
+                children: (0, _.jsx)("div", {
+                  className: "ChatRoomMemberScrollList_List",
+                  style: {
+                    width: "100%",
+                    height: "100%",
+                    boxSizing: "border-box",
+                  },
+                  children: (0, _.jsx)(_, {
+                    children: ({ width: _, height: _ }) =>
+                      (0, _.jsx)(_, {
+                        width: _,
+                        height: _,
+                        buckets: _.map((_) => (_[_._] ? [] : _.member_list)),
+                        itemSize: _(_),
+                        estimatedItemSize: _(_),
+                        renderBucketHeader: _,
+                        bucketHeaderSize: _(_),
+                        itemKey: (_, _) => _[_].member_list[_].accountid,
+                        children: _,
+                      }),
+                  }),
+                }),
+              }),
+            });
+          }
+        };
+        _(_, "contextType", _._),
+          _([_._], _.prototype, "OnMemberListChanged", 1),
+          (_ = _([_._], _));
+        class _ extends _.PureComponent {
+          render() {
+            const {
+              collapsed: _,
+              collapsible: _,
+              onCollapseChanged: _,
+              style: _,
+              memberCount: _,
+              name: _,
+            } = this.props;
+            return (0, _.jsxs)("div", {
+              className: (0, _._)("groupName", _ && "Collapsed"),
+              onClick: () => _ && _(),
+              style: _,
+              children: [
+                (0, _.jsx)("div", {
+                  className: "groupIcon",
+                  children: (0, _.jsx)(_.YJl, {}),
+                }),
+                _ &&
+                  (0, _.jsx)("div", {
+                    className: "ExpandPlusMinus",
+                    children: (0, _.jsx)(_.f5w, {}),
+                  }),
+                (0, _.jsx)("span", {
+                  className: "groupCountCollapsed",
+                  children: _,
+                }),
+                (0, _.jsxs)("div", {
+                  className: "groupLabelsContainer",
+                  children: [
+                    (0, _.jsx)("span", {
+                      className: "groupNameLabel",
+                      children: _,
+                    }),
+                    (0, _.jsxs)("span", {
+                      className: "groupCount",
+                      children: ["(", _, ")"],
+                    }),
+                  ],
+                }),
+              ],
+            });
+          }
+        }
+        let _ = class extends _.Component {
+          OnFriendSelected(_, _) {
+            this.props.friend.OpenChatDialog((0, _._)(_)),
+              this.props.groupView.ClearMemberSearch();
+          }
+          render() {
+            const {
+              friend: _,
+              groupView: _,
+              context: _,
+              bHideGameName: _,
+            } = this.props;
+            let _ = [],
+              _ = "",
+              _ = _.GetGroup(),
+              _ = _.isMemberListExpanded,
+              _ = _.GetMemberRank(_.accountid),
+              _ = _.efriendrelationship;
+            switch (_) {
+              default:
+                break;
+              case _.QoM._:
+                _ = "Moderator";
+                break;
+              case _.QoM._:
+                _ = "Officer";
+                break;
+              case _.QoM._:
+                (_ = "Owner"),
+                  _.BIsClanChatRoom() ||
+                    _.push(
+                      (0, _.jsx)(
+                        "div",
+                        {
+                          className:
+                            "rankIcon rankOwner" +
+                            (_.is_friend ? " isFriend" : ""),
+                          children: (0, _.jsx)(_.OeC, {}),
+                        },
+                        "rankIcon",
+                      ),
+                    );
+                break;
+            }
+            switch (
+              (_.BIsClanChatRoom() &&
+                (_ >= _.QoM._
+                  ? _.push(
+                      (0, _.jsx)(
+                        "div",
+                        {
+                          className: "rankIcon rankOwner",
+                          children: (0, _.jsx)("img", {
+                            src:
+                              _._.COMMUNITY_CDN_URL +
+                              "public/images/skin_1/comment_modindicator_officer.png",
+                          }),
+                        },
+                        "rankIcon",
+                      ),
+                    )
+                  : _ >= _.QoM._ &&
+                    _.push(
+                      (0, _.jsx)(
+                        "div",
+                        {
+                          className: "rankIcon rankOwner",
+                          children: (0, _.jsx)("img", {
+                            src:
+                              _._.COMMUNITY_CDN_URL +
+                              "public/images/skin_1/comment_modindicator_moderator.png",
+                          }),
+                        },
+                        "rankIcon",
+                      ),
+                    )),
+              _)
+            ) {
+              case _._UC:
+              case _.Ec7:
+                _.push(
+                  (0, _.jsx)(
+                    "div",
+                    {
+                      className: "chatMemberFriendIcon",
+                      children: (0, _.jsx)(_.GSe, {}),
+                    },
+                    "friendIcon",
+                  ),
+                );
+                break;
+              case _.UXi:
+                _.push(
+                  (0, _.jsx)(
+                    "div",
+                    {
+                      className: "chatMemberFriendIcon",
+                      children: (0, _.jsx)(_.GSe, {
+                        bPending: !0,
+                      }),
+                    },
+                    "friendIcon",
+                  ),
+                );
+                break;
+            }
+            _.GetMemberPartyBeacon(_.accountid) &&
+              _.push(
+                (0, _.jsx)(
+                  "div",
+                  {
+                    className: "chatMemberPartyBeaconIcon",
+                    children: (0, _.jsx)(_.jGG, {}),
+                  },
+                  "playIcon",
+                ),
+              );
+            let _ = {
+              friend: _,
+              context: _,
+              className: _,
+              action: this.OnFriendSelected,
+              bHideGameName: _,
+              noActions: _.chatContext == "chatmemberlistselection",
+            };
+            return _
+              ? (0, _.jsx)(_._, {
+                  ..._,
+                  listStatusIndicatorLeft: _,
+                })
+              : (0, _.jsx)(_._, {
+                  ..._,
+                  children: _,
+                });
+          }
+        };
+        _([_._], _.prototype, "OnFriendSelected", 1), (_ = _([_._], _));
+        class _ extends _.Component {
+          m_memoizedIndices = {};
+          m_ref = _.createRef();
+          componentDidUpdate(_) {
+            const { renderBucketFooter: _, renderBucketHeader: _ } = this.props,
+              _ = _ || _;
+            _.buckets.length != this.props.buckets.length &&
+              this.m_ref?.current &&
+              _ &&
+              this.m_ref.current.resetAfterIndex(0, !0);
+          }
+          render() {
+            this.m_memoizedIndices = {};
+            const {
+              width: _,
+              height: _,
+              children: _,
+              renderBucketFooter: _,
+              renderBucketHeader: _,
+              buckets: _,
+            } = this.props;
+            let _ = _.reduce((_, _) => _ + _.length, 0);
+            return (
+              _ && (_ += _.length),
+              _ && (_ += _.length),
+              (0, _.jsx)(_._, {
+                width: _,
+                height: _,
+                itemCount: _,
+                itemSize: this.CalculateItemHeight,
+                itemKey: this.ItemKey,
+                ref: this.m_ref,
+                style: {
+                  overflowX: "hidden",
+                },
+                direction:
+                  window.document.documentElement.matches(":dir(rtl)") ||
+                  (0, _._)(_._.LANGUAGE)
+                    ? "rtl"
+                    : void 0,
+                children: (_) => {
+                  const { bucket: _, item: _ } = this.RawToRelativeIndex(
+                    _.index,
+                  );
+                  return _ === "header"
+                    ? _(_, _.style)
+                    : _ === "footer"
+                      ? _(_, _.style)
+                      : _(_, _, _.style);
+                },
+              })
+            );
+          }
+          ItemKey(_) {
+            const { itemKey: _ } = this.props,
+              { bucket: _, item: _ } = this.RawToRelativeIndex(_);
+            return _ === "header" || _ === "footer"
+              ? `${_}_${_}_${_}`
+              : _(_, _);
+          }
+          CalculateItemHeight(_) {
+            const { bucket: _, item: _ } = this.RawToRelativeIndex(_),
+              {
+                bucketHeaderSize: _,
+                bucketFooterSize: _,
+                itemSize: _,
+              } = this.props;
+            return _ === "header"
+              ? typeof _ == "function"
+                ? _(_)
+                : typeof _ == "number"
+                  ? _
+                  : (console.warn(
+                      "[VirtualizedBucketList]: Header found but no header size provided!",
+                    ),
+                    0)
+              : _ === "footer"
+                ? typeof _ == "function"
+                  ? _(_)
+                  : typeof _ == "number"
+                    ? _
+                    : (console.warn(
+                        "[VirtualizedBucketList]: Footer found but no footer size provided!",
+                      ),
+                      0)
+                : typeof _ == "function"
+                  ? _(_, _)
+                  : _;
+          }
+          RawToRelativeIndex(_) {
+            if (this.m_memoizedIndices[_]) return this.m_memoizedIndices[_];
+            if (this.m_memoizedIndices[_ - 1]) {
+              const _ = this.CalculateNextRelativeIndex(
+                this.m_memoizedIndices[_ - 1],
+              );
+              return (this.m_memoizedIndices[_] = _), _;
+            }
+            return (
+              (this.m_memoizedIndices[_] = this.InternalRawToRelativeIndex(_)),
+              this.m_memoizedIndices[_]
+            );
+          }
+          InternalRawToRelativeIndex(_) {
+            const {
+              buckets: _,
+              renderBucketHeader: _,
+              renderBucketFooter: _,
+            } = this.props;
+            let _ = 0,
+              _ = _ ? -1 : 0;
+            for (; _ > 0; )
+              if (_ > _[_].length + (_ ? 1 : 0))
+                (_ -= _[_].length + (_ ? 1 : 0) + (_ ? 1 : 0)), _++;
+              else {
+                _ += _;
+                break;
+              }
+            return _ === -1
+              ? {
+                  bucket: _,
+                  item: "header",
+                }
+              : _ === _[_].length
+                ? {
+                    bucket: _,
+                    item: "footer",
+                  }
+                : {
+                    bucket: _,
+                    item: _,
+                  };
+          }
+          CalculateNextRelativeIndex(_) {
+            const {
+                buckets: _,
+                renderBucketFooter: _,
+                renderBucketHeader: _,
+              } = this.props,
+              { bucket: _, item: _ } = _,
+              _ = !!_,
+              _ = !!_;
+            return _ === "header"
+              ? _[_].length
+                ? {
+                    bucket: _,
+                    item: 0,
+                  }
+                : _
+                  ? {
+                      bucket: _,
+                      item: "footer",
+                    }
+                  : {
+                      bucket: _ + 1,
+                      item: "header",
+                    }
+              : _ === "footer"
+                ? {
+                    bucket: _ + 1,
+                    item: _ ? "header" : 0,
+                  }
+                : _ < _[_].length - 1
+                  ? {
+                      bucket: _,
+                      item: _ + 1,
+                    }
+                  : _
+                    ? {
+                        bucket: _,
+                        item: "footer",
+                      }
+                    : {
+                        bucket: _ + 1,
+                        item: _ ? "header" : 0,
+                      };
+          }
+        }
+        _([_._], _.prototype, "ItemKey", 1),
+          _([_._], _.prototype, "CalculateItemHeight", 1);
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(module_exports, {
+          _: () => _,
+        });
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        const _ = "FriendsUIDebugRepeatGameInvites",
+          _ = _._.box(0),
+          _ = (0, _._)(function (_) {
+            const { unAccountIDFriend: _, group: _ } = _,
+              _ = _._.ChatStore.GameInviteStore.GetPendingInvites((_) =>
+                _ ? _.readyToRender && _.IsInRoom(_) : _ == _,
+              );
+            if (!_.length) return null;
+            const _ = _.get(),
+              _ =
+                _ > 1
+                  ? Array.from(
+                      {
+                        length: _,
+                      },
+                      () => _,
+                    ).flat()
+                  : _;
+            return (0, _.jsx)(_._, {
+              scrollDirection: "x",
+              className: "PendingGameInvitesBar",
+              "flow-children": "row",
+              children: _.map((_, _) =>
+                (0, _.jsx)(
+                  _,
+                  {
+                    invite: _,
+                  },
+                  _.unAccountIDInviter + "_" + Math.floor(_ / _.length),
+                ),
+              ),
+            });
+          }),
+          _ = (0, _._)(function (_) {
+            const { invite: _ } = _,
+              [_, _] = _.useState(!1);
+            if (
+              (_.useEffect(() => {
+                if (!_.remoteplayString) return;
+                let _ = !1;
+                return (
+                  (0, _._)(_).then((_) => {
+                    _ || _(_);
+                  }),
+                  () => {
+                    _ = !0;
+                  }
+                );
+              }, [_]),
+              _.remoteplayString && !_)
+            )
+              return null;
+            const _ = _._.FriendStore.GetPlayer(_.unAccountIDInviter),
+              _ = _._.AppInfoStore.GetAppInfo(_.appID),
+              _ = _._.ParentalStore.BIsAppBlocked(_.appID),
+              _ =
+                !_ &&
+                _.remoteplayString &&
+                (0, _._)(_) &&
+                _._.VoiceStore.BPartnerHasAcceptedOrInitiatedOneOnOneChat(
+                  _.accountid,
+                ),
+              _ = _.remoteplayString
+                ? "#ChatRoom_GameInviteRemotePlay_Invite"
+                : "#ChatRoom_GameInvite_Invite";
+            return (0, _.jsxs)(_._, {
+              className: "PendingGameInvite",
+              "flow-children": "row",
+              scrollIntoViewWhenChildFocused: !0,
+              children: [
+                (0, _.jsx)(_._, {
+                  appID: _.appID,
+                  strClassNames: "PendingGameInviteHeader",
+                }),
+                (0, _.jsxs)("div", {
+                  className: "PendingGameInviteText",
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: "PendingGameInviteLabel",
+                      children: (0, _._)(
+                        _,
+                        (0, _.jsxs)("span", {
+                          className: "PendingGameInviteInviter",
+                          children: [
+                            (0, _.jsx)(_._, {
+                              friend: _,
+                              context: null,
+                            }),
+                            _.display_name,
+                          ],
+                        }),
+                      ),
+                    }),
+                    _?.name &&
+                      (0, _.jsx)("div", {
+                        className: "PendingGameInviteAppName",
+                        children: _.name,
+                      }),
+                  ],
+                }),
+                !_ &&
+                  (0, _.jsx)(_._, {
+                    noFocusRing: !0,
+                    className: "PendingGameInviteButton Accept",
+                    onActivate: () => _.AcceptGameInvite(),
+                    onOKActionDescription: (0, _._)(
+                      "#ChatRoom_GameInvite_Accept",
+                    ),
+                    children: (0, _.jsx)(_.Checkmark, {}),
+                  }),
+                _ &&
+                  (0, _.jsxs)(_._, {
+                    noFocusRing: !0,
+                    className: "PendingGameInviteButton Accept",
+                    onActivate: () => (0, _._)(_, _),
+                    onOKActionDescription: (0, _._)(
+                      "#ChatRoom_GameInvite_Accept_And_Voice_Chat",
+                    ),
+                    children: [
+                      (0, _.jsx)(_.Checkmark, {}),
+                      (0, _.jsx)(_.Microphone, {}),
+                    ],
+                  }),
+                (0, _.jsx)(_._, {
+                  noFocusRing: !0,
+                  className: "PendingGameInviteButton Dismiss",
+                  onActivate: () => _.DismissInvite(),
+                  onOKActionDescription: (0, _._)(
+                    "#ChatRoom_GameInvite_Dismiss",
+                  ),
+                  children: (0, _.jsx)(_.Close, {}),
+                }),
+              ],
+            });
+          });
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(module_exports, {
+          _: () => _,
+          _: () => _,
+          _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -56647,12 +58276,12 @@
                 let _ = _.GetParentGroupView(),
                   _ = _.GetGroup();
                 if (_.voiceRoomList.length > 1) {
-                  const _ = () => {
+                  const _ = (_) => {
                     (0, _._)(
                       (0, _.jsx)(_._, {
                         groupView: _,
                       }),
-                      _,
+                      _._(_) ?? _,
                     );
                   };
                   (_.onOptionsButton = _),
@@ -57660,6 +59289,7 @@
           _: () => _,
           _: () => _,
           _: () => _,
+          _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -57890,14 +59520,30 @@
                           ],
                         }),
                         (0, _.jsxs)(_._, {
-                          className: `chatRoomGroupActiveChat ${_ ? "voiceRoom" : ""}`,
-                          focusable: !0,
-                          fnCanTakeFocus: () => !0,
-                          onActivate: this.fnShowTextChannelsDialog,
-                          onOKActionDescription: (0, _._)(
-                            "#GroupSettings_Channels_TextChannels",
-                          ),
-                          children: [(0, _.jsx)(_.tcj, {}), _],
+                          className: "chatRoomGroupHeaderBottomRow",
+                          "flow-children": "row",
+                          children: [
+                            (0, _.jsxs)(_._, {
+                              className: `chatRoomGroupActiveChat ${_ ? "voiceRoom" : ""}`,
+                              focusable: !0,
+                              fnCanTakeFocus: () => !0,
+                              onActivate: this.fnShowTextChannelsDialog,
+                              onOKActionDescription: (0, _._)(
+                                "#GroupSettings_Channels_TextChannels",
+                              ),
+                              children: [
+                                (0, _.jsx)(_.tcj, {}),
+                                (0, _.jsx)("span", {
+                                  className: "chatRoomGroupActiveChatName",
+                                  children: _,
+                                }),
+                              ],
+                            }),
+                            _.readyToRender &&
+                              (0, _.jsx)(_._, {
+                                groupView: _,
+                              }),
+                          ],
                         }),
                       ],
                     }),
@@ -57905,30 +59551,9 @@
                       className: "chatRoomGroupSpacer",
                     }),
                     _.readyToRender &&
-                      (0, _.jsxs)(_.Fragment, {
-                        children: [
-                          _ &&
-                            (0, _.jsx)(_, {
-                              groupView: _,
-                            }),
-                          (0, _.jsx)("div", {
-                            className: "chatRoomGroupControls",
-                            children: (0, _.jsxs)("div", {
-                              className: "chatRoomGroupStats",
-                              children: [
-                                (0, _.jsx)(_, {
-                                  groupView: _,
-                                }),
-                                (0, _.jsx)(_, {
-                                  groupView: _,
-                                }),
-                                (0, _.jsx)(_, {
-                                  groupView: _,
-                                }),
-                              ],
-                            }),
-                          }),
-                        ],
+                      _ &&
+                      (0, _.jsx)(_, {
+                        groupView: _,
                       }),
                   ],
                 }),
@@ -58119,6 +59744,33 @@
                   ],
                 });
           });
+        const _ = (0, _._)((_) => {
+          const { groupView: _ } = _;
+          return _.GetGroup().readyToRender
+            ? (0, _.jsxs)("div", {
+                className: "chatRoomGroupStatsRow",
+                children: [
+                  (0, _.jsx)("div", {
+                    className: "chatRoomGroupStatsRule",
+                  }),
+                  (0, _.jsxs)("div", {
+                    className: "chatRoomGroupStats",
+                    children: [
+                      (0, _.jsx)(_, {
+                        groupView: _,
+                      }),
+                      (0, _.jsx)(_, {
+                        groupView: _,
+                      }),
+                      (0, _.jsx)(_, {
+                        groupView: _,
+                      }),
+                    ],
+                  }),
+                ],
+              })
+            : null;
+        });
         function _(_) {
           const { appID: _ } = _,
             [_] = (0, _._)(_, {
@@ -58281,6 +59933,7 @@
           _: () => _,
           _: () => _,
           _: () => _,
+          _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -58311,979 +59964,6 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _, _) => {
-            for (
-              var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
-              _ >= 0;
-              _--
-            )
-              (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
-            return _ && _ && _(_, _, _), _;
-          },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
-        const _ = (_) =>
-          _._.IN_CLIENT
-            ? (0, _.jsx)(_._, {
-                ..._,
-              })
-            : (0, _.jsx)(_._, {
-                ..._,
-              });
-        let _ = class extends _.Component {
-          m_renderContext;
-          GetFriendRenderContext() {
-            let _ = this.props.groupView.GetGroup();
-            return (
-              (!this.m_renderContext || this.m_renderContext.group != _) &&
-                (this.m_renderContext = {
-                  group: _,
-                  chatContext: "chatmemberlist",
-                }),
-              this.m_renderContext
-            );
-          }
-          GetMembersMatchingSearch(_) {
-            let _ = this.props.groupView.GetGroup(),
-              _ = _(_.memberList.member_list, _);
-            return _.sort(_._.DefaultFriendSortComparator), _;
-          }
-          OnMemberListToggleViewClick() {
-            this.props.groupView.SetMemberListCollapsed(
-              this.props.groupView.isMemberListExpanded,
-            );
-          }
-          OnSearchInput(_) {
-            this.props.groupView.UpdateMemberSearch(_.currentTarget.value);
-          }
-          OnSearchSubmit(_) {
-            _.preventDefault();
-            let _ = this.props.groupView,
-              _ = _.normalizedMemberSearch;
-            if (_ && _.length) {
-              let _ = this.GetMembersMatchingSearch(_);
-              _.length && _[0].OpenChatDialog((0, _._)(_));
-            }
-            _.ClearMemberSearch();
-          }
-          OnSearchKeyDown(_) {
-            _.keyCode == _._ &&
-              (_.preventDefault(),
-              _.currentTarget.blur(),
-              this.props.groupView.ClearMemberSearch());
-          }
-          OnClearSearch() {
-            this.props.groupView.ClearMemberSearch();
-          }
-          OnSearchFocus() {
-            this.props.groupView.UpdateMemberSearch(
-              this.props.groupView.GetMemberSearch(),
-            );
-          }
-          OnSearchBlur() {
-            this.props.groupView.GetMemberSearch().length == 0 &&
-              this.props.groupView.ClearMemberSearch();
-          }
-          render() {
-            let _ = this.props.groupView,
-              _ = _.isMemberListExpanded,
-              _ = _.GetMemberSearch(),
-              _ = "MemberListColumn",
-              _ = (0, _._)("#Tooltip_MemberCollapse");
-            _ ||
-              ((_ += " MemberListViewCompact"),
-              (_ = (0, _._)("#Tooltip_MemberExpand")));
-            let _ = _.IsMemberSearchActive(),
-              _ = "MemberListOptionsContainer";
-            return (
-              _ && (_ += " SearchActive"),
-              (0, _.jsxs)(_._, {
-                className: _,
-                children: [
-                  (0, _.jsxs)("div", {
-                    className: _,
-                    children: [
-                      (0, _.jsx)("div", {
-                        className:
-                          "MemberListOption ToggleMemberListView" +
-                          (_.length > 0 ? " SearchActive" : ""),
-                        onClick: this.OnMemberListToggleViewClick,
-                        title: _,
-                        children: (0, _.jsx)(_.F2T, {}),
-                      }),
-                      (0, _.jsx)("form", {
-                        className: "socialInputContainer",
-                        name: "friendSearchForm",
-                        onSubmit: this.OnSearchSubmit,
-                        children: (0, _.jsxs)("div", {
-                          className: "inputContainer no-drag",
-                          children: [
-                            (0, _.jsx)("input", {
-                              className: "friendSearchInput",
-                              type: "text",
-                              name: "memberlistSearch",
-                              placeholder: (0, _._)("#SearchByName"),
-                              value: _,
-                              onChange: this.OnSearchInput,
-                              onKeyDown: this.OnSearchKeyDown,
-                              onFocus: this.OnSearchFocus,
-                              onBlur: this.OnSearchBlur,
-                              autoComplete: "off",
-                            }),
-                            _.has_search_error
-                              ? (0, _.jsx)("div", {
-                                  className: "friendSearchError",
-                                  title: (0, _._)("#SearchError"),
-                                  children: (0, _.jsx)(_.eTF, {
-                                    color: "red",
-                                  }),
-                                })
-                              : (0, _.jsx)("div", {
-                                  className: "friendSearchClear",
-                                  onClick: this.OnClearSearch,
-                                  children: (0, _.jsx)(_.sED, {}),
-                                }),
-                          ],
-                        }),
-                      }),
-                    ],
-                  }),
-                  (0, _.jsx)(_._, {
-                    style: {
-                      display: "flex",
-                      flex: 1,
-                      position: "relative",
-                    },
-                    "flow-children": "column",
-                    children: _.GetGroup().BIsMemberListVirtualized()
-                      ? (0, _.jsx)(_, {
-                          groupView: this.props.groupView,
-                          inactive: this.props.inactive,
-                          context: this.GetFriendRenderContext(),
-                        })
-                      : (0, _.jsx)(_, {
-                          groupView: this.props.groupView,
-                          inactive: this.props.inactive,
-                          context: this.GetFriendRenderContext(),
-                        }),
-                  }),
-                  (0, _.jsx)("div", {
-                    className: "disconnectBlocker",
-                  }),
-                ],
-              })
-            );
-          }
-        };
-        _([_._], _.prototype, "OnMemberListToggleViewClick", 1),
-          _([_._], _.prototype, "OnSearchInput", 1),
-          _([_._], _.prototype, "OnSearchSubmit", 1),
-          _([_._], _.prototype, "OnSearchKeyDown", 1),
-          _([_._], _.prototype, "OnClearSearch", 1),
-          _([_._], _.prototype, "OnSearchFocus", 1),
-          _([_._], _.prototype, "OnSearchBlur", 1),
-          (_ = _([_._], _));
-        let _ = class extends _.Component {
-          m_renderContext;
-          GetFriendRenderContext() {
-            let _ = this.props.groupView.GetGroup();
-            return (
-              (!this.m_renderContext || this.m_renderContext.group != _) &&
-                (this.m_renderContext = {
-                  group: _,
-                  chatContext: "chatmemberlistselection",
-                }),
-              this.m_renderContext
-            );
-          }
-          GetMembersMatchingSearch(_) {
-            let _ = this.props.groupView.GetGroup(),
-              _ = _(_.memberList.member_list, _);
-            return _.sort(_._.DefaultFriendSortComparator), _;
-          }
-          OnSearchInput(_) {
-            this.props.groupView.UpdateMemberSearch(_.currentTarget.value);
-          }
-          OnSearchSubmit(_) {
-            _.preventDefault();
-            let _ = this.props.groupView,
-              _ = _.normalizedMemberSearch;
-            if (_ && _.length) {
-              let _ = this.GetMembersMatchingSearch(_);
-              _.length && _[0].OpenChatDialog((0, _._)(_));
-            }
-            _.ClearMemberSearch();
-          }
-          OnSearchKeyDown(_) {
-            _.keyCode == _._ &&
-              (_.preventDefault(),
-              _.currentTarget.blur(),
-              this.props.groupView.ClearMemberSearch());
-          }
-          OnClearSearch() {
-            this.props.groupView.ClearMemberSearch();
-          }
-          OnSearchFocus() {
-            this.props.groupView.UpdateMemberSearch(
-              this.props.groupView.GetMemberSearch(),
-            );
-          }
-          OnSearchBlur() {
-            this.props.groupView.GetMemberSearch().length == 0 &&
-              this.props.groupView.ClearMemberSearch();
-          }
-          render() {
-            let _ = this.props.groupView,
-              _ = !0,
-              _ = _.GetMemberSearch(),
-              _ = "GamepadMode MemberListColumn",
-              _ = _.IsMemberSearchActive(),
-              _ = "MemberListOptionsContainer";
-            _ && (_ += " SearchActive");
-            const _ = (_) => ({
-              onActivate: (_) => {
-                _.OpenChatDialog((0, _._)(_)), this.props.onAction();
-              },
-              onOKActionDescription: (0, _._)("#Friend_Menu_SendMessage"),
-            });
-            return (0, _.jsx)(_._, {
-              className: _,
-              "flow-children": "column",
-              children: (0, _.jsxs)(_._, {
-                children: [
-                  (0, _.jsx)("div", {
-                    className: _,
-                    children: (0, _.jsx)("form", {
-                      className: "socialInputContainer",
-                      name: "friendSearchForm",
-                      onSubmit: this.OnSearchSubmit,
-                      children: (0, _.jsxs)(_._, {
-                        className: "inputContainer no-drag",
-                        "flow-children": "row",
-                        children: [
-                          (0, _.jsx)(_._, {
-                            className: "friendSearchInput",
-                            type: "text",
-                            name: "memberlistSearch",
-                            placeholder: (0, _._)("#SearchByName"),
-                            value: _,
-                            onChange: this.OnSearchInput,
-                            onKeyDown: this.OnSearchKeyDown,
-                            onFocus: this.OnSearchFocus,
-                            onBlur: this.OnSearchBlur,
-                            autoComplete: "off",
-                          }),
-                          _.has_search_error
-                            ? (0, _.jsx)("div", {
-                                className: "friendSearchError",
-                                title: (0, _._)("#SearchError"),
-                                children: (0, _.jsx)(_.eTF, {
-                                  color: "red",
-                                }),
-                              })
-                            : (0, _.jsx)(_._, {
-                                className: "friendSearchClear",
-                                onActivate: this.OnClearSearch,
-                                children: (0, _.jsx)(_.sED, {}),
-                              }),
-                        ],
-                      }),
-                    }),
-                  }),
-                  (0, _.jsx)(_._, {
-                    style: {
-                      display: "flex",
-                      flex: 1,
-                      position: "relative",
-                      minHeight: "300px",
-                    },
-                    "flow-children": "column",
-                    children: _.GetGroup().BIsMemberListVirtualized()
-                      ? (0, _.jsx)(_, {
-                          groupView: this.props.groupView,
-                          inactive: this.props.inactive,
-                          context: this.GetFriendRenderContext(),
-                          fnGetPanelProps: _,
-                        })
-                      : (0, _.jsx)(_, {
-                          groupView: this.props.groupView,
-                          inactive: this.props.inactive,
-                          context: this.GetFriendRenderContext(),
-                          fnGetPanelProps: _,
-                        }),
-                  }),
-                  (0, _.jsx)("div", {
-                    className: "disconnectBlocker",
-                  }),
-                ],
-              }),
-            });
-          }
-        };
-        _([_._], _.prototype, "OnSearchInput", 1),
-          _([_._], _.prototype, "OnSearchSubmit", 1),
-          _([_._], _.prototype, "OnSearchKeyDown", 1),
-          _([_._], _.prototype, "OnClearSearch", 1),
-          _([_._], _.prototype, "OnSearchFocus", 1),
-          _([_._], _.prototype, "OnSearchBlur", 1),
-          (_ = _([_._], _));
-        function _(_) {
-          return _ ? 36 : 28;
-        }
-        function _(_) {
-          return _ ? 44 : 36;
-        }
-        let _ = class extends _.Component {
-          render() {
-            const { groupView: _ } = this.props,
-              _ = _.IsMemberSearchActive() && _.search_results !== void 0;
-            return (0, _.jsx)(_, {
-              children: ({ height: _, width: _ }) =>
-                _
-                  ? (0, _.jsx)(_, {
-                      ...this.props,
-                      width: _,
-                      height: _,
-                    })
-                  : (0, _.jsx)(_, {
-                      ...this.props,
-                      width: _,
-                      height: _,
-                    }),
-            });
-          }
-        };
-        _ = _([_._], _);
-        let _ = class extends _.Component {
-          render() {
-            const {
-                width: _,
-                height: _,
-                groupView: _,
-                context: _,
-                fnGetPanelProps: _,
-              } = this.props,
-              _ = _.GetGroup().memberCountTotal;
-            let _ = this.props.groupView.GetVirtualizedMemberListView();
-            return (
-              _.GetViewChangenumber(),
-              (0, _.jsx)(_._, {
-                width: _,
-                height: _,
-                itemCount: _,
-                itemSize: _(this.context?.IN_GAMEPADUI),
-                overscanCount: 10,
-                onItemsRendered: this.OnItemsRendered,
-                itemKey: (_) => _.GetAccountIDAt(_) || _,
-                style: {
-                  overflowX: "hidden",
-                },
-                children: (_) =>
-                  (0, _.jsx)(_, {
-                    ..._,
-                    virtualizer: _,
-                    groupView: _,
-                    context: _,
-                    fnGetPanelProps: _,
-                  }),
-              })
-            );
-          }
-          OnItemsRendered(_) {
-            this.props.groupView
-              .GetVirtualizedMemberListView()
-              .SetViewExtents(_.visibleStartIndex, _.visibleStopIndex);
-          }
-        };
-        _(_, "contextType", _._),
-          _([_._], _.prototype, "OnItemsRendered", 1),
-          (_ = _([_._], _));
-        let _ = class extends _.Component {
-          render() {
-            const {
-                width: _,
-                height: _,
-                groupView: _,
-                context: _,
-                fnGetPanelProps: _,
-              } = this.props,
-              _ = _.search_results.length;
-            return (0, _.jsx)(_._, {
-              width: _,
-              height: _,
-              itemCount: _,
-              itemSize: _(this.context?.IN_GAMEPADUI),
-              overscanCount: 10,
-              itemKey: (_) => _.search_results[_].friend.accountid,
-              style: {
-                overflowX: "hidden",
-              },
-              children: (_) =>
-                (0, _.jsx)(_, {
-                  ..._,
-                  player: _.search_results[_.index].friend,
-                  groupView: _,
-                  context: _,
-                  fnGetPanelProps: _,
-                }),
-            });
-          }
-        };
-        _(_, "contextType", _._), (_ = _([_._], _));
-        class _ extends _.Component {
-          render() {
-            const {
-                index: _,
-                style: _,
-                virtualizer: _,
-                groupView: _,
-                context: _,
-                fnGetPanelProps: _,
-              } = this.props,
-              _ = _.GetAccountIDAt(_);
-            if (!_) return null;
-            const _ = _.GetMember(_);
-            return _
-              ? (0, _.jsx)(_, {
-                  player: _,
-                  groupView: _,
-                  style: _,
-                  context: _,
-                  fnGetPanelProps: _,
-                })
-              : null;
-          }
-        }
-        const _ = ({
-          style: _,
-          player: _,
-          groupView: _,
-          className: _,
-          bHideGameName: _,
-          context: _,
-          fnGetPanelProps: _,
-        }) => {
-          let _ = (0, _._)(),
-            _ = _ ? _(_) : {};
-          return (0, _.jsx)(_._, {
-            style: {
-              ..._,
-              height: `${_(_)}px`,
-            },
-            ..._,
-            className: _,
-            children: (0, _.jsx)(_, {
-              friend: _,
-              bHideGameName: _,
-              groupView: _,
-              context: _,
-            }),
-          });
-        };
-        function _(_, _) {
-          return _.filter((_) => _.BMatchesSearchString(_, !1));
-        }
-        let _ = class extends _.Component {
-          state = {
-            collapsedBuckets: {},
-          };
-          m_disposeGetMemberList;
-          constructor(_) {
-            super(_),
-              (this.m_disposeGetMemberList =
-                _._.GroupMemberStore.RegisterForGroupMemberList(
-                  this.OnMemberListChanged,
-                  _.groupView.GetGroup().GetGroupID(),
-                ));
-          }
-          OnMemberListChanged() {
-            this.forceUpdate();
-          }
-          componentWillUnmount() {
-            this.m_disposeGetMemberList.unregister();
-          }
-          SortedPlayerSortFunc(_, _) {
-            return _.display_name.localeCompare(_.display_name);
-          }
-          BuildFilteredBuckets(_, _) {
-            let _ = [];
-            for (let _ of _) {
-              let _ = _(_.member_list, _);
-              if (_.length > 0) {
-                let _ = new _._(_._, this.SortedPlayerSortFunc, () => {});
-                _.SetMembers(_), _.push(_);
-              }
-            }
-            return _;
-          }
-          render() {
-            const {
-                inactive: _,
-                groupView: _,
-                context: _,
-                fnGetPanelProps: _,
-              } = this.props,
-              { collapsedBuckets: _ } = this.state;
-            if (_) return null;
-            let _ = _._.GroupMemberStore.GetGroupMemberList(
-              _.GetGroup().GetGroupID(),
-            );
-            if (_.length == 0) return null;
-            let _ = _.normalizedMemberSearch;
-            _.length > 0 && (_ = this.BuildFilteredBuckets(_, _));
-            const _ = (_, _, _) => {
-                const _ = _[_],
-                  _ = _._ === _._ ? "partybeacon" : "regular";
-                return (0, _.jsx)(_, {
-                  style: _,
-                  className: `chatroomBucket_${_}`,
-                  bHideGameName: _.BIsGameGroup(),
-                  groupView: _,
-                  player: _.member_list[_],
-                  context: _,
-                  fnGetPanelProps: _,
-                });
-              },
-              _ = (_, _) => {
-                const _ = _[_],
-                  _ = _[_._];
-                return (0, _.jsx)(_, {
-                  collapsible: _.length > 1,
-                  collapsed: _,
-                  memberCount: _.member_list.length,
-                  name: _.name,
-                  onCollapseChanged: () =>
-                    this.setState({
-                      collapsedBuckets: {
-                        ..._,
-                        [_._]: !_,
-                      },
-                    }),
-                  style: _,
-                });
-              },
-              _ = this.context?.IN_GAMEPADUI;
-            return (0, _.jsx)("div", {
-              className: (0, _._)(
-                !_ && "CompactFriendsList",
-                "chatRoomMembers",
-                "groupMemberList",
-              ),
-              children: (0, _.jsx)("div", {
-                className: "friendGroup",
-                style: {
-                  width: "100%",
-                  height: "100%",
-                },
-                children: (0, _.jsx)("div", {
-                  className: "ChatRoomMemberScrollList_List",
-                  style: {
-                    width: "100%",
-                    height: "100%",
-                    boxSizing: "border-box",
-                  },
-                  children: (0, _.jsx)(_, {
-                    children: ({ width: _, height: _ }) =>
-                      (0, _.jsx)(_, {
-                        width: _,
-                        height: _,
-                        buckets: _.map((_) => (_[_._] ? [] : _.member_list)),
-                        itemSize: _(_),
-                        estimatedItemSize: _(_),
-                        renderBucketHeader: _,
-                        bucketHeaderSize: _(_),
-                        itemKey: (_, _) => _[_].member_list[_].accountid,
-                        children: _,
-                      }),
-                  }),
-                }),
-              }),
-            });
-          }
-        };
-        _(_, "contextType", _._),
-          _([_._], _.prototype, "OnMemberListChanged", 1),
-          (_ = _([_._], _));
-        class _ extends _.PureComponent {
-          render() {
-            const {
-              collapsed: _,
-              collapsible: _,
-              onCollapseChanged: _,
-              style: _,
-              memberCount: _,
-              name: _,
-            } = this.props;
-            return (0, _.jsxs)("div", {
-              className: (0, _._)("groupName", _ && "Collapsed"),
-              onClick: () => _ && _(),
-              style: _,
-              children: [
-                (0, _.jsx)("div", {
-                  className: "groupIcon",
-                  children: (0, _.jsx)(_.YJl, {}),
-                }),
-                _ &&
-                  (0, _.jsx)("div", {
-                    className: "ExpandPlusMinus",
-                    children: (0, _.jsx)(_.f5w, {}),
-                  }),
-                (0, _.jsx)("span", {
-                  className: "groupCountCollapsed",
-                  children: _,
-                }),
-                (0, _.jsxs)("div", {
-                  className: "groupLabelsContainer",
-                  children: [
-                    (0, _.jsx)("span", {
-                      className: "groupNameLabel",
-                      children: _,
-                    }),
-                    (0, _.jsxs)("span", {
-                      className: "groupCount",
-                      children: ["(", _, ")"],
-                    }),
-                  ],
-                }),
-              ],
-            });
-          }
-        }
-        let _ = class extends _.Component {
-          OnFriendSelected(_, _) {
-            this.props.friend.OpenChatDialog((0, _._)(_)),
-              this.props.groupView.ClearMemberSearch();
-          }
-          render() {
-            const {
-              friend: _,
-              groupView: _,
-              context: _,
-              bHideGameName: _,
-            } = this.props;
-            let _ = [],
-              _ = "",
-              _ = _.GetGroup(),
-              _ = _.isMemberListExpanded,
-              _ = _.GetMemberRank(_.accountid),
-              _ = _.efriendrelationship;
-            switch (_) {
-              default:
-                break;
-              case _.QoM._:
-                _ = "Moderator";
-                break;
-              case _.QoM._:
-                _ = "Officer";
-                break;
-              case _.QoM._:
-                (_ = "Owner"),
-                  _.BIsClanChatRoom() ||
-                    _.push(
-                      (0, _.jsx)(
-                        "div",
-                        {
-                          className:
-                            "rankIcon rankOwner" +
-                            (_.is_friend ? " isFriend" : ""),
-                          children: (0, _.jsx)(_.OeC, {}),
-                        },
-                        "rankIcon",
-                      ),
-                    );
-                break;
-            }
-            switch (
-              (_.BIsClanChatRoom() &&
-                (_ >= _.QoM._
-                  ? _.push(
-                      (0, _.jsx)(
-                        "div",
-                        {
-                          className: "rankIcon rankOwner",
-                          children: (0, _.jsx)("img", {
-                            src:
-                              _._.COMMUNITY_CDN_URL +
-                              "public/images/skin_1/comment_modindicator_officer.png",
-                          }),
-                        },
-                        "rankIcon",
-                      ),
-                    )
-                  : _ >= _.QoM._ &&
-                    _.push(
-                      (0, _.jsx)(
-                        "div",
-                        {
-                          className: "rankIcon rankOwner",
-                          children: (0, _.jsx)("img", {
-                            src:
-                              _._.COMMUNITY_CDN_URL +
-                              "public/images/skin_1/comment_modindicator_moderator.png",
-                          }),
-                        },
-                        "rankIcon",
-                      ),
-                    )),
-              _)
-            ) {
-              case _._UC:
-              case _.Ec7:
-                _.push(
-                  (0, _.jsx)(
-                    "div",
-                    {
-                      className: "chatMemberFriendIcon",
-                      children: (0, _.jsx)(_.GSe, {}),
-                    },
-                    "friendIcon",
-                  ),
-                );
-                break;
-              case _.UXi:
-                _.push(
-                  (0, _.jsx)(
-                    "div",
-                    {
-                      className: "chatMemberFriendIcon",
-                      children: (0, _.jsx)(_.GSe, {
-                        bPending: !0,
-                      }),
-                    },
-                    "friendIcon",
-                  ),
-                );
-                break;
-            }
-            _.GetMemberPartyBeacon(_.accountid) &&
-              _.push(
-                (0, _.jsx)(
-                  "div",
-                  {
-                    className: "chatMemberPartyBeaconIcon",
-                    children: (0, _.jsx)(_.jGG, {}),
-                  },
-                  "playIcon",
-                ),
-              );
-            let _ = {
-              friend: _,
-              context: _,
-              className: _,
-              action: this.OnFriendSelected,
-              bHideGameName: _,
-              noActions: _.chatContext == "chatmemberlistselection",
-            };
-            return _
-              ? (0, _.jsx)(_._, {
-                  ..._,
-                  listStatusIndicatorLeft: _,
-                })
-              : (0, _.jsx)(_._, {
-                  ..._,
-                  children: _,
-                });
-          }
-        };
-        _([_._], _.prototype, "OnFriendSelected", 1), (_ = _([_._], _));
-        class _ extends _.Component {
-          m_memoizedIndices = {};
-          m_ref = _.createRef();
-          componentDidUpdate(_) {
-            const { renderBucketFooter: _, renderBucketHeader: _ } = this.props,
-              _ = _ || _;
-            _.buckets.length != this.props.buckets.length &&
-              this.m_ref?.current &&
-              _ &&
-              this.m_ref.current.resetAfterIndex(0, !0);
-          }
-          render() {
-            this.m_memoizedIndices = {};
-            const {
-              width: _,
-              height: _,
-              children: _,
-              renderBucketFooter: _,
-              renderBucketHeader: _,
-              buckets: _,
-            } = this.props;
-            let _ = _.reduce((_, _) => _ + _.length, 0);
-            return (
-              _ && (_ += _.length),
-              _ && (_ += _.length),
-              (0, _.jsx)(_._, {
-                width: _,
-                height: _,
-                itemCount: _,
-                itemSize: this.CalculateItemHeight,
-                itemKey: this.ItemKey,
-                ref: this.m_ref,
-                style: {
-                  overflowX: "hidden",
-                },
-                direction:
-                  window.document.documentElement.matches(":dir(rtl)") ||
-                  (0, _._)(_._.LANGUAGE)
-                    ? "rtl"
-                    : void 0,
-                children: (_) => {
-                  const { bucket: _, item: _ } = this.RawToRelativeIndex(
-                    _.index,
-                  );
-                  return _ === "header"
-                    ? _(_, _.style)
-                    : _ === "footer"
-                      ? _(_, _.style)
-                      : _(_, _, _.style);
-                },
-              })
-            );
-          }
-          ItemKey(_) {
-            const { itemKey: _ } = this.props,
-              { bucket: _, item: _ } = this.RawToRelativeIndex(_);
-            return _ === "header" || _ === "footer"
-              ? `${_}_${_}_${_}`
-              : _(_, _);
-          }
-          CalculateItemHeight(_) {
-            const { bucket: _, item: _ } = this.RawToRelativeIndex(_),
-              {
-                bucketHeaderSize: _,
-                bucketFooterSize: _,
-                itemSize: _,
-              } = this.props;
-            return _ === "header"
-              ? typeof _ == "function"
-                ? _(_)
-                : typeof _ == "number"
-                  ? _
-                  : (console.warn(
-                      "[VirtualizedBucketList]: Header found but no header size provided!",
-                    ),
-                    0)
-              : _ === "footer"
-                ? typeof _ == "function"
-                  ? _(_)
-                  : typeof _ == "number"
-                    ? _
-                    : (console.warn(
-                        "[VirtualizedBucketList]: Footer found but no footer size provided!",
-                      ),
-                      0)
-                : typeof _ == "function"
-                  ? _(_, _)
-                  : _;
-          }
-          RawToRelativeIndex(_) {
-            if (this.m_memoizedIndices[_]) return this.m_memoizedIndices[_];
-            if (this.m_memoizedIndices[_ - 1]) {
-              const _ = this.CalculateNextRelativeIndex(
-                this.m_memoizedIndices[_ - 1],
-              );
-              return (this.m_memoizedIndices[_] = _), _;
-            }
-            return (
-              (this.m_memoizedIndices[_] = this.InternalRawToRelativeIndex(_)),
-              this.m_memoizedIndices[_]
-            );
-          }
-          InternalRawToRelativeIndex(_) {
-            const {
-              buckets: _,
-              renderBucketHeader: _,
-              renderBucketFooter: _,
-            } = this.props;
-            let _ = 0,
-              _ = _ ? -1 : 0;
-            for (; _ > 0; )
-              if (_ > _[_].length + (_ ? 1 : 0))
-                (_ -= _[_].length + (_ ? 1 : 0) + (_ ? 1 : 0)), _++;
-              else {
-                _ += _;
-                break;
-              }
-            return _ === -1
-              ? {
-                  bucket: _,
-                  item: "header",
-                }
-              : _ === _[_].length
-                ? {
-                    bucket: _,
-                    item: "footer",
-                  }
-                : {
-                    bucket: _,
-                    item: _,
-                  };
-          }
-          CalculateNextRelativeIndex(_) {
-            const {
-                buckets: _,
-                renderBucketFooter: _,
-                renderBucketHeader: _,
-              } = this.props,
-              { bucket: _, item: _ } = _,
-              _ = !!_,
-              _ = !!_;
-            return _ === "header"
-              ? _[_].length
-                ? {
-                    bucket: _,
-                    item: 0,
-                  }
-                : _
-                  ? {
-                      bucket: _,
-                      item: "footer",
-                    }
-                  : {
-                      bucket: _ + 1,
-                      item: "header",
-                    }
-              : _ === "footer"
-                ? {
-                    bucket: _ + 1,
-                    item: _ ? "header" : 0,
-                  }
-                : _ < _[_].length - 1
-                  ? {
-                      bucket: _,
-                      item: _ + 1,
-                    }
-                  : _
-                    ? {
-                        bucket: _,
-                        item: "footer",
-                      }
-                    : {
-                        bucket: _ + 1,
-                        item: _ ? "header" : 0,
-                      };
-          }
-        }
-        _([_._], _.prototype, "ItemKey", 1),
-          _([_._], _.prototype, "CalculateItemHeight", 1);
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -59296,6 +59976,8 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -59759,7 +60441,7 @@
               _ && (_ += " broadcastVisible");
             let _ = null;
             this.props.bHideMemberList ||
-              (_ = (0, _.jsx)(_, {
+              (_ = (0, _.jsx)(_._, {
                 groupView: this.props.groupView,
                 inactive: _,
               }));
@@ -60073,35 +60755,37 @@
                   (0, _.jsxs)(_._, {
                     className: "displayColumn fullWidth",
                     children: [
-                      (0, _.jsxs)(_._, {
+                      (0, _.jsx)(_._, {
                         "flow-children": "row",
                         className: "displayRow minHeightZero",
                         navEntryPreferPosition: _._.PREFERRED_CHILD,
-                        children: [
-                          (0, _.jsxs)("div", {
-                            className: `ChatRoomGroupDialog_history ${_.GetVoiceAllowed() ? "voiceRoom" : ""}`,
-                            children: [
-                              !_._.SettingsStore.FriendsSettings
-                                .bDisableRoomEffects &&
-                                (0, _.jsx)(_._, {
-                                  effectManager: _.RoomEffectManager(),
-                                }),
+                        children: (0, _.jsxs)("div", {
+                          className: `ChatRoomGroupDialog_history ${_.GetVoiceAllowed() ? "voiceRoom" : ""}`,
+                          children: [
+                            !_._.SettingsStore.FriendsSettings
+                              .bDisableRoomEffects &&
                               (0, _.jsx)(_._, {
-                                chatView: _,
-                                isActive: this.props.isActive,
+                                effectManager: _.RoomEffectManager(),
                               }),
-                              (0, _.jsx)(_._, {
-                                children: (0, _.jsx)(_._, {
-                                  groupView: _,
-                                }),
+                            (0, _.jsx)(_._, {
+                              chatView: _,
+                              isActive: this.props.isActive,
+                            }),
+                            (0, _.jsx)(_._, {
+                              children: (0, _.jsx)(_._, {
+                                groupView: _,
                               }),
-                            ],
-                          }),
-                          (0, _.jsx)(_, {
-                            groupView: _,
-                          }),
-                        ],
+                            }),
+                          ],
+                        }),
                       }),
+                      (0, _.jsx)(_._, {
+                        groupView: _,
+                      }),
+                      _ &&
+                        (0, _.jsx)(_._, {
+                          group: _,
+                        }),
                       (0, _.jsx)(_._, {
                         preferredFocus: !0,
                         children: _,
@@ -60258,25 +60942,36 @@
           _([_._], _.prototype, "ToggleVoiceChat", 1),
           (_ = _([_._], _));
         const _ = (_) => {
-            let { groupView: _, className: _, ..._ } = _;
+            let { groupView: _ } = _;
             _.useEffect(() => {
               _.SetMemberListCollapsed(!1, !1);
             });
-            let _ = (0, _.jsx)(_, {
+            let _ = (0, _.jsx)(_._, {
               groupView: _,
               inactive: !1,
               onAction: _.closeModal,
             });
-            return (0, _.jsxs)(_._, {
-              title: (0, _._)("#Chat_MemberGroup_Online"),
-              className: _().GroupMemberListDialog,
-              ..._,
-              children: [
-                _,
-                (0, _.jsx)(_, {
-                  closeModal: _.closeModal,
-                }),
-              ],
+            return (0, _.jsx)(_._, {
+              onEscKeypress: _.closeModal,
+              children: (0, _.jsxs)(_._, {
+                role: "dialog",
+                "aria-label": (0, _._)("#Chat_MemberGroup_Online"),
+                className: (0, _._)(
+                  "GenericDialogBase",
+                  "GenericConfirmDialog",
+                  _().GroupMemberListDialog,
+                ),
+                bCenterVertically: !1,
+                children: [
+                  (0, _.jsx)(_._, {
+                    children: (0, _._)("#Chat_MemberGroup_Online"),
+                  }),
+                  _,
+                  (0, _.jsx)(_, {
+                    closeModal: _.closeModal,
+                  }),
+                ],
+              }),
             });
           },
           _ = (_) => {
@@ -60327,38 +61022,46 @@
               _.SelectChat(_), _.closeModal();
             };
             let _ = {
-              onOKButton: _,
-            };
-            return (
-              _ &&
-                ((_.onOptionsButton = (_) => {
-                  (0, _._)((0, _._)(_), _, !1), _.closeModal();
-                }),
-                (_.onOptionsActionDescription = (0, _._)("#Chat_AddTextChat"))),
-              (0, _.jsx)(_._, {
-                title: (0, _._)("#GroupSettings_Channels_TextChannels"),
-                className: (0, _._)(
-                  _().ManageTextChannelsModal,
-                  "friendsui-container",
-                ),
-                ..._,
-                onOK: _,
-                children: (0, _.jsxs)(_._, {
-                  children: [
-                    (0, _.jsxs)(_._, {
-                      focusable: !1,
-                      ..._,
-                      children: [_, _],
-                    }),
-                    (0, _.jsx)(_, {
-                      closeModal: _.closeModal,
-                    }),
-                  ],
-                }),
-              })
-            );
+                onOKButton: _,
+              },
+              _ = null;
+            if (_) {
+              const _ = (_) => {
+                (0, _._)((0, _._)(_), _, !1), _.closeModal();
+              };
+              (_.onOptionsButton = _),
+                (_.onOptionsActionDescription = (0, _._)("#Chat_AddTextChat")),
+                (_ = (0, _.jsx)(_._, {
+                  className: _().AddChannelFooterBtn,
+                  svgicon: () => (0, _.jsx)(_.nGC, {}),
+                  onClick: _,
+                  children: (0, _._)("#Chat_AddTextChat"),
+                }));
+            }
+            return (0, _.jsx)(_._, {
+              title: (0, _._)("#GroupSettings_Channels_TextChannels"),
+              className: (0, _._)(
+                _().ManageTextChannelsModal,
+                "friendsui-container",
+              ),
+              ..._,
+              onOK: _,
+              children: (0, _.jsxs)(_._, {
+                children: [
+                  (0, _.jsxs)(_._, {
+                    focusable: !1,
+                    ..._,
+                    children: [_, _],
+                  }),
+                  (0, _.jsx)(_, {
+                    closeModal: _.closeModal,
+                    children: _,
+                  }),
+                ],
+              }),
+            });
           },
-          _ = (_) => {
+          _ = (0, _._)((_) => {
             let { groupView: _, ..._ } = _,
               _ = _.GetGroup(),
               _ = _.GetGroup().voiceRoomList,
@@ -60370,17 +61073,18 @@
               _ = (0, _._)(() =>
                 _._.ChatStore.VoiceChat.GetActiveVoiceChatID(),
               ),
-              _ = () => {
+              _ = (_) => {
                 _ == _.GetRoomID() ||
                   (_.ClosePopoverChat(), _.StartVoiceChat()),
                   _ || _.closeModal();
-              };
+              },
+              _ = () => _(_);
             let _ = _.map((_) => {
                 const _ = _ == _.GetRoomID(),
                   _ = (_) => {
                     _.closeModal(),
                       (0, _._)(
-                        _._,
+                        (0, _._)(_),
                         _.currentTarget.ownerDocument.defaultView,
                         _,
                         _,
@@ -60398,7 +61102,7 @@
                         {
                           context: _._,
                           chatRoom: _,
-                          fnOKButton: _ ? void 0 : _,
+                          fnOKButton: _ ? void 0 : () => _(_),
                           fnSecondaryButton: _
                             ? () => _._.ChatStore.VoiceChat.OnUserEndVoiceChat()
                             : void 0,
@@ -60434,7 +61138,7 @@
                       {
                         context: _._,
                         chatRoom: _,
-                        fnOKButton: _,
+                        fnOKButton: () => _(_),
                         fnOnFocus: () => _(_),
                         strOKActionDescription: (0, _._)("#VoiceChat_Join"),
                       },
@@ -60451,12 +61155,13 @@
                       _.unique_id,
                     ),
               ),
+              _ = null,
               _ = null;
             if (!_._.VoiceStore.IsVoiceActiveForGroup(_.GetGroupID())) {
               const _ = () => {
                 _.CreateAndJoinTempVoiceRoom(), _ || _.closeModal();
               };
-              _ = (0, _.jsxs)(_.Fragment, {
+              (_ = (0, _.jsxs)(_.Fragment, {
                 children: [
                   _.length == 0 &&
                     (0, _.jsx)(_._, {
@@ -60464,16 +61169,24 @@
                         "#GroupSettings_Channels_NoVoiceChannels",
                       ),
                     }),
-                  (0, _.jsxs)(_._, {
-                    className: _().AddVoiceChannelBtn,
-                    onActivate: _,
-                    children: [
-                      (0, _.jsx)(_.nGC, {}),
-                      (0, _._)("#Chat_AddVoiceChat"),
-                    ],
-                  }),
+                  !_ &&
+                    (0, _.jsxs)(_._, {
+                      className: _().AddVoiceChannelBtn,
+                      onActivate: _,
+                      children: [
+                        (0, _.jsx)(_.nGC, {}),
+                        (0, _._)("#Chat_AddVoiceChat"),
+                      ],
+                    }),
                 ],
-              });
+              })),
+                _ &&
+                  (_ = (0, _.jsx)(_._, {
+                    className: _().AddChannelFooterBtn,
+                    svgicon: () => (0, _.jsx)(_.nGC, {}),
+                    onClick: _,
+                    children: (0, _._)("#Chat_AddVoiceChat"),
+                  }));
             }
             return (0, _.jsx)(_._, {
               title: (0, _._)("#GroupSettings_Channels_VoiceChannels"),
@@ -60519,15 +61232,15 @@
                   }),
                   (0, _.jsx)(_, {
                     closeModal: _.closeModal,
+                    children: _,
                   }),
                 ],
               }),
             });
-          },
+          }),
           _ = (0, _._)((_) => {
             let { groupView: _ } = _;
-            const _ = (0, _._)(),
-              _ = (_) => {
+            const _ = (_) => {
                 (0, _._)(
                   (0, _.jsx)(_, {
                     groupView: _,
@@ -60543,12 +61256,12 @@
                   (0, _._)(_),
                 );
               },
-              _ = () => {
+              _ = (_) => {
                 (0, _._)(
                   (0, _.jsx)(_, {
                     groupView: _,
                   }),
-                  _.ownerWindow,
+                  (0, _._)(_),
                 );
               },
               _ = (_) => {
@@ -60562,11 +61275,11 @@
               _ = (_) => {
                 (0, _._)((0, _._)(_), _.groupView);
               };
-            let _ = 0,
-              _ = !1;
+            let _ = !1,
+              _ = 0;
             for (let _ of _.GetGroup().voiceRoomList)
-              _.voice_active_member_list.member_count != 0 && _++,
-                _.BVoiceActive() && (_ = !0);
+              _.BVoiceActive() &&
+                ((_ = !0), (_ = _.voice_active_member_list.member_count));
             let _ = !1;
             for (let _ of _.GetGroup().textRoomList)
               if (_.has_any_unread_messages) {
@@ -60575,7 +61288,7 @@
               }
             return (0, _.jsxs)(_._, {
               className: _().ChatRoomGroupControlsSteamDeck,
-              "flow-children": "column",
+              "flow-children": "row",
               children: [
                 (0, _.jsx)(_._, {
                   focusable: !0,
@@ -60585,6 +61298,7 @@
                 }),
                 (0, _.jsxs)(_._, {
                   focusable: !0,
+                  className: _().TextChannels,
                   onActivate: _,
                   onOKActionDescription: (0, _._)(
                     "#GroupSettings_Channels_TextChannels",
@@ -60604,27 +61318,23 @@
                 }),
                 (0, _.jsxs)(_._, {
                   focusable: !0,
-                  className: _ && _().currentUserInVoiceChannel,
+                  className: (0, _._)(
+                    _ && _().currentUserInVoiceChannel,
+                    _().VoiceChannels,
+                  ),
                   onActivate: _,
                   onOKActionDescription: (0, _._)(
                     "#GroupSettings_Channels_VoiceChannels",
                   ),
                   children: [
-                    (0, _.jsx)(_.mrd, {}),
-                    (0, _.jsxs)("div", {
-                      className: _().VoiceChannelCount,
-                      children: [
-                        (0, _.jsx)("span", {
-                          className:
-                            _ > 0
-                              ? _().HasActiveVoiceRoom
-                              : _().NoActiveVoiceRoom,
-                          children: _,
-                        }),
-                        " / ",
-                        _.GetGroup().voiceRoomList.length,
-                      ],
+                    (0, _.jsx)(_.EQ9, {
+                      className: "SVGIcon_Button SVGIcon_VoiceChannelMic",
                     }),
+                    _ &&
+                      (0, _.jsx)("div", {
+                        className: _().VoiceChannelCount,
+                        children: _,
+                      }),
                   ],
                 }),
                 (0, _.jsx)(_._, {
@@ -60668,13 +61378,19 @@
           },
           _ = (_) =>
             (0, _.jsx)(_._, {
-              children: (0, _.jsx)(_._, {
-                className: "_DialogColLayout",
-                "flow-children": "row",
-                children: (0, _.jsx)(_._, {
-                  onClick: _.closeModal,
-                  children: (0, _._)("#Button_Close"),
-                }),
+              children: (0, _.jsxs)(_._, {
+                className: (0, _._)(
+                  "_DialogColLayout",
+                  _.children && _().StackedDialogButtons,
+                ),
+                "flow-children": _.children ? "column" : "row",
+                children: [
+                  _.children,
+                  (0, _.jsx)(_._, {
+                    onClick: _.closeModal,
+                    children: (0, _._)("#Button_Close"),
+                  }),
+                ],
               }),
             });
       },
@@ -62620,6 +63336,7 @@
           _: () => _,
           _: () => _,
           _: () => _,
+          _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -63424,14 +64141,17 @@
             return (0, _.jsx)(_._, {
               className: _,
               ref: (0, _._)(this.BindChatTab, this.props.containerRef),
-              focusable: this.props.selectTab != null,
+              focusable:
+                this.props.selectTab != null && !this.props.bNotFocusable,
               draggable: !0,
               onSecondaryButton: this.OnCloseClick,
               onSecondaryActionDescription: (0, _._)(
                 "#Chat_CloseTabAction_SteamDeck",
               ),
               onOKButton: this.OnOKButton,
-              onMenuButton: this.OnContextMenu,
+              onMenuButton: this.context?.IN_GAMEPADUI
+                ? void 0
+                : this.OnContextMenu,
               onMouseDown: this.OnMouseDown,
               onMouseUp: this.OnMouseUp,
               onMouseLeave: this.OnMouseLeave,
@@ -63440,7 +64160,9 @@
               onContextMenu: this.OnContextMenu,
               onOKActionDescription: null,
               navEntryPreferPosition: _._.PREFERRED_CHILD,
-              onMenuActionDescription: (0, _._)("#Chat_Tab_ContextMenu"),
+              onMenuActionDescription: this.context?.IN_GAMEPADUI
+                ? void 0
+                : (0, _._)("#Chat_Tab_ContextMenu"),
               children: (0, _.jsx)(_, {
                 tab: this.props.tab,
                 active: this.props.active,
@@ -63467,7 +64189,10 @@
                       }),
                     }),
                     (0, _.jsx)(_._, {
-                      children: this.context?.IN_GAMEPADUI && _(_),
+                      children:
+                        this.context?.IN_GAMEPADUI &&
+                        !this.props.bHideVoiceStatus &&
+                        _(_),
                     }),
                     (0, _.jsx)(_, {
                       onClick: this.OnCloseClick,
@@ -63518,7 +64243,7 @@
               (_ =
                 !_._.VoiceStore.BIsAccountFullyConnectedToActiveVoiceChat(_))),
             _ && !_
-              ? (_ = (0, _._)("#Voice_WaitingForFriendToJoin", _.display_name))
+              ? (_ = (0, _._)("#Voice_WaitingForResponse"))
               : _ && !_
                 ? _
                   ? (_ = (0, _._)(
@@ -64437,6 +65162,14 @@
                         bans: this.m_bans,
                       }),
                   },
+                  {
+                    title: (0, _._)("#GroupSettings_Leave_Section"),
+                    render: () =>
+                      (0, _.jsx)(_, {
+                        group: _,
+                        closeModal: this.props.closeModal,
+                      }),
+                  },
                 ),
                 _
               );
@@ -64543,35 +65276,99 @@
             const { groupView: _ } = this.props,
               _ = _.GetGroup(),
               _ = `${_.unique_id}_${_.IsNamedGroupChat()}`;
-            return (0, _.jsx)(_._, {
-              onEscKeypress: this.DismissDialog,
-              children: (0, _.jsx)(
-                _,
-                {
-                  title: (0, _._)("#GroupSettings"),
-                  pages: _.map(({ title: _ }) => _),
-                  renderNavFooter: () =>
-                    (0, _.jsx)(_, {
-                      onActivate: this.OnLeave,
+            return this.context?.IN_GAMEPADUI && !_.IsNamedGroupChat()
+              ? (0, _.jsx)(_._, {
+                  children: (0, _.jsx)(
+                    _._,
+                    {
+                      onEscKeypress: this.DismissDialog,
+                      children: (0, _.jsxs)(_._, {
+                        role: "dialog",
+                        "aria-label": (0, _._)("#GroupSettings_Save_Section"),
+                        className: (0, _._)(
+                          "GenericDialogBase",
+                          "GenericConfirmDialog",
+                          _().GamepadSaveGroupDialog,
+                        ),
+                        bCenterVertically: !1,
+                        children: [
+                          (0, _.jsx)(_._, {
+                            children: (0, _._)("#GroupSettings_Save_Section"),
+                          }),
+                          (0, _.jsx)(_, {
+                            group: _,
+                          }),
+                          (0, _.jsx)("div", {
+                            className: _().GamepadLeaveRow,
+                            children: (0, _.jsx)(_._, {
+                              className: _().GamepadLeaveButton,
+                              svgicon: () => (0, _.jsx)(_.Gq2, {}),
+                              onClick: this.OnLeave,
+                              children: (0, _._)(
+                                "#GroupSettings_Leave_Section",
+                              ),
+                            }),
+                          }),
+                          (0, _.jsx)(_._, {
+                            children: (0, _.jsx)(_._, {
+                              onClick: this.props.closeModal,
+                              children: (0, _._)("#Button_Cancel"),
+                            }),
+                          }),
+                        ],
+                      }),
+                    },
+                    _,
+                  ),
+                })
+              : this.context?.IN_GAMEPADUI
+                ? (0, _.jsx)(_._, {
+                    onEscKeypress: this.DismissDialog,
+                    children: (0, _.jsx)(_._, {
+                      children: (0, _.jsx)(
+                        _._,
+                        {
+                          className: _().GamepadGroupSettings,
+                          title: (0, _._)("#GroupSettings"),
+                          pages: _.map((_) => ({
+                            title: _.title,
+                            identifier: _.title,
+                            content: _.render(),
+                          })),
+                        },
+                        _,
+                      ),
                     }),
-                  children: (_) => {
-                    const _ = _.find((_) => _.title === _),
-                      _ = _ ? _.render() : null;
-                    return (0, _.jsx)(
+                  })
+                : (0, _.jsx)(_._, {
+                    onEscKeypress: this.DismissDialog,
+                    children: (0, _.jsx)(
                       _,
                       {
-                        style: {
-                          flexDirection: "column",
+                        title: (0, _._)("#GroupSettings"),
+                        pages: _.map(({ title: _ }) => _),
+                        renderNavFooter: () =>
+                          (0, _.jsx)(_, {
+                            onActivate: this.OnLeave,
+                          }),
+                        children: (_) => {
+                          const _ = _.find((_) => _.title === _),
+                            _ = _ ? _.render() : null;
+                          return (0, _.jsx)(
+                            _,
+                            {
+                              style: {
+                                flexDirection: "column",
+                              },
+                              children: _,
+                            },
+                            _,
+                          );
                         },
-                        children: _,
                       },
                       _,
-                    );
-                  },
-                },
-                _,
-              ),
-            });
+                    ),
+                  });
           }
         };
         _(_, "contextType", _._),
@@ -64967,7 +65764,8 @@
               (0, _._)("#GroupSettings_Leave_Button"),
             )
               .then(() => {
-                this.props.group.LeaveChatRoomGroup(_);
+                this.props.group.LeaveChatRoomGroup(_),
+                  this.props.closeModal?.();
               })
               .catch(() => {});
           }
@@ -71467,6 +72265,7 @@
           _: () => _,
           _: () => _,
           _: () => _,
+          _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -72924,24 +73723,25 @@
                   (0, _.jsx)(_, {
                     friend: this.props.friend,
                   }),
-                ),
+                );
+            let _ =
               _.tab &&
-                _.push(
-                  (0, _.jsx)(
-                    _._,
-                    {
-                      onSelected: () => {
-                        _._.UIStore.CloseTab(_.browserContext, _.tab);
-                      },
-                      children: (0, _._)(
-                        this.context?.IN_GAMEPADUI
-                          ? "#Chat_CloseTabAction_SteamDeck"
-                          : "#Chat_CloseTabAction",
-                      ),
-                    },
-                    "closetab",
+              (0, _.jsx)(
+                _._,
+                {
+                  onSelected: () => {
+                    _._.UIStore.CloseTab(_.browserContext, _.tab);
+                  },
+                  children: (0, _._)(
+                    this.context?.IN_GAMEPADUI
+                      ? "#Chat_CloseTabAction_SteamDeck"
+                      : "#Chat_CloseTabAction",
                   ),
-                ),
+                },
+                "closetab",
+              );
+            if (
+              (_ && !this.context?.IN_GAMEPADUI && _.push(_),
               !_ &&
                 !_.tab &&
                 !_ &&
@@ -72960,7 +73760,24 @@
                     },
                     "chat",
                   ),
+                ),
+              this.context?.IN_GAMEPADUI && !_)
+            ) {
+              const _ = _._.ChatStore.GetActiveVoiceChat();
+              _ instanceof _._ &&
+                _.voice_active_member_list.member_list.some(
+                  (_) => _.accountid == _.accountid,
+                ) &&
+                _.push(
+                  (0, _.jsx)(
+                    _,
+                    {
+                      friend: this.props.friend,
+                    },
+                    "volume",
+                  ),
                 );
+            }
             let _ = _._.ChatStore.BIsEligibleForVoiceChat(_, _),
               _ = _._.ChatStore.GetActiveVoiceChat();
             _ && _ instanceof _._ && _.accountid_partner == _.accountid
@@ -73010,17 +73827,18 @@
                         "voicechat",
                       ),
                     )),
-              _.length > 0 && _.push((0, _.jsx)(_._, {}, "separator")),
-              _.push(
-                (0, _.jsx)(
-                  _._,
-                  {
-                    onSelected: this.ShowFriendProfile,
-                    children: (0, _._)("#Friend_Menu_ViewProfile"),
-                  },
-                  "viewprofile",
-                ),
+              _.length > 0 && _.push((0, _.jsx)(_._, {}, "separator"));
+            const _ = _.length;
+            _.push(
+              (0, _.jsx)(
+                _._,
+                {
+                  onSelected: this.ShowFriendProfile,
+                  children: (0, _._)("#Friend_Menu_ViewProfile"),
+                },
+                "viewprofile",
               ),
+            ),
               _._.IN_CLIENT &&
                 _._.SettingsStore.BClientHasFeatureOrOnWeb("FriendsFilter") &&
                 !_ &&
@@ -73448,40 +74266,58 @@
               )),
                 (_ = []);
             }
-            return (0, _.jsxs)(_._, {
-              className: "friendsContextMenu",
-              label: _.display_name,
-              children: [
-                _,
-                _.length == 1 && _,
-                _.length > 1 &&
-                  (0, _.jsx)(_._, {
-                    label: (0, _._)("#Friend_Menu_Manage"),
-                    children: _,
-                  }),
-                !!_.persona.m_broadcastAccountId &&
-                  !_ &&
-                  (0, _.jsx)(_, {
-                    friend: _,
-                    ownerWindow: _.ownerWindow,
-                    browserContext: _.browserContext,
-                  }),
-                _,
-                !!_ && _ && (0, _.jsx)(_._, {}),
-                _ &&
-                  (0, _.jsx)(_, {
-                    unAppID: _.persona.m_unGamePlayedAppID,
-                    strGameName: _.current_game_name,
-                    ulGameID: _.persona.m_gameid,
-                    friend: _,
-                    partyBeacon: _,
-                    ownerWindow: _.ownerWindow,
-                    browserContext: _.browserContext,
-                    extraItems: _,
-                    localAppID: _,
-                  }),
-              ],
-            });
+            let _ =
+              (!!_ || _) &&
+              (0, _.jsxs)(
+                _.Fragment,
+                {
+                  children: [
+                    _,
+                    !!_ && _ && (0, _.jsx)(_._, {}),
+                    _ &&
+                      (0, _.jsx)(_, {
+                        unAppID: _.persona.m_unGamePlayedAppID,
+                        strGameName: _.current_game_name,
+                        ulGameID: _.persona.m_gameid,
+                        friend: _,
+                        partyBeacon: _,
+                        ownerWindow: _.ownerWindow,
+                        browserContext: _.browserContext,
+                        extraItems: _,
+                        localAppID: _,
+                      }),
+                  ],
+                },
+                "gamesections",
+              );
+            return (
+              _ &&
+                this.context?.IN_GAMEPADUI &&
+                (_.splice(_, 0, _, (0, _.jsx)(_._, {}, "gamesectionseparator")),
+                (_ = null)),
+              (0, _.jsxs)(_._, {
+                className: "friendsContextMenu",
+                label: _.display_name,
+                children: [
+                  _,
+                  _.length == 1 && _,
+                  _.length > 1 &&
+                    (0, _.jsx)(_._, {
+                      label: (0, _._)("#Friend_Menu_Manage"),
+                      children: _,
+                    }),
+                  !!_.persona.m_broadcastAccountId &&
+                    !_ &&
+                    (0, _.jsx)(_, {
+                      friend: _,
+                      ownerWindow: _.ownerWindow,
+                      browserContext: _.browserContext,
+                    }),
+                  _,
+                  this.context?.IN_GAMEPADUI && _,
+                ],
+              })
+            );
           }
         };
         _(_, "contextType", _._),
@@ -73583,6 +74419,38 @@
           _([_._], _.prototype, "OnMutingClick", 1),
           _([_._], _.prototype, "OnInlineVolumeClick", 1),
           (_ = _([_._], _));
+        const _ = (0, _._)((_) => {
+          const { friend: _ } = _,
+            _ = _._.VoiceStore,
+            [_, _] = _.useState(() =>
+              _.ConvertGainValueToSliderValue(
+                _.GetPerUserGainLevel(_.accountid),
+                _._.k_MaxPerUserGainMultiplier,
+              ),
+            ),
+            _ = (_) => {
+              _.SetPerUserGainLevel(
+                _.accountid,
+                _.ConvertSliderToGainValue(_, _._.k_MaxPerUserGainMultiplier),
+              ),
+                _(_);
+            };
+          return (0, _.jsx)(_._, {
+            className: "contextMenuVolumeSteamDeck",
+            layout: "below",
+            padding: "none",
+            label: (0, _._)("#Friend_Menu_VoiceVolume"),
+            min: 0,
+            max: 100,
+            step: 5,
+            value: _,
+            onChange: _,
+            icon: (0, _.jsx)(_.fSs, {}),
+            showValue: !0,
+            renderValue: (_) => `${_ * 2}%`,
+            bottomSeparator: "none",
+          });
+        });
         let _ = class extends _.Component {
           OnChange(_) {
             this.props.group.SetMemberRoleState(
@@ -73895,7 +74763,10 @@
                   ],
                 });
               }
-            const _ = this.props.localAppID == this.props.unAppID;
+            const _ = this.context?.IN_GAMEPADUI
+                ? (0, _.jsx)(_.Qtm, {})
+                : (0, _.jsx)(_.jGG, {}),
+              _ = this.props.localAppID == this.props.unAppID;
             this.state.bIsSubscribedToApp === void 0
               ? _.push(
                   (0, _.jsxs)(
@@ -73903,10 +74774,7 @@
                     {
                       className: "contextMenuGameOptions contextMenuPlayButton",
                       onSelected: this.ShowInSteam,
-                      children: [
-                        (0, _.jsx)(_.jGG, {}),
-                        (0, _._)("#Friend_Menu_ShowInSteam"),
-                      ],
+                      children: [_, (0, _._)("#Friend_Menu_ShowInSteam")],
                     },
                     "showinsteam",
                   ),
@@ -73921,7 +74789,7 @@
                             "contextMenuGameOptions contextMenuPlayButton contextMenuPartyBeacon",
                           onSelected: this.JoinPartyBeacon,
                           children: [
-                            (0, _.jsx)(_.jGG, {}),
+                            _,
                             (0, _._)("#Friend_Menu_JoinFriendPartyBeacon"),
                           ],
                         },
@@ -73938,7 +74806,7 @@
                             "contextMenuGameOptions contextMenuPlayButton",
                           onSelected: this.JoinGame,
                           children: [
-                            (0, _.jsx)(_.jGG, {}),
+                            _,
                             (0, _._)("#Friend_Menu_JoinFriendGame"),
                           ],
                         },
@@ -73954,7 +74822,7 @@
                           "contextMenuGameOptions contextMenuPlayButton",
                         onSelected: this.LaunchGame,
                         children: [
-                          (0, _.jsx)(_.jGG, {}),
+                          _,
                           (0, _._)("#Friend_Menu_LaunchFriendGame"),
                         ],
                       },
@@ -76189,6 +77057,8 @@
               style: {
                 width: "100%",
                 height: "100%",
+                display: "flex",
+                flexDirection: "column",
               },
               children: [
                 (0, _.jsxs)("div", {
@@ -80079,174 +80949,247 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         const _ = (_) => {
-            const _ = _.useRef(void 0),
-              _ = () => {
-                _.onResult(_.current.value), _.closeModal();
-              };
-            return (0, _.jsx)(_._, {
-              onEscKeypress: _.closeModal,
-              children: (0, _.jsxs)(_._, {
-                classNameContent: "CreateChatChannelDialog",
-                onSubmit: _,
+          const _ = _.useRef(void 0),
+            _ = () => {
+              _.onResult(_.current.value), _.closeModal();
+            };
+          return (0, _.jsx)(_._, {
+            onEscKeypress: _.closeModal,
+            children: (0, _.jsxs)(_._, {
+              classNameContent: "CreateChatChannelDialog",
+              onSubmit: _,
+              children: [
+                (0, _.jsx)(_._, {
+                  children: (0, _._)(_.title),
+                }),
+                (0, _.jsx)(_._, {
+                  children: (0, _.jsx)(_._, {
+                    ref: _,
+                    autoFocus: !0,
+                  }),
+                }),
+                (0, _.jsx)(_._, {
+                  children: (0, _.jsx)(_._, {
+                    onCancel: _.closeModal,
+                  }),
+                }),
+              ],
+            }),
+          });
+        };
+        let _;
+        const _ = (0, _._)((_) => {
+          const _ = (_) => {
+              _._.UIStore.ShowAndOrActivateChatRoomGroup(
+                (0, _._)(_),
+                _.chatRoom.GetGroup(),
+                !0,
+              ).SelectChat(_.chatRoom.GetRoomID()),
+                _.fnCloseModal
+                  ? _.fnCloseModal()
+                  : SteamClient.Messaging.PostMessage(
+                      "FriendsUI",
+                      "OpenChatRoomGroup",
+                      JSON.stringify({
+                        groupid: _.chatRoom.GetGroup().GetGroupID(),
+                      }),
+                    );
+            },
+            _ = (_) => {
+              (0, _._)(
+                (0, _.jsx)(_, {
+                  title: (0, _._)("#Chat_Actions_ChangeRoomName"),
+                  description: void 0,
+                  onResult: (_) =>
+                    _.chatRoom.GetGroup().RenameRoom(_.chatRoom.GetRoomID(), _),
+                }),
+                (0, _._)(_),
+              );
+            },
+            _ = (_) => {
+              (0, _._)(
+                (0, _._)(_),
+                (0, _._)("#Chat_Actions_RemoveRoom"),
+                (0, _._)("#Chat_Actions_RemoveRoom_Confirm"),
+                (0, _._)("#Chat_Actions_RemoveRoom_Action"),
+              ).then(() => {
+                _.chatRoom.GetGroup().DeleteChatRoom(_.chatRoom.GetRoomID());
+              });
+            },
+            _ = (0, _._)()?.ON_FRAME
+              ? () => {
+                  _.chatRoom.GetRoomID() ==
+                    _._.ChatStore.VoiceChat.GetActiveVoiceChatID() ||
+                    (_.chatRoom.StartVoiceChat(),
+                    _.fnCloseModal && _.fnCloseModal());
+                }
+              : void 0,
+            _ = _.fnOKButton != null,
+            _ = _.chatRoom.GetGroup().BCanAdminChannel(),
+            _ = _.chatRoom.IsTempVoiceRoom();
+          let _ = _.chatRoom.BVoiceActive(),
+            _ = _.chatRoom.voice_active_member_list.member_list.length > 0;
+          const _ = _ && !!_.fnCloseModal && !_,
+            _ = !_ && !_,
+            _ = (_) => {
+              const _ = (0, _._)(_) ?? window;
+              _._.UIStore.SetQAMFriendsChatExpanded(!1),
+                _._.UIStore.SetIgnoreQAMFriendsChatExpand(!0),
+                window.clearTimeout(_),
+                (_ = window.setTimeout(
+                  () => _._.UIStore.SetIgnoreQAMFriendsChatExpand(!1),
+                  750,
+                )),
+                SteamClient.Messaging.PostMessage(
+                  "FriendsUI",
+                  "OpenQuickAccessVoiceChat",
+                  "{}",
+                ),
+                _.requestAnimationFrame(() =>
+                  _.requestAnimationFrame(() => {
+                    _.fnCloseModal(),
+                      SteamClient.Messaging.PostMessage(
+                        "FriendsUI",
+                        "ShowQuickAccessVoiceChat",
+                        "{}",
+                      );
+                  }),
+                );
+            };
+          return (0, _.jsxs)(_._, {
+            focusable: !0,
+            className: (0, _._)(
+              _().GroupRoomContainer,
+              _ && _().UserInRoom,
+              _ && _().ActiveVoiceRoom,
+            ),
+            onOKButton: _.fnOKButton,
+            onOKActionDescription:
+              _.strOKActionDescription ?? (0, _._)("#VoiceChat_ManageRoom"),
+            onSecondaryButton: _.fnSecondaryButton,
+            onSecondaryActionDescription: _.strSecondaryActionDescription,
+            onOptionsButton: _.fnOptionsButton,
+            onOptionsActionDescription: _.strOptionsActionDescription,
+            onGamepadFocus: _.fnOnFocus,
+            onClick: _ ? () => _.fnOKButton(void 0) : void 0,
+            navEntryPreferPosition: _ ? _._.PREFERRED_CHILD : void 0,
+            children: [
+              (0, _.jsxs)(_._, {
+                className: _().RoomHeaderRow,
+                "flow-children": "row",
+                navEntryPreferPosition: _._.MAINTAIN_X,
                 children: [
-                  (0, _.jsx)(_._, {
-                    children: (0, _._)(_.title),
+                  (0, _.jsxs)(_._, {
+                    focusable: _,
+                    className: _().RoomHeader,
+                    onClick: _
+                      ? (_) => {
+                          _.stopPropagation(), _();
+                        }
+                      : _
+                        ? _
+                        : void 0,
+                    onOKButton: _ ? _ : void 0,
+                    onOKActionDescription: (0, _._)("#VoiceChat_ViewQuickChat"),
+                    onSecondaryButton: _ && _ ? _ : void 0,
+                    onSecondaryActionDescription: _
+                      ? (0, _._)("#Chat_Actions_RemoveRoom")
+                      : void 0,
+                    onOptionsButton: _ && _ ? _ : void 0,
+                    onOptionsActionDescription: _
+                      ? _
+                        ? (0, _._)("#Chat_Actions_SaveChannel")
+                        : (0, _._)("#Chat_Actions_ChangeRoomName")
+                      : void 0,
+                    children: [
+                      (0, _.jsx)(_.mrd, {}),
+                      (0, _.jsx)("div", {
+                        className: _().RoomTitle,
+                        children: _.chatRoom.name,
+                      }),
+                    ],
                   }),
-                  (0, _.jsx)(_._, {
-                    children: (0, _.jsx)(_._, {
-                      ref: _,
-                      autoFocus: !0,
+                  _ &&
+                    (0, _.jsxs)(_.Fragment, {
+                      children: [
+                        (0, _.jsx)(_._, {
+                          focusable: !0,
+                          preferredFocus: !0,
+                          className:
+                            "chatMemberGameButton chatMemberMenuButton",
+                          onActivate: _,
+                          onOKActionDescription: (0, _._)(
+                            "#VoiceChat_ManageRoom",
+                          ),
+                          children: (0, _.jsx)(_.Settings, {}),
+                        }),
+                        (0, _.jsx)(_._, {
+                          focusable: !0,
+                          className:
+                            "chatMemberGameButton chatMemberMenuButton",
+                          onActivate: () =>
+                            _._.ChatStore.VoiceChat.OnUserEndVoiceChat(),
+                          onOKActionDescription: (0, _._)("#VoiceChat_Leave"),
+                          children: (0, _.jsx)(_.ETd, {}),
+                        }),
+                      ],
                     }),
-                  }),
-                  (0, _.jsx)(_._, {
-                    children: (0, _.jsx)(_._, {
-                      onCancel: _.closeModal,
-                    }),
-                  }),
                 ],
               }),
-            });
-          },
-          _ = (0, _._)((_) => {
-            const _ = () => {
-                _._.UIStore.ShowAndOrActivateChatRoomGroup(
-                  _.context,
-                  _.chatRoom.GetGroup(),
-                  !0,
-                ).SelectChat(_.chatRoom.GetRoomID()),
-                  _.fnCloseModal && _.fnCloseModal();
-              },
-              _ = (_) => {
-                (0, _._)(
-                  (0, _.jsx)(_, {
-                    title: (0, _._)("#Chat_Actions_ChangeRoomName"),
-                    description: void 0,
-                    onResult: (_) =>
-                      _.chatRoom
-                        .GetGroup()
-                        .RenameRoom(_.chatRoom.GetRoomID(), _),
-                  }),
-                  (0, _._)(_),
-                );
-              },
-              _ = (_) => {
-                (0, _._)(
-                  (0, _._)(_),
-                  (0, _._)("#Chat_Actions_RemoveRoom"),
-                  (0, _._)("#Chat_Actions_RemoveRoom_Confirm"),
-                  (0, _._)("#Chat_Actions_RemoveRoom_Action"),
-                ).then(() => {
-                  _.chatRoom.GetGroup().DeleteChatRoom(_.chatRoom.GetRoomID());
-                });
-              },
-              _ = (0, _._)()?.ON_FRAME
-                ? () => {
-                    _.chatRoom.GetRoomID() ==
-                      _._.ChatStore.VoiceChat.GetActiveVoiceChatID() ||
-                      (_.chatRoom.StartVoiceChat(),
-                      _.fnCloseModal && _.fnCloseModal());
-                  }
-                : void 0,
-              _ = _.fnOKButton != null,
-              _ = _.chatRoom.GetGroup().BCanAdminChannel(),
-              _ = _.chatRoom.IsTempVoiceRoom();
-            let _ = _.chatRoom.BVoiceActive(),
-              _ = _.chatRoom.voice_active_member_list.member_list.length > 0;
-            return (0, _.jsxs)(_._, {
-              focusable: !0,
-              className: (0, _._)(
-                _().GroupRoomContainer,
-                _ && _().UserInRoom,
-                _ && _().ActiveVoiceRoom,
-              ),
-              onOKButton: _.fnOKButton,
-              onOKActionDescription:
-                _.strOKActionDescription ?? (0, _._)("#VoiceChat_ManageRoom"),
-              onSecondaryButton: _.fnSecondaryButton,
-              onSecondaryActionDescription: _.strSecondaryActionDescription,
-              onOptionsButton: _.fnOptionsButton,
-              onOptionsActionDescription: _.strOptionsActionDescription,
-              onGamepadFocus: _.fnOnFocus,
-              children: [
-                (0, _.jsxs)(_._, {
-                  focusable: !_,
-                  className: _().RoomHeader,
-                  onClick: _,
-                  onOKButton: _ ? void 0 : _,
-                  onOKActionDescription: (0, _._)("#VoiceChat_ViewQuickChat"),
-                  onSecondaryButton: _ ? _ : void 0,
-                  onSecondaryActionDescription: _
-                    ? (0, _._)("#Chat_Actions_RemoveRoom")
-                    : void 0,
-                  onOptionsButton: _ ? _ : void 0,
-                  onOptionsActionDescription: _
-                    ? _
-                      ? (0, _._)("#Chat_Actions_SaveChannel")
-                      : (0, _._)("#Chat_Actions_ChangeRoomName")
-                    : void 0,
-                  children: [
-                    (0, _.jsx)(_.mrd, {}),
+              _.chatRoom.voice_active_member_list.member_list.map((_) => {
+                const _ =
+                    _.accountid != _._.ChatStore.VoiceChat.GetLocalAccountID(),
+                  _ =
+                    _.accountid != _._.ChatStore.VoiceChat.GetLocalAccountID(),
+                  _ = _._.ChatStore.VoiceChat.GetPerUserMuting(_.accountid),
+                  _ = _._.ChatStore.VoiceChat.GetUserMutedRemotely(_.accountid),
+                  _ = _._.ChatStore.VoiceChat.GetOutputMutedRemotely(
+                    _.accountid,
+                  );
+                let _ = [];
+                _ &&
+                  _.push(
                     (0, _.jsx)("div", {
-                      className: _().RoomTitle,
-                      children: _.chatRoom.name,
+                      className: _().MicMutedLocally,
+                      children: (0, _.jsx)(_.fSs, {
+                        muted: !0,
+                      }),
                     }),
-                  ],
-                }),
-                _.chatRoom.voice_active_member_list.member_list.map((_) => {
-                  const _ =
-                      _.accountid !=
-                      _._.ChatStore.VoiceChat.GetLocalAccountID(),
-                    _ =
-                      _.accountid !=
-                      _._.ChatStore.VoiceChat.GetLocalAccountID(),
-                    _ = _._.ChatStore.VoiceChat.GetPerUserMuting(_.accountid),
-                    _ = _._.ChatStore.VoiceChat.GetUserMutedRemotely(
-                      _.accountid,
-                    ),
-                    _ = _._.ChatStore.VoiceChat.GetOutputMutedRemotely(
-                      _.accountid,
-                    );
-                  let _ = [];
+                  ),
                   _ &&
                     _.push(
                       (0, _.jsx)("div", {
-                        className: _().MicMutedLocally,
-                        children: (0, _.jsx)(_.fSs, {
-                          muted: !0,
+                        className: _().MicMutedRemotely,
+                        children: (0, _.jsx)(_.EQ9, {
+                          off: !0,
                         }),
                       }),
                     ),
-                    _ &&
-                      _.push(
-                        (0, _.jsx)("div", {
-                          className: _().MicMutedRemotely,
-                          children: (0, _.jsx)(_.EQ9, {
-                            off: !0,
-                          }),
+                  _ &&
+                    _.push(
+                      (0, _.jsx)("div", {
+                        className: _().OutputMutedRemotely,
+                        children: (0, _.jsx)(_.LeN, {
+                          off: !0,
                         }),
-                      ),
+                      }),
+                    );
+                const _ = _
+                    ? _
+                      ? (0, _._)("#VoiceChat_Unmute")
+                      : (0, _._)("#VoiceChat_Mute")
+                    : null,
+                  _ = (_) => {
                     _ &&
-                      _.push(
-                        (0, _.jsx)("div", {
-                          className: _().OutputMutedRemotely,
-                          children: (0, _.jsx)(_.LeN, {
-                            off: !0,
-                          }),
-                        }),
-                      );
-                  const _ = _
-                      ? _
-                        ? (0, _._)("#VoiceChat_Unmute")
-                        : (0, _._)("#VoiceChat_Mute")
-                      : null,
-                    _ = () => {
-                      _ &&
-                        (_.OpenChatDialog(_.context),
-                        _.fnCloseModal && _.fnCloseModal());
-                    };
-                  return (0, _.jsx)(
+                      (_.OpenChatDialog((0, _._)(_)),
+                      _.fnCloseModal && _.fnCloseModal());
+                  },
+                  _ = (0, _.jsx)(
                     _._,
                     {
                       noActions: _,
@@ -80281,10 +81224,33 @@
                     },
                     _.accountid,
                   );
-                }),
-              ],
-            });
+                return _
+                  ? _
+                  : (0, _.jsxs)(
+                      _._,
+                      {
+                        className: _().GroupVoiceChatMember,
+                        "flow-children": "row",
+                        navEntryPreferPosition: _._.MAINTAIN_X,
+                        children: [
+                          _,
+                          (0, _.jsx)(_._, {
+                            player: _,
+                            group: _.chatRoom.GetGroup(),
+                            context: {
+                              chat: _.chatRoom,
+                              chatContext: "friendslist",
+                            },
+                            bMenuOnly: !_.fnCloseModal,
+                          }),
+                        ],
+                      },
+                      _.accountid,
+                    );
+              }),
+            ],
           });
+        });
         function _(_) {
           let { chat: _, onHold: _ } = _;
           const _ = () => {
@@ -80297,6 +81263,7 @@
             };
           return (0, _.jsxs)(_._, {
             className: _().PendingVoiceChatRequest,
+            "flow-children": "row",
             children: [
               (0, _.jsx)(_._, {
                 noActions: !0,
@@ -80313,16 +81280,20 @@
                 statusPosition: "right",
               }),
               (0, _.jsx)(_._, {
-                onClick: _,
-                children: _
+                className: (0, _._)(_().VoiceChatRequestButton, _().Accept),
+                onActivate: _,
+                onOKActionDescription: _
                   ? (0, _._)("#Voice_Resume")
                   : (0, _._)("#Voice_Accept"),
+                children: (0, _.jsx)(_.Checkmark, {}),
               }),
               (0, _.jsx)(_._, {
-                onClick: _,
-                children: _
+                className: (0, _._)(_().VoiceChatRequestButton, _().Decline),
+                onActivate: _,
+                onOKActionDescription: _
                   ? (0, _._)("#Voice_End")
                   : (0, _._)("#Voice_Decline"),
+                children: (0, _.jsx)(_.Close, {}),
               }),
             ],
           });
@@ -80627,9 +81598,9 @@
                         (0, _.jsxs)(_._, {
                           focusable: !0,
                           className: _().GroupContainer,
-                          onOKButton: () => {
+                          onOKButton: (_) => {
                             _._.UIStore.ShowAndOrActivateChatRoomGroup(
-                              _,
+                              (0, _._)(_),
                               _.GetGroup(),
                               !0,
                             );
@@ -80680,6 +81651,7 @@
           _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -82018,6 +82990,15 @@
         var _ = __webpack_require__("chunkid"),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
+          _ = (_, _, _) =>
+            _ in _
+              ? _(_, _, {
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+                  value: _,
+                })
+              : (_[_] = _),
           _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
@@ -82026,7 +83007,8 @@
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          };
+          },
+          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
         let _ = !1,
           _ = class extends _.Component {
             componentDidUpdate() {
@@ -82352,6 +83334,10 @@
                 };
                 _.eDeleteState == _._.Deleting ||
                   _.eDeleteState == _._.Deleted ||
+                  (!_ &&
+                    this.context?.IN_GAMEPADUI &&
+                    _.unAccountID != this.props.chatView.chat.self.accountid &&
+                    (0, _._)(_.strMessage)) ||
                   (_.GetSlashCommand() === "/me"
                     ? _.push(
                         (0, _.jsx)(_, {
@@ -82447,7 +83433,8 @@
             );
           }
         };
-        _([_._], _.prototype, "OnHoverDelete", 1),
+        _(_, "contextType", _._),
+          _([_._], _.prototype, "OnHoverDelete", 1),
           _([_._], _.prototype, "CopyMessage", 1),
           _([_._], _.prototype, "SelectMessage", 1),
           _([_._], _.prototype, "OnMessageBlockContextMenu", 1),
@@ -84520,7 +85507,7 @@
               let _ = _._.VoiceStore.BPartnerHasRequestedAndIsInOneOnOneChat(
                 _.accountid_partner,
               );
-              return _?.accountid_partner == _.accountid_partner && (_ = !1), _;
+              return (_ || _) && (_ = !1), _;
             }),
           );
           if (
@@ -107010,6 +107997,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
           _ = (_, _, _, _) => {
@@ -107056,26 +108044,40 @@
         class _ extends _._ {
           m_rgControllers = new Map();
           m_NavController;
+          m_registrations = new _._();
           constructor() {
             super(),
               typeof SteamClient < "u" &&
-                (SteamClient.Input?.RegisterForControllerInputMessages(
-                  this.HandleControllerInputMessages,
+                (this.m_registrations.Add(
+                  SteamClient.Input?.RegisterForControllerInputMessages(
+                    this.HandleControllerInputMessages,
+                  ),
                 ),
-                SteamClient.Input?.RegisterForControllerAnalogInputMessages(
-                  this.HandleControllerInputMessages,
+                this.m_registrations.Add(
+                  SteamClient.Input?.RegisterForControllerAnalogInputMessages(
+                    this.HandleControllerInputMessages,
+                  ),
                 ),
-                SteamClient.System?._?.RegisterForSystemKeyEvents(
-                  this.HandleSystemKeyEvents,
+                this.m_registrations.Add(
+                  SteamClient.System?._?.RegisterForSystemKeyEvents(
+                    this.HandleSystemKeyEvents,
+                  ),
                 ),
-                _._.RegisterForNotifyControllerListChanged(
-                  this.fnOnControllerListItem,
+                this.m_registrations.Add(
+                  _._.RegisterForNotifyControllerListChanged(
+                    this.fnOnControllerListItem,
+                  ),
                 ),
-                _._.RegisterForNotifyControllerDisconnected(
-                  this.fnOnControllerDisconnect,
+                this.m_registrations.Add(
+                  _._.RegisterForNotifyControllerDisconnected(
+                    this.fnOnControllerDisconnect,
+                  ),
                 ),
                 this.DoControllerListQuery()),
               this.SetSourceType(_._.GAMEPAD);
+          }
+          Destroy() {
+            this.m_registrations.Unregister();
           }
           async DoControllerListQuery() {
             const _ = await _._.fetchQuery(_._());
@@ -107153,7 +108155,13 @@
             );
           }
           OnSystemButtonPress(_, _) {
-            this.OnButtonDown(_, _), this.OnButtonUp(_, _);
+            const _ = _ === void 0;
+            _ && this.SetSourceType(_._.KEYBOARD_SIMULATOR);
+            try {
+              this.OnButtonDown(_, _), this.OnButtonUp(_, _);
+            } finally {
+              _ && this.SetSourceType(_._.GAMEPAD);
+            }
           }
           GetController(_) {
             let _ = this.m_rgControllers.get(_);
@@ -406980,9 +407988,9 @@ ${_}`;
                         _: "M-2 20C7 22 9.1 28.17 11.18 33.34l-1.89.66l-.95-2.3c-.48.17-.98.3-1.34.3C-4 32 -7 15 -7 15c1 2 8 2.25 13 3.25S13 23.5 13 25.5s-1.75 3.75-1.75 3.75C8 20 -2 20 -2 20",
                         fill: "none",
                         stroke: "#000000",
-                        "stroke-width": "6",
-                        "stroke-linecap": "round",
-                        "stroke-linejoin": "round",
+                        strokeWidth: "6",
+                        strokeLinecap: "round",
+                        strokeLinejoin: "round",
                       }),
                     ],
                   }),
@@ -407126,9 +408134,9 @@ ${_}`;
                         _: "M-2 20C7 22 9.1 28.17 11.18 33.34l-1.89.66l-.95-2.3c-.48.17-.98.3-1.34.3C-4 32 -7 15 -7 15c1 2 8 2.25 13 3.25S13 23.5 13 25.5s-1.75 3.75-1.75 3.75C8 20 -2 20 -2 20",
                         fill: "none",
                         stroke: "#000000",
-                        "stroke-width": "6",
-                        "stroke-linecap": "round",
-                        "stroke-linejoin": "round",
+                        strokeWidth: "6",
+                        strokeLinecap: "round",
+                        strokeLinejoin: "round",
                       }),
                     ],
                   }),
@@ -421016,8 +422024,8 @@ ${_}`;
                                 _: "29.8083",
                                 transform: "matrix(-1 0 0 1 368.941 110.949)",
                                 stroke: "white",
-                                "stroke-opacity": "0.3",
-                                "stroke-width": "0.5",
+                                strokeOpacity: "0.3",
+                                strokeWidth: "0.5",
                                 onClick: _,
                               }),
                               (0, _.jsxs)("g", {
@@ -421042,7 +422050,7 @@ ${_}`;
                                     _: "18",
                                     transform: "matrix(-1 0 0 1 357 123)",
                                     stroke: "white",
-                                    "stroke-width": "0.5",
+                                    strokeWidth: "0.5",
                                   }),
                                   (0, _.jsxs)("g", {
                                     _: "Stick Fuzz",
@@ -421055,7 +422063,7 @@ ${_}`;
                                         transform:
                                           "matrix(-1 0 0 1 367.182 112.818)",
                                         className: _,
-                                        "stroke-linecap": "round",
+                                        strokeLinecap: "round",
                                         onClick: _,
                                       }),
                                       (0, _.jsx)("circle", {
@@ -421065,8 +422073,8 @@ ${_}`;
                                         _: "31",
                                         transform: "matrix(-1 0 0 1 370 110)",
                                         className: _,
-                                        "stroke-width": "0.5",
-                                        "stroke-linecap": "round",
+                                        strokeWidth: "0.5",
+                                        strokeLinecap: "round",
                                         onClick: _,
                                       }),
                                     ],
@@ -421084,8 +422092,8 @@ ${_}`;
                                 _: "140.758",
                                 _: "29.8083",
                                 stroke: "white",
-                                "stroke-opacity": "0.3",
-                                "stroke-width": "0.5",
+                                strokeOpacity: "0.3",
+                                strokeWidth: "0.5",
                                 onClick: _,
                               }),
                               (0, _.jsxs)("g", {
@@ -421107,7 +422115,7 @@ ${_}`;
                                     _: "141",
                                     _: "18",
                                     stroke: "white",
-                                    "stroke-width": "0.5",
+                                    strokeWidth: "0.5",
                                   }),
                                   (0, _.jsxs)("g", {
                                     _: "Stick Fuzz_2",
@@ -421118,7 +422126,7 @@ ${_}`;
                                         _: "141",
                                         _: "28.1818",
                                         className: _,
-                                        "stroke-linecap": "round",
+                                        strokeLinecap: "round",
                                         onClick: _,
                                       }),
                                       (0, _.jsx)("circle", {
@@ -421127,8 +422135,8 @@ ${_}`;
                                         _: "141",
                                         _: "31",
                                         className: _,
-                                        "stroke-width": "0.5",
-                                        "stroke-linecap": "round",
+                                        strokeWidth: "0.5",
+                                        strokeLinecap: "round",
                                         onClick: _,
                                       }),
                                     ],
@@ -426402,6 +427410,83 @@ ${_}`;
         "use strict";
         __webpack_require__._(module_exports, {
           _: () => _,
+        });
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        function _() {
+          return _.useMemo(() => _(), []);
+        }
+        function _() {
+          return function (_) {
+            const {
+                refNavTree: _,
+                className: _,
+                active: _,
+                children: _,
+                modalKey: _,
+              } = _,
+              _ = _.useRef(void 0);
+            (0, _._)(_, _, !0);
+            const _ = (0, _._)(_, _);
+            return (0, _.jsx)(_._, {
+              className: _,
+              navTreeRef: _,
+              modal: !0,
+              enabled: _,
+              navID: `ModalDialogOverlay_${_}`,
+              children: _,
+            });
+          };
+        }
+        function _(_) {
+          const {
+              className: _,
+              onEscKeypress: _,
+              padding: _ = "standard",
+              bGamepadUIScrollWithin: _,
+              children: _,
+            } = _,
+            _ = classnames(
+              gamepadDialogStyles.ModalPosition,
+              _ == "standard" && gamepadDialogStyles.WithStandardPadding,
+              _ && gamepadDialogStyles.ScrollWithin,
+              _,
+            );
+          return jsx(Panel, {
+            className: _,
+            onCancelButton: _,
+            focusableIfEmpty: !0,
+            children: jsx(FocusRingProvider, {
+              children: jsx(ErrorBoundary, {
+                children: _,
+              }),
+            }),
+          });
+        }
+        function _(_) {
+          const _ = React.useMemo(
+            () => ({
+              ModalPosition: _,
+            }),
+            [],
+          );
+          return jsx(ModalPresentationContext.Provider, {
+            value: _,
+            children: _.children,
+          });
+        }
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(module_exports, {
+          _: () => _,
           _: () => _,
           _: () => _,
           _: () => _,
@@ -426976,6 +428061,10 @@ ${_}`;
           }
           ShowModal(_) {
             return this.ShowModalInternal(_);
+          }
+          CloseLegacyModals() {
+            for (const _ of this.m_rgModals.filter((_) => _ instanceof _._))
+              this.RemoveModal(_);
           }
           RemoveModal(_) {
             let _ = this.m_rgModals.indexOf(_);
@@ -430253,6 +431342,7 @@ ${_}`;
           QQ4: () => _,
           QcV: () => _,
           Qte: () => _,
+          Qtm: () => _,
           RO3: () => _,
           ROZ: () => _,
           Rkk: () => _,
@@ -432411,6 +433501,33 @@ ${_}`;
               className: "playTriangle",
               _: "M65.321,33.521c-11.274-6.615-20.342-1.471-20.342,11.52V210.96c0,12.989,9.068,18.135,20.342,11.521l137.244-82.348 c11.274-6.618,11.274-17.646,0-24.509L65.321,33.521z",
             }),
+          });
+        }
+        function _() {
+          return (0, _.jsxs)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_PlayInCircle",
+            width: "20px",
+            height: "20px",
+            viewBox: "0 0 20 20",
+            fill: "none",
+            children: [
+              (0, _.jsx)("circle", {
+                className: "playCircle",
+                _: "10",
+                _: "10",
+                _: "9.5",
+                fill: "none",
+                stroke: "currentColor",
+                strokeWidth: "1",
+              }),
+              (0, _.jsx)("path", {
+                className: "playTriangle",
+                transform: "matrix(0.0421875 0 0 0.0421875 4.7875 4.6)",
+                fill: "currentColor",
+                _: "M65.321,33.521c-11.274-6.615-20.342-1.471-20.342,11.52V210.96c0,12.989,9.068,18.135,20.342,11.521l137.244-82.348 c11.274-6.618,11.274-17.646,0-24.509L65.321,33.521z",
+              }),
+            ],
           });
         }
         function _() {
@@ -455842,6 +456959,153 @@ Status Code:` +
         "use strict";
         __webpack_require__._(module_exports, {
           _: () => _,
+        });
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_);
+        function _(_) {
+          const { managerOverride: _ } = _,
+            _ = useContextMenuManager(),
+            _ = _ ?? _,
+            _ = useForceUpdate();
+          return (
+            useCallbackList(_.OnMenusChanged, _),
+            jsx(SimpleModal, {
+              active: !!_.ActiveMenu,
+              children: jsx(_, {
+                ActiveMenu: _.ActiveMenu,
+              }),
+            })
+          );
+        }
+        function _(_) {
+          const { ActiveMenu: _ } = _,
+            _ = _.useCallback(() => {
+              _?.OnCancel();
+            }, [_]);
+          _.useEffect(() => () => _?.Hide(), [_]);
+          let _ = [],
+            _ = null;
+          (0, _._)(() => {
+            for (let _ = _; _ && _.visible; _ = _.submenu)
+              _.push(
+                (0, _.jsx)(
+                  _,
+                  {
+                    instance: _,
+                  },
+                  _.key,
+                ),
+              ),
+                (_ = _.label);
+          });
+          const _ = _.useCallback(
+            (_) => {
+              _.currentTarget == _.target && _();
+            },
+            [_],
+          );
+          return (0, _.jsx)(_._, {
+            padding: "none",
+            children: (0, _.jsxs)("div", {
+              onClick: _,
+              className: (0, _._)(
+                "BasicUIContextMenu",
+                _().BasicContextMenuModal,
+              ),
+              children: [
+                _ &&
+                  (0, _.jsx)(_.Fragment, {
+                    children: (0, _.jsx)("div", {
+                      className: _().BasicContextMenuHeader,
+                      children: _,
+                    }),
+                  }),
+                (0, _.jsx)(_._, {
+                  className: _().BasicContextMenuContainer,
+                  onCancelButton: _,
+                  onClick: _,
+                  children: _,
+                }),
+              ],
+            }),
+          });
+        }
+        function _(_) {
+          const { instance: _ } = _,
+            _ = (0, _._)(),
+            _ = _.useCallback(() => {
+              _ && _._.PlayNavSound(_._.FailedNav);
+            }, [_]);
+          let _ = _.useMemo(
+            () => ({
+              instance: _,
+              styles: _(),
+              presentation: _._,
+              callbacks: {
+                onDisabledItemSelected: _,
+              },
+            }),
+            [_, _],
+          );
+          return (0, _.jsx)(_._, {
+            children: (0, _.jsx)(_._.Provider, {
+              value: _,
+              children: _.ReactElement,
+            }),
+          });
+        }
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        function _(_) {
+          const { managerOverride: _ } = _,
+            _ = (0, _._)(),
+            _ = _ ?? _,
+            _ = (0, _._)();
+          return (
+            (0, _._)(_.OnMenusChanged, _),
+            (0, _.jsx)(_._, {
+              active: !!_.ActiveMenu,
+              children: (0, _.jsx)(_, {
+                ActiveMenu: _.ActiveMenu,
+              }),
+            })
+          );
+        }
+        const _ = _.forwardRef(function (_, _) {
+          const { ActiveMenu: _ } = _;
+          return (
+            (0, _._)(_._.Overlay, "BasicUIContextMenuModal"),
+            (0, _._)(!0, "BasicUIContextMenuModal"),
+            (0, _._)("hidden", "BasicUIContextMenuModal"),
+            (0, _._)(null, "BasicUIContextMenuModal"),
+            (0, _._)(!0, "BasicUIContextMenuModal"),
+            (0, _.jsx)(_, {
+              ActiveMenu: _,
+            })
+          );
+        });
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(module_exports, {
+          _: () => _,
           _: () => _,
           _: () => _,
         });
@@ -468791,72 +470055,76 @@ Status Code:` +
             (_?.source_bindings?.forEach((_) => {
               const _ = _.key,
                 _ = _.active_group;
-              if (_._(_, _, _)) {
-                if (_.bModeRow) {
-                  const _ = _._[_];
-                  if (!_?.analog) return;
-                  const _ = _._[_] ?? [],
-                    _ = (_) =>
-                      _.includes(_) && _ != _._ && !(_.trackpad && _ == _._);
-                  _.filter(_).forEach((_) =>
-                    _.push({
-                      eSource: _,
-                      group: _,
-                      eMode: _,
-                    }),
-                  );
-                  return;
-                }
-                if (
-                  (_ &&
-                    !(_ && !_._[_]?.analog) &&
-                    _._(_, _, _, !1, _)
-                      .filter(
-                        (_) =>
-                          _.gameAction?.action?.key == _.action.key &&
-                          (_.gameAction.layerSet ?? _.gameAction.baseSet)
-                            ?.key == _.strActionSetKey &&
-                          _(_, _.eMode),
-                      )
-                      .forEach((_) =>
-                        _.push({
-                          eSource: _,
-                          group: _,
-                          eMode: _.eMode,
-                          strDisplay: _.strDisplay,
-                        }),
-                      ),
-                  !!_)
-                ) {
-                  if (_?.mode == null || _.mode == _._) {
-                    if (!_._[_]?.analog) return;
-                    const _ = _._[_]?.trigger ?? !1,
-                      _ = _ ? _._ : _._;
-                    (_ ? [_._, _._] : [_._])
-                      .filter((_) => _._(_, _) && _._(_, _) && _._(_, _, _))
-                      .forEach((_) =>
-                        _.push({
-                          eSource: _,
-                          group: _,
-                          input: {
-                            key: _,
-                          },
-                          eModeToSet: _,
-                        }),
-                      );
-                    return;
-                  }
-                  (0, _._)(_, _, _, _, !1).forEach((_) => {
-                    _._(_) ||
-                      _(_, _.mode, _.key) ||
+              if (!_._(_, _, _)) return;
+              if (_.bModeRow) {
+                const _ = _._[_];
+                if (!_?.analog) return;
+                const _ = _._[_] ?? [],
+                  _ = (_) =>
+                    _.includes(_) && _ != _._ && !(_.trackpad && _ == _._);
+                _.filter(_).forEach((_) =>
+                  _.push({
+                    eSource: _,
+                    group: _,
+                    eMode: _,
+                  }),
+                );
+                return;
+              }
+              if (
+                (_ &&
+                  !(_ && !_._[_]?.analog) &&
+                  _._(_, _, _, !1, _)
+                    .filter(
+                      (_) =>
+                        _.gameAction?.action?.key == _.action.key &&
+                        (_.gameAction.layerSet ?? _.gameAction.baseSet)?.key ==
+                          _.strActionSetKey &&
+                        _(_, _.eMode),
+                    )
+                    .forEach((_) =>
                       _.push({
                         eSource: _,
                         group: _,
-                        input: _,
-                      });
-                  });
-                }
+                        eMode: _.eMode,
+                        strDisplay: _.strDisplay,
+                      }),
+                    ),
+                !_)
+              )
+                return;
+              const _ = _._[_]?.trigger ?? !1,
+                _ = _?.mode == null || _.mode == _._,
+                _ =
+                  _ &&
+                  !_ &&
+                  (_.mode != _._ || _.game_action?.action_key != null);
+              if (_ || _) {
+                if (!_._[_]?.analog) return;
+                const _ = _ ? _._ : _._;
+                (_ ? [_._, _._] : [_._])
+                  .filter((_) => _._(_, _) && _._(_, _) && _._(_, _, _))
+                  .forEach((_) =>
+                    _.push({
+                      eSource: _,
+                      group: _,
+                      input: {
+                        key: _,
+                      },
+                      eModeToSet: _,
+                    }),
+                  );
+                return;
               }
+              (0, _._)(_, _, _, _, !1).forEach((_) => {
+                _._(_) ||
+                  _(_, _.mode, _.key) ||
+                  _.push({
+                    eSource: _,
+                    group: _,
+                    input: _,
+                  });
+              });
             }),
             _)
           ) {
@@ -476927,18 +478195,17 @@ Status Code:` +
             _ = (0, _._)();
           _.useEffect(() => {
             const _ = new _._();
-            return (
-              _ &&
-                _?.ownerWindow &&
-                _._.NavigationManager &&
-                (_.Push(_._.NavigationManager.RegisterInputSource(new _._())),
+            if (_ && _?.ownerWindow && _._.NavigationManager) {
+              const _ = new _._();
+              _.Push(_._.NavigationManager.RegisterInputSource(_)),
+                _.Push(() => _.Destroy()),
                 _.Push(
                   _._.NavigationManager.RegisterInputSource(
                     new _._(_?.ownerWindow),
                   ),
-                )),
-              () => _.Unregister()
-            );
+                );
+            }
+            return () => _.Unregister();
           }, [_, _]);
         }
         function _(_) {
@@ -507075,139 +508342,6 @@ Status Code:` +
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_);
-        function _(_) {
-          const { managerOverride: _ } = _,
-            _ = useContextMenuManager(),
-            _ = _ ?? _,
-            _ = useForceUpdate();
-          return (
-            useCallbackList(_.OnMenusChanged, _),
-            jsx(SimpleModal, {
-              active: !!_.ActiveMenu,
-              children: jsx(_, {
-                ActiveMenu: _.ActiveMenu,
-              }),
-            })
-          );
-        }
-        function _(_) {
-          const { ActiveMenu: _ } = _,
-            _ = _.useCallback(() => {
-              _?.OnCancel();
-            }, [_]);
-          _.useEffect(() => () => _?.Hide(), [_]);
-          let _ = [],
-            _ = null;
-          (0, _._)(() => {
-            for (let _ = _; _ && _.visible; _ = _.submenu)
-              _.push(
-                (0, _.jsx)(
-                  _,
-                  {
-                    instance: _,
-                  },
-                  _.key,
-                ),
-              ),
-                (_ = _.label);
-          });
-          const _ = _.useCallback(
-            (_) => {
-              _.currentTarget == _.target && _();
-            },
-            [_],
-          );
-          return (0, _.jsx)(_._, {
-            padding: "none",
-            children: (0, _.jsxs)("div", {
-              onClick: _,
-              className: (0, _._)(
-                "BasicUIContextMenu",
-                _().BasicContextMenuModal,
-              ),
-              children: [
-                _ &&
-                  (0, _.jsx)(_.Fragment, {
-                    children: (0, _.jsx)("div", {
-                      className: _().BasicContextMenuHeader,
-                      children: _,
-                    }),
-                  }),
-                (0, _.jsx)(_._, {
-                  className: _().BasicContextMenuContainer,
-                  onCancelButton: _,
-                  onClick: _,
-                  children: _,
-                }),
-              ],
-            }),
-          });
-        }
-        function _(_) {
-          const { instance: _ } = _,
-            _ = (0, _._)(),
-            _ = _.useCallback(() => {
-              _ && _._.PlayNavSound(_._.FailedNav);
-            }, [_]);
-          let _ = _.useMemo(
-            () => ({
-              instance: _,
-              styles: _(),
-              presentation: _._,
-              callbacks: {
-                onDisabledItemSelected: _,
-              },
-            }),
-            [_, _],
-          );
-          return (0, _.jsx)(_._, {
-            children: (0, _.jsx)(_._.Provider, {
-              value: _,
-              children: _.ReactElement,
-            }),
-          });
-        }
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        function _(_) {
-          const { managerOverride: _ } = _,
-            _ = (0, _._)(),
-            _ = _ ?? _,
-            _ = (0, _._)();
-          return (
-            (0, _._)(_.OnMenusChanged, _),
-            (0, _.jsx)(_._, {
-              active: !!_.ActiveMenu,
-              children: (0, _.jsx)(_, {
-                ActiveMenu: _.ActiveMenu,
-              }),
-            })
-          );
-        }
-        const _ = _.forwardRef(function (_, _) {
-          const { ActiveMenu: _ } = _;
-          return (
-            (0, _._)(_._.Overlay, "BasicUIContextMenuModal"),
-            (0, _._)(!0, "BasicUIContextMenuModal"),
-            (0, _._)("hidden", "BasicUIContextMenuModal"),
-            (0, _._)(null, "BasicUIContextMenuModal"),
-            (0, _._)(!0, "BasicUIContextMenuModal"),
-            (0, _.jsx)(_, {
-              ActiveMenu: _,
-            })
-          );
-        });
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -507979,6 +509113,8 @@ Status Code:` +
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         const _ = {
             m_pchExistingText: "",
@@ -508137,6 +509273,8 @@ Status Code:` +
             );
           });
         var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -518222,7 +519360,8 @@ Status Code:` +
             children: _._(_),
           });
         }
-        var _ = __webpack_require__("chunkid");
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
         const _ = _.lazy(() =>
           __webpack_require__
             ._("chunkid")
@@ -522571,6 +523710,7 @@ Status Code:` +
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
@@ -523932,6 +525072,8 @@ Status Code:` +
           );
         }
         var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -529913,70 +531055,10 @@ Status Code:` +
             })
           );
         }
-        var _ = __webpack_require__("chunkid");
-        function _() {
-          return _.useMemo(() => _(), []);
-        }
-        function _() {
-          return function (_) {
-            const {
-                refNavTree: _,
-                className: _,
-                active: _,
-                children: _,
-                modalKey: _,
-              } = _,
-              _ = _.useRef(void 0);
-            (0, _._)(_, _, !0);
-            const _ = (0, _._)(_, _);
-            return (0, _.jsx)(_._, {
-              className: _,
-              navTreeRef: _,
-              modal: !0,
-              enabled: _,
-              navID: `ModalDialogOverlay_${_}`,
-              children: _,
-            });
-          };
-        }
-        function _(_) {
-          const {
-              className: _,
-              onEscKeypress: _,
-              padding: _ = "standard",
-              bGamepadUIScrollWithin: _,
-              children: _,
-            } = _,
-            _ = classnames(
-              gamepadDialogStyles.ModalPosition,
-              _ == "standard" && gamepadDialogStyles.WithStandardPadding,
-              _ && gamepadDialogStyles.ScrollWithin,
-              _,
-            );
-          return jsx(Panel, {
-            className: _,
-            onCancelButton: _,
-            focusableIfEmpty: !0,
-            children: jsx(FocusRingProvider, {
-              children: jsx(ErrorBoundary, {
-                children: _,
-              }),
-            }),
-          });
-        }
-        function _(_) {
-          const _ = React.useMemo(
-            () => ({
-              ModalPosition: _,
-            }),
-            [],
-          );
-          return jsx(ModalPresentationContext.Provider, {
-            value: _,
-            children: _.children,
-          });
-        }
         var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -530740,12 +531822,12 @@ Status Code:` +
               },
               [_],
             ),
-            _ = _();
+            _ = (0, _._)();
           return (0, _.jsx)(_._, {
             className: (0, _._)(_().GamepadDialogOverlay, "GamepadMode"),
             bUseDialogElement: !1,
             DialogWrapper: _,
-            ContextMenuComponent: _,
+            ContextMenuComponent: _._,
             refModalManager: _,
             refContextMenuManager: _,
             children: _.children,
@@ -534770,6 +535852,7 @@ Status Code:` +
               _(_) && "VRDashboardBar",
             );
           return (0, _.jsx)(_, {
+            className: _().VoiceChatStatusItem,
             onActivate: _.onClick,
             role: "button",
             description: (0, _._)("#HeaderActions_VoiceChatActive"),
@@ -537856,7 +538939,7 @@ Status Code:` +
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
-        function _(_, _, _) {
+        function _(_, _, _, _) {
           const _ = (0, _._)(),
             _ = (0, _._)().BrowserWindow;
           _.useEffect(() => {
@@ -537871,9 +538954,12 @@ Status Code:` +
             _.useEffect(() => {
               if (_) {
                 const _ = _.GetViewWindow();
-                return _._.RegisterChildWindow(_, _);
+                return _
+                  ? (_._.SetMenuManager(_, _),
+                    () => _._.SetMenuManager(_, void 0))
+                  : _._.RegisterChildWindow(_, _);
               }
-            }, [_, _]);
+            }, [_, _, _]);
           const _ = (0, _._)(_?.GetBrowserView(), _._),
             _ = _.useCallback(() => {
               _?.GetBrowserView().SetFocus(!0), _(), _.ToggleSideMenu(_, !0);
@@ -540418,6 +541504,13 @@ Status Code:` +
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -540465,12 +541558,21 @@ Status Code:` +
               name: "QuickAccess",
             });
             (0, _._)(_?.GetRenderElement()?.ownerDocument.defaultView);
-            const { fnOnFocusNavActivated: _, fnOnFocusNavDeactivated: _ } = (0,
-              _._)(_._.QuickAccess, _, _.ModalManager),
-              _ = (0, _._)();
+            const [_, _] = _.useState(null),
+              [_, _] = _.useState(null),
+              { fnOnFocusNavActivated: _, fnOnFocusNavDeactivated: _ } = (0,
+              _._)(_._.QuickAccess, _, _ ?? _.ModalManager, _ ?? void 0);
+            _.useEffect(() => {
+              _ || (_?.ActiveMenu?.OnCancel(), _?.CloseLegacyModals());
+            }, [_, _, _]);
+            const _ = (0, _._)();
             (0, _._)(_?.GetViewWindow());
             const _ = (0, _._)(),
-              _ = (0, _._)(() => _._.qamFriendsExpanded),
+              _ = (0, _._)(),
+              _ = _ == _._.Friends,
+              _ = (0, _._)(() => _._.qamFriendsExpanded) && _,
+              _ = _(_ ?? void 0),
+              _ = _ || (_ && _ == _._.VoiceChat),
               _ = (0, _._)(() => _._.BKeyboardIMEVisible);
             if (((0, _._)(_, _), !_)) return null;
             const _ = {
@@ -540512,6 +541614,8 @@ Status Code:` +
                       showHeaderAndFooter: _,
                       onFocusNavActivated: _,
                       onFocusNavDeactivated: _,
+                      refModalManager: _,
+                      refContextMenuManager: _,
                     }),
                     _.GetRenderElement(),
                   ),
@@ -540536,7 +541640,12 @@ Status Code:` +
               _ = _.useCallback(() => {
                 _.ToggleSideMenu(_._.QuickAccess, !0);
               }, [_]),
-              _ = (0, _._)(() => _._.qamFriendsExpanded),
+              _ = (0, _._)(),
+              _ = _ == _._.Friends,
+              _ = (0, _._)(() => _._.qamFriendsExpanded) && _,
+              _ = (0, _._)().BrowserWindow,
+              _ = _(_._.GetContextMenuManagerFromWindow(_?.document.body)),
+              _ = _ || (_ && _ == _._.VoiceChat),
               _ = (0, _._)(),
               _ = (0, _._)(() => _._.BKeyboardIMEVisible),
               _ = (0, _._)(
@@ -540734,6 +541843,14 @@ Status Code:` +
             } = _,
             _ = _.useRef(void 0),
             _ = (0, _._)(_.onFocusNavDeactivated),
+            { onFocusNavActivated: _ } = _,
+            _ = _.useCallback(
+              (_, _) => {
+                for (let _ = _; !_ && _; _ = _.Parent) if (_ === _) return;
+                _?.();
+              },
+              [_, _],
+            ),
             _ = _.useRef(void 0),
             _ = _.useRef(void 0),
             _ = (0, _._)(() => _.current?.BFocusWithin() ?? !1),
@@ -540759,7 +541876,17 @@ Status Code:` +
           }, [_, _]);
           const _ = _.useCallback(() => (_.current.TakeFocus(), !0), []),
             _ = _.useCallback(() => (_.current.TakeFocus(), !0), []),
-            _ = _("quick-access-menu");
+            _ = (0, _._)(),
+            _ = (0, _._)(() => _.BQuickAccessContentFocusRequested());
+          _.useEffect(() => {
+            if (!_ || !_) return;
+            _.SetQuickAccessContentFocusRequested(!1);
+            const _ = _.current?.Node();
+            _?.Tree.DeferredFocus.RequestFocus(_, {
+              bFocusDescendant: !0,
+            });
+          }, [_, _, _]);
+          const _ = _("quick-access-menu");
           let _ = (0, _._)();
           const _ = (0, _._)();
           _ = (0, _._)(() =>
@@ -540892,23 +542019,64 @@ Status Code:` +
                 navID: "QuickAccess-NA",
                 enabled: _ || _,
                 navTreeRef: _,
-                onActivated: _.onFocusNavActivated,
+                onActivated: _,
                 onDeactivated: _,
                 autoFocus: !0,
                 className: _,
                 onCancelButton: _,
                 onGlobalButtonDown: _,
                 ..._,
-                children: _,
+                children: _.refModalManager
+                  ? (0, _.jsx)(_, {
+                      refModalManager: _.refModalManager,
+                      refContextMenuManager: _.refContextMenuManager,
+                      children: _,
+                    })
+                  : _,
               });
+        }
+        function _(_) {
+          const [_, _] = _.useState(() => !!_?.ActiveMenu);
+          return (
+            (0, _._)(
+              _?.OnMenusChanged,
+              _.useCallback(() => _(!!_?.ActiveMenu), [_]),
+            ),
+            _
+          );
+        }
+        function _(_) {
+          const _ = (0, _._)((_) => {
+              if (!_) return;
+              let _ = [
+                _.RegisterOnModalShownCallback(() =>
+                  _._.PlayNavSound(_._.ShowModal),
+                ).Unregister,
+                _.RegisterOnModalHiddenCallback(() =>
+                  _._.PlayNavSound(_._.HideModal),
+                ).Unregister,
+              ];
+              return () => _.forEach((_) => _());
+            }, []),
+            _ = (0, _._)(_, _.refModalManager),
+            _ = (0, _._)();
+          return (0, _.jsx)(_._, {
+            className: (0, _._)(_().GamepadDialogOverlay, "GamepadMode"),
+            bUseDialogElement: !1,
+            bUsePopups: !1,
+            bRegisterManagersWithWindow: !1,
+            DialogWrapper: _,
+            ContextMenuComponent: _._,
+            refModalManager: _,
+            refContextMenuManager: _.refContextMenuManager,
+            children: _.children,
+          });
         }
         const _ = _.memo(function (_) {
           const { bQuickAccessMenuVisible: _ } = _;
           let [_, _] = _.useState(0),
-            [_, _] = _.useState(!1),
             [_, _] = _.useState(!1);
           const _ = (0, _._)(),
-            _ = (0, _._)(),
             _ = (0, _._)();
           let _ =
             (0, _._)()?.filter(
@@ -540920,10 +542088,8 @@ Status Code:` +
                 (_(_),
                 _ > _ && !_ && _.OpenQuickAccessMenu(_._.Notifications, !1)),
                 _ != _ &&
-                  (_(_), _ && !_ && _.OpenQuickAccessMenu(_._.VoiceChat, !1)),
-                _ != _ &&
                   (_(_), _ && !_ && _.OpenQuickAccessMenu(_._.VoiceChat, !1));
-            }, [_, _, _, _, _, _, _, _]),
+            }, [_, _, _, _, _, _]),
             null
           );
         });
@@ -553950,6 +555116,7 @@ Status Code:` +
           m_bStartupFinished = !1;
           m_bFriendsUIReady = !1;
           m_bQamFriendsExpanded = !1;
+          m_hQamContentFocusExpiry = void 0;
           m_eDesiredPersonaState = void 0;
           m_friendsUIFunctions = void 0;
           m_voiceChatStatus = void 0;
@@ -554145,6 +555312,37 @@ Status Code:` +
                       _._.ActiveWindowInstance,
                       _._.InitFromAccountID(_.accountid),
                     );
+                  }
+                  break;
+                case "OpenChatRoomGroup":
+                  {
+                    const _ = JSON.parse(_);
+                    this.ShowChatRoomGroupDialog(
+                      _._.ActiveWindowInstance.params.browserInfo,
+                      _.groupid,
+                      void 0,
+                    );
+                  }
+                  break;
+                case "OpenQuickAccessVoiceChat":
+                  {
+                    const _ = _._.ActiveWindowInstance.MenuStore;
+                    this.SetQAMFriendsChatExpanded(!1),
+                      _?.SetQuickAccessTab(_._.VoiceChat),
+                      _?.SetQuickAccessContentFocusRequested(!0),
+                      window.clearTimeout(this.m_hQamContentFocusExpiry),
+                      (this.m_hQamContentFocusExpiry = window.setTimeout(
+                        () => _?.SetQuickAccessContentFocusRequested(!1),
+                        1e3,
+                      ));
+                  }
+                  break;
+                case "ShowQuickAccessVoiceChat":
+                  {
+                    const _ = _._.ActiveWindowInstance.MenuStore;
+                    _ &&
+                      _.GetOpenSideMenu() != _._.QuickAccess &&
+                      _.OpenQuickAccessMenu(_._.VoiceChat, !0);
                   }
                   break;
                 case "AcceptedGameInvite":
@@ -555681,6 +556879,7 @@ Status Code:` +
           m_eLastRequestedSideMenu = 0;
           m_eQuickAccessTab = 4;
           m_cSideMenuExtendedVisibilityRequests = 0;
+          m_bQuickAccessContentFocusRequested = !1;
           m_MainMenuStore;
           m_Instance;
           constructor(_) {
@@ -555710,6 +556909,12 @@ Status Code:` +
           }
           GetQuickAccessTab() {
             return this.m_eQuickAccessTab;
+          }
+          BQuickAccessContentFocusRequested() {
+            return this.m_bQuickAccessContentFocusRequested;
+          }
+          SetQuickAccessContentFocusRequested(_) {
+            this.m_bQuickAccessContentFocusRequested = _;
           }
           OpenSideMenu(_) {
             if (!this.m_Instance.IsAnyVRWindow()) {
@@ -555800,6 +557005,8 @@ Status Code:` +
           _([_._], _.prototype, "m_eLastRequestedSideMenu", 2),
           _([_._], _.prototype, "m_eQuickAccessTab", 2),
           _([_._], _.prototype, "m_cSideMenuExtendedVisibilityRequests", 2),
+          _([_._], _.prototype, "m_bQuickAccessContentFocusRequested", 2),
+          _([_._.bound], _.prototype, "SetQuickAccessContentFocusRequested", 1),
           _([_._.bound], _.prototype, "SetQuickAccessTab", 1),
           _([_._.bound], _.prototype, "OpenQuickAccessMenu", 1);
         function _() {
@@ -561503,6 +562710,7 @@ Status Code:` +
             "Raven/Raven2/FireFlight/Renoir Audio Processor",
             "ACP/ACP3X/ACP6x Audio Coprocessor",
             "Audio Coprocessor",
+            "Built-in Audio",
           ],
           _ = [
             "Rembrandt Radeon High Definition Audio Controller",
@@ -602960,6 +604168,8 @@ Status Code:` +
           _ = 15 * 1e3,
           _ = 60 * 1e3,
           _ = 3 * 1e3,
+          _ = 30 * 1e3,
+          _ = 5 * 1e3,
           _ = 15 * 1e3,
           _ = 5 * 1e3,
           _ = {
@@ -603702,6 +604912,7 @@ Status Code:` +
           m_rgNotificationTray = [];
           m_cbkNotificationTray = new _._();
           m_rgNotificationToasts = [];
+          m_mapFriendMessageRollups = new Map();
           m_valueCurrentToast = (0, _._)(null);
           m_mapAppOverlayToasts = new Map();
           m_setContextsRenderingToasts = _._.set();
@@ -603930,11 +605141,50 @@ Status Code:` +
             }
             if (this.BShouldSupressToasts()) return;
             let _ = this.ChooseSound(_, _);
-            _
-              ? (this.m_rgNotificationToasts.push(_),
+            if (_) {
+              if (this.BRollupFriendMessage(_)) return;
+              this.m_rgNotificationToasts.push(_),
                 this.m_rgNotificationToasts.length == 1 &&
-                  this.DispatchNextToast())
-              : _ && _.PlayNotificationSound(_);
+                  this.DispatchNextToast();
+            } else _ && _.PlayNotificationSound(_);
+          }
+          BRollupFriendMessage(_) {
+            if (_.eType != _._._ || _._.MainInstanceUIMode != _.$l2) return !1;
+            const _ = _.data;
+            if (_.response_steamurl()) return !1;
+            const _ = _.steamid(),
+              _ = performance.now(),
+              _ = this.m_mapFriendMessageRollups.get(_);
+            if (_ && (_.rgPending.length || _ < _.msWindowEnd)) {
+              _.rgPending.push(_);
+              const _ = Math.min(_, Math.max(0, _.msWindowEnd - _));
+              return (
+                window.clearTimeout(_.hPendingTimer),
+                (_.hPendingTimer = window.setTimeout(
+                  () => this.ShowPendingFriendMessages(_),
+                  _,
+                )),
+                !0
+              );
+            }
+            return (
+              this.m_mapFriendMessageRollups.set(_, {
+                msWindowEnd: _ + _,
+                rgPending: [],
+                hPendingTimer: void 0,
+              }),
+              !1
+            );
+          }
+          ShowPendingFriendMessages(_) {
+            const _ = _.rgPending[0];
+            (_.cRolledUpMessages = _.rgPending.length - 1),
+              (_.msWindowEnd = performance.now() + _),
+              (_.rgPending = []),
+              (_.hPendingTimer = void 0),
+              this.m_rgNotificationToasts.push(_),
+              this.m_rgNotificationToasts.length == 1 &&
+                this.DispatchNextToast();
           }
           OnNotification(_, _, _, _) {
             if (
@@ -702095,7 +703345,7 @@ Status Code:` +
               _.nSteamVersion > 0
                 ? _.nSteamVersion.toString()
                 : (0, _._)("#Settings_System_SteamLocalBuild"),
-            _ = parseInt(1792703754),
+            _ = parseInt(1793050866),
             _ = _ && (0, _._)(_, _, _),
             _ = _.sSteamBuildDate,
             _ = (0, _._)() ? " GMT+0000" : " GMT-0800",
@@ -716996,49 +718246,70 @@ Status Code:` +
               className: _,
               singleLineOnly: _,
               fullWidth: _,
+              bodySuffix: _,
+              bodySuffixToken: _,
             } = _,
             _ = _(_, _),
             _ = (_) => {
               _.button == 1 && _ && _();
             };
-          return (0, _.jsxs)(_._, {
-            className: (0, _._)(_().ShortTemplate, !_ && _().TwoLine, _),
-            onActivate: _,
-            onMouseDown: _,
-            children: [
-              (0, _.jsx)("div", {
-                className: _().ShortLogoDimensions,
-                children: _,
-              }),
-              _.personaStatus &&
-                (0, _.jsx)("div", {
-                  className: (0, _._)(_().AvatarStatus, _),
+          return (
+            _ &&
+              _ &&
+              (_ = (0, _._)(
+                _,
+                (0, _.jsx)("span", {
+                  className: _().BodyText,
+                  children: _,
                 }),
-              (0, _.jsxs)("div", {
-                className: (0, _._)(_().Content, _ && _().FullWidth),
-                children: [
-                  (0, _.jsxs)("div", {
-                    className: _().Header,
-                    children: [
-                      !!_ &&
+                (0, _.jsx)("span", {
+                  className: _().BodySuffix,
+                  children: _,
+                }),
+              )),
+            (0, _.jsxs)(_._, {
+              className: (0, _._)(
+                _().ShortTemplate,
+                !_ && !_ && _().TwoLine,
+                _,
+              ),
+              onActivate: _,
+              onMouseDown: _,
+              children: [
+                (0, _.jsx)("div", {
+                  className: _().ShortLogoDimensions,
+                  children: _,
+                }),
+                _.personaStatus &&
+                  (0, _.jsx)("div", {
+                    className: (0, _._)(_().AvatarStatus, _),
+                  }),
+                (0, _.jsxs)("div", {
+                  className: (0, _._)(_().Content, _ && _().FullWidth),
+                  children: [
+                    (0, _.jsxs)("div", {
+                      className: _().Header,
+                      children: [
+                        !!_ &&
+                          (0, _.jsx)("div", {
+                            className: _().Icon,
+                            children: _,
+                          }),
                         (0, _.jsx)("div", {
-                          className: _().Icon,
+                          className: _().Title,
                           children: _,
                         }),
-                      (0, _.jsx)("div", {
-                        className: _().Title,
-                        children: _,
-                      }),
-                    ],
-                  }),
-                  (0, _.jsx)("div", {
-                    className: _().Body,
-                    children: _,
-                  }),
-                ],
-              }),
-            ],
-          });
+                      ],
+                    }),
+                    (0, _.jsx)("div", {
+                      className: (0, _._)(_().Body, !!_ && _().WithSuffix),
+                      children: _,
+                    }),
+                  ],
+                }),
+              ],
+            })
+          );
         }
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -718071,6 +719342,8 @@ Status Code:` +
               steamID: _,
               icon: _,
               body: _,
+              bodySuffix: _,
+              bodySuffixToken: _,
               onDismiss: _,
               onActivate: _,
               className: _,
@@ -718092,6 +719365,8 @@ Status Code:` +
             icon: _,
             title: _,
             body: _,
+            bodySuffix: _,
+            bodySuffixToken: _,
             personaStatus: _,
             onActivate: _,
           });
@@ -719083,16 +720358,25 @@ Status Code:` +
                 ? (0, _._)("#Overlay_FriendInviteToGame_Accept")
                 : void 0,
             _ = _ && _ ? _ : _;
-          if (_(_.location))
-            return (0, _.jsx)(_, {
-              steamID: _,
-              icon: _,
-              body: _.data.body(),
-              onActivate: _,
-              onDismiss: _,
-              location: _,
-            });
-          if (_.location == _.miK) {
+          if (_(_.location)) {
+            let _;
+            return (
+              _.cRolledUpMessages &&
+                (_ = (0, _.jsxs)(_.Fragment, {
+                  children: [_.cRolledUpMessages, (0, _.jsx)(_.Chat, {})],
+                })),
+              (0, _.jsx)(_, {
+                steamID: _,
+                icon: _,
+                body: _.data.body(),
+                bodySuffix: _,
+                bodySuffixToken: "#Notification_FriendMessage_RollupCount",
+                onActivate: _,
+                onDismiss: _,
+                location: _,
+              })
+            );
+          } else if (_.location == _.miK) {
             let _ = _._.GetFriendState(_),
               _ = (0, _.jsx)("img", {
                 className: _().StandardLogoDimensions,
@@ -733027,7 +734311,7 @@ Status Code:` +
                     }),
                   _ &&
                     (0, _._)(!0) &&
-                    _?.GetName(_) == "Built-in Audio" &&
+                    _?.BOnboardAudio() &&
                     (0, _.jsx)(_.Fragment, {
                       children: (0, _.jsx)(_._, {
                         label: (0, _._)("#Audio_Spatialize"),
@@ -733042,7 +734326,7 @@ Status Code:` +
         function _(_) {
           const _ = _.device,
             _ = _._.Input,
-            _ = (0, _._)(!0).ON_FRAME && _.GetName(_) == "Built-in Audio",
+            _ = (0, _._)(!0).ON_FRAME && _.BOnboardAudio(),
             [_, _, _, _, _] = (0, _._)(_._, _),
             _ = _;
           return (0, _.jsxs)(_._, {
@@ -742598,7 +743882,7 @@ Status Code:` +
             _ = (0, _._)(_),
             _ = !0,
             _ = _.nSteamVersion > 0 ? _.nSteamVersion.toString() : "local",
-            _ = parseInt(1792703754),
+            _ = parseInt(1793050866),
             _ = _ && (0, _._)(_, _, _),
             _ = ((_.nCPUHz || 0) / 1e3 / 1e3 / 1e3).toFixed(2) + " GHz",
             _ = (0, _._)(_.nSystemRAMSizeMB * 1024 * 1024, 0),
