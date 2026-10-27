@@ -15,13 +15,13 @@
         FocusRingOnHiddenItem: "focusring_FocusRingOnHiddenItem_2rIZm",
       };
     },
-    902: (e, t, r) => {
+    132: (e, t, r) => {
       "use strict";
       r.d(t, { InitializeGamepadNavigation: () => ln });
       var i,
         n = r(669),
         s = r.n(n),
-        a = r(693),
+        a = r(386),
         o = r(696);
       function l(e) {
         return "object" == typeof e && null !== e && "value" in e;
@@ -95,10 +95,10 @@
         );
       }
       var b = r(629),
-        p = r(374),
-        f = r(609),
-        B = r(182),
-        w = r(861);
+        p = r(146),
+        f = r(301),
+        B = r(162),
+        w = r(577);
       class y {
         m_NavigationController;
         m_postMessage;
@@ -394,8 +394,8 @@
         (0, b.Cg)([p.o], I.prototype, "OnKeyUp", null),
         (0, b.Cg)([p.o], I.prototype, "Reset", null);
       var F,
-        A = r(823),
-        N = r(29);
+        A = r(227),
+        N = r(369);
       class E {
         SyncStore(e) {
           return this.Subscribe(e).Unsubscribe;
@@ -603,7 +603,6 @@
         async LoadSettings() {
           const e = (e, t) => {
             try {
-              0;
               const r = localStorage.getItem(e);
               return r ? JSON.parse(r) : t;
             } catch {
@@ -660,8 +659,9 @@
         }
         static Get() {
           return (
-            null == window.g_LogManager && (window.g_LogManager = new x()),
-            window.g_LogManager
+            null == globalThis.g_LogManager &&
+              (globalThis.g_LogManager = new x()),
+            globalThis.g_LogManager
           );
         }
         get Loading() {
@@ -1080,10 +1080,18 @@
           if ("grid" == r.display)
             return "none" !== r.gridTemplateAreas ? We.GEOMETRIC : We.GRID;
           if (e.childElementCount > 0) {
-            const r = t.getComputedStyle(e.firstElementChild);
-            if ("left" === r.float) return We.ROW;
-            if ("right" === r.float) return We.ROW_REVERSE;
-            if ("inline" === r.display || "inline-block" === r.display)
+            const i = t.getComputedStyle(e.firstElementChild);
+            let n = i.float;
+            if (
+              ("inline-start" === n
+                ? ((n = "left"), "rtl" === r.direction && (n = "right"))
+                : "inline-end" === n &&
+                  ((n = "right"), "rtl" === r.direction && (n = "left")),
+              "left" === n)
+            )
+              return We.ROW;
+            if ("right" === n) return We.ROW_REVERSE;
+            if ("inline" === i.display || "inline-block" === i.display)
               return We.GRID;
           }
         }
@@ -13256,7 +13264,7 @@
         },
       };
     },
-    609: (e, t, r) => {
+    301: (e, t, r) => {
       "use strict";
       r.d(t, { T: () => i, h: () => n });
       const i = "GamepadInput";
@@ -13269,12 +13277,12 @@
           (e[(e.Full = 4)] = "Full");
       })(n || (n = {}));
     },
-    861: (e, t, r) => {
+    577: (e, t, r) => {
       "use strict";
       r.d(t, { A7: () => a, Vp: () => o, n4: () => l });
       var i = r(629),
-        n = r(374),
-        s = r(609);
+        n = r(146),
+        s = r(301);
       class a {
         PostMessage(e) {}
         RegisterForMessage(e) {}
