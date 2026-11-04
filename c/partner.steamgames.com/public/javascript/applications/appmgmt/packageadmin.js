@@ -1,15 +1,14 @@
-import { _, _, _, _, _, _ } from "./mobx.esm.js?contenthash=BRGZcCup";
-import { _, _, _, _, _, _, _, _ } from "./dialogs.js?contenthash=D1pxcxuf";
-import { _ } from "./usedataloader.client.js?contenthash=DAd0LgAa";
-import { _ } from "./long.js?contenthash=DWB27pGN";
-import { _, _, _, _ } from "./react-router.js?contenthash=nQj0_J23";
-import { _, _, _, _ } from "./pricingguidelineobject.js?contenthash=BkbRq0Li";
-import { _ } from "./modals.js?contenthash=Bi1vin1f";
-import { _, _ } from "./flex.js?contenthash=BqvwdiAv";
-import { _, _ } from "./button.js?contenthash=CU33iYfg";
-import { _ } from "./text.js?contenthash=eLRF4CUL";
-import { _ } from "./heading.js?contenthash=JlFqtEbo";
-import { _ } from "./textlink.js?contenthash=DqM5ftUk";
+import { _, _, _, _, _, _ } from "./mobx.esm.js?contenthash=CQiZDS-T";
+import { _, _, _, _ } from "./src.js?contenthash=CBPcp3zo";
+import { _ } from "./usedataloader.client.js?contenthash=c41ZJXNa";
+import { _, _, _, _, _ } from "./dialogs.js?contenthash=oAnTCbk0";
+import { _, _, _, _ } from "./react-router.js?contenthash=C8paMHEZ";
+import { _, _, _, _ } from "./pricingguidelineobject.js?contenthash=CP-NKVXf";
+import { _, _ } from "./flex.js?contenthash=NJTkbjXR";
+import { _, _ } from "./button.js?contenthash=DN4KPe3g";
+import { _ } from "./text.js?contenthash=DyIFXTWv";
+import { _ } from "./heading.js?contenthash=BhSHllp_";
+import { _ } from "./textlink.js?contenthash=CW74W_x2";
 import {
   _,
   _,
@@ -25,15 +24,16 @@ import {
   _,
   _,
   _,
-} from "./tabulatorutils.js?contenthash=BiwL1JH9";
-import { _ } from "./throbber.js?contenthash=1eooMzHf";
-import { _, _, _, _, _ } from "./currencyutils.js?contenthash=BLJDeGzO";
-import { _, _, _, _ } from "./pricinggridcell.js?contenthash=LyzAlx0S";
-import { _ } from "./phpintegration.js?contenthash=CCsRwFZl";
-import { _ } from "./unknownroute.js?contenthash=C2vrZ8Y1";
-import { _, _ } from "./fancytable.js?contenthash=BiBqH93f";
-import { _, _ } from "./profilestore.js?contenthash=3wVpz-0i";
-import { _ } from "./localization3.js?contenthash=B4lvHMmE";
+} from "./tabulatorutils.js?contenthash=DsoW0avV";
+import { _ } from "./modals.js?contenthash=CSZ9553x";
+import { _ } from "./throbber.js?contenthash=8IkzFhw7";
+import { _, _, _, _, _ } from "./currencyutils.js?contenthash=BN9XPice";
+import { _, _, _, _ } from "./pricinggridcell.js?contenthash=DAWExG4h";
+import { _ } from "./phpintegration.js?contenthash=kK0BRedh";
+import { _ } from "./unknownroute.js?contenthash=CtgV9GMi";
+import { _, _ } from "./fancytable.js?contenthash=Tvm4ZiBz";
+import { _, _ } from "./profilestore.js?contenthash=Bx4CVUal";
+import { _ } from "./localization3.js?contenthash=CO-jTCwD";
 import {
   _,
   _,
@@ -47,8 +47,8 @@ import {
   _,
   _,
   _,
-} from "./saveprices.js?contenthash=B2VMWVQE";
-import { _, _ } from "./localization4.js?contenthash=73n-ZBjU";
+} from "./saveprices.js?contenthash=C-sC_gNP";
+import { _, _ } from "./localization4.js?contenthash=BszbXCfV";
 var _ = {};
 (_.arabic = () =>
   _(

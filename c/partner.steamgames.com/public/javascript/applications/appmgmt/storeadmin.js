@@ -3,51 +3,52 @@ const __vite__mapDeps = (
   _ = __vite__mapDeps,
   _ = _._ ||
     (_._ = [
-      "./richgamedescriptioneditor2.js?contenthash=BmVZOPxk",
-      "./richgamedescriptioneditor.js?contenthash=DAHb-JkZ",
-      "./mobx.esm.js?contenthash=BRGZcCup",
-      "./dialogs.js?contenthash=D1pxcxuf",
-      "./long.js?contenthash=DWB27pGN",
-      "./react-router.js?contenthash=nQj0_J23",
-      "../../../css/applications/appmgmt/dialogs.css?contenthash=BSBzYtmn",
-      "./uploadutils.js?contenthash=DHT_Jf3T",
-      "./steammessages_community_pb.js?contenthash=Cp_tm3v4",
-      "./useMutation.js?contenthash=Dj5NzgSW",
-      "./utils.js?contenthash=CtvqX2oo",
-      "./mutation.js?contenthash=mVgehZd5",
-      "./useresizeobserver.js?contenthash=OEPUjHil",
-      "./cloudlocalizedartdisplay.js?contenthash=DpbNyXJq",
-      "./modaldialog.js?contenthash=iwZHjmGl",
-      "../../../css/applications/appmgmt/modaldialog.css?contenthash=DIzQc6yp",
-      "./basebuttons.js?contenthash=B-gcG1sD",
-      "../../../css/applications/appmgmt/basebuttons.css?contenthash=BJx2zq6Y",
-      "./axios.js?contenthash=ftGxbJpA",
-      "./throbber.js?contenthash=1eooMzHf",
-      "../../../css/applications/appmgmt/throbber.css?contenthash=B5cG3W4v",
-      "./editorlocalizationstore.js?contenthash=B1C0NS5O",
-      "./genericimageupload.js?contenthash=w3XAUvxw",
-      "./modals.js?contenthash=Bi1vin1f",
-      "./linkregionbox.js?contenthash=B1xRlJfv",
+      "./richgamedescriptioneditor2.js?contenthash=ZQXOrE1i",
+      "./richgamedescriptioneditor.js?contenthash=DhbdUWgx",
+      "./mobx.esm.js?contenthash=CQiZDS-T",
+      "./src.js?contenthash=CBPcp3zo",
+      "./uploadutils.js?contenthash=Bmfjs2kv",
+      "./steammessages_community_pb.js?contenthash=yPbkqLbM",
+      "./dialogs.js?contenthash=oAnTCbk0",
+      "./react-router.js?contenthash=C8paMHEZ",
+      "../../../css/applications/appmgmt/dialogs.css?contenthash=MsVVHrZ1",
+      "./useMutation.js?contenthash=CVVv1aVR",
+      "./utils.js?contenthash=C_yXlbsa",
+      "./mutation.js?contenthash=D6buw3Ef",
+      "./useresizeobserver.js?contenthash=B7CLWQqo",
+      "./imageuploaderpanel.js?contenthash=MMXBqy8w",
+      "./slider.js?contenthash=D-TCYa7Y",
+      "./layout.js?contenthash=JIBVSoaz",
+      "./formfactor.js?contenthash=BPEgXlGF",
+      "./useclienthints.js?contenthash=D7HGBzTq",
+      "../../../css/applications/appmgmt/layout.css?contenthash=DoE9LMAn",
+      "./render.js?contenthash=C8U-rBc7",
+      "../../../css/applications/appmgmt/slider.css?contenthash=D9rMOvcL",
+      "./modals.js?contenthash=CSZ9553x",
+      "./axiosutils.js?contenthash=DGrnkyHA",
+      "./axios.js?contenthash=DJSofgRR",
+      "./throbber.js?contenthash=8IkzFhw7",
+      "../../../css/applications/appmgmt/throbber.css?contenthash=DMWv5jTr",
+      "./editorlocalizationstore.js?contenthash=CAHej8DH",
+      "./partnereventshared.module.js?contenthash=Cm499byC",
+      "../../../css/applications/appmgmt/partnereventshared.css?contenthash=BGIA11o9",
+      "./genericimageupload.js?contenthash=DQmFk7pB",
+      "./linkregionbox.js?contenthash=Dac0cCFC",
       "../../../css/applications/appmgmt/linkregionbox.css?contenthash=HkLONVRS",
       "../../../css/applications/appmgmt/genericimageupload.css?contenthash=NERScwG6",
-      "./adminshared.module.js?contenthash=DQBfJqXN",
-      "../../../css/applications/appmgmt/adminshared.css?contenthash=Bdafyp0R",
-      "../../../css/applications/appmgmt/cloudlocalizedartdisplay.css?contenthash=BKjBu2__",
-      "./simplemodaldialog.js?contenthash=D3ZDxsKb",
-      "../../../css/applications/appmgmt/simplemodaldialog.css?contenthash=U5XJc_k7",
-      "./imageuploaderpanel.js?contenthash=Dd42Uh2o",
-      "./axiosutils.js?contenthash=B2ZC7U2N",
-      "./partnereventshared.module.js?contenthash=P6Lsyb-l",
-      "../../../css/applications/appmgmt/partnereventshared.css?contenthash=B7LNJQ8W",
-      "./shared_common.module.js?contenthash=DMZ38Ep5",
-      "../../../css/applications/appmgmt/shared_common.css?contenthash=Ct0mtd7G",
-      "../../../css/applications/appmgmt/imageuploaderpanel.css?contenthash=Dkju2lA2",
-      "./bbcodes.module.js?contenthash=9AAwTmEw",
-      "../../../css/applications/appmgmt/bbcodes.css?contenthash=DxrOPR5M",
-      "./numberformats.js?contenthash=orYQHRkm",
-      "./getpreferredlocales.js?contenthash=DW-T3c2O",
-      "../../../css/applications/appmgmt/richgamedescriptioneditor.css?contenthash=SwmxS47z",
-      "../../../css/applications/appmgmt/shared_dialog.css?contenthash=C9HgcjP9",
+      "./shared_common.module.js?contenthash=Cv5S5tkQ",
+      "../../../css/applications/appmgmt/shared_common.css?contenthash=ylUtvFuK",
+      "../../../css/applications/appmgmt/imageuploaderpanel.css?contenthash=DQY4D1Bk",
+      "./bbcodes.module.js?contenthash=DbS1TX25",
+      "../../../css/applications/appmgmt/bbcodes.css?contenthash=CxUNTrby",
+      "./numberformats.js?contenthash=C6xxWUIr",
+      "./getpreferredlocales.js?contenthash=DHiMU7Q0",
+      "./cloudlocalizedartdisplay.js?contenthash=BiGNyLMC",
+      "./adminshared.module.js?contenthash=B8TEWtL2",
+      "../../../css/applications/appmgmt/adminshared.css?contenthash=OY2FNZOQ",
+      "../../../css/applications/appmgmt/cloudlocalizedartdisplay.css?contenthash=CJgc3uaF",
+      "../../../css/applications/appmgmt/richgamedescriptioneditor.css?contenthash=CEmRLwB0",
+      "../../../css/applications/appmgmt/shared_dialog.css?contenthash=BAGai7ql",
     ]),
 ) => _.map((_) => _[_]);
 import {
@@ -80,7 +81,23 @@ import {
   _,
   _,
   _,
-} from "./mobx.esm.js?contenthash=BRGZcCup";
+} from "./mobx.esm.js?contenthash=CQiZDS-T";
+import {
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+} from "./src.js?contenthash=CBPcp3zo";
+import { _, _ } from "./usedataloader.client.js?contenthash=c41ZJXNa";
 import {
   _,
   _,
@@ -139,26 +156,15 @@ import {
   _,
   _,
   _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-} from "./dialogs.js?contenthash=D1pxcxuf";
-import { _, _ } from "./usedataloader.client.js?contenthash=DAd0LgAa";
-import { _, _, _ } from "./long.js?contenthash=DWB27pGN";
-import { _ } from "./storebrowsequerycontext.js?contenthash=C5iguZTL";
-import { _ } from "./saletags.js?contenthash=BDV8J3LD";
-import { _ } from "./storenaveventcontext.js?contenthash=BcTEXyXR";
-import { _, _ } from "./react-router.js?contenthash=nQj0_J23";
-import { _ } from "./utils.js?contenthash=CtvqX2oo";
-import { _ } from "./useQuery.js?contenthash=Cju4VOwO";
-import { _ } from "./reactqueryroot.js?contenthash=6HNzcxAU";
-import { _ } from "./useMutation.js?contenthash=Dj5NzgSW";
+} from "./dialogs.js?contenthash=oAnTCbk0";
+import { _ } from "./storebrowsequerycontext.js?contenthash=IltPrRPI";
+import { _ } from "./saletags.js?contenthash=ESSi8BuZ";
+import { _ } from "./storenaveventcontext.js?contenthash=CI-QJyey";
+import { _, _ } from "./react-router.js?contenthash=C8paMHEZ";
+import { _ } from "./utils.js?contenthash=C_yXlbsa";
+import { _ } from "./useQuery.js?contenthash=DNURXK9V";
+import { _ } from "./reactqueryroot.js?contenthash=BLvKcg6J";
+import { _ } from "./useMutation.js?contenthash=CVVv1aVR";
 import {
   _,
   _,
@@ -171,43 +177,43 @@ import {
   _,
   _,
   _,
-} from "./marketingmessageevent.js?contenthash=LKE2TOi_";
-import { _ } from "./dataloader.js?contenthash=_BYkk4vd";
-import { _ } from "./storeitem.js?contenthash=CubZ5fnh";
-import { _ } from "./pricingguidelineobject.js?contenthash=BkbRq0Li";
-import { _, _ } from "./modals.js?contenthash=Bi1vin1f";
-import { _, _ } from "./flex.js?contenthash=BqvwdiAv";
-import { _, _, _ } from "./layout.js?contenthash=D-HixbCM";
-import { _, _ } from "./button.js?contenthash=CU33iYfg";
-import { _ } from "./text.js?contenthash=eLRF4CUL";
-import { _, _ } from "./localization.js?contenthash=DSaSbP1v";
-import { _ } from "./getpreferredlocales.js?contenthash=DW-T3c2O";
-import { _, _ } from "./select.js?contenthash=CPNVF0ci";
-import { _ } from "./heading.js?contenthash=JlFqtEbo";
-import { _, _ } from "./dashboardutilities.js?contenthash=bw7pEkaU";
-import { _ } from "./grid.js?contenthash=Co4HwLPJ";
-import { _, _, _, _, _ } from "./tabulatorutils.js?contenthash=BiwL1JH9";
-import { _ } from "./deckverified.js?contenthash=BjOjd2Vl";
-import { _ } from "./axios.js?contenthash=ftGxbJpA";
-import { _ } from "./axiosutils.js?contenthash=B2ZC7U2N";
-import { _ } from "./historyutils.js?contenthash=DmvWR4sr";
-import { _ } from "./throbber.js?contenthash=1eooMzHf";
-import { _, _, _, _, _, _, _ } from "./currencyutils.js?contenthash=BLJDeGzO";
-import { _ } from "./localization2.js?contenthash=CtKg-Xtn";
-import { _, _ } from "./eventdevfeaturestore.js?contenthash=qZXue2n5";
-import { _, _ } from "./editorlocalizationstore.js?contenthash=B1C0NS5O";
-import { _, _ } from "./partnereventshared.module.js?contenthash=P6Lsyb-l";
-import { _ } from "./steamid.js?contenthash=DnyzW3N-";
+} from "./marketingmessageevent.js?contenthash=CWqvy10x";
+import { _ } from "./dataloader.js?contenthash=DACDuCdd";
+import { _ } from "./storeitem.js?contenthash=ChblWmhs";
+import { _ } from "./pricingguidelineobject.js?contenthash=CP-NKVXf";
+import { _, _ } from "./flex.js?contenthash=NJTkbjXR";
+import { _, _, _ } from "./layout.js?contenthash=JIBVSoaz";
+import { _, _ } from "./button.js?contenthash=DN4KPe3g";
+import { _ } from "./text.js?contenthash=DyIFXTWv";
+import { _, _ } from "./localization.js?contenthash=-Zwye_Vv";
+import { _ } from "./getpreferredlocales.js?contenthash=DHiMU7Q0";
+import { _, _ } from "./select.js?contenthash=D2-qF6Uz";
+import { _ } from "./heading.js?contenthash=BhSHllp_";
+import { _, _ } from "./dashboardutilities.js?contenthash=DLCFndhk";
+import { _ } from "./grid.js?contenthash=CT4EO7tQ";
+import { _, _, _, _, _ } from "./tabulatorutils.js?contenthash=DsoW0avV";
+import { _, _ } from "./modals.js?contenthash=CSZ9553x";
+import { _ } from "./deckverified.js?contenthash=DRhtzMQN";
+import { _ } from "./axios.js?contenthash=DJSofgRR";
+import { _ } from "./axiosutils.js?contenthash=DGrnkyHA";
+import { _ } from "./historyutils.js?contenthash=HC4tjo4S";
+import { _ } from "./throbber.js?contenthash=8IkzFhw7";
+import { _, _, _, _, _, _, _ } from "./currencyutils.js?contenthash=BN9XPice";
+import { _ } from "./localization2.js?contenthash=dDBRwK40";
+import { _, _ } from "./eventdevfeaturestore.js?contenthash=D6hR68sL";
+import { _, _ } from "./editorlocalizationstore.js?contenthash=CAHej8DH";
+import { _, _ } from "./partnereventshared.module.js?contenthash=Cm499byC";
+import "./steamid.js?contenthash=C36PBsuf";
 import { _, _ } from "./partnereventdialog.module.js?contenthash=Bx2fOKRM";
-import { _, _, _, _, _, _ } from "./creatorhomestore.js?contenthash=B1m-EXl5";
-import { _, _ } from "./simplesuccesserror.js?contenthash=DwQ2OuT3";
-import { _ } from "./storeitemcache.js?contenthash=BObwenaX";
-import { _, _, _, _ } from "./storeitemhooks.js?contenthash=BzHF6TiJ";
-import "./pricinggridcell.js?contenthash=LyzAlx0S";
-import { _, _ } from "./clanstore.js?contenthash=BmJxyVxj";
-import { _ } from "./phpintegration.js?contenthash=CCsRwFZl";
-import { _ } from "./unknownroute.js?contenthash=C2vrZ8Y1";
-import { _, _, _ } from "./adminshared.module.js?contenthash=DQBfJqXN";
+import { _, _, _, _, _, _ } from "./creatorhomestore.js?contenthash=DkXi4hy7";
+import { _, _ } from "./simplesuccesserror.js?contenthash=9YSri4P8";
+import { _ } from "./storeitemcache.js?contenthash=ByJ7OK8B";
+import { _, _, _, _ } from "./storeitemhooks.js?contenthash=DIFv3UjD";
+import "./pricinggridcell.js?contenthash=DAWExG4h";
+import { _, _ } from "./clanstore.js?contenthash=zykDSFH6";
+import { _ } from "./phpintegration.js?contenthash=kK0BRedh";
+import { _ } from "./unknownroute.js?contenthash=CtgV9GMi";
+import { _, _, _ } from "./adminshared.module.js?contenthash=B8TEWtL2";
 import {
   _,
   _,
@@ -218,16 +224,16 @@ import {
   _,
   _,
   _,
-} from "./releasedateinfo.js?contenthash=DAd1DpKc";
-import { _ } from "./storebrowsesetup.js?contenthash=D3C8ffeq";
-import { _ } from "./partnereventshareddates.js?contenthash=BlsNEhTx";
-import { _, _ } from "./languagepicker.js?contenthash=CsFIgnIR";
-import { _ } from "./react-select.cjs.js?contenthash=uGmlgC6g";
-import { _ } from "./reorderablelist.js?contenthash=BLedTbCJ";
-import { _, _ } from "./adminaccount.js?contenthash=D5XEaJ5A";
-import { _ } from "./collapseablesection.js?contenthash=DXFFvw-N";
-import { _ } from "./userprofile.js?contenthash=1PVbQ0GS";
-import { _ } from "./partnerinfostore.js?contenthash=0waiYeuN";
+} from "./releasedateinfo.js?contenthash=CSngTwEL";
+import { _ } from "./storebrowsesetup.js?contenthash=Duwgbgou";
+import { _ } from "./partnereventshareddates.js?contenthash=cXm5wWVg";
+import { _, _ } from "./languagepicker.js?contenthash=Bs6ZaXdf";
+import { _ } from "./react-select.cjs.js?contenthash=DdexvlLh";
+import { _ } from "./reorderablelist.js?contenthash=VFWZEFLH";
+import { _, _ } from "./adminaccount.js?contenthash=BKA24pkT";
+import { _ } from "./collapseablesection.js?contenthash=iYJ3mCLU";
+import { _ } from "./userprofile.js?contenthash=aBOKh071";
+import { _ } from "./partnerinfostore.js?contenthash=Dj2bfcG0";
 import {
   _,
   _,
@@ -246,7 +252,7 @@ import {
   _,
   _,
   _,
-} from "./richgamedescriptioneditor.js?contenthash=DAHb-JkZ";
+} from "./richgamedescriptioneditor.js?contenthash=DhbdUWgx";
 var _ = _({
     Handle: () => _,
     Root: () => _,
@@ -279,7 +285,15 @@ function _(_) {
   });
 }
 function _(_) {
-  let { value: _, onChange: _, size: _ = `2`, color: _, ref: _ } = _;
+  let {
+    value: _,
+    onChange: _,
+    size: _ = `2`,
+    color: _,
+    ref: _,
+    children: _,
+    ..._
+  } = _;
   return (0, _.jsx)(_, {
     ref: _,
     role: `switch`,
@@ -293,12 +307,13 @@ function _(_) {
     "data-accent-color": _,
     ..._(
       {
+        ..._,
         size: _,
         className: _,
       },
       _,
     ),
-    children: _.children,
+    children: _,
   });
 }
 function _(_) {
@@ -1619,11 +1634,11 @@ function _(_) {
 }
 var _ = _.lazy(() =>
   _(
-    () => import(`./richgamedescriptioneditor2.js?contenthash=BmVZOPxk`),
+    () => import(`./richgamedescriptioneditor2.js?contenthash=ZQXOrE1i`),
     __vite__mapDeps([
       0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
       21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38,
-      39, 40, 41, 42, 43, 44,
+      39, 40, 41, 42, 43, 44, 45,
     ]),
     import.meta.url,
   ),
@@ -2081,7 +2096,7 @@ function _(_) {
               (0, _.jsx)(_, {
                 disabled: !_,
                 onClick: () => {
-                  (!_ || _.findIndex((_) => _ === _) == -1) && _(_, _), _(null);
+                  (_ && _.findIndex((_) => _ === _) != -1) || _(_, _), _(null);
                 },
                 children: _(`#Create_Home_Add_App`),
               }),
@@ -4400,6 +4415,7 @@ var _ = `q-hOeY9tNP0-`,
     return _.SendMsg(`SupportAgents.GetQuickText#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 5,
+      rgBrowserAPISites: [`community`],
     });
   }
   _.GetQuickText = _;
@@ -4610,7 +4626,7 @@ function _(_) {
     [_] = _(_),
     [_] = _(_, _),
     _ = (0, _.useMemo)(
-      () => _.InitFromAccountID(_).ConvertTo64BitString(),
+      () => _.InitFromAccountID(_, _.EUNIVERSE).ConvertTo64BitString(),
       [_],
     ),
     [_, _] = (0, _.useState)(() => _?.GetAppID() || 0),
@@ -5615,16 +5631,14 @@ function _(_, _, _, _) {
     for (let _ of [..._].sort((_, _) => _ - _)) {
       let _ = _?.mapAmounts.get(_),
         _ = _?.mapAmounts.get(_);
-      if (_ === void 0 || _ === void 0 || _ === 0) {
-        _++;
-        continue;
-      }
-      _.push({
-        nUSDPricepoint: _,
-        nExistingAmount: _,
-        nStagedAmount: _,
-        flPercentDiff: ((_ - _) / _) * 100,
-      });
+      _ === void 0 || _ === void 0 || _ === 0
+        ? _++
+        : _.push({
+            nUSDPricepoint: _,
+            nExistingAmount: _,
+            nStagedAmount: _,
+            flPercentDiff: ((_ - _) / _) * 100,
+          });
     }
     let _ = _(_, _),
       _ = _(_, _),
@@ -10401,10 +10415,7 @@ function _(_) {
     _ = !0;
   _.forEach((_) => {
     _(_.image_def.name).forEach((_) => {
-      if (!_[_.image_def.name] || !_[_.image_def.name][_]) {
-        _ = !1;
-        return;
-      }
+      (_[_.image_def.name] && _[_.image_def.name][_]) || (_ = !1);
     });
   });
   let _ = _.map((_) =>
@@ -10564,7 +10575,7 @@ function _(_, _, _) {
         partner_id: _,
         link: {
           appid: _,
-          clan_steamid: _.InitFromClanID(_).ConvertTo64BitString(),
+          clan_steamid: _.InitFromClanID(_, _.EUNIVERSE).ConvertTo64BitString(),
           relation: 0,
           linkname: _,
           json: null,
@@ -10584,7 +10595,7 @@ function _(_, _, _) {
         update_json_only: !1,
         link: {
           appid: _,
-          clan_steamid: _.InitFromClanID(_).ConvertTo64BitString(),
+          clan_steamid: _.InitFromClanID(_, _.EUNIVERSE).ConvertTo64BitString(),
           relation: 0,
           linkname: _,
           json: null,
