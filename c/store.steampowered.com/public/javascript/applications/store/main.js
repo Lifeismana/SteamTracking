@@ -3,302 +3,302 @@ const __vite__mapDeps = (
   _ = __vite__mapDeps,
   _ = _._ ||
     (_._ = [
-      "./cartmodal.js?contenthash=AL4bykyf",
+      "./cartmodal.js?contenthash=BtwWt7fR",
       "./rolldown-runtime.js?contenthash=C8f2gWku",
       "./libraries.js?contenthash=CNC_iAx3",
-      "./storelink.js?contenthash=DbXsJvxx",
+      "./storelink.js?contenthash=CT4OJAn1",
       "../../../css/applications/store/storelink.css?contenthash=DfLuucjw",
-      "./saletags.js?contenthash=BwL-6HIw",
+      "./saletags.js?contenthash=BFf2itlN",
       "./usedataloader.client.js?contenthash=BsFeMYKq",
-      "./claninfo.js?contenthash=BlNqCvUQ",
-      "./storeurl.js?contenthash=vS2YFFbY",
-      "./modals.js?contenthash=DpVzH-G7",
-      "./ostype.js?contenthash=hoSDCDrc",
+      "./claninfo.js?contenthash=BYdUAmnu",
+      "./storeurl.js?contenthash=CO_EWN7g",
+      "./modals.js?contenthash=BVi0TInp",
+      "./ostype.js?contenthash=B9AHVZxs",
       "../../../css/applications/store/ostype.css?contenthash=x1XGuNl0",
-      "./microtrailerdisplay.js?contenthash=Dvan3els",
+      "./microtrailerdisplay.js?contenthash=CHEgniJG",
       "../../../css/applications/store/microtrailerdisplay.css?contenthash=Cfa2oe-r",
       "./ajaxhooks.js?contenthash=DzoC2RB5",
       "./historyutils.js?contenthash=DxNfPuHi",
-      "./throbber.js?contenthash=BXPvXAzf",
+      "./throbber.js?contenthash=BBuWBE8U",
       "../../../css/applications/store/throbber.css?contenthash=DMWv5jTr",
       "./stringutils.js?contenthash=Dlrxs4RX",
-      "./linkfilter.js?contenthash=WjEMWTt6",
-      "./saletechredirectsignin.js?contenthash=Dwo6Jpbj",
+      "./linkfilter.js?contenthash=vzeOea3n",
+      "./saletechredirectsignin.js?contenthash=dzCSmv5N",
       "./partnereventshared.module.js?contenthash=C0PbqCeD",
       "../../../css/applications/store/partnereventshared.css?contenthash=BGIA11o9",
-      "./personautils.js?contenthash=CP6saxRY",
-      "./csstransitionwrapper.js?contenthash=DDqjRsoV",
+      "./personautils.js?contenthash=CBUChcmR",
+      "./csstransitionwrapper.js?contenthash=DRKzoLLx",
       "../../../css/applications/store/csstransitionwrapper.css?contenthash=5k1i5yPG",
-      "./remotedownloadhooks.js?contenthash=BwTacque",
-      "./steammessages_clan_pb.js?contenthash=CeloCwA2",
+      "./remotedownloadhooks.js?contenthash=CvJz__jP",
+      "./steammessages_clan_pb.js?contenthash=BpdBBpFP",
       "../../../css/applications/store/saletags.css?contenthash=Be_ydV96",
-      "./simplemodaldialog.js?contenthash=Dj-3dMok",
+      "./simplemodaldialog.js?contenthash=uORCWy2Q",
       "../../../css/applications/store/simplemodaldialog.css?contenthash=BvT1X3Vo",
-      "./platforms.js?contenthash=DCYQhSx7",
+      "./platforms.js?contenthash=sB32o66E",
       "../../../css/applications/store/platforms.css?contenthash=BhPvkM5z",
-      "./packagepricewidget.js?contenthash=iE_WD50C",
+      "./packagepricewidget.js?contenthash=BFTpCdVe",
       "./errors.js?contenthash=D2WFgvrr",
-      "./playerlinkdetailsdataloader.js?contenthash=DYxxKv71",
+      "./playerlinkdetailsdataloader.js?contenthash=CBg3pR3c",
       "../../../css/applications/store/packagepricewidget.css?contenthash=Da5aNf0J",
-      "./privateapps.js?contenthash=MXpV6k3c",
-      "./steammessages_friendslist_pb.js?contenthash=Ckr5PeLS",
-      "./getprofileurl.js?contenthash=Je-SAXMf",
+      "./privateapps.js?contenthash=CuwIoUh7",
+      "./steammessages_friendslist_pb.js?contenthash=CMvIrN9K",
+      "./getprofileurl.js?contenthash=B4zbaDKf",
       "../../../css/applications/store/cartmodal.css?contenthash=D0fUxt9O",
-      "./discoveryqueuewizard.js?contenthash=BQ_65mvW",
-      "./usehotkeys.js?contenthash=BMdzKXKr",
-      "./trailertitlebar.js?contenthash=CEpaQVMB",
-      "./dashplayer.js?contenthash=CDXZinIb",
+      "./discoveryqueuewizard.js?contenthash=CahTkeZW",
+      "./usehotkeys.js?contenthash=B-e_zWh-",
+      "./trailertitlebar.js?contenthash=Bx5VXvv-",
+      "./dashplayer.js?contenthash=CJCuofKu",
       "../../../css/applications/store/trailertitlebar.css?contenthash=DuaZgkVR",
-      "./creatorhomestore.js?contenthash=DtJdi9T2",
-      "./steammessages_salerewards_pb.js?contenthash=9MU3AA3J",
-      "./steammessages_loyalty_rewards_pb.js?contenthash=CIuB2Pju",
-      "./saleclaim.js?contenthash=B2Mlfycz",
-      "./steammessages_quest_pb.js?contenthash=BCfizxcj",
-      "./playerstore.js?contenthash=Bo9QuCb2",
-      "./persona.js?contenthash=CDTNGqtb",
-      "./appinfostore.js?contenthash=CXbnsRHy",
-      "./appinfo.js?contenthash=C1L54-z-",
-      "./storeitemhooks.js?contenthash=DlFAS_az",
-      "./friendsstore.js?contenthash=CAh5SwAF",
-      "./trailerdefines.js?contenthash=EHQ9gdGn",
-      "./trailerstate.js?contenthash=DKwE4rLT",
+      "./creatorhomestore.js?contenthash=DkHb5QiC",
+      "./steammessages_salerewards_pb.js?contenthash=DHSJBkK0",
+      "./steammessages_loyalty_rewards_pb.js?contenthash=quHMNeZt",
+      "./saleclaim.js?contenthash=ImR3smz9",
+      "./steammessages_quest_pb.js?contenthash=Bb5plZ4b",
+      "./playerstore.js?contenthash=lGcRdLlj",
+      "./persona.js?contenthash=C26wfOwA",
+      "./appinfostore.js?contenthash=LywnHE1d",
+      "./appinfo.js?contenthash=DgDnOi0m",
+      "./storeitemhooks.js?contenthash=DKELK37y",
+      "./friendsstore.js?contenthash=BlDS66D4",
+      "./trailerdefines.js?contenthash=Vhpxpauq",
+      "./trailerstate.js?contenthash=BblLs3yi",
       "../../../css/applications/store/trailerdefines.css?contenthash=Bs2i6rUJ",
-      "./discoveryqueuestore.js?contenthash=DSmVyml9",
-      "./clanstore.js?contenthash=C79A98Cs",
-      "./steamavatar.js?contenthash=CMI9swrX",
+      "./discoveryqueuestore.js?contenthash=BLzMP0BG",
+      "./clanstore.js?contenthash=SgX6q-Kn",
+      "./steamavatar.js?contenthash=j0XKQuXg",
       "./multisourceimage.js?contenthash=BKu7brjS",
       "../../../css/applications/store/steamavatar.css?contenthash=BQtkhJsu",
-      "./personanameandstatus.js?contenthash=CEImKD8t",
+      "./personanameandstatus.js?contenthash=CdB2Xqta",
       "./enums_epersonastateflag.js?contenthash=DUdzI8yJ",
-      "./alternate_icons.js?contenthash=B_Ywhusu",
+      "./alternate_icons.js?contenthash=D9ehoKlf",
       "../../../css/applications/store/personanameandstatus.css?contenthash=BMiL-wHD",
-      "./apprelevancestore.js?contenthash=CR3iWXDz",
-      "./steammessages_user_reviews_pb.js?contenthash=DH6RmREP",
-      "./storequery.js?contenthash=_UAMbXTF",
+      "./apprelevancestore.js?contenthash=BQzyr5kR",
+      "./steammessages_user_reviews_pb.js?contenthash=9BeF_kXG",
+      "./storequery.js?contenthash=F7QRsT8C",
       "../../../css/applications/store/discoveryqueuewizard.css?contenthash=DNHiRW-y",
-      "./greenenvelope.js?contenthash=DaNa4LgB",
-      "./textfilterstore.js?contenthash=CPkPWTYQ",
-      "./steamnotifications.js?contenthash=CfCYeop3",
-      "./steammessages_familygroups_pb.js?contenthash=D15LowAE",
-      "./familymanagementstore.js?contenthash=BV4bva5N",
+      "./greenenvelope.js?contenthash=CRBymoc4",
+      "./textfilterstore.js?contenthash=D0_77alm",
+      "./steamnotifications.js?contenthash=CcpEF6JT",
+      "./steammessages_familygroups_pb.js?contenthash=Bibdcq4e",
+      "./familymanagementstore.js?contenthash=BZTcHnou",
       "../../../css/applications/store/greenenvelope.css?contenthash=CwRZqDdO",
-      "./accountpreferences.js?contenthash=B16zNYnx",
-      "./image.js?contenthash=BtrZ2hNg",
+      "./accountpreferences.js?contenthash=D5-g6_vg",
+      "./image.js?contenthash=DYQsw1Sy",
       "../../../css/applications/store/image.css?contenthash=Bz5G2wgD",
-      "./eventdevfeaturestore.js?contenthash=Dosr9jZG",
+      "./eventdevfeaturestore.js?contenthash=ByHYBzVE",
       "./moment.js?contenthash=Csw2oUrB",
       "./eventtime.js?contenthash=CazMM9P8",
-      "./steammessages_twofactor_pb.js?contenthash=BoDSXqQA",
-      "./playteststore.js?contenthash=C4AHQegU",
+      "./steammessages_twofactor_pb.js?contenthash=S88bSi0e",
+      "./playteststore.js?contenthash=Dz_OJboa",
       "../../../css/applications/store/accountpreferences.css?contenthash=D7hF2O99",
-      "./apppageroutes.js?contenthash=BrEfCjUK",
-      "./salesectionfactory.js?contenthash=DMnvEmui",
-      "./clanimagemodels.js?contenthash=BHyTwuUV",
-      "./storetypes.js?contenthash=CMOvLkKd",
-      "./salecapsuleutils.js?contenthash=BzCaaQng",
-      "./partnerevent.js?contenthash=CH-hclGb",
-      "./steammessages_storesales_pb.js?contenthash=DYp570O9",
-      "./storedisplayutils.js?contenthash=CmSKAOKY",
-      "./linkwidget.js?contenthash=CNMzQdmV",
-      "./salestoreitemutils.js?contenthash=Bs0dpdBf",
+      "./apppageroutes.js?contenthash=CdeZD0Sw",
+      "./salesectionfactory.js?contenthash=BABjmWK3",
+      "./clanimagemodels.js?contenthash=DiIu-oYR",
+      "./storetypes.js?contenthash=DhTHl2We",
+      "./salecapsuleutils.js?contenthash=IG3IW4JW",
+      "./partnerevent.js?contenthash=BC1Zh7lt",
+      "./steammessages_storesales_pb.js?contenthash=DB9Aa6iG",
+      "./storedisplayutils.js?contenthash=-_8lxoES",
+      "./linkwidget.js?contenthash=avVGVQYc",
+      "./salestoreitemutils.js?contenthash=CqX2dldI",
       "../../../css/applications/store/salestoreitemutils.css?contenthash=B_wiSyrO",
-      "./salepreviewwidgets.js?contenthash=Cgpb7spU",
-      "./saleghostsections.js?contenthash=Dm8ouj_0",
+      "./salepreviewwidgets.js?contenthash=DIP0tAwW",
+      "./saleghostsections.js?contenthash=DgBxZwZL",
       "../../../css/applications/store/saleghostsections.css?contenthash=D8ztTDeg",
       "../../../css/applications/store/salepreviewwidgets.css?contenthash=DQqwCWkV",
-      "./saleitemlibrarywidget.js?contenthash=BqNRkZYO",
-      "./salehilightplayerembed.js?contenthash=CrZgWXgb",
+      "./saleitemlibrarywidget.js?contenthash=DkWzsHWN",
+      "./salehilightplayerembed.js?contenthash=BUOnLCLo",
       "../../../css/applications/store/salehilightplayerembed.css?contenthash=CVulRoZH",
-      "./storegamehover.js?contenthash=CCIKt_bS",
+      "./storegamehover.js?contenthash=CfjD8iIQ",
       "./eventtimeoverridecontext.js?contenthash=7_wzUMBF",
-      "./carouselarrows.js?contenthash=BjD0keqE",
-      "./lazyrenderchildren.js?contenthash=Cq31jZe5",
+      "./carouselarrows.js?contenthash=we9zfv_T",
+      "./lazyrenderchildren.js?contenthash=BOizCTYJ",
       "../../../css/applications/store/carouselarrows.css?contenthash=MMQUAYJ6",
       "./eventbbcodeparser.module.js?contenthash=D03oUoMo",
       "../../../css/applications/store/eventbbcodeparser.css?contenthash=FYygt-Ay",
-      "./eventimageurlwithfallback.js?contenthash=zI52em2p",
-      "./partnereventutils.js?contenthash=Jp3oK1Vv",
-      "./creatorhomegamelock.js?contenthash=gOVdHNHs",
-      "./seemorebutton.js?contenthash=DAgMktN7",
+      "./eventimageurlwithfallback.js?contenthash=_x5SgueT",
+      "./partnereventutils.js?contenthash=eAAjtZrw",
+      "./creatorhomegamelock.js?contenthash=DPhHez6x",
+      "./seemorebutton.js?contenthash=DKoGtJ0c",
       "../../../css/applications/store/seemorebutton.css?contenthash=DYI1XCAJ",
       "./partnereventeditorcontext.js?contenthash=7ktT_-1F",
-      "./bottomrow.js?contenthash=BVJuuo3I",
-      "./salewishlistbutton.js?contenthash=Cz0Irovr",
+      "./bottomrow.js?contenthash=Bm16_a6a",
+      "./salewishlistbutton.js?contenthash=DiUUU4Nb",
       "../../../css/applications/store/bottomrow.css?contenthash=DNE8Jawn",
       "./crosspromotesalelayouts.module.js?contenthash=UeFIpvly",
       "../../../css/applications/store/crosspromotesalelayouts.css?contenthash=DmTUcewB",
       "../../../css/applications/store/linkwidget.css?contenthash=BXDgWKiD",
-      "./clanimage.js?contenthash=a7NYj9TL",
-      "./apppartnereventspage.js?contenthash=R1be25bL",
-      "./meetsteamclanid.js?contenthash=DZu4IRXi",
-      "./eventlink.js?contenthash=Bz6Kkw0k",
-      "./textlink.js?contenthash=vkF_OiBK",
+      "./clanimage.js?contenthash=Zqz9L8St",
+      "./apppartnereventspage.js?contenthash=B3rf8YwV",
+      "./meetsteamclanid.js?contenthash=BRQzDOR7",
+      "./eventlink.js?contenthash=BcBuiW0N",
+      "./textlink.js?contenthash=B3vk9ZcR",
       "../../../css/applications/store/textlink.css?contenthash=CMU1nJhL",
       "./moment-timezone.js?contenthash=CS-Pe3Jt",
-      "./basicbbcodeparser.js?contenthash=DEaM5nn6",
-      "./youtubeplayer.js?contenthash=C8Uie3-9",
+      "./basicbbcodeparser.js?contenthash=B9epQQWh",
+      "./youtubeplayer.js?contenthash=Bry-n0F4",
       "../../../css/applications/store/basicbbcodeparser.css?contenthash=CpqvhQpZ",
-      "./simplesuccesserror.js?contenthash=DOreQS3n",
+      "./simplesuccesserror.js?contenthash=DF8H__wd",
       "../../../css/applications/store/simplesuccesserror.css?contenthash=CX73M240",
-      "./loyaltyrewarddefs.js?contenthash=CC2REZBk",
-      "./presenterpopup.js?contenthash=Xt-OFLqR",
+      "./loyaltyrewarddefs.js?contenthash=iTe7YsGp",
+      "./presenterpopup.js?contenthash=CGGt9FgF",
       "../../../css/applications/store/presenterpopup.css?contenthash=9gzV0KUA",
       "../../../css/applications/store/loyaltyrewarddefs.css?contenthash=BNxyj1uj",
-      "./steammessages_experiments_pb.js?contenthash=CGVIYpCs",
+      "./steammessages_experiments_pb.js?contenthash=CJk_545r",
       "./discussionwidget.module.js?contenthash=8l9ZDZN1",
       "../../../css/applications/store/discussionwidget.css?contenthash=2bhRMVOg",
-      "./socialmediadisplay.js?contenthash=C5DGq-pw",
+      "./socialmediadisplay.js?contenthash=BHXe4plS",
       "../../../css/applications/store/socialmediadisplay2.css?contenthash=Dh9bHAG0",
-      "./partnereventstore.js?contenthash=DavqrrOc",
-      "./display.js?contenthash=BS8R8lIW",
-      "./eventadminpanel.js?contenthash=BkXgNOep",
-      "./event.js?contenthash=BALSH95J",
-      "./eventinitialization.js?contenthash=DDQSEb7O",
-      "./giveawaystore.js?contenthash=Cfr5r7mN",
+      "./partnereventstore.js?contenthash=Bn2UGor2",
+      "./display.js?contenthash=Bwif09Zq",
+      "./eventadminpanel.js?contenthash=Cr4-QALX",
+      "./event.js?contenthash=1FS_FFBD",
+      "./eventinitialization.js?contenthash=5jiGQRwp",
+      "./giveawaystore.js?contenthash=BDGwv1td",
       "../../../css/applications/store/eventinitialization.css?contenthash=C9FUyf8x",
-      "./salebanner.js?contenthash=CkxKdkIB",
+      "./salebanner.js?contenthash=nqppFJri",
       "../../../css/applications/store/salebanner.css?contenthash=4Er4A1Al",
-      "./eventinfinitescrollmodal.js?contenthash=eomUd0SA",
-      "./basicpartnereventrender.js?contenthash=uI-5-Lr0",
+      "./eventinfinitescrollmodal.js?contenthash=DESGCYDv",
+      "./basicpartnereventrender.js?contenthash=C4DXtT49",
       "../../../css/applications/store/basicpartnereventrender.css?contenthash=D7DGW4t0",
-      "./breadcrumbs.js?contenthash=BAXHryJQ",
+      "./breadcrumbs.js?contenthash=BvZdwX3b",
       "../../../css/applications/store/breadcrumbs.css?contenthash=DOhkWeLV",
       "../../../css/applications/store/event.css?contenthash=sDZA1FD5",
       "../../../css/applications/store/display.css?contenthash=CdgDXhGP",
-      "./expanderbutton.js?contenthash=DGl4aNoJ",
+      "./expanderbutton.js?contenthash=UMMUEc9N",
       "../../../css/applications/store/expanderbutton.css?contenthash=7EgfjSu7",
-      "./meetsteamregistrationhooks.js?contenthash=BiiUAkqD",
+      "./meetsteamregistrationhooks.js?contenthash=QCXT1L4M",
       "../../../css/applications/store/apppartnereventspage.css?contenthash=Dr0_4Npx",
-      "./slider.js?contenthash=DXV4pPPD",
+      "./slider.js?contenthash=CCY0D_l8",
       "../../../css/applications/store/slider.css?contenthash=DZg5eYMH",
-      "./playtime.js?contenthash=CSbSoa-o",
-      "./contentdescriptors.js?contenthash=B436g94H",
-      "./unstyledbutton.js?contenthash=RqOcWnrR",
+      "./playtime.js?contenthash=Brv9Hprk",
+      "./contentdescriptors.js?contenthash=D_TcbCj1",
+      "./unstyledbutton.js?contenthash=UZuPQKF9",
       "../../../css/applications/store/unstyledbutton.css?contenthash=gyADGWNL",
-      "./reviewajax.js?contenthash=DmdXaLoO",
+      "./reviewajax.js?contenthash=DViMvz7y",
       "./twitter_large.js?contenthash=B1ZONb_o",
-      "./preloaddiscoveryqueue.js?contenthash=DdWjFkaW",
-      "./personalcalendarstore.js?contenthash=DiGuosj4",
-      "./assetutils.js?contenthash=DZIoHTsZ",
-      "./broadcastwatchstore.js?contenthash=DAONqRQK",
-      "./broadcast_embeddable.js?contenthash=39GBrcc3",
-      "./discoveryqueuewidget.js?contenthash=Bc8xkKAz",
+      "./preloaddiscoveryqueue.js?contenthash=D5utjTUj",
+      "./personalcalendarstore.js?contenthash=DwSwGMgB",
+      "./assetutils.js?contenthash=DN7K__ze",
+      "./broadcastwatchstore.js?contenthash=BbmfM8YX",
+      "./broadcast_embeddable.js?contenthash=Br22h477",
+      "./discoveryqueuewidget.js?contenthash=Cw7MXzHQ",
       "../../../css/applications/store/discoveryqueuewidget.css?contenthash=ua8QaOU5",
-      "./videoautopauseonblur.js?contenthash=KLQV1Umw",
-      "./curatorliststore.js?contenthash=LMBF1ziI",
-      "./summersale2021store.js?contenthash=pmjLPIXB",
+      "./videoautopauseonblur.js?contenthash=B5sBqR3P",
+      "./curatorliststore.js?contenthash=BMHGw2Ls",
+      "./summersale2021store.js?contenthash=DxG9rb_g",
       "../../../css/applications/store/salesectionfactory2.css?contenthash=B-QY6ADe",
-      "./openindesktopclient.js?contenthash=1SHTPDKG",
+      "./openindesktopclient.js?contenthash=DwVJLxdl",
       "../../../css/applications/store/openindesktopclient.css?contenthash=bPPH27CU",
-      "./heading.js?contenthash=TwVB-B0g",
+      "./heading.js?contenthash=BZ_3wmLH",
       "../../../css/applications/store/heading.css?contenthash=BUJSDlhm",
-      "./storepagebbcoderenderer.js?contenthash=DJgPXZ5Q",
+      "./storepagebbcoderenderer.js?contenthash=DS901O0Y",
       "../../../css/applications/store/storepagebbcoderenderer.css?contenthash=BfgznInJ",
-      "./hoversource.js?contenthash=Bp_iBrHV",
+      "./hoversource.js?contenthash=DrCi4B1h",
       "../../../css/applications/store/hoversource.css?contenthash=CmLumJCG",
       "./partnereventwebrowembed.module.js?contenthash=BbLTd0pP",
       "../../../css/applications/store/partnereventwebrowembed.css?contenthash=H5Zt-BDK",
-      "./gameratingblock.js?contenthash=IYEb7cJU",
+      "./gameratingblock.js?contenthash=wTFPFUPw",
       "../../../css/applications/store/gameratingblock.css?contenthash=DqYKDsin",
-      "./accessibilityfeaturedisplay.js?contenthash=opavXqix",
+      "./accessibilityfeaturedisplay.js?contenthash=f9qtAp-p",
       "../../../css/applications/store/accessibilityfeaturedisplay.css?contenthash=CBO0OcyN",
-      "./storeitemscarousel.js?contenthash=BXhfBY2d",
+      "./storeitemscarousel.js?contenthash=OYuU-sqK",
       "../../../css/applications/store/storeitemscarousel.css?contenthash=y4wStNBI",
-      "./achievementiconbase.js?contenthash=DAuuzvQi",
+      "./achievementiconbase.js?contenthash=B9bGJnhM",
       "../../../css/applications/store/achievementiconbase.css?contenthash=RWvgrgyv",
-      "./communityitemstore.js?contenthash=wTHuF7F3",
+      "./communityitemstore.js?contenthash=DKJ6_tzA",
       "../../../css/applications/store/apppageroutes.css?contenthash=D8W0oWYY",
-      "./storesalecrosspromo.js?contenthash=IL1y9Ofp",
-      "./crosspromotesalelayouts.js?contenthash=CIfiq1jf",
-      "./fakesalehelper.js?contenthash=CQtNfnIQ",
+      "./storesalecrosspromo.js?contenthash=Czc4t2XM",
+      "./crosspromotesalelayouts.js?contenthash=D7Ug7cYI",
+      "./fakesalehelper.js?contenthash=Cz-7ruHA",
       "../../../css/applications/store/storesalecrosspromo.css?contenthash=DSIyMdrr",
-      "./broadcast_embeddable2.js?contenthash=CvtKdneU",
-      "./emoticonbutton.js?contenthash=Bn2NKFF5",
+      "./broadcast_embeddable2.js?contenthash=DxKm1yGF",
+      "./emoticonbutton.js?contenthash=Dvg3Jvbi",
       "../../../css/applications/store/emoticonbutton.css?contenthash=B6G7iskw",
       "./reddit_large.js?contenthash=D5GO_kvG",
-      "./partnereventslogin.js?contenthash=DnZFMV5Y",
-      "./logindialog.js?contenthash=DlKKPeY_",
+      "./partnereventslogin.js?contenthash=BYaBwun6",
+      "./logindialog.js?contenthash=BqrzHBHZ",
       "../../../css/applications/store/logindialog.css?contenthash=Bt4FceDh",
-      "./broadcastplayer.js?contenthash=CxEiM6UY",
-      "./linkregionbox.js?contenthash=DH2xRw_z",
+      "./broadcastplayer.js?contenthash=BIInn1KJ",
+      "./linkregionbox.js?contenthash=Dp2Q8jnF",
       "../../../css/applications/store/linkregionbox.css?contenthash=HkLONVRS",
       "../../../css/applications/store/broadcastplayer.css?contenthash=CpXHqlNI",
       "../../../css/applications/store/broadcast_embeddable.css?contenthash=K21X5ksR",
-      "./categoriesapp.js?contenthash=CBlZFmkX",
+      "./categoriesapp.js?contenthash=CTLVDq1Y",
       "../../../css/applications/store/categoriesapp.css?contenthash=CO1dXxh5",
-      "./curatoradmin.js?contenthash=BKkMTeHR",
-      "./managerss.js?contenthash=DYskRMSG",
+      "./curatoradmin.js?contenthash=znIcVScM",
+      "./managerss.js?contenthash=BG_tlwV2",
       "../../../css/applications/store/managerss.css?contenthash=BZ9_BXhu",
-      "./creatorhomeevent.js?contenthash=DLzwpkl7",
-      "./storesaledisplay.js?contenthash=VnfvixSf",
-      "./partnersaledisplay.js?contenthash=C9XIroPh",
-      "./languagepicker.js?contenthash=DoXOqdFG",
-      "./clanimageupload.js?contenthash=DaQMw2Av",
+      "./creatorhomeevent.js?contenthash=BjPTK295",
+      "./storesaledisplay.js?contenthash=QCdeBN6u",
+      "./partnersaledisplay.js?contenthash=DW-him0u",
+      "./languagepicker.js?contenthash=DK2EyID3",
+      "./clanimageupload.js?contenthash=DJH_N_LQ",
       "../../../css/applications/store/clanimageupload.css?contenthash=NERScwG6",
       "../../../css/applications/store/languagepicker.css?contenthash=VOuU2aUz",
-      "./collapseablesection.js?contenthash=BvOjqjUO",
+      "./collapseablesection.js?contenthash=CXr2ZwCn",
       "../../../css/applications/store/collapseablesection.css?contenthash=CY5rgv5g",
       "./cross.js?contenthash=BC8w4gvU",
       "../../../css/applications/store/partnersaledisplay.css?contenthash=Dnw8vmER",
-      "./socialmedialinkeditor.js?contenthash=DB7Aqybe",
+      "./socialmedialinkeditor.js?contenthash=CCwvaJmj",
       "./reorderablelist.module.js?contenthash=DIWrvg5V",
       "../../../css/applications/store/reorderablelist.css?contenthash=Dt2Mlogs",
       "../../../css/applications/store/socialmedialinkeditor.css?contenthash=Dmc30DqN",
-      "./adminediteventlink.js?contenthash=D9ONXln4",
+      "./adminediteventlink.js?contenthash=SIZcvKDG",
       "../../../css/applications/store/adminediteventlink.css?contenthash=C2oFfRXK",
-      "./socialmediadisplay2.js?contenthash=CPqwcFaB",
+      "./socialmediadisplay2.js?contenthash=Bn83JdmB",
       "../../../css/applications/store/socialmediadisplay.css?contenthash=lvZ9PcIP",
-      "./curatorlist.js?contenthash=DNv9cbq0",
+      "./curatorlist.js?contenthash=BRWqEG6V",
       "../../../css/applications/store/curatorlist.css?contenthash=CtOBuRmd",
-      "./discoveryqueuelabbutton.js?contenthash=C88eb_oC",
-      "./discoveryqueuehomebanner.js?contenthash=BalOT4Vf",
-      "./personalcalendarhome.js?contenthash=B_oi9rFS",
+      "./discoveryqueuelabbutton.js?contenthash=2ayIrRAt",
+      "./discoveryqueuehomebanner.js?contenthash=D3Nhn7ad",
+      "./personalcalendarhome.js?contenthash=DEh4dVdv",
       "../../../css/applications/store/personalcalendarhome.css?contenthash=bzOZVanC",
-      "./discountsandeventshome.js?contenthash=83VEJqx7",
+      "./discountsandeventshome.js?contenthash=DudZJLha",
       "../../../css/applications/store/discountsandeventshome.css?contenthash=B87XA4At",
-      "./eventadmin.js?contenthash=DfbYTZ6t",
+      "./eventadmin.js?contenthash=DuPugaLR",
       "./react-datetime.js?contenthash=CIC02Ql_",
       "../../../css/applications/store/react-datetime.css?contenthash=BLBSEpof",
       "../../../css/applications/store/eventadmin.css?contenthash=BlyHWfJz",
-      "./join.js?contenthash=D5YZ0WnC",
+      "./join.js?contenthash=BG3V1BIW",
       "../../../css/applications/store/join.css?contenthash=wNS6eotm",
-      "./login.js?contenthash=B1VcI5ud",
+      "./login.js?contenthash=B-aFE-_w",
       "../../../css/applications/store/login.css?contenthash=jA_WOr-r",
-      "./loyalty.js?contenthash=DkFgq8Rj",
-      "./rewardsshop.js?contenthash=B6GvL8rs",
-      "./layout.js?contenthash=DdFM6FeZ",
+      "./loyalty.js?contenthash=iqB_sNIP",
+      "./rewardsshop.js?contenthash=D6Pt59Ij",
+      "./layout.js?contenthash=Gq1Nutfz",
       "../../../css/applications/store/layout.css?contenthash=CjyZtTRZ",
-      "./focusablelink.js?contenthash=CONA4pvf",
+      "./focusablelink.js?contenthash=DB9g8IDp",
       "../../../css/applications/store/rewardsshop.css?contenthash=Do0vaxbI",
       "../../../css/applications/store/loyalty.css?contenthash=D-htL8iw",
-      "./marketingmessages.js?contenthash=BP9mMI5M",
-      "./marketingmessageutilhooks.js?contenthash=Br9415nT",
+      "./marketingmessages.js?contenthash=DB0Q12XE",
+      "./marketingmessageutilhooks.js?contenthash=CUwWIojq",
       "./browserpage.js?contenthash=DZwKD9Hs",
       "../../../css/applications/store/marketingmessageutilhooks.css?contenthash=D6-TF7Mf",
-      "./meetsteamrouter.js?contenthash=DKo5qL1t",
-      "./useavatarandpersona.js?contenthash=mqAKroqo",
-      "./userprofile.js?contenthash=Dm46XbM6",
+      "./meetsteamrouter.js?contenthash=BZ-3U9vY",
+      "./useavatarandpersona.js?contenthash=cOm5647R",
+      "./userprofile.js?contenthash=DyRHmzHS",
       "../../../css/applications/store/userprofile.css?contenthash=CVciQcNY",
       "../../../css/applications/store/meetsteamrouter.css?contenthash=DEa8f8RO",
-      "./steamcharts.js?contenthash=sSZP3TdW",
+      "./steamcharts.js?contenthash=C7tl9B2y",
       "../../../css/applications/store/steamcharts.css?contenthash=BcnFRlwp",
-      "./summersale2021story.js?contenthash=B2MwkH2I",
+      "./summersale2021story.js?contenthash=BUksz4gR",
       "../../../css/applications/store/summersale2021story.css?contenthash=CL7TXiqk",
-      "./verifiedoldlandingpage.js?contenthash=C5bxykUz",
+      "./verifiedoldlandingpage.js?contenthash=BLEIUG2b",
       "../../../css/applications/store/verifiedoldlandingpage.css?contenthash=DoVHMR1z",
-      "./yearinreview.js?contenthash=BAHHEXtW",
-      "./sharewithfriends.js?contenthash=4us8G3pE",
+      "./yearinreview.js?contenthash=1xGTqZd8",
+      "./sharewithfriends.js?contenthash=C-snDkgh",
       "../../../css/applications/store/sharewithfriends.css?contenthash=DhburNaQ",
-      "./localization.js?contenthash=CdRaN7sO",
+      "./localization.js?contenthash=C0fDYex2",
       "../../../css/applications/store/localization.css?contenthash=NnxrWCOH",
       "../../../css/applications/store/yearinreview.css?contenthash=l97HveUa",
-      "./src.js?contenthash=4p0Rw87m",
+      "./src.js?contenthash=BHLLnm6H",
       "../../../css/applications/store/src.css?contenthash=DBPO-NvL",
-      "./gameexplorer.js?contenthash=C0LZPhmj",
+      "./gameexplorer.js?contenthash=DsCdq4SE",
       "../../../css/applications/store/gameexplorer.css?contenthash=BJg3pUoj",
-      "./recommenderdemos.js?contenthash=Dh4MTjt7",
-      "../../../css/applications/store/recommenderdemos.css?contenthash=DdqSMn1Q",
-      "./labssandbox.js?contenthash=CzI1g7iD",
+      "./recommenderdemos.js?contenthash=B8jWck0f",
+      "../../../css/applications/store/recommenderdemos.css?contenthash=AJpZv6QO",
+      "./labssandbox.js?contenthash=tr1dy4AK",
       "../../../css/applications/store/labssandbox.css?contenthash=CSRsHu8N",
     ]),
 ) => _.map((_) => _[_]);
@@ -418,9 +418,9 @@ function _(_) {
   return _ == 5 || _ == 6;
 }
 var _ = 268440,
-  eee = `18446744073709551615`,
-  tee = 2147483647,
-  nee = [
+  _ = `18446744073709551615`,
+  eee = 2147483647,
+  tee = [
     [`None`, `none`, -1],
     [`Afrikaans`, `afrikaans`, 0],
     [`Albanian`, `albanian`, 1],
@@ -502,7 +502,7 @@ var _ = 268440,
     eAdditionalLanguage: _[2],
   }));
 function _(_) {
-  return nee.find((_) => _.eAdditionalLanguage == _)?.shortName ?? `unknown`;
+  return tee.find((_) => _.eAdditionalLanguage == _)?.shortName ?? `unknown`;
 }
 function _(_, _ = `en`) {
   switch (_) {
@@ -1913,7 +1913,7 @@ var _ = class {
       return `CMsgProtoBufHeader`;
     }
   },
-  ree = class _ extends _.Message {
+  nee = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
       super(),
@@ -2117,7 +2117,7 @@ var _ = class {
       return `CLocalizationToken`;
     }
   },
-  iee = class _ extends _.Message {
+  ree = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
       super(),
@@ -2221,7 +2221,7 @@ var _ = class {
       return `CClanEventUserNewsTuple`;
     }
   },
-  aee = class _ extends _.Message {
+  iee = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
       super(),
@@ -2252,7 +2252,7 @@ var _ = class {
             },
             events: {
               _: 4,
-              _: iee,
+              _: ree,
               _: !0,
               _: !0,
             },
@@ -2296,7 +2296,7 @@ var _ = class {
       return `CClanMatchEventByRange`;
     }
   },
-  oee = class _ extends _.Message {
+  aee = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
       super(),
@@ -5735,7 +5735,7 @@ var _ = class {
     `e`,
     `f`,
   ];
-function see(_) {
+function oee(_) {
   let _ = ``;
   for (let _ = 0; _ < _.length; _++) {
     let _ = _[_];
@@ -5743,7 +5743,7 @@ function see(_) {
   }
   return _;
 }
-var cee = class _ {
+var see = class _ {
     static InitHeaderFromPacket(_) {
       return new _(void 0, _);
     }
@@ -5873,7 +5873,7 @@ var cee = class _ {
     }
     DEBUG_LogToConsole() {}
   },
-  _ = class _ extends cee {
+  _ = class _ extends see {
     constructor(_, _ = 0, _, _, _) {
       super(_, _, _, _, void 0, _);
     }
@@ -5910,7 +5910,7 @@ function _(_, _, _) {
     _
   );
 }
-var lee = class _ extends _.Message {
+var cee = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
       super(),
@@ -5969,7 +5969,7 @@ var lee = class _ extends _.Message {
       return `SteamAward_Localization`;
     }
   },
-  uee = class _ extends _.Message {
+  lee = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
       super(),
@@ -5990,7 +5990,7 @@ var lee = class _ extends _.Message {
             },
             localization: {
               _: 2,
-              _: lee,
+              _: cee,
             },
             award_year: {
               _: 3,
@@ -6037,7 +6037,7 @@ var lee = class _ extends _.Message {
       return `SteamAward`;
     }
   },
-  dee = class _ extends _.Message {
+  uee = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
       super(),
@@ -6101,7 +6101,7 @@ var lee = class _ extends _.Message {
       return `CSeasonPassDateAndDisplay`;
     }
   },
-  fee = class _ extends _.Message {
+  dee = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
       super(),
@@ -6138,7 +6138,7 @@ var lee = class _ extends _.Message {
             },
             dates: {
               _: 5,
-              _: dee,
+              _: uee,
               _: !0,
               _: !0,
             },
@@ -6214,7 +6214,7 @@ var lee = class _ extends _.Message {
       return `CSeasonPassMilestone`;
     }
   },
-  pee = class _ extends _.Message {
+  fee = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
       super(),
@@ -6235,7 +6235,7 @@ var lee = class _ extends _.Message {
             },
             milestones: {
               _: 2,
-              _: fee,
+              _: dee,
               _: !0,
               _: !0,
             },
@@ -6303,7 +6303,7 @@ var lee = class _ extends _.Message {
             },
             store_filters: {
               _: 3,
-              _: mee,
+              _: pee,
               _: !0,
               _: !0,
             },
@@ -6563,7 +6563,7 @@ var lee = class _ extends _.Message {
       return `CStorePageFilter_ContentHubFilter_OptInInfo`;
     }
   },
-  mee = class _ extends _.Message {
+  pee = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
       super(),
@@ -9514,7 +9514,7 @@ var _ = class _ extends _.Message {
           fields: {
             steam_award: {
               _: 1,
-              _: uee,
+              _: lee,
               _: !0,
               _: !0,
             },
@@ -9618,7 +9618,7 @@ var _ = class _ extends _.Message {
             },
             season_pass: {
               _: 21,
-              _: pee,
+              _: fee,
             },
             links_and_info: {
               _: 22,
@@ -14069,10 +14069,10 @@ var _ = void 0;
 function _() {
   return (_ ??= Promise.all(_));
 }
-function hee(_) {
+function _(_) {
   (_ ??= new Set()), _.add(_), (_ = Promise.all(_));
 }
-var gee = {
+var mee = {
   5: `_Guide`,
   10: `_Hardware`,
   4: `_DLC`,
@@ -14080,14 +14080,14 @@ var gee = {
   8: `_Series`,
   1: `_Demo`,
 };
-function _ee(_, _, _) {
+function hee(_, _, _) {
   switch (_) {
     case 6:
       return _ + `_Software`;
     case 7:
       return _ + `_Video`;
   }
-  let _ = gee[_];
+  let _ = mee[_];
   return _ && _(_ + _) ? _ + _ : _;
 }
 function _(_) {
@@ -14121,7 +14121,7 @@ function _(_) {
   _.then(() => (_ = !0)).catch((_) => {
     console.error(`LoadStrings error`, _), (_ = !0);
   }),
-    hee(_);
+    _(_);
   function _(_, _) {
     let [_, ..._] = _,
       _ =
@@ -14183,7 +14183,7 @@ function _(_) {
       return _(_ === 1 || _ === `1` ? _ : _ + `_Plural`, _, ..._);
     },
     GetAppTypeLocKey(_, _) {
-      return _ee(_, _, _);
+      return hee(_, _, _);
     },
     GetAppTypePluralLocKey(_, _) {
       switch (_) {
@@ -14219,20 +14219,20 @@ function _() {
     ],
   };
 }
-var vee = (function () {
+var gee = (function () {
     let _ = typeof document < `u` && document.createElement(`link`).relList;
     return _ && _.supports && _.supports(`modulepreload`)
       ? `modulepreload`
       : `preload`;
   })(),
-  yee = function (_, _) {
+  _ee = function (_, _) {
     return new URL(_, _).href;
   },
-  bee = {},
-  xee = function (_) {
+  vee = {},
+  yee = function (_) {
     return _.pathname.endsWith(`.css`);
   },
-  See = function (_, _, _) {
+  bee = function (_, _, _) {
     if (_ in _) return _[_];
     let _ = _();
     if (!_) {
@@ -14278,10 +14278,10 @@ var vee = (function () {
       }
       _ = _(
         _.map((_) => {
-          _ = yee(_, _);
+          _ = _ee(_, _);
           let _ = _(_),
-            _ = xee(_);
-          return See(bee, _.href, () => {
+            _ = yee(_);
+          return bee(vee, _.href, () => {
             if (_ === void 0) {
               _ = {
                 all: new Set(),
@@ -14297,7 +14297,7 @@ var vee = (function () {
             if ((_ ? _.styles : _.all).has(_.href)) return;
             let _ = document.createElement(`link`);
             if (
-              ((_.rel = _ ? `stylesheet` : vee),
+              ((_.rel = _ ? `stylesheet` : gee),
               _ || (_._ = `script`),
               (_.crossOrigin = ``),
               (_.href = _.href),
@@ -14520,10 +14520,10 @@ var vee = (function () {
       [],
       import.meta.url,
     ));
-async function Cee(_) {
+async function xee(_) {
   if (_[_]) return await _[_]();
 }
-var _ = _(Cee),
+var _ = _(xee),
   _ = {
     PerYear: 31536e3,
     PerMonth: 2628e3,
@@ -14532,17 +14532,17 @@ var _ = _(Cee),
     PerHour: 3600,
     PerMinute: 60,
   };
-function wee(_, _) {
+function See(_, _) {
   return (
     _.getFullYear() == _.getFullYear() &&
     _.getMonth() == _.getMonth() &&
     _.getDate() == _.getDate()
   );
 }
-function Tee(_, _) {
+function Cee(_, _) {
   return _.getFullYear() == _.getFullYear();
 }
-function Eee(_) {
+function wee(_) {
   return new Date(
     _.getFullYear(),
     _.getMonth(),
@@ -14553,14 +14553,14 @@ function Eee(_) {
     0,
   );
 }
-function Dee(_) {
+function Tee(_) {
   return new Promise((_) => setTimeout(_, _));
 }
-function Oee() {
+function Eee() {
   return Math.floor(Date.now() / 1e3);
 }
-var kee = 2147483647;
-function Aee(_, _) {
+var Dee = 2147483647;
+function Oee(_, _) {
   return _(Date.now() / 1e3 - _, _);
 }
 function _(_, _, _) {
@@ -14656,17 +14656,17 @@ function _(_, _, _) {
     };
   return _.toLocaleDateString(_.GetPreferredLocales(), _);
 }
-function jee(_, _, _ = !1) {
+function kee(_, _, _ = !1) {
   let _ = new Date(_ * 1e3),
     _ = new Date(_ * 1e3);
   return !_ &&
     (_.getFullYear() != _.getFullYear() ||
       _.getMonth() != _.getMonth() ||
       _.getDate() != _.getDate())
-    ? Mee(_, _)
+    ? Aee(_, _)
     : _(_) + ` - ` + _(_);
 }
-function Mee(_, _, _) {
+function Aee(_, _, _) {
   let _ = new Date(_ * 1e3),
     _ = new Date(_ * 1e3),
     _ = new Date();
@@ -14698,11 +14698,11 @@ function _(_, _) {
     };
   return _.toLocaleDateString(_.GetPreferredLocales(), _);
 }
-function Nee(_) {
+function jee(_) {
   return _(new Date(_ * 1e3));
 }
 var _ = new Map();
-function Pee(_) {
+function Mee(_) {
   let _ = _.get(_);
   if (_ === !0 || _ === !1) return _;
   let _ = new Date();
@@ -14733,13 +14733,13 @@ function _(_, _, _) {
     },
     _ = _.GetPreferredLocales(),
     _ = {
-      ...(_?.bForce24HourClock || Pee(_[0]) ? _ : _),
+      ...(_?.bForce24HourClock || Mee(_[0]) ? _ : _),
       ..._,
     };
   return _.toLocaleTimeString(_, _);
 }
 var _ = new Map();
-function Fee(_, _, _ = !0, _ = !0, _ = !1) {
+function Nee(_, _, _ = !0, _ = !0, _ = !1) {
   let _ = new Date(),
     _ = new Date(_ * 1e3);
   if (_.getFullYear() != _.getFullYear()) return _(_);
@@ -14764,7 +14764,7 @@ function Fee(_, _, _ = !0, _ = !0, _ = !1) {
     ((_ = _.toLocaleDateString(_.GetPreferredLocales(), _)), _.set(_, _), _)
   );
 }
-function Iee(_, _, _, _) {
+function Pee(_, _, _, _) {
   return (
     _(new Date(_ * 1e3), !1, !1) +
     ` ` +
@@ -14781,7 +14781,7 @@ function Iee(_, _, _, _) {
     _
   );
 }
-function Lee(_, _) {
+function Fee(_, _) {
   let _ = new Date(_ * 1e3),
     _ = new Date(),
     _ = {
@@ -14798,7 +14798,7 @@ function Lee(_, _) {
   if (_ > _) {
     if (!_.bGranularFutureTime)
       return (
-        _(Math.min(_.getTime() - _.getTime(), kee)),
+        _(Math.min(_.getTime() - _.getTime(), Dee)),
         _.getFullYear() == _.getFullYear() ? _(_) : _(_)
       );
     _(new Date().setHours(24, 0, 0, 0) - _.getTime());
@@ -19620,7 +19620,7 @@ var _ = _(),
           fields: {
             reservation_status: {
               _: 1,
-              _: oee,
+              _: aee,
               _: !0,
               _: !0,
             },
@@ -25911,9 +25911,9 @@ var _ = 4182,
   _ = 5348,
   _ = 5708,
   _ = 1714,
-  _ = 4821,
+  Iee = 4821,
   _ = 176981,
-  Ree = 3854,
+  _ = 3854,
   _ = 13276,
   _ = 5055,
   _ = 4046,
@@ -29950,7 +29950,7 @@ function _() {
 function _() {
   return !!_(`wants_mature_content`);
 }
-function zee(_) {
+function _(_) {
   let _ = _();
   if (
     ((_.bLoaded = !0),
@@ -30022,16 +30022,16 @@ var _ = `dynamicuserdata`;
 function _(_) {
   return [_, _];
 }
-function Bee(_) {
+function Lee(_) {
   return _?.[0] == _;
 }
-async function Vee(_) {
+async function Ree(_) {
   try {
     let _ = await fetch(_(_.STORE_BASE_URL, _, _.country_code), {
       credentials: `include`,
     });
     if (!_._) throw Error(`Server returned ${_.status}`);
-    return zee(await _.json());
+    return _(await _.json());
   } catch (_) {
     return (
       console.warn(`LoadDynamicUserData`, _),
@@ -30047,7 +30047,7 @@ function _() {
   let _ = _.accountid;
   return {
     queryKey: _(_),
-    queryFn: () => Vee(_),
+    queryFn: () => Ree(_),
     staleTime: (_) => (_.state.data?.bLoaded === !1 ? _ : 1 / 0),
     gcTime: 1 / 0,
     retry: !1,
@@ -30059,15 +30059,15 @@ function _() {
 }
 function _(_) {
   let _ = _.getQueryData(_(_.accountid));
-  return _ && !_.bLoaded && Hee(_), _ ?? _();
+  return _ && !_.bLoaded && zee(_), _ ?? _();
 }
-function Hee(_) {
+function zee(_) {
   let _ = _.getQueryState(_(_.accountid));
   _?.fetchStatus == `idle` &&
     Date.now() - _.dataUpdatedAt >= _ &&
     _.prefetchQuery(_());
 }
-async function Uee(_) {
+async function Bee(_) {
   return _.fetchQuery(_());
 }
 function _(_, _) {
@@ -30082,7 +30082,7 @@ function _(_, _) {
       : _;
   });
 }
-function Wee(_, _) {
+function Vee(_, _) {
   _ &&
     _ !== `0` &&
     (_(_, _, _.wishlist_item_count),
@@ -30097,7 +30097,7 @@ var _ = _.createContext({
 function _() {
   return _.useContext(_);
 }
-function Gee(_) {
+function Hee(_) {
   return (0, _.jsx)(_.Provider, {
     value: _.ImpressionTracker,
     children: _.children,
@@ -30799,7 +30799,7 @@ var _ = {
   greatonframe: 100804,
   salesmartsale_events_only: 100805,
 };
-function Kee(_) {
+function Uee(_) {
   return _ in _;
 }
 var _ = class _ {
@@ -30857,7 +30857,7 @@ var _ = class _ {
   }
   static EncodeEventComponent(_) {
     return _
-      ? Kee(_)
+      ? Uee(_)
         ? `` + _[_]
         : (_.match(/^[0-9]+$/) || (_ = _.replace(/^[0-9]+/, ``)),
           _.replace(/[^a-zA-Z0-9\- ]+/g, ``))
@@ -30874,7 +30874,7 @@ var _ = class _ {
     return !_ || !_.match(/^[a-zA-Z0-9\-.]*$/) ? `` : _;
   }
 };
-function qee(_) {
+function Wee(_) {
   return {
     ..._,
     domain: _.SanitizeEventComponent(_.domain),
@@ -30911,7 +30911,7 @@ function _(_) {
     children: _,
   });
 }
-function Jee(_) {
+function Gee(_) {
   let { uiData: _, children: _ } = _,
     _ = _.useMemo(
       () => ({
@@ -30938,7 +30938,7 @@ function Jee(_) {
     children: _,
   });
 }
-function Yee() {
+function Kee() {
   let _ = _.useContext(_),
     _ = _();
   return _ || _;
@@ -30946,10 +30946,10 @@ function Yee() {
 function _() {
   return _.useContext(_);
 }
-function Xee(_, _) {
-  return Zee(_(), _, _);
+function qee(_, _) {
+  return Jee(_(), _, _);
 }
-function Zee(_, _, _) {
+function Jee(_, _, _) {
   return {
     ..._,
     feature: _ || _.feature,
@@ -30987,7 +30987,7 @@ function _(_, _, _, _) {
     _ = _.GetCuratorClanIDParam(_);
   return _.AddNavParamToURL(_, _, _);
 }
-function Qee(_) {
+function Yee(_) {
   let { href: _, ..._ } = _,
     _ = _(_);
   return (0, _.jsx)(`a`, {
@@ -30995,7 +30995,7 @@ function Qee(_) {
     href: _,
   });
 }
-var $ee = {
+var Xee = {
     Loyalty: () => `/points`,
     LoyaltyStore: () => `/points/shop`,
     LoyaltyHowItWorks: () => `/points/howitworks`,
@@ -31010,42 +31010,42 @@ var $ee = {
     LoyaltyGiveawayRules: () => `/points/giveawayrules`,
     LoyaltyEvents: (_) => `/points/shop/event/${_}`,
   },
-  ete = {},
-  tte = {
+  Zee = {},
+  Qee = {
     LoyaltyEquippedProfile: (_) => `/points/profile/${_}`,
   },
-  nte = {
+  $ee = {
     LoyaltySteamDeck: () => `/points/shop/c/steamdeck`,
   },
-  rte = {
+  ete = {
     LoyaltyKeyboard: () => `/points/shop/c/keyboard`,
   },
-  ite = {
+  tte = {
     LoyaltyStartupMovie: () => `/points/shop/c/startupmovie`,
   },
-  ate = {
+  nte = {
     LoyaltySteamBadge: () => `/points/shop/c/steambadge`,
     LoyaltyProfileCustomizations: () => `/points/shop/profileshowcases`,
   },
-  ote = {
+  rte = {
     LoyaltyItemBundles: () => `/points/shop/c/itembundles`,
     LoyaltyItemBundle: (_) => `/points/shop/bundle/${_}`,
   },
-  ste = {
+  ite = {
     LoyaltyProfileBundles: () => `/points/shop/c/profilebundles`,
     LoyaltyArtistProfiles: () => `/points/shop/c/artistprofiles`,
   },
-  cte = {
+  ate = {
     SteamCharts: () => `/charts/`,
   },
-  lte = {
+  ote = {
     ContentHubHome: () =>
       `/:prefix(tags|category|genre|videos|weekly|vr|software|macos|linux|freetoplay|earlyaccess|pccafe|demos|specials|remoteplay_phone|remoteplay_tablet|remoteplay_tv|remoteplay_together|games|adultonly|soundtracks|greatondeck|greatonframe|controller|dlcforyou|compatlist|newreleases|upcoming)`,
   },
-  ute = {
+  ste = {
     Categories: () => `/categories/`,
   },
-  dte = {
+  cte = {
     NewsHub: () => `/:prefix(news|newshub|events)`,
     NewsHubApp: (_, _) => `/:prefix(news|newshub|events)/app/${_}/${_}`,
     NewsHubGroup: (_, _) => `/:prefix(news|newshub|events)/group/${_}/${_}`,
@@ -31063,22 +31063,22 @@ var $ee = {
     OldAnnouncementViewByGroup: (_, _, _) =>
       `/:prefix(news|newshub|events)/group/${_}/:viewtype(old_view|old_inline)/${_}/${_}`,
   },
-  fte = {
+  lte = {
     EventAdmin: () => `/events_admin`,
     EventModeration: () => `/events_admin/(moderate)?/:appid(\\d+)?/`,
     EventBackfill: () => `/events_admin/backfill/`,
   },
-  pte = {
+  ute = {
     SummerSale2021Story: () => `/forgeyourfate`,
   },
-  mte = {
+  dte = {
     MarketingMessages: () => `/marketingmessages/`,
   },
-  hte = {
+  fte = {
     YearInReview: (_, _) =>
       `/:prefix(yearinreview|replay)${_ ? `/` + _ : `/`}${_ ? `/` + _ : ``}`,
   },
-  gte = {
+  pte = {
     JoinMultiplayerSession: () => `/multiplayersession/:jointype(\\w+)`,
   },
   _ = {
@@ -31121,8 +31121,8 @@ var $ee = {
       `/:prefix(publisher|pub|dev|developer|franchise|subscriptions|curator)/:curatorVanity/admin/curator_edit`,
     CuratorAdminEventLinkEditPage: () =>
       `/:prefix(publisher|pub|dev|developer|franchise|subscriptions|curator)/:curatorVanity/admin/creatorhome_link`,
-    ...dte,
-    ...fte,
+    ...cte,
+    ...lte,
     EventModeration: () => `/events_admin/:infix(moderate)?/:appid(\\d+)?/`,
     EventBackfill: () => `/events_admin/backfill/`,
     EventGameFestivalDebug: () =>
@@ -31137,31 +31137,31 @@ var $ee = {
     RecommenderDemos: () => `/recommenderdemos/`,
     PersonalCalendar: () => `/personalcalendarold`,
     VerifiedProgram: () => `/verified/:appid(\\d+)/`,
-    ...cte,
+    ...ate,
+    ...Xee,
     ...$ee,
+    ...ete,
+    ...tte,
+    ...Zee,
     ...nte,
     ...rte,
     ...ite,
-    ...ete,
-    ...ate,
+    ...Qee,
     ...ote,
     ...ste,
-    ...tte,
-    ...lte,
     ...ute,
+    ...dte,
+    ...fte,
     ...pte,
-    ...mte,
-    ...hte,
-    ...gte,
     DiagData: () => `/:anything*/diagdata`,
   };
-function _te() {
+function mte() {
   let _ = document.createElement(`a`);
   _.href = _.STORE_BASE_URL;
   let _ = _.pathname;
   return _.endsWith(`/`) || (_ += `/`), _;
 }
-function vte(_ = !1) {
+function hte(_ = !1) {
   return _
     ? _(`store_user_config`, `application_config`)
     : _(`store_user_config`, `application_config`);
@@ -31264,13 +31264,13 @@ function _(_, _) {
   if (_ == -1) return !1;
   let _ = _.substring(0, _),
     _ = _.substring(_ + 1),
-    _ = yte(_, _);
+    _ = gte(_, _);
   return _ !== null && typeof _[_] == `function`;
 }
 function _(_) {
   return _(window, _);
 }
-function yte(_, _) {
+function gte(_, _) {
   let _ = (_) => _ && typeof _ == `object`,
     _ = _?.SteamClient;
   for (let _ of _.split(`.`)) {
@@ -31282,7 +31282,7 @@ function yte(_, _) {
 function _(_) {
   return _ != null && _.focus !== void 0;
 }
-function bte(_) {
+function _te(_) {
   if (!_.clientX && !_.clientY && !_.screenX && !_.screenY) return !0;
   if (_.relatedTarget) return !_(_.currentTarget, _.relatedTarget);
   {
@@ -31310,7 +31310,7 @@ function _(_, _) {
   }
   return !1;
 }
-function xte(_, _) {
+function vte(_, _) {
   let _ = 0,
     _ = 0;
   return (
@@ -31331,7 +31331,7 @@ function _(_, _) {
     right: _.screenLeft + _.right,
   };
 }
-function Ste(_) {
+function yte(_) {
   let _ = 1,
     _ = _;
   for (; _ != null && _.tagName != `HTML`; ) {
@@ -31355,7 +31355,7 @@ function _(_) {
   let _;
   return _ && (_ = _.ownerDocument.defaultView), _;
 }
-function Cte(_) {
+function bte(_) {
   let _ = window.top ?? window,
     _ = _.document,
     _ = _.createElement(`textarea`);
@@ -31376,10 +31376,10 @@ function Cte(_) {
     _.body.removeChild(_);
   }
 }
-function wte(_) {
-  _.startsWith(`steam://openurl/`) && (_ = _.slice(16)), Cte(_);
+function xte(_) {
+  _.startsWith(`steam://openurl/`) && (_ = _.slice(16)), bte(_);
 }
-function Tte(_) {
+function Ste(_) {
   let _ = _.ownerDocument;
   return !!(
     _.fullscreen ||
@@ -31389,7 +31389,7 @@ function Tte(_) {
   );
 }
 var _;
-function Ete() {
+function Cte() {
   if (_ !== void 0) return _;
   let _ = document.createElement(`div`);
   return (
@@ -31402,7 +31402,7 @@ function Ete() {
     _
   );
 }
-function Dte(_, _) {
+function wte(_, _) {
   let _ = _;
   return _.requestFullscreen
     ? (_.requestFullscreen(), !0)
@@ -31416,7 +31416,7 @@ function Dte(_, _) {
             ? (_.msRequestFullscreen(), !0)
             : !1;
 }
-function Ote(_) {
+function Tte(_) {
   let _ = _.ownerDocument;
   _.exitFullscreen
     ? _.exitFullscreen()
@@ -31428,10 +31428,10 @@ function Ote(_) {
           ? _.mozCancelFullScreen()
           : _.msExitFullscreen && _.msExitFullscreen();
 }
-function kte(_) {
+function Ete(_) {
   return _.nodeName === `INPUT`;
 }
-function Ate(_, _) {
+function Dte(_, _) {
   switch (_) {
     case `TEXTAREA`:
       return !0;
@@ -31458,18 +31458,18 @@ function Ate(_, _) {
       return !1;
   }
 }
-function jte(_) {
+function Ote(_) {
   document.readyState == `loading`
     ? document.addEventListener(`DOMContentLoaded`, _)
     : _();
 }
-function Mte(_, _) {
+function kte(_, _) {
   let _ = _;
   return (
     (_.lastModifiedDate = new Date()), (_.name = _ || Date.now().toString()), _
   );
 }
-function Nte(_, _, _) {
+function Ate(_, _, _) {
   let _ = _.parentElement;
   for (; _ && _ !== _ && !_.hasAttribute(_); ) _ = _.parentElement;
   return _ || _;
@@ -31501,13 +31501,13 @@ function _(_, _) {
   }
   return _(_) ? _ : null;
 }
-function Pte(_, _) {
+function jte(_, _) {
   let _ = [],
     _ = _;
   for (; (_ = _(_, _)); ) _.push(_);
   return _;
 }
-function Fte(_, _) {
+function Mte(_, _) {
   let _ = _;
   for (; _; ) {
     if (_(_)) return _;
@@ -31515,9 +31515,9 @@ function Fte(_, _) {
   }
 }
 function _() {
-  return Ite(document);
+  return Nte(document);
 }
-function Ite(_) {
+function Nte(_) {
   let _ = {};
   return (
     _.querySelectorAll(`link[rel="stylesheet"]`).forEach((_) => {
@@ -31526,7 +31526,7 @@ function Ite(_) {
     _
   );
 }
-function Lte(_, _) {
+function Pte(_, _) {
   _(_.document, _, !0);
 }
 function _(_, _, _) {
@@ -31550,7 +31550,7 @@ function _(_, _, _) {
   }
   return _.prepend(..._), _;
 }
-function Rte(_, _, _) {
+function Fte(_, _, _) {
   if (_.type === `childList`) {
     for (let _ = 0; _ < _.addedNodes.length; _++) {
       let _ = _.addedNodes[_];
@@ -31565,7 +31565,7 @@ function Rte(_, _, _) {
     }
   }
 }
-var zte = class _ extends _.Message {
+var Ite = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
       super(), _.Message.initialize(this, _, 0, -1, void 0, null);
@@ -31604,7 +31604,7 @@ var zte = class _ extends _.Message {
       return `CStorePreferences_GetIgnoreList_Request`;
     }
   },
-  Bte = class _ extends _.Message {
+  Lte = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
       super(),
@@ -31620,7 +31620,7 @@ var zte = class _ extends _.Message {
           fields: {
             ignore_list: {
               _: 1,
-              _: Vte,
+              _: Rte,
               _: !0,
               _: !0,
             },
@@ -31664,7 +31664,7 @@ var zte = class _ extends _.Message {
       return `CStorePreferences_GetIgnoreList_Response`;
     }
   },
-  Vte = class _ extends _.Message {
+  Rte = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
       super(),
@@ -31733,16 +31733,16 @@ var zte = class _ extends _.Message {
       return `CStorePreferences_GetIgnoreList_Response_IgnoreListEntry`;
     }
   },
-  Hte;
+  zte;
 (function (_) {
   function _(_, _, _) {
-    return _.SendMsg(`StorePreferences.GetIgnoreList#1`, _(zte, _, _), Bte, {
+    return _.SendMsg(`StorePreferences.GetIgnoreList#1`, _(Ite, _, _), Lte, {
       bConstMethod: !0,
       ePrivilege: 1,
     });
   }
   _.GetIgnoreList = _;
-})((Hte ||= {}));
+})((zte ||= {}));
 function _(_, _) {
   typeof window < `u` && (window[_] = _);
 }
@@ -31756,7 +31756,7 @@ var _ = class _ {
       ((this.m_bInitialized = !0),
       this.m_queryClient.getQueryCache().subscribe((_) => {
         (_?.type == `added` || _?.type == `updated` || _?.type == `removed`) &&
-          Bee(_.query?.queryKey) &&
+          Lee(_.query?.queryKey) &&
           _(() => this.m_boxCacheVersion.set(this.m_boxCacheVersion.get() + 1));
       }));
   }
@@ -31874,7 +31874,7 @@ var _ = class _ {
     return this.ReadData().setPreferredPlatforms.has(_);
   }
   async HintLoad() {
-    return this.LazyInit(), await Uee(this.m_queryClient), this;
+    return this.LazyInit(), await Bee(this.m_queryClient), this;
   }
   async UpdateFollowOrIgnoreCurator(_, _, _) {
     this.LazyInit();
@@ -31993,7 +31993,7 @@ function _(_) {
     ? _.GetAccountID()
     : Number(_);
 }
-function Ute() {
+function Bte() {
   let { isPending: _ } = _();
   return [_, _.Get()];
 }
@@ -32056,7 +32056,7 @@ var _ = class {
   }
 };
 _([_(1e3)], _.prototype, `UpdateCookie`, null);
-var Wte = `du-J5Y1kj8A-`;
+var _ = `du-J5Y1kj8A-`;
 _.Component, _.Component;
 var _ = function (_, _) {
     return typeof _ == `function` ? _(_) : _;
@@ -38745,7 +38745,7 @@ function _(_, _, _) {
           distance: _.left - _,
         };
     }
-    _ && (_ = xte(_, _));
+    _ && (_ = vte(_, _));
   } else if (_ == `children`) {
     let _ = _.Element;
     if (!_) return null;
@@ -41494,7 +41494,7 @@ _([_], _.prototype, `OnButtonDown`, null),
 function _(_) {
   if (!_(_)) return !1;
   let _ = _.tagName;
-  return Ate(_, kte(_) ? _.type : void 0);
+  return Dte(_, Ete(_) ? _.type : void 0);
 }
 function _(_, _ = window) {
   return _[_];
@@ -42424,7 +42424,7 @@ function _(_) {
   return _(
     (_) => {
       if (!_ || !_) return;
-      let _ = Pte(_);
+      let _ = jte(_);
       return (
         _.forEach((_) => _.addEventListener(`scroll`, _)),
         () => _.forEach((_) => _.removeEventListener(`scroll`, _))
@@ -42703,7 +42703,7 @@ var _ = ({ error: _, onDismiss: _ }) => {
           fields: {
             apps: {
               _: 1,
-              _: ree,
+              _: nee,
               _: !0,
               _: !0,
             },
@@ -45554,7 +45554,7 @@ var _ = ({ error: _, onDismiss: _ }) => {
           fields: {
             results: {
               _: 1,
-              _: aee,
+              _: iee,
               _: !0,
               _: !0,
             },
@@ -60885,7 +60885,7 @@ var _ = class {
       _.document.write(_),
       (_.document.title = _),
       _.document.close(),
-      Lte(_, _()),
+      Pte(_, _()),
       {
         popup: _,
         element: _.document.getElementById(`popup_target`),
@@ -61038,7 +61038,7 @@ function _(_) {
     children: [
       (0, _.jsx)(_, {
         onSelected: () => {
-          wte(_);
+          xte(_);
         },
         children: _(`#ContextMenu_CopyLinkURL`),
       }),
@@ -67189,7 +67189,7 @@ var _ = class extends _.Component {
     return (
       this.m_fZoom === void 0 &&
         this.m_refSlider.current &&
-        (this.m_fZoom = Ste(this.m_refSlider.current)),
+        (this.m_fZoom = yte(this.m_refSlider.current)),
       this.m_fZoom ?? 1
     );
   }
@@ -72813,7 +72813,7 @@ async function _(_, _, _, _) {
         _.nAccountIDGiftee &&
           _.gift_info(!0).set_accountid_giftee(_.nAccountIDGiftee));
   }),
-    _ && _.Body().set_navdata(_.fromObject(qee(_))),
+    _ && _.Body().set_navdata(_.fromObject(Wee(_))),
     _.Body().set_user_country(_);
   let _ = await _.AddItemsToCart(_, _);
   return (
@@ -89261,7 +89261,7 @@ function _(_) {
       let _ = new MutationObserver((_) => {
         let _ = !1;
         for (let _ of _)
-          Rte(
+          Fte(
             _,
             (_) => {
               _(_, _).forEach((_) => {
@@ -89586,7 +89586,7 @@ function _() {
 }
 var _ = _.lazy(() =>
     _(
-      () => import(`./cartmodal.js?contenthash=AL4bykyf`),
+      () => import(`./cartmodal.js?contenthash=BtwWt7fR`),
       __vite__mapDeps([
         0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
         20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37,
@@ -89598,7 +89598,7 @@ var _ = _.lazy(() =>
   _ = _.lazy(() =>
     _(
       () =>
-        import(`./cartmodal.js?contenthash=AL4bykyf`).then((_) => ({
+        import(`./cartmodal.js?contenthash=BtwWt7fR`).then((_) => ({
           default: _.CartErrorModal,
         })),
       __vite__mapDeps([
@@ -92437,19 +92437,19 @@ var _ = `qd-aWMrn5l4-`,
   _ = {
     appid: 4165890,
   },
-  Gte =
+  Vte =
     `AT.AU.BE.BG.CY.CZ.DE.DK.EE.ES.FI.FR.GB.GR.HR.HU.IE.IT.LT.LU.LV.MT.NL.PL.PT.RO.SE.SI.SK.US.CA`.split(
       `.`,
     ),
   _ = [`JP`, `TW`, `HK`, `KR`];
-function Kte(_) {
-  return Gte.includes(_) || _.includes(_);
+function Hte(_) {
+  return Vte.includes(_) || _.includes(_);
 }
 function _() {
   let { data: _ } = _(_);
   return !!_ || _.includes(_.country_code);
 }
-function qte() {
+function Ute() {
   let _ = _();
   return (0, _.jsxs)(_, {
     children: [
@@ -92462,15 +92462,15 @@ function qte() {
           className: `oB8i4P5ncJg-`,
         }),
       (0, _.jsxs)(_, {
-        children: [(0, _.jsx)(Yte, {}), (0, _.jsx)(Zte, {})],
+        children: [(0, _.jsx)(Gte, {}), (0, _.jsx)(qte, {})],
       }),
     ],
   });
 }
-function Jte() {
+function Wte() {
   return _(_), _(_), _(_), _(_), _(_), _(_), _(_), _(), null;
 }
-function Yte() {
+function Gte() {
   let { data: _ } = _(_),
     { data: _ } = _(_),
     { data: _ } = _(_),
@@ -92513,7 +92513,7 @@ function Yte() {
     className: _,
     children: _.map((_) =>
       (0, _.jsx)(
-        Xte,
+        Kte,
         {
           ..._,
         },
@@ -92522,7 +92522,7 @@ function Yte() {
     ),
   });
 }
-function Xte(_) {
+function Kte(_) {
   let { storeItem: _, image: _, icon: _, name: _ = _.name } = _;
   return (0, _.jsxs)(_, {
     className: _,
@@ -92550,7 +92550,7 @@ function Xte(_) {
     ],
   });
 }
-function Zte() {
+function qte() {
   let { data: _ } = _(_),
     { data: _ } = _(_),
     { data: _ } = _(_),
@@ -92585,7 +92585,7 @@ function Zte() {
     ],
   });
 }
-var Qte = _({
+var Jte = _({
     AccordionSection: () => _,
     AccordionSectionHeader: () => _,
     Active: () => _,
@@ -92607,7 +92607,7 @@ var Qte = _({
     SuppressScrollOnBody: () => _,
     TransitionContainer: () => _,
     _: () => _,
-    default: () => $te,
+    default: () => Yte,
     storeMenuResponsiveModeWidth: () => _,
   }),
   _ = `730px`,
@@ -92632,7 +92632,7 @@ var Qte = _({
   _ = `D-J5F8trXI8-`,
   _ = `lOWNlpmfDRA-`,
   _ = `jKVUAU-aE0o-`,
-  $te = {
+  Yte = {
     storeMenuResponsiveModeWidth: _,
     SuppressScrollOnBody: _,
     DynamicMenu: _,
@@ -92656,26 +92656,26 @@ var Qte = _({
     Down: _,
     MoreSectionTransitionContent: _,
   };
-function ene(_) {
+function Xte(_) {
   let [_] = _.useState(_.excludedSections),
-    _ = ane(_),
+    _ = tne(_),
     _ = _(),
     [_, _] = _.useState();
   return _
-    ? (0, _.jsx)(nne, {
+    ? (0, _.jsx)(Qte, {
         rgSections: _,
         activeSection: _,
         setActiveSection: _,
       })
-    : (0, _.jsx)(tne, {
+    : (0, _.jsx)(Zte, {
         rgSections: _,
         activeSection: _ ?? _[0][0],
         setActiveSection: _,
       });
 }
-function tne(_) {
+function Zte(_) {
   let { rgSections: _, activeSection: _, setActiveSection: _ } = _,
-    { onMouseLeaveContainer: _, onMouseEnterItem: _ } = cne(_, _),
+    { onMouseLeaveContainer: _, onMouseEnterItem: _ } = ine(_, _),
     _ = _(`${_.STORE_BASE_URL}sitemap`);
   return (0, _.jsxs)(_.Fragment, {
     children: [
@@ -92691,7 +92691,7 @@ function tne(_) {
             children: [
               _.map(([_, _]) =>
                 (0, _.jsx)(
-                  lne,
+                  ane,
                   {
                     active: _ == _,
                     setSection: _,
@@ -92710,26 +92710,26 @@ function tne(_) {
             ],
           }),
           (0, _.jsx)(_, {
-            children: (0, _.jsx)(one, {
+            children: (0, _.jsx)(nne, {
               rgSections: _,
               section: _,
             }),
           }),
         ],
       }),
-      (0, _.jsx)(ine, {
+      (0, _.jsx)(ene, {
         rgSections: _,
       }),
     ],
   });
 }
-function nne(_) {
+function Qte(_) {
   let { rgSections: _, activeSection: _, setActiveSection: _ } = _;
   return (0, _.jsx)(`div`, {
     className: _,
     children: _.map((_) =>
       (0, _.jsx)(
-        rne,
+        $te,
         {
           rgSection: _,
           active: _[0] === _,
@@ -92740,7 +92740,7 @@ function nne(_) {
     ),
   });
 }
-function rne(_) {
+function $te(_) {
   let { rgSection: _, active: _, setActiveSection: _ } = _,
     [_, _] = _,
     _ = _.useCallback(() => _((_) => (_ === _ ? void 0 : _)), [_, _]);
@@ -92780,7 +92780,7 @@ function rne(_) {
     ],
   });
 }
-var ine = _.memo(function (_) {
+var ene = _.memo(function (_) {
   let { rgSections: _ } = _;
   return _.map((_) =>
     (0, _.jsx)(
@@ -92792,14 +92792,14 @@ var ine = _.memo(function (_) {
     ),
   );
 });
-function ane(_) {
+function tne(_) {
   let _ = _();
   return _.useMemo(
     () => _.filter((_) => _[0] !== `more` && (!_ || !_.has(_[0]))),
     [_, _],
   );
 }
-var one = _.memo(function (_) {
+var nne = _.memo(function (_) {
     let { rgSections: _, section: _ } = _,
       [_, _] = _.useState(_),
       [_, _] = _.useState(void 0);
@@ -92813,7 +92813,7 @@ var one = _.memo(function (_) {
         className: _,
         children: (0, _.jsx)(_, {
           childrenKey: _,
-          childrenClasses: _(Qte, _),
+          childrenClasses: _(Jte, _),
           directionClass: _,
           animate: !!_,
           sizeClass: _,
@@ -92824,8 +92824,8 @@ var one = _.memo(function (_) {
       })
     );
   }),
-  sne = 0.25;
-function cne(_, _) {
+  rne = 0.25;
+function ine(_, _) {
   let _ = _.useRef(void 0);
   return (
     (0, _.useEffect)(() => {
@@ -92848,7 +92848,7 @@ function cne(_, _) {
                 });
               return;
             }
-            if (_ > 0 && (_ == 0 ? 0 : Math.abs(_) / _) < sne) return;
+            if (_ > 0 && (_ == 0 ? 0 : Math.abs(_) / _) < rne) return;
           }
           _(_),
             (_.current = {
@@ -92862,7 +92862,7 @@ function cne(_, _) {
     }
   );
 }
-function lne(_) {
+function ane(_) {
   let {
       setSection: _,
       onMouseEnterItem: _,
@@ -92877,10 +92877,10 @@ function lne(_) {
     onClick: _,
     onMouseMove: _,
     onGamepadFocus: _,
-    children: [_, ` `, (0, _.jsx)(une, {})],
+    children: [_, ` `, (0, _.jsx)(one, {})],
   });
 }
-function une() {
+function one() {
   return (0, _.jsxs)(_.Fragment, {
     children: [
       (0, _.jsx)(`div`, {
@@ -92907,7 +92907,7 @@ var _ = _.createContext({
     hideDiscoveryQueue: () => {},
     bQueueVisible: !1,
   }),
-  dne = {
+  sne = {
     include_assets: !0,
     include_trailers: !0,
     include_basic_info: !0,
@@ -92923,14 +92923,14 @@ function _(_, _) {
     showDiscoveryQueue: _,
   };
 }
-var fne = `q6mo6TFfdDs-`,
-  pne = `tyZYjXnErOU-`,
-  mne = `G-LD8NIz4gI-`,
-  hne = `jQDeazzGQps-`,
-  gne = `mxYjuHGbhZo-`,
-  _ne = `_7kkk71U1unU-`,
+var cne = `q6mo6TFfdDs-`,
+  lne = `tyZYjXnErOU-`,
+  une = `G-LD8NIz4gI-`,
+  dne = `jQDeazzGQps-`,
+  fne = `mxYjuHGbhZo-`,
+  pne = `_7kkk71U1unU-`,
   _ = `rElkkUIE3Vg-`;
-function vne(_) {
+function mne(_) {
   let {
       arrDiscoveryApps: _,
       onClick: _,
@@ -92969,10 +92969,10 @@ function vne(_) {
         onMouseLeave: () => _ && _(!1),
         onActivate: _,
         onOKActionDescription: _(`#DiscoveryQueue_OpenWizard`),
-        className: _(fne, _, _ !== void 0 && `XXXE46GLJ04-`),
+        className: _(cne, _, _ !== void 0 && `XXXE46GLJ04-`),
         ..._,
         children: [
-          (0, _.jsx)(yne, {
+          (0, _.jsx)(hne, {
             rgAppIDs: _,
             bAnimationEnabled: !_ && _,
           }),
@@ -92983,7 +92983,7 @@ function vne(_) {
   );
 }
 var _;
-function yne(_) {
+function hne(_) {
   let { rgAppIDs: _, bAnimationEnabled: _ = !0, nCapsuleWidth: _ = 320 } = _,
     [_, _] = _.useState(null);
   return (
@@ -93002,13 +93002,13 @@ function yne(_) {
     !_ || !_.length
       ? null
       : (0, _.jsx)(`div`, {
-          className: pne,
+          className: lne,
           style: {
             "--capsule-width": `${_}px`,
           },
           children: (0, _.jsxs)(`div`, {
             ref: _,
-            className: _(mne, `vt-scrollable`),
+            className: _(une, `vt-scrollable`),
             style: {
               transform: `translateX( -${_}px )`,
             },
@@ -93051,11 +93051,11 @@ function _(_) {
       backgroundImage: `radial-gradient(135% 125% at 100% 0%, rgba(0, 0, 0, 0) 22.5%, rgba(0, 0, 0, 1) 92.5%)${_ ? `, url('${_}')` : ``}`,
     };
   return (0, _.jsxs)(`div`, {
-    className: hne,
+    className: dne,
     style: _,
     children: [
       (0, _.jsx)(`div`, {
-        className: _(_, _ne),
+        className: _(_, pne),
         children: (0, _.jsx)(`img`, {
           src: _,
           alt: _?.name,
@@ -93064,7 +93064,7 @@ function _(_) {
       (0, _.jsx)(`div`, {
         className: _,
         children: (0, _.jsx)(`div`, {
-          className: gne,
+          className: fne,
           children: _?.name,
         }),
       }),
@@ -93289,7 +93289,7 @@ var _ = class _ extends _.Message {
       return `CStoreMarketing_GetItemsToFeature_Request_SpotlightFilter`;
     }
   },
-  bne = class _ extends _.Message {
+  gne = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
       super(),
@@ -93305,7 +93305,7 @@ var _ = class _ extends _.Message {
           fields: {
             spotlights: {
               _: 1,
-              _: xne,
+              _: _ne,
               _: !0,
               _: !0,
             },
@@ -93367,7 +93367,7 @@ var _ = class _ extends _.Message {
       return `CStoreMarketing_GetItemsToFeature_Response`;
     }
   },
-  xne = class _ extends _.Message {
+  _ne = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
       super(),
@@ -93464,7 +93464,7 @@ var _ = class _ extends _.Message {
       return `CStoreMarketing_GetItemsToFeature_Response_Spotlight`;
     }
   },
-  Sne = class _ extends _.Message {
+  vne = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
       super(),
@@ -93480,7 +93480,7 @@ var _ = class _ extends _.Message {
           fields: {
             capsule_lists: {
               _: 1,
-              _: Cne,
+              _: yne,
               _: !0,
               _: !0,
             },
@@ -93507,7 +93507,7 @@ var _ = class _ extends _.Message {
             },
             fields: {
               _: 6,
-              _: wne,
+              _: bne,
               _: !0,
               _: !0,
             },
@@ -93551,7 +93551,7 @@ var _ = class _ extends _.Message {
       return `CStorePageCluster`;
     }
   },
-  Cne = class _ extends _.Message {
+  yne = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
       super(),
@@ -93690,7 +93690,7 @@ var _ = class _ extends _.Message {
       return `CStorePageCluster_Asset`;
     }
   },
-  wne = class _ extends _.Message {
+  bne = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
       super(),
@@ -93754,7 +93754,7 @@ var _ = class _ extends _.Message {
       return `CStorePageCluster_Field`;
     }
   },
-  Tne = class _ extends _.Message {
+  xne = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
       super(),
@@ -93821,7 +93821,7 @@ var _ = class _ extends _.Message {
       return `CStoreMarketing_GetFrontPageConfig_Request`;
     }
   },
-  Ene = class _ extends _.Message {
+  Sne = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
       super(),
@@ -93837,7 +93837,7 @@ var _ = class _ extends _.Message {
           fields: {
             cluster: {
               _: 1,
-              _: Sne,
+              _: vne,
             },
           },
         }),
@@ -93882,7 +93882,7 @@ var _ = class _ extends _.Message {
   _;
 (function (_) {
   function _(_, _, _) {
-    return _.SendMsg(`StoreMarketing.GetItemsToFeature#1`, _(_, _, _), bne, {
+    return _.SendMsg(`StoreMarketing.GetItemsToFeature#1`, _(_, _, _), gne, {
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
@@ -93890,7 +93890,7 @@ var _ = class _ extends _.Message {
   }
   _.GetItemsToFeature = _;
   function _(_, _, _) {
-    return _.SendMsg(`StoreMarketing.GetFrontPageConfig#1`, _(Tne, _, _), Ene, {
+    return _.SendMsg(`StoreMarketing.GetFrontPageConfig#1`, _(xne, _, _), Sne, {
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
@@ -93902,9 +93902,9 @@ function _(_, _) {
   let _ = _(),
     _ = _(),
     _ = _();
-  return _(Dne(_, _, _, _, _));
+  return _(Cne(_, _, _, _, _));
 }
-function Dne(_, _, _, _, _) {
+function Cne(_, _, _, _, _) {
   let { storeBrowseContext: _, dataLoader: _, cacheStoreItemData: _ } = _;
   return {
     queryKey: [`PackagePurchaseRecommendations`, _],
@@ -93912,7 +93912,7 @@ function Dne(_, _, _, _, _) {
       let _ = (
           (
             await _.fetchQuery(
-              One(
+              wne(
                 _,
                 _,
                 {
@@ -93936,7 +93936,7 @@ function Dne(_, _, _, _, _) {
     staleTime: 6e5,
   };
 }
-function One(_, _, _, _) {
+function wne(_, _, _, _) {
   let {
       bIncludeDailyDeals: _ = !1,
       nIncludeTopNSpecials: _ = 0,
@@ -93951,11 +93951,11 @@ function One(_, _, _, _) {
     };
   return {
     queryKey: [`ItemsToFeature`, _],
-    queryFn: () => kne(_, _, _, _),
+    queryFn: () => Tne(_, _, _, _),
     staleTime: 36e5,
   };
 }
-async function kne(_, _, _, _) {
+async function Tne(_, _, _, _) {
   let _ = _.Init(_);
   _(_, _),
     _ && _(_, _.data_request),
@@ -93993,9 +93993,9 @@ async function kne(_, _, _, _) {
   }
   return _.Body().toObject();
 }
-function Ane(_) {
+function Ene(_) {
   let _ = _(),
-    { data: _ } = jne();
+    { data: _ } = Dne();
   if (_)
     return `appid` in _
       ? _?.has(_.appid)
@@ -94020,7 +94020,7 @@ function _() {
     [_],
   );
 }
-function jne() {
+function Dne() {
   let _ = _(),
     _ = _(),
     _ = _();
@@ -94034,7 +94034,7 @@ function jne() {
     enabled: _ !== void 0,
   });
 }
-function Mne(_) {
+function One(_) {
   let _ = _(),
     [_, _] = _.useState(void 0);
   return (
@@ -94054,17 +94054,17 @@ function Mne(_) {
     )
   );
 }
-var Nne = `UcrgejVf5aA-`,
-  Pne = `_3bO01VgrZH0-`,
-  Fne = `OferR7G18q8-`,
-  Ine = `qKiMR-l-sSM-`,
-  Lne = `Bwzkt-xJYHk-`,
-  Rne = `hEMzwaA6L4s-`,
-  zne = `ba1bCn8blyk-`,
-  Bne = `kVJGQ3OvdYI-`;
+var kne = `UcrgejVf5aA-`,
+  Ane = `_3bO01VgrZH0-`,
+  jne = `OferR7G18q8-`,
+  Mne = `qKiMR-l-sSM-`,
+  Nne = `Bwzkt-xJYHk-`,
+  Pne = `hEMzwaA6L4s-`,
+  Fne = `ba1bCn8blyk-`,
+  Ine = `kVJGQ3OvdYI-`;
 function _(_) {
   let { data: _ } = _(_);
-  if (Ane(_)) return `in_cart`;
+  if (Ene(_)) return `in_cart`;
   if (_?.excluded_content_descriptorids?.length)
     return `excluded_by_preferences`;
   if (_?.ignored) return `ignored`;
@@ -94091,23 +94091,23 @@ function _(_) {
     _;
   switch (_) {
     case `in_cart`:
-      _ = (0, _.jsx)(Une, {});
+      _ = (0, _.jsx)(zne, {});
       break;
     case `excluded_by_preferences`:
-      _ = (0, _.jsx)(Gne, {});
-      break;
-    case `ignored`:
-      _ = (0, _.jsx)(Wne, {});
-      break;
-    case `in_library`:
       _ = (0, _.jsx)(Vne, {});
       break;
+    case `ignored`:
+      _ = (0, _.jsx)(Bne, {});
+      break;
+    case `in_library`:
+      _ = (0, _.jsx)(Lne, {});
+      break;
     case `on_wishlist`:
-      _ = (0, _.jsx)(Hne, {});
+      _ = (0, _.jsx)(Rne, {});
   }
   if (!_) return _;
   let { className: _, children: _, ..._ } = _.props,
-    _ = (0, _.default)(_, Bne, _ && `inHFMvcdCuk-`);
+    _ = (0, _.default)(_, Ine, _ && `inHFMvcdCuk-`);
   return _.cloneElement(
     _,
     {
@@ -94121,52 +94121,52 @@ function _(_) {
 function _(_) {
   let { className: _, svg: _, children: _ } = _;
   return (0, _.jsxs)(`div`, {
-    className: (0, _.default)(Nne, _),
+    className: (0, _.default)(kne, _),
     children: [
       _,
       (0, _.jsx)(`div`, {
-        className: Pne,
+        className: Ane,
         children: _,
       }),
     ],
+  });
+}
+function Lne() {
+  return (0, _.jsx)(_, {
+    className: jne,
+    svg: (0, _.jsx)(Hne, {}),
+    children: _(`in_library`),
+  });
+}
+function Rne() {
+  return (0, _.jsx)(_, {
+    className: Mne,
+    svg: (0, _.jsx)(Une, {}),
+    children: _(`on_wishlist`),
+  });
+}
+function zne() {
+  return (0, _.jsx)(_, {
+    className: Nne,
+    svg: (0, _.jsx)(Wne, {}),
+    children: _(`in_cart`),
+  });
+}
+function Bne() {
+  return (0, _.jsx)(_, {
+    className: Pne,
+    svg: (0, _.jsx)(Gne, {}),
+    children: _(`ignored`),
   });
 }
 function Vne() {
   return (0, _.jsx)(_, {
     className: Fne,
     svg: (0, _.jsx)(Kne, {}),
-    children: _(`in_library`),
-  });
-}
-function Hne() {
-  return (0, _.jsx)(_, {
-    className: Ine,
-    svg: (0, _.jsx)(qne, {}),
-    children: _(`on_wishlist`),
-  });
-}
-function Une() {
-  return (0, _.jsx)(_, {
-    className: Lne,
-    svg: (0, _.jsx)(Jne, {}),
-    children: _(`in_cart`),
-  });
-}
-function Wne() {
-  return (0, _.jsx)(_, {
-    className: Rne,
-    svg: (0, _.jsx)(Yne, {}),
-    children: _(`ignored`),
-  });
-}
-function Gne() {
-  return (0, _.jsx)(_, {
-    className: zne,
-    svg: (0, _.jsx)(Xne, {}),
     children: _(`excluded_by_preferences`),
   });
 }
-function Kne() {
+function Hne() {
   return (0, _.jsx)(`svg`, {
     xmlns: `http://www.w3.org/2000/svg`,
     viewBox: `0 0 15 14`,
@@ -94177,7 +94177,7 @@ function Kne() {
     }),
   });
 }
-function qne() {
+function Une() {
   return (0, _.jsx)(`svg`, {
     width: `11`,
     height: `10`,
@@ -94190,7 +94190,7 @@ function qne() {
     }),
   });
 }
-function Jne() {
+function Wne() {
   return (0, _.jsx)(`svg`, {
     width: `11`,
     height: `11`,
@@ -94203,7 +94203,7 @@ function Jne() {
     }),
   });
 }
-function Yne() {
+function Gne() {
   return (0, _.jsxs)(`svg`, {
     width: `11`,
     height: `10`,
@@ -94222,7 +94222,7 @@ function Yne() {
     ],
   });
 }
-function Xne() {
+function Kne() {
   return (0, _.jsxs)(`svg`, {
     width: `11`,
     height: `10`,
@@ -94245,12 +94245,12 @@ function Xne() {
     ],
   });
 }
-var Zne = `dkW-v-f4lTw-`,
+var qne = `dkW-v-f4lTw-`,
   _ = `pnC74wQYjms-`,
-  Qne = `QKAk1TxWblI-`,
-  $ne = `nw-DtQ670Sc-`,
+  Jne = `QKAk1TxWblI-`,
+  Yne = `nw-DtQ670Sc-`,
   _ = `cQ79XIQ7w-Y-`,
-  ere = `Cnw9IXSgr7I-`,
+  Xne = `Cnw9IXSgr7I-`,
   _ = `JBijjejcvmo-`,
   _ = _.memo(function (_) {
     let {
@@ -94272,7 +94272,7 @@ var Zne = `dkW-v-f4lTw-`,
     let _ = _(_),
       _ = _?.nDiscountPct ?? _,
       _ = _?.strOriginalPrice ?? _;
-    return (0, _.jsxs)(rre, {
+    return (0, _.jsxs)($ne, {
       percentage: _,
       original_price: _,
       final_price: _,
@@ -94282,27 +94282,27 @@ var Zne = `dkW-v-f4lTw-`,
       legacy: _,
       children: [
         _ > 0 &&
-          (0, _.jsx)(nre, {
+          (0, _.jsx)(Qne, {
             percentage: _,
             bundle_discount: _,
             bundle: _,
             hide_discount_pct: _,
           }),
-        (0, _.jsx)(tre, {
+        (0, _.jsx)(Zne, {
           final_price: _,
           original_price: _ && !_ ? _ : void 0,
         }),
       ],
     });
   });
-function tre(_) {
+function Zne(_) {
   let { final_price: _, original_price: _ } = _;
   return _
     ? (0, _.jsxs)(`div`, {
         className: _,
         children: [
           (0, _.jsx)(`div`, {
-            className: ere,
+            className: Xne,
             children: _,
           }),
           (0, _.jsx)(`div`, {
@@ -94319,7 +94319,7 @@ function tre(_) {
         }),
       });
 }
-function nre(_) {
+function Qne(_) {
   let {
     percentage: _,
     bundle_discount: _,
@@ -94328,8 +94328,8 @@ function nre(_) {
   } = _;
   if (_)
     return (0, _.jsx)(`div`, {
-      className: (0, _.default)(_, Qne),
-      children: (0, _.jsx)(ire, {}),
+      className: (0, _.default)(_, Jne),
+      children: (0, _.jsx)(ere, {}),
     });
   let _ = _?.nSupersededBundlePct,
     _ = !!_ && !_,
@@ -94345,14 +94345,14 @@ function nre(_) {
             children: [`-`, _, `%`],
           }),
         (0, _.jsxs)(`div`, {
-          className: (0, _.default)($ne, _ && `lba8boUamz4-`),
+          className: (0, _.default)(Yne, _ && `lba8boUamz4-`),
           children: [`-`, _, `%`],
         }),
       ],
     }),
   });
 }
-function rre(_) {
+function $ne(_) {
   let {
       percentage: _,
       original_price: _,
@@ -94370,7 +94370,7 @@ function rre(_) {
       ? _.Localize(`#Discount_ARIA_Label_SpecialPrice`, _)
       : _.Localize(`#Discount_ARIA_Label`, _, _, _)));
   let _ = (0, _.default)(
-    Zne,
+    qne,
     _ && `lNuJLacaZ3Y-`,
     !!_ && `kCttzIkwWw4-`,
     _ == `large` && `sKsMFI8n5hU-`,
@@ -94384,7 +94384,7 @@ function rre(_) {
     children: _,
   });
 }
-function ire() {
+function ere() {
   return (0, _.jsx)(`svg`, {
     width: `26`,
     height: `26`,
@@ -94399,19 +94399,19 @@ function ire() {
     }),
   });
 }
-var are = `l8Ot6WpreQ8-`,
-  ore = `QHiQcR8jG10-`,
-  sre = `Jhq3hD97Ms8-`,
-  cre = `cchAfQhDUvE-`,
-  lre = `-sYwJqKAVvw-`,
-  ure = `FY3FS-llgYw-`,
-  dre = `yimHZxX1Vo8-`;
+var tre = `l8Ot6WpreQ8-`,
+  nre = `QHiQcR8jG10-`,
+  rre = `Jhq3hD97Ms8-`,
+  ire = `cchAfQhDUvE-`,
+  are = `-sYwJqKAVvw-`,
+  ore = `FY3FS-llgYw-`,
+  sre = `yimHZxX1Vo8-`;
 function _(_) {
   let { rgItemIDs: _ } = _;
   return (0, _.jsx)(_, {
     "flow-children": `column`,
     navEntryPreferPosition: _.MAINTAIN_Y,
-    className: are,
+    className: tre,
     children: _.map((_) =>
       (0, _.jsx)(
         _,
@@ -94434,30 +94434,30 @@ var _ = _.memo(function (_) {
       ..._,
       storeItem: _,
       className: (0, _.default)(
-        ore,
+        nre,
         _ === void 0 && `VGL2pmX7kcY-`,
         _ && `YwCAkIaJoFI-`,
         _,
       ),
       children: [
-        (0, _.jsx)(mre, {
+        (0, _.jsx)(ure, {
           itemid: _,
         }),
         (0, _.jsxs)(`div`, {
-          className: cre,
+          className: ire,
           children: [
             (0, _.jsx)(`div`, {
-              className: lre,
+              className: are,
               children: _?.name,
             }),
             (0, _.jsxs)(`div`, {
-              className: ure,
+              className: ore,
               children: [
-                (0, _.jsx)(fre, {
+                (0, _.jsx)(cre, {
                   storeItem: _,
                   purchaseOption: _,
                 }),
-                (0, _.jsx)(pre, {
+                (0, _.jsx)(lre, {
                   purchaseOption: _,
                 }),
               ],
@@ -94468,7 +94468,7 @@ var _ = _.memo(function (_) {
     }),
   });
 });
-function fre(_) {
+function cre(_) {
   let { storeItem: _, purchaseOption: _ } = _;
   return _
     ? (0, _.jsx)(_, {
@@ -94483,21 +94483,21 @@ function fre(_) {
           children: `\xA0`,
         });
 }
-function pre(_) {
+function lre(_) {
   let { purchaseOption: _ } = _;
   return !_ || !_.included_game_count || _.included_game_count <= 1
     ? null
     : (0, _.jsx)(`div`, {
-        className: dre,
+        className: sre,
         children: _(`#Menu_IncludesXGames`, _(_.included_game_count)),
       });
 }
-function mre(_) {
+function ure(_) {
   let { itemid: _ } = _,
     { data: _ } = _(_),
     _ = _ && _(_, `small_capsule`);
   return (0, _.jsx)(`div`, {
-    className: (0, _.default)(sre, !_ && `_8QPkPOUU254-`),
+    className: (0, _.default)(rre, !_ && `_8QPkPOUU254-`),
     children:
       _ &&
       (0, _.jsx)(`img`, {
@@ -94506,23 +94506,23 @@ function mre(_) {
       }),
   });
 }
-var hre = `-FApJJWWPKU-`,
+var dre = `-FApJJWWPKU-`,
   _ = `ZLbEcnwuWLY-`,
-  gre = `Yb-8AFgzlLQ-`,
-  _re = `MJuLsnGKMuY-`,
-  vre = `YEIG5t1R8UY-`,
-  yre = `_7LZ74DkC-IQ-`,
-  bre = `dEjz5hc6LZk-`,
-  xre = `vaMjSHdU4fo-`,
-  Sre = `jPReweCNKrQ-`,
-  Cre = `O4mC93OYTTQ-`,
-  wre = `m07F-6-CvWk-`,
-  Tre = `dPiF1RTfiwA-`,
-  Ere = `D99kHv4fRj8-`,
-  Dre = `_99TzhmB02TI-`,
-  Ore = `O3BsMbnLwug-`,
-  kre = `_2JKZMFPkgU0-`;
-function Are(_) {
+  fre = `Yb-8AFgzlLQ-`,
+  pre = `MJuLsnGKMuY-`,
+  mre = `YEIG5t1R8UY-`,
+  hre = `_7LZ74DkC-IQ-`,
+  gre = `dEjz5hc6LZk-`,
+  _re = `vaMjSHdU4fo-`,
+  vre = `jPReweCNKrQ-`,
+  yre = `O4mC93OYTTQ-`,
+  bre = `m07F-6-CvWk-`,
+  xre = `dPiF1RTfiwA-`,
+  Sre = `D99kHv4fRj8-`,
+  Cre = `_99TzhmB02TI-`,
+  wre = `O3BsMbnLwug-`,
+  Tre = `_2JKZMFPkgU0-`;
+function Ere(_) {
   return (0, _.jsx)(`svg`, {
     xmlns: `http://www.w3.org/2000/svg`,
     version: `1.1`,
@@ -94534,29 +94534,29 @@ function Are(_) {
     }),
   });
 }
-function jre() {
+function Dre() {
   return (0, _.jsx)(_, {
     children: (0, _.jsxs)(_, {
       children: [
         (0, _.jsxs)(_, {
-          className: hre,
+          className: dre,
           children: [
-            _.logged_in ? (0, _.jsx)(Lre, {}) : (0, _.jsx)(Rre, {}),
-            (0, _.jsx)(Fre, {}),
+            _.logged_in ? (0, _.jsx)(Nre, {}) : (0, _.jsx)(Pre, {}),
+            (0, _.jsx)(jre, {}),
           ],
         }),
-        (0, _.jsx)(Nre, {}),
+        (0, _.jsx)(kre, {}),
       ],
     }),
   });
 }
-function Mre() {
+function Ore() {
   return _(_), _(), null;
 }
-function Nre() {
+function kre() {
   let _ = _();
   return (0, _.jsxs)(_, {
-    className: kre,
+    className: Tre,
     children: [
       !_ &&
         (0, _.jsx)(_, {
@@ -94594,7 +94594,7 @@ function Nre() {
     ],
   });
 }
-function Pre(_) {
+function Are(_) {
   let _ = _(),
     { showDiscoveryQueue: _ } = _(_),
     _ = _.useCallback(
@@ -94607,69 +94607,69 @@ function Pre(_) {
 }
 function _(_) {
   let { eStoreDiscoveryQueueType: _, children: _ } = _,
-    _ = Pre(_);
+    _ = Are(_);
   return (0, _.jsx)(_, {
     href: `${_.STORE_BASE_URL}explore/next/${_}`,
     onClick: _,
     children: _,
   });
 }
-function Fre() {
+function jre() {
   return _()
     ? (0, _.jsxs)(_, {
-        className: (0, _.default)(gre, Tre),
+        className: (0, _.default)(fre, xre),
         href: `${_.STORE_BASE_URL}personalcalendar/`,
         children: [
           (0, _.jsxs)(`div`, {
-            className: _re,
+            className: pre,
             children: [
               (0, _.jsx)(`div`, {
-                className: bre,
+                className: gre,
                 style: {
                   backgroundImage: `url('${_.MEDIA_CDN_URL}store/labs/main/images/personal_calendar_menu_bg.png')`,
                 },
               }),
               (0, _.jsx)(`div`, {
-                className: vre,
+                className: mre,
               }),
             ],
           }),
           (0, _.jsx)(`div`, {
-            className: Ere,
+            className: Sre,
             children: _(`#Menu_Section_Recommendations_New`),
           }),
           (0, _.jsxs)(`div`, {
-            className: xre,
+            className: _re,
             children: [
               (0, _.jsx)(`div`, {
-                className: Dre,
-                children: (0, _.jsx)(Are, {}),
+                className: Cre,
+                children: (0, _.jsx)(Ere, {}),
               }),
               (0, _.jsxs)(`div`, {
-                className: Ore,
+                className: wre,
                 children: [
                   (0, _.jsx)(`div`, {
-                    className: Sre,
+                    className: vre,
                     children: _(
                       `#Menu_Section_Recommendations_PersonalCalendar`,
                     ),
                   }),
                   (0, _.jsx)(`div`, {
-                    className: Cre,
+                    className: yre,
                     children: _(
                       `#Menu_Section_Recommendations_PersonalCalendar_Description`,
                     ),
                   }),
                   (0, _.jsxs)(`div`, {
-                    className: yre,
+                    className: hre,
                     children: [
                       (0, _.jsx)(`span`, {
-                        className: wre,
+                        className: bre,
                         children: _(
                           `#Menu_Section_Recommendations_PersonalCalendar_ActionButton`,
                         ),
                       }),
-                      (0, _.jsx)(zre, {}),
+                      (0, _.jsx)(Fre, {}),
                     ],
                   }),
                 ],
@@ -94684,8 +94684,8 @@ var _ = {
     include_assets: !0,
     apply_user_filters: !0,
   },
-  Ire = Math.floor(Date.now() / 6e5);
-function Lre(_) {
+  Mre = Math.floor(Date.now() / 6e5);
+function Nre(_) {
   let { rgRecentApps: _ } = _,
     { data: _ } = _(_),
     _ = _.useMemo(() => {
@@ -94694,7 +94694,7 @@ function Lre(_) {
       return _(
         _.slice(0, 10).filter((_) => !_.has(_(_))),
         0,
-        _(Ire),
+        _(Mre),
       ).slice(0, 3);
     }, [_, _]);
   return (0, _.jsx)(_, {
@@ -94712,7 +94712,7 @@ function Lre(_) {
     }),
   });
 }
-function Rre() {
+function Pre() {
   let { data: _ } = _(
     {
       count: 3,
@@ -94735,7 +94735,7 @@ function Rre() {
     }),
   });
 }
-function zre() {
+function Fre() {
   return (0, _.jsx)(`svg`, {
     xmlns: `http://www.w3.org/2000/svg`,
     viewBox: `0 0 18 16`,
@@ -94746,10 +94746,10 @@ function zre() {
     }),
   });
 }
-var Bre = `otD6TgNzsKE-`,
-  Vre = `bvg9don0j3A-`,
-  Hre = `zWjrN2Zt0Sw-`;
-function Ure() {
+var Ire = `otD6TgNzsKE-`,
+  Lre = `bvg9don0j3A-`,
+  Rre = `zWjrN2Zt0Sw-`;
+function zre() {
   let _ = _();
   return (0, _.jsxs)(_, {
     children: [
@@ -94762,15 +94762,15 @@ function Ure() {
           className: `PYREDZ7KFk0-`,
         }),
       (0, _.jsxs)(_, {
-        children: [(0, _.jsx)(Gre, {}), (0, _.jsx)(Wre, {})],
+        children: [(0, _.jsx)(Vre, {}), (0, _.jsx)(Bre, {})],
       }),
     ],
   });
 }
-function Wre() {
+function Bre() {
   return _()
     ? (0, _.jsxs)(_, {
-        className: Hre,
+        className: Rre,
         children: [(0, _.jsx)(_, {}), (0, _.jsx)(_, {})],
       })
     : (0, _.jsxs)(_.Fragment, {
@@ -94779,7 +94779,7 @@ function Wre() {
 }
 function _() {
   return (0, _.jsxs)(_, {
-    className: Vre,
+    className: Lre,
     children: [
       (0, _.jsx)(_, {
         handle: `software`,
@@ -94809,7 +94809,7 @@ function _() {
   return _.EREALM == _.k_ESteamRealmChina
     ? null
     : (0, _.jsxs)(_, {
-        className: Bre,
+        className: Ire,
         children: [
           (0, _.jsx)(_, {
             href: `${_.STORE_BASE_URL}sale/nextfest/`,
@@ -94830,19 +94830,19 @@ function _() {
         ],
       });
 }
-function Gre() {
+function Vre() {
   return (0, _.jsxs)(_, {
     children: [
       (0, _.jsxs)(_, {
         children: [
           (0, _.jsx)(_, {
             handle: `demos`,
-            icon: (0, _.jsx)(qre, {}),
+            icon: (0, _.jsx)(Ure, {}),
           }),
           (0, _.jsx)(_, {
             href: `${_.STORE_BASE_URL}dlcforyou/`,
             name: _(`#Menu_Section_SpecialSections_DLCForYou`),
-            icon: (0, _.jsx)(Kre, {}),
+            icon: (0, _.jsx)(Hre, {}),
           }),
         ],
       }),
@@ -94850,13 +94850,13 @@ function Gre() {
         children: (0, _.jsx)(_, {
           href: `${_.STORE_BASE_URL}news/collection/sales/`,
           name: _(`#Menu_Section_SpecialSections_SaleEvents`),
-          icon: (0, _.jsx)(Jre, {}),
+          icon: (0, _.jsx)(Wre, {}),
         }),
       }),
     ],
   });
 }
-var Kre = _.memo(function (_) {
+var Hre = _.memo(function (_) {
     return (0, _.jsx)(`svg`, {
       xmlns: `http://www.w3.org/2000/svg`,
       viewBox: `0 0 36 36`,
@@ -94869,7 +94869,7 @@ var Kre = _.memo(function (_) {
       }),
     });
   }),
-  qre = _.memo(function (_) {
+  Ure = _.memo(function (_) {
     return (0, _.jsx)(`svg`, {
       xmlns: `http://www.w3.org/2000/svg`,
       viewBox: `0 0 36 36`,
@@ -94881,7 +94881,7 @@ var Kre = _.memo(function (_) {
       }),
     });
   }),
-  Jre = _.memo(function (_) {
+  Wre = _.memo(function (_) {
     return (0, _.jsx)(`svg`, {
       xmlns: `http://www.w3.org/2000/svg`,
       viewBox: `0 0 30 30`,
@@ -94949,7 +94949,7 @@ _.memo(function (_) {
       ],
     });
   });
-function Yre() {
+function Gre() {
   let _ = _();
   return (0, _.jsxs)(_, {
     children: [
@@ -94962,12 +94962,12 @@ function Yre() {
           className: `PYREDZ7KFk0-`,
         }),
       (0, _.jsxs)(_, {
-        children: [(0, _.jsx)(Zre, {}), (0, _.jsx)(Xre, {})],
+        children: [(0, _.jsx)(qre, {}), (0, _.jsx)(Kre, {})],
       }),
     ],
   });
 }
-function Xre() {
+function Kre() {
   return (0, _.jsxs)(_, {
     children: [
       (0, _.jsx)(_, {
@@ -94991,22 +94991,22 @@ function Xre() {
     ],
   });
 }
-function Zre() {
+function qre() {
   return (0, _.jsxs)(_, {
     children: [
       (0, _.jsxs)(_, {
         children: [
           (0, _.jsx)(_, {
             handle: `greatondeck`,
-            icon: (0, _.jsx)(tie, {}),
+            icon: (0, _.jsx)(Zre, {}),
           }),
           (0, _.jsx)(_, {
             handle: `remoteplay_hub`,
-            icon: (0, _.jsx)($re, {}),
+            icon: (0, _.jsx)(Yre, {}),
           }),
           (0, _.jsx)(_, {
             handle: `vr`,
-            icon: (0, _.jsx)(eie, {}),
+            icon: (0, _.jsx)(Xre, {}),
           }),
         ],
       }),
@@ -95014,18 +95014,18 @@ function Zre() {
         children: [
           (0, _.jsx)(_, {
             handle: `controller`,
-            icon: (0, _.jsx)(Qre, {}),
+            icon: (0, _.jsx)(Jre, {}),
           }),
           (0, _.jsx)(_, {
             handle: `multiplayer_coop`,
-            icon: (0, _.jsx)(nie, {}),
+            icon: (0, _.jsx)(Qre, {}),
           }),
         ],
       }),
     ],
   });
 }
-function Qre() {
+function Jre() {
   return (0, _.jsx)(`svg`, {
     xmlns: `http://www.w3.org/2000/svg`,
     viewBox: `0 0 46 47`,
@@ -95037,7 +95037,7 @@ function Qre() {
     }),
   });
 }
-function $re() {
+function Yre() {
   return (0, _.jsx)(`svg`, {
     xmlns: `http://www.w3.org/2000/svg`,
     viewBox: `0 0 47 47`,
@@ -95048,7 +95048,7 @@ function $re() {
     }),
   });
 }
-function eie() {
+function Xre() {
   return (0, _.jsx)(`svg`, {
     xmlns: `http://www.w3.org/2000/svg`,
     viewBox: `0 0 47 28`,
@@ -95059,7 +95059,7 @@ function eie() {
     }),
   });
 }
-function tie() {
+function Zre() {
   return (0, _.jsx)(`svg`, {
     xmlns: `http://www.w3.org/2000/svg`,
     viewBox: `0 0 46 47`,
@@ -95072,7 +95072,7 @@ function tie() {
     }),
   });
 }
-function nie() {
+function Qre() {
   return (0, _.jsx)(`svg`, {
     xmlns: `http://www.w3.org/2000/svg`,
     viewBox: `0 0 40 41`,
@@ -95083,10 +95083,10 @@ function nie() {
     }),
   });
 }
-var rie = `WHV9yn7TELM-`,
-  iie = `RZQWX-64UNU-`,
-  aie = `zYCq2k90p58-`;
-function oie(_) {
+var $re = `WHV9yn7TELM-`,
+  eie = `RZQWX-64UNU-`,
+  tie = `zYCq2k90p58-`;
+function nie(_) {
   let {
       visible: _,
       closePopover: _,
@@ -95124,18 +95124,18 @@ function oie(_) {
   return (
     _(_, _),
     (0, _.jsx)(_, {
-      className: rie,
+      className: $re,
       visible: _,
       msAnimationDuration: 100,
       children: (0, _.jsx)(`div`, {
         className: (0, _.default)(
-          iie,
+          eie,
           _.IN_MOBILE_WEBVIEW && `p2BJUYmh4-o-`,
           _ && `kT-U0OADW0o-`,
         ),
         children: (0, _.jsx)(_, {
           "flow-children": `row`,
-          className: aie,
+          className: tie,
           onCancelButton: _,
           ref: _,
           onKeyDown: _,
@@ -95148,7 +95148,7 @@ function oie(_) {
 function _() {
   return _.useMemo(() => {
     let _ = _.EREALM == _.k_ESteamRealmChina,
-      _ = Kte(_.country_code);
+      _ = Hte(_.country_code);
     return [
       [`browse`, _(`#Menu_Popover_Browse`)],
       !_ && [`recommendations`, _(`#Menu_Popover_Recommendations`)],
@@ -95160,7 +95160,7 @@ function _() {
     ].filter(Boolean);
   }, []);
 }
-function sie(_) {
+function rie(_) {
   let {
       activeSection: _,
       closePopover: _,
@@ -95171,7 +95171,7 @@ function sie(_) {
     _ = _.useRef(_);
   return (
     _ && (_.current = _),
-    (0, _.jsx)(oie, {
+    (0, _.jsx)(nie, {
       visible: _ !== void 0,
       closePopover: _,
       refPopover: _,
@@ -95190,25 +95190,25 @@ function _(_) {
   let { section: _, visibleSections: _ } = _;
   return (0, _.jsx)(_, {
     method: _,
-    children: cie(_, _),
+    children: iie(_, _),
   });
 }
-function cie(_, _) {
+function iie(_, _) {
   switch (_) {
     case `browse`:
       return (0, _.jsx)(_, {});
     case `recommendations`:
-      return (0, _.jsx)(jre, {});
+      return (0, _.jsx)(Dre, {});
     case `categories`:
       return (0, _.jsx)(_, {});
     case `hardware`:
-      return (0, _.jsx)(qte, {});
+      return (0, _.jsx)(Ute, {});
     case `waystoplay`:
-      return (0, _.jsx)(Yre, {});
+      return (0, _.jsx)(Gre, {});
     case `specialsections`:
-      return (0, _.jsx)(Ure, {});
+      return (0, _.jsx)(zre, {});
     case `more`:
-      return (0, _.jsx)(ene, {
+      return (0, _.jsx)(Xte, {
         excludedSections: _,
       });
     default:
@@ -95221,11 +95221,11 @@ function _(_) {
     case `browse`:
       return (0, _.jsx)(_, {});
     case `recommendations`:
-      return (0, _.jsx)(Mre, {});
+      return (0, _.jsx)(Ore, {});
     case `categories`:
       return (0, _.jsx)(_, {});
     case `hardware`:
-      return (0, _.jsx)(Jte, {});
+      return (0, _.jsx)(Wte, {});
     case `waystoplay`:
       return null;
     case `specialsections`:
@@ -95236,31 +95236,31 @@ function _(_) {
       return _(_, `unhandled section ${_}`), null;
   }
 }
-var lie = `380px`,
-  uie = `nwKm6r-IUAc-`,
-  die = `Tx-rbJxeMFs-`,
-  fie = `rFKwchjD-WU-`,
-  pie = `jagq1JLF1Dc-`,
-  mie = `A42lZ-U1dhI-`,
-  hie = `ybF-Nf0hQ3w-`,
-  gie = `EGZnhUAocxE-`,
-  _ie = `O2jUvAs3OiU-`,
+var aie = `380px`,
+  oie = `nwKm6r-IUAc-`,
+  sie = `Tx-rbJxeMFs-`,
+  cie = `rFKwchjD-WU-`,
+  lie = `jagq1JLF1Dc-`,
+  uie = `A42lZ-U1dhI-`,
+  die = `ybF-Nf0hQ3w-`,
+  fie = `EGZnhUAocxE-`,
+  pie = `O2jUvAs3OiU-`,
   _ = `w6F-8HDoxbw-`,
   _ = `Lvs2qQJx5Ug-`,
-  vie = `_6udfJIcyaRc-`,
-  yie = `YmtQkHMBLzw-`,
-  bie = `KKRHY2AccFo-`,
-  xie = `JhiIqI-S0Js-`,
-  Sie = `A6CaMMW9gjI-`,
-  Cie = `QIgkV8p2ReQ-`,
-  wie = `_0efmIyaYm1o-`,
-  Tie = `_2bcxcrdUNdY-`,
+  mie = `_6udfJIcyaRc-`,
+  hie = `YmtQkHMBLzw-`,
+  gie = `KKRHY2AccFo-`,
+  _ie = `JhiIqI-S0Js-`,
+  vie = `A6CaMMW9gjI-`,
+  yie = `QIgkV8p2ReQ-`,
+  bie = `_0efmIyaYm1o-`,
+  xie = `_2bcxcrdUNdY-`,
   _ = `_077DfADYleA-`,
-  Eie = `_1DdGkk73faQ-`,
-  Die = `FH4kMqowZVE-`,
-  Oie = `OYrN7Ld4wLM-`,
-  kie = `XxvfleuvczA-`;
-function Aie(_, _ = {}) {
+  Sie = `_1DdGkk73faQ-`,
+  Cie = `FH4kMqowZVE-`,
+  wie = `OYrN7Ld4wLM-`,
+  Tie = `XxvfleuvczA-`;
+function Eie(_, _ = {}) {
   let {
       nTimeoutMS: _ = 350,
       nTimeoutExtensionMS: _ = 125,
@@ -95290,7 +95290,7 @@ function Aie(_, _ = {}) {
     _
   );
 }
-function jie(_, ..._) {
+function Die(_, ..._) {
   let [_, _] = _.useState([]),
     _ = _.useRef(void 0);
   (0, _.useEffect)(() => {
@@ -95312,14 +95312,14 @@ function jie(_, ..._) {
     _
   );
 }
-function Mie(_, _, _ = 10, _ = void 0) {
+function Oie(_, _, _ = 10, _ = void 0) {
   return {
     queryKey: [`MostVisitedItems`, _],
-    queryFn: () => Pie(_, _, _, _),
+    queryFn: () => Aie(_, _, _, _),
     staleTime: 3e5,
   };
 }
-function Nie(_ = 10, _ = {}, _ = !0) {
+function kie(_ = 10, _ = {}, _ = !0) {
   let _ = _(),
     _ = _(),
     { dataLoader: _, storeBrowseContext: _, cacheStoreItemData: _ } = _();
@@ -95327,7 +95327,7 @@ function Nie(_ = 10, _ = {}, _ = !0) {
     queryKey: [`MostVisitedItemsFiltered`, _],
     queryFn: async () => {
       let _ = await _.fetchQuery(
-          Mie(_, _, _, {
+          Oie(_, _, _, {
             cacheStoreItemData: _,
             data_request: {
               ..._,
@@ -95353,7 +95353,7 @@ function Nie(_ = 10, _ = {}, _ = !0) {
     enabled: _,
   });
 }
-async function Pie(_, _, _ = 10, _ = void 0) {
+async function Aie(_, _, _ = 10, _ = void 0) {
   let _ = _.Init(_);
   _.Body().set_count(_), _(_, _), _ && _(_, _.data_request);
   let _ = await _.GetMostVisitedItemsOnStore(_, _);
@@ -95369,58 +95369,40 @@ async function Pie(_, _, _ = 10, _ = void 0) {
       .map((_) => _.toObject())
   );
 }
-var Fie = [`Steam Main Client`, `Steam Deck Main`],
-  Iie = [`Steam Internal Beta Client`, `Steam Deck Internal Beta`],
-  Lie = [`Steam Beta Update`, `蒸汽平台客户端 Beta`, `Steam Deck Beta`];
-function _() {
-  return typeof navigator < `u` ? navigator.userAgent : void 0;
-}
-function _(_ = _()) {
-  let _ = _?.match(
-    /Valve (?<family>Steam (?:Client|GameOverlay|Tenfoot|ClientUI|Gamepad(?: VR)?(?:\/Steam Deck)?))( \[(?<betaid>[^\]]*)\])?(\/(?<launcher>[A-Za-z0-9_]+))?\/(?<version>[0-9]*)/,
-  );
-  if (_) return _.groups;
-}
-function _(_, _) {
-  let _ = _(_)?.betaid;
-  return !!_ && _.includes(_);
-}
-function Rie(_ = _()) {
-  return _(Fie, _);
-}
-function zie(_ = _()) {
-  return _([...Lie, ...Iie], _);
-}
-function Bie(_ = _()) {
-  return (
-    !!_ &&
-    /iP(?:od|hone|ad)|[pP]lay[sS]tation [vV]ita|Symbian|webOS\/|Blazer|\/GoBrowser|BlackBerry|Opera M(?:obi|ini)\/|Vortex|Android|Windows (?:CE|Mobile)/.test(
-      _,
-    )
-  );
-}
-var Vie = {
-  name: `search_edismax`,
-  options: {
-    path: `/`,
+var jie = {
+    name: `search_edismax`,
+    options: {
+      path: `/`,
+    },
+    preferenceControls: {
+      isTechnicallyNecessary: !0,
+    },
   },
-  preferenceControls: {
-    isTechnicallyNecessary: !0,
-  },
-};
-function Hie() {
-  let _ = _(Vie);
-  return _ === void 0 ? Rie() || zie() : _ != `` && _ != `0`;
+  Mie = 50;
+function Nie() {
+  let _ = _(jie);
+  if (_ !== void 0) return _ != `` && _ != `0`;
+  let _;
+  if (_.logged_in) _ = `a` + _.accountid;
+  else {
+    let _ = _(_);
+    if (!_) return !1;
+    _ = `s` + _;
+  }
+  let _ = 2166136261;
+  for (let _ = 0; _ < _.length; _++)
+    (_ ^= _.charCodeAt(_)), (_ = Math.imul(_, 16777619) >>> 0);
+  return _ % 100 < Mie;
 }
 var _ = {
     include_assets: !0,
     apply_user_filters: !0,
   },
-  Uie = {
+  Pie = {
     include_tags: !0,
     include_creators: !0,
   };
-function Wie(_) {
+function Fie(_) {
   let { list: _, iActiveIndex: _, activeSection: _, getMouseHandlers: _ } = _,
     _,
     _,
@@ -95430,7 +95412,7 @@ function Wie(_) {
         title: _.strMainTitle,
         children: _.rgMainItems.map(({ item_id: _ }, _) =>
           (0, _.jsx)(
-            Zie,
+            Hie,
             {
               itemid: _,
               index: _,
@@ -95445,10 +95427,10 @@ function Wie(_) {
       _.eListType == `suggestions` &&
       (_ = (0, _.jsx)(_, {
         title: _.strMainTitle,
-        children: (0, _.jsx)(rae, {}),
+        children: (0, _.jsx)(Jie, {}),
       })),
     _.rgTextItems?.length &&
-      (_ = (0, _.jsx)(Yie, {
+      (_ = (0, _.jsx)(Bie, {
         title: _.strTextLinks,
         items: _.rgTextItems,
       })),
@@ -95460,7 +95442,7 @@ function Wie(_) {
               horizontal: !0,
               children: _.rgSubSectionItems.map(({ item_id: _ }, _) =>
                 (0, _.jsx)(
-                  tae,
+                  Kie,
                   {
                     itemid: _,
                     index: _,
@@ -95475,7 +95457,7 @@ function Wie(_) {
               title: _.strSubSectionTitle,
               children: _.rgSubSectionItems.map(({ item_id: _ }, _) =>
                 (0, _.jsx)(
-                  Qie,
+                  Uie,
                   {
                     itemid: _,
                     index: _,
@@ -95497,7 +95479,7 @@ function Wie(_) {
       }),
       _,
       _,
-      (0, _.jsx)(nae, {
+      (0, _.jsx)(qie, {
         active: _ == `advancedsearch`,
         getMouseHandlers: _,
       }),
@@ -95531,13 +95513,13 @@ function _(_) {
       );
   }
 }
-function Gie(_ = !0) {
-  return Nie(10, _, _);
+function Iie(_ = !0) {
+  return kie(10, _, _);
 }
-function Kie(_, _, _, _ = !0) {
-  let _ = Aie(_),
+function Lie(_, _, _, _ = !0) {
+  let _ = Eie(_),
     _ = _(),
-    _ = jie(
+    _ = Die(
       _(
         _,
         5,
@@ -95545,8 +95527,8 @@ function Kie(_, _, _, _ = !0) {
           () =>
             _(
               {
-                ...Uie,
-                use_name_match_scoring: Hie(),
+                ...Pie,
+                use_name_match_scoring: Nie(),
               },
               _,
             ),
@@ -95556,12 +95538,12 @@ function Kie(_, _, _, _ = !0) {
       _ === void 0 ? `` : _,
     ),
     _ = _ && _ == ``,
-    { data: _ } = Gie(_),
+    { data: _ } = Iie(_),
     { data: _ } = _(_),
     { data: _ } = _(_ && _);
   return (
     _.useMemo(() => _(_().slice()), []),
-    Jie(
+    zie(
       _.useMemo(() => {
         if (_ && _.data) {
           let [_, _, _] = _(_.data.rgItemIDs);
@@ -95602,7 +95584,7 @@ function Kie(_, _, _, _ = !0) {
     )
   );
 }
-function qie() {
+function Rie() {
   let _ = _(),
     _ = _(),
     _ = _();
@@ -95628,14 +95610,14 @@ var _ = {
   strMainTitle: ``,
   rgMainItems: [],
 };
-function Jie(_) {
+function zie(_) {
   let [_, _] = _.useState(_ || _),
     [_, _] = _.useState({
       activeSection: `apps`,
       iActiveIndex: void 0,
       eLastInputSource: void 0,
     }),
-    _ = qie();
+    _ = Rie();
   _.useEffect(() => {
     _(_ || _);
   }, [_]);
@@ -95811,18 +95793,18 @@ function _(_) {
         children: _,
       }),
       (0, _.jsx)(`div`, {
-        className: vie,
+        className: mie,
         children: _,
       }),
     ],
   });
 }
-function Yie(_) {
+function Bie(_) {
   let { title: _, items: _ } = _;
   return (0, _.jsx)(`div`, {
     className: (0, _.default)(_),
     children: (0, _.jsxs)(`div`, {
-      className: yie,
+      className: hie,
       children: [
         (0, _.jsx)(`div`, {
           className: _,
@@ -95830,7 +95812,7 @@ function Yie(_) {
         }),
         _.map(({ item_id: _ }, _) =>
           (0, _.jsx)(
-            Xie,
+            Vie,
             {
               itemid: _,
               first: _ == 0,
@@ -95842,14 +95824,14 @@ function Yie(_) {
     }),
   });
 }
-function Xie(_) {
+function Vie(_) {
   let { itemid: _, first: _ } = _,
     { data: _ } = _(_);
   return (0, _.jsxs)(_.Fragment, {
     children: [
       !_ && `, `,
       (0, _.jsx)(_, {
-        className: bie,
+        className: gie,
         storeItem: _,
         feature: `recent`,
         children: _?.name,
@@ -95857,7 +95839,7 @@ function Xie(_) {
     ],
   });
 }
-var Zie = _.memo(function (_) {
+var Hie = _.memo(function (_) {
     let { itemid: _, index: _, getMouseHandlers: _, active: _ = !1 } = _,
       _ = _.useMemo(() => _(`apps`, _), [_, _]);
     return (0, _.jsx)(_, {
@@ -95869,17 +95851,17 @@ var Zie = _.memo(function (_) {
       }),
     });
   }),
-  Qie = _.memo(function (_) {
+  Uie = _.memo(function (_) {
     let { itemid: _, ..._ } = _,
       { data: _ } = _(_),
       _ = _(`${_.STORE_BASE_URL}${_?.store_url_path || `/`}`);
     return `creatorid` in _
       ? (0, _.jsx)(_, {
-          className: Cie,
+          className: yie,
           itemid: _,
           url: _,
           ..._,
-          children: (0, _.jsx)($ie, {
+          children: (0, _.jsx)(Wie, {
             itemid: _,
           }),
         })
@@ -95887,7 +95869,7 @@ var Zie = _.memo(function (_) {
           itemid: _,
           url: _,
           ..._,
-          children: (0, _.jsx)(eae, {
+          children: (0, _.jsx)(Gie, {
             itemid: _,
           }),
         });
@@ -95904,19 +95886,19 @@ function _(_) {
     children: _,
   } = _;
   return (0, _.jsxs)(`a`, {
-    className: (0, _.default)(Sie, _ && `fGs1iLkUXjA-`, _, _ && `pvj7AUbIUvA-`),
+    className: (0, _.default)(vie, _ && `fGs1iLkUXjA-`, _, _ && `pvj7AUbIUvA-`),
     href: _,
     ..._(`categories`, _),
     children: [
       (0, _.jsxs)(`div`, {
-        className: wie,
+        className: bie,
         children: [
           (0, _.jsx)(_, {
             itemid: _,
             type: _ ? `square` : `wide`,
           }),
           (0, _.jsx)(`div`, {
-            className: Tie,
+            className: xie,
           }),
         ],
       }),
@@ -95924,7 +95906,7 @@ function _(_) {
     ],
   });
 }
-function $ie(_) {
+function Wie(_) {
   let { itemid: _ } = _,
     { data: _ } = _(_),
     { data: _ } = _(_);
@@ -95937,7 +95919,7 @@ function $ie(_) {
           alt: ``,
         }),
       (0, _.jsx)(`div`, {
-        className: Oie,
+        className: wie,
         children: _?.name,
       }),
       (0, _.jsx)(_, {
@@ -95946,13 +95928,13 @@ function $ie(_) {
     ],
   });
 }
-function eae(_) {
+function Gie(_) {
   let { itemid: _ } = _,
     { data: _ } = _(_);
   return (0, _.jsxs)(_.Fragment, {
     children: [
       (0, _.jsx)(`div`, {
-        className: Eie,
+        className: Sie,
         children: _?.name,
       }),
       (0, _.jsx)(_, {
@@ -95966,11 +95948,11 @@ function _(_) {
   return !_ || !_.game_count
     ? null
     : (0, _.jsx)(`div`, {
-        className: Die,
+        className: Cie,
         children: _(`#Menu_SearchBar_CategoryGameCount`, _(_.game_count)),
       });
 }
-var tae = _.memo(function (_) {
+var Kie = _.memo(function (_) {
   let { itemid: _, ..._ } = _,
     { data: _ } = _(_),
     _ = _(`${_.STORE_BASE_URL}${_?.store_url_path || `/`}`);
@@ -95987,11 +95969,11 @@ var tae = _.memo(function (_) {
     }),
   });
 });
-function nae(_) {
+function qie(_) {
   let { getMouseHandlers: _, active: _ } = _,
     _ = _(`advancedsearch`);
   return (0, _.jsx)(`a`, {
-    className: (0, _.default)(xie, _ && `pvj7AUbIUvA-`),
+    className: (0, _.default)(_ie, _ && `pvj7AUbIUvA-`),
     href: _,
     ..._(`advancedsearch`, 0),
     children: (0, _.jsx)(`span`, {
@@ -96000,9 +95982,9 @@ function nae(_) {
     }),
   });
 }
-function rae() {
+function Jie() {
   return (0, _.jsx)(`div`, {
-    className: kie,
+    className: Tie,
     children: _(`#Menu_SearchBar_NoMatches`),
   });
 }
@@ -96010,13 +95992,13 @@ var _ = _.memo(function () {
   let { bBackdropActive: _ } = _(),
     _ = _();
   return (0, _.jsxs)(`div`, {
-    className: uie,
+    className: oie,
     children: [
       !_ &&
         (0, _.jsx)(_, {
           bBackdropActive: _,
         }),
-      (0, _.jsx)(iae, {}),
+      (0, _.jsx)(Yie, {}),
     ],
   });
 });
@@ -96027,7 +96009,7 @@ function _(_) {
           _.classList.contains(`ybF-Nf0hQ3w-`) ||
           _.classList.contains(`Tx-rbJxeMFs-`),
         _ = _.currentTarget;
-      (_.relatedTarget && ((_) => _(_, _) || Fte(_, _))(_.relatedTarget)) ||
+      (_.relatedTarget && ((_) => _(_, _) || Mte(_, _))(_.relatedTarget)) ||
         _();
     },
     [_],
@@ -96066,7 +96048,7 @@ var _ = _.memo(function (_) {
     ),
     _ = _(`search`);
   return (0, _.jsxs)(`form`, {
-    className: (0, _.default)(die, _ && !_ && `Xm35U6-0rq4-`),
+    className: (0, _.default)(sie, _ && !_ && `Xm35U6-0rq4-`),
     role: `search`,
     onMouseEnter: () => _(),
     method: `GET`,
@@ -96079,10 +96061,10 @@ var _ = _.memo(function (_) {
         value: _,
       }),
       (0, _.jsxs)(`div`, {
-        className: pie,
+        className: lie,
         children: [
           (0, _.jsx)(`input`, {
-            className: fie,
+            className: cie,
             name: `term`,
             placeholder: _(`#Menu_SearchPlaceholder`),
             value: _,
@@ -96105,12 +96087,12 @@ var _ = _.memo(function (_) {
               onMouseDown: _,
               onClick: _,
               "aria-label": _(`#Menu_ClearSearchTerm`),
-              children: (0, _.jsx)(aae, {}),
+              children: (0, _.jsx)(Xie, {}),
             }),
         ],
       }),
       (0, _.jsx)(`button`, {
-        className: mie,
+        className: uie,
         type: `submit`,
         onClick: _,
         children: (0, _.jsx)(_, {
@@ -96120,7 +96102,7 @@ var _ = _.memo(function (_) {
     ],
   });
 });
-function iae() {
+function Yie() {
   let {
       term: _,
       setInputKeyDown: _,
@@ -96131,7 +96113,7 @@ function iae() {
       closeSearch: _,
     } = _(),
     { nBackdropHeight: _ } = _(),
-    { onKeyDown: _, ..._ } = Kie(_, _, _ && _ < 480 ? 3 : 4, !(_ && _ < 450)),
+    { onKeyDown: _, ..._ } = Lie(_, _, _ && _ < 480 ? 3 : 4, !(_ && _ < 450)),
     _ = _(_),
     _ = _.useCallback(
       (_) => {
@@ -96148,18 +96130,18 @@ function iae() {
   return (
     _(_, _),
     (0, _.jsx)(`div`, {
-      className: hie,
+      className: die,
       onBlur: _,
       ref: _,
       children: (0, _.jsx)(_, {
         visible: _,
-        className: gie,
+        className: fie,
         msAnimationDuration: 100,
         keepMounted: !0,
         children: (0, _.jsx)(`div`, {
-          className: _ie,
+          className: pie,
           _: _,
-          children: (0, _.jsx)(Wie, {
+          children: (0, _.jsx)(Fie, {
             ..._,
           }),
         }),
@@ -96179,7 +96161,7 @@ var _ = _.memo(function (_) {
       }),
     });
   }),
-  aae = _.memo(function (_) {
+  Xie = _.memo(function (_) {
     return (0, _.jsx)(`svg`, {
       xmlns: `http://www.w3.org/2000/svg`,
       viewBox: `0 0 36 36`,
@@ -96191,7 +96173,7 @@ var _ = _.memo(function (_) {
       }),
     });
   }),
-  oae = _.memo(function (_) {
+  Zie = _.memo(function (_) {
     let { refPage: _ } = _,
       [_, _] = _.useState(),
       [_, _] = _.useState(() => (_.IN_MOBILE_WEBVIEW ? new Set() : void 0)),
@@ -96204,8 +96186,8 @@ var _ = _.memo(function (_) {
       _ = _.useCallback(() => {
         _.current?.TakeFocus(), _(void 0);
       }, []),
-      { fnReturnFocusToPage: _ } = sae(_),
-      _ = cae(_),
+      { fnReturnFocusToPage: _ } = Qie(_),
+      _ = $ie(_),
       _ = _.useCallback(() => {
         _(void 0), _();
       }, [_]),
@@ -96228,7 +96210,7 @@ var _ = _.memo(function (_) {
       submethod: ``,
       feature: ``,
       children: [
-        (0, _.jsxs)(lae, {
+        (0, _.jsxs)(eae, {
           bShowBackdrop: _ || !!_,
           closePopoverAndSearch: _,
           refPage: _,
@@ -96249,8 +96231,8 @@ var _ = _.memo(function (_) {
                   onMenuButton: () => !0,
                   onMenuActionDescription: null,
                   children: [
-                    _ && (0, _.jsx)(hae, {}),
-                    (0, _.jsxs)(dae, {
+                    _ && (0, _.jsx)(oae, {}),
+                    (0, _.jsxs)(nae, {
                       openPopover: _,
                       activeSection: _,
                       visibleSections: _,
@@ -96268,14 +96250,14 @@ var _ = _.memo(function (_) {
                     (0, _.jsxs)(`div`, {
                       className: _,
                       children: [
-                        !_ && (0, _.jsx)(mae, {}),
-                        (0, _.jsx)(gae, {}),
-                        (0, _.jsx)(_ae, {}),
+                        !_ && (0, _.jsx)(aae, {}),
+                        (0, _.jsx)(sae, {}),
+                        (0, _.jsx)(cae, {}),
                       ],
                     }),
                   ],
                 }),
-            (0, _.jsx)(sie, {
+            (0, _.jsx)(rie, {
               activeSection: _,
               closePopover: _,
               visibleSections: _,
@@ -96284,13 +96266,13 @@ var _ = _.memo(function (_) {
             }),
           ],
         }),
-        (0, _.jsx)(xae, {
+        (0, _.jsx)(fae, {
           openMoreSection: _,
         }),
       ],
     });
   });
-function sae(_) {
+function Qie(_) {
   let [_, _] = _.useState(),
     _ = _();
   (0, _.useEffect)(() => {
@@ -96335,7 +96317,7 @@ function sae(_) {
     fnReturnFocusToPage: _ ? _ : void 0,
   };
 }
-function cae(_) {
+function $ie(_) {
   let _ = _();
   return _.useCallback(
     (_, _) => {
@@ -96356,7 +96338,7 @@ function cae(_) {
     [_, _],
   );
 }
-function lae(_) {
+function eae(_) {
   let {
       bShowBackdrop: _,
       closePopoverAndSearch: _,
@@ -96416,7 +96398,7 @@ function lae(_) {
     (0, _.useEffect)(() => {
       _ && _((_) => (_ == `visible` ? _ : `show`));
     }, [_]);
-  let _ = uae(_, _),
+  let _ = tae(_, _),
     _ = _(
       _.useCallback((_) => {
         _(_.contentBoxSize[0].blockSize);
@@ -96482,7 +96464,7 @@ function lae(_) {
     }),
   });
 }
-function uae(_, _) {
+function tae(_, _) {
   let [_, _] = _.useState(),
     _ = _.useCallback((_) => {
       _(Math.min(_.borderBoxSize[0].blockSize, parseInt(_)));
@@ -96510,7 +96492,7 @@ function uae(_, _) {
 function _() {
   return !_();
 }
-function dae(_) {
+function nae(_) {
   let {
       openPopover: _,
       activeSection: _,
@@ -96527,13 +96509,13 @@ function dae(_) {
       rgButtonWidths: _,
       nContainerWidth: _,
       refDynamicButtonContainer: _,
-    } = fae(_ !== void 0, _.current),
+    } = rae(_ !== void 0, _.current),
     _ = _(),
     _ = _(),
     _ = _ && !_;
   _.useLayoutEffect(() => {
     if (!_ || _ === void 0) return;
-    let _ = _ ? parseInt(lie) : 0,
+    let _ = _ ? parseInt(aie) : 0,
       _ = _[_.length - 1],
       _ = _.slice(0, -1),
       _ = _ - _,
@@ -96559,7 +96541,7 @@ function dae(_) {
       _ = _;
       let _ = _ ? _(`#Menu_Popover_Menu`) : void 0;
       return (0, _.jsx)(
-        pae,
+        iae,
         {
           section: _,
           label: _ ?? _,
@@ -96593,7 +96575,7 @@ function dae(_) {
     ],
   });
 }
-function fae(_, _) {
+function rae(_, _) {
   let [_, _] = _.useState(),
     [_, _] = _.useState();
   return (
@@ -96617,7 +96599,7 @@ function fae(_, _) {
     }
   );
 }
-function pae(_) {
+function iae(_) {
   let {
       section: _,
       openPopover: _,
@@ -96678,7 +96660,7 @@ function pae(_) {
     ],
   });
 }
-function mae() {
+function aae() {
   let _ = _(`${_.STORE_BASE_URL}search/`);
   return (0, _.jsxs)(_, {
     className: (0, _.default)(_),
@@ -96687,21 +96669,21 @@ function mae() {
     children: [(0, _.jsx)(_, {}), _.Localize(`#Menu_Search`)],
   });
 }
-function hae() {
+function oae() {
   let _ = _(`${_.STORE_BASE_URL}vr/`);
   return (0, _.jsxs)(_, {
     className: (0, _.default)(_, _, _),
     focusClassName: _,
     href: _,
     children: [
-      (0, _.jsx)(bae, {
+      (0, _.jsx)(dae, {
         role: `presentation`,
       }),
       _.Localize(`#Menu_VR`),
     ],
   });
 }
-function gae() {
+function sae() {
   let _ = _(),
     { data: _ } = _(_),
     _ = _(`${_.STORE_BASE_URL}wishlist/`);
@@ -96711,7 +96693,7 @@ function gae() {
         focusClassName: _,
         href: _,
         children: [
-          (0, _.jsx)(vae, {
+          (0, _.jsx)(lae, {
             role: `presentation`,
           }),
           _.Localize(`#Menu_Wishlist`),
@@ -96730,7 +96712,7 @@ function _(_) {
     children: _.children,
   });
 }
-function _ae() {
+function cae() {
   let { data: _ } = _(),
     _ = _(`${_.STORE_BASE_URL}cart/`);
   return _
@@ -96739,7 +96721,7 @@ function _ae() {
         focusClassName: _,
         href: _,
         children: [
-          (0, _.jsx)(yae, {}),
+          (0, _.jsx)(uae, {}),
           (0, _.jsx)(`div`, {
             className: _,
             children: _.Localize(`#Menu_Cart`),
@@ -96756,7 +96738,7 @@ function _ae() {
       })
     : null;
 }
-function vae(_) {
+function lae(_) {
   return (0, _.jsxs)(`svg`, {
     xmlns: `http://www.w3.org/2000/svg`,
     viewBox: `0 0 14 14`,
@@ -96782,7 +96764,7 @@ function vae(_) {
     ],
   });
 }
-function yae(_) {
+function uae(_) {
   return (0, _.jsx)(`svg`, {
     xmlns: `http://www.w3.org/2000/svg`,
     viewBox: `0 0 14 14`,
@@ -96794,7 +96776,7 @@ function yae(_) {
     }),
   });
 }
-function bae(_) {
+function dae(_) {
   return (0, _.jsx)(`svg`, {
     viewBox: `0 0 48 48`,
     fill: `none`,
@@ -96805,7 +96787,7 @@ function bae(_) {
     }),
   });
 }
-var xae = _.memo(function (_) {
+var fae = _.memo(function (_) {
   let { openMoreSection: _ } = _,
     { setTerm: _, openSearch: _, onActive: _, closeSearch: _ } = _(),
     _ = _(`mobilesearch`),
@@ -96847,7 +96829,7 @@ var xae = _.memo(function (_) {
     null
   );
 });
-function Sae() {
+function pae() {
   let _ = _(_),
     _ = _.useRef(null),
     [_, _] = _.useState(null);
@@ -96873,7 +96855,7 @@ function Sae() {
           ref: _,
           className: _,
           excludeTreeFromScrollRegionSearch: !0,
-          children: (0, _.jsx)(oae, {
+          children: (0, _.jsx)(Zie, {
             refPage: _,
           }),
         })
@@ -96881,19 +96863,19 @@ function Sae() {
 }
 var _ = `x5W1178aPk4-`,
   _ = `N74NZ1YCLfw-`,
-  Cae = `vKqTZXWhk9o-`;
-function wae(_) {
-  return _() ? (0, _.jsx)(Eae, {}) : _.children;
+  mae = `vKqTZXWhk9o-`;
+function hae(_) {
+  return _() ? (0, _.jsx)(_ae, {}) : _.children;
 }
-function Tae(_, _) {
+function gae(_, _) {
   if (!_) return null;
   let _ = _;
   for (; (_ = _.parentElement); ) if (_.classList.contains(_)) return _;
   return null;
 }
-function Eae() {
+function _ae() {
   let _ = _.useCallback((_) => {
-    let _ = Tae(_, `responsive_header_content`);
+    let _ = gae(_, `responsive_header_content`);
     if (_)
       return (
         _.classList.add(_),
@@ -96905,16 +96887,16 @@ function Eae() {
     console.warn(`Couldn't find responsive header menu`);
   }, []);
   return (0, _.jsx)(`div`, {
-    className: (0, _.default)(Cae),
+    className: (0, _.default)(mae),
     ref: _,
     children: (0, _.jsx)(_, {
       bBackdropActive: !1,
     }),
   });
 }
-var Dae = _.lazy(() =>
+var vae = _.lazy(() =>
   _(
-    () => import(`./discoveryqueuewizard.js?contenthash=BQ_65mvW`),
+    () => import(`./discoveryqueuewizard.js?contenthash=CahTkeZW`),
     __vite__mapDeps([
       41, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
       21, 22, 23, 24, 25, 26, 27, 28, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51,
@@ -96924,7 +96906,7 @@ var Dae = _.lazy(() =>
     import.meta.url,
   ),
 );
-function Oae(_) {
+function yae(_) {
   let { children: _ } = _,
     [_, _] = _.useState(),
     _ = _.useCallback(
@@ -96954,7 +96936,7 @@ function Oae(_) {
           children: (0, _.jsx)(_, {
             children: (0, _.jsx)(_.Suspense, {
               fallback: null,
-              children: (0, _.jsx)(Dae, {
+              children: (0, _.jsx)(vae, {
                 ..._,
                 fnCloseModal: _,
               }),
@@ -97015,7 +96997,7 @@ var _ = class extends _ {
   },
   _ = _.createContext(null),
   _ = null;
-function kae() {
+function bae() {
   return (
     (_ ||=
       (console.warn(
@@ -97034,17 +97016,17 @@ function _(_) {
   });
 }
 function _() {
-  return _.useContext(_) ?? kae();
+  return _.useContext(_) ?? bae();
 }
-function Aae(_) {
+function xae(_) {
   return (0, _.jsx)(_.Fragment, {
     children: _.children(_()),
   });
 }
-var jae = 0;
+var Sae = 0;
 function _(_) {
   async function _() {
-    let _ = jae++,
+    let _ = Sae++,
       _ = performance.now();
     performance.mark(`reactLazyLoad${_}`);
     let _ = await _();
@@ -97060,7 +97042,7 @@ function _(_) {
 }
 var _ = _(() =>
     _(
-      () => import(`./greenenvelope.js?contenthash=DaNa4LgB`),
+      () => import(`./greenenvelope.js?contenthash=CRBymoc4`),
       __vite__mapDeps([
         73, 1, 2, 74, 51, 23, 52, 53, 54, 35, 6, 61, 7, 46, 27, 75, 76, 77, 18,
         78,
@@ -97068,9 +97050,9 @@ var _ = _(() =>
       import.meta.url,
     ),
   ),
-  Mae = _(() =>
+  Cae = _(() =>
     _(
-      () => import(`./accountpreferences.js?contenthash=B16zNYnx`),
+      () => import(`./accountpreferences.js?contenthash=D5-g6_vg`),
       __vite__mapDeps([
         79, 1, 2, 80, 42, 9, 10, 11, 81, 16, 17, 82, 14, 83, 84, 51, 23, 52, 53,
         54, 35, 6, 55, 85, 62, 63, 64, 86, 87,
@@ -97078,9 +97060,9 @@ var _ = _(() =>
       import.meta.url,
     ),
   ),
-  Nae = _(() =>
+  wae = _(() =>
     _(
-      () => import(`./apppageroutes.js?contenthash=BrEfCjUK`),
+      () => import(`./apppageroutes.js?contenthash=CdeZD0Sw`),
       __vite__mapDeps([
         88, 1, 2, 34, 89, 90, 91, 92, 93, 18, 84, 94, 95, 96, 6, 3, 4, 5, 7, 8,
         9, 10, 11, 12, 13, 14, 15, 16, 17, 19, 20, 21, 22, 23, 24, 25, 26, 27,
@@ -97100,7 +97082,7 @@ var _ = _(() =>
   ),
   _ = _(() =>
     _(
-      () => import(`./storesalecrosspromo.js?contenthash=IL1y9Ofp`),
+      () => import(`./storesalecrosspromo.js?contenthash=Czc4t2XM`),
       __vite__mapDeps([
         205, 1, 2, 96, 6, 90, 92, 91, 93, 18, 84, 94, 95, 3, 4, 5, 7, 8, 9, 10,
         11, 12, 13, 14, 15, 16, 17, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 80,
@@ -97113,7 +97095,7 @@ var _ = _(() =>
   ),
   _ = _(() =>
     _(
-      () => import(`./broadcast_embeddable2.js?contenthash=CvtKdneU`),
+      () => import(`./broadcast_embeddable2.js?contenthash=DxKm1yGF`),
       __vite__mapDeps([
         209, 1, 2, 90, 74, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17,
         18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 80, 42, 81, 97, 31, 32, 98,
@@ -97124,16 +97106,16 @@ var _ = _(() =>
       import.meta.url,
     ),
   ),
-  Pae = _(() =>
+  Tae = _(() =>
     _(
-      () => import(`./categoriesapp.js?contenthash=CBlZFmkX`),
+      () => import(`./categoriesapp.js?contenthash=CTLVDq1Y`),
       __vite__mapDeps([221, 1, 2, 109, 222]),
       import.meta.url,
     ),
   ),
-  Fae = _(() =>
+  Eae = _(() =>
     _(
-      () => import(`./curatoradmin.js?contenthash=BKkMTeHR`),
+      () => import(`./curatoradmin.js?contenthash=znIcVScM`),
       __vite__mapDeps([
         223, 1, 2, 224, 93, 90, 18, 84, 94, 9, 16, 17, 21, 22, 135, 136, 193,
         194, 146, 54, 23, 14, 114, 156, 126, 3, 4, 5, 6, 7, 8, 10, 11, 12, 13,
@@ -97150,9 +97132,9 @@ var _ = _(() =>
       import.meta.url,
     ),
   ),
-  Iae = _(() =>
+  Dae = _(() =>
     _(
-      () => import(`./creatorhomeevent.js?contenthash=DLzwpkl7`),
+      () => import(`./creatorhomeevent.js?contenthash=BjPTK295`),
       __vite__mapDeps([
         226, 1, 2, 15, 16, 17, 82, 14, 83, 84, 207, 93, 90, 18, 94, 146, 54, 23,
         114, 227, 89, 34, 91, 92, 95, 96, 6, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13,
@@ -97169,16 +97151,16 @@ var _ = _(() =>
       import.meta.url,
     ),
   ),
-  Lae = _(() =>
+  Oae = _(() =>
     _(
-      () => import(`./socialmedialinkeditor.js?contenthash=DB7Aqybe`),
+      () => import(`./socialmedialinkeditor.js?contenthash=CCwvaJmj`),
       __vite__mapDeps([237, 1, 2, 16, 17, 238, 239, 235, 240]),
       import.meta.url,
     ),
   ),
-  Rae = _(() =>
+  kae = _(() =>
     _(
-      () => import(`./adminediteventlink.js?contenthash=D9ONXln4`),
+      () => import(`./adminediteventlink.js?contenthash=SIZcvKDG`),
       __vite__mapDeps([
         241, 1, 2, 128, 93, 90, 18, 84, 94, 127, 8, 16, 17, 135, 9, 136, 46, 27,
         146, 54, 23, 14, 114, 242,
@@ -97188,14 +97170,14 @@ var _ = _(() =>
   ),
   _ = _(() =>
     _(
-      () => import(`./socialmediadisplay2.js?contenthash=CPqwcFaB`),
+      () => import(`./socialmediadisplay2.js?contenthash=Bn83JdmB`),
       __vite__mapDeps([243, 1, 2, 144, 21, 22, 145, 244]),
       import.meta.url,
     ),
   ),
-  zae = _(() =>
+  Aae = _(() =>
     _(
-      () => import(`./curatorlist.js?contenthash=DNv9cbq0`),
+      () => import(`./curatorlist.js?contenthash=BRWqEG6V`),
       __vite__mapDeps([
         245, 1, 2, 92, 91, 93, 90, 18, 84, 94, 95, 5, 6, 3, 4, 7, 8, 9, 10, 11,
         12, 13, 14, 15, 16, 17, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 97, 80,
@@ -97205,25 +97187,25 @@ var _ = _(() =>
       import.meta.url,
     ),
   ),
-  Bae = _(() =>
+  jae = _(() =>
     _(
-      () => import(`./discoveryqueuelabbutton.js?contenthash=C88eb_oC`),
+      () => import(`./discoveryqueuelabbutton.js?contenthash=2ayIrRAt`),
       __vite__mapDeps([247, 1, 2, 9, 174, 60, 18]),
       import.meta.url,
     ),
   ),
-  Vae = _(() =>
+  Mae = _(() =>
     _(
-      () => import(`./discoveryqueuehomebanner.js?contenthash=BalOT4Vf`),
+      () => import(`./discoveryqueuehomebanner.js?contenthash=D3Nhn7ad`),
       __vite__mapDeps([
         248, 2, 1, 109, 179, 47, 48, 49, 50, 60, 18, 174, 71, 180,
       ]),
       import.meta.url,
     ),
   ),
-  _ = _(() =>
+  Nae = _(() =>
     _(
-      () => import(`./personalcalendarhome.js?contenthash=B_oi9rFS`),
+      () => import(`./personalcalendarhome.js?contenthash=DEh4dVdv`),
       __vite__mapDeps([
         249, 1, 2, 12, 13, 108, 93, 90, 18, 84, 94, 109, 110, 116, 117, 106,
         175, 176, 250,
@@ -97231,9 +97213,9 @@ var _ = _(() =>
       import.meta.url,
     ),
   ),
-  Hae = _(() =>
+  Pae = _(() =>
     _(
-      () => import(`./discountsandeventshome.js?contenthash=83VEJqx7`),
+      () => import(`./discountsandeventshome.js?contenthash=DudZJLha`),
       __vite__mapDeps([
         251, 1, 2, 12, 13, 108, 93, 90, 18, 84, 94, 109, 110, 116, 117, 106,
         252,
@@ -97241,9 +97223,9 @@ var _ = _(() =>
       import.meta.url,
     ),
   ),
-  Uae = _(() =>
+  Fae = _(() =>
     _(
-      () => import(`./eventadmin.js?contenthash=DfbYTZ6t`),
+      () => import(`./eventadmin.js?contenthash=DuPugaLR`),
       __vite__mapDeps([
         253, 1, 2, 90, 89, 34, 91, 92, 93, 18, 84, 94, 95, 96, 6, 3, 4, 5, 7, 8,
         9, 10, 11, 12, 13, 14, 15, 16, 17, 19, 20, 21, 22, 23, 24, 25, 26, 27,
@@ -97260,9 +97242,9 @@ var _ = _(() =>
       import.meta.url,
     ),
   ),
-  Wae = _(() =>
+  Iae = _(() =>
     _(
-      () => import(`./event.js?contenthash=BALSH95J`),
+      () => import(`./event.js?contenthash=1FS_FFBD`),
       __vite__mapDeps([
         149, 1, 2, 90, 89, 34, 91, 92, 93, 18, 84, 94, 95, 96, 6, 3, 4, 5, 7, 8,
         9, 10, 11, 12, 13, 14, 15, 16, 17, 19, 20, 21, 22, 23, 24, 25, 26, 27,
@@ -97283,7 +97265,7 @@ var _ = _(() =>
       await _(
         async () => {
           let { GameRatingBlock: _ } = await import(
-            `./gameratingblock.js?contenthash=IYEb7cJU`
+            `./gameratingblock.js?contenthash=wTFPFUPw`
           );
           return {
             GameRatingBlock: _,
@@ -97294,23 +97276,23 @@ var _ = _(() =>
       )
     ).GameRatingBlock,
   })),
-  Gae = _(() =>
+  Lae = _(() =>
     _(
-      () => import(`./join.js?contenthash=D5YZ0WnC`),
+      () => import(`./join.js?contenthash=BG3V1BIW`),
       __vite__mapDeps([257, 1, 2, 16, 17, 26, 27, 213, 9, 85, 214, 215, 258]),
       import.meta.url,
     ),
   ),
   _ = _(() =>
     _(
-      () => import(`./login.js?contenthash=B1VcI5ud`),
+      () => import(`./login.js?contenthash=B-aFE-_w`),
       __vite__mapDeps([259, 1, 2, 85, 214, 16, 17, 215, 260]),
       import.meta.url,
     ),
   ),
-  Kae = _(() =>
+  Rae = _(() =>
     _(
-      () => import(`./loyalty.js?contenthash=DkFgq8Rj`),
+      () => import(`./loyalty.js?contenthash=iqB_sNIP`),
       __vite__mapDeps([
         261, 1, 2, 262, 9, 16, 17, 18, 82, 14, 83, 84, 24, 25, 50, 48, 47, 53,
         54, 23, 52, 55, 170, 171, 213, 85, 214, 215, 62, 63, 64, 203, 263, 264,
@@ -97319,9 +97301,9 @@ var _ = _(() =>
       import.meta.url,
     ),
   ),
-  qae = _(() =>
+  zae = _(() =>
     _(
-      () => import(`./marketingmessages.js?contenthash=BP9mMI5M`),
+      () => import(`./marketingmessages.js?contenthash=DB0Q12XE`),
       __vite__mapDeps([
         268, 1, 2, 269, 5, 6, 3, 4, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
         19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 54, 97, 80, 42, 81, 31, 32, 98,
@@ -97331,9 +97313,9 @@ var _ = _(() =>
       import.meta.url,
     ),
   ),
-  Jae = _(() =>
+  Bae = _(() =>
     _(
-      () => import(`./meetsteamrouter.js?contenthash=DKo5qL1t`),
+      () => import(`./meetsteamrouter.js?contenthash=BZ-3U9vY`),
       __vite__mapDeps([
         272, 1, 2, 15, 16, 17, 82, 14, 83, 84, 135, 9, 136, 146, 93, 90, 18, 94,
         54, 23, 114, 164, 127, 131, 233, 21, 22, 234, 273, 274, 275, 276,
@@ -97341,19 +97323,19 @@ var _ = _(() =>
       import.meta.url,
     ),
   ),
-  Yae = _(() =>
+  Vae = _(() =>
     _(
       () =>
-        import(`./openindesktopclient.js?contenthash=1SHTPDKG`).then(
+        import(`./openindesktopclient.js?contenthash=DwVJLxdl`).then(
           (_) => _._,
         ),
       __vite__mapDeps([185, 1, 2, 186]),
       import.meta.url,
     ),
   ),
-  Xae = _(() =>
+  Hae = _(() =>
     _(
-      () => import(`./steamcharts.js?contenthash=sSZP3TdW`),
+      () => import(`./steamcharts.js?contenthash=C7tl9B2y`),
       __vite__mapDeps([
         277, 1, 2, 89, 34, 90, 91, 92, 93, 18, 84, 94, 95, 96, 6, 3, 4, 5, 7, 8,
         9, 10, 11, 12, 13, 14, 15, 16, 17, 19, 20, 21, 22, 23, 24, 25, 26, 27,
@@ -97373,7 +97355,7 @@ var _ = _(() =>
   ),
   _ = _(() =>
     _(
-      () => import(`./storeitemscarousel.js?contenthash=BXhfBY2d`),
+      () => import(`./storeitemscarousel.js?contenthash=OYuU-sqK`),
       __vite__mapDeps([
         199, 1, 2, 108, 93, 90, 18, 84, 94, 109, 110, 116, 117, 119, 3, 4, 5, 6,
         7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 19, 20, 21, 22, 23, 24, 25, 26,
@@ -97384,7 +97366,7 @@ var _ = _(() =>
   ),
   _ = _(() =>
     _(
-      () => import(`./storesaledisplay.js?contenthash=VnfvixSf`),
+      () => import(`./storesaledisplay.js?contenthash=QCdeBN6u`),
       __vite__mapDeps([
         227, 1, 2, 89, 34, 90, 91, 92, 93, 18, 84, 94, 95, 96, 6, 3, 4, 5, 7, 8,
         9, 10, 11, 12, 13, 14, 15, 16, 17, 19, 20, 21, 22, 23, 24, 25, 26, 27,
@@ -97401,16 +97383,16 @@ var _ = _(() =>
       import.meta.url,
     ),
   ),
-  Zae = _(() =>
+  Uae = _(() =>
     _(
-      () => import(`./summersale2021story.js?contenthash=B2MwkH2I`),
+      () => import(`./summersale2021story.js?contenthash=BUksz4gR`),
       __vite__mapDeps([279, 1, 2, 50, 183, 280]),
       import.meta.url,
     ),
   ),
-  Qae = _(() =>
+  Wae = _(() =>
     _(
-      () => import(`./verifiedoldlandingpage.js?contenthash=C5bxykUz`),
+      () => import(`./verifiedoldlandingpage.js?contenthash=BLEIUG2b`),
       __vite__mapDeps([
         281, 1, 2, 3, 4, 125, 90, 63, 10, 11, 99, 91, 5, 6, 7, 8, 9, 12, 13, 14,
         15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 97, 80, 42, 81,
@@ -97419,9 +97401,9 @@ var _ = _(() =>
       import.meta.url,
     ),
   ),
-  $ae = _(() =>
+  Gae = _(() =>
     _(
-      () => import(`./yearinreview.js?contenthash=BAHHEXtW`),
+      () => import(`./yearinreview.js?contenthash=1xGTqZd8`),
       __vite__mapDeps([
         283, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
         20, 21, 22, 23, 24, 25, 26, 27, 28, 80, 42, 81, 229, 230, 90, 217, 218,
@@ -97434,12 +97416,12 @@ var _ = _(() =>
       import.meta.url,
     ),
   ),
-  eoe = _(async () => ({
+  Kae = _(async () => ({
     default: (
       await _(
         async () => {
           let { GlobalFooter: _ } = await import(
-            `./src.js?contenthash=4p0Rw87m`
+            `./src.js?contenthash=BHLLnm6H`
           );
           return {
             GlobalFooter: _,
@@ -97450,9 +97432,9 @@ var _ = _(() =>
       )
     ).GlobalFooter,
   })),
-  toe = _(() =>
+  qae = _(() =>
     _(
-      () => import(`./gameexplorer.js?contenthash=C0LZPhmj`),
+      () => import(`./gameexplorer.js?contenthash=DsCdq4SE`),
       __vite__mapDeps([
         291, 1, 2, 166, 167, 119, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,
         16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 97, 80, 42, 81, 31,
@@ -97461,20 +97443,20 @@ var _ = _(() =>
       import.meta.url,
     ),
   ),
-  noe = _(() =>
+  Jae = _(() =>
     _(
-      () => import(`./recommenderdemos.js?contenthash=Dh4MTjt7`),
+      () => import(`./recommenderdemos.js?contenthash=B8jWck0f`),
       __vite__mapDeps([
-        293, 1, 2, 3, 4, 106, 206, 93, 90, 18, 84, 94, 100, 101, 108, 109, 110,
+        293, 1, 2, 3, 4, 108, 93, 90, 18, 84, 94, 109, 110, 106, 206, 100, 101,
         111, 112, 113, 7, 46, 27, 122, 123, 146, 54, 23, 14, 114, 251, 12, 13,
         116, 117, 252, 176, 213, 9, 85, 214, 16, 17, 215, 294,
       ]),
       import.meta.url,
     ),
   ),
-  roe = _(() =>
+  Yae = _(() =>
     _(
-      () => import(`./labssandbox.js?contenthash=CzI1g7iD`),
+      () => import(`./labssandbox.js?contenthash=tr1dy4AK`),
       __vite__mapDeps([295, 1, 2, 16, 17, 53, 54, 23, 55, 85, 214, 215, 296]),
       import.meta.url,
     ),
@@ -97486,7 +97468,7 @@ function _(_) {
     }),
   });
 }
-function ioe() {
+function Xae() {
   return (
     (0, _.useEffect)(
       () => (
@@ -97498,7 +97480,7 @@ function ioe() {
     null
   );
 }
-function aoe(_) {
+function Zae(_) {
   let [_, _] = _.useState(),
     [_, _] = _.useState(!1);
   return (
@@ -97507,20 +97489,20 @@ function aoe(_) {
       _ &&
         (document.documentElement.setAttribute(`lang`, _),
         _.SetPreferredLocales([_]));
-      let _ = vte(!0);
-      _ && (_(_), _(_), Wee(_.steamid, _)), _(!0);
+      let _ = hte(!0);
+      _ && (_(_), _(_), Vee(_.steamid, _)), _(!0);
     }, []),
     _
       ? (0, _.jsx)(_, {
           history: _.history,
           children: (0, _.jsx)(`div`, {
-            className: Wte,
-            children: (0, _.jsxs)(loe, {
+            className: _,
+            children: (0, _.jsxs)(toe, {
               storeUserConfig: _,
               children: [
-                (0, _.jsx)(uoe, {}),
+                (0, _.jsx)(noe, {}),
                 (0, _.jsx)(_.Suspense, {
-                  fallback: (0, _.jsx)(ioe, {}),
+                  fallback: (0, _.jsx)(Xae, {}),
                   children: (0, _.jsxs)(_, {
                     children: [
                       (0, _.jsx)(_, {
@@ -97561,7 +97543,7 @@ function aoe(_) {
                         exact: !0,
                         path: [_.AppStorePageEpisode(), _.AppStorePage()],
                         render: (_) =>
-                          (0, _.jsx)(Nae, {
+                          (0, _.jsx)(wae, {
                             appid: parseInt(_.match.params.appid),
                           }),
                       }),
@@ -97605,7 +97587,7 @@ function aoe(_) {
                           (0, _.jsx)(_, {
                             config: {
                               "creatorhome-social-media-edit": (_) =>
-                                (0, _.jsx)(Lae, {
+                                (0, _.jsx)(Oae, {
                                   ..._,
                                 }),
                             },
@@ -97617,7 +97599,7 @@ function aoe(_) {
                           (0, _.jsx)(_, {
                             config: {
                               "creatorhome-events-link-edit": (_) =>
-                                (0, _.jsx)(Rae, {
+                                (0, _.jsx)(kae, {
                                   ..._,
                                 }),
                             },
@@ -97628,7 +97610,7 @@ function aoe(_) {
                         render: (_) =>
                           (0, _.jsx)(_, {
                             config: {
-                              "curator-admin-rss": () => (0, _.jsx)(Fae, {}),
+                              "curator-admin-rss": () => (0, _.jsx)(Eae, {}),
                             },
                           }),
                       }),
@@ -97668,7 +97650,7 @@ function aoe(_) {
                           _.SteamHardware(),
                           _.SteamAwardsArchive(),
                         ],
-                        render: (_) => (0, _.jsx)(ooe, {}),
+                        render: (_) => (0, _.jsx)(Qae, {}),
                       }),
                       (0, _.jsx)(_, {
                         exact: !0,
@@ -97694,7 +97676,7 @@ function aoe(_) {
                                   ..._,
                                 }),
                               "creator-home-event": (_) =>
-                                (0, _.jsx)(Iae, {
+                                (0, _.jsx)(Dae, {
                                   ..._,
                                 }),
                             },
@@ -97708,7 +97690,7 @@ function aoe(_) {
                             config: {
                               "list-display": () =>
                                 (0, _.jsx)(
-                                  zae,
+                                  Aae,
                                   {
                                     listid: _.match.params.listid,
                                   },
@@ -97831,7 +97813,7 @@ function aoe(_) {
                           (0, _.jsx)(_, {
                             takeGamepadFocusOnMount: !0,
                             config: {
-                              "event-calendar": () => (0, _.jsx)(Wae, {}),
+                              "event-calendar": () => (0, _.jsx)(Iae, {}),
                             },
                           }),
                       }),
@@ -97840,7 +97822,7 @@ function aoe(_) {
                         render: (_) =>
                           (0, _.jsx)(_, {
                             config: {
-                              "event-calendar": () => (0, _.jsx)(Uae, {}),
+                              "event-calendar": () => (0, _.jsx)(Fae, {}),
                             },
                           }),
                       }),
@@ -97850,7 +97832,7 @@ function aoe(_) {
                         render: (_) =>
                           (0, _.jsx)(_, {
                             config: {
-                              gameexplorer: () => (0, _.jsx)(toe, {}),
+                              gameexplorer: () => (0, _.jsx)(qae, {}),
                             },
                           }),
                       }),
@@ -97860,13 +97842,13 @@ function aoe(_) {
                         render: (_) =>
                           (0, _.jsx)(_, {
                             config: {
-                              recommenderdemos: () => (0, _.jsx)(noe, {}),
+                              recommenderdemos: () => (0, _.jsx)(Jae, {}),
                             },
                           }),
                       }),
                       (0, _.jsx)(_, {
                         path: _.LabsSandbox(),
-                        render: (_) => (0, _.jsx)(roe, {}),
+                        render: (_) => (0, _.jsx)(Yae, {}),
                       }),
                       (0, _.jsx)(_, {
                         path: _.SteamCharts(),
@@ -97874,7 +97856,7 @@ function aoe(_) {
                           (0, _.jsx)(_, {
                             config: {
                               "react-root": () =>
-                                (0, _.jsx)(Xae, {
+                                (0, _.jsx)(Hae, {
                                   ..._,
                                 }),
                             },
@@ -97885,7 +97867,7 @@ function aoe(_) {
                         render: () =>
                           (0, _.jsx)(_, {
                             config: {
-                              "points-shop": () => (0, _.jsx)(Kae, {}),
+                              "points-shop": () => (0, _.jsx)(Rae, {}),
                             },
                           }),
                       }),
@@ -97918,14 +97900,14 @@ function aoe(_) {
                         render: () =>
                           (0, _.jsx)(_, {
                             config: {
-                              categories: () => (0, _.jsx)(Pae, {}),
+                              categories: () => (0, _.jsx)(Tae, {}),
                             },
                           }),
                       }),
                       (0, _.jsx)(_, {
                         path: _.AccountPreferences(),
                         render: (_) =>
-                          (0, _.jsx)(Mae, {
+                          (0, _.jsx)(Cae, {
                             ..._,
                           }),
                       }),
@@ -97935,7 +97917,7 @@ function aoe(_) {
                         render: (_) =>
                           (0, _.jsx)(_, {
                             config: {
-                              "forge-your-fate": () => (0, _.jsx)(Zae, {}),
+                              "forge-your-fate": () => (0, _.jsx)(Uae, {}),
                             },
                           }),
                       }),
@@ -97946,28 +97928,28 @@ function aoe(_) {
                           (0, _.jsx)(_, {
                             config: {
                               "discovery-queue-button": () =>
-                                (0, _.jsx)(Bae, {}),
+                                (0, _.jsx)(jae, {}),
                             },
                           }),
                       }),
                       (0, _.jsx)(_, {
                         path: _.MarketingMessages(),
                         render: (_) =>
-                          (0, _.jsx)(qae, {
+                          (0, _.jsx)(zae, {
                             ..._,
                           }),
                       }),
                       (0, _.jsx)(_, {
                         path: _.MeetSteamRoute(),
                         render: (_) =>
-                          (0, _.jsx)(Jae, {
+                          (0, _.jsx)(Bae, {
                             ..._,
                           }),
                       }),
                       (0, _.jsx)(_, {
                         path: _.VerifiedProgram(),
                         render: (_) =>
-                          (0, _.jsx)(Qae, {
+                          (0, _.jsx)(Wae, {
                             ..._,
                           }),
                       }),
@@ -97977,7 +97959,7 @@ function aoe(_) {
                           (0, _.jsx)(_, {
                             config: {
                               "react-root": () =>
-                                (0, _.jsx)($ae, {
+                                (0, _.jsx)(Gae, {
                                   ..._,
                                 }),
                             },
@@ -97985,20 +97967,20 @@ function aoe(_) {
                       }),
                       (0, _.jsx)(_, {
                         path: _.JoinMultiplayerSession(),
-                        render: (_) => (0, _.jsx)(Gae, {}),
+                        render: (_) => (0, _.jsx)(Lae, {}),
                       }),
                       (0, _.jsx)(_, {
                         path: _.Home(),
                         render: (_) =>
                           (0, _.jsx)(_, {
                             config: {
-                              "discovery-queue-home": () => (0, _.jsx)(Vae, {}),
+                              "discovery-queue-home": () => (0, _.jsx)(Mae, {}),
                               "personal-calendar-home": () =>
-                                (0, _.jsx)(_, {
+                                (0, _.jsx)(Nae, {
                                   bShowNewBadge: !0,
                                 }),
                               "discounts-and-events": (_) =>
-                                (0, _.jsx)(Hae, {
+                                (0, _.jsx)(Pae, {
                                   ..._,
                                 }),
                             },
@@ -98017,7 +97999,7 @@ function aoe(_) {
       : null
   );
 }
-function ooe(_) {
+function Qae(_) {
   let _ =
     `sale_` +
     (_().pathname.split(`/`).filter(Boolean).pop()?.split(`?`)[0] || `unknown`);
@@ -98036,7 +98018,7 @@ function ooe(_) {
     },
   });
 }
-function soe(_) {
+function $ae(_) {
   let { children: _ } = _,
     _ = _(_.useCallback(() => _(_()), [])),
     _ = _(_.useCallback(() => new _(), [])),
@@ -98055,29 +98037,29 @@ function soe(_) {
     }),
   });
 }
-function coe(_) {
+function eoe(_) {
   let { storeUserConfig: _, children: _ } = _,
     _ = _.useRef(void 0);
   _.current ||= new _();
   let _ = _;
   return (
     _?.originating_navdata &&
-      (_ = (0, _.jsx)(Jee, {
+      (_ = (0, _.jsx)(Gee, {
         uiData: _.storeUserConfig.originating_navdata,
         children: _,
       })),
     (0, _.jsx)(_, {
-      children: (0, _.jsx)(Gee, {
+      children: (0, _.jsx)(Hee, {
         ImpressionTracker: _.current,
         children: _,
       }),
     })
   );
 }
-var loe = _.memo(function (_) {
+var toe = _.memo(function (_) {
     let { storeUserConfig: _, children: _ } = _,
       _ = _(`hwinfo`, `application_config`);
-    return (0, _.jsx)(coe, {
+    return (0, _.jsx)(eoe, {
       storeUserConfig: _,
       children: (0, _.jsx)(_, {
         children: (0, _.jsx)(_.Provider, {
@@ -98090,12 +98072,12 @@ var loe = _.memo(function (_) {
               bSteamDeck: _?.bSteamDeck ?? !1,
               bSteamMachine: _?.bSteamMachine ?? !1,
               bSteamFrame: _?.bSteamFrame ?? !1,
-              children: (0, _.jsx)(soe, {
+              children: (0, _.jsx)($ae, {
                 children: (0, _.jsx)(_, {
                   children: (0, _.jsx)(_, {
                     children: (0, _.jsx)(_, {
                       children: (0, _.jsx)(_, {
-                        children: (0, _.jsx)(Oae, {
+                        children: (0, _.jsx)(yae, {
                           children: (0, _.jsx)(_, {
                             children: (0, _.jsx)(_, {
                               children: _,
@@ -98113,7 +98095,7 @@ var loe = _.memo(function (_) {
       }),
     });
   }),
-  uoe = _.memo(function (_) {
+  noe = _.memo(function (_) {
     return (0, _.jsxs)(_.Fragment, {
       children: [
         (0, _.jsx)(_, {}),
@@ -98153,7 +98135,7 @@ var loe = _.memo(function (_) {
                 "open-in-desktop-client": () =>
                   (0, _.jsx)(_.Suspense, {
                     fallback: null,
-                    children: (0, _.jsx)(Yae, {}),
+                    children: (0, _.jsx)(Vae, {}),
                   }),
               },
             }),
@@ -98163,12 +98145,12 @@ var loe = _.memo(function (_) {
                 "store-menu-v7": () =>
                   (0, _.jsx)(_.Suspense, {
                     fallback: null,
-                    children: (0, _.jsx)(Sae, {}),
+                    children: (0, _.jsx)(pae, {}),
                   }),
                 "store-menu-responsive-search": () =>
                   (0, _.jsx)(_.Suspense, {
                     fallback: null,
-                    children: (0, _.jsx)(wae, {}),
+                    children: (0, _.jsx)(hae, {}),
                   }),
               },
             }),
@@ -98191,7 +98173,7 @@ var loe = _.memo(function (_) {
             footer: () =>
               (0, _.jsx)(_.Suspense, {
                 fallback: null,
-                children: (0, _.jsx)(eoe, {}),
+                children: (0, _.jsx)(Kae, {}),
               }),
           },
         }),
@@ -98199,7 +98181,7 @@ var loe = _.memo(function (_) {
     });
   });
 _();
-function doe() {
+function roe() {
   let _ = [];
   return (
     _.IN_MOBILE_WEBVIEW && _.push(`in_mobile_app`),
@@ -98207,8 +98189,8 @@ function doe() {
     _
   );
 }
-var foe = `RPxGbDpMPvc-`,
-  poe = `EJE6Uh9cQZA-`;
+var ioe = `RPxGbDpMPvc-`,
+  aoe = `EJE6Uh9cQZA-`;
 _({
   enforceActions: `never`,
 }),
@@ -98234,19 +98216,19 @@ _({
     buffered: !0,
   });
 var _ = performance.now();
-async function moe() {
+async function ooe() {
   _();
   let _ = _({
-      basename: _te(),
+      basename: mte(),
     }),
     _ = _(new _(_.WEBAPI_BASE_URL));
   _().Init(`Store`, CLSTAMP, _.GetServiceTransport(), {
-    fnGetReportTags: doe,
+    fnGetReportTags: roe,
   }),
     await _(),
     document.getElementById(`application_root`)
       ? _.createRoot(document.getElementById(`application_root`)).render(
-          _.createElement(aoe, {
+          _.createElement(Zae, {
             history: _,
           }),
         )
@@ -98266,10 +98248,10 @@ function _() {
 }
 var _;
 async function _() {
-  (_ ||= hoe(_.LANGUAGE)), await _;
+  (_ ||= soe(_.LANGUAGE)), await _;
 }
-_(), jte(moe);
-async function hoe(_) {
+_(), Ote(ooe);
+async function soe(_) {
   let _ = _.GetLanguageFallback(_),
     _ = _ === _,
     [_, _, _, _, _, _] = await _([
@@ -99630,7 +99612,6 @@ export {
   _,
   _,
   _,
-  Lee as _,
   _,
   _,
   _,
@@ -99649,7 +99630,6 @@ export {
   _,
   _,
   _,
-  Nte as _,
   _,
   _,
   _,
@@ -99673,6 +99653,7 @@ export {
   _,
   _,
   _,
+  Kee as _,
   _,
   _,
   _,
@@ -99694,360 +99675,7 @@ export {
   _,
   _,
   _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  bte as _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  Yee as _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  Ree as _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  Mte as _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  Dte as _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  Dee as _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  Ute as _,
+  Ste as _,
   _,
   _,
   _,
@@ -100091,6 +99719,7 @@ export {
   _,
   _,
   _,
+  kte as _,
   _,
   _,
   _,
@@ -100113,7 +99742,6 @@ export {
   _,
   _,
   _,
-  Qee as _,
   _,
   _,
   _,
@@ -100135,7 +99763,6 @@ export {
   _,
   _,
   _,
-  Xee as _,
   _,
   _,
   _,
@@ -100158,6 +99785,7 @@ export {
   _,
   _,
   _,
+  qee as _,
   _,
   _,
   _,
@@ -100209,7 +99837,6 @@ export {
   _,
   _,
   _,
-  Oee as _,
   _,
   _,
   _,
@@ -100239,6 +99866,7 @@ export {
   _,
   _,
   _,
+  Iee as _,
   _,
   _,
   _,
@@ -100255,7 +99883,6 @@ export {
   _,
   _,
   _,
-  Eee as _,
   _,
   _,
   _,
@@ -100268,17 +99895,228 @@ export {
   _,
   _,
   _,
+  wte as _,
   _,
   _,
   _,
   _,
   _,
   _,
-  Bie as _,
   _,
   _,
   _,
-  jee as _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  Ate as _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  Cte as _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
   _,
   _,
   _,
@@ -100348,8 +100186,10 @@ export {
   _,
   Fee as _,
   _,
+  eee as _,
   _,
   _,
+  Cee as _,
   _,
   _,
   _,
@@ -100365,11 +100205,9 @@ export {
   _,
   _,
   _,
-  dne as _,
   _,
   _,
   _,
-  Aee as _,
   _,
   _,
   _,
@@ -100388,7 +100226,6 @@ export {
   _,
   _,
   _,
-  vne as _,
   _,
   _,
   _,
@@ -100398,6 +100235,7 @@ export {
   _,
   _,
   _,
+  Tee as _,
   _,
   _,
   _,
@@ -100411,8 +100249,8 @@ export {
   _,
   _,
   _,
-  Aae as _,
   _,
+  Bte as _,
   _,
   _,
   _,
@@ -100420,6 +100258,7 @@ export {
   _,
   _,
   _,
+  jee as _,
   _,
   _,
   _,
@@ -100474,7 +100313,6 @@ export {
   _,
   _,
   _,
-  Ote as _,
   _,
   _,
   _,
@@ -100484,6 +100322,7 @@ export {
   _,
   _,
   _,
+  One as _,
   _,
   _,
   _,
@@ -100501,7 +100340,6 @@ export {
   _,
   _,
   _,
-  Mne as _,
   _,
   _,
   _,
@@ -100511,6 +100349,7 @@ export {
   _,
   _,
   _,
+  See as _,
   _,
   _,
   _,
@@ -100524,15 +100363,16 @@ export {
   _,
   _,
   _,
-  poe as _,
   _,
   _,
   _,
+  oee as _,
   _,
   _,
   _,
   _,
   _,
+  Eee as _,
   _,
   _,
   _,
@@ -100551,10 +100391,11 @@ export {
   _,
   _,
   _,
-  Iee as _,
+  xae as _,
   _,
   _,
   _,
+  Pee as _,
   _,
   _,
   _,
@@ -100640,9 +100481,11 @@ export {
   _,
   _,
   _,
+  sne as _,
   _,
   _,
   _,
+  Oee as _,
   _,
   _,
   _,
@@ -100661,7 +100504,144 @@ export {
   _,
   _,
   _,
-  foe as _,
+  aoe as _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  kee as _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  mne as _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  ioe as _,
   _,
   _,
   _,
@@ -100708,7 +100688,7 @@ export {
   _,
   _,
   _,
-  eee as _,
+  _,
   _,
   _,
   wee as _,
@@ -100728,7 +100708,6 @@ export {
   _,
   _,
   _,
-  see as _,
   _,
   _,
   _,
@@ -100748,8 +100727,8 @@ export {
   _,
   _,
   _,
-  Ete as _,
   _,
+  _te as _,
   _,
   _,
   _,
@@ -100776,10 +100755,8 @@ export {
   _,
   _,
   _,
-  tee as _,
   _,
   _,
-  Tee as _,
   _,
   _,
   _,
@@ -100817,6 +100794,9 @@ export {
   _,
   _,
   _,
+  _,
+  _,
+  Yee as _,
   _,
   _,
   _,

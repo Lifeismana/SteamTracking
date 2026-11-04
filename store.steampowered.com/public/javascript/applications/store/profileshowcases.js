@@ -14,9 +14,9 @@ import {
   f as d,
   g as f,
   y as p,
-} from "./rewardsshop.js?contenthash=B6GvL8rs";
-import { Gy as m, Pb as h } from "./main.js?contenthash=kKx7KIpL";
-import { o as g, t as _ } from "./layout.js?contenthash=DdFM6FeZ";
+} from "./rewardsshop.js?contenthash=D6Pt59Ij";
+import { Mb as m, Uy as h } from "./main.js?contenthash=CFzBcxgL";
+import { o as g, t as _ } from "./layout.js?contenthash=Gq1Nutfz";
 var v = e(t()),
   y = `VlcajOpXVIQ-`,
   b = new URL(
@@ -75,8 +75,8 @@ var v = e(t()),
       itemClassName: s,
       spacing: `xlarge`,
       children: (0, x.jsx)(i, {
-        title: m(`#ProfileShowcases_Upgrades_Title`),
-        subtitle: m(`#ProfileShowcases_Upgrades_Subtitle`),
+        title: h(`#ProfileShowcases_Upgrades_Title`),
+        subtitle: h(`#ProfileShowcases_Upgrades_Subtitle`),
         children: c,
       }),
     });
@@ -118,8 +118,8 @@ var v = e(t()),
       itemClassName: s,
       spacing: `xlarge`,
       children: (0, x.jsx)(i, {
-        title: m(`#ProfileShowcases_Slots_Title`),
-        subtitle: m(`#ProfileShowcases_Slots_Subtitle`),
+        title: h(`#ProfileShowcases_Slots_Title`),
+        subtitle: h(`#ProfileShowcases_Slots_Subtitle`),
         children: u,
       }),
     });
@@ -140,7 +140,7 @@ var v = e(t()),
           children: [
             (0, x.jsx)(`div`, {
               children: (0, x.jsx)(c, {
-                title: m(`#ShopPageTitle_ProfileShowcases`),
+                title: h(`#ShopPageTitle_ProfileShowcases`),
               }),
             }),
             (0, x.jsx)(w, {}),
@@ -161,6 +161,6 @@ var v = e(t()),
       });
     }
   };
-D = h([r], D);
+D = m([r], D);
 var O = D;
 export { D as ProfileShowcasesPage, O as default };
