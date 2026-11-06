@@ -9,28 +9,28 @@ const rootDir = pathResolve(__dirname, "..");
 
 const files = [
 	{
-		file: pathResolve(rootDir, "store.steampowered.com/public/javascript/applications/store/manifest.js"),
+		file: pathResolve(rootDir, "store.steampowered.com/public/javascript/applications/store/main.js"),
 		cdn: "https://store.steampowered.com/public/",
 	},
 	{
-		file: pathResolve(rootDir, "steamcommunity.com/public/javascript/applications/community/manifest.js"),
+		file: pathResolve(rootDir, "steamcommunity.com/public/javascript/applications/community/main.js"),
 		cdn: "https://steamcommunity.com/public/",
 	},
 	{
-		file: pathResolve(rootDir, "help.steampowered.com/public/javascript/applications/help/manifest.js"),
+		file: pathResolve(rootDir, "help.steampowered.com/public/javascript/applications/help/main.js"),
 		cdn: "https://help.steampowered.com/public/",
 	},
 	{
-		file: pathResolve(rootDir, "partner.steamgames.com/public/javascript/applications/appmgmt/manifest.js"),
+		file: pathResolve(rootDir, "partner.steamgames.com/public/javascript/applications/appmgmt/main.js"),
 		cdn: "https://partner.steamgames.com/public/",
 	},
-	/* different AST
-	{
-		file: pathResolve(rootDir, "partner.steamgames.com/public/javascript/webui/storeadmin/storeadmin.js"),
-		cdn: "https://partner.steamgames.com/public/",
-	},
-	*/
 ];
+
+// Non-English language suffixes emitted by Rolldown localization chunks
+const NON_ENGLISH_LANG_REGEX =
+	/_(arabic|brazilian|bulgarian|czech|danish|dutch|finnish|french|german|greek|hungarian|indonesian|italian|japanese|koreana|korean|latam|malay|norwegian|polish|portuguese|romanian|russian|sc_schinese|schinese|spanish|swedish|tchinese|thai|turkish|ukrainian|vietnamese)(-json)?\.js$/;
+
+const ASSET_PATH_REGEX = /^\.\.?\/.+\.(css|js)\?contenthash=/;
 
 const urls = new Set();
 let oldUrls = [];
@@ -57,78 +57,60 @@ for (const { file, cdn } of files) {
 	let found = false;
 
 	try {
-		const code = await readFile(file);
-		const ast = parse(code, { ecmaVersion: latestEcmaVersion, loc: true });
+		const code = await readFile(file, "utf8");
+		const ast = parse(code, {
+			ecmaVersion: latestEcmaVersion,
+			sourceType: "module",
+			loc: true,
+		});
 
-		const seenIds = new Set();
+		// Reconstruct the full URL of main.js to resolve "./" and "../../../" paths against
+		const relativeFileUrl = file.replaceAll("\\", "/").split("/public/")[1];
+		const baseUrl = new URL(relativeFileUrl, cdn);
+
+		const processCandidate = (rawValue) => {
+			if (typeof rawValue !== "string" || !ASSET_PATH_REGEX.test(rawValue)) {
+				return;
+			}
+
+			const resolved = new URL(rawValue, baseUrl);
+			const cleanUrl = resolved.origin + resolved.pathname;
+
+			if (!cleanUrl.startsWith(cdn)) {
+				console.error("Wrong match:", cleanUrl);
+				return;
+			}
+
+			if (NON_ENGLISH_LANG_REGEX.test(cleanUrl)) {
+				return;
+			}
+
+			const folderAndFile = cleanUrl.slice(cdn.length);
+			let suffix;
+
+			if (folderAndFile.startsWith("javascript/") && cleanUrl.endsWith(".js")) {
+				suffix = "?__TIME__&l=english&__CDN__";
+			} else if (folderAndFile.startsWith("css/") && cleanUrl.endsWith(".css")) {
+				suffix = "?__TIME__&__CDN__";
+			} else {
+				console.error("Wrong match:", folderAndFile);
+				return;
+			}
+
+			urls.add(cleanUrl + suffix);
+			found = true;
+		};
 
 		traverse(ast, {
-			enter: function (node) {
-				if (
-					node.type === Syntax.BinaryExpression &&
-					node.left.type === Syntax.BinaryExpression &&
-					node.left.right.type === Syntax.Literal &&
-					/\.(css|js)\?contenthash=/.test(node.left.right.value) &&
-					node.right.type === Syntax.MemberExpression &&
-					node.right.object.type === Syntax.ObjectExpression
-				) {
-					for (const property of node.right.object.properties) {
-						if (property.value.type === Syntax.Literal) {
-							seenIds.add(property.key.raw);
-						}
-					}
+			enter(node) {
+				// Matches strings in __vite__mapDeps and static import declarations
+				if (node.type === Syntax.Literal && typeof node.value === "string") {
+					processCandidate(node.value);
 				}
 
-				// Useful: https://astexplorer.net/
-				if (
-					node.type === Syntax.BinaryExpression &&
-					node.left.type === Syntax.Literal &&
-					((node.right.type === Syntax.MemberExpression && node.right.object.type === Syntax.ObjectExpression) ||
-						(node.right.type === Syntax.LogicalExpression &&
-							node.right.left.type === Syntax.MemberExpression &&
-							node.right.left.object.type === Syntax.ObjectExpression))
-				) {
-					const folder = node.left.value;
-					let suffix;
-
-					if (folder.startsWith("javascript/")) {
-						suffix = ".js?__TIME__&l=english&__CDN__";
-					} else if (folder.startsWith("css/")) {
-						suffix = ".css?__TIME__&__CDN__";
-					} else {
-						console.error("Wrong match:", folder);
-						return;
-					}
-
-					const partialFileNames = node.right.type === Syntax.LogicalExpression;
-					const obj = partialFileNames ? node.right.left.object : node.right.object;
-
-					for (const property of obj.properties) {
-						if (property.value.type === Syntax.Literal) {
-							const name = property.value.value;
-
-							seenIds.delete(property.key.raw);
-
-							if (name.endsWith("-json") && !name.endsWith("_english-json")) {
-								continue;
-							}
-
-							const fullUrl = cdn + folder + name + suffix;
-
-							urls.add(fullUrl);
-
-							found = true;
-						}
-					}
-
-					for (const id of seenIds) {
-						const fullUrl = cdn + folder + id + suffix;
-
-						urls.add(fullUrl);
-					}
-
-					seenIds.clear();
-					this.skip();
+				// Matches minified dynamic imports: import(`./shared_english.js?contenthash=...`)
+				if (node.type === Syntax.TemplateLiteral && node.expressions.length === 0 && node.quasis.length === 1) {
+					processCandidate(node.quasis[0].value.cooked);
 				}
 			},
 		});

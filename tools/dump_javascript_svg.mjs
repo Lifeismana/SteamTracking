@@ -82,10 +82,7 @@ for (const file of await GetFilesToParse()) {
 
 					const tagName = getLiteralValue(node.arguments?.[0]);
 
-					if (
-						(calleeName === "createElement" || calleeName === "jsx" || calleeName === "jsxs") &&
-						tagName === "svg"
-					) {
+					if ((calleeName === "createElement" || calleeName === "jsx" || calleeName === "jsxs") && tagName === "svg") {
 						const svg = createSvgBody(node).end({ prettyPrint: true });
 						if (svg.length > 0) {
 							const content = Buffer.from(`${svg}\n`, "utf8");
@@ -189,10 +186,7 @@ function createSvgBody(node, xml = createXml()) {
 
 		if (children) {
 			for (const child of children) {
-				if (
-					child?.type === Syntax.CallExpression &&
-					typeof getLiteralValue(child.arguments?.[0]) === "string"
-				) {
+				if (child?.type === Syntax.CallExpression && typeof getLiteralValue(child.arguments?.[0]) === "string") {
 					createSvgBody(child, elem);
 				}
 			}
