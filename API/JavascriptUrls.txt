@@ -103,6 +103,7 @@ ${CDN_URL}apps/dota2/images/leagues/${}/images/image_8.png
 ${CDN_URL}apps/dota2/images/leagues/${}/images/image_9.png
 ${CDN_URL}apps/dota2/teamlogos/${nTeamID}.png
 ${CDN_URL}apps/dota2/teamlogos/${}.png
+${CHAT_BASE_URL}
 ${CHAT_BASE_URL}${offlineImage}
 ${CHAT_BASE_URL}actions/EmoticonData
 ${CHAT_BASE_URL}actions/ajaxgetgoldenprofiledata/
@@ -137,7 +138,7 @@ ${COMMUNITY_ASSETS_BASE_URL}images/items/${appid}/${item_image_small}
 ${COMMUNITY_ASSETS_BASE_URL}images/items/${}/${}
 ${COMMUNITY_BASE_URL}
 ${COMMUNITY_BASE_URL}${APPID ? _ : _}
-${COMMUNITY_BASE_URL}${_ ? "?" : ""}${}${_ ? "&" : ""}${}
+${COMMUNITY_BASE_URL}${_ ? `?` : ``}${}${_ ? `&` : ``}${}
 ${COMMUNITY_BASE_URL}${spoofProfileUrl}
 ${COMMUNITY_BASE_URL}${url}
 ${COMMUNITY_BASE_URL}${vanity_url ? _ : _}
@@ -207,6 +208,7 @@ ${COMMUNITY_BASE_URL}broadcast/watch/${}
 ${COMMUNITY_BASE_URL}chat
 ${COMMUNITY_BASE_URL}chat/
 ${COMMUNITY_BASE_URL}comment/${}/formattinghelp${_ ? "?ajax=1" : ""}
+${COMMUNITY_BASE_URL}comment/${}/formattinghelp${_ ? `?ajax=1` : ``}
 ${COMMUNITY_BASE_URL}creatorhome/${}/ajaxadmingetapps
 ${COMMUNITY_BASE_URL}discussions
 ${COMMUNITY_BASE_URL}dmca/create${_ ? `/${}` : ""}
@@ -246,6 +248,7 @@ ${COMMUNITY_BASE_URL}gid/${}/announcements/ajaxgetmyvote/${AnnouncementGID}
 ${COMMUNITY_BASE_URL}gid/${}/announcements/old_detail/${AnnouncementGID}
 ${COMMUNITY_BASE_URL}gid/${}/announcements/rate/${AnnouncementGID}
 ${COMMUNITY_BASE_URL}gid/${}/announcements/share/${AnnouncementGID}
+${COMMUNITY_BASE_URL}gid/${}/edit 
 ${COMMUNITY_BASE_URL}gid/${}/eventcomments/${forumTopicGID}
 ${COMMUNITY_BASE_URL}gid/${}/fetchyoutubeimage?videoid=${}
 ${COMMUNITY_BASE_URL}gid/${}/hasclanimagefile
@@ -261,9 +264,11 @@ ${COMMUNITY_BASE_URL}gid/${}/partnerevents/edit/${GID}?tab=sale#SalePageEdit_Sal
 ${COMMUNITY_BASE_URL}gid/${}/partnerevents/edit/${blog_post_clan_eventgid}?tab=description
 ${COMMUNITY_BASE_URL}gid/${}/partnerevents/edit/${clanEventGID}
 ${COMMUNITY_BASE_URL}gid/${}/partnerevents/edit/${clan_event_gid}
+${COMMUNITY_BASE_URL}gid/${}/partnerevents/edit/${eventGID}
 ${COMMUNITY_BASE_URL}gid/${}/partnerevents/edit/${gid_clan_event}
 ${COMMUNITY_BASE_URL}gid/${}/partnerevents/edit/${sale_clan_event_gid}?tab=sale
 ${COMMUNITY_BASE_URL}gid/${}/partnerevents/edit/${}
+${COMMUNITY_BASE_URL}gid/${}/partnerevents/edit/${}?tab=${}
 ${COMMUNITY_BASE_URL}gid/${}/partnerevents/edit/${}?tab=sale
 ${COMMUNITY_BASE_URL}gid/${}/partnerevents/preview/${}
 ${COMMUNITY_BASE_URL}gid/${}/showclanimage/?image_hash_and_ext=${}
@@ -290,18 +295,19 @@ ${COMMUNITY_BASE_URL}linkfilter/?u=${}
 ${COMMUNITY_BASE_URL}login/home/?goto=${}
 ${COMMUNITY_BASE_URL}market
 ${COMMUNITY_BASE_URL}market/
-${COMMUNITY_BASE_URL}market/${}${_ ? _ : ""}
 ${COMMUNITY_BASE_URL}market/${}${_ ? _ : ``}
+${COMMUNITY_BASE_URL}market/ajaxfeestructure/?${}
 ${COMMUNITY_BASE_URL}market/appaccessories/${}
 ${COMMUNITY_BASE_URL}market/appfacets/${}
 ${COMMUNITY_BASE_URL}market/cancelalllistings/
 ${COMMUNITY_BASE_URL}market/deleteitembucket
 ${COMMUNITY_BASE_URL}market/faq/
 ${COMMUNITY_BASE_URL}market/listings/${}/${}
-${COMMUNITY_BASE_URL}market/listings/${}/${}${_ ? `?sellorderassetid=${}` : ""}
 ${COMMUNITY_BASE_URL}market/listings/${}/${}${_ ? `?sellorderassetid=${}` : ``}
+${COMMUNITY_BASE_URL}market/pricehistory/?${}
 ${COMMUNITY_BASE_URL}market/priceoverview/?${}
 ${COMMUNITY_BASE_URL}market/search?appid=${}
+${COMMUNITY_BASE_URL}market/sellitem/
 ${COMMUNITY_BASE_URL}market/steamitemfiltersicon/${}
 ${COMMUNITY_BASE_URL}market/suggestedapps
 ${COMMUNITY_BASE_URL}mediaconvert/ajaxgroupconvert/${}
@@ -354,6 +360,7 @@ ${COMMUNITY_BASE_URL}partnereventdata/ajaxrequestmarketingmessagemajorupdaterevi
 ${COMMUNITY_BASE_URL}partnereventdata/ajaxrequestsalepagereview
 ${COMMUNITY_BASE_URL}partnereventdata/ajaxsetprivatedata
 ${COMMUNITY_BASE_URL}partnerevents/${}/userpoll/${}/${_ ? "ajaxcastvote" : "ajaxloaddata"}/?origin=${}
+${COMMUNITY_BASE_URL}partnerevents/${}/userpoll/${}/${_ ? `ajaxcastvote` : `ajaxloaddata`}/?origin=${}
 ${COMMUNITY_BASE_URL}profiles/${STEAM_ID}/wishlist
 ${COMMUNITY_BASE_URL}profiles/${actor_steamid}
 ${COMMUNITY_BASE_URL}profiles/${reporter_steamid}
@@ -456,6 +463,7 @@ ${COMMUNITY_CDN_URL}economy/profilebackground/${image_large}?size=${}x${}
 ${COMMUNITY_CDN_URL}economy/profilebackground/items/${appid}/${item_image_large}
 ${COMMUNITY_CDN_URL}economy/profilebackground/items/${appid}/${item_image_large}?size=320x200
 ${COMMUNITY_CDN_URL}economy/profilebackground/items/${}/${image_large}?size=320x200
+${COMMUNITY_CDN_URL}economy/profilebackground/items/${}/${}?size=320x200
 ${COMMUNITY_CDN_URL}economy/stickerjson/${}?l=${}&origin=${}
 ${COMMUNITY_CDN_URL}public/images/broadcast/apphub_default_thumbnail.jpg
 ${COMMUNITY_CDN_URL}public/images/economy/listed_on_market.png
@@ -513,6 +521,7 @@ ${HELP_BASE_URL}faqs/view/71D3-35C2-AD96-AA3A
 ${HELP_BASE_URL}faqs/view/7EFD-3CAE-64D3-1C31
 ${HELP_BASE_URL}kb/${}
 ${HELP_BASE_URL}tickermaster/ticket/${owner_dispute_details}
+${HELP_BASE_URL}ticketmaster/ticket/${owner_dispute_details}
 ${HELP_BASE_URL}wizard/HelpChangeEmail?redir=store/account/
 ${HELP_BASE_URL}wizard/HelpChangePassword?redir=store/account/
 ${HELP_BASE_URL}wizard/HelpRecoverFamilyMember?childid=${}
@@ -546,7 +555,6 @@ ${IMG_URL}${}/river_vials/river_vial_${}1.jpg
 ${IMG_URL}${}/river_vials/river_vial_icon_${}.png
 ${IMG_URL}/${image_path}
 ${IMG_URL}/${}
-${IMG_URL}/checkout/computer.png
 ${IMG_URL}/cs2/audio.png
 ${IMG_URL}/cs2/header_ctt.png
 ${IMG_URL}/cs2/logo_cs2_header.svg
@@ -661,6 +669,7 @@ ${IMG_URL}events/defaults/default_img_cover.jpg
 ${IMG_URL}events/defaults/default_img_header.jpg
 ${IMG_URL}events/thumb_library_home.jpg
 ${IMG_URL}events/types/type_${_ ? "11" : "9"}.png
+${IMG_URL}events/types/type_${_ ? `11` : `9`}.png
 ${IMG_URL}events/types/type_${icon ? _ : _}.png?v=4
 ${IMG_URL}events/types/type_${}.png?v=4
 ${IMG_URL}favorite_star.png
@@ -945,9 +954,12 @@ ${MEDIA_CDN_URL}steam/
 ${MEDIA_CDN_URL}steam/marketing/${}/${path}${}
 ${MEDIA_CDN_URL}store/promo/${}
 ${MEDIA_CDN_URL}store/promo/steamawards2025/trophy_220.png?v=1
+${MEDIA_CDN_URL}store/promo/steamawards2026/trophy_220.png?v=1
 ${MEDIA_CDN_URL}store/promo/summer2021/Steam_Summer_Sale_2021_Wallpapers.zip
+${MEDIA_CDN_URL}store/rewards/howtoawards/${LANGUAGE}.png
 ${PARTNER_BASE_URL}
 ${PARTNER_BASE_URL}${_ ? "optin/ajaxadmincloneinvites" : "optin/ajaxadmincloneoptinpage"}
+${PARTNER_BASE_URL}${_ ? `optin/ajaxadmincloneinvites` : `optin/ajaxadmincloneoptinpage`}
 ${PARTNER_BASE_URL}${}
 ${PARTNER_BASE_URL}${}${}
 ${PARTNER_BASE_URL}${}/ajaxstarttaxidentityworkflow/${partnerid}
@@ -1088,6 +1100,7 @@ ${PARTNER_BASE_URL}doc/gettingstarted/managing_users/communication
 ${PARTNER_BASE_URL}doc/marketing/discounts
 ${PARTNER_BASE_URL}doc/marketing/discounts#limits
 ${PARTNER_BASE_URL}doc/marketing/discounts/${_ ? "midweek" : "weekend"}
+${PARTNER_BASE_URL}doc/marketing/discounts/${_ ? `midweek` : `weekend`}
 ${PARTNER_BASE_URL}doc/marketing/discounts/dailydeal
 ${PARTNER_BASE_URL}doc/marketing/discounts/seasonalsales
 ${PARTNER_BASE_URL}doc/marketing/event_tools/moderation
@@ -1120,11 +1133,13 @@ ${PARTNER_BASE_URL}doc/store/seasonpass#release
 ${PARTNER_BASE_URL}financial/ajaxgetpartnersummary
 ${PARTNER_BASE_URL}freetokeep/${}/?${}
 ${PARTNER_BASE_URL}freetokeep/ajaxupdatedlcrequirebaseapp
+${PARTNER_BASE_URL}gfxproxy/externalgfx/
 ${PARTNER_BASE_URL}gfxproxy/gfx/apps/${}/${}
 ${PARTNER_BASE_URL}giveaways/control/${}
 ${PARTNER_BASE_URL}images/uploadachievement
 ${PARTNER_BASE_URL}marketing/message/${gid}
 ${PARTNER_BASE_URL}marketingmessages/messagepreview/${gid}/?cc=${}&l=${}&bForceSteamChina=${}&low_bandwidth=${}&timezone=${_ ? _ : ""}&locale=${}&dlc_override=${_ ? _ : ""}
+${PARTNER_BASE_URL}marketingmessages/messagepreview/${gid}/?cc=${}&l=${}&bForceSteamChina=${}&low_bandwidth=${}&timezone=${_ ? _ : ``}&locale=${}&dlc_override=${_ ? _ : ``}
 ${PARTNER_BASE_URL}marketingmessages/messagepreview/${}/?cc=${}&l=${language}
 ${PARTNER_BASE_URL}meetsteam
 ${PARTNER_BASE_URL}meetsteam/admin/ajaxgetpartnersforaccount?accountid=${}
@@ -1137,15 +1152,21 @@ ${PARTNER_BASE_URL}meetsteam/surveyresults/${}
 ${PARTNER_BASE_URL}newpartner
 ${PARTNER_BASE_URL}optin${}
 ${PARTNER_BASE_URL}optin/${pageid}/sale/${}
+${PARTNER_BASE_URL}optin/address/${opt_in_name}/${partnerid}
+${PARTNER_BASE_URL}optin/address/${}/0
 ${PARTNER_BASE_URL}optin/admin/analysis/${}
 ${PARTNER_BASE_URL}optin/admin/backfilloptindemopageviews
+${PARTNER_BASE_URL}optin/admin/checkemaillinks
+${PARTNER_BASE_URL}optin/admin/checkpartners
 ${PARTNER_BASE_URL}optin/admin/demo_analysis/${}
 ${PARTNER_BASE_URL}optin/admin/edit/${pageid}
 ${PARTNER_BASE_URL}optin/admin/edit/${pageid}?tab=manage
 ${PARTNER_BASE_URL}optin/admin/edit/${}
+${PARTNER_BASE_URL}optin/admin/partneraddressrequests?opt_in_name=${}
 ${PARTNER_BASE_URL}optin/admin/preprune
 ${PARTNER_BASE_URL}optin/admin/pruneoptinsforreleasedapp
 ${PARTNER_BASE_URL}optin/admin/setoptinemailactive
+${PARTNER_BASE_URL}optin/admin/setpartneroptininvites
 ${PARTNER_BASE_URL}optin/ajaxadmindelete
 ${PARTNER_BASE_URL}optin/ajaxadmingetdefandstats
 ${PARTNER_BASE_URL}optin/ajaxadminupdate
@@ -1175,6 +1196,7 @@ ${PARTNER_BASE_URL}optin/ajaxupdatepointshopiteminfo
 ${PARTNER_BASE_URL}optin/ajaxuploadasset/${}
 ${PARTNER_BASE_URL}optin/appeal/${pageid}/${}
 ${PARTNER_BASE_URL}optin/appreview/${pageid}?tab=${_ ? "review" : "appeal"}
+${PARTNER_BASE_URL}optin/appreview/${pageid}?tab=${_ ? `review` : `appeal`}
 ${PARTNER_BASE_URL}optin/appreview/${pageid}?tab=appeal
 ${PARTNER_BASE_URL}optin/appreview/${}
 ${PARTNER_BASE_URL}optin/appreview_dashboard
@@ -1236,6 +1258,7 @@ ${PARTNER_BASE_URL}promotion/dailydeals/invite/${}
 ${PARTNER_BASE_URL}promotion/discountevents/dashboard
 ${PARTNER_BASE_URL}promotion/discountevents/edit/${}
 ${PARTNER_BASE_URL}promotion/discounts${}?dd=1${_ ? `&de=${}` : ""}
+${PARTNER_BASE_URL}promotion/discounts${}?dd=1${_ ? `&de=${}` : ``}
 ${PARTNER_BASE_URL}promotion/discounts/ajaxgetalldiscountevents/${}
 ${PARTNER_BASE_URL}promotion/discounts/ajaxgetdiscounteventapplist
 ${PARTNER_BASE_URL}promotion/discounts/ajaxgetdiscounteventbyid
@@ -1291,6 +1314,7 @@ ${PARTNER_BASE_URL}pub/ajaxgetpartnerapps/${}
 ${PARTNER_BASE_URL}pub/companydetails/${partnerid}
 ${PARTNER_BASE_URL}pub/mailingaddresses/${}
 ${PARTNER_BASE_URL}pub/publisher/${partner_id}
+${PARTNER_BASE_URL}pub/publisher/${partnerid}
 ${PARTNER_BASE_URL}pub/publisher/${publisherid}/
 ${PARTNER_BASE_URL}pub/publisher/${}
 ${PARTNER_BASE_URL}pub/view
@@ -1348,10 +1372,15 @@ ${STORE_BASE_URL}
 ${STORE_BASE_URL}${_ ? "events/ajaxgeteventdetailsforedit/" : "events/ajaxgeteventdetails/"}
 ${STORE_BASE_URL}${_ ? "saleaction/ajaxpreviewgetsaledynamicappqueryforuser" : "saleaction/ajaxgetsaledynamicappqueryforuser"}
 ${STORE_BASE_URL}${_ ? "saleaction/ajaxpreviewsaledynamicappquery" : "saleaction/ajaxgetsaledynamicappquery"}
+${STORE_BASE_URL}${_ ? `events/ajaxgeteventdetailsforedit/` : `events/ajaxgeteventdetails/`}
+${STORE_BASE_URL}${_ ? `saleaction/ajaxpreviewgetsaledynamicappqueryforuser` : `saleaction/ajaxgetsaledynamicappqueryforuser`}
+${STORE_BASE_URL}${_ ? `saleaction/ajaxpreviewsaledynamicappquery` : `saleaction/ajaxgetsaledynamicappquery`}
 ${STORE_BASE_URL}${image_url}
 ${STORE_BASE_URL}${m_strStoreURLPath}
 ${STORE_BASE_URL}${newshubUrl}
+${STORE_BASE_URL}${store_path}
 ${STORE_BASE_URL}${store_url_path}
+${STORE_BASE_URL}${store_url_path}?appid=${appid}
 ${STORE_BASE_URL}${store_url_path}?snr=${}
 ${STORE_BASE_URL}${strPath}/${}
 ${STORE_BASE_URL}${strURLPath}
@@ -1360,11 +1389,13 @@ ${STORE_BASE_URL}${url_path}
 ${STORE_BASE_URL}${url}
 ${STORE_BASE_URL}${}
 ${STORE_BASE_URL}${}/${id}${_ ? `?${}` : ""}
+${STORE_BASE_URL}${}/${id}${_ ? `?${}` : ``}
 ${STORE_BASE_URL}${}/${vanity_url}
 ${STORE_BASE_URL}${}/${}?${}
 ${STORE_BASE_URL}${}/ajaxgetcontenthubdata
 ${STORE_BASE_URL}${}/download/${}/${}/${GID}?${}
 ${STORE_BASE_URL}${}/sale/${}?upcoming=true${_ ? _ : ""}
+${STORE_BASE_URL}${}/sale/${}?upcoming=true${_ ? _ : ``}
 ${STORE_BASE_URL}${}?${}
 ${STORE_BASE_URL}${}?gid=${}
 ${STORE_BASE_URL}${}?name=${}
@@ -1418,6 +1449,7 @@ ${STORE_BASE_URL}ajaxappreviews/${}?${}
 ${STORE_BASE_URL}ajaxmanagereviewanomalies/${}/
 ${STORE_BASE_URL}ajaxreportproductaction/${}/
 ${STORE_BASE_URL}api/${_ ? "addtowishlist" : "removefromwishlist"}
+${STORE_BASE_URL}api/${_ ? `addtowishlist` : `removefromwishlist`}
 ${STORE_BASE_URL}api/addtowishlist
 ${STORE_BASE_URL}api/appdetails?appids=${}&cc=${}&language=${LANGUAGE}&filters=${}&client=${IN_CLIENT}&origin=${}
 ${STORE_BASE_URL}api/removefromwishlist
@@ -1433,7 +1465,9 @@ ${STORE_BASE_URL}app/${takeoverAppID}
 ${STORE_BASE_URL}app/${}
 ${STORE_BASE_URL}app/${}/
 ${STORE_BASE_URL}app/${}/?beta=1
+${STORE_BASE_URL}app/${}/?curator_clanid=${}
 ${STORE_BASE_URL}app/${}?deckapp=${}&utm_source=topplayed_app_banner&utm_campaign=${}
+${STORE_BASE_URL}app/trailerstats/${}/${trailer_id}
 ${STORE_BASE_URL}broadcast/ajaxcheckbroadcast
 ${STORE_BASE_URL}broadcast/ajaxgetstreamersforpage
 ${STORE_BASE_URL}broadcast/ajaxgetstreamersforpreview
@@ -1448,7 +1482,6 @@ ${STORE_BASE_URL}cart/
 ${STORE_BASE_URL}cart/addtocart
 ${STORE_BASE_URL}cart/addtocart?redirect=1
 ${STORE_BASE_URL}cart/ajaxredeemtokensforcartdiscount
-${STORE_BASE_URL}cart/ajaxsaledropprogress
 ${STORE_BASE_URL}cart/purchaserequest/${}/${}
 ${STORE_BASE_URL}cart/purchaserequested/${}
 ${STORE_BASE_URL}category/${category}
@@ -1475,9 +1508,13 @@ ${STORE_BASE_URL}curator/${clanAccountID}/list/${listid}
 ${STORE_BASE_URL}curator/${clanAccountID}/sale/${strVanity}
 ${STORE_BASE_URL}curator/${creator_clan_id}/
 ${STORE_BASE_URL}curator/${id}${_ ? `?${}` : ""}
+${STORE_BASE_URL}curator/${id}${_ ? `?${}` : ``}
+${STORE_BASE_URL}curator/${m_clanAccountID}/admin/ajaxcheckfornews
+${STORE_BASE_URL}curator/${m_clanAccountID}/admin/ajaxmanagerssfeed
 ${STORE_BASE_URL}curator/${}
 ${STORE_BASE_URL}curator/${}/
 ${STORE_BASE_URL}curator/${}/admin/ajaxgetlistdetails
+${STORE_BASE_URL}curator/${}/admin/ajaxgetrecbyapps
 ${STORE_BASE_URL}curator/${}/admin/manage_rss/
 ${STORE_BASE_URL}curator/${}/ajaxgetcreatorhomeinfo
 ${STORE_BASE_URL}curator/${}/ajaxgetcreatorhomeinfo/?${}
@@ -1509,11 +1546,13 @@ ${STORE_BASE_URL}events
 ${STORE_BASE_URL}events/
 ${STORE_BASE_URL}events/ajaxgetadjacentpartnerevents/
 ${STORE_BASE_URL}events/ajaxgetbatchedpartnerevent/
+${STORE_BASE_URL}events/ajaxgetbatchedpartnerevent/?${}
 ${STORE_BASE_URL}events/ajaxgetbesteventsforuser
 ${STORE_BASE_URL}events/ajaxgetcreatorhomeidforapp
 ${STORE_BASE_URL}events/ajaxgetdynamiceventmetadata?${}
 ${STORE_BASE_URL}events/ajaxgetnewscurators
 ${STORE_BASE_URL}events/ajaxgetpartnerevent
+${STORE_BASE_URL}events/ajaxgetpartnerevent?${}
 ${STORE_BASE_URL}events/ajaxgetpartnereventpermissions
 ${STORE_BASE_URL}events/ajaxgetpartnereventpermissions?clanaccountid=${}
 ${STORE_BASE_URL}events/ajaxgetpartnereventspageable/
@@ -1526,6 +1565,7 @@ ${STORE_BASE_URL}events_admin/?selectedTags=vo_marketing_message&excludedTags=mo
 ${STORE_BASE_URL}events_admin/ajaxflushandreindexrss
 ${STORE_BASE_URL}events_admin/ajaxgetlatestpartnerevents
 ${STORE_BASE_URL}events_admin/ajaxgetmoderationspecificpartnerevents
+${STORE_BASE_URL}events_admin/ajaxgetrssadmininfo
 ${STORE_BASE_URL}events_admin/ajaxgetscapprovalpriviledge
 ${STORE_BASE_URL}events_admin/ajaxgetsolrdata
 ${STORE_BASE_URL}events_admin/ajaxupdateeventtype
@@ -1543,6 +1583,7 @@ ${STORE_BASE_URL}explore?dq=widget
 ${STORE_BASE_URL}feeds/${}${_ ? _ : _}/?cc=${COUNTRY}&l=${LANGUAGE}
 ${STORE_BASE_URL}forgeyourfate
 ${STORE_BASE_URL}forgeyourfate${_ ? "#badge" : "#next"}
+${STORE_BASE_URL}forgeyourfate${_ ? `#badge` : `#next`}
 ${STORE_BASE_URL}franchise/${m_strVanity}/
 ${STORE_BASE_URL}franchise/${vanity}/
 ${STORE_BASE_URL}franchise/${}
@@ -1618,6 +1659,7 @@ ${STORE_BASE_URL}newshub/app/${}
 ${STORE_BASE_URL}newshub/group/${clanAccountID}
 ${STORE_BASE_URL}newshub/sale/${}
 ${STORE_BASE_URL}notification/ajaxusersettings
+${STORE_BASE_URL}online_conduct/
 ${STORE_BASE_URL}parental/ajaxunlock/
 ${STORE_BASE_URL}parental/requestrecovery
 ${STORE_BASE_URL}personalcalendar
@@ -1651,12 +1693,13 @@ ${STORE_BASE_URL}recommended/ignorerecommendation
 ${STORE_BASE_URL}recommended/ignorerecommendation/
 ${STORE_BASE_URL}recommender/
 ${STORE_BASE_URL}recommenderdemos/getcreatorsales
+${STORE_BASE_URL}recommenderdemos/getdiscountreasons
 ${STORE_BASE_URL}recommenderdemos/getfests
 ${STORE_BASE_URL}recommenderdemos/getlist
 ${STORE_BASE_URL}remoteplay#anywhere
-${STORE_BASE_URL}replay/${steamid}/${}?src=${}
+${STORE_BASE_URL}replay/${steamid}/${}?src=9
 ${STORE_BASE_URL}replay/${}/${}
-${STORE_BASE_URL}replay/${}/${}?src=${}
+${STORE_BASE_URL}replay/${}/${}?src=8
 ${STORE_BASE_URL}sale/${sale_vanity_id}
 ${STORE_BASE_URL}sale/${strSalePage}
 ${STORE_BASE_URL}sale/${strVanity}
@@ -1681,6 +1724,7 @@ ${STORE_BASE_URL}saleaction/ajaxgetsaletagsrecommendation
 ${STORE_BASE_URL}saleaction/ajaxgetsoundtracksonsale
 ${STORE_BASE_URL}saleaction/ajaxgetuserdeckcompatlist
 ${STORE_BASE_URL}saleaction/ajaxgetwishlistonsale
+${STORE_BASE_URL}saleaction/giveawayregistration?name=${}
 ${STORE_BASE_URL}search
 ${STORE_BASE_URL}search/
 ${STORE_BASE_URL}search/?${}
@@ -1701,6 +1745,7 @@ ${STORE_BASE_URL}steam_refunds/
 ${STORE_BASE_URL}steamaccount/addfunds?marketlisting=${listingid}&returnurl=${}
 ${STORE_BASE_URL}steamaccount/addfunds?marketlisting=1&returnurl=${}
 ${STORE_BASE_URL}steamawards/${_ ? "nominations/" : ""}
+${STORE_BASE_URL}steamawards/${_ ? `nominations/` : ``}
 ${STORE_BASE_URL}steamawards/${}/
 ${STORE_BASE_URL}steamawards/ajaxgetwidgetstyle
 ${STORE_BASE_URL}steamawards/archive
@@ -1739,7 +1784,9 @@ ${STORE_BASE_URL}wishlist/profiles/${}
 ${STORE_BASE_URL}wishlist/profiles/${}/${}#sort=discount
 ${STORE_BASE_URL}wishlist/profiles/${}/?wng=${}#sort=discount
 ${STORE_BASE_URL}yearinreview/
+${STORE_CDN_URL}${image_url}
 ${STORE_CDN_URL}${image_url}?${image_target ? "v=3" : "v=2"}
+${STORE_CDN_URL}${image_url}?${image_target ? `v=3` : `v=2`}
 ${STORE_CDN_URL}/categories/headerimage/category/${}?cc=${COUNTRY}&l=${LANGUAGE}
 ${STORE_CDN_URL}/categories/headerimage/tags/${}?cc=${COUNTRY}&l=${LANGUAGE}
 ${STORE_CDN_URL}/public/shared/images/footer/pw_logo.svg?v=1
@@ -1767,9 +1814,7 @@ ${STORE_CDN_URL}public/shared/images/footer/wechat_logo.svg?v=1
 ${STORE_CDN_URL}public/shared/images/footer/weibo_logo.svg?v=1
 ${STORE_CDN_URL}public/shared/images/game_ratings/CERO/descriptors/${strFile}.png
 ${STORE_CDN_URL}public/shared/images/header/logo_steamchina.svg?t=962016
-${STORE_CHECKOUT_BASE_URL}checkout/
 ${STORE_CHECKOUT_BASE_URL}checkout/?purchasetype=updatebillinginfo&r=cart
-${STORE_CHECKOUT_BASE_URL}checkout?purchasetype=self&cart=${}
 ${STORE_CHECKOUT_BASE_URL}parental/ajaxunlock/
 ${STORE_ICON_BASE_URL}${}/header.jpg
 ${STORE_ITEM_BASE_URL}${filename}
@@ -2100,6 +2145,7 @@ ${m_strBaseURL}removetwofactor/
 ${m_strBaseURL}rendercaptcha/?gid=${gid}
 ${m_strBaseURL}startremovetwofactor/
 ${m_strBaseURL}userecoverycode/
+${m_strRSSFeedURL}${}
 ${m_strRedirectURL}
 ${m_strWebAPIBaseURL}I${}Service/${}/v${}
 ${mp4_url}${}
@@ -2132,10 +2178,13 @@ ${strClanURL}/getimages
 ${strClanURL}/uploadimage
 ${strFragmentURL}open/recording
 ${strInitialCapsuleImageUrl}${}
+${strPreviewURL}${strRssURL}
 ${strProfileURL}ajaxgroupinvite?new_profile=1${bBulkFriendInvite ? '&bulk=1' : ''}
 ${strRedirectURL}/info
+${strRssURL}${}
 ${strSearchBaseURL}${strQuery}
 ${strSearchBaseURL}Home
+${strSeeMoreURL}
 ${strURL}${_ ? '&' : '?'}insideModal=1
 ${strURL}&l=${key}
 ${strURL}&l=english
@@ -2156,6 +2205,7 @@ ${url}${url}
 ${url}${}
 ${url}/
 ${url}?filter=${filter}
+${url}?t=${}
 ${url}overview
 ${url}post/${steamidOwner}/${gidFeature}
 ${webkitURL}${}
@@ -2248,9 +2298,6 @@ https://beian.miit.gov.cn
 https://blog.counter-strike.net/
 https://bsky.app/profile/steampowered.com
 https://calendar.google.com/calendar/render?action=TEMPLATE
-https://cdn.akamai.steamstatic.com/store/promo/replay2023/yirDeckGamesExport.mp4
-https://cdn.akamai.steamstatic.com/store/promo/replay2023/yirDeckGamesExport.webm
-https://cdn.akamai.steamstatic.com/store/promo/replay2023/yirDeckGamesPoster.jpg
 https://cdn.beta.steampowered.com/
 https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/270880/2aec8af4b4b23cb6054d9aea06194621cdd66945.jpg
 https://cdn.fastly.steamstatic.com/steam/apps/${appid}/
@@ -3167,7 +3214,6 @@ https://www.twitch.tv/valve
 https://www.valvesoftware.com
 https://www.valvesoftware.com/
 https://www.valvesoftware.com/en/about
-https://www.valvesoftware.com/legal/statement-of-compliance
 https://www.wanmei.com/
 https://www.youtube-nocookie.com
 https://www.youtube-nocookie.com/embed/LJ6CoMgr2U8
@@ -3520,6 +3566,7 @@ url( ${IMG_URL}springcleaning22/list.jpg )
 url( ${IMG_URL}units/${name}.png )
 url( ${strBackgroundImageURL} )
 url( '${thumb_url}' )
+url(${STORE_CDN_URL}${image_url}) no-repeat center center/cover
 url(${STORE_CDN_URL}/public/images/${image_path}) no-repeat center center/cover
 url(${avatar_full_url})
 url(${creator_page_bg_url})

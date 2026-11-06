@@ -443,6 +443,14 @@ enum GAMEPAD
 	GAMEPAD_ANALOG_LAST = 50;
 }
 
+enum IDerivationState_
+{
+	NOT_TRACKING_ = -1;
+	UP_TO_DATE_ = 0;
+	POSSIBLY_STALE_ = 1;
+	STALE_ = 2;
+}
+
 enum iEc
 {
 	k_EWindowBringToFrontInvalid = 0;
@@ -495,6 +503,13 @@ enum STORAGE
 {
 	STORAGE_DOES_NOT_EXIST = 0;
 	STORAGE_IN_MEMORY = 1;
+}
+
+enum TraceMode
+{
+	NONE = 0;
+	LOG = 1;
+	BREAK = 2;
 }
 
 enum UnnamedEnum001b037885a2ecde
