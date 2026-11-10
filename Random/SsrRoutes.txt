@@ -6,6 +6,7 @@ partner.steamgames.com ^/contentsurvey/edit(?:/([^/]+?))/?$
 partner.steamgames.com ^/contentsurvey/export(?:/([^/]+?))/?$
 partner.steamgames.com ^/contentsurvey/history(?:/([^/]+?))(?:/([^/]+?))?/?$
 partner.steamgames.com ^/optin/address(?:/([^/]+?))(?:/([^/]+?))/?$
+partner.steamgames.com ^/optin/sale(?:/([^/]+?))(?:/([^/]+?))/?$
 partner.steamgames.com ^/pricing/explorer/?$
 partner.steamgames.com ^/steamlearn/dashboard/?$
 partner.steamgames.com ^/steamlearn/project(?:/([^/]+?))(?:/([^/]+?))/datasources/?$

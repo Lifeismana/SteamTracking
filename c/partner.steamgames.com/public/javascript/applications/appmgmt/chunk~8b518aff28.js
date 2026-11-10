@@ -1,0 +1,17 @@
+var _ = `english`,
+  _ = `Steamworks`,
+  _ = `App Admin`,
+  _ = `dummy`,
+  _ = {
+    language: _,
+    BreadCrumbs_Steamworks: _,
+    BreadCrumbs_AppAdmin: _,
+    Dummy: _,
+  };
+export {
+  _ as BreadCrumbs_AppAdmin,
+  _ as BreadCrumbs_Steamworks,
+  _ as Dummy,
+  _ as default,
+  _ as language,
+};
