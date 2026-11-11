@@ -1470,9 +1470,17 @@ input.discussionSearchText:-moz-placeholder {
 	background-color: #4A3E2E;
 }
 
+.forum_topic_needs_content_check_notice,
+.forum_topic_failed_content_check_notice {
+	align-items: center;
+	gap: 8px;
+}
+
 .forum_topic_needs_content_check_notice > img,
 .forum_topic_failed_content_check_notice > img {
 	width: 12px;
+	height: auto;
+	flex-shrink: 0;
 }
 
 table.forum_auditlog {
