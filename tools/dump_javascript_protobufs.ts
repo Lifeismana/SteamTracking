@@ -858,7 +858,7 @@ function FixTypesSameModule(services: Service[], messages: Message[]) {
 }
 
 function FixTypesCrossModule(services: Service[], messages: Message[], crossModuleExportedMessages: ExportedIds) {
-	const GetType = ({ module, name }: { module?: string | null; name?: string }) => {
+  const GetType = ({ module, name }: { module?: string | null; name?: string }, context = "") => {
 		const moduleExported = crossModuleExportedMessages.get(module as string);
 
 		if (!moduleExported || moduleExported.size === 0) {
@@ -871,7 +871,7 @@ function FixTypesCrossModule(services: Service[], messages: Message[], crossModu
 
 		if (!className) {
 			const known = [...moduleExported.keys()].slice(0, 20).join(", ");
-			Log(`{lightred}Cross-module lookup failed: "${name}" not exported by ${module} (exports: ${known})`);
+			Log(`{lightred}Cross-module lookup failed for ${context}: "${name}" not exported by ${module} (exports: ${known})`);
 			return null;
 		}
 
@@ -885,7 +885,7 @@ function FixTypesCrossModule(services: Service[], messages: Message[], crossModu
 			}
 
 			if (field.typeToLookup.module !== null) {
-				const className = GetType(field.typeToLookup);
+				const className = GetType(field.typeToLookup, `${message.className}.${field.name}`);
 
 				if (className === null) {
 					continue;
@@ -903,7 +903,7 @@ function FixTypesCrossModule(services: Service[], messages: Message[], crossModu
 
 	for (const service of services) {
 		if (service.responseToLookup) {
-			const className = GetType(service.responseToLookup);
+			const className = GetType(service.responseToLookup, service.name);
 
 			if (className === null) {
 				continue;
@@ -926,7 +926,7 @@ function FixTypesCrossModule(services: Service[], messages: Message[], crossModu
 		if (service.requestToLookup) {
 			// ESM: targeted cross-module lookup by {module, name}
 			if (service.requestToLookup.module) {
-				const className = GetType(service.requestToLookup);
+				const className = GetType(service.requestToLookup, service.name);
 
 				if (className !== null) {
 					service.request = className;
