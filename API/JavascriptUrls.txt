@@ -1493,6 +1493,7 @@ ${STORE_BASE_URL}contenthub/ajaxgetdlcforyouplaytime
 ${STORE_BASE_URL}contenthub/ajaxgetdlcforyoupopular
 ${STORE_BASE_URL}contenthub/ajaxgetdlcstatsforuser
 ${STORE_BASE_URL}contenthub/ajaxgetsalepagediscountsummary
+${STORE_BASE_URL}crosspromo_preview/${}/${}
 ${STORE_BASE_URL}curator/${clanAccountID}
 ${STORE_BASE_URL}curator/${clanAccountID}/admin/manage_rss
 ${STORE_BASE_URL}curator/${clanAccountID}/list/${listid}

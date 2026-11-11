@@ -244,21 +244,6 @@ message CClientMetrics_ReportReactUsage_Notification {
 	repeated .CClientMetrics_ReportReactUsage_Notification_ActionData actions = 5;
 }
 
-message CClientMetrics_ReportReactUsage_Notification_ActionData {
-	optional string action = 1;
-	optional uint32 count = 2;
-}
-
-message CClientMetrics_ReportReactUsage_Notification_ComponentData {
-	optional string component = 1;
-	optional uint32 count = 2;
-}
-
-message CClientMetrics_ReportReactUsage_Notification_RouteData {
-	optional string route = 1;
-	optional uint32 count = 2;
-}
-
 message CClientMetrics_SteamPipeWorkStats_Notification {
 	optional uint32 appid = 1;
 	optional uint32 depotid = 2;

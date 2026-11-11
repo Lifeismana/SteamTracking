@@ -1,0 +1,14 @@
+.PvNen1Rhhrk- {
+  flex-direction: column;
+  align-items: center;
+  padding-top: 80px;
+  padding-bottom: 150px;
+  display: flex;
+}
+@media screen and (width <= 700px) {
+  .PvNen1Rhhrk- {
+    padding-top: 12px;
+    padding-bottom: 0;
+  }
+}
+/*$vite$:1*/

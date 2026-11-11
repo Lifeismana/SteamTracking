@@ -2,6 +2,7 @@ import "common.proto";
 
 message CCheckout_AddFreeLicense_Request {
 	optional .StoreItemID item_id = 1;
+	//optional .StoreBrowseContext item_id = 1;
 }
 
 message CCheckout_AddFreeLicense_Response {
@@ -12,6 +13,7 @@ message CCheckout_AddFreeLicense_Response {
 
 message CCheckout_GetFriendOwnershipForGifting_Request {
 	repeated .StoreItemID item_ids = 1;
+	//repeated .StoreBrowseContext item_ids = 1;
 }
 
 message CCheckout_GetFriendOwnershipForGifting_Response {
@@ -28,13 +30,16 @@ message CCheckout_GetFriendOwnershipForGifting_Response_FriendOwnership {
 
 message CCheckout_GetFriendOwnershipForGifting_Response_OwnershipInfo {
 	optional .StoreItemID item_id = 1;
+	//optional .StoreBrowseContext item_id = 1;
 	repeated .CCheckout_GetFriendOwnershipForGifting_Response_FriendOwnership friend_ownership = 2;
 }
 
 message CCheckout_ValidateCart_Request {
 	optional uint64 gidshoppingcart = 1;
 	optional .StoreBrowseContext context = 2;
+	//optional .CStoreBrowse_GetContentHubConfig_Request context = 2;
 	optional .StoreBrowseItemDataRequest data_request = 3;
+	//optional .CStoreBrowse_GetDLCForAppsSolr_Request data_request = 3;
 	optional .CartGiftInfo gift_info = 4;
 	optional fixed64 gidreplayoftransid = 5;
 	optional bool for_init_purchase = 6;
@@ -48,7 +53,9 @@ message CCheckout_ValidateCart_Response {
 message CCheckout_ValidateCart_Response_CartItem {
 	optional uint64 line_item_id = 1;
 	optional .StoreItemID item_id = 2;
+	//optional .StoreBrowseContext item_id = 2;
 	optional .StoreItem store_item = 3;
+	//optional .CStoreBrowse_GetPriceStops_Request store_item = 3;
 	optional .CartGiftInfo gift_info = 4;
 	optional .CCheckout_ValidateCart_Response_CartItem_Errors errors = 5;
 	optional .CCheckout_ValidateCart_Response_CartItem_Warnings warnings = 6;

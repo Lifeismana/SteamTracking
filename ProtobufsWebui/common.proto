@@ -292,6 +292,24 @@ message CClientHandshakeMsg {
 	optional .CStreamingClientHandshakeInfo info = 1;
 }
 
+// Used by: ClientMetrics, StoreCuration
+message CClientMetrics_ReportReactUsage_Notification_ActionData {
+	optional string action = 1;
+	optional uint32 count = 2;
+}
+
+// Used by: Authentication, AuthenticationSupport, ClientMetrics
+message CClientMetrics_ReportReactUsage_Notification_ComponentData {
+	optional string component = 1;
+	optional uint32 count = 2;
+}
+
+// Used by: ClientMetrics, Store
+message CClientMetrics_ReportReactUsage_Notification_RouteData {
+	optional string route = 1;
+	optional uint32 count = 2;
+}
+
 message CClientNotificationAchievement {
 	optional string achievement_id = 1;
 	optional uint32 appid = 2;
@@ -6045,6 +6063,21 @@ message CStopRequest {
 message CStopVideoDataMsg {
 }
 
+// Used by: Checkout, SteamCharts, Store, StoreBrowse
+message CStoreBrowse_GetContentHubConfig_Request {
+	optional .StoreBrowseContext context = 1;
+	repeated int32 excluded_content_descriptorids = 2 [(.description) = "enum"];
+}
+
+// Used by: Checkout, SteamCharts, Store, StoreBrowse
+message CStoreBrowse_GetDLCForAppsSolr_Request {
+	optional .StoreBrowseContext context = 1;
+	repeated uint32 appids = 2;
+	optional string flavor = 3;
+	optional uint32 count = 4;
+	optional .CStorePageFilter store_page_filter = 5;
+}
+
 // Used by: PartnerStoreBrowse, StoreBrowse
 message CStoreBrowse_GetItems_Request {
 	repeated .StoreItemID ids = 1;
@@ -6057,14 +6090,20 @@ message CStoreBrowse_GetItems_Response {
 	repeated .StoreItem store_items = 1;
 }
 
-// Used by: Store, StoreBrowse, StoreQuery
+// Used by: Checkout, SteamCharts, Store, StoreBrowse
+message CStoreBrowse_GetPriceStops_Request {
+	optional string country_code = 1;
+	optional string currency_code = 2;
+}
+
+// Used by: Checkout, SteamCharts, Store, StoreBrowse, StoreQuery
 message CStorePageFilter {
 	optional .CStorePageFilter_SalePageFilter sale_filter = 1;
 	optional .CStorePageFilter_ContentHubFilter content_hub_filter = 2;
 	repeated .CStorePageFilter_StoreFilter store_filters = 3;
 }
 
-// Used by: Store, StoreBrowse, StoreQuery
+// Used by: Checkout, SteamCharts, Store, StoreBrowse, StoreQuery
 message CStorePageFilter_ContentHubFilter {
 	optional string hub_type = 1;
 	optional string hub_category = 2;
@@ -6073,7 +6112,7 @@ message CStorePageFilter_ContentHubFilter {
 	optional .CStorePageFilter_ContentHubFilter_OptInInfo optin = 5;
 }
 
-// Used by: Store, StoreBrowse, StoreQuery
+// Used by: Checkout, SteamCharts, Store, StoreBrowse, StoreQuery
 message CStorePageFilter_ContentHubFilter_OptInInfo {
 	optional string name = 1;
 	optional uint32 optin_tagid = 2;
@@ -6081,13 +6120,13 @@ message CStorePageFilter_ContentHubFilter_OptInInfo {
 	optional bool optin_only = 4;
 }
 
-// Used by: Store, StoreBrowse, StoreQuery
+// Used by: Checkout, SteamCharts, Store, StoreBrowse, StoreQuery
 message CStorePageFilter_SalePageFilter {
 	optional uint32 sale_tagid = 1;
 	optional uint32 creator_clan_account_id = 2;
 }
 
-// Used by: Store, StoreBrowse, StoreQuery
+// Used by: Checkout, SteamCharts, Store, StoreBrowse, StoreQuery
 message CStorePageFilter_StoreFilter {
 	optional string filter_json = 1;
 	optional string cache_key = 2;

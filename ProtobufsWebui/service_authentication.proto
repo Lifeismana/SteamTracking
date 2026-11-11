@@ -188,6 +188,7 @@ message CAuthentication_RefreshToken_Enumerate_Response_RefreshTokenDescription 
 message CAuthentication_RefreshToken_Enumerate_Response_TokenUsageEvent {
 	optional uint32 time = 1;
 	optional .CMsgIPAddress ip = 2;
+	//optional .CClientMetrics_ReportReactUsage_Notification_ComponentData ip = 2;
 	optional string locale = 3;
 	optional string country = 4;
 	optional string state = 5;

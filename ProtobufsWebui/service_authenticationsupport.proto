@@ -47,6 +47,7 @@ message CSupportRefreshTokenAudit {
 	optional int32 action = 1;
 	optional uint32 time = 2;
 	optional .CMsgIPAddress ip = 3;
+	//optional .CClientMetrics_ReportReactUsage_Notification_ComponentData ip = 3;
 	optional fixed64 actor = 4;
 }
 
@@ -68,6 +69,7 @@ message CSupportRefreshTokenDescription {
 message CSupportRefreshTokenDescription_TokenUsageEvent {
 	optional uint32 time = 1;
 	optional .CMsgIPAddress ip = 2;
+	//optional .CClientMetrics_ReportReactUsage_Notification_ComponentData ip = 2;
 	optional string country = 3;
 	optional string state = 4;
 	optional string city = 5;

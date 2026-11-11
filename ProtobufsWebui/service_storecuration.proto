@@ -39,8 +39,11 @@ message CStoreCuration_ListDetails {
 	repeated .CStoreCuration_ListDetails_ListItem apps = 10;
 	optional int32 list_type = 11 [(.description) = "enum"];
 	repeated .CLocalizationToken title_localization = 12;
+	//repeated .CClientMetrics_ReportReactUsage_Notification_ActionData title_localization = 12;
 	repeated .CLocalizationToken blurb_localization = 13;
+	//repeated .CClientMetrics_ReportReactUsage_Notification_ActionData blurb_localization = 13;
 	repeated .CLocalizationToken link_localization = 14;
+	//repeated .CClientMetrics_ReportReactUsage_Notification_ActionData link_localization = 14;
 	optional fixed64 sale_clan_steamid = 15;
 	optional fixed64 sale_clan_event_gid = 16;
 	optional string list_jsondata = 17;

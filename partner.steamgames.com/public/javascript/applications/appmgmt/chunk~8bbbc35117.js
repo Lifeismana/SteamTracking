@@ -972,7 +972,15 @@ function ye(e) {
       (0, j.jsx)(U, {}),
       (0, j.jsx)(`div`, {
         className: E,
-        children: `We reviewed your uploaded documents and found an issue.  An email was sent to you from noreply@steampowered.com outlining the issue. Since you have not uploaded the documents requested to resolve the issue, you have been removed from the review queue until you action that request. Please look in your email to find the specific request that was made and action it appropriately using the dropbox link in this message.`,
+        children: `We reviewed your uploaded documents and found an issue. An email was recently sent to you outlining the issue, but we haven't received the requested documents.`,
+      }),
+      (0, j.jsx)(`div`, {
+        className: E,
+        children: `We will be unable to proceed with the process of validating your identity until the required documents are provided.`,
+      }),
+      (0, j.jsx)(`div`, {
+        className: E,
+        children: `Please look in your email for a recent message from noreply@steampowered.com with the specific request that was made. You can provide the requested documents using the dropbox link here.`,
       }),
       (0, j.jsx)(q, { ...e }),
     ],
