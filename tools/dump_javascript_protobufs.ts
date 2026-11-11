@@ -870,7 +870,9 @@ function FixTypesCrossModule(services: Service[], messages: Message[], crossModu
 		const className = moduleExported.get(name as string);
 
 		if (!className) {
-			throw new Error("Failed to find exported name");
+			const known = [...moduleExported.keys()].slice(0, 20).join(", ");
+			Log(`{lightred}Cross-module lookup failed: "${name}" not exported by ${module} (exports: ${known})`);
+			return null;
 		}
 
 		return className;
