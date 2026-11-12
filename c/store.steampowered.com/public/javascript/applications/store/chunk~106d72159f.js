@@ -5512,6 +5512,24 @@ var _ = class extends _.Component {
       _(this.props.location, `updates`) == `true`
     );
   }
+  BShowPatchNotesOnly() {
+    let _ =
+        this.props.filter_to_appids && this.props.filter_to_appids.length == 1,
+      _ =
+        this.props.filter_to_clanids &&
+        this.props.filter_to_clanids.length == 1;
+    return !_ && !_ ? !1 : _(this.props.location, `patchnotes`) == `true`;
+  }
+  GetModalEventParams() {
+    if (this.BShowPatchNotesOnly())
+      return {
+        require_tags: [`patchnotes`],
+      };
+    if (this.BShowUpdatesOnly())
+      return {
+        event_type_filter: [12, 13, 14],
+      };
+  }
   UpdateDocumentUI() {
     let _,
       _,
@@ -5610,6 +5628,7 @@ var _ = class extends _.Component {
           this.props.filter_to_contenthub_category_or_language,
         tag_name: this.props.filter_to_contenthub_tag_name,
         bSectionByDay: this.props.section_by_day,
+        rgTags: this.BShowPatchNotesOnly() ? [`patchnotes`] : void 0,
       },
       _ = _(_, this.props.initialFilters),
       _ = _();
@@ -5756,6 +5775,7 @@ var _ = class extends _.Component {
                   announcementGID: this.state.modalEvent.GetAnnouncementGID(),
                   partnerEventStore: _,
                   eventModel: this.state.modalEvent,
+                  additionalParams: this.GetModalEventParams(),
                   showAppHeader: !0,
                   closeModal: this.CloseEventModal,
                 })
